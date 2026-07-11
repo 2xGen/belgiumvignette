@@ -74,16 +74,26 @@ export function PricesPageContent({ dict }: { dict: Dictionary }) {
     <>
       <ContentSections sections={content.sections} />
       <div className="mt-10 grid gap-8 lg:grid-cols-2">
-        <ComparisonTable title={content.sections[0]?.title ?? "Annual"} rows={content.annualTable} />
-        <ComparisonTable title={content.sections[1]?.title ?? "Short-term"} rows={content.shortTermTable} />
+        <ComparisonTable
+          title={content.sections[0]?.title ?? ""}
+          rows={content.annualTable}
+          categoryHeader={dict.common.tableCategory}
+          valueHeader={dict.common.tablePrice}
+        />
+        <ComparisonTable
+          title={content.sections[1]?.title ?? ""}
+          rows={content.shortTermTable}
+          categoryHeader={dict.common.tableCategory}
+          valueHeader={dict.common.tablePrice}
+        />
       </div>
       <section className="mt-10">
         <h2 className="section-heading">{content.euroNormTitle}</h2>
         <table className="content-table">
           <thead>
             <tr>
-              <th scope="col">Norm</th>
-              <th scope="col">Description</th>
+              <th scope="col">{content.euroNormCategoryHeader}</th>
+              <th scope="col">{content.euroNormDescriptionHeader}</th>
             </tr>
           </thead>
           <tbody>
@@ -129,8 +139,18 @@ export function ExemptionsPageContent({ dict }: { dict: Dictionary }) {
     <>
       <ContentSections sections={content.sections} />
       <div className="mt-10 grid gap-8 lg:grid-cols-2">
-        <ComparisonTable title={content.exemptTableTitle} rows={content.exemptTable} />
-        <ComparisonTable title={content.requiredTableTitle} rows={content.notExemptTable} />
+        <ComparisonTable
+          title={content.exemptTableTitle}
+          rows={content.exemptTable}
+          categoryHeader={dict.common.tableCategory}
+          valueHeader={dict.common.tablePrice}
+        />
+        <ComparisonTable
+          title={content.requiredTableTitle}
+          rows={content.notExemptTable}
+          categoryHeader={dict.common.tableCategory}
+          valueHeader={dict.common.tablePrice}
+        />
       </div>
       <PageFaqSection faqs={content.faqs} />
     </>
@@ -143,7 +163,12 @@ export function FinesPageContent({ dict }: { dict: Dictionary }) {
     <>
       <ContentSections sections={content.sections} />
       <div className="mt-10 max-w-md">
-        <PricingTable rows={content.fineTable} caption="Fines" />
+        <PricingTable
+          rows={content.fineTable}
+          caption={content.sections[0]?.title ?? dict.fines.title}
+          categoryHeader={dict.common.tableCategory}
+          valueHeader={dict.common.tablePrice}
+        />
       </div>
       <PageFaqSection faqs={content.faqs} />
     </>

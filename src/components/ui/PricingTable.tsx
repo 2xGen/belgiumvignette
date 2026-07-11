@@ -3,19 +3,21 @@ import type { TableRow } from "@/lib/i18n/types";
 export function PricingTable({
   rows,
   caption,
+  categoryHeader,
   valueHeader,
 }: {
   rows: TableRow[];
   caption?: string;
-  valueHeader?: string;
+  categoryHeader: string;
+  valueHeader: string;
 }) {
   return (
     <table className="content-table">
       {caption && <caption className="sr-only">{caption}</caption>}
       <thead>
         <tr>
-          <th scope="col">{caption ?? "Item"}</th>
-          <th scope="col">{valueHeader ?? "Price"}</th>
+          <th scope="col">{categoryHeader}</th>
+          <th scope="col">{valueHeader}</th>
         </tr>
       </thead>
       <tbody>
@@ -38,16 +40,23 @@ export function PricingTable({
 export function ComparisonTable({
   title,
   rows,
+  categoryHeader,
   valueHeader,
 }: {
   title: string;
   rows: TableRow[];
-  valueHeader?: string;
+  categoryHeader: string;
+  valueHeader: string;
 }) {
   return (
     <div>
       <h3 className="mb-2 font-serif text-lg font-bold text-text">{title}</h3>
-      <PricingTable rows={rows} caption={title} valueHeader={valueHeader} />
+      <PricingTable
+        rows={rows}
+        caption={title}
+        categoryHeader={categoryHeader}
+        valueHeader={valueHeader}
+      />
     </div>
   );
 }

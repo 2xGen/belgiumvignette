@@ -65,6 +65,8 @@ export interface Dictionary {
     independentSite: string;
     contactLabel: string;
     cookieSettings: string;
+    tableCategory: string;
+    tablePrice: string;
   };
   home: {
     hero: {
@@ -77,6 +79,8 @@ export interface Dictionary {
     quickAnswers: QuickAnswer[];
     pricingTitle: string;
     pricingSubtitle: string;
+    annualTableTitle: string;
+    shortTermTableTitle: string;
     annualPricing: TableRow[];
     shortTermPricing: TableRow[];
     timelineTitle: string;
@@ -92,6 +96,8 @@ export interface Dictionary {
     annualTable: TableRow[];
     shortTermTable: TableRow[];
     euroNormTitle: string;
+    euroNormCategoryHeader: string;
+    euroNormDescriptionHeader: string;
     euroNormItems: { norm: string; description: string }[];
     faqs: FaqItem[];
   };

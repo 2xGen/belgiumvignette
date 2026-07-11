@@ -106,12 +106,26 @@ export default async function HomePage({
           <p className="mb-4 text-sm text-text-muted">{dict.home.pricingSubtitle}</p>
           <div className="grid gap-8 lg:grid-cols-2">
             <div>
-              <h3 className="mb-2 font-serif text-base font-bold">Annual</h3>
-              <PricingTable rows={dict.home.annualPricing} caption="Annual pricing" />
+              <h3 className="mb-2 font-serif text-base font-bold">
+                {dict.home.annualTableTitle}
+              </h3>
+              <PricingTable
+                rows={dict.home.annualPricing}
+                caption={dict.home.annualTableTitle}
+                categoryHeader={dict.common.tableCategory}
+                valueHeader={dict.common.tablePrice}
+              />
             </div>
             <div>
-              <h3 className="mb-2 font-serif text-base font-bold">Short-term</h3>
-              <PricingTable rows={dict.home.shortTermPricing} caption="Short-term pricing" />
+              <h3 className="mb-2 font-serif text-base font-bold">
+                {dict.home.shortTermTableTitle}
+              </h3>
+              <PricingTable
+                rows={dict.home.shortTermPricing}
+                caption={dict.home.shortTermTableTitle}
+                categoryHeader={dict.common.tableCategory}
+                valueHeader={dict.common.tablePrice}
+              />
             </div>
           </div>
         </section>

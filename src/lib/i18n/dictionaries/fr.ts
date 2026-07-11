@@ -70,6 +70,8 @@ const dictionary: Dictionary = {
     independentSite: "Site d'information indépendant",
     contactLabel: "Contact",
     cookieSettings: "Préférences cookies",
+    tableCategory: "Catégorie",
+    tablePrice: "Tarif",
   },
   home: {
     hero: {
@@ -103,6 +105,8 @@ const dictionary: Dictionary = {
     pricingTitle: "Tarifs prévus en un coup d'œil",
     pricingSubtitle:
       "Basé sur les plans publiés (mars 2026). Les montants définitifs peuvent encore changer.",
+    annualTableTitle: "Vignette annuelle",
+    shortTermTableTitle: "Courtes durées",
     annualPricing: [
       { label: "Euro 4 et plus", value: "100 € / an", note: "97 %+ des voitures flamandes" },
       { label: "Électrique / hydrogène", value: "90 € / an" },
@@ -200,6 +204,8 @@ const dictionary: Dictionary = {
       { label: "2 mois", value: "30 €" },
     ],
     euroNormTitle: "Normes Euro en bref",
+    euroNormCategoryHeader: "Norme",
+    euroNormDescriptionHeader: "Description",
     euroNormItems: [
       { norm: "Euro 4+", description: "Véhicules à partir de ~2005–2006. La majorité du parc." },
       { norm: "Électrique / H₂", description: "Zéro émission. Tarif le plus bas prévu." },

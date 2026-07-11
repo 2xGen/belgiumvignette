@@ -70,6 +70,8 @@ const dictionary: Dictionary = {
     independentSite: "Independent information site",
     contactLabel: "Contact",
     cookieSettings: "Cookie settings",
+    tableCategory: "Category",
+    tablePrice: "Price",
   },
   home: {
     hero: {
@@ -103,6 +105,8 @@ const dictionary: Dictionary = {
     pricingTitle: "Planned rates at a glance",
     pricingSubtitle:
       "Based on published plans (March 2026). Final amounts may still change.",
+    annualTableTitle: "Annual vignette",
+    shortTermTableTitle: "Short-term",
     annualPricing: [
       { label: "Euro 4 and higher", value: "€100 / year", note: "97%+ of Flemish cars" },
       { label: "Electric / hydrogen", value: "€90 / year" },
@@ -200,6 +204,8 @@ const dictionary: Dictionary = {
       { label: "2 months", value: "€30" },
     ],
     euroNormTitle: "Euro standards explained",
+    euroNormCategoryHeader: "Standard",
+    euroNormDescriptionHeader: "Description",
     euroNormItems: [
       { norm: "Euro 4+", description: "Cars from ~2005–2006 onward. Most vehicles on the road." },
       { norm: "Electric / H₂", description: "Zero emission. Lowest planned rate." },

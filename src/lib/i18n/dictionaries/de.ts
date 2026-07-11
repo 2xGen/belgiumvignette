@@ -70,6 +70,8 @@ const dictionary: Dictionary = {
     independentSite: "Unabhängige Informationsseite",
     contactLabel: "Kontakt",
     cookieSettings: "Cookie-Einstellungen",
+    tableCategory: "Kategorie",
+    tablePrice: "Preis",
   },
   home: {
     hero: {
@@ -103,6 +105,8 @@ const dictionary: Dictionary = {
     pricingTitle: "Geplante Tarife auf einen Blick",
     pricingSubtitle:
       "Basierend auf veröffentlichten Plänen (März 2026). Endgültige Beträge können sich ändern.",
+    annualTableTitle: "Jahresvignette",
+    shortTermTableTitle: "Kurzzeiträume",
     annualPricing: [
       { label: "Euro 4 und höher", value: "100 € / Jahr", note: "97 %+ der flämischen Autos" },
       { label: "Elektro / Wasserstoff", value: "90 € / Jahr" },
@@ -199,6 +203,8 @@ const dictionary: Dictionary = {
       { label: "2 Monate", value: "30 €" },
     ],
     euroNormTitle: "Euro-Normen kurz erklärt",
+    euroNormCategoryHeader: "Norm",
+    euroNormDescriptionHeader: "Beschreibung",
     euroNormItems: [
       { norm: "Euro 4+", description: "Fahrzeuge ab ca. 2005–2006. Die Mehrheit auf der Straße." },
       { norm: "Elektro / H₂", description: "Emissionsfrei. Niedrigster geplanter Tarif." },

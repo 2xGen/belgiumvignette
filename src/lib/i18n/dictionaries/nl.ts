@@ -70,6 +70,8 @@ const dictionary: Dictionary = {
     independentSite: "Onafhankelijke informatiesite",
     contactLabel: "Contact",
     cookieSettings: "Cookievoorkeuren",
+    tableCategory: "Categorie",
+    tablePrice: "Prijs",
   },
   home: {
     hero: {
@@ -103,6 +105,8 @@ const dictionary: Dictionary = {
     pricingTitle: "Geplande tarieven in één oogopslag",
     pricingSubtitle:
       "Prijzen gebaseerd op gepubliceerde plannen (maart 2026). Definitieve bedragen kunnen nog wijzigen.",
+    annualTableTitle: "Jaarvignet",
+    shortTermTableTitle: "Korte periodes",
     annualPricing: [
       { label: "Euro 4 en hoger", value: "€100 / jaar", note: "97%+ van Vlaamse auto's" },
       { label: "Elektrisch / waterstof", value: "€90 / jaar" },
@@ -202,6 +206,8 @@ const dictionary: Dictionary = {
       { label: "2 maanden", value: "€30" },
     ],
     euroNormTitle: "Euro-normen in het kort",
+    euroNormCategoryHeader: "Norm",
+    euroNormDescriptionHeader: "Omschrijving",
     euroNormItems: [
       { norm: "Euro 4+", description: "Auto's vanaf circa 2005–2006. Meeste voertuigen op de weg." },
       { norm: "Elektrisch / H₂", description: "Volledig emissievrij. Laagste tarief gepland." },
