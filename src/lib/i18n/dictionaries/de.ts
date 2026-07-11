@@ -69,6 +69,7 @@ const dictionary: Dictionary = {
       "Die im März 2026 vorgestellten Pläne können sich noch ändern. Wir verfolgen offizielle Quellen und aktualisieren diese Seite bei Neuigkeiten.",
     independentSite: "Unabhängige Informationsseite",
     contactLabel: "Kontakt",
+    cookieSettings: "Cookie-Einstellungen",
   },
   home: {
     hero: {
@@ -381,9 +382,12 @@ const dictionary: Dictionary = {
       },
       {
         id: "cookies",
-        title: "Cookies & Analytics",
+        title: "Cookies, Analytics & Einwilligung",
         paragraphs: [
-          "Vercel Analytics nur nach Einwilligung. Einstellungen in localStorage.",
+          "Essenziell: Speicherung Ihrer Cookie-Einstellung in localStorage. Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) und/oder Einwilligung.",
+          "Analytics (optional): Vercel Analytics erfasst anonyme Seitenaufrufe. Wird nur nach Einwilligung geladen. Rechtsgrundlage: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Widerruf über Cookie-Einstellungen in der Fußzeile.",
+          "Google Search Console & Bing Webmaster Tools: Verifizierungs-Meta-Tags ohne Tracking-Cookies.",
+          "Speicherdauer: bis Sie den Speicher löschen oder wir die Richtlinie aktualisieren (Version 2026-07-11).",
         ],
       },
       {
@@ -406,9 +410,18 @@ const dictionary: Dictionary = {
   },
   cookieBanner: {
     title: "Cookies & Datenschutz",
-    description: "Optionale Analytics-Cookies zur Verbesserung der Seite. Sie entscheiden.",
-    accept: "Akzeptieren",
-    reject: "Ablehnen",
+    description:
+      "Essenzielle Speicherung für Ihre Cookie-Wahl. Optional: Vercel Analytics (anonyme Seitenaufrufe). Keine Analytics vor Ihrer Entscheidung.",
+    essentialTitle: "Essenziell",
+    essentialDescription: "Speichert Ihre Cookie-Präferenz in localStorage.",
+    alwaysOn: "Immer aktiv — erforderlich, um Ihre Wahl zu speichern.",
+    analyticsTitle: "Analytics (Vercel Analytics)",
+    analyticsDescription: "Anonyme Seitenstatistiken. Nur nach Einwilligung aktiv.",
+    acceptAll: "Alle akzeptieren",
+    rejectAll: "Alle ablehnen",
+    savePreferences: "Speichern",
+    manageSettings: "Einstellungen",
+    closeSettings: "Schließen",
     privacyLink: "Datenschutz",
   },
   sources: [

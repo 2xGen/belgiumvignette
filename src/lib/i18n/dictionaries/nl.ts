@@ -69,6 +69,7 @@ const dictionary: Dictionary = {
       "De plannen zijn gepresenteerd in maart 2026 en kunnen nog wijzigen. Wij volgen officiële bronnen en passen deze pagina aan zodra er nieuws is.",
     independentSite: "Onafhankelijke informatiesite",
     contactLabel: "Contact",
+    cookieSettings: "Cookievoorkeuren",
   },
   home: {
     hero: {
@@ -431,10 +432,12 @@ const dictionary: Dictionary = {
       },
       {
         id: "cookies",
-        title: "Cookies & analytics",
+        title: "Cookies, analytics & toestemming",
         paragraphs: [
-          "Wij gebruiken Vercel Analytics om anonieme bezoekstatistieken te verzamelen. Analytics wordt alleen geladen na uw toestemming via de cookiebanner.",
-          "Essentiële cookies (taalvoorkeur, cookieconsent) worden opgeslagen in localStorage.",
+          "Essentiële opslag: wij bewaren uw cookievoorkeur in localStorage op uw apparaat. Dit is nodig om uw keuze te onthouden. Rechtsgrond: gerechtvaardigd belang (Art. 6 lid 1 onder f AVG) en/or uw toestemming waar vereist.",
+          "Analytics (optioneel): Vercel Analytics verzamelt anonieme paginaweergaven (geen cookies geplaatst door ons voor analytics). Vercel kan technische gegevens zoals pagina-URL, referrer en apparaattype verwerken. Analytics wordt uitsluitend geladen nadat u via de cookiebanner toestemming geeft. Rechtsgrond: toestemming (Art. 6 lid 1 onder a AVG). U kunt toestemming intrekken via Cookievoorkeuren in de footer.",
+          "Google Search Console & Bing Webmaster Tools: wij kunnen een verificatiemeta-tag op de site plaatsen om eigendom te bewijzen bij zoekmachines. Deze tags stellen geen trackingcookies in en verzamelen geen bezoekersdata.",
+          "Bewaartermijn cookievoorkeur: tot u deze wist of wijziging van het beleid (versie 2026-07-11) u opnieuw om toestemming vraagt.",
         ],
       },
       {
@@ -462,9 +465,19 @@ const dictionary: Dictionary = {
   cookieBanner: {
     title: "Cookies & privacy",
     description:
-      "Wij gebruiken optionele analytics-cookies om onze site te verbeteren. U kiest zelf.",
-    accept: "Accepteren",
-    reject: "Weigeren",
+      "Wij gebruiken essentiële opslag voor uw cookievoorkeur. Optioneel: Vercel Analytics (anonieme paginaweergaven). Geen analytics vóór uw keuze. Accepteer, weiger of kies zelf per categorie.",
+    essentialTitle: "Essentieel",
+    essentialDescription:
+      "Opslaan van uw cookievoorkeur in localStorage, zodat wij uw keuze onthouden.",
+    alwaysOn: "Altijd actief — vereist om uw voorkeur te onthouden.",
+    analyticsTitle: "Analytics (Vercel Analytics)",
+    analyticsDescription:
+      "Anonieme statistieken over paginaweergaven om de site te verbeteren. Alleen actief na toestemming.",
+    acceptAll: "Alles accepteren",
+    rejectAll: "Alles weigeren",
+    savePreferences: "Voorkeuren opslaan",
+    manageSettings: "Instellingen",
+    closeSettings: "Sluiten",
     privacyLink: "Privacybeleid",
   },
   sources: [

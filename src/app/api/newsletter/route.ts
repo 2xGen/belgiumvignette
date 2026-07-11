@@ -1,6 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 import { NextResponse } from "next/server";
 import { isValidLocale } from "@/lib/i18n/config";
+import { CONSENT_POLICY_VERSION } from "@/lib/consent/config";
 
 function getSupabase() {
   const url = process.env.SUPABASE_URL;
@@ -33,14 +34,19 @@ export async function POST(request: Request) {
     }
 
     const validLocale = locale && isValidLocale(locale) ? locale : "nl";
+    const normalizedEmail = email.toLowerCase().trim();
+    const now = new Date().toISOString();
 
     const supabase = getSupabase();
 
     const { error } = await supabase.from("belgium_vignette_subscribers").upsert(
       {
-        email: email.toLowerCase().trim(),
+        email: normalizedEmail,
         locale: validLocale,
-        consent_given_at: new Date().toISOString(),
+        source: "belgiumvignette.be",
+        consent_given_at: now,
+        consent_version: CONSENT_POLICY_VERSION,
+        unsubscribed_at: null,
       },
       { onConflict: "email" },
     );

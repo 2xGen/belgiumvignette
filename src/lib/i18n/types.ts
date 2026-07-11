@@ -64,6 +64,7 @@ export interface Dictionary {
     plannedNotice: string;
     independentSite: string;
     contactLabel: string;
+    cookieSettings: string;
   };
   home: {
     hero: {
@@ -145,8 +146,16 @@ export interface Dictionary {
   cookieBanner: {
     title: string;
     description: string;
-    accept: string;
-    reject: string;
+    essentialTitle: string;
+    essentialDescription: string;
+    alwaysOn: string;
+    analyticsTitle: string;
+    analyticsDescription: string;
+    acceptAll: string;
+    rejectAll: string;
+    savePreferences: string;
+    manageSettings: string;
+    closeSettings: string;
     privacyLink: string;
   };
   sources: SourceLink[];

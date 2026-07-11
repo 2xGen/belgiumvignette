@@ -69,6 +69,7 @@ const dictionary: Dictionary = {
       "Les plans présentés en mars 2026 peuvent encore évoluer. Nous suivons les sources officielles et mettons à jour cette page dès que de nouvelles informations sont disponibles.",
     independentSite: "Site d'information indépendant",
     contactLabel: "Contact",
+    cookieSettings: "Préférences cookies",
   },
   home: {
     hero: {
@@ -394,9 +395,12 @@ const dictionary: Dictionary = {
       },
       {
         id: "cookies",
-        title: "Cookies & analytique",
+        title: "Cookies, analytique & consentement",
         paragraphs: [
-          "Vercel Analytics (anonyme) chargé uniquement après consentement. Préférences stockées en localStorage.",
+          "Stockage essentiel : nous enregistrons votre choix de cookies dans le localStorage. Base légale : intérêt légitime (Art. 6(1)(f) RGPD) et/ou consentement le cas échéant.",
+          "Analytique (optionnel) : Vercel Analytics collecte des pages vues anonymes. Chargé uniquement après consentement via la bannière. Base légale : consentement (Art. 6(1)(a) RGPD). Retrait via Préférences cookies dans le pied de page.",
+          "Google Search Console & Bing Webmaster Tools : balises meta de vérification de propriété, sans cookies de suivi.",
+          "Durée de conservation du choix : jusqu'à suppression ou mise à jour de la politique (version 2026-07-11).",
         ],
       },
       {
@@ -419,9 +423,18 @@ const dictionary: Dictionary = {
   },
   cookieBanner: {
     title: "Cookies & confidentialité",
-    description: "Nous utilisons des cookies analytiques optionnels. C'est votre choix.",
-    accept: "Accepter",
-    reject: "Refuser",
+    description:
+      "Stockage essentiel pour votre choix. Optionnel : Vercel Analytics (pages vues anonymes). Aucune analytique avant votre décision.",
+    essentialTitle: "Essentiel",
+    essentialDescription: "Enregistrement de votre préférence cookies dans le localStorage.",
+    alwaysOn: "Toujours actif — requis pour mémoriser votre choix.",
+    analyticsTitle: "Analytique (Vercel Analytics)",
+    analyticsDescription: "Statistiques anonymes de pages vues. Actif uniquement après consentement.",
+    acceptAll: "Tout accepter",
+    rejectAll: "Tout refuser",
+    savePreferences: "Enregistrer",
+    manageSettings: "Paramètres",
+    closeSettings: "Fermer",
     privacyLink: "Confidentialité",
   },
   sources: [

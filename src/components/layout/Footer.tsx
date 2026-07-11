@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/types";
 import { getLocalizedPath, pageKeys } from "@/lib/routes";
+import CookieSettingsButton from "@/components/CookieSettingsButton";
 
 export default function Footer({
   locale,
@@ -37,6 +38,10 @@ export default function Footer({
           >
             {dict.common.relatedSiteLabel}
           </a>
+        </p>
+
+        <p className="mt-4">
+          <CookieSettingsButton label={dict.common.cookieSettings} />
         </p>
 
         <ul className="mt-6 flex flex-wrap gap-x-4 gap-y-1">

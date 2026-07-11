@@ -35,6 +35,23 @@ Open [http://localhost:3000](http://localhost:3000) — redirects to `/nl`.
 | `SUPABASE_URL` | Supabase project URL |
 | `SUPABASE_SERVICE_ROLE_KEY` | Service role key (server-side only) |
 | `NEXT_PUBLIC_SITE_URL` | Canonical site URL, e.g. `https://belgiumvignette.be` |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Google Search Console HTML tag (content value) |
+| `NEXT_PUBLIC_BING_SITE_VERIFICATION` | Bing Webmaster Tools meta tag (content value) |
+
+## Analytics & GDPR cookies
+
+- **Vercel Analytics** (`@vercel/analytics/next`) loads only after explicit consent.
+- Cookie banner: Accept all / Reject all / granular settings (equal choice).
+- Users can change preferences anytime via **Cookie settings** in the footer.
+- Privacy policy documents legal bases (GDPR Art. 6) for essential storage and analytics.
+
+## Search Console & Bing
+
+1. Add the site in [Google Search Console](https://search.google.com/search-console) and [Bing Webmaster Tools](https://www.bing.com/webmasters).
+2. Choose the **HTML meta tag** verification method.
+3. Copy each **content** value into `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` and `NEXT_PUBLIC_BING_SITE_VERIFICATION` in Vercel.
+4. Redeploy and verify in each dashboard.
+5. Submit `https://belgiumvignette.be/sitemap.xml` in both tools.
 
 ## Supabase setup
 

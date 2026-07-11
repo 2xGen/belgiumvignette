@@ -69,6 +69,7 @@ const dictionary: Dictionary = {
       "Plans presented in March 2026 may still change. We track official sources and update this page when news breaks.",
     independentSite: "Independent information site",
     contactLabel: "Contact",
+    cookieSettings: "Cookie settings",
   },
   home: {
     hero: {
@@ -383,9 +384,12 @@ const dictionary: Dictionary = {
       },
       {
         id: "cookies",
-        title: "Cookies & analytics",
+        title: "Cookies, analytics & consent",
         paragraphs: [
-          "Vercel Analytics loaded only after consent. Preferences stored in localStorage.",
+          "Essential storage: we save your cookie preference in localStorage. Legal basis: legitimate interest (Art. 6(1)(f) GDPR) and/or consent where required.",
+          "Analytics (optional): Vercel Analytics collects anonymous page views. Loaded only after banner consent. Legal basis: consent (Art. 6(1)(a) GDPR). Withdraw via Cookie settings in the footer.",
+          "Google Search Console & Bing Webmaster Tools: ownership verification meta tags only — no tracking cookies.",
+          "Retention: until you clear storage or we update this policy (version 2026-07-11).",
         ],
       },
       {
@@ -408,9 +412,18 @@ const dictionary: Dictionary = {
   },
   cookieBanner: {
     title: "Cookies & privacy",
-    description: "We use optional analytics cookies to improve our site. Your choice.",
-    accept: "Accept",
-    reject: "Decline",
+    description:
+      "Essential storage for your cookie choice. Optional: Vercel Analytics (anonymous page views). No analytics before you decide.",
+    essentialTitle: "Essential",
+    essentialDescription: "Stores your cookie preference in localStorage.",
+    alwaysOn: "Always on — required to remember your choice.",
+    analyticsTitle: "Analytics (Vercel Analytics)",
+    analyticsDescription: "Anonymous page view statistics. Active only after consent.",
+    acceptAll: "Accept all",
+    rejectAll: "Reject all",
+    savePreferences: "Save preferences",
+    manageSettings: "Settings",
+    closeSettings: "Close",
     privacyLink: "Privacy policy",
   },
   sources: [

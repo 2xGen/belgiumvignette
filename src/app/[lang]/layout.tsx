@@ -4,7 +4,7 @@ import { getDictionary } from "@/lib/i18n/get-dictionary";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CookieBanner from "@/components/CookieBanner";
-import Analytics from "@/components/Analytics";
+import AnalyticsLoader from "@/components/Analytics";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -33,7 +33,7 @@ export default async function LangLayout({
         <main className="flex-1">{children}</main>
         <Footer locale={lang as Locale} dict={dict} />
         <CookieBanner locale={lang as Locale} dict={dict} />
-        <Analytics />
+        <AnalyticsLoader />
       </body>
     </html>
   );

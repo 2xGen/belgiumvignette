@@ -1,13 +1,6 @@
-import type { Metadata } from "next";
+import { rootMetadata } from "@/lib/site-metadata";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://belgiumvignette.be",
-  ),
-  icons: {
-    icon: "/favicon.svg",
-  },
-};
+export const metadata = rootMetadata;
 
 export default function RootLayout({
   children,

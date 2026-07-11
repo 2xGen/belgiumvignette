@@ -1,21 +1,28 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
-import { getCookieConsent } from "@/components/CookieBanner";
+import { Analytics } from "@vercel/analytics/next";
+import {
+  CONSENT_CHANGE_EVENT,
+  hasAnalyticsConsent,
+  migrateLegacyConsent,
+} from "@/lib/consent/storage";
 
-export default function Analytics() {
+export default function AnalyticsLoader() {
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    function check() {
-      setEnabled(getCookieConsent() === "accepted");
+    migrateLegacyConsent();
+
+    function sync() {
+      setEnabled(hasAnalyticsConsent());
     }
-    check();
-    window.addEventListener("cookie-consent-change", check);
-    return () => window.removeEventListener("cookie-consent-change", check);
+
+    sync();
+    window.addEventListener(CONSENT_CHANGE_EVENT, sync);
+    return () => window.removeEventListener(CONSENT_CHANGE_EVENT, sync);
   }, []);
 
   if (!enabled) return null;
-  return <VercelAnalytics />;
+  return <Analytics />;
 }
