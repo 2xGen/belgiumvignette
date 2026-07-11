@@ -1,0 +1,69 @@
+# BelgiumVignette.be
+
+Independent information site about Belgium's planned digital road vignette (from 1 May 2027). Sister site to [Tolls.be](https://tolls.be) — separate brand, design, and content.
+
+## Stack
+
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS v4
+- Supabase (newsletter)
+- Vercel Analytics (consent-gated)
+
+## Languages
+
+- Dutch (`/nl`) — default
+- French (`/fr`)
+- English (`/en`)
+- German (`/de`)
+
+## Getting started
+
+```bash
+npm install
+cp .env.example .env.local
+# Fill in Supabase credentials
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) — redirects to `/nl`.
+
+## Environment variables
+
+| Variable | Description |
+|---|---|
+| `SUPABASE_URL` | Supabase project URL |
+| `SUPABASE_SERVICE_ROLE_KEY` | Service role key (server-side only) |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL, e.g. `https://belgiumvignette.be` |
+
+## Supabase setup
+
+1. Create a Supabase project (or reuse an existing one).
+2. Run `supabase/schema.sql` in the SQL editor.
+3. Add `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` to `.env.local` and Vercel.
+
+## Deploy on Vercel
+
+1. Push this repo to GitHub.
+2. Import the project in [Vercel](https://vercel.com).
+3. Set environment variables (same as above).
+4. Deploy — Vercel detects Next.js automatically.
+
+Custom domain: point `belgiumvignette.be` to Vercel and set `NEXT_PUBLIC_SITE_URL=https://belgiumvignette.be`.
+
+## Scripts
+
+```bash
+npm run dev      # Development server
+npm run build    # Production build
+npm run start    # Start production server
+npm run lint     # ESLint
+```
+
+## Contact
+
+info@tolls.be
+
+## Disclaimer
+
+This is an independent information site, not affiliated with Belgian authorities. Content is based on published plans (March 2026) and may change.
