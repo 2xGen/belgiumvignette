@@ -41,6 +41,8 @@ body {
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 h1,
@@ -73,9 +75,11 @@ a:hover {
 
 .content-table {
   width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
   font-size: 15px;
   background: var(--bg-surface);
+  table-layout: fixed;
 }
 
 .content-table th,
@@ -84,6 +88,9 @@ a:hover {
   padding: 0.5rem 0.75rem;
   text-align: left;
   vertical-align: top;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .content-table th {
@@ -91,8 +98,15 @@ a:hover {
   font-weight: 600;
 }
 
-.content-table td:last-child {
-  white-space: nowrap;
+.content-table td:first-child {
+  width: 38%;
+}
+
+.table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .notice-box {
@@ -114,13 +128,16 @@ a:hover {
 }
 
 .page-wrap {
+  width: 100%;
   max-width: 52rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem 1.25rem 2.5rem;
+  padding: 2rem 1rem 2.5rem;
   background: var(--bg-surface);
   border-left: 1px solid var(--border-light);
   border-right: 1px solid var(--border-light);
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .site-wrap {

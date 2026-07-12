@@ -12,28 +12,32 @@ export function PricingTable({
   valueHeader: string;
 }) {
   return (
-    <table className="content-table">
-      {caption && <caption className="sr-only">{caption}</caption>}
-      <thead>
-        <tr>
-          <th scope="col">{categoryHeader}</th>
-          <th scope="col">{valueHeader}</th>
-        </tr>
-      </thead>
-      <tbody>
-        {rows.map((row) => (
-          <tr key={row.label}>
-            <td>{row.label}</td>
-            <td>
-              {row.value}
-              {row.note && (
-                <span className="ml-1 text-xs text-text-muted">({row.note})</span>
-              )}
-            </td>
+    <div className="table-wrap">
+      <table className="content-table">
+        {caption && <caption className="sr-only">{caption}</caption>}
+        <thead>
+          <tr>
+            <th scope="col">{categoryHeader}</th>
+            <th scope="col">{valueHeader}</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr key={row.label}>
+              <td>{row.label}</td>
+              <td>
+                {row.value}
+                {row.note && (
+                  <span className="ml-1 block text-xs text-text-muted sm:inline">
+                    ({row.note})
+                  </span>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
@@ -49,7 +53,7 @@ export function ComparisonTable({
   valueHeader: string;
 }) {
   return (
-    <div>
+    <div className="min-w-0">
       <h3 className="mb-2 font-serif text-lg font-bold text-text">{title}</h3>
       <PricingTable
         rows={rows}

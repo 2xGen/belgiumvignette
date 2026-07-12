@@ -30,7 +30,7 @@ export default async function LangLayout({
     <html lang={lang}>
       <body className="min-h-full flex flex-col">
         <Header locale={lang as Locale} dict={dict} />
-        <main className="flex-1">{children}</main>
+        <main className="min-w-0 flex-1 overflow-x-hidden">{children}</main>
         <Footer locale={lang as Locale} dict={dict} />
         <CookieBanner locale={lang as Locale} dict={dict} />
         <AnalyticsLoader />

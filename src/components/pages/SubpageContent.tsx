@@ -73,7 +73,7 @@ export function PricesPageContent({ dict }: { dict: Dictionary }) {
   return (
     <>
       <ContentSections sections={content.sections} />
-      <div className="mt-10 grid gap-8 lg:grid-cols-2">
+      <div className="mt-10 grid min-w-0 gap-8 lg:grid-cols-2">
         <ComparisonTable
           title={content.sections[0]?.title ?? ""}
           rows={content.annualTable}
@@ -87,24 +87,26 @@ export function PricesPageContent({ dict }: { dict: Dictionary }) {
           valueHeader={dict.common.tablePrice}
         />
       </div>
-      <section className="mt-10">
+      <section className="mt-10 min-w-0">
         <h2 className="section-heading">{content.euroNormTitle}</h2>
-        <table className="content-table">
-          <thead>
-            <tr>
-              <th scope="col">{content.euroNormCategoryHeader}</th>
-              <th scope="col">{content.euroNormDescriptionHeader}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {content.euroNormItems.map((item) => (
-              <tr key={item.norm}>
-                <td>{item.norm}</td>
-                <td>{item.description}</td>
+        <div className="table-wrap">
+          <table className="content-table">
+            <thead>
+              <tr>
+                <th scope="col">{content.euroNormCategoryHeader}</th>
+                <th scope="col">{content.euroNormDescriptionHeader}</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {content.euroNormItems.map((item) => (
+                <tr key={item.norm}>
+                  <td>{item.norm}</td>
+                  <td>{item.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
       <PageFaqSection faqs={content.faqs} />
     </>
