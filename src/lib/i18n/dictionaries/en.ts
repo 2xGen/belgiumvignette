@@ -16,6 +16,7 @@ const dictionary: Dictionary = {
     exemptions: "Exemptions",
     fines: "Fines",
     buy: "How to buy",
+    news: "News & updates",
     privacy: "Privacy",
   },
   meta: {
@@ -48,6 +49,11 @@ const dictionary: Dictionary = {
       title: "Buy Belgium vignette — when & how (digital system expected)",
       description:
         "Not yet on sale. What to expect according to plans: a digital plate-linked system, no windshield sticker.",
+    },
+    news: {
+      title: "Belgium vignette news & updates — trusted sources explained",
+      description:
+        "Independent summaries of official Belgium vignette news with our editorial view. Links to original sources.",
     },
     privacy: {
       title: "Privacy policy — BelgiumVignette.be",
@@ -405,6 +411,35 @@ const dictionary: Dictionary = {
       },
     ],
     lastUpdated: "11 July 2026",
+  },
+  news: {
+    title: "News & updates",
+    intro:
+      "We track trusted official and media sources on Belgium's planned vignette. Each article summarises the original reporting and adds our independent view — with a direct link to the source.",
+    latestArticles: "Latest articles",
+    summaryTitle: "Summary",
+    summaryFromSource: "from original source:",
+    ourTakeTitle: "Our view",
+    sourceTitle: "Original source",
+    readArticle: "Read article",
+    backToNews: "Back to news",
+    publishedOn: "Published",
+    sourceLabel: "Source",
+    sourceDisclaimer:
+      "We summarise trusted sources and link to the original article. Our view is independent editorial commentary, not official government information.",
+    translationDisclaimer:
+      "The summary and translation on this page were produced with AI assistance from the original article. Always refer to the source below for the authoritative wording.",
+    articleAttributionTitle: "Independent summary — not the original article",
+    articleAttributionIndependence:
+      "BelgiumVignette.be is an independent information site. We are not affiliated with, endorsed by, or acting on behalf of the original publisher. This page summarises publicly available reporting and adds our own editorial commentary. It is not a reproduction of the original article.",
+    articleAttributionAi:
+      "The summary and translation were produced with AI assistance and may differ in wording from the original. Always consult the source linked below for the authoritative text.",
+    articleAttributionReadOriginal: "Read the original article at",
+    articleAttributionCopyright:
+      "The original article, images and other media remain the property of their respective rights holders. We link to the source in good faith for reference. Image credits are shown above where applicable.",
+    tableOfContents: "On this page",
+    relatedArticles: "More news & updates",
+    noArticles: "No articles published yet. Check back soon.",
   },
   newsletter: {
     title: "Stay informed",

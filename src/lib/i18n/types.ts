@@ -139,6 +139,29 @@ export interface Dictionary {
     sections: ContentSection[];
     lastUpdated: string;
   };
+  news: {
+    title: string;
+    intro: string;
+    latestArticles: string;
+    summaryTitle: string;
+    summaryFromSource: string;
+    ourTakeTitle: string;
+    sourceTitle: string;
+    readArticle: string;
+    backToNews: string;
+    publishedOn: string;
+    sourceLabel: string;
+    sourceDisclaimer: string;
+    translationDisclaimer: string;
+    articleAttributionTitle: string;
+    articleAttributionIndependence: string;
+    articleAttributionAi: string;
+    articleAttributionReadOriginal: string;
+    articleAttributionCopyright: string;
+    tableOfContents: string;
+    relatedArticles: string;
+    noArticles: string;
+  };
   newsletter: {
     title: string;
     description: string;

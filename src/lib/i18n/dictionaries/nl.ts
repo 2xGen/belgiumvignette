@@ -16,6 +16,7 @@ const dictionary: Dictionary = {
     exemptions: "Vrijstellingen",
     fines: "Boetes",
     buy: "Kopen",
+    news: "Nieuws & updates",
     privacy: "Privacy",
   },
   meta: {
@@ -48,6 +49,11 @@ const dictionary: Dictionary = {
       title: "Belgisch vignet kopen — wanneer & hoe (verwacht digitaal)",
       description:
         "Het vignet is nog niet te koop. Lees wat er volgens de plannen verwacht wordt: digitaal systeem gekoppeld aan uw kenteken.",
+    },
+    news: {
+      title: "Belgisch vignet nieuws & updates — betrouwbare bronnen uitgelegd",
+      description:
+        "Onafhankelijke samenvattingen van officieel nieuws over het Belgische vignet met onze redactionele visie. Links naar de originele bronnen.",
     },
     privacy: {
       title: "Privacybeleid — BelgiumVignette.be",
@@ -455,6 +461,35 @@ const dictionary: Dictionary = {
       },
     ],
     lastUpdated: "11 juli 2026",
+  },
+  news: {
+    title: "Nieuws & updates",
+    intro:
+      "We volgen betrouwbare officiële en mediabronnen over het geplande Belgische vignet. Elk artikel vat de oorspronkelijke berichtgeving samen en voegt onze onafhankelijke visie toe — met een directe link naar de bron.",
+    latestArticles: "Laatste artikelen",
+    summaryTitle: "Samenvatting",
+    summaryFromSource: "van originele bron:",
+    ourTakeTitle: "Onze visie",
+    sourceTitle: "Originele bron",
+    readArticle: "Artikel lezen",
+    backToNews: "Terug naar nieuws",
+    publishedOn: "Gepubliceerd",
+    sourceLabel: "Bron",
+    sourceDisclaimer:
+      "We vatten betrouwbare bronnen samen en linken naar het originele artikel. Onze visie is onafhankelijk redactioneel commentaar, geen officiële overheidsinformatie.",
+    translationDisclaimer:
+      "De samenvatting en vertaling op deze pagina zijn met behulp van AI gemaakt op basis van het oorspronkelijke artikel. Raadpleeg altijd de bron hieronder voor de officiële formulering.",
+    articleAttributionTitle: "Onafhankelijke samenvatting — niet het originele artikel",
+    articleAttributionIndependence:
+      "BelgiumVignette.be is een onafhankelijke informatiesite. Wij zijn niet verbonden met, goedgekeurd door of optredend namens de oorspronkelijke uitgever. Deze pagina vat openbaar beschikbare berichtgeving samen en voegt ons eigen redactioneel commentaar toe. Het is geen reproductie van het originele artikel.",
+    articleAttributionAi:
+      "De samenvatting en vertaling zijn met behulp van AI gemaakt en kunnen in formulering afwijken van het origineel. Raadpleeg altijd de onderstaande bron voor de officiële tekst.",
+    articleAttributionReadOriginal: "Lees het originele artikel bij",
+    articleAttributionCopyright:
+      "Het originele artikel, afbeeldingen en overige media blijven eigendom van de respectievelijke rechthebbenden. Wij linken te goeder trouw naar de bron ter referentie. Fotocredits staan hierboven vermeld waar van toepassing.",
+    tableOfContents: "Op deze pagina",
+    relatedArticles: "Meer nieuws & updates",
+    noArticles: "Nog geen artikelen gepubliceerd. Kom binnenkort terug.",
   },
   newsletter: {
     title: "Blijf op de hoogte",

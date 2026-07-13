@@ -16,6 +16,7 @@ const dictionary: Dictionary = {
     exemptions: "Befreiungen",
     fines: "Bußgelder",
     buy: "Kaufen",
+    news: "Nachrichten & Updates",
     privacy: "Datenschutz",
   },
   meta: {
@@ -48,6 +49,11 @@ const dictionary: Dictionary = {
       title: "Vignette Belgien kaufen — wann & wie (digital erwartet)",
       description:
         "Noch nicht erhältlich. Was erwartet wird: digitales System, an Ihr Kennzeichen gebunden.",
+    },
+    news: {
+      title: "Belgische Vignette — Nachrichten & Updates, vertrauenswürdige Quellen erklärt",
+      description:
+        "Unabhängige Zusammenfassungen offizieller Nachrichten zur belgischen Vignette mit unserer redaktionellen Einschätzung. Links zu den Originalquellen.",
     },
     privacy: {
       title: "Datenschutzerklärung — BelgiumVignette.be",
@@ -403,6 +409,35 @@ const dictionary: Dictionary = {
       },
     ],
     lastUpdated: "11. Juli 2026",
+  },
+  news: {
+    title: "Nachrichten & Updates",
+    intro:
+      "Wir verfolgen vertrauenswürdige offizielle und Medienquellen zur geplanten belgischen Vignette. Jeder Artikel fasst die Originalberichterstattung zusammen und ergänzt unsere unabhängige Einschätzung — mit direktem Link zur Quelle.",
+    latestArticles: "Neueste Artikel",
+    summaryTitle: "Zusammenfassung",
+    summaryFromSource: "aus Originalquelle:",
+    ourTakeTitle: "Unsere Einschätzung",
+    sourceTitle: "Originalquelle",
+    readArticle: "Artikel lesen",
+    backToNews: "Zurück zu Nachrichten",
+    publishedOn: "Veröffentlicht",
+    sourceLabel: "Quelle",
+    sourceDisclaimer:
+      "Wir fassen vertrauenswürdige Quellen zusammen und verlinken auf den Originalartikel. Unsere Einschätzung ist unabhängiger redaktioneller Kommentar, keine amtliche Regierungsinformation.",
+    translationDisclaimer:
+      "Die Zusammenfassung und Übersetzung auf dieser Seite wurden mithilfe von KI auf Grundlage des Originalartikels erstellt. Beziehen Sie sich für die maßgebliche Formulierung immer auf die Quelle unten.",
+    articleAttributionTitle: "Unabhängige Zusammenfassung — nicht der Originalartikel",
+    articleAttributionIndependence:
+      "BelgiumVignette.be ist eine unabhängige Informationsseite. Wir sind nicht mit dem Originalverlag verbunden, von ihm befürwortet oder handeln in dessen Namen. Diese Seite fasst öffentlich zugängliche Berichterstattung zusammen und fügt unseren eigenen redaktionellen Kommentar hinzu. Es handelt sich nicht um eine Reproduktion des Originalartikels.",
+    articleAttributionAi:
+      "Die Zusammenfassung und Übersetzung wurden mit KI-Unterstützung erstellt und können im Wortlaut vom Original abweichen. Beziehen Sie sich für den maßgeblichen Text immer auf die unten verlinkte Quelle.",
+    articleAttributionReadOriginal: "Originalartikel lesen bei",
+    articleAttributionCopyright:
+      "Der Originalartikel, Bilder und andere Medien bleiben Eigentum der jeweiligen Rechteinhaber. Wir verlinken die Quelle in gutem Glauben zur Referenz. Bildnachweise sind oben angegeben, sofern zutreffend.",
+    tableOfContents: "Auf dieser Seite",
+    relatedArticles: "Weitere Nachrichten & Updates",
+    noArticles: "Noch keine Artikel veröffentlicht. Schauen Sie bald wieder vorbei.",
   },
   newsletter: {
     title: "Informiert bleiben",

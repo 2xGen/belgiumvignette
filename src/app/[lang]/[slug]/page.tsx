@@ -22,6 +22,7 @@ import {
   renderSubpageContent,
   getSubpageContent,
 } from "@/components/pages/SubpageContent";
+import { getAllArticles } from "@/lib/content/articles";
 
 const subpageKeys = Object.keys(routes) as Exclude<PageKey, "home">[];
 
@@ -130,8 +131,12 @@ export default async function Subpage({
           intro={content.intro}
           badge={content.badge}
           dict={dict}
+          showSiteNotice={pageKey !== "news"}
         />
-        {renderSubpageContent(pageKey, dict)}
+        {renderSubpageContent(pageKey, dict, {
+          articles: pageKey === "news" ? getAllArticles() : undefined,
+          locale: lang,
+        })}
         {pageKey === "buy" && (
           <div className="mt-12">
             <Newsletter locale={lang} dict={dict} />

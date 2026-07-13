@@ -2,17 +2,22 @@ import type { Dictionary } from "@/lib/i18n/types";
 import type { PageKey } from "@/lib/routes";
 import FAQ from "@/components/sections/FAQ";
 import { PricingTable, ComparisonTable } from "@/components/ui/PricingTable";
+import { NewsIndexContent } from "@/components/pages/NewsContent";
+import type { Article } from "@/lib/content/articles/types";
+import type { Locale } from "@/lib/i18n/config";
 
 export function PageHero({
   title,
   intro,
   badge,
   dict,
+  showSiteNotice = true,
 }: {
   title: string;
   intro: string;
   badge?: string;
   dict: Dictionary;
+  showSiteNotice?: boolean;
 }) {
   return (
     <header className="mb-8">
@@ -23,10 +28,14 @@ export function PageHero({
       )}
       <h1 className="text-3xl font-bold sm:text-4xl">{title}</h1>
       <p className="mt-4 text-text">{intro}</p>
-      <p className="notice-box mt-4 text-sm">{dict.common.plannedNotice}</p>
-      <p className="mt-2 text-xs text-text-muted">
-        {dict.common.lastUpdated}: {dict.common.lastUpdatedDate}
-      </p>
+      {showSiteNotice && (
+        <>
+          <p className="notice-box mt-4 text-sm">{dict.common.plannedNotice}</p>
+          <p className="mt-2 text-xs text-text-muted">
+            {dict.common.lastUpdated}: {dict.common.lastUpdatedDate}
+          </p>
+        </>
+      )}
     </header>
   );
 }
@@ -210,7 +219,28 @@ export function PrivacyPageContent({ dict }: { dict: Dictionary }) {
   );
 }
 
-export function renderSubpageContent(pageKey: PageKey, dict: Dictionary) {
+export function NewsPageContent({
+  dict,
+  articles,
+  locale,
+}: {
+  dict: Dictionary;
+  articles: Article[];
+  locale: Locale;
+}) {
+  return (
+    <>
+      <p className="notice-box mb-8 text-sm text-text-muted">{dict.news.sourceDisclaimer}</p>
+      <NewsIndexContent articles={articles} locale={locale} dict={dict} />
+    </>
+  );
+}
+
+export function renderSubpageContent(
+  pageKey: PageKey,
+  dict: Dictionary,
+  options?: { articles?: Article[]; locale?: Locale },
+) {
   switch (pageKey) {
     case "prices":
       return <PricesPageContent dict={dict} />;
@@ -224,6 +254,14 @@ export function renderSubpageContent(pageKey: PageKey, dict: Dictionary) {
       return <BuyPageContent dict={dict} />;
     case "privacy":
       return <PrivacyPageContent dict={dict} />;
+    case "news":
+      return (
+        <NewsPageContent
+          dict={dict}
+          articles={options?.articles ?? []}
+          locale={options?.locale ?? dict.locale}
+        />
+      );
     default:
       return null;
   }
@@ -243,6 +281,8 @@ export function getSubpageContent(pageKey: PageKey, dict: Dictionary) {
       return { title: dict.buy.title, intro: dict.buy.intro, badge: dict.buy.statusBadge };
     case "privacy":
       return { title: dict.privacy.title, intro: dict.privacy.intro, badge: undefined };
+    case "news":
+      return { title: dict.news.title, intro: dict.news.intro, badge: undefined };
     default:
       return null;
   }

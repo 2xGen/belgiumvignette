@@ -19,6 +19,7 @@ import Timeline from "@/components/sections/Timeline";
 import FAQ from "@/components/sections/FAQ";
 import Newsletter from "@/components/sections/Newsletter";
 import Sources from "@/components/sections/Sources";
+import LatestNews from "@/components/sections/LatestNews";
 
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -131,6 +132,7 @@ export default async function HomePage({
         </section>
 
         <Timeline title={dict.home.timelineTitle} items={dict.home.timeline} />
+        <LatestNews locale={lang} dict={dict} />
         <FAQ title={dict.home.faqTitle} items={dict.home.faqs} />
 
         <div className="py-6">
