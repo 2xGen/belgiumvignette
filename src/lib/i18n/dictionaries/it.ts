@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be è un sito informativo indipendente. Non siamo affiliati al governo belga, alla Fiandre, alla Vallonia o a Bruxelles.",
     lastUpdated: "Ultimo aggiornamento",
-    lastUpdatedDate: "11 July 2026",
-    lastUpdatedIso: "2026-07-11",
+    lastUpdatedDate: "14 luglio 2026",
+    lastUpdatedIso: "2026-07-14",
     readMore: "Scopri di più",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — informazioni indipendenti sui pedaggi in Belgio",
@@ -78,6 +78,13 @@ const dictionary: Dictionary = {
     cookieSettings: "Impostazioni cookie",
     tableCategory: "Categoria",
     tablePrice: "Prezzo",
+  },
+  notFound: {
+    title: "Pagina non trovata",
+    description:
+      "Questa pagina non esiste o è stata spostata. Torna alla homepage o consulta le ultime notizie sulla vignetta belga.",
+    homeLink: "Vai alla homepage",
+    newsLink: "Notizie e aggiornamenti",
   },
   home: {
     hero: {
@@ -401,7 +408,16 @@ const dictionary: Dictionary = {
           "Memorizzazione essenziale: salviamo la tua preferenza sui cookie in localStorage. Base giuridica: legittimo interesse (art. 6(1)(f) GDPR) e/o consenso ove richiesto.",
           "Analitiche (opzionale): Vercel Analytics raccoglie visualizzazioni di pagina anonime. Caricato solo dopo il consenso del banner. Base giuridica: consenso (art. 6(1)(a) GDPR). Revoca tramite Impostazioni cookie nel footer.",
           "Google Search Console e Bing Webmaster Tools: solo meta tag di verifica della proprietà — nessun cookie di tracciamento.",
-          "Conservazione: fino a quando non cancelli la memorizzazione o aggiorniamo questa informativa (versione 2026-07-11).",
+          "Conservazione: fino a quando non cancelli la memorizzazione o aggiorniamo questa informativa (versione 2026-07-14).",
+        ],
+      },
+      {
+        id: "news-editorial",
+        title: "Notizie, riepiloghi e contenuti editoriali",
+        paragraphs: [
+          "La nostra sezione notizie pubblica riepiloghi indipendenti di reportage di pubblico dominio sulla vignetta belga. Queste pagine non sono riproduzioni degli articoli originali.",
+          "I riepiloghi e le traduzioni possono essere prodotti con l'assistenza dell'IA e possono differire nella formulazione dalla fonte. Colleghiamo sempre l'editore originale. Il nostro commento editoriale («La nostra opinione») è scritto in modo indipendente e non rappresenta l'editore originale né le autorità belghe.",
+          "Le immagini negli articoli possono provenire dall'articolo originale collegato o da agenzie di stampa, con crediti ove applicabile. Tali contenuti restano di proprietà dei rispettivi titolari dei diritti. Li mostriamo in buona fede come riferimento insieme a un link alla fonte. Se ritieni che i tuoi contenuti siano usati in modo errato, contatta info@tolls.be.",
         ],
       },
       {
@@ -410,7 +426,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Accesso, rettifica, cancellazione, opposizione — info@tolls.be."],
       },
     ],
-    lastUpdated: "11 July 2026",
+    lastUpdated: "14 luglio 2026",
   },
   news: {
     title: "Notizie e aggiornamenti",

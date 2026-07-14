@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be este un site informativ independent. Nu suntem afiliați guvernului belgian, Flandrei, Valoniei sau Bruxelles-ului.",
     lastUpdated: "Ultima actualizare",
-    lastUpdatedDate: "11 July 2026",
-    lastUpdatedIso: "2026-07-11",
+    lastUpdatedDate: "14 July 2026",
+    lastUpdatedIso: "2026-07-14",
     readMore: "Citește mai mult",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — informații independente despre taxele rutiere din Belgia",
@@ -78,6 +78,13 @@ const dictionary: Dictionary = {
     cookieSettings: "Setări cookie",
     tableCategory: "Categorie",
     tablePrice: "Preț",
+  },
+  notFound: {
+    title: "Pagina nu a fost găsită",
+    description:
+      "Această pagină nu există sau a fost mutată. Reveniți la pagina principală sau consultați cele mai recente știri despre vigneta belgiană.",
+    homeLink: "Pagina principală",
+    newsLink: "Știri și actualizări",
   },
   home: {
     hero: {
@@ -401,7 +408,16 @@ const dictionary: Dictionary = {
           "Stocare esențială: salvăm preferința dvs. privind cookie-urile în localStorage. Temei legal: interes legitim (Art. 6(1)(f) GDPR) și/sau consimțământ acolo unde este necesar.",
           "Analitică (opțional): Vercel Analytics colectează vizualizări anonime de pagină. Se încarcă doar după consimțământul din banner. Temei legal: consimțământ (Art. 6(1)(a) GDPR). Retragere prin Setări cookie din subsol.",
           "Google Search Console și Bing Webmaster Tools: doar etichete meta de verificare a proprietății — fără cookie-uri de urmărire.",
-          "Păstrare: până când ștergeți stocarea sau actualizăm această politică (versiunea 2026-07-11).",
+          "Păstrare: până când ștergeți stocarea sau actualizăm această politică (versiunea 2026-07-14).",
+        ],
+      },
+      {
+        id: "news-editorial",
+        title: "Știri, rezumate & conținut editorial",
+        paragraphs: [
+          "Secțiunea noastră de știri publică rezumate independente ale reportajelor disponibile public despre vigneta belgiană. Aceste pagini nu sunt reproduceri ale articolelor originale.",
+          "Rezumatele și traducerile pot fi realizate cu ajutorul IA și pot diferi în formulare față de sursă. Linkăm întotdeauna către editorul original. Comentariul nostru editorial («Perspectiva noastră») este scris independent și nu reprezintă editorul original sau autoritățile belgiene.",
+          "Imaginile din articolele de știri pot proveni din articolul original linkat sau de la agenții de presă, cu credite acolo unde este cazul. Astfel de materiale rămân proprietatea deținătorilor respectivi de drepturi. Le afișăm cu bună-credință ca referință, alături de un link către sursă. Dacă considerați că conținutul dvs. este folosit incorect, contactați info@tolls.be.",
         ],
       },
       {
@@ -410,7 +426,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Acces, rectificare, ștergere, opoziție — info@tolls.be."],
       },
     ],
-    lastUpdated: "11 July 2026",
+    lastUpdated: "14 July 2026",
   },
   news: {
     title: "Știri și actualizări",

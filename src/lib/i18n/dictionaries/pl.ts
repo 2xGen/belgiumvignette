@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be to niezależna strona informacyjna. Nie jesteśmy powiązani z rządem belgijskim, Flandrią, Walonią ani Brukselą.",
     lastUpdated: "Ostatnia aktualizacja",
-    lastUpdatedDate: "11 July 2026",
-    lastUpdatedIso: "2026-07-11",
+    lastUpdatedDate: "14 July 2026",
+    lastUpdatedIso: "2026-07-14",
     readMore: "Czytaj więcej",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — niezależne informacje o opłatach drogowych w Belgii",
@@ -78,6 +78,13 @@ const dictionary: Dictionary = {
     cookieSettings: "Ustawienia plików cookie",
     tableCategory: "Kategoria",
     tablePrice: "Cena",
+  },
+  notFound: {
+    title: "Strona nie znaleziona",
+    description:
+      "Ta strona nie istnieje lub została przeniesiona. Wróć na stronę główną lub przejrzyj najnowsze wiadomości o winiecie belgijskiej.",
+    homeLink: "Strona główna",
+    newsLink: "Aktualności i informacje",
   },
   home: {
     hero: {
@@ -401,7 +408,16 @@ const dictionary: Dictionary = {
           "Niezbędne przechowywanie: zapisujemy Twoje preferencje dotyczące plików cookie w localStorage. Podstawa prawna: prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO) i/lub zgoda, gdy jest wymagana.",
           "Analityka (opcjonalna): Vercel Analytics zbiera anonimowe wyświetlenia stron. Ładowana dopiero po zgodzie z banera. Podstawa prawna: zgoda (art. 6 ust. 1 lit. a RODO). Wycofaj przez Ustawienia plików cookie w stopce.",
           "Google Search Console i Bing Webmaster Tools: wyłącznie meta tagi weryfikacji własności — bez śledzących plików cookie.",
-          "Przechowywanie: do czasu wyczyszczenia pamięci lub aktualizacji tej polityki (wersja 2026-07-11).",
+          "Przechowywanie: do czasu wyczyszczenia pamięci lub aktualizacji tej polityki (wersja 2026-07-14).",
+        ],
+      },
+      {
+        id: "news-editorial",
+        title: "Wiadomości, streszczenia i treści redakcyjne",
+        paragraphs: [
+          "Nasza sekcja wiadomości publikuje niezależne streszczenia publicznie dostępnych doniesień o belgijskiej winiecie. Te strony nie są reprodukcją oryginalnych artykułów.",
+          "Streszczenia i tłumaczenia mogą być tworzone z pomocą AI i mogą różnić się sformułowaniem od źródła. Zawsze linkujemy do oryginalnego wydawcy. Nasz komentarz redakcyjny („Nasza opinia”) jest pisany niezależnie i nie reprezentuje oryginalnego wydawcy ani władz belgijskich.",
+          "Obrazy w artykułach mogą pochodzić z linkowanego oryginalnego artykułu lub agencji prasowych, z podpisami tam gdzie to możliwe. Pozostają własnością odpowiednich podmiotów praw. Wyświetlamy je w dobrej wierze jako odniesienie wraz z linkiem do źródła. Jeśli uważasz, że Twoje treści są używane nieprawidłowo, napisz na info@tolls.be.",
         ],
       },
       {
@@ -410,7 +426,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Dostęp, sprostowanie, usunięcie, sprzeciw — info@tolls.be."],
       },
     ],
-    lastUpdated: "11 July 2026",
+    lastUpdated: "14 July 2026",
   },
   news: {
     title: "Aktualności",

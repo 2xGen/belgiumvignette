@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be er et uafhængigt informationssite. Vi er ikke tilknyttet den belgiske regering, Flandern, Vallonien eller Bruxelles.",
     lastUpdated: "Sidst opdateret",
-    lastUpdatedDate: "11 July 2026",
-    lastUpdatedIso: "2026-07-11",
+    lastUpdatedDate: "14 July 2026",
+    lastUpdatedIso: "2026-07-14",
     readMore: "Læs mere",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — uafhængig information om belgiske vejafgifter",
@@ -78,6 +78,13 @@ const dictionary: Dictionary = {
     cookieSettings: "Cookieindstillinger",
     tableCategory: "Kategori",
     tablePrice: "Pris",
+  },
+  notFound: {
+    title: "Siden blev ikke fundet",
+    description:
+      "Denne side findes ikke eller er blevet flyttet. Gå tilbage til forsiden eller læs vores seneste nyheder om det belgiske vignet.",
+    homeLink: "Til forsiden",
+    newsLink: "Nyheder og opdateringer",
   },
   home: {
     hero: {
@@ -402,7 +409,16 @@ const dictionary: Dictionary = {
           "Nødvendig lagring: vi gemmer dit cookievalg i localStorage. Retsgrundlag: legitim interesse (art. 6(1)(f) GDPR) og/eller samtykke, hvor det kræves.",
           "Analyse (valgfrit): Vercel Analytics indsamler anonyme sidevisninger. Indlæses kun efter samtykke via banneret. Retsgrundlag: samtykke (art. 6(1)(a) GDPR). Tilbagekald via Cookieindstillinger i footeren.",
           "Google Search Console & Bing Webmaster Tools: kun meta-tags til ejerskabsverifikation — ingen sporingscookies.",
-          "Opbevaring: indtil du rydder lagringen eller vi opdaterer denne politik (version 2026-07-11).",
+          "Opbevaring: indtil du rydder lagringen eller vi opdaterer denne politik (version 2026-07-14).",
+        ],
+      },
+      {
+        id: "news-editorial",
+        title: "Nyheder, resuméer & redaktionelt indhold",
+        paragraphs: [
+          "Vores nyhedssektion udgiver uafhængige resuméer af offentligt tilgængelig rapportering om det belgiske vignet. Disse sider er ikke reproduktioner af de originale artikler.",
+          "Resuméer og oversættelser kan udarbejdes med AI og kan afvige i formulering fra kilden. Vi linker altid til den oprindelige udgiver. Vores redaktionelle kommentar («Vores syn») er skrevet uafhængigt og repræsenterer ikke den oprindelige udgiver eller de belgiske myndigheder.",
+          "Billeder i nyhedsartikler kan stamme fra den linkede originalartikel eller press bureauer, med credits hvor relevant. Sådant materiale forbliver ejendom hos de respektive rettighedshavere. Vi viser det i god tro som reference sammen med et link til kilden. Hvis du mener, at dit indhold bruges forkert, kontakt info@tolls.be.",
         ],
       },
       {
@@ -411,7 +427,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Indsigt, berigtigelse, sletning, indsigelse — info@tolls.be."],
       },
     ],
-    lastUpdated: "11 July 2026",
+    lastUpdated: "14 July 2026",
   },
   news: {
     title: "Nyheder og opdateringer",

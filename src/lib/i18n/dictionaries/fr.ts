@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be est un site d'information indépendant. Nous ne sommes pas affiliés au gouvernement belge, à la Flandre, à la Wallonie ou à Bruxelles.",
     lastUpdated: "Dernière mise à jour",
-    lastUpdatedDate: "11 juillet 2026",
-    lastUpdatedIso: "2026-07-11",
+    lastUpdatedDate: "14 juillet 2026",
+    lastUpdatedIso: "2026-07-14",
     readMore: "En savoir plus",
     relatedSite: "https://tolls.be/fr",
     relatedSiteLabel: "Tolls.be — informations indépendantes sur les péages en Belgique",
@@ -78,6 +78,13 @@ const dictionary: Dictionary = {
     cookieSettings: "Préférences cookies",
     tableCategory: "Catégorie",
     tablePrice: "Tarif",
+  },
+  notFound: {
+    title: "Page introuvable",
+    description:
+      "Cette page n'existe pas ou a été déplacée. Retournez à l'accueil ou consultez nos dernières actualités sur la vignette belge.",
+    homeLink: "Accueil",
+    newsLink: "Actualités & mises à jour",
   },
   home: {
     hero: {
@@ -412,7 +419,16 @@ const dictionary: Dictionary = {
           "Stockage essentiel : nous enregistrons votre choix de cookies dans le localStorage. Base légale : intérêt légitime (Art. 6(1)(f) RGPD) et/ou consentement le cas échéant.",
           "Analytique (optionnel) : Vercel Analytics collecte des pages vues anonymes. Chargé uniquement après consentement via la bannière. Base légale : consentement (Art. 6(1)(a) RGPD). Retrait via Préférences cookies dans le pied de page.",
           "Google Search Console & Bing Webmaster Tools : balises meta de vérification de propriété, sans cookies de suivi.",
-          "Durée de conservation du choix : jusqu'à suppression ou mise à jour de la politique (version 2026-07-11).",
+          "Durée de conservation du choix : jusqu'à suppression ou mise à jour de la politique (version 2026-07-14).",
+        ],
+      },
+      {
+        id: "news-editorial",
+        title: "Actualités, résumés & contenu éditorial",
+        paragraphs: [
+          "Notre rubrique actualités publie des résumés indépendants de reportages accessibles au public sur la vignette belge. Ces pages ne sont pas des reproductions des articles originaux.",
+          "Les résumés et traductions peuvent être produits avec l'aide de l'IA et peuvent différer dans la formulation de la source. Nous lions toujours vers l'éditeur original. Notre commentaire éditorial (« Notre point de vue ») est rédigé indépendamment et ne représente pas l'éditeur original ni les autorités belges.",
+          "Les images sur les articles d'actualité peuvent provenir de l'article original lié ou d'agences de presse, avec crédits le cas échéant. Ces contenus restent la propriété de leurs titulaires de droits respectifs. Nous les affichons de bonne foi à titre de référence, avec un lien vers la source. Si vous estimez que votre contenu est utilisé de manière incorrecte, contactez info@tolls.be.",
         ],
       },
       {
@@ -421,7 +437,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Accès, rectification, suppression, opposition — info@tolls.be."],
       },
     ],
-    lastUpdated: "11 juillet 2026",
+    lastUpdated: "14 juillet 2026",
   },
   news: {
     title: "Actualités & mises à jour",

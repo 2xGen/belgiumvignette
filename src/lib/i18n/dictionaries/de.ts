@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be ist eine unabhängige Informationsseite. Wir sind nicht mit der belgischen Regierung, Flandern, der Wallonie oder Brüssel verbunden.",
     lastUpdated: "Zuletzt aktualisiert",
-    lastUpdatedDate: "11. Juli 2026",
-    lastUpdatedIso: "2026-07-11",
+    lastUpdatedDate: "14. Juli 2026",
+    lastUpdatedIso: "2026-07-14",
     readMore: "Mehr erfahren",
     relatedSite: "https://tolls.be/de",
     relatedSiteLabel: "Tolls.be — unabhängige Maut-Informationen für Belgien",
@@ -78,6 +78,13 @@ const dictionary: Dictionary = {
     cookieSettings: "Cookie-Einstellungen",
     tableCategory: "Kategorie",
     tablePrice: "Preis",
+  },
+  notFound: {
+    title: "Seite nicht gefunden",
+    description:
+      "Diese Seite existiert nicht oder wurde verschoben. Zurück zur Startseite oder zu unseren neuesten Vignette-Nachrichten.",
+    homeLink: "Zur Startseite",
+    newsLink: "Nachrichten & Updates",
   },
   home: {
     hero: {
@@ -399,7 +406,16 @@ const dictionary: Dictionary = {
           "Essenziell: Speicherung Ihrer Cookie-Einstellung in localStorage. Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) und/oder Einwilligung.",
           "Analytics (optional): Vercel Analytics erfasst anonyme Seitenaufrufe. Wird nur nach Einwilligung geladen. Rechtsgrundlage: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Widerruf über Cookie-Einstellungen in der Fußzeile.",
           "Google Search Console & Bing Webmaster Tools: Verifizierungs-Meta-Tags ohne Tracking-Cookies.",
-          "Speicherdauer: bis Sie den Speicher löschen oder wir die Richtlinie aktualisieren (Version 2026-07-11).",
+          "Speicherdauer: bis Sie den Speicher löschen oder wir die Richtlinie aktualisieren (Version 2026-07-14).",
+        ],
+      },
+      {
+        id: "news-editorial",
+        title: "Nachrichten, Zusammenfassungen & redaktionelle Inhalte",
+        paragraphs: [
+          "Unser Nachrichtenbereich veröffentlicht unabhängige Zusammenfassungen öffentlich zugänglicher Berichterstattung über die belgische Vignette. Diese Seiten sind keine Reproduktionen der Originalartikel.",
+          "Zusammenfassungen und Übersetzungen können mit KI-Unterstützung erstellt werden und können im Wortlaut von der Quelle abweichen. Wir verlinken stets auf den Originalverlag. Unser redaktioneller Kommentar („Unsere Einschätzung“) ist unabhängig verfasst und repräsentiert weder den Originalverlag noch die belgischen Behörden.",
+          "Bilder in Nachrichtenartikeln können aus dem verlinkten Originalartikel oder von Presseagenturen stammen, mit Credits wo zutreffend. Solche Medien bleiben Eigentum der jeweiligen Rechteinhaber. Wir zeigen sie in gutem Glauben als Referenz neben einem Link zur Quelle. Wenn Sie der Meinung sind, dass Ihre Inhalte falsch verwendet werden, kontaktieren Sie info@tolls.be.",
         ],
       },
       {
@@ -408,7 +424,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Auskunft, Berichtigung, Löschung, Widerspruch — info@tolls.be."],
       },
     ],
-    lastUpdated: "11. Juli 2026",
+    lastUpdated: "14. Juli 2026",
   },
   news: {
     title: "Nachrichten & Updates",

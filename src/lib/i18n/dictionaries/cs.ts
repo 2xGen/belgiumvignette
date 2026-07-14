@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be je nezávislý informační web. Nejsme spojeni s belgickou vládou, Flandremi, Valonskem ani Bruselem.",
     lastUpdated: "Naposledy aktualizováno",
-    lastUpdatedDate: "11 July 2026",
-    lastUpdatedIso: "2026-07-11",
+    lastUpdatedDate: "14 July 2026",
+    lastUpdatedIso: "2026-07-14",
     readMore: "Číst více",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — nezávislé informace o mýtném v Belgii",
@@ -78,6 +78,13 @@ const dictionary: Dictionary = {
     cookieSettings: "Nastavení cookies",
     tableCategory: "Kategorie",
     tablePrice: "Cena",
+  },
+  notFound: {
+    title: "Stránka nenalezena",
+    description:
+      "Tato stránka neexistuje nebo byla přesunuta. Vraťte se na domovskou stránku nebo si prohlédněte nejnovější zprávy o belgické známce.",
+    homeLink: "Domovská stránka",
+    newsLink: "Novinky a aktualizace",
   },
   home: {
     hero: {
@@ -401,7 +408,16 @@ const dictionary: Dictionary = {
           "Nezbytné úložiště: ukládáme vaši volbu cookies v localStorage. Právní základ: oprávněný zájem (čl. 6 odst. 1 písm. f) GDPR) a/nebo souhlas, kde je vyžadován.",
           "Analytika (volitelné): Vercel Analytics shromažďuje anonymní zobrazení stránek. Načítá se až po souhlasu v banneru. Právní základ: souhlas (čl. 6 odst. 1 písm. a) GDPR). Odvolání přes Nastavení cookies v patičce.",
           "Google Search Console a Bing Webmaster Tools: pouze meta tagy pro ověření vlastnictví — žádné sledovací cookies.",
-          "Uchovávání: dokud nevymažete úložiště nebo neaktualizujeme tyto zásady (verze 2026-07-11).",
+          "Uchovávání: dokud nevymažete úložiště nebo neaktualizujeme tyto zásady (verze 2026-07-14).",
+        ],
+      },
+      {
+        id: "news-editorial",
+        title: "Zprávy, shrnutí a redakční obsah",
+        paragraphs: [
+          "Naše sekce novinek publikuje nezávislá shrnutí veřejně dostupných zpráv o belgické známce. Tyto stránky nejsou reprodukcí původních článků.",
+          "Shrnutí a překlady mohou být vytvořeny s pomocí AI a mohou se ve formulaci lišit od zdroje. Vždy odkazujeme na původního vydavatele. Náš redakční komentář („Náš pohled“) je psán nezávisle a nereprezentuje původního vydavatele ani belgické úřady.",
+          "Obrázky v novinkových článcích mohou pocházet z propojeného původního článku nebo tiskových agentur, s uvedením autorství kde je to relevantní. Takový obsah zůstává majetkem příslušných držitelů práv. Zobrazujeme jej v dobré víře jako referenci spolu s odkazem na zdroj. Pokud se domníváte, že váš obsah je použit nesprávně, kontaktujte info@tolls.be.",
         ],
       },
       {
@@ -410,7 +426,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Přístup, oprava, výmaz, námitka — info@tolls.be."],
       },
     ],
-    lastUpdated: "11 July 2026",
+    lastUpdated: "14 July 2026",
   },
   news: {
     title: "Novinky",

@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be es un sitio de información independiente. No estamos afiliados al gobierno belga, Flandes, Valonia ni Bruselas.",
     lastUpdated: "Última actualización",
-    lastUpdatedDate: "11 July 2026",
-    lastUpdatedIso: "2026-07-11",
+    lastUpdatedDate: "14 July 2026",
+    lastUpdatedIso: "2026-07-14",
     readMore: "Leer más",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — información independiente sobre peajes en Bélgica",
@@ -78,6 +78,13 @@ const dictionary: Dictionary = {
     cookieSettings: "Configuración de cookies",
     tableCategory: "Categoría",
     tablePrice: "Precio",
+  },
+  notFound: {
+    title: "Página no encontrada",
+    description:
+      "Esta página no existe o ha sido movida. Vuelva a la página de inicio o consulte nuestras últimas noticias sobre la viñeta belga.",
+    homeLink: "Ir al inicio",
+    newsLink: "Noticias y actualizaciones",
   },
   home: {
     hero: {
@@ -401,7 +408,16 @@ const dictionary: Dictionary = {
           "Almacenamiento esencial: guardamos su preferencia de cookies en localStorage. Base legal: interés legítimo (art. 6(1)(f) RGPD) y/o consentimiento cuando sea necesario.",
           "Analítica (opcional): Vercel Analytics recopila visitas de página anónimas. Solo se carga tras el consentimiento del banner. Base legal: consentimiento (art. 6(1)(a) RGPD). Retirar mediante Configuración de cookies en el pie de página.",
           "Google Search Console y Bing Webmaster Tools: solo etiquetas meta de verificación de propiedad — sin cookies de seguimiento.",
-          "Conservación: hasta que borre el almacenamiento o actualicemos esta política (versión 2026-07-11).",
+          "Conservación: hasta que borre el almacenamiento o actualicemos esta política (versión 2026-07-14).",
+        ],
+      },
+      {
+        id: "news-editorial",
+        title: "Noticias, resúmenes y contenido editorial",
+        paragraphs: [
+          "Nuestra sección de noticias publica resúmenes independientes de información de dominio público sobre la viñeta belga. Estas páginas no son reproducciones de los artículos originales.",
+          "Los resúmenes y traducciones pueden elaborarse con ayuda de IA y pueden diferir en redacción de la fuente. Siempre enlazamos al editor original. Nuestro comentario editorial («Nuestra opinión») se redacta de forma independiente y no representa al editor original ni a las autoridades belgas.",
+          "Las imágenes en artículos de noticias pueden proceder del artículo original enlazado o de agencias de prensa, con créditos cuando corresponda. Dichos contenidos siguen siendo propiedad de sus titulares de derechos. Los mostramos de buena fe como referencia, junto con un enlace a la fuente. Si cree que su contenido se utiliza incorrectamente, contacte info@tolls.be.",
         ],
       },
       {
@@ -410,7 +426,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Acceso, rectificación, supresión, oposición — info@tolls.be."],
       },
     ],
-    lastUpdated: "11 July 2026",
+    lastUpdated: "14 July 2026",
   },
   news: {
     title: "Noticias y actualizaciones",

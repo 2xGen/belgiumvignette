@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be is an independent information site. We are not affiliated with the Belgian government, Flanders, Wallonia or Brussels.",
     lastUpdated: "Last updated",
-    lastUpdatedDate: "11 July 2026",
-    lastUpdatedIso: "2026-07-11",
+    lastUpdatedDate: "14 July 2026",
+    lastUpdatedIso: "2026-07-14",
     readMore: "Read more",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — independent Belgium toll information",
@@ -78,6 +78,13 @@ const dictionary: Dictionary = {
     cookieSettings: "Cookie settings",
     tableCategory: "Category",
     tablePrice: "Price",
+  },
+  notFound: {
+    title: "Page not found",
+    description:
+      "This page does not exist or has been moved. Return to the homepage or browse our latest vignette news.",
+    homeLink: "Go to homepage",
+    newsLink: "News & updates",
   },
   home: {
     hero: {
@@ -401,7 +408,16 @@ const dictionary: Dictionary = {
           "Essential storage: we save your cookie preference in localStorage. Legal basis: legitimate interest (Art. 6(1)(f) GDPR) and/or consent where required.",
           "Analytics (optional): Vercel Analytics collects anonymous page views. Loaded only after banner consent. Legal basis: consent (Art. 6(1)(a) GDPR). Withdraw via Cookie settings in the footer.",
           "Google Search Console & Bing Webmaster Tools: ownership verification meta tags only — no tracking cookies.",
-          "Retention: until you clear storage or we update this policy (version 2026-07-11).",
+          "Retention: until you clear storage or we update this policy (version 2026-07-14).",
+        ],
+      },
+      {
+        id: "news-editorial",
+        title: "News summaries & editorial content",
+        paragraphs: [
+          "Our news section publishes independent summaries of publicly available reporting about the Belgium vignette. These pages are not reproductions of the original articles.",
+          "Summaries and translations may be produced with AI assistance and can differ in wording from the source. We always link to the original publisher. Our editorial commentary ('Our view') is written independently and does not represent the original publisher or Belgian authorities.",
+          "Images on news articles may be sourced from the linked original article or press agencies, with credits shown where applicable. Such media remains the property of the respective rights holders. We display it in good faith for reference alongside a link to the source. If you believe your content is used incorrectly, contact info@tolls.be.",
         ],
       },
       {
@@ -410,7 +426,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Access, rectification, deletion, objection — info@tolls.be."],
       },
     ],
-    lastUpdated: "11 July 2026",
+    lastUpdated: "14 July 2026",
   },
   news: {
     title: "News & updates",

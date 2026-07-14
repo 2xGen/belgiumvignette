@@ -68,6 +68,12 @@ export interface Dictionary {
     tableCategory: string;
     tablePrice: string;
   };
+  notFound: {
+    title: string;
+    description: string;
+    homeLink: string;
+    newsLink: string;
+  };
   home: {
     hero: {
       eyebrow: string;

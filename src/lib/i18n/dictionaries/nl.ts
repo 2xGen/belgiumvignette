@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be is een onafhankelijke informatiesite. Wij zijn niet verbonden met de Belgische overheid, Vlaanderen, Wallonië of Brussel.",
     lastUpdated: "Laatst bijgewerkt",
-    lastUpdatedDate: "11 juli 2026",
-    lastUpdatedIso: "2026-07-11",
+    lastUpdatedDate: "14 juli 2026",
+    lastUpdatedIso: "2026-07-14",
     readMore: "Lees meer",
     relatedSite: "https://tolls.be/nl",
     relatedSiteLabel: "Tolls.be — onafhankelijke tol-informatie voor België",
@@ -78,6 +78,13 @@ const dictionary: Dictionary = {
     cookieSettings: "Cookievoorkeuren",
     tableCategory: "Categorie",
     tablePrice: "Prijs",
+  },
+  notFound: {
+    title: "Pagina niet gevonden",
+    description:
+      "Deze pagina bestaat niet of is verplaatst. Ga terug naar de homepage of bekijk ons laatste nieuws over het Belgische vignet.",
+    homeLink: "Naar homepage",
+    newsLink: "Nieuws & updates",
   },
   home: {
     hero: {
@@ -449,7 +456,16 @@ const dictionary: Dictionary = {
           "Essentiële opslag: wij bewaren uw cookievoorkeur in localStorage op uw apparaat. Dit is nodig om uw keuze te onthouden. Rechtsgrond: gerechtvaardigd belang (Art. 6 lid 1 onder f AVG) en/or uw toestemming waar vereist.",
           "Analytics (optioneel): Vercel Analytics verzamelt anonieme paginaweergaven (geen cookies geplaatst door ons voor analytics). Vercel kan technische gegevens zoals pagina-URL, referrer en apparaattype verwerken. Analytics wordt uitsluitend geladen nadat u via de cookiebanner toestemming geeft. Rechtsgrond: toestemming (Art. 6 lid 1 onder a AVG). U kunt toestemming intrekken via Cookievoorkeuren in de footer.",
           "Google Search Console & Bing Webmaster Tools: wij kunnen een verificatiemeta-tag op de site plaatsen om eigendom te bewijzen bij zoekmachines. Deze tags stellen geen trackingcookies in en verzamelen geen bezoekersdata.",
-          "Bewaartermijn cookievoorkeur: tot u deze wist of wijziging van het beleid (versie 2026-07-11) u opnieuw om toestemming vraagt.",
+          "Bewaartermijn cookievoorkeur: tot u deze wist of wijziging van het beleid (versie 2026-07-14) u opnieuw om toestemming vraagt.",
+        ],
+      },
+      {
+        id: "news-editorial",
+        title: "Nieuws, samenvattingen & redactionele inhoud",
+        paragraphs: [
+          "Onze nieuwsrubriek publiceert onafhankelijke samenvattingen van openbaar beschikbare berichtgeving over het Belgische vignet. Deze pagina's zijn geen reproductie van de originele artikelen.",
+          "Samenvattingen en vertalingen kunnen met behulp van AI worden gemaakt en kunnen in formulering afwijken van de bron. Wij linken altijd naar de oorspronkelijke uitgever. Ons redactioneel commentaar ('Onze visie') is onafhankelijk geschreven en vertegenwoordigt niet de oorspronkelijke uitgever of de Belgische overheid.",
+          "Afbeeldingen op nieuwsartikelen kunnen afkomstig zijn van het gelinkte originele artikel of persbureaus, met credits waar van toepassing. Dergelijk materiaal blijft eigendom van de respectievelijke rechthebbenden. Wij tonen het te goeder trouw ter referentie, naast een link naar de bron. Als u meent dat uw content onjuist wordt gebruikt, neem contact op via info@tolls.be.",
         ],
       },
       {
@@ -460,7 +476,7 @@ const dictionary: Dictionary = {
         ],
       },
     ],
-    lastUpdated: "11 juli 2026",
+    lastUpdated: "14 juli 2026",
   },
   news: {
     title: "Nieuws & updates",

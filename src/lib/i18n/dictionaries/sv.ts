@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be är en oberoende informationssajt. Vi är inte kopplade till den belgiska staten, Flandern, Vallonien eller Bryssel.",
     lastUpdated: "Senast uppdaterad",
-    lastUpdatedDate: "11 July 2026",
-    lastUpdatedIso: "2026-07-11",
+    lastUpdatedDate: "14 July 2026",
+    lastUpdatedIso: "2026-07-14",
     readMore: "Läs mer",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — oberoende information om belgiska vägavgifter",
@@ -78,6 +78,13 @@ const dictionary: Dictionary = {
     cookieSettings: "Cookieinställningar",
     tableCategory: "Kategori",
     tablePrice: "Pris",
+  },
+  notFound: {
+    title: "Sidan hittades inte",
+    description:
+      "Den här sidan finns inte eller har flyttats. Gå tillbaka till startsidan eller läs våra senaste nyheter om den belgiska vignetten.",
+    homeLink: "Till startsidan",
+    newsLink: "Nyheter och uppdateringar",
   },
   home: {
     hero: {
@@ -401,7 +408,16 @@ const dictionary: Dictionary = {
           "Nödvändig lagring: vi sparar ditt cookieval i localStorage. Rättslig grund: berättigat intresse (art. 6.1 f GDPR) och/eller samtycke där det krävs.",
           "Analys (valfritt): Vercel Analytics samlar in anonyma sidvisningar. Laddas endast efter samtycke via cookiebannern. Rättslig grund: samtycke (art. 6.1 a GDPR). Återkalla via Cookieinställningar i sidfoten.",
           "Google Search Console och Bing Webmaster Tools: endast verifieringsmetataggar — inga spårningscookies.",
-          "Lagringstid: tills du rensar lagringen eller vi uppdaterar denna policy (version 2026-07-11).",
+          "Lagringstid: tills du rensar lagringen eller vi uppdaterar denna policy (version 2026-07-14).",
+        ],
+      },
+      {
+        id: "news-editorial",
+        title: "Nyheter, sammanfattningar & redaktionellt innehåll",
+        paragraphs: [
+          "Vår nyhetssektion publicerar oberoende sammanfattningar av allmänt tillgänglig rapportering om den belgiska vignetten. Dessa sidor är inte reproduktioner av originalartiklarna.",
+          "Sammanfattningar och översättningar kan produceras med AI-stöd och kan skilja sig i formulering från källan. Vi länkar alltid till den ursprungliga utgivaren. Vår redaktionella kommentar («Vår syn») skrivs oberoende och representerar inte den ursprungliga utgivaren eller belgiska myndigheter.",
+          "Bilder i nyhetsartiklar kan hämtas från den länkade originalartikeln eller pressbyråer, med credits där tillämpligt. Sådant material förblir egendom hos respektive rättighetsinnehavare. Vi visar det i god tro som referens tillsammans med en länk till källan. Om du anser att ditt innehåll används felaktigt, kontakta info@tolls.be.",
         ],
       },
       {
@@ -410,7 +426,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Tillgång, rättelse, radering, invändning — info@tolls.be."],
       },
     ],
-    lastUpdated: "11 July 2026",
+    lastUpdated: "14 July 2026",
   },
   news: {
     title: "Nyheter och uppdateringar",
