@@ -1,5 +1,10 @@
+import Link from "next/link";
 import type { Dictionary } from "@/lib/i18n/types";
-import type { PageKey } from "@/lib/routes";
+import type { PageKey, VignetteProductPageKey } from "@/lib/routes";
+import {
+  getLocalizedPath,
+  vignetteProductPageKeys,
+} from "@/lib/routes";
 import FAQ from "@/components/sections/FAQ";
 import { PricingTable, ComparisonTable } from "@/components/ui/PricingTable";
 import { NewsIndexContent } from "@/components/pages/NewsContent";
@@ -96,6 +101,24 @@ export function PricesPageContent({ dict }: { dict: Dictionary }) {
           valueHeader={dict.common.tablePrice}
         />
       </div>
+      <section className="mt-10 min-w-0">
+        <h2 className="section-heading">{content.vignettePagesTitle}</h2>
+        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+          {vignetteProductPageKeys.map((key) => (
+            <li key={key}>
+              <Link
+                href={getLocalizedPath(dict.locale, key)}
+                className="panel-muted block p-4 no-underline hover:no-underline"
+              >
+                <span className="font-serif font-bold text-text">{dict.nav[key]}</span>
+                <span className="mt-1 block text-sm text-text-muted">
+                  {dict[key].intro.slice(0, 120)}…
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
       <section className="mt-10 min-w-0">
         <h2 className="section-heading">{content.euroNormTitle}</h2>
         <div className="table-wrap">
@@ -219,6 +242,57 @@ export function PrivacyPageContent({ dict }: { dict: Dictionary }) {
   );
 }
 
+export function VignetteProductPageContent({
+  dict,
+  pageKey,
+}: {
+  dict: Dictionary;
+  pageKey: VignetteProductPageKey;
+}) {
+  const content = dict[pageKey];
+  const relatedKeys = vignetteProductPageKeys.filter((key) => key !== pageKey);
+
+  return (
+    <>
+      <ContentSections sections={content.sections} />
+      <div className="mt-10 grid min-w-0 gap-8 lg:grid-cols-2">
+        <ComparisonTable
+          title={content.priceTableTitle}
+          rows={content.priceTable}
+          categoryHeader={dict.common.tableCategory}
+          valueHeader={dict.common.tablePrice}
+        />
+        {content.compareTable && content.compareTableTitle && (
+          <ComparisonTable
+            title={content.compareTableTitle}
+            rows={content.compareTable}
+            categoryHeader={dict.common.tableCategory}
+            valueHeader={dict.common.tablePrice}
+          />
+        )}
+      </div>
+      <section className="mt-10 min-w-0">
+        <h2 className="section-heading">{content.relatedPagesTitle}</h2>
+        <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+          {relatedKeys.map((key) => (
+            <li key={key}>
+              <Link href={getLocalizedPath(dict.locale, key)} className="text-link">
+                {dict.nav[key]} →
+              </Link>
+            </li>
+          ))}
+          <li>
+            <Link href={getLocalizedPath(dict.locale, "prices")} className="text-link">
+              {dict.nav.prices} →
+            </Link>
+          </li>
+        </ul>
+      </section>
+      <PageFaqSection faqs={content.faqs} />
+    </>
+  );
+}
+
 export function NewsPageContent({
   dict,
   articles,
@@ -234,6 +308,12 @@ export function NewsPageContent({
       <NewsIndexContent articles={articles} locale={locale} dict={dict} />
     </>
   );
+}
+
+function isVignetteProductPage(
+  pageKey: PageKey,
+): pageKey is VignetteProductPageKey {
+  return (vignetteProductPageKeys as readonly string[]).includes(pageKey);
 }
 
 export function renderSubpageContent(
@@ -263,11 +343,22 @@ export function renderSubpageContent(
         />
       );
     default:
+      if (isVignetteProductPage(pageKey)) {
+        return <VignetteProductPageContent dict={dict} pageKey={pageKey} />;
+      }
       return null;
   }
 }
 
 export function getSubpageContent(pageKey: PageKey, dict: Dictionary) {
+  if (isVignetteProductPage(pageKey)) {
+    return {
+      title: dict[pageKey].title,
+      intro: dict[pageKey].intro,
+      badge: undefined,
+    };
+  }
+
   switch (pageKey) {
     case "prices":
       return { title: dict.prices.title, intro: dict.prices.intro, badge: undefined };

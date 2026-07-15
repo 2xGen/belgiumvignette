@@ -1,6 +1,6 @@
-import type { Dictionary } from "../types";
+import type { BaseDictionary } from "../types";
 
-const dictionary: Dictionary = {
+const dictionary: BaseDictionary = {
   locale: "cs",
   site: {
     name: "Belgium Vignette",
@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be je nezávislý informační web. Nejsme spojeni s belgickou vládou, Flandremi, Valonskem ani Bruselem.",
     lastUpdated: "Naposledy aktualizováno",
-    lastUpdatedDate: "14 July 2026",
-    lastUpdatedIso: "2026-07-14",
+    lastUpdatedDate: "15 July 2026",
+    lastUpdatedIso: "2026-07-15",
     readMore: "Číst více",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — nezávislé informace o mýtném v Belgii",
@@ -224,6 +224,7 @@ const dictionary: Dictionary = {
       { norm: "Elektro / H₂", description: "Nulové emise. Nejnižší plánovaná sazba." },
       { norm: "Euro 3 a nižší", description: "Starší, více znečišťující vozidla." },
     ],
+    vignettePagesTitle: "Podle typu známky",
     faqs: [
       {
         question: "Lze si u dodávek odečíst náklady?",
@@ -408,7 +409,7 @@ const dictionary: Dictionary = {
           "Nezbytné úložiště: ukládáme vaši volbu cookies v localStorage. Právní základ: oprávněný zájem (čl. 6 odst. 1 písm. f) GDPR) a/nebo souhlas, kde je vyžadován.",
           "Analytika (volitelné): Vercel Analytics shromažďuje anonymní zobrazení stránek. Načítá se až po souhlasu v banneru. Právní základ: souhlas (čl. 6 odst. 1 písm. a) GDPR). Odvolání přes Nastavení cookies v patičce.",
           "Google Search Console a Bing Webmaster Tools: pouze meta tagy pro ověření vlastnictví — žádné sledovací cookies.",
-          "Uchovávání: dokud nevymažete úložiště nebo neaktualizujeme tyto zásady (verze 2026-07-14).",
+          "Uchovávání: dokud nevymažete úložiště nebo neaktualizujeme tyto zásady (verze 2026-07-15).",
         ],
       },
       {
@@ -426,7 +427,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Přístup, oprava, výmaz, námitka — info@tolls.be."],
       },
     ],
-    lastUpdated: "14 July 2026",
+    lastUpdated: "15 July 2026",
   },
   news: {
     title: "Novinky",

@@ -1,7 +1,9 @@
 import type { Locale } from "@/lib/i18n/config";
-import type { Dictionary } from "@/lib/i18n/types";
+import type { BaseDictionary, Dictionary } from "@/lib/i18n/types";
+import { vignetteProductPageKeys } from "@/lib/routes";
+import { getVignetteProductPages } from "./vignette-products";
 
-const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
+const dictionaries: Record<Locale, () => Promise<BaseDictionary>> = {
   nl: () => import("./dictionaries/nl").then((m) => m.default),
   fr: () => import("./dictionaries/fr").then((m) => m.default),
   en: () => import("./dictionaries/en").then((m) => m.default),
@@ -16,5 +18,26 @@ const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
 };
 
 export async function getDictionary(locale: Locale): Promise<Dictionary> {
-  return dictionaries[locale]();
+  const [base, vignetteProducts] = await Promise.all([
+    dictionaries[locale](),
+    getVignetteProductPages(locale),
+  ]);
+
+  const nav = { ...base.nav } as Dictionary["nav"];
+  const meta = { ...base.meta } as Dictionary["meta"];
+
+  for (const key of vignetteProductPageKeys) {
+    nav[key] = vignetteProducts[key].navLabel;
+    meta[key] = {
+      title: vignetteProducts[key].metaTitle,
+      description: vignetteProducts[key].metaDescription,
+    };
+  }
+
+  return {
+    ...base,
+    nav,
+    meta,
+    ...vignetteProducts,
+  };
 }

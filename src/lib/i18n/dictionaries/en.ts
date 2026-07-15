@@ -1,6 +1,6 @@
-import type { Dictionary } from "../types";
+import type { BaseDictionary } from "../types";
 
-const dictionary: Dictionary = {
+const dictionary: BaseDictionary = {
   locale: "en",
   site: {
     name: "Belgium Vignette",
@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be is an independent information site. We are not affiliated with the Belgian government, Flanders, Wallonia or Brussels.",
     lastUpdated: "Last updated",
-    lastUpdatedDate: "14 July 2026",
-    lastUpdatedIso: "2026-07-14",
+    lastUpdatedDate: "15 July 2026",
+    lastUpdatedIso: "2026-07-15",
     readMore: "Read more",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — independent Belgium toll information",
@@ -224,6 +224,7 @@ const dictionary: Dictionary = {
       { norm: "Electric / H₂", description: "Zero emission. Lowest planned rate." },
       { norm: "Euro 3 and below", description: "Older, more polluting vehicles." },
     ],
+    vignettePagesTitle: "By vignette type",
     faqs: [
       {
         question: "Are commercial vans deductible?",
@@ -408,7 +409,7 @@ const dictionary: Dictionary = {
           "Essential storage: we save your cookie preference in localStorage. Legal basis: legitimate interest (Art. 6(1)(f) GDPR) and/or consent where required.",
           "Analytics (optional): Vercel Analytics collects anonymous page views. Loaded only after banner consent. Legal basis: consent (Art. 6(1)(a) GDPR). Withdraw via Cookie settings in the footer.",
           "Google Search Console & Bing Webmaster Tools: ownership verification meta tags only — no tracking cookies.",
-          "Retention: until you clear storage or we update this policy (version 2026-07-14).",
+          "Retention: until you clear storage or we update this policy (version 2026-07-15).",
         ],
       },
       {
@@ -426,7 +427,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Access, rectification, deletion, objection — info@tolls.be."],
       },
     ],
-    lastUpdated: "14 July 2026",
+    lastUpdated: "15 July 2026",
   },
   news: {
     title: "News & updates",

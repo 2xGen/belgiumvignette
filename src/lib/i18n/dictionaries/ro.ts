@@ -1,6 +1,6 @@
-import type { Dictionary } from "../types";
+import type { BaseDictionary } from "../types";
 
-const dictionary: Dictionary = {
+const dictionary: BaseDictionary = {
   locale: "ro",
   site: {
     name: "Belgium Vignette",
@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be este un site informativ independent. Nu suntem afiliați guvernului belgian, Flandrei, Valoniei sau Bruxelles-ului.",
     lastUpdated: "Ultima actualizare",
-    lastUpdatedDate: "14 July 2026",
-    lastUpdatedIso: "2026-07-14",
+    lastUpdatedDate: "15 July 2026",
+    lastUpdatedIso: "2026-07-15",
     readMore: "Citește mai mult",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — informații independente despre taxele rutiere din Belgia",
@@ -224,6 +224,7 @@ const dictionary: Dictionary = {
       { norm: "Electric / H₂", description: "Zero emisii. Cel mai mic tarif planificat." },
       { norm: "Euro 3 și inferior", description: "Vehicule mai vechi și mai poluante." },
     ],
+    vignettePagesTitle: "Pe tip de vigneta",
     faqs: [
       {
         question: "Sunt dube comerciale deductibile?",
@@ -408,7 +409,7 @@ const dictionary: Dictionary = {
           "Stocare esențială: salvăm preferința dvs. privind cookie-urile în localStorage. Temei legal: interes legitim (Art. 6(1)(f) GDPR) și/sau consimțământ acolo unde este necesar.",
           "Analitică (opțional): Vercel Analytics colectează vizualizări anonime de pagină. Se încarcă doar după consimțământul din banner. Temei legal: consimțământ (Art. 6(1)(a) GDPR). Retragere prin Setări cookie din subsol.",
           "Google Search Console și Bing Webmaster Tools: doar etichete meta de verificare a proprietății — fără cookie-uri de urmărire.",
-          "Păstrare: până când ștergeți stocarea sau actualizăm această politică (versiunea 2026-07-14).",
+          "Păstrare: până când ștergeți stocarea sau actualizăm această politică (versiunea 2026-07-15).",
         ],
       },
       {
@@ -426,7 +427,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Acces, rectificare, ștergere, opoziție — info@tolls.be."],
       },
     ],
-    lastUpdated: "14 July 2026",
+    lastUpdated: "15 July 2026",
   },
   news: {
     title: "Știri și actualizări",

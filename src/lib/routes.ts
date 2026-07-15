@@ -2,9 +2,19 @@ import { locales, type Locale } from "@/lib/i18n/config";
 import { getArticleBySlug } from "@/lib/content/articles";
 import type { Article } from "@/lib/content/articles/types";
 
+export const vignetteProductPageKeys = [
+  "dailyVignette",
+  "monthlyVignette",
+  "annualVignette",
+  "electricVignette",
+] as const;
+
+export type VignetteProductPageKey = (typeof vignetteProductPageKeys)[number];
+
 export const pageKeys = [
   "home",
   "prices",
+  ...vignetteProductPageKeys,
   "foreign",
   "exemptions",
   "fines",
@@ -14,6 +24,12 @@ export const pageKeys = [
 ] as const;
 
 export type PageKey = (typeof pageKeys)[number];
+
+export const mainNavPageKeys = pageKeys.filter(
+  (key) =>
+    key !== "home" &&
+    !(vignetteProductPageKeys as readonly string[]).includes(key),
+);
 
 export const routes: Record<Exclude<PageKey, "home">, Record<Locale, string>> = {
   prices: {
@@ -28,6 +44,58 @@ export const routes: Record<Exclude<PageKey, "home">, Record<Locale, string>> = 
     sv: "priser",
     da: "priser",
     ro: "preturi",
+  },
+  dailyVignette: {
+    nl: "dagvignet",
+    fr: "vignette-journaliere",
+    en: "daily-vignette",
+    de: "tagesvignette",
+    es: "vignette-diaria",
+    pl: "dzienna-wineta",
+    cs: "denni-znamka",
+    it: "vignetta-giornaliera",
+    sv: "daglig-vignett",
+    da: "dagsvignet",
+    ro: "vinieta-zilnica",
+  },
+  monthlyVignette: {
+    nl: "maandvignet",
+    fr: "vignette-mensuelle",
+    en: "monthly-vignette",
+    de: "monatsvignette",
+    es: "vignette-mensual",
+    pl: "miesieczna-wineta",
+    cs: "mesicni-znamka",
+    it: "vignetta-mensile",
+    sv: "manadsvignett",
+    da: "maanedsvignet",
+    ro: "vinieta-lunara",
+  },
+  annualVignette: {
+    nl: "jaarvignet",
+    fr: "vignette-annuelle",
+    en: "annual-vignette",
+    de: "jahresvignette",
+    es: "vignette-anual",
+    pl: "roczna-wineta",
+    cs: "rocni-znamka",
+    it: "vignetta-annuale",
+    sv: "arsvignett",
+    da: "arsvignet",
+    ro: "vinieta-anuala",
+  },
+  electricVignette: {
+    nl: "elektrisch-vignet",
+    fr: "vignette-voiture-electrique",
+    en: "electric-vehicle-vignette",
+    de: "e-auto-vignette",
+    es: "vignette-coche-electrico",
+    pl: "wineta-samochod-elektryczny",
+    cs: "elektricke-vozidlo-znamka",
+    it: "vignetta-auto-elettrica",
+    sv: "elbil-vignett",
+    da: "elbil-vignet",
+    ro: "vinieta-masina-electrica",
   },
   foreign: {
     nl: "buitenlandse-bestuurders",

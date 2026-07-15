@@ -1,6 +1,6 @@
-import type { Dictionary } from "../types";
+import type { BaseDictionary } from "../types";
 
-const dictionary: Dictionary = {
+const dictionary: BaseDictionary = {
   locale: "nl",
   site: {
     name: "Belgium Vignette",
@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be is een onafhankelijke informatiesite. Wij zijn niet verbonden met de Belgische overheid, Vlaanderen, Wallonië of Brussel.",
     lastUpdated: "Laatst bijgewerkt",
-    lastUpdatedDate: "14 juli 2026",
-    lastUpdatedIso: "2026-07-14",
+    lastUpdatedDate: "15 juli 2026",
+    lastUpdatedIso: "2026-07-15",
     readMore: "Lees meer",
     relatedSite: "https://tolls.be/nl",
     relatedSiteLabel: "Tolls.be — onafhankelijke tol-informatie voor België",
@@ -226,6 +226,7 @@ const dictionary: Dictionary = {
       { norm: "Elektrisch / H₂", description: "Volledig emissievrij. Laagste tarief gepland." },
       { norm: "Euro 3 en lager", description: "Oudere, meer vervuilende voertuigen. Hoogste tarief." },
     ],
+    vignettePagesTitle: "Per vignettype",
     faqs: [
       {
         question: "Zijn bedrijfsvans aftrekbaar?",
@@ -456,7 +457,7 @@ const dictionary: Dictionary = {
           "Essentiële opslag: wij bewaren uw cookievoorkeur in localStorage op uw apparaat. Dit is nodig om uw keuze te onthouden. Rechtsgrond: gerechtvaardigd belang (Art. 6 lid 1 onder f AVG) en/or uw toestemming waar vereist.",
           "Analytics (optioneel): Vercel Analytics verzamelt anonieme paginaweergaven (geen cookies geplaatst door ons voor analytics). Vercel kan technische gegevens zoals pagina-URL, referrer en apparaattype verwerken. Analytics wordt uitsluitend geladen nadat u via de cookiebanner toestemming geeft. Rechtsgrond: toestemming (Art. 6 lid 1 onder a AVG). U kunt toestemming intrekken via Cookievoorkeuren in de footer.",
           "Google Search Console & Bing Webmaster Tools: wij kunnen een verificatiemeta-tag op de site plaatsen om eigendom te bewijzen bij zoekmachines. Deze tags stellen geen trackingcookies in en verzamelen geen bezoekersdata.",
-          "Bewaartermijn cookievoorkeur: tot u deze wist of wijziging van het beleid (versie 2026-07-14) u opnieuw om toestemming vraagt.",
+          "Bewaartermijn cookievoorkeur: tot u deze wist of wijziging van het beleid (versie 2026-07-15) u opnieuw om toestemming vraagt.",
         ],
       },
       {
@@ -476,7 +477,7 @@ const dictionary: Dictionary = {
         ],
       },
     ],
-    lastUpdated: "14 juli 2026",
+    lastUpdated: "15 juli 2026",
   },
   news: {
     title: "Nieuws & updates",

@@ -1,6 +1,6 @@
-import type { Dictionary } from "../types";
+import type { BaseDictionary } from "../types";
 
-const dictionary: Dictionary = {
+const dictionary: BaseDictionary = {
   locale: "fr",
   site: {
     name: "Belgium Vignette",
@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be est un site d'information indépendant. Nous ne sommes pas affiliés au gouvernement belge, à la Flandre, à la Wallonie ou à Bruxelles.",
     lastUpdated: "Dernière mise à jour",
-    lastUpdatedDate: "14 juillet 2026",
-    lastUpdatedIso: "2026-07-14",
+    lastUpdatedDate: "15 juillet 2026",
+    lastUpdatedIso: "2026-07-15",
     readMore: "En savoir plus",
     relatedSite: "https://tolls.be/fr",
     relatedSiteLabel: "Tolls.be — informations indépendantes sur les péages en Belgique",
@@ -224,6 +224,7 @@ const dictionary: Dictionary = {
       { norm: "Électrique / H₂", description: "Zéro émission. Tarif le plus bas prévu." },
       { norm: "Euro 3 et moins", description: "Véhicules plus anciens et polluants." },
     ],
+    vignettePagesTitle: "Par type de vignette",
     faqs: [
       {
         question: "Les camionnettes professionnelles sont-elles déductibles ?",
@@ -419,7 +420,7 @@ const dictionary: Dictionary = {
           "Stockage essentiel : nous enregistrons votre choix de cookies dans le localStorage. Base légale : intérêt légitime (Art. 6(1)(f) RGPD) et/ou consentement le cas échéant.",
           "Analytique (optionnel) : Vercel Analytics collecte des pages vues anonymes. Chargé uniquement après consentement via la bannière. Base légale : consentement (Art. 6(1)(a) RGPD). Retrait via Préférences cookies dans le pied de page.",
           "Google Search Console & Bing Webmaster Tools : balises meta de vérification de propriété, sans cookies de suivi.",
-          "Durée de conservation du choix : jusqu'à suppression ou mise à jour de la politique (version 2026-07-14).",
+          "Durée de conservation du choix : jusqu'à suppression ou mise à jour de la politique (version 2026-07-15).",
         ],
       },
       {
@@ -437,7 +438,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Accès, rectification, suppression, opposition — info@tolls.be."],
       },
     ],
-    lastUpdated: "14 juillet 2026",
+    lastUpdated: "15 juillet 2026",
   },
   news: {
     title: "Actualités & mises à jour",

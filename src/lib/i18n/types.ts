@@ -1,5 +1,9 @@
 import type { Locale } from "./config";
 import type { PageKey } from "@/lib/routes";
+import type {
+  VignetteProductPage,
+  VignetteProductPageKey,
+} from "./vignette-products/types";
 
 export interface FaqItem {
   question: string;
@@ -105,8 +109,13 @@ export interface Dictionary {
     euroNormCategoryHeader: string;
     euroNormDescriptionHeader: string;
     euroNormItems: { norm: string; description: string }[];
+    vignettePagesTitle: string;
     faqs: FaqItem[];
   };
+  dailyVignette: VignetteProductPage;
+  monthlyVignette: VignetteProductPage;
+  annualVignette: VignetteProductPage;
+  electricVignette: VignetteProductPage;
   foreign: {
     title: string;
     intro: string;
@@ -195,3 +204,11 @@ export interface Dictionary {
   };
   sources: SourceLink[];
 }
+
+export type BaseDictionary = Omit<
+  Dictionary,
+  VignetteProductPageKey | "nav" | "meta"
+> & {
+  nav: Omit<Record<PageKey, string>, VignetteProductPageKey>;
+  meta: Omit<Record<PageKey, PageMeta>, VignetteProductPageKey>;
+};

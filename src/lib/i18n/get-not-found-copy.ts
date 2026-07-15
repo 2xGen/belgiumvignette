@@ -1,6 +1,6 @@
 import type { Locale } from "@/lib/i18n/config";
 import { locales } from "@/lib/i18n/config";
-import type { Dictionary } from "@/lib/i18n/types";
+import type { BaseDictionary } from "@/lib/i18n/types";
 import nl from "@/lib/i18n/dictionaries/nl";
 import fr from "@/lib/i18n/dictionaries/fr";
 import en from "@/lib/i18n/dictionaries/en";
@@ -13,7 +13,7 @@ import sv from "@/lib/i18n/dictionaries/sv";
 import da from "@/lib/i18n/dictionaries/da";
 import ro from "@/lib/i18n/dictionaries/ro";
 
-const dictionaries: Record<Locale, Dictionary> = {
+const dictionaries: Record<Locale, BaseDictionary> = {
   nl,
   fr,
   en,

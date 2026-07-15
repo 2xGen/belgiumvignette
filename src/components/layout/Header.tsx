@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/types";
-import { getLocalizedPath, pageKeys } from "@/lib/routes";
+import { getLocalizedPath, mainNavPageKeys } from "@/lib/routes";
 import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 
 export default function Header({
@@ -11,7 +11,7 @@ export default function Header({
   locale: Locale;
   dict: Dictionary;
 }) {
-  const navItems = pageKeys.filter((key) => key !== "home");
+  const navItems = mainNavPageKeys;
 
   return (
     <header className="border-b border-border bg-bg-header">

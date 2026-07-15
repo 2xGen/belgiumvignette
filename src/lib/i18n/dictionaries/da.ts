@@ -1,6 +1,6 @@
-import type { Dictionary } from "../types";
+import type { BaseDictionary } from "../types";
 
-const dictionary: Dictionary = {
+const dictionary: BaseDictionary = {
   locale: "da",
   site: {
     name: "Belgium Vignette",
@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be er et uafhængigt informationssite. Vi er ikke tilknyttet den belgiske regering, Flandern, Vallonien eller Bruxelles.",
     lastUpdated: "Sidst opdateret",
-    lastUpdatedDate: "14 July 2026",
-    lastUpdatedIso: "2026-07-14",
+    lastUpdatedDate: "15 July 2026",
+    lastUpdatedIso: "2026-07-15",
     readMore: "Læs mere",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — uafhængig information om belgiske vejafgifter",
@@ -224,6 +224,7 @@ const dictionary: Dictionary = {
       { norm: "El / H₂", description: "Nulemission. Laveste planlagte takst." },
       { norm: "Euro 3 og derunder", description: "Ældre, mere forurenende køretøjer." },
     ],
+    vignettePagesTitle: "Efter vignettype",
     faqs: [
       {
         question: "Kan erhvervsvarebiler fradrages?",
@@ -409,7 +410,7 @@ const dictionary: Dictionary = {
           "Nødvendig lagring: vi gemmer dit cookievalg i localStorage. Retsgrundlag: legitim interesse (art. 6(1)(f) GDPR) og/eller samtykke, hvor det kræves.",
           "Analyse (valgfrit): Vercel Analytics indsamler anonyme sidevisninger. Indlæses kun efter samtykke via banneret. Retsgrundlag: samtykke (art. 6(1)(a) GDPR). Tilbagekald via Cookieindstillinger i footeren.",
           "Google Search Console & Bing Webmaster Tools: kun meta-tags til ejerskabsverifikation — ingen sporingscookies.",
-          "Opbevaring: indtil du rydder lagringen eller vi opdaterer denne politik (version 2026-07-14).",
+          "Opbevaring: indtil du rydder lagringen eller vi opdaterer denne politik (version 2026-07-15).",
         ],
       },
       {
@@ -427,7 +428,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Indsigt, berigtigelse, sletning, indsigelse — info@tolls.be."],
       },
     ],
-    lastUpdated: "14 July 2026",
+    lastUpdated: "15 July 2026",
   },
   news: {
     title: "Nyheder og opdateringer",

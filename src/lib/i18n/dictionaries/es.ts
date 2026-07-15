@@ -1,6 +1,6 @@
-import type { Dictionary } from "../types";
+import type { BaseDictionary } from "../types";
 
-const dictionary: Dictionary = {
+const dictionary: BaseDictionary = {
   locale: "es",
   site: {
     name: "Belgium Vignette",
@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be es un sitio de información independiente. No estamos afiliados al gobierno belga, Flandes, Valonia ni Bruselas.",
     lastUpdated: "Última actualización",
-    lastUpdatedDate: "14 July 2026",
-    lastUpdatedIso: "2026-07-14",
+    lastUpdatedDate: "15 July 2026",
+    lastUpdatedIso: "2026-07-15",
     readMore: "Leer más",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — información independiente sobre peajes en Bélgica",
@@ -224,6 +224,7 @@ const dictionary: Dictionary = {
       { norm: "Eléctrico / H₂", description: "Cero emisiones. Tarifa prevista más baja." },
       { norm: "Euro 3 e inferior", description: "Vehículos más antiguos y contaminantes." },
     ],
+    vignettePagesTitle: "Por tipo de viñeta",
     faqs: [
       {
         question: "¿Las furgonetas comerciales son deducibles?",
@@ -408,7 +409,7 @@ const dictionary: Dictionary = {
           "Almacenamiento esencial: guardamos su preferencia de cookies en localStorage. Base legal: interés legítimo (art. 6(1)(f) RGPD) y/o consentimiento cuando sea necesario.",
           "Analítica (opcional): Vercel Analytics recopila visitas de página anónimas. Solo se carga tras el consentimiento del banner. Base legal: consentimiento (art. 6(1)(a) RGPD). Retirar mediante Configuración de cookies en el pie de página.",
           "Google Search Console y Bing Webmaster Tools: solo etiquetas meta de verificación de propiedad — sin cookies de seguimiento.",
-          "Conservación: hasta que borre el almacenamiento o actualicemos esta política (versión 2026-07-14).",
+          "Conservación: hasta que borre el almacenamiento o actualicemos esta política (versión 2026-07-15).",
         ],
       },
       {
@@ -426,7 +427,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Acceso, rectificación, supresión, oposición — info@tolls.be."],
       },
     ],
-    lastUpdated: "14 July 2026",
+    lastUpdated: "15 July 2026",
   },
   news: {
     title: "Noticias y actualizaciones",

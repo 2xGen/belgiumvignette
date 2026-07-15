@@ -1,6 +1,6 @@
-import type { Dictionary } from "../types";
+import type { BaseDictionary } from "../types";
 
-const dictionary: Dictionary = {
+const dictionary: BaseDictionary = {
   locale: "de",
   site: {
     name: "Belgium Vignette",
@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be ist eine unabhängige Informationsseite. Wir sind nicht mit der belgischen Regierung, Flandern, der Wallonie oder Brüssel verbunden.",
     lastUpdated: "Zuletzt aktualisiert",
-    lastUpdatedDate: "14. Juli 2026",
-    lastUpdatedIso: "2026-07-14",
+    lastUpdatedDate: "15. Juli 2026",
+    lastUpdatedIso: "2026-07-15",
     readMore: "Mehr erfahren",
     relatedSite: "https://tolls.be/de",
     relatedSiteLabel: "Tolls.be — unabhängige Maut-Informationen für Belgien",
@@ -223,6 +223,7 @@ const dictionary: Dictionary = {
       { norm: "Elektro / H₂", description: "Emissionsfrei. Niedrigster geplanter Tarif." },
       { norm: "Euro 3 und niedriger", description: "Ältere, stärker verschmutzende Fahrzeuge." },
     ],
+    vignettePagesTitle: "Nach Vignettenart",
     faqs: [
       {
         question: "Sind Transporter absetzbar?",
@@ -406,7 +407,7 @@ const dictionary: Dictionary = {
           "Essenziell: Speicherung Ihrer Cookie-Einstellung in localStorage. Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) und/oder Einwilligung.",
           "Analytics (optional): Vercel Analytics erfasst anonyme Seitenaufrufe. Wird nur nach Einwilligung geladen. Rechtsgrundlage: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Widerruf über Cookie-Einstellungen in der Fußzeile.",
           "Google Search Console & Bing Webmaster Tools: Verifizierungs-Meta-Tags ohne Tracking-Cookies.",
-          "Speicherdauer: bis Sie den Speicher löschen oder wir die Richtlinie aktualisieren (Version 2026-07-14).",
+          "Speicherdauer: bis Sie den Speicher löschen oder wir die Richtlinie aktualisieren (Version 2026-07-15).",
         ],
       },
       {
@@ -424,7 +425,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Auskunft, Berichtigung, Löschung, Widerspruch — info@tolls.be."],
       },
     ],
-    lastUpdated: "14. Juli 2026",
+    lastUpdated: "15. Juli 2026",
   },
   news: {
     title: "Nachrichten & Updates",

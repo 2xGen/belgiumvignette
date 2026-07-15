@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       return {
         url: `${siteUrl}${path}`,
-        lastModified: new Date("2026-07-14"),
+        lastModified: new Date("2026-07-15"),
         changeFrequency: pageKey === "home" ? ("weekly" as const) : ("monthly" as const),
         priority: pageKey === "home" ? 1 : pageKey === "news" ? 0.9 : 0.8,
         alternates: {

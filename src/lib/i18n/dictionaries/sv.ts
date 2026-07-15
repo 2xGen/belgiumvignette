@@ -1,6 +1,6 @@
-import type { Dictionary } from "../types";
+import type { BaseDictionary } from "../types";
 
-const dictionary: Dictionary = {
+const dictionary: BaseDictionary = {
   locale: "sv",
   site: {
     name: "Belgium Vignette",
@@ -65,8 +65,8 @@ const dictionary: Dictionary = {
     disclaimer:
       "BelgiumVignette.be är en oberoende informationssajt. Vi är inte kopplade till den belgiska staten, Flandern, Vallonien eller Bryssel.",
     lastUpdated: "Senast uppdaterad",
-    lastUpdatedDate: "14 July 2026",
-    lastUpdatedIso: "2026-07-14",
+    lastUpdatedDate: "15 July 2026",
+    lastUpdatedIso: "2026-07-15",
     readMore: "Läs mer",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — oberoende information om belgiska vägavgifter",
@@ -224,6 +224,7 @@ const dictionary: Dictionary = {
       { norm: "Electric / H₂", description: "Nollutsläpp. Lägsta planerade pris." },
       { norm: "Euro 3 och lägre", description: "Äldre, mer förorenande fordon." },
     ],
+    vignettePagesTitle: "Per vignetttyp",
     faqs: [
       {
         question: "Är kommersiella skåpbilar avdragsgilla?",
@@ -408,7 +409,7 @@ const dictionary: Dictionary = {
           "Nödvändig lagring: vi sparar ditt cookieval i localStorage. Rättslig grund: berättigat intresse (art. 6.1 f GDPR) och/eller samtycke där det krävs.",
           "Analys (valfritt): Vercel Analytics samlar in anonyma sidvisningar. Laddas endast efter samtycke via cookiebannern. Rättslig grund: samtycke (art. 6.1 a GDPR). Återkalla via Cookieinställningar i sidfoten.",
           "Google Search Console och Bing Webmaster Tools: endast verifieringsmetataggar — inga spårningscookies.",
-          "Lagringstid: tills du rensar lagringen eller vi uppdaterar denna policy (version 2026-07-14).",
+          "Lagringstid: tills du rensar lagringen eller vi uppdaterar denna policy (version 2026-07-15).",
         ],
       },
       {
@@ -426,7 +427,7 @@ const dictionary: Dictionary = {
         paragraphs: ["Tillgång, rättelse, radering, invändning — info@tolls.be."],
       },
     ],
-    lastUpdated: "14 July 2026",
+    lastUpdated: "15 July 2026",
   },
   news: {
     title: "Nyheter och uppdateringar",

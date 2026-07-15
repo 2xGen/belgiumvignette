@@ -72,6 +72,14 @@ function getFaqsForPage(dict: Awaited<ReturnType<typeof getDictionary>>, pageKey
       return dict.fines.faqs;
     case "buy":
       return dict.buy.faqs;
+    case "dailyVignette":
+      return dict.dailyVignette.faqs;
+    case "monthlyVignette":
+      return dict.monthlyVignette.faqs;
+    case "annualVignette":
+      return dict.annualVignette.faqs;
+    case "electricVignette":
+      return dict.electricVignette.faqs;
     default:
       return [];
   }

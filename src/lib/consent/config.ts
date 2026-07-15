@@ -1,5 +1,5 @@
 /** Bump when cookie/privacy policy changes — stored with user consent. */
-export const CONSENT_POLICY_VERSION = "2026-07-14";
+export const CONSENT_POLICY_VERSION = "2026-07-15";
 
 export const CONSENT_STORAGE_KEY = "bv_consent";
 
