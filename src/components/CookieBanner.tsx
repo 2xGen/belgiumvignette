@@ -89,19 +89,22 @@ export default function CookieBanner({
 
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-[100] border-t border-border bg-bg-footer p-4 text-sm shadow-lg"
+      className="fixed inset-x-0 bottom-0 z-[100] border-t border-border bg-bg-surface/95 p-4 text-sm shadow-[0_-12px_40px_rgba(11,18,32,0.12)] backdrop-blur-md"
       role="dialog"
       aria-modal="true"
       aria-labelledby="cookie-banner-title"
     >
       <div className="site-wrap">
-        <h2 id="cookie-banner-title" className="font-serif text-base font-bold text-text">
+        <h2
+          id="cookie-banner-title"
+          className="font-[family-name:var(--font-display)] text-base font-bold tracking-tight text-ink"
+        >
           {c.title}
         </h2>
         <p className="mt-2 max-w-3xl text-text">{c.description}</p>
 
         {showDetails && (
-          <div className="mt-4 max-w-3xl space-y-4 border border-border bg-bg-surface p-4">
+          <div className="mt-4 max-w-3xl space-y-4 rounded-[12px] border border-border bg-bg-muted p-4">
             <div>
               <p className="font-semibold text-text">{c.essentialTitle}</p>
               <p className="mt-1 text-text-muted">{c.essentialDescription}</p>

@@ -54,7 +54,9 @@ export function ComparisonTable({
 }) {
   return (
     <div className="min-w-0">
-      <h3 className="mb-2 font-serif text-lg font-bold text-text">{title}</h3>
+      <h3 className="mb-2 font-[family-name:var(--font-display)] text-lg font-bold tracking-tight text-ink">
+        {title}
+      </h3>
       <PricingTable
         rows={rows}
         caption={title}

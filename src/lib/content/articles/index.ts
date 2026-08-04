@@ -11,10 +11,12 @@ import belgiumVignetteRtl from "./belgium-annual-motorway-vignette-from-2027-rtl
 import belgiumRoadVignette2027 from "./belgium-road-vignette-2027-belgians-pay-too";
 import belgiumPaidVignetteLuxembourgTimes from "./belgium-paid-vignette-motorways-luxembourg-times";
 import benWeytsAnswersWegenvignetQuestions from "./ben-weyts-answers-wegenvignet-questions-hln";
+import backesDispleasureBelgiumVignette from "./backes-displeasure-belgium-motorway-vignette-rtl";
 
 export type { Article, ArticleLocaleContent, ArticleSource } from "./types";
 
 const articles: Article[] = [
+  backesDispleasureBelgiumVignette,
   benWeytsAnswersWegenvignetQuestions,
   belgiumRoadVignette2027,
   belgiumVignetteRtl,

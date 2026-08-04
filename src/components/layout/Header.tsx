@@ -1,8 +1,9 @@
-import Link from "next/link";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/types";
 import { getLocalizedPath, mainNavPageKeys } from "@/lib/routes";
 import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
+import { BrandLink } from "@/components/brand/BrandMark";
+import Link from "next/link";
 
 export default function Header({
   locale,
@@ -14,34 +15,31 @@ export default function Header({
   const navItems = mainNavPageKeys;
 
   return (
-    <header className="border-b border-border bg-bg-header">
-      <div className="site-wrap py-3">
-        <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
-          <Link href={getLocalizedPath(locale, "home")} className="no-underline hover:no-underline">
-            <span className="font-serif text-xl font-bold text-text">
-              {dict.site.domain}
-            </span>
-          </Link>
-          <LanguageSwitcher currentLocale={locale} />
-        </div>
-        <p className="mt-1 text-sm text-text-muted">{dict.common.independentSite}</p>
+    <header className="sticky top-0 z-50 border-b border-border/80 bg-bg-header/90 backdrop-blur-md">
+      <div className="site-wrap flex flex-wrap items-center justify-between gap-4 py-3.5">
+        <BrandLink
+          href={getLocalizedPath(locale, "home")}
+          domain={dict.site.domain}
+          subtitle={dict.common.independentSite}
+        />
+        <LanguageSwitcher currentLocale={locale} />
       </div>
 
-      <div className="h-0.5 bg-[linear-gradient(to_right,#000_33%,#FDDA24_33%,#FDDA24_66%,#EF3340_66%)]" aria-hidden />
-
-      <nav className="site-wrap border-t border-border-light py-2" aria-label="Main">
-        <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
-          {navItems.map((key) => (
-            <li key={key}>
-              <Link
-                href={getLocalizedPath(locale, key)}
-                className="text-link no-underline hover:underline"
-              >
-                {dict.nav[key]}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <nav className="border-t border-border/70" aria-label="Main">
+        <div className="site-wrap">
+          <ul className="-mx-1 flex items-center gap-0.5 overflow-x-auto py-1.5">
+            {navItems.map((key) => (
+              <li key={key} className="shrink-0">
+                <Link
+                  href={getLocalizedPath(locale, key)}
+                  className="block rounded-full px-3.5 py-2 text-sm font-semibold text-text no-underline transition-colors hover:bg-bg-muted hover:text-ink hover:no-underline"
+                >
+                  {dict.nav[key]}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </header>
   );

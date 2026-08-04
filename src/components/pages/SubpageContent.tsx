@@ -25,17 +25,20 @@ export function PageHero({
   showSiteNotice?: boolean;
 }) {
   return (
-    <header className="mb-8">
+    <header className="mb-10">
       {badge && (
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-text-muted">
+        <p className="eyebrow mb-3 text-accent-deep">
+          <span className="eyebrow-dot" aria-hidden />
           {badge}
         </p>
       )}
-      <h1 className="text-3xl font-bold sm:text-4xl">{title}</h1>
-      <p className="mt-4 text-text">{intro}</p>
+      <h1 className="max-w-3xl font-[family-name:var(--font-display)] text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">
+        {title}
+      </h1>
+      <p className="mt-4 max-w-3xl text-lg leading-relaxed text-text-muted">{intro}</p>
       {showSiteNotice && (
         <>
-          <p className="notice-box mt-4 text-sm">{dict.common.plannedNotice}</p>
+          <p className="notice-box mt-6 text-sm">{dict.common.plannedNotice}</p>
           <p className="mt-2 text-xs text-text-muted">
             {dict.common.lastUpdated}: {dict.common.lastUpdatedDate}
           </p>
@@ -54,7 +57,9 @@ export function ContentSections({
     <div className="prose-content space-y-8">
       {sections.map((section) => (
         <section key={section.id} id={section.id}>
-          <h2 className="mb-3 font-serif text-xl font-bold">{section.title}</h2>
+          <h2 className="mb-3 font-[family-name:var(--font-display)] text-xl font-bold tracking-tight text-ink">
+            {section.title}
+          </h2>
           {section.paragraphs.map((p) => (
             <p key={p.slice(0, 40)}>{p}</p>
           ))}
@@ -110,7 +115,9 @@ export function PricesPageContent({ dict }: { dict: Dictionary }) {
                 href={getLocalizedPath(dict.locale, key)}
                 className="panel-muted block p-4 no-underline hover:no-underline"
               >
-                <span className="font-serif font-bold text-text">{dict.nav[key]}</span>
+                <span className="font-[family-name:var(--font-display)] font-bold tracking-tight text-ink">
+                  {dict.nav[key]}
+                </span>
                 <span className="mt-1 block text-sm text-text-muted">
                   {dict[key].intro.slice(0, 120)}…
                 </span>
@@ -149,12 +156,17 @@ export function ForeignPageContent({ dict }: { dict: Dictionary }) {
   const content = dict.foreign;
   return (
     <>
-      <ContentSections sections={content.sections} />
-      <section className="mt-10">
+      <section className="mt-2">
         {content.countryTips.map((tip) => (
-          <div key={tip.country} className="panel-muted mb-6 p-4">
-            <h3 className="font-serif font-bold">{tip.country}</h3>
-            <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
+          <div
+            key={tip.id}
+            id={tip.id}
+            className="panel-muted mb-6 scroll-mt-28 p-5"
+          >
+            <h2 className="font-[family-name:var(--font-display)] text-xl font-bold tracking-tight text-ink">
+              {tip.country}
+            </h2>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-text">
               {tip.tips.map((t) => (
                 <li key={t}>{t}</li>
               ))}
@@ -162,6 +174,9 @@ export function ForeignPageContent({ dict }: { dict: Dictionary }) {
           </div>
         ))}
       </section>
+      <div className="mt-10">
+        <ContentSections sections={content.sections} />
+      </div>
       <PageFaqSection faqs={content.faqs} />
     </>
   );

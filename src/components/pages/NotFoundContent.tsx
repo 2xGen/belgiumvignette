@@ -19,7 +19,9 @@ export function NotFoundContent() {
   return (
     <div className="page-wrap py-16 sm:py-20">
       <p className="text-sm font-semibold uppercase tracking-wide text-text-muted">404</p>
-      <h1 className="mt-2 font-serif text-3xl font-bold sm:text-4xl">{copy.title}</h1>
+      <h1 className="mt-2 font-[family-name:var(--font-display)] text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+        {copy.title}
+      </h1>
       <p className="mt-4 max-w-xl text-text">{copy.description}</p>
       <p className="mt-8 flex flex-wrap gap-4 text-sm">
         <Link href={getLocalizedPath(locale, "home")} className="text-link">

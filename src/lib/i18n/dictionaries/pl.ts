@@ -21,9 +21,9 @@ const dictionary: BaseDictionary = {
   },
   meta: {
     home: {
-      title: "Winieta belgijska 2027 — ceny, zasady i przewodnik dla kierowców zagranicznych",
+      title: "Winieta belgijska 2027: czy potrzebujesz winiety do Belgii?",
       description:
-        "Niezależny przewodnik po planowanej belgijskiej cyfrowej winiecie drogowej od 1 maja 2027 r. Ceny, zwolnienia, mandaty i praktyczne wskazówki dla kierowców z Holandii, Niemiec i innych krajów.",
+        "Belgia planuje wprowadzenie cyfrowej winiety drogowej od 1 maja 2027 r. Sprawdź, czy jej potrzebujesz, ile kosztuje, kto jest zwolniony i kiedy rozpocznie się sprzedaż.",
     },
     prices: {
       title: "Ceny winiety belgijskiej 2027 — dzienne, miesięczne i roczne stawki",
@@ -31,9 +31,9 @@ const dictionary: BaseDictionary = {
         "Planowane ceny winiety w Belgii: €100/rok, krótkoterminowe od €9/dzień. Norma emisji Euro wyjaśniona w prosty sposób.",
     },
     foreign: {
-      title: "Winieta belgijska dla samochodów zagranicznych i kierowców tranzytowych",
+      title: "Czy samochody zagraniczne potrzebują belgijskiej winiety w 2027 roku?",
       description:
-        "Praktyczny przewodnik dla kierowców z Holandii, Niemiec i Francji podróżujących przez Belgię. Co warto wiedzieć według obecnych planów.",
+        "Tak — według obecnych planów zagraniczne samochody osobowe będą potrzebować belgijskiej winiety od 1 maja 2027 r. na objętych drogach. Przewodnik dla kierowców z Holandii, Niemiec i Francji.",
     },
     exemptions: {
       title: "Zwolnienia z winiety belgijskiej — motocykle, ciężarówki i inne",
@@ -65,15 +65,15 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be to niezależna strona informacyjna. Nie jesteśmy powiązani z rządem belgijskim, Flandrią, Walonią ani Brukselą.",
     lastUpdated: "Ostatnia aktualizacja",
-    lastUpdatedDate: "15 July 2026",
-    lastUpdatedIso: "2026-07-15",
+    lastUpdatedDate: "4 August 2026",
+    lastUpdatedIso: "2026-08-04",
     readMore: "Czytaj więcej",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — niezależne informacje o opłatach drogowych w Belgii",
     backToHome: "Powrót do strony głównej",
     plannedNotice:
       "Plany przedstawione w marcu 2026 r. mogą jeszcze ulec zmianie. Śledzimy oficjalne źródła i aktualizujemy tę stronę, gdy pojawią się nowe informacje.",
-    independentSite: "Niezależna strona informacyjna",
+    independentSite: "Info belgijska winieta drogowa",
     contactLabel: "Kontakt",
     cookieSettings: "Ustawienia plików cookie",
     tableCategory: "Kategoria",
@@ -89,11 +89,21 @@ const dictionary: BaseDictionary = {
   home: {
     hero: {
       eyebrow: "Planowane od 1 maja 2027 r.",
-      title: "Belgijska cyfrowa winieta — wyjaśnienie w prostych słowach",
+      title: "Winieta belgijska 2027: czy potrzebujesz winiety do Belgii?",
       subtitle:
-        "Od maja 2027 r. Flandria, Walonia i Bruksela planują pobierać opłaty od kierowców korzystających z głównych dróg. Bez naklejki na szybę — cyfrowa winieta powiązana z tablicą rejestracyjną.",
-      ctaPrimary: "Zobacz ceny",
-      ctaSecondary: "Info dla kierowców zagranicznych",
+        "Belgia planuje wprowadzenie cyfrowej winiety drogowej od 1 maja 2027 r. Sprawdź, czy jej potrzebujesz, ile kosztuje, kto jest zwolniony i kiedy rozpocznie się sprzedaż.",
+      ctaPrimary: "Sprawdź, czy potrzebujesz winiety",
+      ctaSecondary: "Powiadom mnie o rozpoczęciu sprzedaży",
+    },
+    decisionTree: {
+      title: "Czy potrzebujesz winiety?",
+      options: [
+        { label: "Samochód belgijski", href: "prices" },
+        { label: "Samochód holenderski", href: "foreign", anchor: "netherlands" },
+        { label: "Samochód niemiecki", href: "foreign", anchor: "germany" },
+        { label: "Samochód francuski", href: "foreign", anchor: "france" },
+        { label: "Kamper / bus", href: "exemptions" },
+      ],
     },
     quickAnswers: [
       {
@@ -233,59 +243,72 @@ const dictionary: BaseDictionary = {
     ],
   },
   foreign: {
-    title: "Kierowcy zagraniczni",
+    title: "Czy samochody zagraniczne potrzebują belgijskiej winiety?",
     intro:
-      "Ponad połowa kilometrów na belgijskich drogach ma być pokonywana przez kierowców zagranicznych. Jeśli przyjeżdżasz z Holandii, Niemiec, Francji lub innego kraju, oto co plany oznaczają dla Ciebie.",
+      "Tak, według obecnych planów. Zagraniczne samochody osobowe będą potrzebować belgijskiej winiety od 1 maja 2027 r. podczas korzystania z objętych belgijskich dróg. Planowany system nie rozróżnia tablic rejestracyjnych belgijskich i zagranicznych — samochód zarejestrowany w Holandii, Francji, Niemczech lub innym kraju powinien wymagać tej samej cyfrowej winiety co pojazd belgijski. Ostateczne zasady mogą jeszcze ulec zmianie do oficjalnego zatwierdzenia i uruchomienia systemu.",
     sections: [
       {
         id: "eu-rules",
         title: "Równe traktowanie",
         paragraphs: [
-          "Kierowcy belgijscy też płacą — przepisy UE uniemożliwiają obciążanie wyłącznie cudzoziemców. Twoja zagraniczna tablica jest objęta systemem.",
+          "Kierowcy belgijscy też płacą — przepisy UE uniemożliwiają obciążanie wyłącznie cudzoziemców. Twoja zagraniczna tablica jest objęta tym samym planowanym systemem.",
           "Szacuje się, że rocznie przez Belgię przejeżdża około 30 milionów zagranicznych samochodów osobowych.",
         ],
       },
       {
         id: "digital",
-        title: "Cyfrowa, bez naklejki",
+        title: "System cyfrowy",
         paragraphs: [
-          "Brak fizycznej winiety do kupienia i wystawienia. System korzysta z automatycznego rozpoznawania tablic (ANPR). Kup przed jazdą.",
+          "Brak fizycznej winiety do kupienia i wystawienia. System ma korzystać z automatycznego rozpoznawania tablic (ANPR). Kup przed jazdą po objętych drogach.",
         ],
       },
       {
         id: "history",
         title: "Kontekst historyczny",
         paragraphs: [
-          "Belgia próbowała wprowadzić winietę w 2007 r., ale wycofała się po protestach Holendrów. Holenderscy ministrowie ponownie wyrazili rozczarowanie — w obecnych planach nie ma specjalnego reżimu granicznego.",
+          "Belgia próbowała wprowadzić winietę w 2007 r., ale wycofała się po protestach Holendrów. Holenderscy ministrowie ponownie wyrazili obawy — i w obecnych planach nie ogłoszono jeszcze specjalnego reżimu granicznego dla krajów sąsiednich.",
         ],
       },
     ],
     countryTips: [
       {
-        country: "🇳🇱 Netherlands",
+        id: "netherlands",
+        country: "Holandia",
         tips: [
-          "Popularne trasy przez E19 (Antwerpia), E40 (Bruksela) i E314 (Liège) są objęte.",
-          "W obecnych planach nie ma specjalnych ustaleń dla kierowców z południowej Holandii przy granicy.",
+          "Tak — samochody osobowe z holenderską rejestracją powinny od 1 maja 2027 r. wymagać belgijskiej winiety na objętych belgijskich drogach.",
+          "Dotyczy to popularnych tras, takich jak Holandia → Antwerpia, Holandia → Bruksela oraz tranzyt Holandia → Luksemburg/Francja.",
+          "Obecnie nie ogłoszono zwolnienia dla holenderskich regionów przygranicznych.",
         ],
       },
       {
-        country: "🇩🇪 Germany",
+        id: "germany",
+        country: "Niemcy",
         tips: [
-          "Tranzyt przez Aachen–Liège lub trasy w kierunku Francji prawdopodobnie wymagają winiety.",
-          "Opcje krótkoterminowe (1–10 dni) odpowiadają ruchowi tranzytowemu.",
+          "Tak — samochody osobowe z niemiecką rejestracją powinny od 1 maja 2027 r. wymagać belgijskiej winiety na objętych belgijskich drogach.",
+          "Obejmuje to popularne trasy tranzytowe, takie jak Aachen → Liège oraz Niemcy → Francja przez Belgię.",
+          "Opcje krótkoterminowe (1–10 dni) w planach mogą odpowiadać ruchowi tranzytowemu.",
         ],
       },
       {
-        country: "🇫🇷 France",
+        id: "france",
+        country: "Francja",
         tips: [
-          "Kierowcy z północnej Francji i Walonii: sprawdź, czy Twoja trasa korzysta z belgijskich regionalnych dróg głównych.",
+          "Tak — samochody osobowe z francuską rejestracją powinny od 1 maja 2027 r. wymagać belgijskiej winiety na objętych belgijskich drogach.",
+          "Jest to szczególnie istotne dla podróży z północnej Francji do Belgii oraz tras tranzytowych Francja → Holandia/Niemcy.",
+          "Objęte drogi obejmują autostrady i planowane regionalne drogi główne — nie tylko tranzyt długodystansowy.",
         ],
       },
     ],
     faqs: [
       {
         question: "Czy potrzebuję winiety, jeśli tylko przejeżdżam tranzytem?",
-        answer: "Tak — według planów korzystanie z dróg głównych wymaga winiety niezależnie od celu podróży.",
+        answer:
+          "Tak — według obecnych planów od 1 maja 2027 r. korzystanie z objętych belgijskich dróg głównych wymaga winiety niezależnie od celu podróży. Ostateczne zasady mogą jeszcze ulec zmianie przed uruchomieniem.",
+      },
+      {
+        question: "Czy samochody zagraniczne płacą tyle samo co belgijskie?",
+        answer:
+          "Tak. Planowany system stosuje tę samą cyfrową winietę do tablic belgijskich i zagranicznych. Przepisy UE o równym traktowaniu wyjaśniają, dlaczego nie można obciążać wyłącznie cudzoziemców.",
       },
     ],
   },
@@ -409,7 +432,7 @@ const dictionary: BaseDictionary = {
           "Niezbędne przechowywanie: zapisujemy Twoje preferencje dotyczące plików cookie w localStorage. Podstawa prawna: prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO) i/lub zgoda, gdy jest wymagana.",
           "Analityka (opcjonalna): Vercel Analytics zbiera anonimowe wyświetlenia stron. Ładowana dopiero po zgodzie z banera. Podstawa prawna: zgoda (art. 6 ust. 1 lit. a RODO). Wycofaj przez Ustawienia plików cookie w stopce.",
           "Google Search Console i Bing Webmaster Tools: wyłącznie meta tagi weryfikacji własności — bez śledzących plików cookie.",
-          "Przechowywanie: do czasu wyczyszczenia pamięci lub aktualizacji tej polityki (wersja 2026-07-15).",
+          "Przechowywanie: do czasu wyczyszczenia pamięci lub aktualizacji tej polityki (wersja 2026-08-04).",
         ],
       },
       {
@@ -427,7 +450,7 @@ const dictionary: BaseDictionary = {
         paragraphs: ["Dostęp, sprostowanie, usunięcie, sprzeciw — info@tolls.be."],
       },
     ],
-    lastUpdated: "15 July 2026",
+    lastUpdated: "4 August 2026",
   },
   news: {
     title: "Aktualności",
@@ -459,11 +482,18 @@ const dictionary: BaseDictionary = {
     noArticles: "Brak opublikowanych artykułów. Sprawdź ponownie wkrótce.",
   },
   newsletter: {
-    title: "Bądź na bieżąco",
-    description: "Otrzymuj powiadomienia o oficjalnym starcie sprzedaży i ważnych aktualizacjach.",
-    emailPlaceholder: "Twój adres e-mail",
+    title: "Otrzymaj powiadomienie jako pierwszy, gdy belgijska winieta będzie dostępna",
+    description: "",
+    benefitsIntro: "",
+    benefits: [
+      "Rozpoczęcie oficjalnej sprzedaży",
+      "Potwierdzone ostateczne ceny",
+      "Opublikowane nowe zasady",
+      "Dostępny link do zakupu",
+    ],
+    emailPlaceholder: "Adres e-mail",
     consentLabel: "Wyrażam zgodę na otrzymywanie aktualizacji i zapoznałem/am się z polityką prywatności.",
-    submit: "Zapisz się",
+    submit: "Powiadom mnie",
     success: "Dziękujemy! Jesteś zapisany/a.",
     error: "Coś poszło nie tak. Spróbuj ponownie.",
     privacyLink: "Polityka prywatności",

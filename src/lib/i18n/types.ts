@@ -86,6 +86,10 @@ export interface Dictionary {
       ctaPrimary: string;
       ctaSecondary: string;
     };
+    decisionTree: {
+      title: string;
+      options: { label: string; href: PageKey; anchor?: string }[];
+    };
     quickAnswers: QuickAnswer[];
     pricingTitle: string;
     pricingSubtitle: string;
@@ -120,7 +124,7 @@ export interface Dictionary {
     title: string;
     intro: string;
     sections: ContentSection[];
-    countryTips: { country: string; tips: string[] }[];
+    countryTips: { id: string; country: string; tips: string[] }[];
     faqs: FaqItem[];
   };
   exemptions: {
@@ -180,6 +184,8 @@ export interface Dictionary {
   newsletter: {
     title: string;
     description: string;
+    benefitsIntro: string;
+    benefits: string[];
     emailPlaceholder: string;
     consentLabel: string;
     submit: string;

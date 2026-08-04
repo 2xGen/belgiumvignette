@@ -21,9 +21,9 @@ const dictionary: BaseDictionary = {
   },
   meta: {
     home: {
-      title: "Vignette Belgique 2027 — tarifs, règles & info transfrontalière",
+      title: "Vignette Belgique 2027 : avez-vous besoin d'une vignette pour la Belgique ?",
       description:
-        "Guide indépendant sur la vignette numérique belge prévue dès le 1er mai 2027. Tarifs, exemptions, amendes et conseils pratiques pour les conducteurs étrangers.",
+        "La Belgique prévoit d'introduire une vignette routière numérique dès le 1er mai 2027. Découvrez si vous en avez besoin, combien elle coûte, qui est exempté et quand les ventes débutent.",
     },
     prices: {
       title: "Tarifs vignette Belgique 2027 — jour, mois & annuel",
@@ -31,9 +31,9 @@ const dictionary: BaseDictionary = {
         "Aperçu des tarifs prévus pour la vignette belge : 100 €/an, courtes durées dès 9 €/jour. Explication par norme Euro.",
     },
     foreign: {
-      title: "Vignette Belgique pour conducteurs étrangers",
+      title: "Les voitures étrangères ont-elles besoin d'une vignette belge en 2027 ?",
       description:
-        "Guide pratique pour les automobilistes néerlandais, allemands et français traversant la Belgique. Ce qu'il faut savoir selon les plans actuels.",
+        "Oui — selon les plans actuels, les voitures de tourisme étrangères auront besoin d'une vignette belge dès le 1er mai 2027 sur les routes couvertes. Guide pour les conducteurs néerlandais, allemands et français.",
     },
     exemptions: {
       title: "Exemptions vignette Belgique — motos, camions & plus",
@@ -65,15 +65,15 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be est un site d'information indépendant. Nous ne sommes pas affiliés au gouvernement belge, à la Flandre, à la Wallonie ou à Bruxelles.",
     lastUpdated: "Dernière mise à jour",
-    lastUpdatedDate: "15 juillet 2026",
-    lastUpdatedIso: "2026-07-15",
+    lastUpdatedDate: "4 août 2026",
+    lastUpdatedIso: "2026-08-04",
     readMore: "En savoir plus",
     relatedSite: "https://tolls.be/fr",
     relatedSiteLabel: "Tolls.be — informations indépendantes sur les péages en Belgique",
     backToHome: "Retour à l'accueil",
     plannedNotice:
       "Les plans présentés en mars 2026 peuvent encore évoluer. Nous suivons les sources officielles et mettons à jour cette page dès que de nouvelles informations sont disponibles.",
-    independentSite: "Site d'information indépendant",
+    independentSite: "Info vignette routière belge",
     contactLabel: "Contact",
     cookieSettings: "Préférences cookies",
     tableCategory: "Catégorie",
@@ -89,11 +89,21 @@ const dictionary: BaseDictionary = {
   home: {
     hero: {
       eyebrow: "Prévu dès le 1er mai 2027",
-      title: "La vignette numérique belge, expliquée simplement",
+      title: "Vignette Belgique 2027 : avez-vous besoin d'une vignette pour la Belgique ?",
       subtitle:
-        "À partir de mai 2027, la Flandre, la Wallonie et Bruxelles prévoient une contribution pour l'usage des routes principales. Pas d'autocollant sur le pare-brise — une vignette numérique liée à votre plaque.",
-      ctaPrimary: "Voir les tarifs",
-      ctaSecondary: "Info conducteurs étrangers",
+        "La Belgique prévoit d'introduire une vignette routière numérique dès le 1er mai 2027. Découvrez si vous en avez besoin, combien elle coûte, qui est exempté et quand les ventes débutent.",
+      ctaPrimary: "Vérifiez si vous avez besoin d'une vignette",
+      ctaSecondary: "Soyez averti à l'ouverture des ventes",
+    },
+    decisionTree: {
+      title: "Avez-vous besoin d'une vignette ?",
+      options: [
+        { label: "Voiture belge", href: "prices" },
+        { label: "Voiture néerlandaise", href: "foreign", anchor: "netherlands" },
+        { label: "Voiture allemande", href: "foreign", anchor: "germany" },
+        { label: "Voiture française", href: "foreign", anchor: "france" },
+        { label: "Camping-car / fourgon", href: "exemptions" },
+      ],
     },
     quickAnswers: [
       {
@@ -234,58 +244,72 @@ const dictionary: BaseDictionary = {
     ],
   },
   foreign: {
-    title: "Conducteurs étrangers",
+    title: "Les voitures étrangères ont-elles besoin d'une vignette belge ?",
     intro:
-      "Plus de la moitié des kilomètres parcourus en Belgique le seraient par des automobilistes étrangers. Si vous venez des Pays-Bas, d'Allemagne, de France ou d'ailleurs, voici l'essentiel.",
+      "Oui, selon les plans actuels. Les voitures de tourisme immatriculées à l'étranger auront besoin d'une vignette belge dès le 1er mai 2027 lorsqu'elles empruntent les routes belges couvertes. Le système prévu ne distingue pas les plaques belges des plaques étrangères — une voiture immatriculée aux Pays-Bas, en France, en Allemagne ou dans un autre pays devrait nécessiter la même vignette numérique qu'un véhicule belge. Les règles définitives pourront encore évoluer jusqu'à l'approbation et le lancement officiels du système.",
     sections: [
       {
         id: "eu-rules",
         title: "Traitement égal",
         paragraphs: [
-          "Les Belges paieront aussi — l'UE n'autorise pas de taxer uniquement les étrangers. Votre plaque étrangère est donc concernée.",
+          "Les Belges paieront aussi — les règles de l'UE interdisent de taxer uniquement les étrangers. Votre plaque étrangère est couverte par le même système prévu.",
+          "On estime à 30 millions le nombre de voitures de tourisme étrangères qui traversent la Belgique chaque année.",
         ],
       },
       {
         id: "digital",
-        title: "Numérique, sans autocollant",
+        title: "Système numérique",
         paragraphs: [
-          "Pas de vignette physique. Le système fonctionne par reconnaissance de plaques (ANPR). Achetez votre vignette avant le départ.",
+          "Pas de vignette physique à acheter ou à afficher. Le système devrait utiliser la reconnaissance automatique des plaques (ANPR). Achetez-la avant de rouler sur les routes couvertes.",
         ],
       },
       {
         id: "history",
         title: "Contexte historique",
         paragraphs: [
-          "La Belgique avait tenté une vignette en 2007, abandonnée après les protestes néerlandais. Aujourd'hui, aucun régime spécial pour les régions frontalières n'est prévu.",
+          "La Belgique avait tenté une vignette en 2007, abandonnée après les protestes néerlandais. Des ministres néerlandais ont de nouveau exprimé leur inquiétude — et aucun régime frontalier spécial pour les pays voisins n'a encore été annoncé dans les plans actuels.",
         ],
       },
     ],
     countryTips: [
       {
-        country: "🇳🇱 Pays-Bas",
+        id: "netherlands",
+        country: "Pays-Bas",
         tips: [
-          "Routes populaires via E19, E40 et E314 concernées.",
-          "Pas de régime spécial pour le sud des Pays-Bas selon les plans actuels.",
+          "Oui — les voitures de tourisme immatriculées aux Pays-Bas devraient avoir besoin d'une vignette belge dès le 1er mai 2027 sur les routes belges couvertes.",
+          "Cela concerne des itinéraires fréquents comme Pays-Bas → Anvers, Pays-Bas → Bruxelles et le transit Pays-Bas → Luxembourg/France.",
+          "Aucune exemption n'est actuellement annoncée pour les régions frontalières néerlandaises.",
         ],
       },
       {
-        country: "🇩🇪 Allemagne",
+        id: "germany",
+        country: "Allemagne",
         tips: [
-          "Transit via Aachen–Liège ou vers la France : vignette probablement requise.",
-          "Courtes durées intéressantes pour le trafic de passage.",
+          "Oui — les voitures de tourisme immatriculées en Allemagne devraient avoir besoin d'une vignette belge dès le 1er mai 2027 sur les routes belges couvertes.",
+          "Cela inclut des itinéraires de transit courants comme Aix-la-Chapelle → Liège et Allemagne → France via la Belgique.",
+          "Les options à court terme (1–10 jours) prévues dans les plans peuvent convenir au trafic de passage.",
         ],
       },
       {
-        country: "🇫🇷 France",
+        id: "france",
+        country: "France",
         tips: [
-          "Conducteurs du nord de la France et de Wallonie : vérifiez si votre itinéraire emprunte des routes régionales belges.",
+          "Oui — les voitures de tourisme immatriculées en France devraient avoir besoin d'une vignette belge dès le 1er mai 2027 sur les routes belges couvertes.",
+          "C'est particulièrement pertinent pour les trajets Nord de la France → Belgique et les itinéraires de transit France → Pays-Bas/Allemagne.",
+          "Les routes couvertes comprennent les autoroutes et les routes principales régionales prévues — pas seulement le transit longue distance.",
         ],
       },
     ],
     faqs: [
       {
         question: "Ai-je besoin d'une vignette en simple transit ?",
-        answer: "Oui, selon les plans, l'usage des routes principales nécessite une vignette, même en transit.",
+        answer:
+          "Oui — selon les plans actuels, dès le 1er mai 2027 l'utilisation des routes principales belges couvertes nécessite une vignette, quelle que soit la destination. Les règles définitives pourront encore changer avant le lancement.",
+      },
+      {
+        question: "Les voitures étrangères paient-elles comme les voitures belges ?",
+        answer:
+          "Oui. Le système prévu applique la même vignette numérique aux plaques belges et étrangères. Les règles européennes d'égalité de traitement expliquent pourquoi les étrangers ne peuvent pas être taxés seuls.",
       },
     ],
   },
@@ -420,7 +444,7 @@ const dictionary: BaseDictionary = {
           "Stockage essentiel : nous enregistrons votre choix de cookies dans le localStorage. Base légale : intérêt légitime (Art. 6(1)(f) RGPD) et/ou consentement le cas échéant.",
           "Analytique (optionnel) : Vercel Analytics collecte des pages vues anonymes. Chargé uniquement après consentement via la bannière. Base légale : consentement (Art. 6(1)(a) RGPD). Retrait via Préférences cookies dans le pied de page.",
           "Google Search Console & Bing Webmaster Tools : balises meta de vérification de propriété, sans cookies de suivi.",
-          "Durée de conservation du choix : jusqu'à suppression ou mise à jour de la politique (version 2026-07-15).",
+          "Durée de conservation du choix : jusqu'à suppression ou mise à jour de la politique (version 2026-08-04).",
         ],
       },
       {
@@ -438,7 +462,7 @@ const dictionary: BaseDictionary = {
         paragraphs: ["Accès, rectification, suppression, opposition — info@tolls.be."],
       },
     ],
-    lastUpdated: "15 juillet 2026",
+    lastUpdated: "4 août 2026",
   },
   news: {
     title: "Actualités & mises à jour",
@@ -470,11 +494,18 @@ const dictionary: BaseDictionary = {
     noArticles: "Aucun article publié pour l'instant. Revenez bientôt.",
   },
   newsletter: {
-    title: "Restez informé",
-    description: "Recevez une alerte quand la vente officielle ouvre et lors des mises à jour importantes.",
-    emailPlaceholder: "Votre adresse e-mail",
+    title: "Soyez informé en premier lorsque la vignette belge sera disponible",
+    description: "",
+    benefitsIntro: "",
+    benefits: [
+      "Début des ventes officielles",
+      "Prix définitifs confirmés",
+      "Nouvelles règles publiées",
+      "Lien d'achat disponible",
+    ],
+    emailPlaceholder: "Adresse e-mail",
     consentLabel: "J'accepte de recevoir des mises à jour et j'ai lu la politique de confidentialité.",
-    submit: "S'inscrire",
+    submit: "Me prévenir",
     success: "Merci ! Vous êtes inscrit.",
     error: "Une erreur est survenue. Réessayez.",
     privacyLink: "Confidentialité",

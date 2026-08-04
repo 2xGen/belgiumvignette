@@ -21,9 +21,9 @@ const dictionary: BaseDictionary = {
   },
   meta: {
     home: {
-      title: "Belgická dálniční známka 2027 — ceny, pravidla a průvodce pro zahraniční řidiče",
+      title: "Belgická dálniční známka 2027: potřebujete známku pro Belgii?",
       description:
-        "Nezávislý průvodce plánovanou digitální dálniční známkou v Belgii od 1. května 2027. Ceny, osvobození, pokuty a praktické tipy pro řidiče z Nizozemska, Německa a dalších zemí.",
+        "Belgie plánuje zavedení digitální silniční známky od 1. května 2027. Zjistěte, zda ji potřebujete, kolik stojí, kdo je osvobozen a kdy začne prodej.",
     },
     prices: {
       title: "Ceny belgické dálniční známky 2027 — denní, měsíční a roční sazby",
@@ -31,9 +31,9 @@ const dictionary: BaseDictionary = {
         "Plánované ceny dálniční známky v Belgii: €100/rok, krátkodobé od €9/den. Euro emisní norma jednoduše vysvětlena.",
     },
     foreign: {
-      title: "Belgická dálniční známka pro zahraniční auta a přeshraniční řidiče",
+      title: "Potřebují zahraniční auta v roce 2027 belgickou dálniční známku?",
       description:
-        "Praktický průvodce pro řidiče z Nizozemska, Německa a Francie cestující přes Belgii. Co potřebujete vědět podle současných plánů.",
+        "Ano — podle současných plánů budou zahraniční osobní automobily od 1. května 2027 potřebovat belgickou dálniční známku na zahrnutých silnicích. Průvodce pro řidiče z Nizozemska, Německa a Francie.",
     },
     exemptions: {
       title: "Osvobození od belgické dálniční známky — motocykly, nákladní vozy a další",
@@ -65,15 +65,15 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be je nezávislý informační web. Nejsme spojeni s belgickou vládou, Flandremi, Valonskem ani Bruselem.",
     lastUpdated: "Naposledy aktualizováno",
-    lastUpdatedDate: "15 July 2026",
-    lastUpdatedIso: "2026-07-15",
+    lastUpdatedDate: "4 August 2026",
+    lastUpdatedIso: "2026-08-04",
     readMore: "Číst více",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — nezávislé informace o mýtném v Belgii",
     backToHome: "Zpět na úvod",
     plannedNotice:
       "Plány představené v březnu 2026 se mohou ještě změnit. Sledujeme oficiální zdroje a tuto stránku aktualizujeme, jakmile se objeví novinky.",
-    independentSite: "Nezávislý informační web",
+    independentSite: "Info belgická silniční známka",
     contactLabel: "Kontakt",
     cookieSettings: "Nastavení cookies",
     tableCategory: "Kategorie",
@@ -89,11 +89,21 @@ const dictionary: BaseDictionary = {
   home: {
     hero: {
       eyebrow: "Plánováno od 1. května 2027",
-      title: "Belgická digitální dálniční známka, jasně vysvětlena",
+      title: "Belgická dálniční známka 2027: potřebujete známku pro Belgii?",
       subtitle:
-        "Od května 2027 plánují Flandry, Valonsko a Brusel účtovat motoristům poplatky za používání hlavních silnic. Žádná nálepka na čelním skle — digitální známka vázaná na vaši registrační značku.",
-      ctaPrimary: "Zobrazit ceny",
-      ctaSecondary: "Info pro zahraniční řidiče",
+        "Belgie plánuje zavedení digitální silniční známky od 1. května 2027. Zjistěte, zda ji potřebujete, kolik stojí, kdo je osvobozen a kdy začne prodej.",
+      ctaPrimary: "Zjistěte, zda potřebujete známku",
+      ctaSecondary: "Upozornění při zahájení prodeje",
+    },
+    decisionTree: {
+      title: "Potřebujete známku?",
+      options: [
+        { label: "Belgické auto", href: "prices" },
+        { label: "Nizozemské auto", href: "foreign", anchor: "netherlands" },
+        { label: "Německé auto", href: "foreign", anchor: "germany" },
+        { label: "Francouzské auto", href: "foreign", anchor: "france" },
+        { label: "Obytný vůz / dodávka", href: "exemptions" },
+      ],
     },
     quickAnswers: [
       {
@@ -233,59 +243,72 @@ const dictionary: BaseDictionary = {
     ],
   },
   foreign: {
-    title: "Zahraniční řidiči",
+    title: "Potřebují zahraniční auta belgickou dálniční známku?",
     intro:
-      "Údajně více než polovina kilometrů na belgických silnicích je ujetá zahraničními motoristy. Pokud přijíždíte z Nizozemska, Německa, Francie nebo jinam, zde je to, co pro vás plány znamenají.",
+      "Ano, podle současných plánů. Zahraniční osobní automobily budou od 1. května 2027 potřebovat belgickou dálniční známku při používání zahrnutých belgických silnic. Plánovaný systém nerozlišuje mezi belgickými a zahraničními registračními značkami — auto registrované v Nizozemsku, Francii, Německu nebo jiné zemi by mělo vyžadovat stejnou digitální známku jako belgické vozidlo. Konečná pravidla se mohou ještě změnit, dokud nebude systém oficiálně schválen a spuštěn.",
     sections: [
       {
         id: "eu-rules",
         title: "Rovné zacházení",
         paragraphs: [
-          "Platí i belgičtí řidiči — pravidla EU brání účtování pouze cizincům. Vaše zahraniční značka je pokryta.",
+          "Platí i belgičtí řidiči — pravidla EU brání účtování pouze cizincům. Vaše zahraniční značka spadá pod stejný plánovaný systém.",
           "Odhaduje se, že Belgii ročně projede asi 30 milionů zahraničních osobních aut.",
         ],
       },
       {
         id: "digital",
-        title: "Digitální, bez nálepky",
+        title: "Digitální systém",
         paragraphs: [
-          "Žádná fyzická známka ke koupi ani vystavení. Systém využívá automatické rozpoznávání registračních značek (ANPR). Kupujte před jízdou.",
+          "Žádná fyzická známka ke koupi ani vystavení. Systém má využívat automatické rozpoznávání registračních značek (ANPR). Kupujte před jízdou po zahrnutých silnicích.",
         ],
       },
       {
         id: "history",
         title: "Historický kontext",
         paragraphs: [
-          "Belgie zkoušela dálniční známku v roce 2007, ale po protestech Nizozemců ji zrušila. Nizozemští ministři znovu vyjádřili zklamání — v současných plánech není žádný speciální režim u hranic.",
+          "Belgie zkoušela dálniční známku v roce 2007, ale po protestech Nizozemců ji zrušila. Nizozemští ministři znovu vyjádřili obavy — a v současných plánech zatím není oznámen žádný speciální režim u hranic pro sousední země.",
         ],
       },
     ],
     countryTips: [
       {
-        country: "🇳🇱 Netherlands",
+        id: "netherlands",
+        country: "Nizozemsko",
         tips: [
-          "Oblíbené trasy přes E19 (Antverpy), E40 (Brusel) a E314 (Lutych) jsou pokryty.",
-          "V současných plánech není žádná zvláštní dohoda pro řidiče z jižního Nizozemska u hranic.",
+          "Ano — osobní auta s nizozemskou registrací by od 1. května 2027 měla potřebovat belgickou dálniční známku na zahrnutých belgických silnicích.",
+          "Týká se to běžných tras, jako Nizozemsko → Antverpy, Nizozemsko → Brusel a tranzit Nizozemsko → Lucembursko/Francie.",
+          "V současnosti není oznámeno žádné osvobození pro nizozemské pohraniční regiony.",
         ],
       },
       {
-        country: "🇩🇪 Germany",
+        id: "germany",
+        country: "Německo",
         tips: [
-          "Tranzit přes Aachen–Lutych nebo trasy směrem do Francie pravděpodobně vyžaduje známku.",
-          "Krátkodobé možnosti (1–10 dní) vyhovují průjezdní dopravě.",
+          "Ano — osobní auta s německou registrací by od 1. května 2027 měla potřebovat belgickou dálniční známku na zahrnutých belgických silnicích.",
+          "Zahrnuje to běžné tranzitní trasy, jako Aachen → Lutych a Německo → Francie přes Belgii.",
+          "Krátkodobé možnosti (1–10 dní) v plánech mohou vyhovovat průjezdní dopravě.",
         ],
       },
       {
-        country: "🇫🇷 France",
+        id: "france",
+        country: "Francie",
         tips: [
-          "Řidiči ze severní Francie a Valonska: zkontrolujte, zda vaše trasa vede po belgických regionálních hlavních silnicích.",
+          "Ano — osobní auta s francouzskou registrací by od 1. května 2027 měla potřebovat belgickou dálniční známku na zahrnutých belgických silnicích.",
+          "To je zvláště relevantní pro cesty ze severní Francie do Belgie a tranzitní trasy Francie → Nizozemsko/Německo.",
+          "Zahrnuté silnice zahrnují dálnice a plánované regionální hlavní silnice — nejen dlouhý tranzit.",
         ],
       },
     ],
     faqs: [
       {
         question: "Potřebuji známku, když jen projíždím?",
-        answer: "Ano — podle plánů vyžaduje použití hlavních silnic známku bez ohledu na cíl cesty.",
+        answer:
+          "Ano — podle současných plánů od 1. května 2027 vyžaduje použití zahrnutých belgických hlavních silnic známku bez ohledu na cíl cesty. Konečná pravidla se mohou ještě změnit před spuštěním.",
+      },
+      {
+        question: "Platí zahraniční auta stejně jako belgická?",
+        answer:
+          "Ano. Plánovaný systém uplatňuje stejnou digitální známku na belgické i zahraniční značky. Pravidla EU o rovném zacházení vysvětlují, proč nelze účtovat pouze cizincům.",
       },
     ],
   },
@@ -409,7 +432,7 @@ const dictionary: BaseDictionary = {
           "Nezbytné úložiště: ukládáme vaši volbu cookies v localStorage. Právní základ: oprávněný zájem (čl. 6 odst. 1 písm. f) GDPR) a/nebo souhlas, kde je vyžadován.",
           "Analytika (volitelné): Vercel Analytics shromažďuje anonymní zobrazení stránek. Načítá se až po souhlasu v banneru. Právní základ: souhlas (čl. 6 odst. 1 písm. a) GDPR). Odvolání přes Nastavení cookies v patičce.",
           "Google Search Console a Bing Webmaster Tools: pouze meta tagy pro ověření vlastnictví — žádné sledovací cookies.",
-          "Uchovávání: dokud nevymažete úložiště nebo neaktualizujeme tyto zásady (verze 2026-07-15).",
+          "Uchovávání: dokud nevymažete úložiště nebo neaktualizujeme tyto zásady (verze 2026-08-04).",
         ],
       },
       {
@@ -427,7 +450,7 @@ const dictionary: BaseDictionary = {
         paragraphs: ["Přístup, oprava, výmaz, námitka — info@tolls.be."],
       },
     ],
-    lastUpdated: "15 July 2026",
+    lastUpdated: "4 August 2026",
   },
   news: {
     title: "Novinky",
@@ -459,11 +482,18 @@ const dictionary: BaseDictionary = {
     noArticles: "Zatím nejsou publikovány žádné články. Zkuste to brzy znovu.",
   },
   newsletter: {
-    title: "Zůstaňte informováni",
-    description: "Dostávejte upozornění, až začne oficiální prodej a budou zveřejněny důležité aktualizace.",
-    emailPlaceholder: "Vaše e-mailová adresa",
+    title: "Buďte mezi prvními, kdo se dozví o dostupnosti belgické známky",
+    description: "",
+    benefitsIntro: "",
+    benefits: [
+      "Začátek oficiálního prodeje",
+      "Potvrzeny konečné ceny",
+      "Zveřejněna nová pravidla",
+      "Dostupný odkaz na nákup",
+    ],
+    emailPlaceholder: "E-mailová adresa",
     consentLabel: "Souhlasím se zasíláním aktualizací a přečetl(a) jsem zásady ochrany soukromí.",
-    submit: "Odebírat",
+    submit: "Upozornit mě",
     success: "Děkujeme! Jste přihlášeni k odběru.",
     error: "Něco se pokazilo. Zkuste to prosím znovu.",
     privacyLink: "Zásady ochrany soukromí",

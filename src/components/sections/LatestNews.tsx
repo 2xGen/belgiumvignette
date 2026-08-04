@@ -16,17 +16,23 @@ export default function LatestNews({
   if (!latest.length) return null;
 
   return (
-    <section className="py-8">
+    <section className="py-12">
       <h2 className="section-heading">{dict.news.latestArticles}</h2>
-      <ul className="mt-4 space-y-6 border border-border-light bg-bg-header p-4">
+      <ul className="mt-6 space-y-0 overflow-hidden rounded-[14px] border border-border-light bg-bg-surface shadow-[var(--shadow-soft)]">
         {latest.map((article) => (
-          <li key={article.id} className="border-b border-border-light pb-6 last:border-b-0 last:pb-0">
+          <li
+            key={article.id}
+            className="border-b border-border-light p-5 last:border-b-0 sm:p-6"
+          >
             <ArticleListingItem article={article} locale={locale} dict={dict} />
           </li>
         ))}
       </ul>
-      <p className="mt-4 text-sm">
-        <Link href={getLocalizedPath(locale, "news")} className="text-link">
+      <p className="mt-5 text-sm">
+        <Link
+          href={getLocalizedPath(locale, "news")}
+          className="font-bold text-ink no-underline hover:text-accent-deep hover:underline"
+        >
           {dict.nav.news} →
         </Link>
       </p>

@@ -21,9 +21,9 @@ const dictionary: BaseDictionary = {
   },
   meta: {
     home: {
-      title: "Vignette Belgien 2027 — Preise, Regeln & Info für Ausländer",
+      title: "Vignette Belgien 2027: Brauchen Sie eine Vignette für Belgien?",
       description:
-        "Unabhängiger Leitfaden zur geplanten digitalen Vignette in Belgien ab 1. Mai 2027. Preise, Befreiungen, Bußgelder und Tipps für deutsche und andere Grenzfahrer.",
+        "Belgien plant die Einführung einer digitalen Straßenvignette ab dem 1. Mai 2027. Finden Sie heraus, ob Sie eine brauchen, was sie kostet, wer befreit ist und wann der Verkauf startet.",
     },
     prices: {
       title: "Vignette Belgien Preise 2027 — Tag, Monat & Jahresgebühr",
@@ -31,9 +31,9 @@ const dictionary: BaseDictionary = {
         "Geplante Vignettenpreise für Belgien: 100 €/Jahr, Kurzzeiträume ab 9 €/Tag. Euro-Norm einfach erklärt.",
     },
     foreign: {
-      title: "Vignette Belgien für Ausländer & Grenzverkehr",
+      title: "Brauchen ausländische Autos 2027 eine Vignette für Belgien?",
       description:
-        "Praktischer Leitfaden für Fahrer aus den Niederlanden, Deutschland und Frankreich. Was Sie laut Plänen wissen müssen.",
+        "Ja — laut aktuellen Plänen benötigen ausländische Personenkraftwagen ab dem 1. Mai 2027 eine Vignette für Belgien auf den erfassten Straßen. Leitfaden für niederländische, deutsche und französische Fahrer.",
     },
     exemptions: {
       title: "Vignette Belgien Befreiungen — Motorräder, LKW & mehr",
@@ -65,15 +65,15 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be ist eine unabhängige Informationsseite. Wir sind nicht mit der belgischen Regierung, Flandern, der Wallonie oder Brüssel verbunden.",
     lastUpdated: "Zuletzt aktualisiert",
-    lastUpdatedDate: "15. Juli 2026",
-    lastUpdatedIso: "2026-07-15",
+    lastUpdatedDate: "4. August 2026",
+    lastUpdatedIso: "2026-08-04",
     readMore: "Mehr erfahren",
     relatedSite: "https://tolls.be/de",
     relatedSiteLabel: "Tolls.be — unabhängige Maut-Informationen für Belgien",
     backToHome: "Zurück zur Startseite",
     plannedNotice:
       "Die im März 2026 vorgestellten Pläne können sich noch ändern. Wir verfolgen offizielle Quellen und aktualisieren diese Seite bei Neuigkeiten.",
-    independentSite: "Unabhängige Informationsseite",
+    independentSite: "Info belgische Straßenvignette",
     contactLabel: "Kontakt",
     cookieSettings: "Cookie-Einstellungen",
     tableCategory: "Kategorie",
@@ -89,11 +89,21 @@ const dictionary: BaseDictionary = {
   home: {
     hero: {
       eyebrow: "Geplant ab 1. Mai 2027",
-      title: "Belgiens digitale Vignette — verständlich erklärt",
+      title: "Vignette Belgien 2027: Brauchen Sie eine Vignette für Belgien?",
       subtitle:
-        "Ab Mai 2027 planen Flandern, die Wallonie und Brüssel, dass Autofahrer für Hauptstraßen zahlen. Kein Windschutzscheiben-Aufkleber — eine digitale Vignette, gebunden an Ihr Kennzeichen.",
-      ctaPrimary: "Preise ansehen",
-      ctaSecondary: "Info für Ausländer",
+        "Belgien plant die Einführung einer digitalen Straßenvignette ab dem 1. Mai 2027. Finden Sie heraus, ob Sie eine brauchen, was sie kostet, wer befreit ist und wann der Verkauf startet.",
+      ctaPrimary: "Prüfen Sie, ob Sie eine Vignette brauchen",
+      ctaSecondary: "Benachrichtigung bei Verkaufsstart",
+    },
+    decisionTree: {
+      title: "Brauchen Sie eine Vignette?",
+      options: [
+        { label: "Belgisches Auto", href: "prices" },
+        { label: "Niederländisches Auto", href: "foreign", anchor: "netherlands" },
+        { label: "Deutsches Auto", href: "foreign", anchor: "germany" },
+        { label: "Französisches Auto", href: "foreign", anchor: "france" },
+        { label: "Wohnmobil / Transporter", href: "exemptions" },
+      ],
     },
     quickAnswers: [
       {
@@ -232,58 +242,72 @@ const dictionary: BaseDictionary = {
     ],
   },
   foreign: {
-    title: "Ausländische Fahrer",
+    title: "Brauchen ausländische Autos eine Vignette für Belgien?",
     intro:
-      "Mehr als die Hälfte der Kilometer auf belgischen Straßen wird laut Schätzungen von ausländischen Autofahrern gefahren. Was Sie aus den Niederlanden, Deutschland oder Frankreich wissen sollten.",
+      "Ja, laut den aktuellen Plänen. Ausländische Personenkraftwagen werden ab dem 1. Mai 2027 eine Vignette für Belgien benötigen, wenn sie erfasste belgische Straßen nutzen. Das geplante System unterscheidet nicht zwischen belgischen und ausländischen Kennzeichen — ein in den Niederlanden, Frankreich, Deutschland oder einem anderen Land zugelassenes Auto soll dieselbe digitale Vignette benötigen wie ein belgisches Fahrzeug. Die endgültigen Regeln können sich bis zur offiziellen Genehmigung und Einführung des Systems noch ändern.",
     sections: [
       {
         id: "eu-rules",
         title: "Gleichbehandlung",
         paragraphs: [
-          "Belgische Fahrer zahlen ebenfalls — EU-Regeln erlauben keine Bevorzugung. Ihr ausländisches Kennzeichen ist betroffen.",
+          "Belgische Fahrer zahlen ebenfalls — EU-Regeln verbieten, nur Ausländer zu belasten. Ihr ausländisches Kennzeichen fällt unter dasselbe geplante System.",
+          "Schätzungsweise passieren jährlich 30 Millionen ausländische Personenkraftwagen Belgien.",
         ],
       },
       {
         id: "digital",
-        title: "Digital, kein Aufkleber",
+        title: "Digitales System",
         paragraphs: [
-          "Keine physische Vignette. Das System nutzt automatische Kennzeichenerkennung (ANPR).",
+          "Keine physische Vignette zum Kaufen oder Anbringen. Das System soll automatische Kennzeichenerkennung (ANPR) nutzen. Kaufen Sie vor der Fahrt auf erfassten Straßen.",
         ],
       },
       {
         id: "history",
         title: "Historischer Kontext",
         paragraphs: [
-          "2007 scheiterte ein Vignettenversuch nach niederländischen Protesten. Keine Sonderregelung für Grenzregionen in aktuellen Plänen.",
+          "Belgien versuchte 2007 eine Vignette, zog sie aber nach niederländischen Protesten zurück. Niederländische Minister haben erneut Bedenken geäußert — und in den aktuellen Plänen gibt es noch keine angekündigte Sonderregelung für Nachbarländer an der Grenze.",
         ],
       },
     ],
     countryTips: [
       {
-        country: "🇳🇱 Niederlande",
+        id: "netherlands",
+        country: "Niederlande",
         tips: [
-          "Beliebte Routen über E19, E40 und E314 betroffen.",
-          "Keine Sonderregelung für Süd-Niederland laut aktuellen Plänen.",
+          "Ja — in den Niederlanden zugelassene Personenkraftwagen werden ab dem 1. Mai 2027 voraussichtlich eine Vignette für Belgien auf erfassten belgischen Straßen benötigen.",
+          "Betroffen sind häufige Routen wie Niederlande → Antwerpen, Niederlande → Brüssel und Durchreise Niederlande → Luxemburg/Frankreich.",
+          "Derzeit ist keine Ausnahme für niederländische Grenzregionen angekündigt.",
         ],
       },
       {
-        country: "🇩🇪 Deutschland",
+        id: "germany",
+        country: "Deutschland",
         tips: [
-          "Transit über Aachen–Lüttich oder Richtung Frankreich: Vignette voraussichtlich nötig.",
-          "Kurzzeiträume (1–10 Tage) für Durchreisende.",
+          "Ja — in Deutschland zugelassene Personenkraftwagen werden ab dem 1. Mai 2027 voraussichtlich eine Vignette für Belgien auf erfassten belgischen Straßen benötigen.",
+          "Dazu gehören häufige Transitrouten wie Aachen → Lüttich und Deutschland → Frankreich durch Belgien.",
+          "Kurzzeiträume (1–10 Tage) in den Plänen können für Durchreisende passen.",
         ],
       },
       {
-        country: "🇫🇷 Frankreich",
+        id: "france",
+        country: "Frankreich",
         tips: [
-          "Fahrer aus Nordfrankreich und Wallonien: prüfen Sie, ob Ihre Route belgische Hauptstraßen nutzt.",
+          "Ja — in Frankreich zugelassene Personenkraftwagen werden ab dem 1. Mai 2027 voraussichtlich eine Vignette für Belgien auf erfassten belgischen Straßen benötigen.",
+          "Besonders relevant für Fahrten aus Nordfrankreich nach Belgien und Transitrouten Frankreich → Niederlande/Deutschland.",
+          "Erfasste Straßen umfassen Autobahnen und geplante regionale Hauptstraßen — nicht nur Langstreckentransit.",
         ],
       },
     ],
     faqs: [
       {
         question: "Brauche ich eine Vignette bei Durchreise?",
-        answer: "Ja — laut Plänen gilt die Pflicht auf Hauptstraßen unabhängig vom Reiseziel.",
+        answer:
+          "Ja — laut aktuellen Plänen ist ab dem 1. Mai 2027 auf erfassten belgischen Hauptstraßen eine Vignette erforderlich, unabhängig vom Reiseziel. Die endgültigen Regeln können vor dem Start noch geändert werden.",
+      },
+      {
+        question: "Zahlen ausländische Autos dasselbe wie belgische?",
+        answer:
+          "Ja. Das geplante System wendet dieselbe digitale Vignette auf belgische und ausländische Kennzeichen an. EU-Gleichbehandlungsregeln sind der Grund, warum nur Ausländer nicht belastet werden können.",
       },
     ],
   },
@@ -407,7 +431,7 @@ const dictionary: BaseDictionary = {
           "Essenziell: Speicherung Ihrer Cookie-Einstellung in localStorage. Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) und/oder Einwilligung.",
           "Analytics (optional): Vercel Analytics erfasst anonyme Seitenaufrufe. Wird nur nach Einwilligung geladen. Rechtsgrundlage: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Widerruf über Cookie-Einstellungen in der Fußzeile.",
           "Google Search Console & Bing Webmaster Tools: Verifizierungs-Meta-Tags ohne Tracking-Cookies.",
-          "Speicherdauer: bis Sie den Speicher löschen oder wir die Richtlinie aktualisieren (Version 2026-07-15).",
+          "Speicherdauer: bis Sie den Speicher löschen oder wir die Richtlinie aktualisieren (Version 2026-08-04).",
         ],
       },
       {
@@ -425,7 +449,7 @@ const dictionary: BaseDictionary = {
         paragraphs: ["Auskunft, Berichtigung, Löschung, Widerspruch — info@tolls.be."],
       },
     ],
-    lastUpdated: "15. Juli 2026",
+    lastUpdated: "4. August 2026",
   },
   news: {
     title: "Nachrichten & Updates",
@@ -457,11 +481,18 @@ const dictionary: BaseDictionary = {
     noArticles: "Noch keine Artikel veröffentlicht. Schauen Sie bald wieder vorbei.",
   },
   newsletter: {
-    title: "Informiert bleiben",
-    description: "Benachrichtigung, wenn der offizielle Verkauf startet und bei wichtigen Updates.",
-    emailPlaceholder: "Ihre E-Mail-Adresse",
+    title: "Als Erste/r informiert werden, wenn die belgische Vignette verfügbar ist",
+    description: "",
+    benefitsIntro: "",
+    benefits: [
+      "Offizieller Verkaufsstart",
+      "Endgültige Preise bestätigt",
+      "Neue Regeln veröffentlicht",
+      "Kauf-Link verfügbar",
+    ],
+    emailPlaceholder: "E-Mail-Adresse",
     consentLabel: "Ich stimme Updates zu und habe die Datenschutzerklärung gelesen.",
-    submit: "Anmelden",
+    submit: "Benachrichtigen",
     success: "Danke! Sie sind angemeldet.",
     error: "Etwas ist schiefgelaufen. Bitte erneut versuchen.",
     privacyLink: "Datenschutz",

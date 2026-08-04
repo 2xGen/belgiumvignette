@@ -21,9 +21,9 @@ const dictionary: BaseDictionary = {
   },
   meta: {
     home: {
-      title: "Vigneta Belgia 2027 — prețuri, reguli și ghid pentru șoferi străini",
+      title: "Vinietă Belgia 2027: aveți nevoie de o vinietă pentru Belgia?",
       description:
-        "Ghid independent despre vigneta rutieră digitală planificată în Belgia din 1 mai 2027. Prețuri, scutiri, amenzi și sfaturi practice pentru șoferii olandezi, germani și alți șoferi transfrontalieri.",
+        "Belgia plănuiește introducerea unei viniete rutiere digitale din 1 mai 2027. Aflați dacă aveți nevoie de una, cât costă, cine este scutit și când începe vânzarea.",
     },
     prices: {
       title: "Prețuri vigneta Belgia 2027 — tarife zilnice, lunare și anuale",
@@ -31,9 +31,9 @@ const dictionary: BaseDictionary = {
         "Prețuri planificate pentru vigneta din Belgia: €100/an, pe termen scurt de la €9/zi. Norma de emisii Euro explicată simplu.",
     },
     foreign: {
-      title: "Vigneta Belgia pentru mașini străine și șoferi transfrontalieri",
+      title: "Au mașinile străine nevoie de vigneta Belgia în 2027?",
       description:
-        "Ghid practic pentru șoferii din Olanda, Germania și Franța care tranzitează Belgia. Ce trebuie să știți conform planurilor actuale.",
+        "Da — conform planurilor actuale, autoturismele străine vor avea nevoie de vigneta Belgia de la 1 mai 2027 pe drumurile acoperite. Ghid pentru șoferii din Olanda, Germania și Franța.",
     },
     exemptions: {
       title: "Scutiri de la vigneta Belgia — motociclete, camioane și altele",
@@ -65,15 +65,15 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be este un site informativ independent. Nu suntem afiliați guvernului belgian, Flandrei, Valoniei sau Bruxelles-ului.",
     lastUpdated: "Ultima actualizare",
-    lastUpdatedDate: "15 July 2026",
-    lastUpdatedIso: "2026-07-15",
+    lastUpdatedDate: "4 August 2026",
+    lastUpdatedIso: "2026-08-04",
     readMore: "Citește mai mult",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — informații independente despre taxele rutiere din Belgia",
     backToHome: "Înapoi la pagina principală",
     plannedNotice:
       "Planurile prezentate în martie 2026 pot încă suferi modificări. Urmărim sursele oficiale și actualizăm această pagină când apar noutăți.",
-    independentSite: "Site informativ independent",
+    independentSite: "Info vinietă rutieră belgiană",
     contactLabel: "Contact",
     cookieSettings: "Setări cookie",
     tableCategory: "Categorie",
@@ -89,11 +89,21 @@ const dictionary: BaseDictionary = {
   home: {
     hero: {
       eyebrow: "Planificat din 1 mai 2027",
-      title: "Vigneta digitală din Belgia, explicată clar",
+      title: "Vinietă Belgia 2027: aveți nevoie de o vinietă pentru Belgia?",
       subtitle:
-        "Din mai 2027, Flandra, Valonia și Bruxelles plănuiesc să taxeze șoferii pentru utilizarea drumurilor principale. Fără autocolant pe parbriz — o vignetă digitală legată de numărul de înmatriculare.",
-      ctaPrimary: "Vezi prețurile",
-      ctaSecondary: "Info pentru șoferi străini",
+        "Belgia plănuiește introducerea unei viniete rutiere digitale din 1 mai 2027. Aflați dacă aveți nevoie de una, cât costă, cine este scutit și când începe vânzarea.",
+      ctaPrimary: "Verificați dacă aveți nevoie de vinietă",
+      ctaSecondary: "Notificare la deschiderea vânzării",
+    },
+    decisionTree: {
+      title: "Aveți nevoie de o vinietă?",
+      options: [
+        { label: "Mașină belgiană", href: "prices" },
+        { label: "Mașină olandeză", href: "foreign", anchor: "netherlands" },
+        { label: "Mașină germană", href: "foreign", anchor: "germany" },
+        { label: "Mașină franceză", href: "foreign", anchor: "france" },
+        { label: "Autorulotă / dubă", href: "exemptions" },
+      ],
     },
     quickAnswers: [
       {
@@ -233,59 +243,72 @@ const dictionary: BaseDictionary = {
     ],
   },
   foreign: {
-    title: "Șoferi străini",
+    title: "Au mașinile străine nevoie de vigneta Belgia?",
     intro:
-      "Peste jumătate din kilometrii parcurși pe drumurile belgiene sunt conduși, se pare, de șoferi străini. Dacă veniți din Olanda, Germania, Franța sau din altă parte, iată ce înseamnă planurile pentru dvs.",
+      "Da, conform planurilor actuale. Autoturismele înmatriculate în străinătate vor avea nevoie de vigneta Belgia de la 1 mai 2027 când folosesc drumurile belgiene acoperite. Sistemul planificat nu distinge între numere de înmatriculare belgiene și străine — o mașină înmatriculată în Olanda, Franța, Germania sau altă țară ar trebui să necesite aceeași vignetă digitală ca un vehicul belgian. Regulile finale pot încă suferi modificări până când sistemul este aprobat și lansat oficial.",
     sections: [
       {
         id: "eu-rules",
         title: "Tratament egal",
         paragraphs: [
-          "Și șoferii belgieni plătesc — regulile UE împiedică taxarea exclusivă a străinilor. Numărul dvs. străin este acoperit.",
+          "Și șoferii belgieni plătesc — regulile UE împiedică taxarea exclusivă a străinilor. Numărul dvs. străin este acoperit de același sistem planificat.",
           "Se estimează că aproximativ 30 de milioane de autoturisme străine trec anual prin Belgia.",
         ],
       },
       {
         id: "digital",
-        title: "Digital, fără autocolant",
+        title: "Sistem digital",
         paragraphs: [
-          "Nu există vignetă fizică de cumpărat sau afișat. Sistemul folosește recunoașterea automată a numerelor de înmatriculare (ANPR). Cumpărați înainte de a conduce.",
+          "Nu există vignetă fizică de cumpărat sau afișat. Sistemul este planificat să folosească recunoașterea automată a numerelor de înmatriculare (ANPR). Cumpărați înainte de a conduce pe drumurile acoperite.",
         ],
       },
       {
         id: "history",
         title: "Context istoric",
         paragraphs: [
-          "Belgia a încercat o vignetă în 2007, dar a renunțat după protestele olandeze. Miniștrii olandezi și-au exprimat din nou dezamăgirea — nu există un regim special la frontieră în planurile actuale.",
+          "Belgia a încercat o vignetă în 2007, dar a renunțat după protestele olandeze. Miniștrii olandezi și-au exprimat din nou îngrijorarea — și încă nu a fost anunțat un regim special la frontieră pentru țările vecine în planurile actuale.",
         ],
       },
     ],
     countryTips: [
       {
-        country: "🇳🇱 Olanda",
+        id: "netherlands",
+        country: "Olanda",
         tips: [
-          "Rutele populare prin E19 (Anvers), E40 (Bruxelles) și E314 (Liège) sunt acoperite.",
-          "Nu există un acord special pentru șoferii din sudul Olandei în planurile actuale.",
+          "Da — autoturismele înmatriculate în Olanda ar trebui să aibă nevoie de vigneta Belgia de la 1 mai 2027 pe drumurile belgiene acoperite.",
+          "Aceasta afectează rute comune precum Olanda → Anvers, Olanda → Bruxelles și tranzit Olanda → Luxemburg/Franța.",
+          "În prezent nu a fost anunțată nicio scutire pentru regiunile de frontieră olandeze.",
         ],
       },
       {
-        country: "🇩🇪 Germania",
+        id: "germany",
+        country: "Germania",
         tips: [
-          "Tranzitul prin Aachen–Liège sau rutele spre Franța necesită probabil o vignetă.",
-          "Opțiunile pe termen scurt (1–10 zile) sunt potrivite pentru traficul de tranzit.",
+          "Da — autoturismele înmatriculate în Germania ar trebui să aibă nevoie de vigneta Belgia de la 1 mai 2027 pe drumurile belgiene acoperite.",
+          "Aceasta include rute de tranzit comune precum Aachen → Liège și Germania → Franța prin Belgia.",
+          "Opțiunile pe termen scurt (1–10 zile) din planuri pot fi potrivite pentru traficul de tranzit.",
         ],
       },
       {
-        country: "🇫🇷 Franța",
+        id: "france",
+        country: "Franța",
         tips: [
-          "Șoferii din nordul Franței și Valonia: verificați dacă ruta dvs. folosește drumuri regionale principale belgiene.",
+          "Da — autoturismele înmatriculate în Franța ar trebui să aibă nevoie de vigneta Belgia de la 1 mai 2027 pe drumurile belgiene acoperite.",
+          "Acest lucru este relevant în special pentru călătorii din nordul Franței spre Belgia și rutele de tranzit Franța → Olanda/Germania.",
+          "Drumurile acoperite includ autostrăzi și drumuri principale regionale planificate — nu doar tranzitul pe distanțe lungi.",
         ],
       },
     ],
     faqs: [
       {
         question: "Am nevoie de vignetă dacă doar tranzitez?",
-        answer: "Da — conform planurilor, utilizarea drumurilor principale necesită o vignetă, indiferent de destinație.",
+        answer:
+          "Da — conform planurilor actuale, de la 1 mai 2027 utilizarea drumurilor principale belgiene acoperite necesită o vignetă, indiferent de destinație. Regulile finale pot încă suferi modificări înainte de lansare.",
+      },
+      {
+        question: "Plătesc mașinile străine la fel ca cele belgiene?",
+        answer:
+          "Da. Sistemul planificat aplică aceeași vignetă digitală numerelor belgiene și străine. Regulile UE privind tratamentul egal explică de ce străinii nu pot fi taxați exclusiv.",
       },
     ],
   },
@@ -409,7 +432,7 @@ const dictionary: BaseDictionary = {
           "Stocare esențială: salvăm preferința dvs. privind cookie-urile în localStorage. Temei legal: interes legitim (Art. 6(1)(f) GDPR) și/sau consimțământ acolo unde este necesar.",
           "Analitică (opțional): Vercel Analytics colectează vizualizări anonime de pagină. Se încarcă doar după consimțământul din banner. Temei legal: consimțământ (Art. 6(1)(a) GDPR). Retragere prin Setări cookie din subsol.",
           "Google Search Console și Bing Webmaster Tools: doar etichete meta de verificare a proprietății — fără cookie-uri de urmărire.",
-          "Păstrare: până când ștergeți stocarea sau actualizăm această politică (versiunea 2026-07-15).",
+          "Păstrare: până când ștergeți stocarea sau actualizăm această politică (versiunea 2026-08-04).",
         ],
       },
       {
@@ -427,7 +450,7 @@ const dictionary: BaseDictionary = {
         paragraphs: ["Acces, rectificare, ștergere, opoziție — info@tolls.be."],
       },
     ],
-    lastUpdated: "15 July 2026",
+    lastUpdated: "4 August 2026",
   },
   news: {
     title: "Știri și actualizări",
@@ -459,11 +482,18 @@ const dictionary: BaseDictionary = {
     noArticles: "Niciun articol publicat încă. Reveniți în curând.",
   },
   newsletter: {
-    title: "Rămâneți informat",
-    description: "Primiți notificări când vânzările oficiale încep și când sunt publicate actualizări importante.",
-    emailPlaceholder: "Adresa dvs. de e-mail",
+    title: "Fiți primii care află când vinietă belgiană devine disponibilă",
+    description: "",
+    benefitsIntro: "",
+    benefits: [
+      "Începe vânzarea oficială",
+      "Prețuri finale confirmate",
+      "Reguli noi publicate",
+      "Link de achiziție disponibil",
+    ],
+    emailPlaceholder: "Adresă de e-mail",
     consentLabel: "Sunt de acord să primesc actualizări și am citit politica de confidențialitate.",
-    submit: "Abonare",
+    submit: "Anunțați-mă",
     success: "Mulțumim! Sunteți abonat.",
     error: "Ceva nu a funcționat. Vă rugăm să încercați din nou.",
     privacyLink: "Politica de confidențialitate",

@@ -21,9 +21,9 @@ const dictionary: BaseDictionary = {
   },
   meta: {
     home: {
-      title: "Belgisk vignet 2027 — priser, regler & guide til udenlandske bilister",
+      title: "Belgisk vignet 2027: har du brug for et vignet til Belgien?",
       description:
-        "Uafhængig guide til Belgiens planlagte digitale vejafgift fra 1 May 2027. Priser, fritagelser, bøder og praktiske tips til nederlandske, tyske og andre grænseoverskridende bilister.",
+        "Belgien planlægger at indføre et digitalt vejvignet fra 1. maj 2027. Find ud af, om du har brug for et, hvad det koster, hvem der er fritaget og hvornår salget starter.",
     },
     prices: {
       title: "Belgisk vignet priser 2027 — dag, måned & årlige takster",
@@ -31,9 +31,9 @@ const dictionary: BaseDictionary = {
         "Planlagte vignetpriser for Belgien: €100/år, kortvarige fra €9/dag. Euro-emissionsnorm forklaret enkelt.",
     },
     foreign: {
-      title: "Belgisk vignet for udenlandske biler & grænseoverskridende bilister",
+      title: "Har udenlandske biler brug for et belgisk vignet i 2027?",
       description:
-        "Praktisk guide til bilister fra Nederlandene, Tyskland og Frankrig, der kører gennem Belgien. Det, du skal vide ifølge de nuværende planer.",
+        "Ja — ifølge de nuværende planer skal udenlandske personbiler have et belgisk vignet fra 1. maj 2027 på dækkede veje. Guide til bilister fra Nederlandene, Tyskland og Frankrig.",
     },
     exemptions: {
       title: "Belgisk vignet fritagelser — motorcykler, lastbiler & mere",
@@ -65,15 +65,15 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be er et uafhængigt informationssite. Vi er ikke tilknyttet den belgiske regering, Flandern, Vallonien eller Bruxelles.",
     lastUpdated: "Sidst opdateret",
-    lastUpdatedDate: "15 July 2026",
-    lastUpdatedIso: "2026-07-15",
+    lastUpdatedDate: "4 August 2026",
+    lastUpdatedIso: "2026-08-04",
     readMore: "Læs mere",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — uafhængig information om belgiske vejafgifter",
     backToHome: "Tilbage til forsiden",
     plannedNotice:
       "Planer præsenteret i March 2026 kan stadig ændres. Vi følger officielle kilder og opdaterer denne side, når der kommer nyt.",
-    independentSite: "Uafhængigt informationssite",
+    independentSite: "Info belgisk vejvignette",
     contactLabel: "Kontakt",
     cookieSettings: "Cookieindstillinger",
     tableCategory: "Kategori",
@@ -88,12 +88,22 @@ const dictionary: BaseDictionary = {
   },
   home: {
     hero: {
-      eyebrow: "Planlagt fra 1 May 2027",
-      title: "Belgiens digitale vignet, forklaret tydeligt",
+      eyebrow: "Planlagt fra 1. maj 2027",
+      title: "Belgisk vignet 2027: har du brug for et vignet til Belgien?",
       subtitle:
-        "Fra May 2027 planlægger Flandern, Vallonien og Bruxelles at opkræve vejafgift for brug af hovedveje. Intet klistermærke i forruden — et digitalt vignet knyttet til din nummerplade.",
-      ctaPrimary: "Se priser",
-      ctaSecondary: "Info til udenlandske bilister",
+        "Belgien planlægger at indføre et digitalt vejvignet fra 1. maj 2027. Find ud af, om du har brug for et, hvad det koster, hvem der er fritaget og hvornår salget starter.",
+      ctaPrimary: "Tjek om du har brug for et vignet",
+      ctaSecondary: "Få besked når salget åbner",
+    },
+    decisionTree: {
+      title: "Har du brug for et vignet?",
+      options: [
+        { label: "Belgisk bil", href: "prices" },
+        { label: "Hollandsk bil", href: "foreign", anchor: "netherlands" },
+        { label: "Tysk bil", href: "foreign", anchor: "germany" },
+        { label: "Fransk bil", href: "foreign", anchor: "france" },
+        { label: "Autocamper / varevogn", href: "exemptions" },
+      ],
     },
     quickAnswers: [
       {
@@ -233,59 +243,72 @@ const dictionary: BaseDictionary = {
     ],
   },
   foreign: {
-    title: "Udenlandske bilister",
+    title: "Har udenlandske biler brug for et belgisk vignet?",
     intro:
-      "Mere end halvdelen af kilometrene på belgiske veje køres angiveligt af udenlandske bilister. Hvis du kommer fra Nederlandene, Tyskland, Frankrig eller andre steder, er her hvad planerne betyder for dig.",
+      "Ja, ifølge de nuværende planer. Udenlandske personbiler skal have et belgisk vignet fra 1. maj 2027, når de bruger dækkede belgiske veje. Det planlagte system skelner ikke mellem belgiske og udenlandske nummerplader — en bil registreret i Nederlandene, Frankrig, Tyskland eller et andet land forventes at kræve det samme digitale vignet som et belgisk køretøj. De endelige regler kan stadig ændre sig, indtil systemet officielt godkendes og lanceres.",
     sections: [
       {
         id: "eu-rules",
         title: "Lige behandling",
         paragraphs: [
-          "Belgiske bilister betaler også — EU-regler forhindrer kun at opkræve udlændinge. Din udenlandske nummerplade er dækket.",
+          "Belgiske bilister betaler også — EU-regler forhindrer kun at opkræve udlændinge. Din udenlandske nummerplade er dækket af det samme planlagte system.",
           "Anslået 30 millioner udenlandske personbiler passerer gennem Belgien hvert år.",
         ],
       },
       {
         id: "digital",
-        title: "Digitalt, intet klistermærke",
+        title: "Digitalt system",
         paragraphs: [
-          "Intet fysisk vignet at købe eller vise. Systemet bruger automatisk nummerpladegenkendelse (ANPR). Køb inden du kører.",
+          "Intet fysisk vignet at købe eller vise. Systemet planlægges at bruge automatisk nummerpladegenkendelse (ANPR). Køb inden du kører på dækkede veje.",
         ],
       },
       {
         id: "history",
         title: "Historisk kontekst",
         paragraphs: [
-          "Belgien forsøgte et vignet i 2007, men trak det tilbage efter nederlandske protester. Nederlandske ministre har igen udtrykt skuffelse — ingen særlig grænseregime i de nuværende planer.",
+          "Belgien forsøgte et vignet i 2007, men trak det tilbage efter nederlandske protester. Nederlandske ministre har igen udtrykt bekymring — og der er endnu ikke annonceret et særligt grænseregime for nabolande i de nuværende planer.",
         ],
       },
     ],
     countryTips: [
       {
-        country: "🇳🇱 Netherlands",
+        id: "netherlands",
+        country: "Nederlandene",
         tips: [
-          "Populære ruter via E19 (Antwerpen), E40 (Bruxelles) og E314 (Liège) er omfattet.",
-          "Ingen særlig ordning for bilister ved den sydlige nederlandske grænse i de nuværende planer.",
+          "Ja — personbiler registreret i Nederlandene forventes at skulle have et belgisk vignet fra 1. maj 2027 på dækkede belgiske veje.",
+          "Dette gælder almindelige ruter som Nederlandene → Antwerpen, Nederlandene → Bruxelles og transit Nederlandene → Luxembourg/Frankrig.",
+          "Der er i øjeblikket ikke annonceret nogen fritagelse for nederlandske grænseregioner.",
         ],
       },
       {
-        country: "🇩🇪 Germany",
+        id: "germany",
+        country: "Tyskland",
         tips: [
-          "Transit via Aachen–Liège eller ruter mod Frankrig kræver sandsynligvis et vignet.",
-          "Kortvarige muligheder (1–10 dage) passer til gennemkørende trafik.",
+          "Ja — personbiler registreret i Tyskland forventes at skulle have et belgisk vignet fra 1. maj 2027 på dækkede belgiske veje.",
+          "Dette omfatter almindelige transitruter som Aachen → Liège og Tyskland → Frankrig gennem Belgien.",
+          "Kortvarige muligheder (1–10 dage) i planerne kan passe til gennemkørende trafik.",
         ],
       },
       {
-        country: "🇫🇷 France",
+        id: "france",
+        country: "Frankrig",
         tips: [
-          "Bilister fra det nordlige Frankrig og Vallonien: tjek om din rute bruger belgiske regionale hovedveje.",
+          "Ja — personbiler registreret i Frankrig forventes at skulle have et belgisk vignet fra 1. maj 2027 på dækkede belgiske veje.",
+          "Dette er især relevant for ture fra det nordlige Frankrig til Belgien og transitruter Frankrig → Nederlandene/Tyskland.",
+          "Dækkede veje omfatter motorveje og planlagte regionale hovedveje — ikke kun langdistance-transit.",
         ],
       },
     ],
     faqs: [
       {
         question: "Skal jeg have et vignet, hvis jeg bare kører igennem?",
-        answer: "Ja — ifølge planerne kræves et vignet for brug af hovedveje uanset destination.",
+        answer:
+          "Ja — ifølge de nuværende planer kræves et vignet fra 1. maj 2027 for brug af dækkede belgiske hovedveje uanset destination. De endelige regler kan stadig ændre sig før lanceringen.",
+      },
+      {
+        question: "Betaler udenlandske biler det samme som belgiske?",
+        answer:
+          "Ja. Det planlagte system anvender det samme digitale vignet på belgiske og udenlandske nummerplader. EU's regler om lige behandling er grunden til, at udlændinge ikke kan opkræves alene.",
       },
     ],
   },
@@ -410,7 +433,7 @@ const dictionary: BaseDictionary = {
           "Nødvendig lagring: vi gemmer dit cookievalg i localStorage. Retsgrundlag: legitim interesse (art. 6(1)(f) GDPR) og/eller samtykke, hvor det kræves.",
           "Analyse (valgfrit): Vercel Analytics indsamler anonyme sidevisninger. Indlæses kun efter samtykke via banneret. Retsgrundlag: samtykke (art. 6(1)(a) GDPR). Tilbagekald via Cookieindstillinger i footeren.",
           "Google Search Console & Bing Webmaster Tools: kun meta-tags til ejerskabsverifikation — ingen sporingscookies.",
-          "Opbevaring: indtil du rydder lagringen eller vi opdaterer denne politik (version 2026-07-15).",
+          "Opbevaring: indtil du rydder lagringen eller vi opdaterer denne politik (version 2026-08-04).",
         ],
       },
       {
@@ -428,7 +451,7 @@ const dictionary: BaseDictionary = {
         paragraphs: ["Indsigt, berigtigelse, sletning, indsigelse — info@tolls.be."],
       },
     ],
-    lastUpdated: "15 July 2026",
+    lastUpdated: "4 August 2026",
   },
   news: {
     title: "Nyheder og opdateringer",
@@ -460,11 +483,18 @@ const dictionary: BaseDictionary = {
     noArticles: "Ingen artikler publiceret endnu. Tjek tilbage snart.",
   },
   newsletter: {
-    title: "Hold dig orienteret",
-    description: "Få besked, når det officielle salg starter, og når vigtige opdateringer offentliggøres.",
-    emailPlaceholder: "Din e-mailadresse",
+    title: "Få besked først, når det belgiske vignet bliver tilgængeligt",
+    description: "",
+    benefitsIntro: "",
+    benefits: [
+      "Officielt salg starter",
+      "Endelige priser bekræftet",
+      "Nye regler offentliggjort",
+      "Købslink tilgængeligt",
+    ],
+    emailPlaceholder: "E-mailadresse",
     consentLabel: "Jeg accepterer at modtage opdateringer og har læst privatlivspolitikken.",
-    submit: "Tilmeld",
+    submit: "Giv mig besked",
     success: "Tak! Du er tilmeldt.",
     error: "Noget gik galt. Prøv igen.",
     privacyLink: "Privatlivspolitik",

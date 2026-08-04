@@ -28,7 +28,9 @@ function ArticleSections({
     <div className="space-y-8">
       {sections.map((section) => (
         <section key={section.id} id={section.id} className="scroll-mt-6">
-          <Heading className="font-serif text-xl font-bold">{section.heading}</Heading>
+          <Heading className="font-[family-name:var(--font-display)] text-xl font-bold tracking-tight text-ink">
+            {section.heading}
+          </Heading>
           <div className="prose-content mt-3 space-y-3">
             {section.paragraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 48)}>{paragraph}</p>
@@ -127,7 +129,9 @@ export function ArticlePageContent({
       </div>
 
       <section id="our-view" className="mt-12 scroll-mt-6 border-t border-border-light pt-10">
-        <h2 className="font-serif text-xl font-bold">{dict.news.ourTakeTitle}</h2>
+        <h2 className="font-[family-name:var(--font-display)] text-xl font-bold tracking-tight text-ink">
+          {dict.news.ourTakeTitle}
+        </h2>
         <div className="notice-box mt-4">
           <ArticleSections sections={content.ourTakeSections} headingLevel="h3" />
         </div>

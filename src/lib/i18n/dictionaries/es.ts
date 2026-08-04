@@ -21,9 +21,9 @@ const dictionary: BaseDictionary = {
   },
   meta: {
     home: {
-      title: "Viñeta de Bélgica 2027 — precios, normas y guía para conductores extranjeros",
+      title: "Viñeta Bélgica 2027: ¿necesita una viñeta para Bélgica?",
       description:
-        "Guía independiente sobre la viñeta digital de carreteras prevista en Bélgica desde el 1 de mayo de 2027. Precios, exenciones, multas y consejos prácticos para conductores neerlandeses, alemanes y otros conductores transfronterizos.",
+        "Bélgica planea introducir una viñeta vial digital a partir del 1 de mayo de 2027. Descubra si la necesita, cuánto cuesta, quién está exento y cuándo empieza la venta.",
     },
     prices: {
       title: "Precios de la viñeta de Bélgica 2027 — tarifas diarias, mensuales y anuales",
@@ -31,9 +31,9 @@ const dictionary: BaseDictionary = {
         "Precios previstos de la viñeta en Bélgica: €100/año, corta duración desde €9/día. Norma Euro de emisiones explicada de forma sencilla.",
     },
     foreign: {
-      title: "Viñeta de Bélgica para coches extranjeros y conductores transfronterizos",
+      title: "¿Necesitan los coches extranjeros una viñeta de Bélgica en 2027?",
       description:
-        "Guía práctica para conductores de los Países Bajos, Alemania y Francia que viajan por Bélgica. Lo que debe saber según los planes actuales.",
+        "Sí — según los planes actuales, los turismos extranjeros necesitarán una viñeta de Bélgica desde el 1 de mayo de 2027 en las carreteras cubiertas. Guía para conductores holandeses, alemanes y franceses.",
     },
     exemptions: {
       title: "Exenciones de la viñeta de Bélgica — motos, camiones y más",
@@ -65,15 +65,15 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be es un sitio de información independiente. No estamos afiliados al gobierno belga, Flandes, Valonia ni Bruselas.",
     lastUpdated: "Última actualización",
-    lastUpdatedDate: "15 July 2026",
-    lastUpdatedIso: "2026-07-15",
+    lastUpdatedDate: "4 August 2026",
+    lastUpdatedIso: "2026-08-04",
     readMore: "Leer más",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — información independiente sobre peajes en Bélgica",
     backToHome: "Volver al inicio",
     plannedNotice:
       "Los planes presentados en marzo de 2026 pueden cambiar. Seguimos las fuentes oficiales y actualizamos esta página cuando hay novedades.",
-    independentSite: "Sitio de información independiente",
+    independentSite: "Info viñeta vial belga",
     contactLabel: "Contacto",
     cookieSettings: "Configuración de cookies",
     tableCategory: "Categoría",
@@ -89,11 +89,21 @@ const dictionary: BaseDictionary = {
   home: {
     hero: {
       eyebrow: "Previsto desde el 1 de mayo de 2027",
-      title: "La viñeta digital de Bélgica, explicada con claridad",
+      title: "Viñeta Bélgica 2027: ¿necesita una viñeta para Bélgica?",
       subtitle:
-        "A partir de mayo de 2027, Flandes, Valonia y Bruselas prevén cobrar a los automovilistas por el uso de las principales carreteras. Sin adhesivo en el parabrisas — una viñeta digital vinculada a su matrícula.",
-      ctaPrimary: "Ver precios",
-      ctaSecondary: "Info para conductores extranjeros",
+        "Bélgica planea introducir una viñeta vial digital a partir del 1 de mayo de 2027. Descubra si la necesita, cuánto cuesta, quién está exento y cuándo empieza la venta.",
+      ctaPrimary: "Compruebe si necesita una viñeta",
+      ctaSecondary: "Reciba aviso cuando abra la venta",
+    },
+    decisionTree: {
+      title: "¿Necesita una viñeta?",
+      options: [
+        { label: "Coche belga", href: "prices" },
+        { label: "Coche holandés", href: "foreign", anchor: "netherlands" },
+        { label: "Coche alemán", href: "foreign", anchor: "germany" },
+        { label: "Coche francés", href: "foreign", anchor: "france" },
+        { label: "Autocaravana / furgoneta", href: "exemptions" },
+      ],
     },
     quickAnswers: [
       {
@@ -233,59 +243,72 @@ const dictionary: BaseDictionary = {
     ],
   },
   foreign: {
-    title: "Conductores extranjeros",
+    title: "¿Necesitan los coches extranjeros una viñeta de Bélgica?",
     intro:
-      "Más de la mitad de los kilómetros en carreteras belgas los conducen, según se informa, automovilistas extranjeros. Si viene de los Países Bajos, Alemania, Francia u otro país, esto es lo que los planes significan para usted.",
+      "Sí, según los planes actuales. Los turismos matriculados en el extranjero necesitarán una viñeta de Bélgica desde el 1 de mayo de 2027 al utilizar las carreteras belgas cubiertas. El sistema previsto no distingue entre matrículas belgas y extranjeras: un coche matriculado en los Países Bajos, Francia, Alemania u otro país deberá necesitar la misma viñeta digital que un vehículo belga. Las normas definitivas pueden cambiar hasta que el sistema sea aprobado y puesto en marcha oficialmente.",
     sections: [
       {
         id: "eu-rules",
         title: "Igualdad de trato",
         paragraphs: [
-          "Los conductores belgas también pagan — las normas de la UE impiden cobrar solo a extranjeros. Su matrícula extranjera está cubierta.",
+          "Los conductores belgas también pagan — las normas de la UE impiden cobrar solo a extranjeros. Su matrícula extranjera está cubierta por el mismo sistema previsto.",
           "Se estima que unos 30 millones de turismos extranjeros transitan por Bélgica cada año.",
         ],
       },
       {
         id: "digital",
-        title: "Digital, sin adhesivo",
+        title: "Sistema digital",
         paragraphs: [
-          "No hay viñeta física que comprar o exhibir. El sistema utiliza reconocimiento automático de matrículas (ANPR). Compre antes de conducir.",
+          "No hay viñeta física que comprar o exhibir. El sistema está previsto para usar reconocimiento automático de matrículas (ANPR). Compre antes de circular por las carreteras cubiertas.",
         ],
       },
       {
         id: "history",
         title: "Contexto histórico",
         paragraphs: [
-          "Bélgica intentó una viñeta en 2007 pero la retiró tras las protestas neerlandesas. Los ministros neerlandeses han expresado de nuevo su decepción — no hay régimen especial fronterizo en los planes actuales.",
+          "Bélgica intentó una viñeta en 2007 pero la retiró tras las protestas neerlandesas. Los ministros neerlandeses han vuelto a expresar su preocupación — y aún no se ha anunciado un régimen fronterizo especial para los países vecinos en los planes actuales.",
         ],
       },
     ],
     countryTips: [
       {
-        country: "🇳🇱 Países Bajos",
+        id: "netherlands",
+        country: "Países Bajos",
         tips: [
-          "Las rutas populares por la E19 (Amberes), E40 (Bruselas) y E314 (Lieja) están incluidas.",
-          "No hay acuerdo especial para conductores del sur de los Países Bajos en los planes actuales.",
+          "Sí — se espera que los turismos matriculados en los Países Bajos necesiten una viñeta de Bélgica desde el 1 de mayo de 2027 en las carreteras belgas cubiertas.",
+          "Esto afecta a rutas habituales como Países Bajos → Amberes, Países Bajos → Bruselas y tránsito Países Bajos → Luxemburgo/Francia.",
+          "Actualmente no se ha anunciado ninguna exención para las regiones fronterizas neerlandesas.",
         ],
       },
       {
-        country: "🇩🇪 Alemania",
+        id: "germany",
+        country: "Alemania",
         tips: [
-          "El tránsito por Aquisgrán–Lieja o rutas hacia Francia probablemente requerirá viñeta.",
-          "Las opciones de corta duración (1–10 días) son adecuadas para el tráfico de paso.",
+          "Sí — se espera que los turismos matriculados en Alemania necesiten una viñeta de Bélgica desde el 1 de mayo de 2027 en las carreteras belgas cubiertas.",
+          "Esto incluye rutas de tránsito habituales como Aquisgrán → Lieja y Alemania → Francia a través de Bélgica.",
+          "Las opciones de corta duración (1–10 días) en los planes pueden ser adecuadas para el tráfico de paso.",
         ],
       },
       {
-        country: "🇫🇷 Francia",
+        id: "france",
+        country: "Francia",
         tips: [
-          "Conductores del norte de Francia y Valonia: compruebe si su ruta utiliza carreteras principales regionales belgas.",
+          "Sí — se espera que los turismos matriculados en Francia necesiten una viñeta de Bélgica desde el 1 de mayo de 2027 en las carreteras belgas cubiertas.",
+          "Esto es especialmente relevante para viajes del norte de Francia a Bélgica y rutas de tránsito Francia → Países Bajos/Alemania.",
+          "Las carreteras cubiertas incluyen autopistas y carreteras principales regionales previstas — no solo tránsito de larga distancia.",
         ],
       },
     ],
     faqs: [
       {
         question: "¿Necesito viñeta si solo estoy de paso?",
-        answer: "Sí — según los planes, usar las carreteras principales requiere viñeta independientemente del destino.",
+        answer:
+          "Sí — según los planes actuales, desde el 1 de mayo de 2027 usar las carreteras principales belgas cubiertas requiere viñeta independientemente del destino. Las normas definitivas pueden cambiar antes del lanzamiento.",
+      },
+      {
+        question: "¿Los coches extranjeros pagan lo mismo que los belgas?",
+        answer:
+          "Sí. El sistema previsto aplica la misma viñeta digital a matrículas belgas y extranjeras. Las normas de la UE sobre igualdad de trato explican por qué no se puede cobrar solo a extranjeros.",
       },
     ],
   },
@@ -409,7 +432,7 @@ const dictionary: BaseDictionary = {
           "Almacenamiento esencial: guardamos su preferencia de cookies en localStorage. Base legal: interés legítimo (art. 6(1)(f) RGPD) y/o consentimiento cuando sea necesario.",
           "Analítica (opcional): Vercel Analytics recopila visitas de página anónimas. Solo se carga tras el consentimiento del banner. Base legal: consentimiento (art. 6(1)(a) RGPD). Retirar mediante Configuración de cookies en el pie de página.",
           "Google Search Console y Bing Webmaster Tools: solo etiquetas meta de verificación de propiedad — sin cookies de seguimiento.",
-          "Conservación: hasta que borre el almacenamiento o actualicemos esta política (versión 2026-07-15).",
+          "Conservación: hasta que borre el almacenamiento o actualicemos esta política (versión 2026-08-04).",
         ],
       },
       {
@@ -427,7 +450,7 @@ const dictionary: BaseDictionary = {
         paragraphs: ["Acceso, rectificación, supresión, oposición — info@tolls.be."],
       },
     ],
-    lastUpdated: "15 July 2026",
+    lastUpdated: "4 August 2026",
   },
   news: {
     title: "Noticias y actualizaciones",
@@ -459,11 +482,18 @@ const dictionary: BaseDictionary = {
     noArticles: "Aún no hay artículos publicados. Vuelva pronto.",
   },
   newsletter: {
-    title: "Manténgase informado",
-    description: "Reciba avisos cuando se abra la venta oficial y cuando se publiquen actualizaciones importantes.",
-    emailPlaceholder: "Su dirección de correo electrónico",
+    title: "Reciba primero un aviso cuando la viñeta belga esté disponible",
+    description: "",
+    benefitsIntro: "",
+    benefits: [
+      "Inicio de la venta oficial",
+      "Precios definitivos confirmados",
+      "Nuevas normas publicadas",
+      "Enlace de compra disponible",
+    ],
+    emailPlaceholder: "Dirección de correo electrónico",
     consentLabel: "Acepto recibir actualizaciones y he leído la política de privacidad.",
-    submit: "Suscribirse",
+    submit: "Avísenme",
     success: "¡Gracias! Está suscrito.",
     error: "Algo ha fallado. Inténtelo de nuevo.",
     privacyLink: "Política de privacidad",

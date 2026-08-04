@@ -21,9 +21,9 @@ const dictionary: BaseDictionary = {
   },
   meta: {
     home: {
-      title: "Belgium vignette 2027 — prices, rules & foreign driver guide",
+      title: "Belgium vignette 2027: do you need a vignette for Belgium?",
       description:
-        "Independent guide to Belgium's planned digital road vignette from 1 May 2027. Pricing, exemptions, fines and practical tips for Dutch, German and other cross-border drivers.",
+        "Belgium plans to introduce a digital road vignette from 1 May 2027. Find out whether you need one, what it costs, who is exempt and when sales start.",
     },
     prices: {
       title: "Belgium vignette prices 2027 — daily, monthly & annual rates",
@@ -31,9 +31,9 @@ const dictionary: BaseDictionary = {
         "Planned vignette pricing for Belgium: €100/year, short-term from €9/day. Euro emission standard explained simply.",
     },
     foreign: {
-      title: "Belgium vignette for foreign cars & cross-border drivers",
+      title: "Do foreign cars need a Belgium vignette in 2027?",
       description:
-        "Practical guide for drivers from the Netherlands, Germany and France travelling through Belgium. What you need to know according to current plans.",
+        "Yes — according to current plans, foreign passenger cars need a Belgium vignette from 1 May 2027 on covered roads. Guide for Dutch, German and French drivers.",
     },
     exemptions: {
       title: "Belgium vignette exemptions — motorcycles, trucks & more",
@@ -65,15 +65,15 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be is an independent information site. We are not affiliated with the Belgian government, Flanders, Wallonia or Brussels.",
     lastUpdated: "Last updated",
-    lastUpdatedDate: "15 July 2026",
-    lastUpdatedIso: "2026-07-15",
+    lastUpdatedDate: "4 August 2026",
+    lastUpdatedIso: "2026-08-04",
     readMore: "Read more",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — independent Belgium toll information",
     backToHome: "Back to home",
     plannedNotice:
       "Plans presented in March 2026 may still change. We track official sources and update this page when news breaks.",
-    independentSite: "Independent information site",
+    independentSite: "Belgium road vignette info",
     contactLabel: "Contact",
     cookieSettings: "Cookie settings",
     tableCategory: "Category",
@@ -89,11 +89,21 @@ const dictionary: BaseDictionary = {
   home: {
     hero: {
       eyebrow: "Planned from 1 May 2027",
-      title: "Belgium's digital vignette, explained clearly",
+      title: "Belgium vignette 2027: do you need a vignette for Belgium?",
       subtitle:
-        "From May 2027, Flanders, Wallonia and Brussels plan to charge motorists for using main roads. No windshield sticker — a digital vignette linked to your licence plate.",
-      ctaPrimary: "View prices",
-      ctaSecondary: "Foreign driver info",
+        "Belgium plans to introduce a digital road vignette from 1 May 2027. Find out whether you need one, what it costs, who is exempt and when sales start.",
+      ctaPrimary: "Check if you need a vignette",
+      ctaSecondary: "Get notified when sales open",
+    },
+    decisionTree: {
+      title: "Do you need a vignette?",
+      options: [
+        { label: "Belgian car", href: "prices" },
+        { label: "Dutch car", href: "foreign", anchor: "netherlands" },
+        { label: "German car", href: "foreign", anchor: "germany" },
+        { label: "French car", href: "foreign", anchor: "france" },
+        { label: "Camper / van", href: "exemptions" },
+      ],
     },
     quickAnswers: [
       {
@@ -233,59 +243,72 @@ const dictionary: BaseDictionary = {
     ],
   },
   foreign: {
-    title: "Foreign drivers",
+    title: "Do foreign cars need a Belgium vignette?",
     intro:
-      "More than half of kilometres on Belgian roads are reportedly driven by foreign motorists. If you're coming from the Netherlands, Germany, France or elsewhere, here's what the plans mean for you.",
+      "According to the current plans, yes. Foreign passenger cars will need a Belgium vignette from 1 May 2027 when using covered Belgian roads. The planned system does not distinguish between Belgian and foreign licence plates — a car registered in the Netherlands, France, Germany or another country is expected to require the same digital vignette as a Belgian vehicle. Final rules may still change until the system is officially approved and launched.",
     sections: [
       {
         id: "eu-rules",
         title: "Equal treatment",
         paragraphs: [
-          "Belgian drivers pay too — EU rules prevent charging foreigners only. Your foreign plate is covered.",
+          "Belgian drivers pay too — EU rules prevent charging foreigners only. Your foreign plate is covered under the same planned system.",
           "An estimated 30 million foreign passenger cars pass through Belgium each year.",
         ],
       },
       {
         id: "digital",
-        title: "Digital, no sticker",
+        title: "Digital system",
         paragraphs: [
-          "No physical vignette to buy or display. The system uses automatic plate recognition (ANPR). Purchase before you drive.",
+          "No physical vignette to buy or display. The system is planned to use automatic plate recognition (ANPR). Purchase before you drive on covered roads.",
         ],
       },
       {
         id: "history",
         title: "Historical context",
         paragraphs: [
-          "Belgium tried a vignette in 2007 but withdrew after Dutch protests. Dutch ministers have expressed disappointment again — no special border regime in current plans.",
+          "Belgium tried a vignette in 2007 but withdrew after Dutch protests. Dutch ministers have again expressed concern — and there is still no announced special border regime for neighbouring countries in the current plans.",
         ],
       },
     ],
     countryTips: [
       {
-        country: "🇳🇱 Netherlands",
+        id: "netherlands",
+        country: "Netherlands",
         tips: [
-          "Popular routes via E19 (Antwerp), E40 (Brussels) and E314 (Liège) are covered.",
-          "No special deal for southern NL border drivers in current plans.",
+          "Yes — Dutch-registered passenger cars are expected to need a Belgium vignette from 1 May 2027 when using covered Belgian roads.",
+          "This affects common routes such as Netherlands → Antwerp, Netherlands → Brussels, and Netherlands → Luxembourg/France transit.",
+          "There is currently no announced exemption for Dutch border regions.",
         ],
       },
       {
-        country: "🇩🇪 Germany",
+        id: "germany",
+        country: "Germany",
         tips: [
-          "Transit via Aachen–Liège or routes toward France likely require a vignette.",
-          "Short-term options (1–10 days) suit through traffic.",
+          "Yes — German-registered passenger cars are expected to need a Belgium vignette when driving on covered Belgian roads from 1 May 2027.",
+          "This includes common transit routes such as Aachen → Liège and Germany → France through Belgium.",
+          "Short-term options (1–10 days) in the plans may suit through traffic.",
         ],
       },
       {
-        country: "🇫🇷 France",
+        id: "france",
+        country: "France",
         tips: [
-          "Drivers from northern France and Wallonia: check if your route uses Belgian regional main roads.",
+          "Yes — French-registered passenger cars are expected to need a Belgium vignette when using covered Belgian roads from 1 May 2027.",
+          "This is especially relevant for Northern France → Belgium trips and France → Netherlands/Germany transit routes.",
+          "Covered roads include motorways and planned regional main roads — not only long-distance transit.",
         ],
       },
     ],
     faqs: [
       {
         question: "Do I need a vignette if I'm just passing through?",
-        answer: "Yes — according to plans, using main roads requires a vignette regardless of destination.",
+        answer:
+          "Yes — according to current plans, from 1 May 2027 using covered Belgian main roads requires a vignette regardless of destination. Final rules may still change before launch.",
+      },
+      {
+        question: "Do foreign cars pay the same as Belgian cars?",
+        answer:
+          "Yes. The planned system applies the same digital vignette to Belgian and foreign plates. EU equal-treatment rules are why foreigners cannot be charged alone.",
       },
     ],
   },
@@ -409,7 +432,7 @@ const dictionary: BaseDictionary = {
           "Essential storage: we save your cookie preference in localStorage. Legal basis: legitimate interest (Art. 6(1)(f) GDPR) and/or consent where required.",
           "Analytics (optional): Vercel Analytics collects anonymous page views. Loaded only after banner consent. Legal basis: consent (Art. 6(1)(a) GDPR). Withdraw via Cookie settings in the footer.",
           "Google Search Console & Bing Webmaster Tools: ownership verification meta tags only — no tracking cookies.",
-          "Retention: until you clear storage or we update this policy (version 2026-07-15).",
+          "Retention: until you clear storage or we update this policy (version 2026-08-04).",
         ],
       },
       {
@@ -427,7 +450,7 @@ const dictionary: BaseDictionary = {
         paragraphs: ["Access, rectification, deletion, objection — info@tolls.be."],
       },
     ],
-    lastUpdated: "15 July 2026",
+    lastUpdated: "4 August 2026",
   },
   news: {
     title: "News & updates",
@@ -459,11 +482,18 @@ const dictionary: BaseDictionary = {
     noArticles: "No articles published yet. Check back soon.",
   },
   newsletter: {
-    title: "Stay informed",
-    description: "Get notified when official sales go live and when important updates are published.",
-    emailPlaceholder: "Your email address",
+    title: "Get notified first when the Belgium vignette becomes available",
+    description: "",
+    benefitsIntro: "",
+    benefits: [
+      "Official sales start",
+      "Final prices confirmed",
+      "New rules published",
+      "Purchase link available",
+    ],
+    emailPlaceholder: "Email address",
     consentLabel: "I agree to receive updates and have read the privacy policy.",
-    submit: "Subscribe",
+    submit: "Notify me",
     success: "Thank you! You're subscribed.",
     error: "Something went wrong. Please try again.",
     privacyLink: "Privacy policy",

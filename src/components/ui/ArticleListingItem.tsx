@@ -53,7 +53,7 @@ export function ArticleListingItem({
           </span>
           {dict.news.sourceLabel}: {article.source.name}
         </p>
-        <Heading className="mt-1 font-serif text-xl font-bold">
+        <Heading className="mt-1 font-[family-name:var(--font-display)] text-xl font-bold tracking-tight text-ink">
           <Link href={path} className="text-link no-underline hover:underline">
             {content.title}
           </Link>

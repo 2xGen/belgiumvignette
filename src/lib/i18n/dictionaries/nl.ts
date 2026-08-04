@@ -21,9 +21,9 @@ const dictionary: BaseDictionary = {
   },
   meta: {
     home: {
-      title: "Belgisch vignet 2027 — prijzen, regels & tips voor buitenlanders",
+      title: "Belgisch vignet 2027: hebt u een vignet nodig voor België?",
       description:
-        "Onafhankelijke gids over het geplande Belgische digitale vignet vanaf 1 mei 2027. Prijzen, vrijstellingen, boetes en praktische info voor Nederlanders en andere buitenlandse bestuurders.",
+        "België plant vanaf 1 mei 2027 een digitaal wegenvignet. Ontdek of u een vignet nodig heeft, wat het kost, wie vrijgesteld is en wanneer de verkoop start.",
     },
     prices: {
       title: "Belgisch vignet prijzen 2027 — dag, maand & jaartarief",
@@ -31,9 +31,9 @@ const dictionary: BaseDictionary = {
         "Overzicht van geplande vignetprijzen voor België: €100/jaar, korte periodes vanaf €9/dag. Uitleg per Euro-norm en emissieklasse.",
     },
     foreign: {
-      title: "Belgisch vignet voor Nederlanders & buitenlandse auto's",
+      title: "Hebben buitenlandse auto's een Belgisch vignet nodig in 2027?",
       description:
-        "Praktische gids voor bestuurders uit Nederland, Duitsland en Frankrijk die door België rijden. Wat u volgens de plannen moet weten over het digitale vignet.",
+        "Ja — volgens de huidige plannen hebben buitenlandse personenauto's vanaf 1 mei 2027 een Belgisch vignet nodig op gedekte wegen. Gids voor Nederlandse, Duitse en Franse bestuurders.",
     },
     exemptions: {
       title: "Vrijstellingen Belgisch vignet — motoren, vrachtwagens & meer",
@@ -65,15 +65,15 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be is een onafhankelijke informatiesite. Wij zijn niet verbonden met de Belgische overheid, Vlaanderen, Wallonië of Brussel.",
     lastUpdated: "Laatst bijgewerkt",
-    lastUpdatedDate: "15 juli 2026",
-    lastUpdatedIso: "2026-07-15",
+    lastUpdatedDate: "4 augustus 2026",
+    lastUpdatedIso: "2026-08-04",
     readMore: "Lees meer",
     relatedSite: "https://tolls.be/nl",
     relatedSiteLabel: "Tolls.be — onafhankelijke tol-informatie voor België",
     backToHome: "Terug naar home",
     plannedNotice:
       "De plannen zijn gepresenteerd in maart 2026 en kunnen nog wijzigen. Wij volgen officiële bronnen en passen deze pagina aan zodra er nieuws is.",
-    independentSite: "Onafhankelijke informatiesite",
+    independentSite: "Info Belgisch wegenvignet",
     contactLabel: "Contact",
     cookieSettings: "Cookievoorkeuren",
     tableCategory: "Categorie",
@@ -89,11 +89,21 @@ const dictionary: BaseDictionary = {
   home: {
     hero: {
       eyebrow: "Gepland vanaf 1 mei 2027",
-      title: "Het Belgische digitale vignet, helder uitgelegd",
+      title: "Belgisch vignet 2027: hebt u een vignet nodig voor België?",
       subtitle:
-        "Vanaf mei 2027 willen Vlaanderen, Wallonië en Brussel dat bestuurders betalen voor het gebruik van hoofdwegen. Geen sticker op uw voorruit — wel een digitaal vignet gekoppeld aan uw kenteken.",
-      ctaPrimary: "Bekijk prijzen",
-      ctaSecondary: "Info voor buitenlanders",
+        "België plant vanaf 1 mei 2027 een digitaal wegenvignet. Ontdek of u een vignet nodig heeft, wat het kost, wie vrijgesteld is en wanneer de verkoop start.",
+      ctaPrimary: "Check of u een vignet nodig hebt",
+      ctaSecondary: "Ontvang een melding bij start verkoop",
+    },
+    decisionTree: {
+      title: "Heeft u een vignet nodig?",
+      options: [
+        { label: "Belgische auto", href: "prices" },
+        { label: "Nederlandse auto", href: "foreign", anchor: "netherlands" },
+        { label: "Duitse auto", href: "foreign", anchor: "germany" },
+        { label: "Franse auto", href: "foreign", anchor: "france" },
+        { label: "Camper / busje", href: "exemptions" },
+      ],
     },
     quickAnswers: [
       {
@@ -241,54 +251,59 @@ const dictionary: BaseDictionary = {
     ],
   },
   foreign: {
-    title: "Buitenlandse bestuurders",
+    title: "Hebben buitenlandse auto's een Belgisch vignet nodig?",
     intro:
-      "Meer dan de helft van de kilometers op Belgische wegen wordt volgens schattingen gereden door buitenlandse automobilisten. Als u uit Nederland, Duitsland, Frankrijk of elders komt, is dit wat u volgens de plannen moet weten.",
+      "Ja, volgens de huidige plannen. Buitenlandse personenauto's zullen vanaf 1 mei 2027 een Belgisch vignet nodig hebben bij gebruik van gedekte Belgische wegen. Het geplande systeem maakt geen onderscheid tussen Belgische en buitenlandse kentekens — een auto met Nederlands, Frans, Duits of ander buitenlands kenteken zal naar verwachting hetzelfde digitale vignet nodig hebben als een Belgisch voertuig. Definitieve regels kunnen nog wijzigen tot het systeem officieel is goedgekeurd en ingevoerd.",
     sections: [
       {
         id: "eu-rules",
         title: "Gelijke behandeling",
         paragraphs: [
-          "Belgische bestuurders moeten ook betalen — EU-regels laten niet toe om alleen buitenlanders te belasten. Dat betekent: ook uw buitenlandse kenteken valt onder het systeem.",
-          "Jaarlijks passeren naar schatting zo'n 30 miljoen buitenlandse personenauto's België, vaak zonder significante bijdrage aan wegonderhoud.",
+          "Belgische bestuurders moeten ook betalen — EU-regels laten niet toe om alleen buitenlanders te belasten. Ook uw buitenlandse kenteken valt onder hetzelfde geplande systeem.",
+          "Jaarlijks passeren naar schatting zo'n 30 miljoen buitenlandse personenauto's België.",
         ],
       },
       {
         id: "digital",
-        title: "Digitaal, geen sticker",
+        title: "Digitaal systeem",
         paragraphs: [
-          "U hoeft geen fysiek vignet aan te schaffen of op te plakken. Het systeem werkt via kentekenherkenning (ANPR). Zorg dat u vóór vertrek een geldig digitaal vignet hebt.",
+          "Geen fysiek vignet om te kopen of op te plakken. Het systeem zou automatische kentekenherkenning (ANPR) gebruiken. Koop uw vignet vóór u op gedekte wegen rijdt.",
         ],
       },
       {
         id: "history",
         title: "Historische context",
         paragraphs: [
-          "België probeerde al in 2007 een vignet in te voeren, maar trok het plan in na protesten uit Nederland. Nederlandse ministers hebben ook nu kritiek geuit — er is volgens de huidige plannen geen speciale regeling voor grensregio's.",
+          "België probeerde al in 2007 een vignet in te voeren, maar trok het plan in na protesten uit Nederland. Nederlandse ministers hebben opnieuw bezorgdheid geuit — en in de huidige plannen is nog geen speciale grensregeling aangekondigd voor buurlanden.",
         ],
       },
     ],
     countryTips: [
       {
-        country: "🇳🇱 Nederland",
+        id: "netherlands",
+        country: "Nederland",
         tips: [
-          "Populaire routes via E19 (Antwerpen), E40 (Brussel) en E314 (Luik) vallen onder de plannen.",
-          "Geen speciale grensregeling voor Zuid-Nederland volgens huidige plannen.",
-          "Plan uw vignet vóór vertrek zodra verkoop opent — handhaving via camera's.",
+          "Ja — personenauto's met een Nederlands kenteken zullen naar verwachting vanaf 1 mei 2027 een Belgisch vignet nodig hebben op gedekte Belgische wegen.",
+          "Dit geldt voor veelgebruikte routes zoals Nederland → Antwerpen, Nederland → Brussel en doorgaand verkeer Nederland → Luxemburg/Frankrijk.",
+          "Er is momenteel geen aangekondigde vrijstelling voor Nederlandse grensregio's.",
         ],
       },
       {
-        country: "🇩🇪 Duitsland",
+        id: "germany",
+        country: "Duitsland",
         tips: [
-          "Transit via Aachen–Luik of routes richting Frankrijk vereisen volgens de plannen een vignet.",
-          "Korte periodes (1–10 dagen) kunnen interessant zijn voor doorgaand verkeer.",
+          "Ja — personenauto's met een Duits kenteken zullen naar verwachting vanaf 1 mei 2027 een Belgisch vignet nodig hebben op gedekte Belgische wegen.",
+          "Dit geldt onder meer voor veelgebruikte transitroutes zoals Aken → Luik en Duitsland → Frankrijk via België.",
+          "Korte periodes (1–10 dagen) in de plannen kunnen geschikt zijn voor doorgaand verkeer.",
         ],
       },
       {
-        country: "🇫🇷 Frankrijk",
+        id: "france",
+        country: "Frankrijk",
         tips: [
-          "Bestuurders uit Wallonië en Noord-Frankrijk rijden regelmatig Belgische regional roads.",
-          "Controleer of uw route door België gaat — ook regionale hoofdwegen zijn gepland te vallen onder het vignet.",
+          "Ja — personenauto's met een Frans kenteken zullen naar verwachting vanaf 1 mei 2027 een Belgisch vignet nodig hebben op gedekte Belgische wegen.",
+          "Dit is vooral relevant voor ritten Noord-Frankrijk → België en transitroutes Frankrijk → Nederland/Duitsland.",
+          "Gedekte wegen omvatten snelwegen en geplande regionale hoofdwegen — niet alleen lang doorgaand verkeer.",
         ],
       },
     ],
@@ -296,12 +311,12 @@ const dictionary: BaseDictionary = {
       {
         question: "Heb ik een vignet nodig als ik alleen door België rijd?",
         answer:
-          "Ja, volgens de plannen geldt het vignet voor gebruik van hoofdwegen, ongeacht of België uw bestemming is of doorgangsland.",
+          "Ja — volgens de huidige plannen is vanaf 1 mei 2027 een vignet verplicht op gedekte Belgische hoofdwegen, ongeacht uw bestemming. Definitieve regels kunnen nog wijzigen vóór de invoering.",
       },
       {
-        question: "Wat als mijn kenteken uit een niet-EU-land komt?",
+        question: "Betalen buitenlandse auto's hetzelfde als Belgische auto's?",
         answer:
-          "Details voor niet-EU-kentekens zijn nog niet volledig bekend. Volg officiële aankondigingen zodra het verkoopkanaal opent.",
+          "Ja. Het geplande systeem past dezelfde digitale vignet toe op Belgische en buitenlandse kentekens. EU-regels over gelijke behandeling zijn de reden dat alleen buitenlanders niet kunnen worden belast.",
       },
     ],
   },
@@ -457,7 +472,7 @@ const dictionary: BaseDictionary = {
           "Essentiële opslag: wij bewaren uw cookievoorkeur in localStorage op uw apparaat. Dit is nodig om uw keuze te onthouden. Rechtsgrond: gerechtvaardigd belang (Art. 6 lid 1 onder f AVG) en/or uw toestemming waar vereist.",
           "Analytics (optioneel): Vercel Analytics verzamelt anonieme paginaweergaven (geen cookies geplaatst door ons voor analytics). Vercel kan technische gegevens zoals pagina-URL, referrer en apparaattype verwerken. Analytics wordt uitsluitend geladen nadat u via de cookiebanner toestemming geeft. Rechtsgrond: toestemming (Art. 6 lid 1 onder a AVG). U kunt toestemming intrekken via Cookievoorkeuren in de footer.",
           "Google Search Console & Bing Webmaster Tools: wij kunnen een verificatiemeta-tag op de site plaatsen om eigendom te bewijzen bij zoekmachines. Deze tags stellen geen trackingcookies in en verzamelen geen bezoekersdata.",
-          "Bewaartermijn cookievoorkeur: tot u deze wist of wijziging van het beleid (versie 2026-07-15) u opnieuw om toestemming vraagt.",
+          "Bewaartermijn cookievoorkeur: tot u deze wist of wijziging van het beleid (versie 2026-08-04) u opnieuw om toestemming vraagt.",
         ],
       },
       {
@@ -477,7 +492,7 @@ const dictionary: BaseDictionary = {
         ],
       },
     ],
-    lastUpdated: "15 juli 2026",
+    lastUpdated: "4 augustus 2026",
   },
   news: {
     title: "Nieuws & updates",
@@ -509,13 +524,18 @@ const dictionary: BaseDictionary = {
     noArticles: "Nog geen artikelen gepubliceerd. Kom binnenkort terug.",
   },
   newsletter: {
-    title: "Blijf op de hoogte",
-    description:
-      "Ontvang een melding wanneer het officiële verkoopkanaal live gaat en wanneer er belangrijke updates zijn.",
-    emailPlaceholder: "Uw e-mailadres",
-    consentLabel:
-      "Ik ga akkoord met het ontvangen van updates en heb het privacybeleid gelezen.",
-    submit: "Inschrijven",
+    title: "Ontvang als eerste een melding wanneer het Belgische vignet beschikbaar is",
+    description: "",
+    benefitsIntro: "",
+    benefits: [
+      "Officiële verkoop start",
+      "Definitieve prijzen bekend",
+      "Nieuwe regels gepubliceerd",
+      "Aankooplink beschikbaar",
+    ],
+    emailPlaceholder: "E-mailadres",
+    consentLabel: "Ik ga akkoord met updates en heb het privacybeleid gelezen.",
+    submit: "Houd mij op de hoogte",
     success: "Bedankt! U bent ingeschreven.",
     error: "Er ging iets mis. Probeer het opnieuw.",
     privacyLink: "Privacybeleid",
