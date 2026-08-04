@@ -41,12 +41,12 @@ export function BrandLink({
   return (
     <Link href={href} className="group flex items-center gap-3 no-underline hover:no-underline">
       <span
-        className="flex h-9 w-9 shrink-0 flex-col overflow-hidden rounded-lg shadow-[0_6px_16px_rgba(11,18,32,0.18)]"
+        className="flex h-9 w-9 shrink-0 overflow-hidden rounded-lg shadow-[0_6px_16px_rgba(11,18,32,0.18)]"
         aria-hidden
       >
-        <span className="h-1/3 w-full bg-ink" />
-        <span className="h-1/3 w-full bg-accent" />
-        <span className="h-1/3 w-full bg-signal" />
+        <span className="h-full w-1/3 bg-ink" />
+        <span className="h-full w-1/3 bg-accent" />
+        <span className="h-full w-1/3 bg-signal" />
       </span>
       <span className="flex flex-col leading-none">
         <BrandMark domain={domain} tone={tone} />

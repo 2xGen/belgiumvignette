@@ -8,6 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const svgPath = path.join(root, "public", "favicon.svg");
 const iconsDir = path.join(root, "public", "icons");
+const appDir = path.join(root, "src", "app");
 
 const pngSizes = [48, 96, 192, 512];
 
@@ -26,5 +27,6 @@ const icoBuffers = await Promise.all(
 
 const ico = await toIco(icoBuffers);
 await writeFile(path.join(root, "public", "favicon.ico"), ico);
+await writeFile(path.join(appDir, "favicon.ico"), ico);
 
-console.log("Generated favicon.ico and PNG icons in public/icons/");
+console.log("Generated favicon.ico (public + app) and PNG icons in public/icons/");

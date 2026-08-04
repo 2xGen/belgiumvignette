@@ -5,7 +5,7 @@ type SiteIconProps = {
 };
 
 export function SiteIcon({ size }: SiteIconProps) {
-  const stripeHeight = Math.round(size * 0.125);
+  const stripeWidth = Math.round(size / 3);
 
   return new ImageResponse(
     (
@@ -14,13 +14,18 @@ export function SiteIcon({ size }: SiteIconProps) {
           width: size,
           height: size,
           display: "flex",
-          flexDirection: "column",
-          backgroundColor: "#ffffff",
+          flexDirection: "row",
         }}
       >
-        <div style={{ height: stripeHeight, width: size, backgroundColor: "#000000" }} />
-        <div style={{ height: stripeHeight, width: size, backgroundColor: "#FDDA24" }} />
-        <div style={{ height: stripeHeight, width: size, backgroundColor: "#EF3340" }} />
+        <div style={{ width: stripeWidth, height: size, backgroundColor: "#0B1220" }} />
+        <div style={{ width: stripeWidth, height: size, backgroundColor: "#F5C518" }} />
+        <div
+          style={{
+            width: size - stripeWidth * 2,
+            height: size,
+            backgroundColor: "#EF3340",
+          }}
+        />
       </div>
     ),
     {
