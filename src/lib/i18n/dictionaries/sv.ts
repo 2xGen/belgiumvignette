@@ -46,9 +46,9 @@ const dictionary: BaseDictionary = {
         "Planerade böter upp till €210, ANPR-kontroller och tolerans till 1 juli 2027.",
     },
     buy: {
-      title: "Köp belgisk vignett — när och hur (digitalt system förväntas)",
+      title: "Köp belgisk vignett — försäljning förväntas 1 mars 2027",
       description:
-        "Inte till salu ännu. Vad som förväntas enligt planerna: ett digitalt system kopplat till registreringsskylten, ingen vindruteklistermärke.",
+        "Enligt nuvarande planer väntas onlineförsäljningen av den belgiska vägvinjetten starta 1 mars 2027. Obligatorisk från 1 maj 2027. Officiell källa: flamländska regeringen.",
     },
     news: {
       title: "Nyheter om belgisk vignett — pålitliga källor förklarade",
@@ -65,8 +65,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be är en oberoende informationssajt. Vi är inte kopplade till den belgiska staten, Flandern, Vallonien eller Bryssel.",
     lastUpdated: "Senast uppdaterad",
-    lastUpdatedDate: "4 August 2026",
-    lastUpdatedIso: "2026-08-04",
+    lastUpdatedDate: "14 August 2026",
+    lastUpdatedIso: "2026-08-14",
     readMore: "Läs mer",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — oberoende information om belgiska vägavgifter",
@@ -78,6 +78,7 @@ const dictionary: BaseDictionary = {
     cookieSettings: "Cookieinställningar",
     tableCategory: "Kategori",
     tablePrice: "Pris",
+    lastChecked: "Senast kontrollerad",
   },
   notFound: {
     title: "Sidan hittades inte",
@@ -182,7 +183,7 @@ const dictionary: BaseDictionary = {
       {
         question: "När kan jag köpa?",
         answer:
-          "Ingen officiell försäljningskanal ännu. Anmäl dig till vårt nyhetsbrev för uppdateringar om lanseringen.",
+          "Enligt nuvarande planer väntas onlineförsäljningen från 1 mars 2027. Vinjetten skulle bli obligatorisk från 1 maj 2027. De slutliga villkoren kan fortfarande ändras.",
       },
     ],
     sourcesTitle: "Officiella källor",
@@ -378,34 +379,48 @@ const dictionary: BaseDictionary = {
     ],
   },
   buy: {
-    title: "Så köper du",
+    title: "När kan jag köpa en belgisk vignett?",
     intro:
-      "Ingen officiell försäljningskanal finns ännu. Ett digitalt system förväntas, men detaljer om webbplats och app är okända.",
+      "Enligt nuvarande planer väntas onlineförsäljningen från 1 mars 2027. Vägvinjetten skulle bli obligatorisk från 1 maj 2027. De slutliga villkoren och den officiella försäljningsportalen kan fortfarande ändras.",
     sections: [
       {
-        id: "status",
-        title: "Nuvarande status",
+        id: "when",
+        title: "När öppnar försäljningen?",
         paragraphs: [
-          "Planerna behöver fortfarande godkännande från Vallonien, Bryssel och EU-kommissionen innan försäljningen kan starta.",
+          "Den flamländska regeringen anger att du kan köpa vinjetten online från 1 mars 2027 — via den officiella webbplatsen eller en auktoriserad partner.",
+          "Det finns inget försäljningsportal idag: du kan inte boka eller betala ännu. Sajter som redan erbjuder det är inte den officiella kanalen.",
         ],
       },
       {
         id: "expected",
         title: "Vad som förväntas",
-        paragraphs: ["Online-registrering av din registreringsskylt. Inget fysiskt klistermärke behövs."],
+        paragraphs: [
+          "Vinjetten blir digital och kopplad till registreringsskylten — inget vindruteklistermärke.",
+          "Enligt planerna väljer du giltighetstid: 1 dag, 10 dagar, 1 månad, 2 månader eller 1 år.",
+        ],
       },
     ],
-    statusBadge: "Inte tillgänglig ännu",
+    statusBadge: "Försäljning förväntas 1 mars 2027",
+    officialSourceLabel: "Officiell källa",
     steps: [
-      { title: "Vänta på officiell lansering", description: "Försäljning förväntas före 1 maj 2027." },
+      {
+        title: "Vänta på officiell försäljning",
+        description: "Onlineköp förväntas från 1 mars 2027 enligt den flamländska regeringen.",
+      },
       { title: "Registrera din registreringsskylt", description: "Digitalt system — inget vindruteklistermärke." },
       { title: "Välj giltighetstid", description: "Dag, 10 dagar, månad, 2 månader eller årsvignett." },
-      { title: "Kör med giltig vignett", description: "Kameror kontrollerar automatiskt." },
+      { title: "Kör med giltig vignett", description: "Kameror kontrollerar automatiskt från 1 maj 2027." },
     ],
     faqs: [
       {
         question: "Kan jag förbeställa nu?",
-        answer: "Nej. Prenumerera på vårt nyhetsbrev för att hålla dig informerad.",
+        answer:
+          "Nej. Enligt nuvarande planer startar onlineförsäljningen 1 mars 2027. Prenumerera på nyhetsbrevet för att få den officiella kanalen när den tillkännages.",
+      },
+      {
+        question: "När blir vinjetten obligatorisk?",
+        answer:
+          "Enligt planerna från 1 maj 2027 på belgiska motorvägar och regionala vägar. En toleransperiod planeras från 1 maj till 1 juli 2027.",
       },
     ],
   },
@@ -515,9 +530,21 @@ const dictionary: BaseDictionary = {
     privacyLink: "Integritetspolicy",
   },
   sources: [
-    { title: "Flemish government", url: "https://www.vlaanderen.be", description: "Officiella tillkännagivanden" },
-    { title: "Viapass", url: "https://www.viapass.be", description: "Kilometeravgiftssystem för lastbilar" },
-    { title: "European Commission", url: "https://ec.europa.eu", description: "Granskning av avtalet" },
+    {
+      title: "Flamländska regeringen — Vägvinjett från 1 maj 2027",
+      url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+      description: "Officiell sida om skyldighet, priser och köp från 1 mars 2027",
+    },
+    {
+      title: "Viapass — kilometeravgift för lastbilar",
+      url: "https://www.viapass.be",
+      description: "Befintligt system för fordon över 3,5 ton (inte personbilsvinjetten)",
+    },
+    {
+      title: "Europeiska kommissionen — vägavgifter",
+      url: "https://transport.ec.europa.eu/transport-modes/road/road-charging_en",
+      description: "EU:s ramverk för vägavgifter och icke-diskriminering",
+    },
   ],
 };
 

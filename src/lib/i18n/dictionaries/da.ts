@@ -46,9 +46,9 @@ const dictionary: BaseDictionary = {
         "Planlagte bøder op til €210, ANPR-kontrol og tolerance indtil 1 July 2027.",
     },
     buy: {
-      title: "Køb belgisk vignet — hvornår & hvordan (digitalt system forventes)",
+      title: "Køb belgisk vignet — salg forventes 1. marts 2027",
       description:
-        "Endnu ikke til salg. Hvad du kan forvente ifølge planerne: et digitalt system knyttet til nummerpladen, ingen klistermærke i forruden.",
+        "Ifølge de aktuelle planer forventes onlinesalget af den belgiske vejvignette at starte 1. marts 2027. Obligatorisk fra 1. maj 2027. Officiel kilde: den flamske regering.",
     },
     news: {
       title: "Nyheder om belgisk vignet — pålidelige kilder forklaret",
@@ -65,8 +65,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be er et uafhængigt informationssite. Vi er ikke tilknyttet den belgiske regering, Flandern, Vallonien eller Bruxelles.",
     lastUpdated: "Sidst opdateret",
-    lastUpdatedDate: "4 August 2026",
-    lastUpdatedIso: "2026-08-04",
+    lastUpdatedDate: "14 August 2026",
+    lastUpdatedIso: "2026-08-14",
     readMore: "Læs mere",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — uafhængig information om belgiske vejafgifter",
@@ -78,6 +78,7 @@ const dictionary: BaseDictionary = {
     cookieSettings: "Cookieindstillinger",
     tableCategory: "Kategori",
     tablePrice: "Pris",
+    lastChecked: "Sidst tjekket",
   },
   notFound: {
     title: "Siden blev ikke fundet",
@@ -182,7 +183,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Hvornår kan jeg købe?",
         answer:
-          "Der findes endnu ingen officiel salgskanal. Tilmeld dig vores nyhedsbrev for opdateringer om lanceringen.",
+          "Ifølge de aktuelle planer forventes onlinesalg fra 1. marts 2027. Vignetten ville blive obligatorisk fra 1. maj 2027. De endelige vilkår kan stadig ændre sig.",
       },
     ],
     sourcesTitle: "Officielle kilder",
@@ -379,34 +380,48 @@ const dictionary: BaseDictionary = {
     ],
   },
   buy: {
-    title: "Sådan køber du",
+    title: "Hvornår kan jeg købe et belgisk vignet?",
     intro:
-      "Der findes endnu ingen officiel salgskanal. Et digitalt system forventes, men detaljer om hjemmeside/app er ukendte.",
+      "Ifølge de aktuelle planer forventes onlinesalg fra 1. marts 2027. Vejvignetten ville blive obligatorisk fra 1. maj 2027. De endelige vilkår og den officielle salgsportal kan stadig ændre sig.",
     sections: [
       {
-        id: "status",
-        title: "Nuværende status",
+        id: "when",
+        title: "Hvornår åbner salget?",
         paragraphs: [
-          "Planerne skal stadig godkendes af Vallonien, Bruxelles og EU-Kommissionen, før salget kan åbne.",
+          "Den flamske regering oplyser, at du kan købe vignetten online fra 1. marts 2027 — via den officielle hjemmeside eller en godkendt partner.",
+          "Der er ingen salgsportal i dag: du kan ikke reservere eller betale endnu. Sider, der allerede tilbyder det, er ikke den officielle kanal.",
         ],
       },
       {
         id: "expected",
         title: "Hvad der forventes",
-        paragraphs: ["Online registrering af din nummerplade. Intet fysisk klistermærke nødvendigt."],
+        paragraphs: [
+          "Vignetten bliver digital og knyttet til nummerpladen — intet klistermærke i forruden.",
+          "Ifølge planerne vælger du en varighed på 1 dag, 10 dage, 1 måned, 2 måneder eller 1 år.",
+        ],
       },
     ],
-    statusBadge: "Endnu ikke tilgængeligt",
+    statusBadge: "Salg forventes 1. marts 2027",
+    officialSourceLabel: "Officiel kilde",
     steps: [
-      { title: "Vent på officiel lancering", description: "Salg forventes inden 1 May 2027." },
+      {
+        title: "Vent på det officielle salg",
+        description: "Onlinekøb forventes fra 1. marts 2027 ifølge den flamske regering.",
+      },
       { title: "Registrer din nummerplade", description: "Digitalt system — intet klistermærke i forruden." },
       { title: "Vælg varighed", description: "Dag, 10 dage, måned, 2 måneder eller årligt." },
-      { title: "Kør med gyldigt vignet", description: "Kameraer kontrollerer automatisk." },
+      { title: "Kør med gyldigt vignet", description: "Kameraer kontrollerer automatisk fra 1. maj 2027." },
     ],
     faqs: [
       {
         question: "Kan jeg forudbestille nu?",
-        answer: "Nej. Tilmeld dig vores nyhedsbrev for at holde dig orienteret.",
+        answer:
+          "Nej. Ifølge de aktuelle planer starter onlinesalget 1. marts 2027. Tilmeld dig nyhedsbrevet for at få den officielle kanal, når den offentliggøres.",
+      },
+      {
+        question: "Hvornår bliver vignetten obligatorisk?",
+        answer:
+          "Ifølge planerne fra 1. maj 2027 på belgiske motorveje og regionale veje. En toleranceperiode er planlagt fra 1. maj til 1. juli 2027.",
       },
     ],
   },
@@ -516,9 +531,21 @@ const dictionary: BaseDictionary = {
     privacyLink: "Privatlivspolitik",
   },
   sources: [
-    { title: "Flemish government", url: "https://www.vlaanderen.be", description: "Officielle meddelelser" },
-    { title: "Viapass", url: "https://www.viapass.be", description: "Km-afgiftssystem for lastbiler" },
-    { title: "European Commission", url: "https://ec.europa.eu", description: "Gennemgang af aftalen" },
+    {
+      title: "Den flamske regering — Vejvignette fra 1. maj 2027",
+      url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+      description: "Officiel side om pligt, takster og køb fra 1. marts 2027",
+    },
+    {
+      title: "Viapass — kilometerafgift for lastbiler",
+      url: "https://www.viapass.be",
+      description: "Eksisterende system for køretøjer over 3,5 tons (ikke personvognsvignetten)",
+    },
+    {
+      title: "Europa-Kommissionen — vejafgifter",
+      url: "https://transport.ec.europa.eu/transport-modes/road/road-charging_en",
+      description: "EU-ramme for vejafgifter og ikke-diskrimination",
+    },
   ],
 };
 

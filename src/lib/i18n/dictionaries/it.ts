@@ -46,9 +46,9 @@ const dictionary: BaseDictionary = {
         "Sanzioni previste fino a €210, controlli ANPR e tolleranza fino al 1 July 2027.",
     },
     buy: {
-      title: "Acquistare la vignetta belga — quando e come (sistema digitale previsto)",
+      title: "Acquistare la vignetta belga — vendita prevista dal 1 marzo 2027",
       description:
-        "Non ancora in vendita. Cosa aspettarsi secondo i piani: un sistema digitale collegato alla targa, senza adesivo sul parabrezza.",
+        "Secondo i piani attuali, la vendita online della vignetta belga è prevista dal 1 marzo 2027. Obbligatoria dal 1 maggio 2027. Fonte ufficiale: Governo fiammingo.",
     },
     news: {
       title: "Notizie sulla vignetta belga — fonti attendibili spiegate",
@@ -65,8 +65,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be è un sito informativo indipendente. Non siamo affiliati al governo belga, alla Fiandre, alla Vallonia o a Bruxelles.",
     lastUpdated: "Ultimo aggiornamento",
-    lastUpdatedDate: "4 agosto 2026",
-    lastUpdatedIso: "2026-08-04",
+    lastUpdatedDate: "14 agosto 2026",
+    lastUpdatedIso: "2026-08-14",
     readMore: "Scopri di più",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — informazioni indipendenti sui pedaggi in Belgio",
@@ -78,6 +78,7 @@ const dictionary: BaseDictionary = {
     cookieSettings: "Impostazioni cookie",
     tableCategory: "Categoria",
     tablePrice: "Prezzo",
+    lastChecked: "Ultimo controllo",
   },
   notFound: {
     title: "Pagina non trovata",
@@ -182,7 +183,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Quando posso acquistarla?",
         answer:
-          "Non esiste ancora un canale di vendita ufficiale. Iscriviti alla nostra newsletter per ricevere aggiornamenti sul lancio.",
+          "Secondo i piani attuali, la vendita online è prevista dal 1 marzo 2027. La vignetta diventerebbe obbligatoria dal 1 maggio 2027. Le condizioni definitive possono ancora cambiare.",
       },
     ],
     sourcesTitle: "Fonti ufficiali",
@@ -378,34 +379,48 @@ const dictionary: BaseDictionary = {
     ],
   },
   buy: {
-    title: "Come acquistare",
+    title: "Quando posso comprare una vignetta belga?",
     intro:
-      "Non esiste ancora un canale di vendita ufficiale. È previsto un sistema digitale, ma i dettagli su sito web e app non sono noti.",
+      "Secondo i piani attuali, la vendita online è prevista dal 1 marzo 2027. La vignetta stradale diventerebbe obbligatoria dal 1 maggio 2027. Le condizioni definitive e il portale ufficiale di vendita possono ancora cambiare.",
     sections: [
       {
-        id: "status",
-        title: "Stato attuale",
+        id: "when",
+        title: "Quando partono le vendite?",
         paragraphs: [
-          "I piani devono ancora ottenere l'approvazione della Vallonia, di Bruxelles e della Commissione europea prima che le vendite possano iniziare.",
+          "Il Governo fiammingo indica che potrai acquistare la vignetta online dal 1 marzo 2027, sul sito ufficiale o tramite un partner autorizzato.",
+          "Oggi non esiste un portale di vendita: non puoi ancora prenotare o pagare. I siti che lo offrono già non sono il canale ufficiale.",
         ],
       },
       {
         id: "expected",
         title: "Cosa è previsto",
-        paragraphs: ["Registrazione online della targa. Nessun adesivo fisico necessario."],
+        paragraphs: [
+          "La vignetta sarà digitale e collegata alla targa — nessun adesivo sul parabrezza.",
+          "Secondo i piani scegli una durata di 1 giorno, 10 giorni, 1 mese, 2 mesi o 1 anno.",
+        ],
       },
     ],
-    statusBadge: "Non ancora disponibile",
+    statusBadge: "Vendita prevista dal 1 marzo 2027",
+    officialSourceLabel: "Fonte ufficiale",
     steps: [
-      { title: "Attendere il lancio ufficiale", description: "Vendite previste prima del 1 May 2027." },
+      {
+        title: "Attendi la vendita ufficiale",
+        description: "Acquisto online previsto dal 1 marzo 2027, secondo il Governo fiammingo.",
+      },
       { title: "Registrare la targa", description: "Sistema digitale — nessun adesivo sul parabrezza." },
       { title: "Scegliere la durata", description: "Giorno, 10 giorni, mese, 2 mesi o annuale." },
-      { title: "Guidare con vignetta valida", description: "Le telecamere controllano automaticamente." },
+      { title: "Guidare con vignetta valida", description: "Le telecamere controllano automaticamente dal 1 maggio 2027." },
     ],
     faqs: [
       {
         question: "Posso preordinare ora?",
-        answer: "No. Iscriviti alla nostra newsletter per restare informato.",
+        answer:
+          "No. Secondo i piani attuali, la vendita online inizia il 1 marzo 2027. Iscriviti alla newsletter per ricevere il canale ufficiale quando sarà annunciato.",
+      },
+      {
+        question: "Quando la vignetta diventa obbligatoria?",
+        answer:
+          "Secondo i piani, dal 1 maggio 2027 su autostrade e strade regionali belghe. È previsto un periodo di tolleranza dal 1 maggio al 1 luglio 2027.",
       },
     ],
   },
@@ -515,9 +530,21 @@ const dictionary: BaseDictionary = {
     privacyLink: "Informativa sulla privacy",
   },
   sources: [
-    { title: "Governo fiammingo", url: "https://www.vlaanderen.be", description: "Annunci ufficiali" },
-    { title: "Viapass", url: "https://www.viapass.be", description: "Sistema di tassa al km per camion" },
-    { title: "Commissione europea", url: "https://ec.europa.eu", description: "Revisione dell'accordo" },
+    {
+      title: "Governo fiammingo — Vignetta stradale dal 1 maggio 2027",
+      url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+      description: "Pagina ufficiale su obbligo, tariffe e acquisto dal 1 marzo 2027",
+    },
+    {
+      title: "Viapass — tassa chilometrica per i camion",
+      url: "https://www.viapass.be",
+      description: "Sistema esistente per veicoli oltre 3,5 tonnellate (non la vignetta auto)",
+    },
+    {
+      title: "Commissione europea — tariffazione stradale",
+      url: "https://transport.ec.europa.eu/transport-modes/road/road-charging_en",
+      description: "Quadro UE per pedaggi e non discriminazione",
+    },
   ],
 };
 

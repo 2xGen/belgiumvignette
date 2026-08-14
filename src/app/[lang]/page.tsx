@@ -177,7 +177,12 @@ export default async function HomePage({
 
         <p className="mt-10 notice-box max-w-3xl text-sm">{dict.common.disclaimer}</p>
 
-        <Sources title={dict.home.sourcesTitle} links={dict.sources} />
+        <Sources
+          title={dict.home.sourcesTitle}
+          links={dict.sources}
+          lastCheckedLabel={dict.common.lastChecked}
+          lastCheckedDate={dict.common.lastUpdatedDate}
+        />
       </div>
     </>
   );

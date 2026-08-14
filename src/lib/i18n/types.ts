@@ -71,6 +71,7 @@ export interface Dictionary {
     cookieSettings: string;
     tableCategory: string;
     tablePrice: string;
+    lastChecked: string;
   };
   notFound: {
     title: string;
@@ -151,6 +152,7 @@ export interface Dictionary {
     statusBadge: string;
     steps: { title: string; description: string }[];
     faqs: FaqItem[];
+    officialSourceLabel: string;
   };
   privacy: {
     title: string;

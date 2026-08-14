@@ -46,9 +46,9 @@ const dictionary: BaseDictionary = {
         "Planowane mandaty do €210, kontrole ANPR i okres tolerancji do 1 lipca 2027 r.",
     },
     buy: {
-      title: "Kup winietę belgijską — kiedy i jak (oczekiwany system cyfrowy)",
+      title: "Kup winietę belgijską — sprzedaż oczekiwana od 1 marca 2027",
       description:
-        "Jeszcze niedostępna w sprzedaży. Czego można się spodziewać według planów: cyfrowy system powiązany z tablicą rejestracyjną, bez naklejki na szybę.",
+        "Według obecnych planów sprzedaż online belgijskiej winiety drogowej ma ruszyć 1 marca 2027 r. Obowiązkowa od 1 maja 2027 r. Oficjalne źródło: rząd flamandzki.",
     },
     news: {
       title: "Aktualności o winiecie belgijskiej — wyjaśnienie wiarygodnych źródeł",
@@ -65,8 +65,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be to niezależna strona informacyjna. Nie jesteśmy powiązani z rządem belgijskim, Flandrią, Walonią ani Brukselą.",
     lastUpdated: "Ostatnia aktualizacja",
-    lastUpdatedDate: "4 August 2026",
-    lastUpdatedIso: "2026-08-04",
+    lastUpdatedDate: "14 August 2026",
+    lastUpdatedIso: "2026-08-14",
     readMore: "Czytaj więcej",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — niezależne informacje o opłatach drogowych w Belgii",
@@ -78,6 +78,7 @@ const dictionary: BaseDictionary = {
     cookieSettings: "Ustawienia plików cookie",
     tableCategory: "Kategoria",
     tablePrice: "Cena",
+    lastChecked: "Ostatnio sprawdzone",
   },
   notFound: {
     title: "Strona nie znaleziona",
@@ -182,7 +183,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Kiedy mogę kupić?",
         answer:
-          "Oficjalny kanał sprzedaży jeszcze nie istnieje. Zapisz się do naszego newslettera, aby otrzymywać informacje o starcie.",
+          "Według obecnych planów sprzedaż online jest oczekiwana od 1 marca 2027 r. Winieta miałaby stać się obowiązkowa od 1 maja 2027 r. Ostateczne warunki mogą się jeszcze zmienić.",
       },
     ],
     sourcesTitle: "Oficjalne źródła",
@@ -378,34 +379,48 @@ const dictionary: BaseDictionary = {
     ],
   },
   buy: {
-    title: "Jak kupić",
+    title: "Kiedy mogę kupić belgijską winietę?",
     intro:
-      "Oficjalny kanał sprzedaży jeszcze nie istnieje. Oczekiwany jest system cyfrowy, ale szczegóły strony internetowej/aplikacji są nieznane.",
+      "Według obecnych planów sprzedaż online jest oczekiwana od 1 marca 2027 r. Winieta drogowa miałaby stać się obowiązkowa od 1 maja 2027 r. Ostateczne warunki i oficjalny portal sprzedaży mogą się jeszcze zmienić.",
     sections: [
       {
-        id: "status",
-        title: "Aktualny status",
+        id: "when",
+        title: "Kiedy startuje sprzedaż?",
         paragraphs: [
-          "Plany wymagają jeszcze zatwierdzenia przez Walonię, Brukselę i Komisję Europejską, zanim sprzedaż może się rozpocząć.",
+          "Rząd flamandzki podaje, że winietę będzie można kupić online od 1 marca 2027 r. — na oficjalnej stronie lub u autoryzowanego partnera.",
+          "Dziś nie ma portalu sprzedaży: nie można jeszcze rezerwować ani płacić. Strony, które już to oferują, nie są oficjalnym kanałem.",
         ],
       },
       {
         id: "expected",
         title: "Czego można się spodziewać",
-        paragraphs: ["Rejestracja tablicy online. Fizyczna naklejka nie będzie potrzebna."],
+        paragraphs: [
+          "Winieta będzie cyfrowa i powiązana z tablicą rejestracyjną — bez naklejki na szybie.",
+          "Według planów wybierasz okres: 1 dzień, 10 dni, 1 miesiąc, 2 miesiące lub 1 rok.",
+        ],
       },
     ],
-    statusBadge: "Jeszcze niedostępna",
+    statusBadge: "Sprzedaż oczekiwana od 1 marca 2027",
+    officialSourceLabel: "Oficjalne źródło",
     steps: [
-      { title: "Poczekaj na oficjalny start", description: "Sprzedaż oczekiwana przed 1 maja 2027 r." },
+      {
+        title: "Poczekaj na oficjalną sprzedaż",
+        description: "Zakup online oczekiwany od 1 marca 2027 r. według rządu flamandzkiego.",
+      },
       { title: "Zarejestruj tablicę", description: "System cyfrowy — bez naklejki na szybę." },
       { title: "Wybierz okres ważności", description: "Dzień, 10 dni, miesiąc, 2 miesiące lub rok." },
-      { title: "Jedź z ważną winietą", description: "Kamery sprawdzają automatycznie." },
+      { title: "Jedź z ważną winietą", description: "Kamery sprawdzają automatycznie od 1 maja 2027 r." },
     ],
     faqs: [
       {
         question: "Czy mogę zamówić z wyprzedzeniem?",
-        answer: "Nie. Zapisz się do naszego newslettera, aby być na bieżąco.",
+        answer:
+          "Nie. Według obecnych planów sprzedaż online zaczyna się 1 marca 2027 r. Zapisz się do newslettera, aby otrzymać oficjalny kanał, gdy zostanie ogłoszony.",
+      },
+      {
+        question: "Kiedy winieta staje się obowiązkowa?",
+        answer:
+          "Według planów od 1 maja 2027 r. na belgijskich autostradach i drogach regionalnych. Okres tolerancji jest planowany od 1 maja do 1 lipca 2027 r.",
       },
     ],
   },
@@ -515,9 +530,21 @@ const dictionary: BaseDictionary = {
     privacyLink: "Polityka prywatności",
   },
   sources: [
-    { title: "Rząd flamandzki", url: "https://www.vlaanderen.be", description: "Oficjalne ogłoszenia" },
-    { title: "Viapass", url: "https://www.viapass.be", description: "System opłaty za kilometr dla ciężarówek" },
-    { title: "Komisja Europejska", url: "https://ec.europa.eu", description: "Przegląd umowy" },
+    {
+      title: "Rząd flamandzki — Winieta drogowa od 1 maja 2027 r.",
+      url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+      description: "Oficjalna strona o obowiązku, stawkach i zakupie od 1 marca 2027 r.",
+    },
+    {
+      title: "Viapass — opłata kilometrowa dla ciężarówek",
+      url: "https://www.viapass.be",
+      description: "Istniejący system dla pojazdów powyżej 3,5 tony (nie winieta samochodowa)",
+    },
+    {
+      title: "Komisja Europejska — opłaty drogowe",
+      url: "https://transport.ec.europa.eu/transport-modes/road/road-charging_en",
+      description: "Ramy UE dla myta i niedyskryminacji",
+    },
   ],
 };
 

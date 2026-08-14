@@ -46,9 +46,9 @@ const dictionary: BaseDictionary = {
         "Amendes prévues jusqu'à 210 €, contrôles ANPR et tolérance jusqu'au 1er juillet 2027.",
     },
     buy: {
-      title: "Acheter la vignette belge — quand & comment (numérique)",
+      title: "Acheter la vignette belge — vente prévue le 1er mars 2027",
       description:
-        "La vignette n'est pas encore en vente. Découvrez ce qui est prévu : système numérique lié à votre plaque d'immatriculation.",
+        "Selon les plans actuels, la vente en ligne de la vignette routière belge est prévue à partir du 1er mars 2027. Obligatoire dès le 1er mai 2027. Source officielle : autorités flamandes.",
     },
     news: {
       title: "Actualités vignette Belgique — sources fiables expliquées",
@@ -65,8 +65,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be est un site d'information indépendant. Nous ne sommes pas affiliés au gouvernement belge, à la Flandre, à la Wallonie ou à Bruxelles.",
     lastUpdated: "Dernière mise à jour",
-    lastUpdatedDate: "4 août 2026",
-    lastUpdatedIso: "2026-08-04",
+    lastUpdatedDate: "14 août 2026",
+    lastUpdatedIso: "2026-08-14",
     readMore: "En savoir plus",
     relatedSite: "https://tolls.be/fr",
     relatedSiteLabel: "Tolls.be — informations indépendantes sur les péages en Belgique",
@@ -78,6 +78,7 @@ const dictionary: BaseDictionary = {
     cookieSettings: "Préférences cookies",
     tableCategory: "Catégorie",
     tablePrice: "Tarif",
+    lastChecked: "Dernière vérification",
   },
   notFound: {
     title: "Page introuvable",
@@ -182,7 +183,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Quand pourrai-je acheter ?",
         answer:
-          "Aucun canal officiel n'est encore ouvert. Inscrivez-vous à notre newsletter pour être informé.",
+          "Selon les plans actuels, la vente en ligne est prévue à partir du 1er mars 2027. La vignette deviendrait obligatoire dès le 1er mai 2027. Les conditions définitives peuvent encore évoluer.",
       },
     ],
     sourcesTitle: "Sources officielles",
@@ -388,36 +389,48 @@ const dictionary: BaseDictionary = {
     ],
   },
   buy: {
-    title: "Acheter la vignette",
+    title: "Quand puis-je acheter une vignette belge ?",
     intro:
-      "Aucun canal de vente officiel n'est encore disponible. Un système numérique est prévu, mais les détails restent inconnus.",
+      "Selon les plans actuels, la vente en ligne est prévue à partir du 1er mars 2027. La vignette routière deviendrait obligatoire dès le 1er mai 2027. Les conditions définitives et le portail de vente officiel peuvent encore changer.",
     sections: [
       {
-        id: "status",
-        title: "Statut actuel",
+        id: "when",
+        title: "Quand la vente ouvre-t-elle ?",
         paragraphs: [
-          "Les plans doivent encore être approuvés par la Wallonie, Bruxelles et la Commission européenne.",
+          "Les autorités flamandes indiquent que vous pourrez acheter la vignette en ligne à partir du 1er mars 2027, via le site officiel ou un partenaire agréé.",
+          "Il n'existe pas encore de portail de vente : vous ne pouvez ni réserver ni payer aujourd'hui. Les sites qui le proposent déjà ne sont pas le canal officiel.",
         ],
       },
       {
         id: "expected",
         title: "Ce qui est attendu",
         paragraphs: [
-          "Enregistrement en ligne de votre plaque. Pas d'autocollant physique.",
+          "La vignette sera numérique et liée à la plaque d'immatriculation — pas d'autocollant sur le pare-brise.",
+          "Selon les plans, vous choisissez une durée de 1 jour, 10 jours, 1 mois, 2 mois ou 1 an.",
         ],
       },
     ],
-    statusBadge: "Pas encore disponible",
+    statusBadge: "Vente prévue le 1er mars 2027",
+    officialSourceLabel: "Source officielle",
     steps: [
-      { title: "Attendre le lancement officiel", description: "Vente attendue avant le 1er mai 2027." },
+      {
+        title: "Attendre la vente officielle",
+        description: "Achat en ligne prévu à partir du 1er mars 2027, selon les autorités flamandes.",
+      },
       { title: "Enregistrer votre plaque", description: "Système numérique — pas de sticker." },
       { title: "Choisir la durée", description: "Jour, 10 jours, mois, 2 mois ou annuel." },
-      { title: "Circuler en règle", description: "Contrôles automatiques par caméras." },
+      { title: "Circuler en règle", description: "Contrôles automatiques par caméras dès le 1er mai 2027." },
     ],
     faqs: [
       {
         question: "Puis-je réserver maintenant ?",
-        answer: "Non. Inscrivez-vous à notre newsletter pour rester informé.",
+        answer:
+          "Non. Selon les plans actuels, la vente en ligne commence le 1er mars 2027. Inscrivez-vous à la newsletter pour recevoir le canal officiel dès qu'il sera connu.",
+      },
+      {
+        question: "Quand la vignette devient-elle obligatoire ?",
+        answer:
+          "Selon les plans, dès le 1er mai 2027 sur les autoroutes et routes régionales belges. Une période de tolérance est prévue du 1er mai au 1er juillet 2027.",
       },
     ],
   },
@@ -527,9 +540,21 @@ const dictionary: BaseDictionary = {
     privacyLink: "Confidentialité",
   },
   sources: [
-    { title: "Gouvernement flamand", url: "https://www.vlaanderen.be", description: "Annonces officielles" },
-    { title: "Viapass", url: "https://www.viapass.be", description: "Taxe kilométrique poids lourds" },
-    { title: "Commission européenne", url: "https://ec.europa.eu", description: "Examen des accords" },
+    {
+      title: "Autorités flamandes — Vignette routière à partir du 1er mai 2027",
+      url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+      description: "Page officielle sur l'obligation, les tarifs et l'achat à partir du 1er mars 2027",
+    },
+    {
+      title: "Viapass — taxe kilométrique poids lourds",
+      url: "https://www.viapass.be",
+      description: "Système existant pour les véhicules de plus de 3,5 tonnes (pas la vignette voiture)",
+    },
+    {
+      title: "Commission européenne — tarification routière",
+      url: "https://transport.ec.europa.eu/transport-modes/road/road-charging_en",
+      description: "Cadre UE pour les péages et la non-discrimination",
+    },
   ],
 };
 

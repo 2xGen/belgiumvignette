@@ -46,9 +46,9 @@ const dictionary: BaseDictionary = {
         "Planned fines up to €210, ANPR checks and tolerance until 1 July 2027.",
     },
     buy: {
-      title: "Buy Belgium vignette — when & how (digital system expected)",
+      title: "Buy Belgium vignette — sales expected 1 March 2027",
       description:
-        "Not yet on sale. What to expect according to plans: a digital plate-linked system, no windshield sticker.",
+        "According to current plans, online sales of the Belgium road vignette are expected from 1 March 2027. Mandatory from 1 May 2027. Official source: Flemish government.",
     },
     news: {
       title: "Belgium vignette news & updates — trusted sources explained",
@@ -65,8 +65,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be is an independent information site. We are not affiliated with the Belgian government, Flanders, Wallonia or Brussels.",
     lastUpdated: "Last updated",
-    lastUpdatedDate: "4 August 2026",
-    lastUpdatedIso: "2026-08-04",
+    lastUpdatedDate: "14 August 2026",
+    lastUpdatedIso: "2026-08-14",
     readMore: "Read more",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — independent Belgium toll information",
@@ -78,6 +78,7 @@ const dictionary: BaseDictionary = {
     cookieSettings: "Cookie settings",
     tableCategory: "Category",
     tablePrice: "Price",
+    lastChecked: "Last checked",
   },
   notFound: {
     title: "Page not found",
@@ -182,7 +183,7 @@ const dictionary: BaseDictionary = {
       {
         question: "When can I buy?",
         answer:
-          "No official sales channel yet. Sign up to our newsletter for launch updates.",
+          "According to current plans, online sales are expected from 1 March 2027. The vignette would become mandatory from 1 May 2027. Final conditions may still change.",
       },
     ],
     sourcesTitle: "Official sources",
@@ -378,34 +379,48 @@ const dictionary: BaseDictionary = {
     ],
   },
   buy: {
-    title: "How to buy",
+    title: "When can I buy a Belgium vignette?",
     intro:
-      "No official sales channel exists yet. A digital system is expected, but website/app details are unknown.",
+      "According to current plans, online sales are expected from 1 March 2027. The road vignette would become mandatory from 1 May 2027. Final conditions and the official sales portal may still change.",
     sections: [
       {
-        id: "status",
-        title: "Current status",
+        id: "when",
+        title: "When do sales open?",
         paragraphs: [
-          "Plans still need Wallonia, Brussels and EU Commission approval before sales can open.",
+          "The Flemish government states that you will be able to buy the vignette online from 1 March 2027, via the official website or an authorised partner.",
+          "There is no sales portal today, and you cannot reserve or pay yet. Sites that already offer that are not the official channel.",
         ],
       },
       {
         id: "expected",
-        title: "What's expected",
-        paragraphs: ["Online registration of your plate. No physical sticker needed."],
+        title: "What to expect",
+        paragraphs: [
+          "The vignette will be digital and linked to the number plate — no windshield sticker.",
+          "According to the plans you choose a duration of 1 day, 10 days, 1 month, 2 months or 1 year.",
+        ],
       },
     ],
-    statusBadge: "Not yet available",
+    statusBadge: "Sales expected 1 March 2027",
+    officialSourceLabel: "Official source",
     steps: [
-      { title: "Wait for official launch", description: "Sales expected before 1 May 2027." },
+      {
+        title: "Wait for official sales",
+        description: "Online purchase expected from 1 March 2027, according to the Flemish government.",
+      },
       { title: "Register your plate", description: "Digital system — no windshield sticker." },
       { title: "Choose duration", description: "Day, 10 days, month, 2 months or annual." },
-      { title: "Drive with valid vignette", description: "Cameras check automatically." },
+      { title: "Drive with valid vignette", description: "Cameras check automatically from 1 May 2027." },
     ],
     faqs: [
       {
         question: "Can I pre-order now?",
-        answer: "No. Subscribe to our newsletter to stay informed.",
+        answer:
+          "No. According to current plans, online sales start on 1 March 2027. Subscribe to the newsletter to get the official channel when it is announced.",
+      },
+      {
+        question: "When does the vignette become mandatory?",
+        answer:
+          "According to the plans, from 1 May 2027 on Belgian motorways and regional roads. A tolerance period is planned from 1 May to 1 July 2027.",
       },
     ],
   },
@@ -515,9 +530,21 @@ const dictionary: BaseDictionary = {
     privacyLink: "Privacy policy",
   },
   sources: [
-    { title: "Flemish government", url: "https://www.vlaanderen.be", description: "Official announcements" },
-    { title: "Viapass", url: "https://www.viapass.be", description: "Truck km-charge system" },
-    { title: "European Commission", url: "https://ec.europa.eu", description: "Agreement review" },
+    {
+      title: "Flemish government — Road vignette from 1 May 2027",
+      url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+      description: "Official page on the obligation, rates and purchase from 1 March 2027",
+    },
+    {
+      title: "Viapass — kilometre charge for trucks",
+      url: "https://www.viapass.be",
+      description: "Existing system for vehicles over 3.5 tonnes (not the car vignette)",
+    },
+    {
+      title: "European Commission — road charging",
+      url: "https://transport.ec.europa.eu/transport-modes/road/road-charging_en",
+      description: "EU framework for road tolls and non-discrimination",
+    },
   ],
 };
 

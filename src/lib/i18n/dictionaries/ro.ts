@@ -46,9 +46,9 @@ const dictionary: BaseDictionary = {
         "Amenzi planificate de până la €210, verificări ANPR și toleranță până la 1 iulie 2027.",
     },
     buy: {
-      title: "Cumpără vigneta Belgia — când și cum (sistem digital așteptat)",
+      title: "Cumpără vigneta Belgia — vânzare așteptată de la 1 martie 2027",
       description:
-        "Încă nu este disponibilă la vânzare. Ce se așteaptă conform planurilor: un sistem digital legat de numărul de înmatriculare, fără autocolant pe parbriz.",
+        "Conform planurilor actuale, vânzarea online a vignetei rutiere belgiene este așteptată de la 1 martie 2027. Obligatorie de la 1 mai 2027. Sursă oficială: guvernul flamand.",
     },
     news: {
       title: "Știri despre vigneta Belgia — surse de încredere explicate",
@@ -65,8 +65,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be este un site informativ independent. Nu suntem afiliați guvernului belgian, Flandrei, Valoniei sau Bruxelles-ului.",
     lastUpdated: "Ultima actualizare",
-    lastUpdatedDate: "4 August 2026",
-    lastUpdatedIso: "2026-08-04",
+    lastUpdatedDate: "14 August 2026",
+    lastUpdatedIso: "2026-08-14",
     readMore: "Citește mai mult",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — informații independente despre taxele rutiere din Belgia",
@@ -78,6 +78,7 @@ const dictionary: BaseDictionary = {
     cookieSettings: "Setări cookie",
     tableCategory: "Categorie",
     tablePrice: "Preț",
+    lastChecked: "Ultima verificare",
   },
   notFound: {
     title: "Pagina nu a fost găsită",
@@ -182,7 +183,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Când pot cumpăra?",
         answer:
-          "Nu există încă un canal oficial de vânzare. Înscrieți-vă la newsletter pentru actualizări despre lansare.",
+          "Conform planurilor actuale, vânzarea online este așteptată de la 1 martie 2027. Vigneta ar deveni obligatorie de la 1 mai 2027. Condițiile finale se pot schimba.",
       },
     ],
     sourcesTitle: "Surse oficiale",
@@ -378,34 +379,48 @@ const dictionary: BaseDictionary = {
     ],
   },
   buy: {
-    title: "Cum se cumpără",
+    title: "Când pot cumpăra o vignetă belgiană?",
     intro:
-      "Nu există încă un canal oficial de vânzare. Se așteaptă un sistem digital, dar detaliile despre site/aplicație sunt necunoscute.",
+      "Conform planurilor actuale, vânzarea online este așteptată de la 1 martie 2027. Vigneta rutieră ar deveni obligatorie de la 1 mai 2027. Condițiile finale și portalul oficial de vânzare se pot schimba.",
     sections: [
       {
-        id: "status",
-        title: "Starea actuală",
+        id: "when",
+        title: "Când începe vânzarea?",
         paragraphs: [
-          "Planurile necesită încă aprobarea Valoniei, Bruxelles-ului și Comisiei Europene înainte de deschiderea vânzărilor.",
+          "Guvernul flamand indică faptul că veți putea cumpăra vigneta online de la 1 martie 2027, pe site-ul oficial sau printr-un partener autorizat.",
+          "Astăzi nu există un portal de vânzare: nu puteți rezerva sau plăti încă. Site-urile care oferă deja acest lucru nu sunt canalul oficial.",
         ],
       },
       {
         id: "expected",
         title: "Ce se așteaptă",
-        paragraphs: ["Înregistrarea online a numărului de înmatriculare. Nu este necesar autocolant fizic."],
+        paragraphs: [
+          "Vigneta va fi digitală și legată de numărul de înmatriculare — fără autocolant pe parbriz.",
+          "Conform planurilor alegeți o durată de 1 zi, 10 zile, 1 lună, 2 luni sau 1 an.",
+        ],
       },
     ],
-    statusBadge: "Încă indisponibil",
+    statusBadge: "Vânzare așteptată de la 1 martie 2027",
+    officialSourceLabel: "Sursă oficială",
     steps: [
-      { title: "Așteptați lansarea oficială", description: "Vânzările sunt așteptate înainte de 1 mai 2027." },
+      {
+        title: "Așteptați vânzarea oficială",
+        description: "Achiziție online așteptată de la 1 martie 2027, conform guvernului flamand.",
+      },
       { title: "Înregistrați numărul de înmatriculare", description: "Sistem digital — fără autocolant pe parbriz." },
       { title: "Alegeți durata", description: "Zi, 10 zile, lună, 2 luni sau anual." },
-      { title: "Conduceți cu vignetă validă", description: "Camerele verifică automat." },
+      { title: "Conduceți cu vignetă validă", description: "Camerele verifică automat de la 1 mai 2027." },
     ],
     faqs: [
       {
         question: "Pot precomanda acum?",
-        answer: "Nu. Abonați-vă la newsletter pentru a rămâne informat.",
+        answer:
+          "Nu. Conform planurilor actuale, vânzarea online începe la 1 martie 2027. Abonați-vă la newsletter pentru a primi canalul oficial când va fi anunțat.",
+      },
+      {
+        question: "Când devine vigneta obligatorie?",
+        answer:
+          "Conform planurilor, de la 1 mai 2027 pe autostrăzile și drumurile regionale belgiene. Este prevăzută o perioadă de toleranță de la 1 mai până la 1 iulie 2027.",
       },
     ],
   },
@@ -515,9 +530,21 @@ const dictionary: BaseDictionary = {
     privacyLink: "Politica de confidențialitate",
   },
   sources: [
-    { title: "Guvernul flamand", url: "https://www.vlaanderen.be", description: "Anunțuri oficiale" },
-    { title: "Viapass", url: "https://www.viapass.be", description: "Sistem de taxă pe km pentru camioane" },
-    { title: "Comisia Europeană", url: "https://ec.europa.eu", description: "Revizuirea acordului" },
+    {
+      title: "Guvernul flamand — Vignetă rutieră de la 1 mai 2027",
+      url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+      description: "Pagină oficială despre obligație, tarife și cumpărare de la 1 martie 2027",
+    },
+    {
+      title: "Viapass — taxă pe kilometru pentru camioane",
+      url: "https://www.viapass.be",
+      description: "Sistem existent pentru vehicule peste 3,5 tone (nu vigneta auto)",
+    },
+    {
+      title: "Comisia Europeană — tarifare rutieră",
+      url: "https://transport.ec.europa.eu/transport-modes/road/road-charging_en",
+      description: "Cadrul UE pentru taxe de drum și nediscriminare",
+    },
   ],
 };
 

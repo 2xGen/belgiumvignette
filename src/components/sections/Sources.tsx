@@ -3,9 +3,13 @@ import type { SourceLink } from "@/lib/i18n/types";
 export default function Sources({
   title,
   links,
+  lastCheckedLabel,
+  lastCheckedDate,
 }: {
   title: string;
   links: SourceLink[];
+  lastCheckedLabel?: string;
+  lastCheckedDate?: string;
 }) {
   return (
     <section className="py-8">
@@ -27,6 +31,11 @@ export default function Sources({
           </li>
         ))}
       </ul>
+      {lastCheckedLabel && lastCheckedDate ? (
+        <p className="mt-4 text-xs text-text-muted">
+          {lastCheckedLabel}: {lastCheckedDate}
+        </p>
+      ) : null}
     </section>
   );
 }

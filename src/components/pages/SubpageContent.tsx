@@ -226,9 +226,29 @@ export function FinesPageContent({ dict }: { dict: Dictionary }) {
 
 export function BuyPageContent({ dict }: { dict: Dictionary }) {
   const content = dict.buy;
+  const officialSource = dict.sources[0];
   return (
     <>
       <ContentSections sections={content.sections} />
+      {officialSource ? (
+        <p className="mt-8 text-sm">
+          <strong>{content.officialSourceLabel}: </strong>
+          <a
+            href={officialSource.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-link"
+          >
+            {officialSource.title}
+          </a>
+          {officialSource.description ? (
+            <span className="text-text-muted"> — {officialSource.description}</span>
+          ) : null}
+        </p>
+      ) : null}
+      <p className="mt-2 text-xs text-text-muted">
+        {dict.common.lastChecked}: {dict.common.lastUpdatedDate}
+      </p>
       <section className="mt-10">
         <ol className="list-decimal space-y-3 pl-5 text-sm">
           {content.steps.map((step) => (

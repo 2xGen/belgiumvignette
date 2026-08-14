@@ -46,9 +46,9 @@ const dictionary: BaseDictionary = {
         "Plánované pokuty až €210, kontroly ANPR a tolerance do 1. července 2027.",
     },
     buy: {
-      title: "Koupit belgickou dálniční známku — kdy a jak (očekává se digitální systém)",
+      title: "Koupit belgickou dálniční známku — prodej očekáván od 1. března 2027",
       description:
-        "Zatím není v prodeji. Co lze podle plánů očekávat: digitální systém vázaný na registrační značku, bez nálepky na čelním skle.",
+        "Podle současných plánů má online prodej belgické dálniční známky začít 1. března 2027. Povinná od 1. května 2027. Oficiální zdroj: vlámská vláda.",
     },
     news: {
       title: "Novinky o belgické dálniční známce — vysvětlení důvěryhodných zdrojů",
@@ -65,8 +65,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be je nezávislý informační web. Nejsme spojeni s belgickou vládou, Flandremi, Valonskem ani Bruselem.",
     lastUpdated: "Naposledy aktualizováno",
-    lastUpdatedDate: "4 August 2026",
-    lastUpdatedIso: "2026-08-04",
+    lastUpdatedDate: "14 August 2026",
+    lastUpdatedIso: "2026-08-14",
     readMore: "Číst více",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — nezávislé informace o mýtném v Belgii",
@@ -78,6 +78,7 @@ const dictionary: BaseDictionary = {
     cookieSettings: "Nastavení cookies",
     tableCategory: "Kategorie",
     tablePrice: "Cena",
+    lastChecked: "Naposledy ověřeno",
   },
   notFound: {
     title: "Stránka nenalezena",
@@ -182,7 +183,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Kdy ji mohu koupit?",
         answer:
-          "Zatím neexistuje oficiální prodejní kanál. Přihlaste se k odběru newsletteru pro informace o spuštění.",
+          "Podle současných plánů je online prodej očekáván od 1. března 2027. Známka by byla povinná od 1. května 2027. Konečné podmínky se ještě mohou změnit.",
       },
     ],
     sourcesTitle: "Oficiální zdroje",
@@ -378,34 +379,48 @@ const dictionary: BaseDictionary = {
     ],
   },
   buy: {
-    title: "Jak koupit",
+    title: "Kdy mohu koupit belgickou dálniční známku?",
     intro:
-      "Zatím neexistuje oficiální prodejní kanál. Očekává se digitální systém, ale podrobnosti o webu/aplikaci nejsou známy.",
+      "Podle současných plánů je online prodej očekáván od 1. března 2027. Dálniční známka by byla povinná od 1. května 2027. Konečné podmínky a oficiální prodejní portál se ještě mohou změnit.",
     sections: [
       {
-        id: "status",
-        title: "Aktuální stav",
+        id: "when",
+        title: "Kdy začíná prodej?",
         paragraphs: [
-          "Plány stále potřebují schválení Valonskem, Bruselem a Evropskou komisí, než může začít prodej.",
+          "Vlámská vláda uvádí, že známku budete moci koupit online od 1. března 2027 — na oficiálním webu nebo u autorizovaného partnera.",
+          "Dnes neexistuje prodejní portál: zatím nelze rezervovat ani platit. Stránky, které to již nabízejí, nejsou oficiálním kanálem.",
         ],
       },
       {
         id: "expected",
         title: "Co se očekává",
-        paragraphs: ["Online registrace vaší značky. Fyzická nálepka není potřeba."],
+        paragraphs: [
+          "Známka bude digitální a vázaná na registrační značku — bez nálepky na čelním skle.",
+          "Podle plánů zvolíte dobu platnosti 1 den, 10 dní, 1 měsíc, 2 měsíce nebo 1 rok.",
+        ],
       },
     ],
-    statusBadge: "Zatím nedostupné",
+    statusBadge: "Prodej očekáván od 1. března 2027",
+    officialSourceLabel: "Oficiální zdroj",
     steps: [
-      { title: "Počkejte na oficiální spuštění", description: "Prodej očekáván před 1. květnem 2027." },
+      {
+        title: "Počkejte na oficiální prodej",
+        description: "Online nákup očekáván od 1. března 2027 podle vlámské vlády.",
+      },
       { title: "Zaregistrujte svou značku", description: "Digitální systém — bez nálepky na čelním skle." },
       { title: "Vyberte dobu platnosti", description: "Den, 10 dní, měsíc, 2 měsíce nebo roční." },
-      { title: "Jeďte s platnou známkou", description: "Kamery kontrolují automaticky." },
+      { title: "Jeďte s platnou známkou", description: "Kamery kontrolují automaticky od 1. května 2027." },
     ],
     faqs: [
       {
         question: "Mohu si ji předobjednat?",
-        answer: "Ne. Přihlaste se k odběru newsletteru, abyste zůstali informováni.",
+        answer:
+          "Ne. Podle současných plánů začíná online prodej 1. března 2027. Přihlaste se k newsletteru, abyste dostali oficiální kanál, až bude oznámen.",
+      },
+      {
+        question: "Kdy je známka povinná?",
+        answer:
+          "Podle plánů od 1. května 2027 na belgických dálnicích a regionálních silnicích. Období tolerance je plánováno od 1. května do 1. července 2027.",
       },
     ],
   },
@@ -515,9 +530,21 @@ const dictionary: BaseDictionary = {
     privacyLink: "Zásady ochrany soukromí",
   },
   sources: [
-    { title: "Flámská vláda", url: "https://www.vlaanderen.be", description: "Oficiální oznámení" },
-    { title: "Viapass", url: "https://www.viapass.be", description: "Systém kilometrového mýtného pro nákladní vozy" },
-    { title: "Evropská komise", url: "https://ec.europa.eu", description: "Posouzení dohody" },
+    {
+      title: "Vlámská vláda — Dálniční známka od 1. května 2027",
+      url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+      description: "Oficiální stránka o povinnosti, tarifech a nákupu od 1. března 2027",
+    },
+    {
+      title: "Viapass — kilometrové mýtné pro nákladní vozy",
+      url: "https://www.viapass.be",
+      description: "Stávající systém pro vozidla nad 3,5 tuny (ne osobní známka)",
+    },
+    {
+      title: "Evropská komise — zpoplatnění silnic",
+      url: "https://transport.ec.europa.eu/transport-modes/road/road-charging_en",
+      description: "Rámec EU pro mýtné a nediskriminaci",
+    },
   ],
 };
 

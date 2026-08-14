@@ -46,9 +46,9 @@ const dictionary: BaseDictionary = {
         "Geplande boetes tot €210, ANPR-controles en tolerantie tot 1 juli 2027. Alles over handhaving van het Belgische vignet.",
     },
     buy: {
-      title: "Belgisch vignet kopen — wanneer & hoe (verwacht digitaal)",
+      title: "Belgisch vignet kopen — verkoop verwacht 1 maart 2027",
       description:
-        "Het vignet is nog niet te koop. Lees wat er volgens de plannen verwacht wordt: digitaal systeem gekoppeld aan uw kenteken.",
+        "Volgens de huidige plannen start de online verkoop van het Belgische wegenvignet op 1 maart 2027. Verplicht vanaf 1 mei 2027. Officiële bron: Vlaamse overheid.",
     },
     news: {
       title: "Belgisch vignet nieuws & updates — betrouwbare bronnen uitgelegd",
@@ -65,8 +65,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be is een onafhankelijke informatiesite. Wij zijn niet verbonden met de Belgische overheid, Vlaanderen, Wallonië of Brussel.",
     lastUpdated: "Laatst bijgewerkt",
-    lastUpdatedDate: "4 augustus 2026",
-    lastUpdatedIso: "2026-08-04",
+    lastUpdatedDate: "14 augustus 2026",
+    lastUpdatedIso: "2026-08-14",
     readMore: "Lees meer",
     relatedSite: "https://tolls.be/nl",
     relatedSiteLabel: "Tolls.be — onafhankelijke tol-informatie voor België",
@@ -78,6 +78,7 @@ const dictionary: BaseDictionary = {
     cookieSettings: "Cookievoorkeuren",
     tableCategory: "Categorie",
     tablePrice: "Prijs",
+    lastChecked: "Laatst gecontroleerd",
   },
   notFound: {
     title: "Pagina niet gevonden",
@@ -182,7 +183,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Wanneer kan ik een vignet kopen?",
         answer:
-          "Er is nog geen officieel verkoopkanaal. Volgens de plannen wordt een digitaal systeem verwacht. Schrijf u in voor updates via onze nieuwsbrief.",
+          "Volgens de huidige plannen wordt de online verkoop op 1 maart 2027 verwacht. Het wegenvignet zou vanaf 1 mei 2027 verplicht worden. Definitieve voorwaarden kunnen nog wijzigen.",
       },
     ],
     sourcesTitle: "Officiële bronnen & achtergrond",
@@ -398,32 +399,33 @@ const dictionary: BaseDictionary = {
     ],
   },
   buy: {
-    title: "Vignet kopen",
+    title: "Wanneer kan ik een Belgisch vignet kopen?",
     intro:
-      "Op dit moment is er nog geen officieel verkoopkanaal voor het Belgische vignet. De plannen voorzien in een digitaal systeem, maar details over de website of app zijn nog niet bekend.",
+      "Volgens de huidige plannen wordt de online verkoop op 1 maart 2027 verwacht. Het wegenvignet zou vanaf 1 mei 2027 verplicht worden. Definitieve voorwaarden en het officiële verkoopportaal kunnen nog wijzigen.",
     sections: [
       {
-        id: "status",
-        title: "Huidige status",
+        id: "when",
+        title: "Wanneer opent de verkoop?",
         paragraphs: [
-          "De plannen moeten nog worden goedgekeurd door Wallonië, Brussel en de Europese Commissie. Pas daarna wordt het verkoopproces verwacht.",
-          "Wij updaten deze pagina zodra er officiële informatie is over waar en hoe u een vignet kunt aanschaffen.",
+          "De Vlaamse overheid geeft aan dat u het wegenvignet vanaf 1 maart 2027 online kunt kopen, via de officiële website of een erkende partner.",
+          "Er is vandaag nog geen verkoopportaal en u kunt nog niet reserveren of betalen. Sites die dat nu al aanbieden, zijn niet het officiële kanaal.",
         ],
       },
       {
         id: "expected",
-        title: "Wat wordt verwacht",
+        title: "Wat u kunt verwachten",
         paragraphs: [
-          "U registreert uw kenteken online. Het vignet wordt digitaal gekoppeld — geen fysieke sticker nodig.",
-          "Korte periodes (dag, week, maand) en jaarvignetten worden volgens de plannen aangeboden.",
+          "Het vignet wordt digitaal en gekoppeld aan de nummerplaat — geen sticker op de voorruit.",
+          "Volgens de plannen kiest u een looptijd van 1 dag, 10 dagen, 1 maand, 2 maanden of 1 jaar.",
         ],
       },
     ],
-    statusBadge: "Nog niet beschikbaar",
+    statusBadge: "Verkoop verwacht 1 maart 2027",
+    officialSourceLabel: "Officiële bron",
     steps: [
       {
-        title: "Wacht op officiële lancering",
-        description: "Verkoop start naar verwachting vóór 1 mei 2027.",
+        title: "Wacht op de officiële verkoop",
+        description: "Online aankoop verwacht vanaf 1 maart 2027, volgens de Vlaamse overheid.",
       },
       {
         title: "Registreer uw kenteken",
@@ -435,13 +437,19 @@ const dictionary: BaseDictionary = {
       },
       {
         title: "Rij met geldig vignet",
-        description: "ANPR-camera's controleren automatisch.",
+        description: "ANPR-camera's controleren automatisch vanaf 1 mei 2027.",
       },
     ],
     faqs: [
       {
         question: "Kan ik nu al reserveren?",
-        answer: "Nee. Er is nog geen reserveringssysteem. Schrijf u in voor onze nieuwsbrief om op de hoogte te blijven.",
+        answer:
+          "Nee. Volgens de huidige plannen start de online verkoop op 1 maart 2027. Schrijf u in voor de nieuwsbrief om het officiële kanaal te ontvangen wanneer het bekend is.",
+      },
+      {
+        question: "Wanneer is het vignet verplicht?",
+        answer:
+          "Volgens de plannen vanaf 1 mei 2027 op Belgische snelwegen en gewestwegen. Tussen 1 mei en 1 juli 2027 is een tolerantieperiode gepland.",
       },
     ],
   },
@@ -560,19 +568,19 @@ const dictionary: BaseDictionary = {
   },
   sources: [
     {
-      title: "Vlaamse regering — vignetvoorstel",
-      url: "https://www.vlaanderen.be",
-      description: "Officiële aankondigingen Vlaanderen",
+      title: "Vlaamse overheid — Wegenvignet vanaf 1 mei 2027",
+      url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+      description: "Officiële pagina over verplichting, tarieven en aankoop vanaf 1 maart 2027",
     },
     {
-      title: "Viapass — kilometerheffing vrachtwagens",
+      title: "Viapass — kilometerheffing voor vrachtwagens",
       url: "https://www.viapass.be",
-      description: "Bestaand systeem voor zware voertuigen",
+      description: "Bestaand systeem voor voertuigen boven 3,5 ton (geen personenwagenvignet)",
     },
     {
-      title: "Europese Commissie — staatssteun",
-      url: "https://ec.europa.eu",
-      description: "Beoordeling interregionale akkoorden",
+      title: "Europese Commissie — heffingen op het wegvervoer",
+      url: "https://transport.ec.europa.eu/transport-modes/road/road-charging_en",
+      description: "EU-kader voor wegentol en non-discriminatie",
     },
   ],
 };

@@ -46,9 +46,9 @@ const dictionary: BaseDictionary = {
         "Multas previstas de hasta €210, controles ANPR y tolerancia hasta el 1 de julio de 2027.",
     },
     buy: {
-      title: "Comprar la viñeta de Bélgica — cuándo y cómo (sistema digital previsto)",
+      title: "Comprar la viñeta de Bélgica — venta prevista el 1 de marzo de 2027",
       description:
-        "Aún no está a la venta. Qué esperar según los planes: un sistema digital vinculado a la matrícula, sin adhesivo en el parabrisas.",
+        "Según los planes actuales, la venta en línea de la viñeta belga está prevista a partir del 1 de marzo de 2027. Obligatoria desde el 1 de mayo de 2027. Fuente oficial: Gobierno flamenco.",
     },
     news: {
       title: "Noticias sobre la viñeta de Bélgica — fuentes fiables explicadas",
@@ -65,8 +65,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be es un sitio de información independiente. No estamos afiliados al gobierno belga, Flandes, Valonia ni Bruselas.",
     lastUpdated: "Última actualización",
-    lastUpdatedDate: "4 August 2026",
-    lastUpdatedIso: "2026-08-04",
+    lastUpdatedDate: "14 August 2026",
+    lastUpdatedIso: "2026-08-14",
     readMore: "Leer más",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — información independiente sobre peajes en Bélgica",
@@ -78,6 +78,7 @@ const dictionary: BaseDictionary = {
     cookieSettings: "Configuración de cookies",
     tableCategory: "Categoría",
     tablePrice: "Precio",
+    lastChecked: "Última comprobación",
   },
   notFound: {
     title: "Página no encontrada",
@@ -182,7 +183,7 @@ const dictionary: BaseDictionary = {
       {
         question: "¿Cuándo puedo comprarla?",
         answer:
-          "Aún no hay canal de venta oficial. Suscríbase a nuestro boletín para recibir novedades sobre el lanzamiento.",
+          "Según los planes actuales, la venta en línea está prevista a partir del 1 de marzo de 2027. La viñeta sería obligatoria desde el 1 de mayo de 2027. Las condiciones definitivas pueden cambiar.",
       },
     ],
     sourcesTitle: "Fuentes oficiales",
@@ -378,34 +379,48 @@ const dictionary: BaseDictionary = {
     ],
   },
   buy: {
-    title: "Cómo comprar",
+    title: "¿Cuándo puedo comprar una viñeta belga?",
     intro:
-      "Aún no existe un canal de venta oficial. Se espera un sistema digital, pero los detalles del sitio web o la aplicación son desconocidos.",
+      "Según los planes actuales, la venta en línea está prevista a partir del 1 de marzo de 2027. La viñeta sería obligatoria desde el 1 de mayo de 2027. Las condiciones definitivas y el portal oficial de venta pueden cambiar.",
     sections: [
       {
-        id: "status",
-        title: "Estado actual",
+        id: "when",
+        title: "¿Cuándo se abre la venta?",
         paragraphs: [
-          "Los planes aún necesitan la aprobación de Valonia, Bruselas y la Comisión Europea antes de que pueda abrirse la venta.",
+          "El Gobierno flamenco indica que podrá comprar la viñeta en línea a partir del 1 de marzo de 2027, en el sitio oficial o a través de un socio autorizado.",
+          "Hoy no hay portal de venta: no puede reservar ni pagar todavía. Los sitios que ya lo ofrecen no son el canal oficial.",
         ],
       },
       {
         id: "expected",
         title: "Qué se espera",
-        paragraphs: ["Registro en línea de su matrícula. No se necesita adhesivo físico."],
+        paragraphs: [
+          "La viñeta será digital y estará vinculada a la matrícula — sin adhesivo en el parabrisas.",
+          "Según los planes, elige una duración de 1 día, 10 días, 1 mes, 2 meses o 1 año.",
+        ],
       },
     ],
-    statusBadge: "Aún no disponible",
+    statusBadge: "Venta prevista el 1 de marzo de 2027",
+    officialSourceLabel: "Fuente oficial",
     steps: [
-      { title: "Espere al lanzamiento oficial", description: "Venta prevista antes del 1 de mayo de 2027." },
+      {
+        title: "Espere la venta oficial",
+        description: "Compra en línea prevista a partir del 1 de marzo de 2027, según el Gobierno flamenco.",
+      },
       { title: "Registre su matrícula", description: "Sistema digital — sin adhesivo en el parabrisas." },
       { title: "Elija la duración", description: "Día, 10 días, mes, 2 meses o anual." },
-      { title: "Conduzca con viñeta válida", description: "Las cámaras verifican automáticamente." },
+      { title: "Conduzca con viñeta válida", description: "Las cámaras verifican automáticamente desde el 1 de mayo de 2027." },
     ],
     faqs: [
       {
         question: "¿Puedo reservar ahora?",
-        answer: "No. Suscríbase a nuestro boletín para mantenerse informado.",
+        answer:
+          "No. Según los planes actuales, la venta en línea empieza el 1 de marzo de 2027. Suscríbase al boletín para recibir el canal oficial cuando se anuncie.",
+      },
+      {
+        question: "¿Cuándo es obligatoria la viñeta?",
+        answer:
+          "Según los planes, desde el 1 de mayo de 2027 en autopistas y carreteras regionales belgas. Hay un periodo de tolerancia previsto del 1 de mayo al 1 de julio de 2027.",
       },
     ],
   },
@@ -515,9 +530,21 @@ const dictionary: BaseDictionary = {
     privacyLink: "Política de privacidad",
   },
   sources: [
-    { title: "Gobierno flamenco", url: "https://www.vlaanderen.be", description: "Anuncios oficiales" },
-    { title: "Viapass", url: "https://www.viapass.be", description: "Sistema de peaje por km para camiones" },
-    { title: "Comisión Europea", url: "https://ec.europa.eu", description: "Revisión del acuerdo" },
+    {
+      title: "Gobierno flamenco — Viñeta vial a partir del 1 de mayo de 2027",
+      url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+      description: "Página oficial sobre la obligación, tarifas y compra a partir del 1 de marzo de 2027",
+    },
+    {
+      title: "Viapass — peaje por kilómetro para camiones",
+      url: "https://www.viapass.be",
+      description: "Sistema existente para vehículos de más de 3,5 toneladas (no es la viñeta de turismos)",
+    },
+    {
+      title: "Comisión Europea — tarificación viaria",
+      url: "https://transport.ec.europa.eu/transport-modes/road/road-charging_en",
+      description: "Marco de la UE para peajes y no discriminación",
+    },
   ],
 };
 

@@ -46,9 +46,9 @@ const dictionary: BaseDictionary = {
         "Geplante Bußgelder bis 210 €, ANPR-Kontrollen und Toleranz bis 1. Juli 2027.",
     },
     buy: {
-      title: "Vignette Belgien kaufen — wann & wie (digital erwartet)",
+      title: "Vignette Belgien kaufen — Verkauf erwartet ab 1. März 2027",
       description:
-        "Noch nicht erhältlich. Was erwartet wird: digitales System, an Ihr Kennzeichen gebunden.",
+        "Nach aktuellen Plänen startet der Online-Verkauf der belgischen Straßenvignette am 1. März 2027. Pflicht ab 1. Mai 2027. Offizielle Quelle: Flämische Regierung.",
     },
     news: {
       title: "Belgische Vignette — Nachrichten & Updates, vertrauenswürdige Quellen erklärt",
@@ -65,8 +65,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be ist eine unabhängige Informationsseite. Wir sind nicht mit der belgischen Regierung, Flandern, der Wallonie oder Brüssel verbunden.",
     lastUpdated: "Zuletzt aktualisiert",
-    lastUpdatedDate: "4. August 2026",
-    lastUpdatedIso: "2026-08-04",
+    lastUpdatedDate: "14. August 2026",
+    lastUpdatedIso: "2026-08-14",
     readMore: "Mehr erfahren",
     relatedSite: "https://tolls.be/de",
     relatedSiteLabel: "Tolls.be — unabhängige Maut-Informationen für Belgien",
@@ -78,6 +78,7 @@ const dictionary: BaseDictionary = {
     cookieSettings: "Cookie-Einstellungen",
     tableCategory: "Kategorie",
     tablePrice: "Preis",
+    lastChecked: "Zuletzt geprüft",
   },
   notFound: {
     title: "Seite nicht gefunden",
@@ -182,7 +183,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Wann kann ich kaufen?",
         answer:
-          "Noch kein offizieller Verkaufskanal. Newsletter abonnieren für Updates.",
+          "Nach aktuellen Plänen wird der Online-Verkauf ab dem 1. März 2027 erwartet. Die Vignette würde ab dem 1. Mai 2027 Pflicht. Endgültige Bedingungen können sich noch ändern.",
       },
     ],
     sourcesTitle: "Offizielle Quellen",
@@ -377,34 +378,48 @@ const dictionary: BaseDictionary = {
     ],
   },
   buy: {
-    title: "Vignette kaufen",
+    title: "Wann kann ich eine belgische Vignette kaufen?",
     intro:
-      "Noch kein offizieller Verkaufskanal. Digitales System erwartet, Details unbekannt.",
+      "Nach aktuellen Plänen wird der Online-Verkauf ab dem 1. März 2027 erwartet. Die Straßenvignette würde ab dem 1. Mai 2027 Pflicht. Endgültige Bedingungen und das offizielle Verkaufsportal können sich noch ändern.",
     sections: [
       {
-        id: "status",
-        title: "Aktueller Stand",
+        id: "when",
+        title: "Wann startet der Verkauf?",
         paragraphs: [
-          "Pläne brauchen noch Zustimmung von Wallonie, Brüssel und EU-Kommission.",
+          "Die flämische Regierung gibt an, dass Sie die Vignette ab dem 1. März 2027 online kaufen können — über die offizielle Website oder einen zugelassenen Partner.",
+          "Es gibt heute kein Verkaufsportal; Sie können noch nicht reservieren oder zahlen. Seiten, die das bereits anbieten, sind nicht der offizielle Kanal.",
         ],
       },
       {
         id: "expected",
         title: "Was erwartet wird",
-        paragraphs: ["Online-Registrierung Ihres Kennzeichens. Kein physischer Aufkleber."],
+        paragraphs: [
+          "Die Vignette wird digital und an das Kennzeichen gekoppelt — kein Aufkleber an der Windschutzscheibe.",
+          "Nach den Plänen wählen Sie eine Laufzeit von 1 Tag, 10 Tagen, 1 Monat, 2 Monaten oder 1 Jahr.",
+        ],
       },
     ],
-    statusBadge: "Noch nicht verfügbar",
+    statusBadge: "Verkauf erwartet ab 1. März 2027",
+    officialSourceLabel: "Offizielle Quelle",
     steps: [
-      { title: "Auf offiziellen Start warten", description: "Verkauf erwartet vor 1. Mai 2027." },
+      {
+        title: "Auf den offiziellen Verkauf warten",
+        description: "Online-Kauf erwartet ab 1. März 2027, laut flämischer Regierung.",
+      },
       { title: "Kennzeichen registrieren", description: "Digitales System — kein Aufkleber." },
       { title: "Laufzeit wählen", description: "Tag, 10 Tage, Monat, 2 Monate oder Jahr." },
-      { title: "Mit gültiger Vignette fahren", description: "Kameras prüfen automatisch." },
+      { title: "Mit gültiger Vignette fahren", description: "Kameras prüfen automatisch ab 1. Mai 2027." },
     ],
     faqs: [
       {
         question: "Kann ich jetzt vorbestellen?",
-        answer: "Nein. Newsletter abonnieren für Updates.",
+        answer:
+          "Nein. Nach aktuellen Plänen startet der Online-Verkauf am 1. März 2027. Newsletter abonnieren, um den offiziellen Kanal zu erhalten, sobald er bekannt ist.",
+      },
+      {
+        question: "Wann wird die Vignette Pflicht?",
+        answer:
+          "Nach den Plänen ab dem 1. Mai 2027 auf belgischen Autobahnen und Regionalstraßen. Eine Übergangsfrist ist vom 1. Mai bis 1. Juli 2027 geplant.",
       },
     ],
   },
@@ -514,9 +529,21 @@ const dictionary: BaseDictionary = {
     privacyLink: "Datenschutz",
   },
   sources: [
-    { title: "Flämische Regierung", url: "https://www.vlaanderen.be", description: "Offizielle Ankündigungen" },
-    { title: "Viapass", url: "https://www.viapass.be", description: "LKW-Kilometerabgabe" },
-    { title: "EU-Kommission", url: "https://ec.europa.eu", description: "Prüfung der Abkommen" },
+    {
+      title: "Flämische Regierung — Straßenvignette ab 1. Mai 2027",
+      url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+      description: "Offizielle Seite zu Pflicht, Tarifen und Kauf ab 1. März 2027",
+    },
+    {
+      title: "Viapass — Kilometerabgabe für Lkw",
+      url: "https://www.viapass.be",
+      description: "Bestehendes System für Fahrzeuge über 3,5 Tonnen (keine Pkw-Vignette)",
+    },
+    {
+      title: "Europäische Kommission — Straßennutzungsgebühren",
+      url: "https://transport.ec.europa.eu/transport-modes/road/road-charging_en",
+      description: "EU-Rahmen für Maut und Nichtdiskriminierung",
+    },
   ],
 };
 
