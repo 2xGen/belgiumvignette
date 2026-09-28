@@ -173,18 +173,36 @@ body {
   color: var(--ink);
 }
 
+.rate-matrix-table {
+  table-layout: fixed;
+}
+
 .rate-matrix-table th,
 .rate-matrix-table td {
   white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.rate-matrix-table thead th:first-child,
+.rate-matrix-table th[scope="row"] {
+  width: 28%;
+  white-space: normal;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
 }
 
 .rate-matrix-table th[scope="row"] {
-  width: auto;
-  white-space: normal;
-  text-align: left;
-  font-weight: 700;
-  color: var(--ink);
   border-bottom: 1px solid var(--border);
+}
+
+.rate-matrix-table thead th:not(:first-child) {
+  width: 14.4%;
+  text-align: right;
 }
 
 .rate-matrix-table td {
@@ -195,8 +213,13 @@ body {
   color: var(--ink);
 }
 
-.rate-matrix-table td:first-child {
+.rate-matrix-table td:first-child,
+.rate-matrix-table td:last-child {
   width: auto;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
 }
 
 .table-wrap {

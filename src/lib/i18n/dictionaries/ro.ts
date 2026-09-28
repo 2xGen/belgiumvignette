@@ -534,6 +534,8 @@ const dictionary: BaseDictionary = {
     title: "Când pot cumpăra o vignetă belgiană?",
     intro:
       "Conform planurilor actuale, vânzarea online este așteptată de la 1 martie 2027. Vigneta rutieră ar deveni obligatorie de la 1 mai 2027. Condițiile finale și portalul oficial de vânzare se pot schimba.",
+    independenceNotice:
+      "BelgiumVignette.be este un site de informații independent și nu este nici un site oficial al guvernului belgian, nici un vânzător autorizat al vinietei rutiere.",
     sections: [
       {
         id: "when",
@@ -556,8 +558,9 @@ const dictionary: BaseDictionary = {
     officialSourceLabel: "Sursă oficială",
     steps: [
       {
-        title: "Așteptați vânzarea oficială",
-        description: "Achiziție online așteptată de la 1 martie 2027, conform guvernului flamand.",
+        title: "Așteptați vânzarea autorizată",
+        description:
+          "Achiziție online așteptată de la 1 martie 2027 pe site-ul oficial sau printr-un partener autorizat, conform guvernului flamand.",
       },
       { title: "Înregistrați numărul de înmatriculare", description: "Sistem digital — fără autocolant pe parbriz." },
       { title: "Alegeți durata", description: "Zi, 10 zile, lună, 2 luni sau anual." },
@@ -567,7 +570,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Pot precomanda acum?",
         answer:
-          "Nu. Conform planurilor actuale, vânzarea online începe la 1 martie 2027. Abonați-vă la newsletter pentru a primi canalul oficial când va fi anunțat.",
+          "Nu. Conform planurilor actuale, vânzarea online începe la 1 martie 2027. Înscrieți-vă pentru actualizări ca să primiți o notificare când vânzarea autorizată devine disponibilă.",
       },
       {
         question: "Când devine vigneta obligatorie?",
@@ -584,7 +587,10 @@ const dictionary: BaseDictionary = {
       {
         id: "controller",
         title: "Operator de date",
-        paragraphs: ["BelgiumVignette.be — contact: info@tolls.be."],
+        paragraphs: [
+          "BelgiumVignette.be este un site de informații independent despre vigneta rutieră belgiană planificată. Nu suntem afiliați cu guvernul belgian, Flandra, Valonia sau Bruxelles și nu vindem viniete.",
+          "Site-ul este administrat în legătură cu Tolls.be (informații independente despre taxele de drum din Belgia). Contact: info@tolls.be.",
+        ],
       },
       {
         id: "newsletter",
@@ -655,6 +661,8 @@ const dictionary: BaseDictionary = {
     success: "Mulțumim! Sunteți abonat.",
     error: "Ceva nu a funcționat. Vă rugăm să încercați din nou.",
     privacyLink: "politica de confidențialitate.",
+    independenceNote:
+      "BelgiumVignette.be este un serviciu de informare independent și nu este afiliat cu guvernul belgian. În prezent nu vindem vinieta rutieră belgiană.",
     sticky: {
       teaser: "Vinieta nu este încă de vânzare — primiți linkul de cumpărare",
       cta: "Înscrieți-vă →",
@@ -663,11 +671,11 @@ const dictionary: BaseDictionary = {
     intents: {
       home: {
         title:
-          "Primiți linkul oficial de cumpărare imediat ce vinieta belgiană este disponibilă",
+          "Primiți linkul de cumpărare imediat ce vinieta belgiană este disponibilă",
         description:
-          "Vânzarea este planificată de la 1 martie 2027. Lăsați adresa de e-mail și vă anunțăm când opțiunea oficială de cumpărare este disponibilă.",
+          "Vânzarea este planificată de la 1 martie 2027. Lăsați adresa de e-mail și primiți o singură notificare când vânzarea autorizată devine disponibilă.",
         benefits: [
-          "Link oficial de cumpărare imediat ce este disponibil",
+          "Link către un canal de cumpărare autorizat imediat ce este cunoscut",
           "Actualizări când se schimbă prețurile sau regulile",
           "Fără e-mailuri inutile",
         ],
@@ -680,15 +688,15 @@ const dictionary: BaseDictionary = {
         benefitsIntro: "Primiți un e-mail când:",
         benefits: [
           "prețurile finale sunt confirmate;",
-          "începe vânzarea oficială;",
-          "linkul oficial de cumpărare este disponibil.",
+          "începe vânzarea autorizată;",
+          "un link către un canal de cumpărare recunoscut este disponibil.",
         ],
         submit: "Țineți-mă la curent",
       },
       buy: {
         title: "Anunțați-mă când vinieta belgiană este pusă în vânzare",
         description:
-          "Vânzarea oficială nu a început încă. Conform planului actual, puteți cumpăra vinieta belgiană de la 1 martie 2027. Lăsați adresa de e-mail și vă anunțăm când opțiunea oficială de cumpărare este disponibilă.",
+          "Vânzarea autorizată nu a început încă. Conform planului actual, puteți cumpăra vinieta belgiană de la 1 martie 2027 pe site-ul oficial sau printr-un partener autorizat. Lăsați adresa de e-mail și primiți o notificare când vânzarea autorizată devine disponibilă.",
         benefits: [],
         submit: "Trimiteți-mi linkul de cumpărare",
       },
@@ -696,32 +704,32 @@ const dictionary: BaseDictionary = {
         title:
           "Anunțați-mă când mașinile străine își pot înregistra vinieta",
         description:
-          "Șoferii străini vor avea, conform planurilor, nevoie și ei de o vinietă belgiană. Primiți o notificare când înregistrarea și cumpărarea sunt oficial posibile.",
+          "Șoferii străini vor avea, conform planurilor, nevoie și ei de o vinietă belgiană. Primiți o notificare când înregistrarea și cumpărarea printr-un canal recunoscut sunt posibile.",
         benefits: [
-          "Începutul vânzării oficiale",
+          "Începutul vânzării autorizate",
           "Reguli pentru numere de înmatriculare străine",
-          "Link oficial de cumpărare",
+          "Link către un canal de cumpărare recunoscut",
         ],
         submit: "Țineți-mă la curent",
       },
       news: {
         title: "Primiți actualizări importante despre vinieta belgiană",
         description:
-          "Alerte scurte și relevante când există știri oficiale despre prețuri, reguli sau începutul vânzării.",
+          "Alerte scurte și relevante când există știri despre prețuri, reguli sau începutul vânzării.",
         benefits: [
-          "Actualizări oficiale importante",
+          "Actualizări importante despre vinietă",
           "Fără spam zilnic",
-          "Link de cumpărare imediat ce este disponibil",
+          "Link de cumpărare imediat ce un canal recunoscut este disponibil",
         ],
         submit: "Primiți actualizări",
       },
       default: {
         title:
-          "Primiți linkul oficial de cumpărare imediat ce vinieta belgiană este disponibilă",
+          "Primiți linkul de cumpărare imediat ce vinieta belgiană este disponibilă",
         description:
-          "Vânzarea este planificată să înceapă pe 1 martie 2027. Vă trimitem o singură notificare când puteți cumpăra oficial.",
+          "Vânzarea este planificată să înceapă pe 1 martie 2027. Vă trimitem o singură notificare când vânzarea autorizată devine disponibilă.",
         benefits: [
-          "Link oficial de cumpărare",
+          "Link către un canal de cumpărare autorizat",
           "Actualizări despre prețuri și reguli",
           "Fără e-mailuri inutile",
         ],

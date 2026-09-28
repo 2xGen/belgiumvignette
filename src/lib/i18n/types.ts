@@ -249,6 +249,7 @@ export interface Dictionary {
   buy: {
     title: string;
     intro: string;
+    independenceNotice: string;
     sections: ContentSection[];
     statusBadge: string;
     steps: { title: string; description: string }[];
@@ -303,6 +304,8 @@ export interface Dictionary {
     success: string;
     error: string;
     privacyLink: string;
+    /** Shown under every signup form. */
+    independenceNote: string;
     sticky: {
       teaser: string;
       cta: string;

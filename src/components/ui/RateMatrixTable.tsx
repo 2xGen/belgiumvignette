@@ -16,44 +16,22 @@ export function RateMatrixTable({
         <thead>
           <tr>
             <th scope="col">{matrix.vehicleHeader}</th>
-            <th scope="col" className="text-right">
-              {matrix.dayHeader}
-            </th>
-            <th scope="col" className="text-right">
-              {matrix.tenDaysHeader}
-            </th>
-            <th scope="col" className="text-right">
-              {matrix.monthHeader}
-            </th>
-            <th scope="col" className="text-right">
-              {matrix.twoMonthsHeader}
-            </th>
-            <th scope="col" className="text-right">
-              {matrix.yearHeader}
-            </th>
+            <th scope="col">{matrix.dayHeader}</th>
+            <th scope="col">{matrix.tenDaysHeader}</th>
+            <th scope="col">{matrix.monthHeader}</th>
+            <th scope="col">{matrix.twoMonthsHeader}</th>
+            <th scope="col">{matrix.yearHeader}</th>
           </tr>
         </thead>
         <tbody>
           {matrix.rows.map((row) => (
             <tr key={row.label}>
-              <th scope="row" className="font-semibold text-ink">
-                {row.label}
-              </th>
-              <td className="text-right font-[family-name:var(--font-display)] font-bold text-ink">
-                {row.day}
-              </td>
-              <td className="text-right font-[family-name:var(--font-display)] font-bold text-ink">
-                {row.tenDays}
-              </td>
-              <td className="text-right font-[family-name:var(--font-display)] font-bold text-ink">
-                {row.month}
-              </td>
-              <td className="text-right font-[family-name:var(--font-display)] font-bold text-ink">
-                {row.twoMonths}
-              </td>
-              <td className="text-right font-[family-name:var(--font-display)] font-bold text-ink">
-                {row.year}
-              </td>
+              <th scope="row">{row.label}</th>
+              <td>{row.day}</td>
+              <td>{row.tenDays}</td>
+              <td>{row.month}</td>
+              <td>{row.twoMonths}</td>
+              <td>{row.year}</td>
             </tr>
           ))}
         </tbody>

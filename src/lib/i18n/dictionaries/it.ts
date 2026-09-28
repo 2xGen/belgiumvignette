@@ -534,6 +534,8 @@ const dictionary: BaseDictionary = {
     title: "Quando posso comprare una vignetta belga?",
     intro:
       "Secondo i piani attuali, la vendita online è prevista dal 1 marzo 2027. La vignetta stradale diventerebbe obbligatoria dal 1 maggio 2027. Le condizioni definitive e il portale ufficiale di vendita possono ancora cambiare.",
+    independenceNotice:
+      "BelgiumVignette.be è un sito informativo indipendente e non è un sito ufficiale del governo belga né un venditore riconosciuto della vignetta stradale.",
     sections: [
       {
         id: "when",
@@ -556,8 +558,9 @@ const dictionary: BaseDictionary = {
     officialSourceLabel: "Fonte ufficiale",
     steps: [
       {
-        title: "Attendi la vendita ufficiale",
-        description: "Acquisto online previsto dal 1 marzo 2027, secondo il Governo fiammingo.",
+        title: "Attendi la vendita autorizzata",
+        description:
+          "Acquisto online previsto dal 1 marzo 2027 tramite il sito ufficiale o un partner autorizzato, secondo il Governo fiammingo.",
       },
       { title: "Registrare la targa", description: "Sistema digitale — nessun adesivo sul parabrezza." },
       { title: "Scegliere la durata", description: "Giorno, 10 giorni, mese, 2 mesi o annuale." },
@@ -567,7 +570,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Posso preordinare ora?",
         answer:
-          "No. Secondo i piani attuali, la vendita online inizia il 1 marzo 2027. Iscriviti alla newsletter per ricevere il canale ufficiale quando sarà annunciato.",
+          "No. Secondo i piani attuali, la vendita online inizia il 1 marzo 2027. Iscriviti per ricevere una notifica quando la vendita autorizzata sarà disponibile.",
       },
       {
         question: "Quando la vignetta diventa obbligatoria?",
@@ -584,7 +587,10 @@ const dictionary: BaseDictionary = {
       {
         id: "controller",
         title: "Titolare del trattamento",
-        paragraphs: ["BelgiumVignette.be — contatto: info@tolls.be."],
+        paragraphs: [
+          "BelgiumVignette.be è un sito informativo indipendente sulla vignetta stradale belga prevista. Non siamo affiliati al governo belga, alle Fiandre, alla Vallonia o a Bruxelles, e non vendiamo vignette.",
+          "Il sito è gestito in relazione con Tolls.be (informazioni indipendenti sui pedaggi in Belgio). Contatto: info@tolls.be.",
+        ],
       },
       {
         id: "newsletter",
@@ -655,6 +661,8 @@ const dictionary: BaseDictionary = {
     success: "Grazie! Sei iscritto.",
     error: "Qualcosa è andato storto. Riprova.",
     privacyLink: "l'informativa sulla privacy",
+    independenceNote:
+      "BelgiumVignette.be è un servizio informativo indipendente e non è affiliato al governo belga. Al momento non vendiamo la vignetta stradale belga.",
     sticky: {
       teaser: "Vignetta non ancora in vendita — ricevi il link di acquisto",
       cta: "Iscriviti →",
@@ -663,11 +671,11 @@ const dictionary: BaseDictionary = {
     intents: {
       home: {
         title:
-          "Ricevi il link di acquisto ufficiale non appena la vignetta belga sarà disponibile",
+          "Ricevi il link di acquisto non appena la vignetta belga sarà in vendita",
         description:
-          "La vendita è prevista a partire dal 1° marzo 2027. Lascia il tuo indirizzo email e ricevi una notifica non appena l'opzione di acquisto ufficiale sarà disponibile.",
+          "La vendita è prevista a partire dal 1° marzo 2027. Lascia il tuo indirizzo email e ricevi una notifica quando la vendita autorizzata sarà disponibile.",
         benefits: [
-          "Link di acquisto ufficiale non appena disponibile",
+          "Link a un canale di acquisto autorizzato non appena noto",
           "Aggiornamenti in caso di modifiche a prezzi o regole",
           "Nessuna email inutile",
         ],
@@ -680,15 +688,15 @@ const dictionary: BaseDictionary = {
         benefitsIntro: "Ricevi una sola email quando:",
         benefits: [
           "i prezzi definitivi saranno confermati;",
-          "inizierà la vendita ufficiale;",
-          "il link di acquisto ufficiale sarà disponibile.",
+          "inizierà la vendita autorizzata;",
+          "sarà disponibile un link a un canale di acquisto riconosciuto.",
         ],
         submit: "Tienimi aggiornato",
       },
       buy: {
         title: "Avvisami non appena la vignetta belga sarà in vendita",
         description:
-          "La vendita ufficiale non è ancora iniziata. Secondo la pianificazione attuale, potrai acquistare la vignetta belga a partire dal 1° marzo 2027. Lascia il tuo indirizzo email e ricevi una notifica non appena l'opzione di acquisto ufficiale sarà disponibile.",
+          "La vendita autorizzata non è ancora iniziata. Secondo la pianificazione attuale, potrai acquistare la vignetta belga a partire dal 1° marzo 2027 tramite il sito ufficiale o un partner autorizzato. Lascia il tuo indirizzo email e ricevi una notifica quando la vendita autorizzata sarà disponibile.",
         benefits: [],
         submit: "Inviami il link di acquisto",
       },
@@ -696,32 +704,32 @@ const dictionary: BaseDictionary = {
         title:
           "Avvisami quando le auto estere potranno registrare la vignetta",
         description:
-          "Secondo i piani, anche i conducenti esteri avranno bisogno di una vignetta belga. Ricevi una notifica non appena registrazione e acquisto saranno ufficialmente possibili.",
+          "Secondo i piani, anche i conducenti esteri avranno bisogno di una vignetta belga. Ricevi una notifica non appena registrazione e acquisto saranno possibili tramite un canale riconosciuto.",
         benefits: [
-          "Inizio della vendita ufficiale",
+          "Inizio della vendita autorizzata",
           "Regole per le targhe estere",
-          "Link di acquisto ufficiale",
+          "Link a un canale di acquisto riconosciuto",
         ],
         submit: "Tienimi aggiornato",
       },
       news: {
         title: "Ricevi aggiornamenti importanti sulla vignetta belga",
         description:
-          "Avvisi brevi e pertinenti quando ci sono notizie ufficiali su prezzi, regole o l'inizio della vendita.",
+          "Avvisi brevi e pertinenti quando ci sono notizie su prezzi, regole o l'inizio della vendita.",
         benefits: [
-          "Aggiornamenti ufficiali importanti",
+          "Aggiornamenti importanti sulla vignetta",
           "Niente spam quotidiano",
-          "Link di acquisto non appena disponibile",
+          "Link di acquisto non appena un canale riconosciuto sarà disponibile",
         ],
         submit: "Ricevi aggiornamenti",
       },
       default: {
         title:
-          "Ricevi il link di acquisto ufficiale non appena la vignetta belga sarà disponibile",
+          "Ricevi il link di acquisto non appena la vignetta belga sarà in vendita",
         description:
-          "La vendita inizia, secondo i piani, il 1° marzo 2027. Ti invieremo una sola notifica non appena potrai acquistare ufficialmente.",
+          "La vendita inizia, secondo i piani, il 1° marzo 2027. Ti invieremo una sola notifica quando la vendita autorizzata sarà disponibile.",
         benefits: [
-          "Link di acquisto ufficiale",
+          "Link a un canale di acquisto autorizzato",
           "Aggiornamenti su prezzi e regole",
           "Nessuna email inutile",
         ],

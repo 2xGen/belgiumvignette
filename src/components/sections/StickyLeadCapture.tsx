@@ -133,57 +133,67 @@ export default function StickyLeadCapture({
             </div>
 
             {status === "success" ? (
-              <p className="notice-box text-sm">{dict.newsletter.success}</p>
+              <>
+                <p className="notice-box text-sm">{dict.newsletter.success}</p>
+                <p className="mt-3 text-xs leading-relaxed text-text-muted">
+                  {dict.newsletter.independenceNote}
+                </p>
+              </>
             ) : (
-              <form
-                onSubmit={handleSubmit}
-                className="grid gap-3 sm:grid-cols-[1fr_auto] sm:items-end"
-              >
-                <div className="space-y-3 sm:col-span-2">
-                  <label htmlFor={inputId} className="sr-only">
-                    {dict.newsletter.emailPlaceholder}
-                  </label>
-                  <input
-                    id={inputId}
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder={dict.newsletter.emailPlaceholder}
-                    autoComplete="email"
-                  />
-                  <label className="flex items-start gap-2 text-xs leading-snug text-text-muted">
-                    <input
-                      type="checkbox"
-                      required
-                      checked={consent}
-                      onChange={(e) => setConsent(e.target.checked)}
-                      className="mt-0.5"
-                    />
-                    <span>
-                      {dict.newsletter.consentLabel}{" "}
-                      <Link
-                        href={getLocalizedPath(locale, "privacy")}
-                        className="text-link"
-                      >
-                        {dict.newsletter.privacyLink}
-                      </Link>
-                    </span>
-                  </label>
-                </div>
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="btn-primary sm:col-start-2 disabled:opacity-60"
+              <>
+                <form
+                  onSubmit={handleSubmit}
+                  className="grid gap-3 sm:grid-cols-[1fr_auto] sm:items-end"
                 >
-                  {copy.submit}
-                </button>
-                {status === "error" && (
-                  <p className="text-sm text-signal sm:col-span-2">
-                    {dict.newsletter.error}
-                  </p>
-                )}
-              </form>
+                  <div className="space-y-3 sm:col-span-2">
+                    <label htmlFor={inputId} className="sr-only">
+                      {dict.newsletter.emailPlaceholder}
+                    </label>
+                    <input
+                      id={inputId}
+                      type="email"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder={dict.newsletter.emailPlaceholder}
+                      autoComplete="email"
+                    />
+                    <label className="flex items-start gap-2 text-xs leading-snug text-text-muted">
+                      <input
+                        type="checkbox"
+                        required
+                        checked={consent}
+                        onChange={(e) => setConsent(e.target.checked)}
+                        className="mt-0.5"
+                      />
+                      <span>
+                        {dict.newsletter.consentLabel}{" "}
+                        <Link
+                          href={getLocalizedPath(locale, "privacy")}
+                          className="text-link"
+                        >
+                          {dict.newsletter.privacyLink}
+                        </Link>
+                      </span>
+                    </label>
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="btn-primary sm:col-start-2 disabled:opacity-60"
+                  >
+                    {copy.submit}
+                  </button>
+                  {status === "error" && (
+                    <p className="text-sm text-signal sm:col-span-2">
+                      {dict.newsletter.error}
+                    </p>
+                  )}
+                </form>
+                <p className="mt-3 text-xs leading-relaxed text-text-muted">
+                  {dict.newsletter.independenceNote}
+                </p>
+              </>
             )}
           </div>
         )}

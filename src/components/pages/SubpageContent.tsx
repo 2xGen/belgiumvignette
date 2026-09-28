@@ -360,6 +360,7 @@ export function BuyPageContent({ dict }: { dict: Dictionary }) {
   const officialSource = dict.sources[0];
   return (
     <>
+      <p className="notice-box mb-8 text-sm">{content.independenceNotice}</p>
       <ContentSections sections={content.sections} />
       {officialSource ? (
         <p className="mt-8 text-sm">

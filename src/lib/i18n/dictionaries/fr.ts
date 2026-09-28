@@ -543,6 +543,8 @@ const dictionary: BaseDictionary = {
     title: "Quand puis-je acheter une vignette belge ?",
     intro:
       "Selon les plans actuels, la vente en ligne est prévue à partir du 1er mars 2027. La vignette routière deviendrait obligatoire dès le 1er mai 2027. Les conditions définitives et le portail de vente officiel peuvent encore changer.",
+    independenceNotice:
+      "BelgiumVignette.be est un site d'information indépendant et n'est ni un site officiel du gouvernement belge, ni un vendeur agréé de la vignette routière.",
     sections: [
       {
         id: "when",
@@ -565,8 +567,9 @@ const dictionary: BaseDictionary = {
     officialSourceLabel: "Source officielle",
     steps: [
       {
-        title: "Attendre la vente officielle",
-        description: "Achat en ligne prévu à partir du 1er mars 2027, selon les autorités flamandes.",
+        title: "Attendre la vente autorisée",
+        description:
+          "Achat en ligne prévu à partir du 1er mars 2027 via le site officiel ou un partenaire agréé, selon les autorités flamandes.",
       },
       { title: "Enregistrer votre plaque", description: "Système numérique — pas de sticker." },
       { title: "Choisir la durée", description: "Jour, 10 jours, mois, 2 mois ou annuel." },
@@ -576,7 +579,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Puis-je réserver maintenant ?",
         answer:
-          "Non. Selon les plans actuels, la vente en ligne commence le 1er mars 2027. Inscrivez-vous à la newsletter pour recevoir le canal officiel dès qu'il sera connu.",
+          "Non. Selon les plans actuels, la vente en ligne commence le 1er mars 2027. Inscrivez-vous pour être prévenu lorsque la vente autorisée sera disponible.",
       },
       {
         question: "Quand la vignette devient-elle obligatoire ?",
@@ -593,7 +596,10 @@ const dictionary: BaseDictionary = {
       {
         id: "controller",
         title: "Responsable",
-        paragraphs: ["BelgiumVignette.be — contact : info@tolls.be."],
+        paragraphs: [
+          "BelgiumVignette.be est un site d'information indépendant sur la vignette routière belge prévue. Nous ne sommes pas affiliés au gouvernement belge, à la Flandre, à la Wallonie ou à Bruxelles, et nous ne vendons pas de vignettes.",
+          "Le site est géré en lien avec Tolls.be (information indépendante sur les péages en Belgique). Contact : info@tolls.be.",
+        ],
       },
       {
         id: "newsletter",
@@ -664,19 +670,21 @@ const dictionary: BaseDictionary = {
     success: "Merci ! Vous êtes inscrit.",
     error: "Une erreur est survenue. Réessayez.",
     privacyLink: "politique de confidentialité.",
+    independenceNote:
+      "BelgiumVignette.be est un service d'information indépendant et n'est pas affilié au gouvernement belge. Nous ne vendons actuellement pas la vignette routière belge.",
     sticky: {
-      teaser: "Vignette pas encore en vente — recevez le lien d'achat",
+      teaser: "Vignette pas encore en vente — soyez prévenu au démarrage des ventes",
       cta: "S'inscrire →",
       closeLabel: "Fermer",
     },
     intents: {
       home: {
         title:
-          "Recevez le lien d'achat officiel dès que la vignette belge sera disponible",
+          "Recevez le lien d'achat lorsque la vignette belge sera en vente",
         description:
-          "La vente est prévue à partir du 1er mars 2027. Laissez votre adresse e-mail et recevez une notification dès que l'achat officiel sera possible.",
+          "La vente est prévue à partir du 1er mars 2027. Laissez votre adresse e-mail et recevez une seule notification lorsque la vente autorisée sera disponible.",
         benefits: [
-          "Lien d'achat officiel dès qu'il est disponible",
+          "Lien vers un canal d'achat autorisé dès qu'il est connu",
           "Mises à jour en cas de changement de prix ou de règles",
           "Pas d'e-mails inutiles",
         ],
@@ -689,15 +697,15 @@ const dictionary: BaseDictionary = {
         benefitsIntro: "Recevez un e-mail dès que :",
         benefits: [
           "les prix définitifs sont confirmés ;",
-          "la vente officielle démarre ;",
-          "le lien d'achat officiel est disponible.",
+          "la vente autorisée démarre ;",
+          "un lien vers un canal d'achat reconnu est disponible.",
         ],
         submit: "Tenez-moi informé",
       },
       buy: {
         title: "Prévenez-moi dès que la vignette belge sera en vente",
         description:
-          "La vente officielle n'a pas encore commencé. Selon le planning actuel, vous pourrez acheter la vignette belge à partir du 1er mars 2027. Laissez votre adresse e-mail et recevez une notification dès que l'achat officiel sera possible.",
+          "La vente autorisée n'a pas encore commencé. Selon le planning actuel, vous pourrez acheter la vignette belge à partir du 1er mars 2027 via le site officiel ou un partenaire agréé. Laissez votre adresse e-mail et recevez une notification lorsque la vente autorisée sera disponible.",
         benefits: [],
         submit: "Envoyez-moi le lien d'achat",
       },
@@ -705,32 +713,32 @@ const dictionary: BaseDictionary = {
         title:
           "Prévenez-moi lorsque les voitures étrangères pourront enregistrer leur vignette",
         description:
-          "Selon les plans, les conducteurs étrangers auront également besoin d'une vignette belge. Recevez une notification dès que l'enregistrement et l'achat seront officiellement possibles.",
+          "Selon les plans, les conducteurs étrangers auront également besoin d'une vignette belge. Recevez une notification dès que l'enregistrement et l'achat via un canal reconnu seront possibles.",
         benefits: [
-          "Début de la vente officielle",
+          "Début de la vente autorisée",
           "Règles pour les plaques étrangères",
-          "Lien d'achat officiel",
+          "Lien vers un canal d'achat reconnu",
         ],
         submit: "Tenez-moi informé",
       },
       news: {
         title: "Recevez les mises à jour importantes sur la vignette belge",
         description:
-          "Des alertes courtes et pertinentes dès qu'il y a des nouvelles officielles sur les prix, les règles ou le début des ventes.",
+          "Des alertes courtes et pertinentes dès qu'il y a des nouvelles sur les prix, les règles ou le début des ventes.",
         benefits: [
-          "Mises à jour officielles importantes",
+          "Mises à jour importantes sur la vignette",
           "Pas de spam quotidien",
-          "Lien d'achat dès qu'il est disponible",
+          "Lien d'achat dès qu'un canal reconnu est disponible",
         ],
         submit: "Recevoir les mises à jour",
       },
       default: {
         title:
-          "Recevez le lien d'achat officiel dès que la vignette belge sera disponible",
+          "Recevez le lien d'achat lorsque la vignette belge sera en vente",
         description:
-          "La vente devrait démarrer le 1er mars 2027. Nous vous enverrons une seule notification dès que vous pourrez acheter officiellement.",
+          "La vente devrait démarrer le 1er mars 2027. Nous vous enverrons une seule notification lorsque la vente autorisée sera disponible.",
         benefits: [
-          "Lien d'achat officiel",
+          "Lien vers un canal d'achat autorisé",
           "Mises à jour sur les prix et les règles",
           "Pas d'e-mails inutiles",
         ],

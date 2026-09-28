@@ -534,6 +534,8 @@ const dictionary: BaseDictionary = {
     title: "When can I buy a Belgium vignette?",
     intro:
       "According to current plans, online sales are expected from 1 March 2027. The road vignette would become mandatory from 1 May 2027. Final conditions and the official sales portal may still change.",
+    independenceNotice:
+      "BelgiumVignette.be is an independent information website and is not an official Belgian government website or recognised vignette seller.",
     sections: [
       {
         id: "when",
@@ -556,8 +558,9 @@ const dictionary: BaseDictionary = {
     officialSourceLabel: "Official source",
     steps: [
       {
-        title: "Wait for official sales",
-        description: "Online purchase expected from 1 March 2027, according to the Flemish government.",
+        title: "Wait for authorised sales",
+        description:
+          "Online purchase expected from 1 March 2027 via the official website or an authorised partner, according to the Flemish government.",
       },
       { title: "Register your plate", description: "Digital system — no windshield sticker." },
       { title: "Choose duration", description: "Day, 10 days, month, 2 months or annual." },
@@ -567,7 +570,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Can I pre-order now?",
         answer:
-          "No. According to current plans, online sales start on 1 March 2027. Subscribe to the newsletter to get the official channel when it is announced.",
+          "No. According to current plans, online sales start on 1 March 2027. Subscribe for updates to be notified when authorised sales become available.",
       },
       {
         question: "When does the vignette become mandatory?",
@@ -584,7 +587,10 @@ const dictionary: BaseDictionary = {
       {
         id: "controller",
         title: "Data controller",
-        paragraphs: ["BelgiumVignette.be — contact: info@tolls.be."],
+        paragraphs: [
+          "BelgiumVignette.be is an independent information website about the planned Belgian road vignette. We are not affiliated with the Belgian government, Flanders, Wallonia or Brussels, and we do not sell vignettes.",
+          "The site is operated in connection with Tolls.be (independent information about tolls in Belgium). Contact: info@tolls.be.",
+        ],
       },
       {
         id: "newsletter",
@@ -655,23 +661,25 @@ const dictionary: BaseDictionary = {
     success: "Thank you! You're subscribed.",
     error: "Something went wrong. Please try again.",
     privacyLink: "privacy policy.",
+    independenceNote:
+      "BelgiumVignette.be is an independent information service and is not affiliated with the Belgian government. We do not currently sell the Belgian road vignette.",
     sticky: {
-      teaser: "Vignette not for sale yet — get the buy link",
+      teaser: "Vignette not for sale yet — get notified when sales start",
       cta: "Sign up →",
       closeLabel: "Close",
     },
     intents: {
       home: {
         title:
-          "Get the official buy link as soon as the Belgian vignette is available",
+          "Get the purchase link when the Belgian vignette goes on sale",
         description:
-          "Sales are planned from 1 March 2027. Leave your email and we'll notify you once the official purchase option is available.",
+          "Sales are planned from 1 March 2027. Leave your email and receive one notification when authorised sales become available.",
         benefits: [
-          "Official buy link as soon as it's available",
+          "Link to an authorised purchase channel as soon as it is known",
           "Updates when prices or rules change",
           "No unnecessary emails",
         ],
-        submit: "Send me the buy link",
+        submit: "Send me the purchase link",
       },
       prices: {
         title: "Get notified when final vignette prices are confirmed",
@@ -680,52 +688,52 @@ const dictionary: BaseDictionary = {
         benefitsIntro: "Get one email when:",
         benefits: [
           "final prices are confirmed;",
-          "official sales start;",
-          "the official buy link is available.",
+          "authorised sales start;",
+          "a link to a recognised purchase channel is available.",
         ],
         submit: "Keep me updated",
       },
       buy: {
         title: "Let me know when the Belgian vignette goes on sale",
         description:
-          "Official sales have not started yet. Under the current plan, you can buy the Belgian vignette from 1 March 2027. Leave your email and we'll notify you once the official purchase option is available.",
+          "Authorised sales have not started yet. Under the current plan, you can buy the Belgian vignette from 1 March 2027 via the official website or an authorised partner. Leave your email and receive a notification when authorised sales become available.",
         benefits: [],
-        submit: "Send me the buy link",
+        submit: "Send me the purchase link",
       },
       foreign: {
         title:
           "Let me know when foreign cars can register their vignette",
         description:
-          "Foreign drivers are also expected to need a Belgian vignette. Get notified once registration and purchase are officially possible.",
+          "Foreign drivers are also expected to need a Belgian vignette. Get notified once registration and purchase via a recognised channel are possible.",
         benefits: [
-          "Start of official sales",
+          "Start of authorised sales",
           "Rules for foreign plates",
-          "Official buy link",
+          "Link to a recognised purchase channel",
         ],
         submit: "Keep me updated",
       },
       news: {
         title: "Get important updates on the Belgian vignette",
         description:
-          "Short, relevant alerts when there is official news on prices, rules, or the start of sales.",
+          "Short, relevant alerts when there is news on prices, rules, or the start of sales.",
         benefits: [
-          "Important official updates",
+          "Important updates on the vignette",
           "No daily spam",
-          "Buy link as soon as available",
+          "Purchase link as soon as a recognised channel is available",
         ],
         submit: "Get updates",
       },
       default: {
         title:
-          "Get the official buy link as soon as the Belgian vignette is available",
+          "Get the purchase link when the Belgian vignette goes on sale",
         description:
-          "Sales are planned to start on 1 March 2027. We'll send you one notification once you can buy officially.",
+          "Sales are planned to start on 1 March 2027. We'll send you one notification when authorised sales become available.",
         benefits: [
-          "Official buy link",
+          "Link to an authorised purchase channel",
           "Updates on prices and rules",
           "No unnecessary emails",
         ],
-        submit: "Send me the buy link",
+        submit: "Send me the purchase link",
       },
     },
   },

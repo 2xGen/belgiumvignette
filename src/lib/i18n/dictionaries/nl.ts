@@ -546,6 +546,8 @@ const dictionary: BaseDictionary = {
     title: "Wanneer kan ik een Belgisch vignet kopen?",
     intro:
       "Volgens de huidige plannen wordt de online verkoop op 1 maart 2027 verwacht. Het wegenvignet zou vanaf 1 mei 2027 verplicht worden. Definitieve voorwaarden en het officiële verkoopportaal kunnen nog wijzigen.",
+    independenceNotice:
+      "BelgiumVignette.be is een onafhankelijke informatiesite en is geen officiële website van de Belgische overheid, noch een erkende verkoper van het wegenvignet.",
     sections: [
       {
         id: "when",
@@ -568,8 +570,8 @@ const dictionary: BaseDictionary = {
     officialSourceLabel: "Officiële bron",
     steps: [
       {
-        title: "Wacht op de officiële verkoop",
-        description: "Online aankoop verwacht vanaf 1 maart 2027, volgens de Vlaamse overheid.",
+        title: "Wacht op de geautoriseerde verkoop",
+        description: "Online aankoop verwacht vanaf 1 maart 2027 via de officiële website of een erkende partner, volgens de Vlaamse overheid.",
       },
       {
         title: "Registreer uw kenteken",
@@ -588,7 +590,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Kan ik nu al reserveren?",
         answer:
-          "Nee. Volgens de huidige plannen start de online verkoop op 1 maart 2027. Schrijf u in voor de nieuwsbrief om het officiële kanaal te ontvangen wanneer het bekend is.",
+          "Nee. Volgens de huidige plannen start de online verkoop op 1 maart 2027. Schrijf u in voor updates om een melding te ontvangen wanneer geautoriseerde verkoop beschikbaar wordt.",
       },
       {
         question: "Wanneer is het vignet verplicht?",
@@ -607,7 +609,8 @@ const dictionary: BaseDictionary = {
         id: "controller",
         title: "Verantwoordelijke",
         paragraphs: [
-          "BelgiumVignette.be is een onafhankelijke informatiesite. Voor privacyvragen: info@tolls.be.",
+          "BelgiumVignette.be is een onafhankelijke informatiesite over het geplande Belgische wegenvignet. Wij zijn niet gelieerd aan de Belgische overheid, Vlaanderen, Wallonië of Brussel, en verkopen geen vignetten.",
+          "De site wordt beheerd in samenhang met Tolls.be (onafhankelijke informatie over tol in België). Contact: info@tolls.be.",
         ],
       },
       {
@@ -682,19 +685,21 @@ const dictionary: BaseDictionary = {
     success: "Bedankt! U bent ingeschreven.",
     error: "Er ging iets mis. Probeer het opnieuw.",
     privacyLink: "privacybeleid gelezen",
+    independenceNote:
+      "BelgiumVignette.be is een onafhankelijke informatiedienst en is niet gelieerd aan de Belgische overheid. Wij verkopen momenteel geen Belgisch wegenvignet.",
     sticky: {
-      teaser: "Vignet nog niet te koop — ontvang de aankooplink",
+      teaser: "Vignet nog niet te koop — ontvang een melding bij start verkoop",
       cta: "Aanmelden →",
       closeLabel: "Sluiten",
     },
     intents: {
       home: {
         title:
-          "Ontvang de officiële aankooplink zodra het Belgische vignet beschikbaar is",
+          "Ontvang de aankooplink zodra het Belgische vignet te koop is",
         description:
-          "De verkoop is gepland vanaf 1 maart 2027. Laat uw e-mailadres achter en ontvang een melding zodra de officiële aankoopmogelijkheid beschikbaar is.",
+          "De verkoop is gepland vanaf 1 maart 2027. Laat uw e-mailadres achter en ontvang één melding wanneer geautoriseerde verkoop beschikbaar wordt.",
         benefits: [
-          "Officiële aankooplink zodra deze beschikbaar is",
+          "Link naar een geautoriseerd aankoopkanaal zodra bekend",
           "Updates bij wijzigingen in prijzen of regels",
           "Geen onnodige e-mails",
         ],
@@ -707,15 +712,15 @@ const dictionary: BaseDictionary = {
         benefitsIntro: "Ontvang één e-mail zodra:",
         benefits: [
           "de definitieve prijzen zijn bevestigd;",
-          "de officiële verkoop start;",
-          "de officiële aankooplink beschikbaar is.",
+          "geautoriseerde verkoop start;",
+          "een link naar een erkend aankoopkanaal beschikbaar is.",
         ],
         submit: "Houd mij op de hoogte",
       },
       buy: {
         title: "Laat het mij weten zodra het Belgische vignet te koop is",
         description:
-          "De officiële verkoop is nog niet gestart. Volgens de huidige planning kunt u het Belgische vignet vanaf 1 maart 2027 kopen. Laat uw e-mailadres achter en ontvang een melding zodra de officiële aankoopmogelijkheid beschikbaar is.",
+          "De geautoriseerde verkoop is nog niet gestart. Volgens de huidige planning kunt u het Belgische vignet vanaf 1 maart 2027 kopen via de officiële website of een erkende partner. Laat uw e-mailadres achter en ontvang een melding wanneer geautoriseerde verkoop beschikbaar wordt.",
         benefits: [],
         submit: "Stuur mij de aankooplink",
       },
@@ -723,32 +728,32 @@ const dictionary: BaseDictionary = {
         title:
           "Laat mij weten wanneer buitenlandse auto's hun vignet kunnen registreren",
         description:
-          "Buitenlandse bestuurders hebben volgens de plannen ook een Belgisch vignet nodig. Ontvang een melding zodra registratie en aankoop officieel mogelijk zijn.",
+          "Buitenlandse bestuurders hebben volgens de plannen ook een Belgisch vignet nodig. Ontvang een melding zodra registratie en aankoop via een erkend kanaal mogelijk zijn.",
         benefits: [
-          "Start van de officiële verkoop",
+          "Start van de geautoriseerde verkoop",
           "Regels voor buitenlandse kentekens",
-          "Officiële aankooplink",
+          "Link naar een erkend aankoopkanaal",
         ],
         submit: "Houd mij op de hoogte",
       },
       news: {
         title: "Ontvang belangrijke updates over het Belgische vignet",
         description:
-          "Korte, relevante meldingen wanneer er officieel nieuws is over prijzen, regels of de start van de verkoop.",
+          "Korte, relevante meldingen wanneer er nieuws is over prijzen, regels of de start van de verkoop.",
         benefits: [
-          "Belangrijke officiële updates",
+          "Belangrijke updates over het vignet",
           "Geen dagelijkse spam",
-          "Aankooplink zodra beschikbaar",
+          "Aankooplink zodra een erkend kanaal beschikbaar is",
         ],
         submit: "Ontvang updates",
       },
       default: {
         title:
-          "Ontvang de officiële aankooplink zodra het Belgische vignet beschikbaar is",
+          "Ontvang de aankooplink zodra het Belgische vignet te koop is",
         description:
-          "De verkoop start volgens de planning op 1 maart 2027. Wij sturen u één melding zodra u officieel kunt kopen.",
+          "De verkoop start volgens de planning op 1 maart 2027. Wij sturen u één melding wanneer geautoriseerde verkoop beschikbaar wordt.",
         benefits: [
-          "Officiële aankooplink",
+          "Link naar een geautoriseerd aankoopkanaal",
           "Updates over prijzen en regels",
           "Geen onnodige e-mails",
         ],

@@ -534,6 +534,8 @@ const dictionary: BaseDictionary = {
     title: "Kdy mohu koupit belgickou dálniční známku?",
     intro:
       "Podle současných plánů je online prodej očekáván od 1. března 2027. Dálniční známka by byla povinná od 1. května 2027. Konečné podmínky a oficiální prodejní portál se ještě mohou změnit.",
+    independenceNotice:
+      "BelgiumVignette.be je nezávislý informační web a není oficiální stránkou belgické vlády ani uznávaným prodejcem silniční známky.",
     sections: [
       {
         id: "when",
@@ -556,8 +558,9 @@ const dictionary: BaseDictionary = {
     officialSourceLabel: "Oficiální zdroj",
     steps: [
       {
-        title: "Počkejte na oficiální prodej",
-        description: "Online nákup očekáván od 1. března 2027 podle vlámské vlády.",
+        title: "Počkejte na autorizovaný prodej",
+        description:
+          "Online nákup očekáván od 1. března 2027 přes oficiální web nebo autorizovaného partnera, podle vlámské vlády.",
       },
       { title: "Zaregistrujte svou značku", description: "Digitální systém — bez nálepky na čelním skle." },
       { title: "Vyberte dobu platnosti", description: "Den, 10 dní, měsíc, 2 měsíce nebo roční." },
@@ -567,7 +570,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Mohu si ji předobjednat?",
         answer:
-          "Ne. Podle současných plánů začíná online prodej 1. března 2027. Přihlaste se k newsletteru, abyste dostali oficiální kanál, až bude oznámen.",
+          "Ne. Podle současných plánů začíná online prodej 1. března 2027. Přihlaste se k odběru, abyste dostali upozornění, až bude autorizovaný prodej dostupný.",
       },
       {
         question: "Kdy je známka povinná?",
@@ -584,7 +587,10 @@ const dictionary: BaseDictionary = {
       {
         id: "controller",
         title: "Správce údajů",
-        paragraphs: ["BelgiumVignette.be — kontakt: info@tolls.be."],
+        paragraphs: [
+          "BelgiumVignette.be je nezávislý informační web o plánované belgické silniční známce. Nejsme spojeni s belgickou vládou, Flandry, Valonskem ani Brusellem a neprodáváme známky.",
+          "Web je provozován ve spojení s Tolls.be (nezávislé informace o mýtném v Belgii). Kontakt: info@tolls.be.",
+        ],
       },
       {
         id: "newsletter",
@@ -655,6 +661,8 @@ const dictionary: BaseDictionary = {
     success: "Děkujeme! Jste přihlášeni k odběru.",
     error: "Něco se pokazilo. Zkuste to prosím znovu.",
     privacyLink: "zásady ochrany soukromí",
+    independenceNote:
+      "BelgiumVignette.be je nezávislá informační služba a není spojena s belgickou vládou. Belgickou silniční známku v současnosti neprodáváme.",
     sticky: {
       teaser: "Známka ještě není v prodeji — získejte odkaz na nákup",
       cta: "Přihlásit se →",
@@ -663,11 +671,11 @@ const dictionary: BaseDictionary = {
     intents: {
       home: {
         title:
-          "Získejte oficiální odkaz na nákup, jakmile bude belgická známka dostupná",
+          "Získejte odkaz na nákup, jakmile bude belgická známka v prodeji",
         description:
-          "Prodej je plánován od 1. března 2027. Zanechte e-mailovou adresu a dostanete upozornění, jakmile bude oficiální nákup možný.",
+          "Prodej je plánován od 1. března 2027. Zanechte e-mailovou adresu a dostanete jedno upozornění, jakmile bude autorizovaný prodej dostupný.",
         benefits: [
-          "Oficiální odkaz na nákup, jakmile bude dostupný",
+          "Odkaz na autorizovaný nákupní kanál, jakmile bude znám",
           "Aktualizace při změnách cen nebo pravidel",
           "Žádné zbytečné e-maily",
         ],
@@ -680,15 +688,15 @@ const dictionary: BaseDictionary = {
         benefitsIntro: "Dostanete jeden e-mail, jakmile:",
         benefits: [
           "budou potvrzeny konečné ceny;",
-          "začne oficiální prodej;",
-          "bude dostupný oficiální odkaz na nákup.",
+          "začne autorizovaný prodej;",
+          "bude dostupný odkaz na uznávaný nákupní kanál.",
         ],
         submit: "Informujte mě",
       },
       buy: {
         title: "Dejte mi vědět, jakmile bude belgická známka v prodeji",
         description:
-          "Oficiální prodej ještě nezačal. Podle současného plánu můžete belgickou známku koupit od 1. března 2027. Zanechte e-mailovou adresu a dostanete upozornění, jakmile bude oficiální nákup možný.",
+          "Autorizovaný prodej ještě nezačal. Podle současného plánu můžete belgickou známku koupit od 1. března 2027 přes oficiální web nebo autorizovaného partnera. Zanechte e-mailovou adresu a dostanete upozornění, jakmile bude autorizovaný prodej dostupný.",
         benefits: [],
         submit: "Pošlete mi odkaz na nákup",
       },
@@ -696,32 +704,32 @@ const dictionary: BaseDictionary = {
         title:
           "Dejte mi vědět, kdy budou moci zahraniční auta registrovat známku",
         description:
-          "Podle plánů budou zahraniční řidiči také potřebovat belgickou známku. Dostanete upozornění, jakmile bude registrace a nákup oficiálně možné.",
+          "Podle plánů budou zahraniční řidiči také potřebovat belgickou známku. Dostanete upozornění, jakmile bude registrace a nákup možné přes uznávaný kanál.",
         benefits: [
-          "Začátek oficiálního prodeje",
+          "Začátek autorizovaného prodeje",
           "Pravidla pro zahraniční registrační značky",
-          "Oficiální odkaz na nákup",
+          "Odkaz na uznávaný nákupní kanál",
         ],
         submit: "Informujte mě",
       },
       news: {
         title: "Dostávejte důležité aktualizace o belgické známce",
         description:
-          "Krátká, relevantní upozornění, když se objeví oficiální zprávy o cenách, pravidlech nebo začátku prodeje.",
+          "Krátká, relevantní upozornění, když se objeví zprávy o cenách, pravidlech nebo začátku prodeje.",
         benefits: [
-          "Důležité oficiální aktualizace",
+          "Důležité aktualizace o známce",
           "Žádný denní spam",
-          "Odkaz na nákup, jakmile bude dostupný",
+          "Odkaz na nákup, jakmile bude uznávaný kanál dostupný",
         ],
         submit: "Dostávat aktualizace",
       },
       default: {
         title:
-          "Získejte oficiální odkaz na nákup, jakmile bude belgická známka dostupná",
+          "Získejte odkaz na nákup, jakmile bude belgická známka v prodeji",
         description:
-          "Prodej podle plánu začíná 1. března 2027. Pošleme vám jedno upozornění, jakmile budete moci oficiálně koupit.",
+          "Prodej podle plánu začíná 1. března 2027. Pošleme vám jedno upozornění, jakmile bude autorizovaný prodej dostupný.",
         benefits: [
-          "Oficiální odkaz na nákup",
+          "Odkaz na autorizovaný nákupní kanál",
           "Aktualizace o cenách a pravidlech",
           "Žádné zbytečné e-maily",
         ],

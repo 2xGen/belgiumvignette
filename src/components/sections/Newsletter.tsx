@@ -59,51 +59,63 @@ export default function Newsletter({
     }
   }
 
+  const independenceNote = (
+    <p className="mt-3 text-xs leading-relaxed text-text-muted">
+      {dict.newsletter.independenceNote}
+    </p>
+  );
+
   const form =
     status === "success" ? (
-      <p className="notice-box text-sm">{dict.newsletter.success}</p>
+      <>
+        <p className="notice-box text-sm">{dict.newsletter.success}</p>
+        {independenceNote}
+      </>
     ) : (
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <div>
-          <label htmlFor={inputId} className="sr-only">
-            {dict.newsletter.emailPlaceholder}
+      <>
+        <form onSubmit={handleSubmit} className="space-y-3">
+          <div>
+            <label htmlFor={inputId} className="sr-only">
+              {dict.newsletter.emailPlaceholder}
+            </label>
+            <input
+              id={inputId}
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder={dict.newsletter.emailPlaceholder}
+              autoComplete="email"
+            />
+          </div>
+          <label className="flex items-start gap-2 text-xs leading-snug text-text-muted">
+            <input
+              type="checkbox"
+              required
+              checked={consent}
+              onChange={(e) => setConsent(e.target.checked)}
+              className="mt-0.5"
+            />
+            <span>
+              {dict.newsletter.consentLabel}{" "}
+              <Link href={getLocalizedPath(locale, "privacy")} className="text-link">
+                {dict.newsletter.privacyLink}
+              </Link>
+            </span>
           </label>
-          <input
-            id={inputId}
-            type="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder={dict.newsletter.emailPlaceholder}
-            autoComplete="email"
-          />
-        </div>
-        <label className="flex items-start gap-2 text-xs leading-snug text-text-muted">
-          <input
-            type="checkbox"
-            required
-            checked={consent}
-            onChange={(e) => setConsent(e.target.checked)}
-            className="mt-0.5"
-          />
-          <span>
-            {dict.newsletter.consentLabel}{" "}
-            <Link href={getLocalizedPath(locale, "privacy")} className="text-link">
-              {dict.newsletter.privacyLink}
-            </Link>
-          </span>
-        </label>
-        <button
-          type="submit"
-          disabled={status === "loading"}
-          className="btn-primary w-full disabled:opacity-60"
-        >
-          {copy.submit}
-        </button>
-        {status === "error" && (
-          <p className="text-sm text-signal">{dict.newsletter.error}</p>
-        )}
-      </form>
+          <button
+            type="submit"
+            disabled={status === "loading"}
+            className="btn-primary w-full disabled:opacity-60"
+          >
+            {copy.submit}
+          </button>
+          {status === "error" && (
+            <p className="text-sm text-signal">{dict.newsletter.error}</p>
+          )}
+        </form>
+        {independenceNote}
+      </>
     );
 
   if (variant === "hero") {

@@ -534,6 +534,8 @@ const dictionary: BaseDictionary = {
     title: "När kan jag köpa en belgisk vignett?",
     intro:
       "Enligt nuvarande planer väntas onlineförsäljningen från 1 mars 2027. Vägvinjetten skulle bli obligatorisk från 1 maj 2027. De slutliga villkoren och den officiella försäljningsportalen kan fortfarande ändras.",
+    independenceNotice:
+      "BelgiumVignette.be är en oberoende informationssajt och är varken en officiell webbplats för den belgiska staten eller en auktoriserad säljare av vägvinjetten.",
     sections: [
       {
         id: "when",
@@ -556,8 +558,9 @@ const dictionary: BaseDictionary = {
     officialSourceLabel: "Officiell källa",
     steps: [
       {
-        title: "Vänta på officiell försäljning",
-        description: "Onlineköp förväntas från 1 mars 2027 enligt den flamländska regeringen.",
+        title: "Vänta på auktoriserad försäljning",
+        description:
+          "Onlineköp förväntas från 1 mars 2027 via den officiella webbplatsen eller en auktoriserad partner, enligt den flamländska regeringen.",
       },
       { title: "Registrera din registreringsskylt", description: "Digitalt system — inget vindruteklistermärke." },
       { title: "Välj giltighetstid", description: "Dag, 10 dagar, månad, 2 månader eller årsvignett." },
@@ -567,7 +570,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Kan jag förbeställa nu?",
         answer:
-          "Nej. Enligt nuvarande planer startar onlineförsäljningen 1 mars 2027. Prenumerera på nyhetsbrevet för att få den officiella kanalen när den tillkännages.",
+          "Nej. Enligt nuvarande planer startar onlineförsäljningen 1 mars 2027. Anmäl dig för uppdateringar så får du ett meddelande när auktoriserad försäljning blir tillgänglig.",
       },
       {
         question: "När blir vinjetten obligatorisk?",
@@ -584,7 +587,10 @@ const dictionary: BaseDictionary = {
       {
         id: "controller",
         title: "Personuppgiftsansvarig",
-        paragraphs: ["BelgiumVignette.be — kontakt: info@tolls.be."],
+        paragraphs: [
+          "BelgiumVignette.be är en oberoende informationssajt om den planerade belgiska vägvinjetten. Vi är inte knutna till den belgiska staten, Flandern, Vallonien eller Bryssel, och säljer inga vinjetter.",
+          "Sajten drivs i samband med Tolls.be (oberoende information om vägavgifter i Belgien). Kontakt: info@tolls.be.",
+        ],
       },
       {
         id: "newsletter",
@@ -655,6 +661,8 @@ const dictionary: BaseDictionary = {
     success: "Tack! Du är prenumererad.",
     error: "Något gick fel. Försök igen.",
     privacyLink: "integritetspolicyn.",
+    independenceNote:
+      "BelgiumVignette.be är en oberoende informationstjänst och är inte knuten till den belgiska staten. Vi säljer för närvarande ingen belgisk vägvinjett.",
     sticky: {
       teaser: "Vignetten säljs ännu inte — få köplänken",
       cta: "Anmäl dig →",
@@ -663,11 +671,11 @@ const dictionary: BaseDictionary = {
     intents: {
       home: {
         title:
-          "Få den officiella köplänken så snart den belgiska vignetten blir tillgänglig",
+          "Få köplänken så snart den belgiska vignetten blir tillgänglig",
         description:
-          "Försäljningen planeras från 1 mars 2027. Lämna din e-postadress så meddelar vi dig när det officiella köpalternativet finns tillgängligt.",
+          "Försäljningen planeras från 1 mars 2027. Lämna din e-postadress och få ett meddelande när auktoriserad försäljning blir tillgänglig.",
         benefits: [
-          "Officiell köplänk så snart den är tillgänglig",
+          "Länk till en auktoriserad köpkanal så snart den är känd",
           "Uppdateringar när priser eller regler ändras",
           "Inga onödiga e-postmeddelanden",
         ],
@@ -680,15 +688,15 @@ const dictionary: BaseDictionary = {
         benefitsIntro: "Få ett e-postmeddelande när:",
         benefits: [
           "de slutliga priserna är bekräftade;",
-          "den officiella försäljningen startar;",
-          "den officiella köplänken är tillgänglig.",
+          "auktoriserad försäljning startar;",
+          "en länk till en godkänd köpkanal är tillgänglig.",
         ],
         submit: "Håll mig uppdaterad",
       },
       buy: {
         title: "Meddela mig när den belgiska vignetten går till försäljning",
         description:
-          "Den officiella försäljningen har ännu inte startat. Enligt nuvarande plan kan du köpa den belgiska vignetten från 1 mars 2027. Lämna din e-postadress så meddelar vi dig när det officiella köpalternativet finns tillgängligt.",
+          "Den auktoriserade försäljningen har ännu inte startat. Enligt nuvarande plan kan du köpa den belgiska vignetten från 1 mars 2027 via den officiella webbplatsen eller en auktoriserad partner. Lämna din e-postadress och få ett meddelande när auktoriserad försäljning blir tillgänglig.",
         benefits: [],
         submit: "Skicka köplänken till mig",
       },
@@ -696,32 +704,32 @@ const dictionary: BaseDictionary = {
         title:
           "Meddela mig när utländska bilar kan registrera sin vignett",
         description:
-          "Utländska förare förväntas också behöva en belgisk vignett. Få besked när registrering och köp officiellt är möjliga.",
+          "Utländska förare förväntas också behöva en belgisk vignett. Få besked när registrering och köp via en godkänd kanal är möjliga.",
         benefits: [
-          "Start av officiell försäljning",
+          "Start av auktoriserad försäljning",
           "Regler för utländska registreringsskyltar",
-          "Officiell köplänk",
+          "Länk till en godkänd köpkanal",
         ],
         submit: "Håll mig uppdaterad",
       },
       news: {
         title: "Få viktiga uppdateringar om den belgiska vignetten",
         description:
-          "Korta, relevanta aviseringar när det finns officiella nyheter om priser, regler eller försäljningsstarten.",
+          "Korta, relevanta aviseringar när det finns nyheter om priser, regler eller försäljningsstarten.",
         benefits: [
-          "Viktiga officiella uppdateringar",
+          "Viktiga uppdateringar om vignetten",
           "Ingen daglig spam",
-          "Köplänk så snart den är tillgänglig",
+          "Köplänk så snart en godkänd kanal är tillgänglig",
         ],
         submit: "Få uppdateringar",
       },
       default: {
         title:
-          "Få den officiella köplänken så snart den belgiska vignetten blir tillgänglig",
+          "Få köplänken så snart den belgiska vignetten blir tillgänglig",
         description:
-          "Försäljningen planeras att starta den 1 mars 2027. Vi skickar dig ett meddelande när du officiellt kan köpa.",
+          "Försäljningen planeras att starta den 1 mars 2027. Vi skickar dig ett meddelande när auktoriserad försäljning blir tillgänglig.",
         benefits: [
-          "Officiell köplänk",
+          "Länk till en auktoriserad köpkanal",
           "Uppdateringar om priser och regler",
           "Inga onödiga e-postmeddelanden",
         ],

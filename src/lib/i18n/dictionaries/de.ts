@@ -534,6 +534,8 @@ const dictionary: BaseDictionary = {
     title: "Wann kann ich eine belgische Vignette kaufen?",
     intro:
       "Nach aktuellen Plänen wird der Online-Verkauf ab dem 1. März 2027 erwartet. Die Straßenvignette würde ab dem 1. Mai 2027 Pflicht. Endgültige Bedingungen und das offizielle Verkaufsportal können sich noch ändern.",
+    independenceNotice:
+      "BelgiumVignette.be ist eine unabhängige Informationswebsite und weder eine offizielle Website der belgischen Regierung noch ein anerkannter Verkäufer der Straßenvignette.",
     sections: [
       {
         id: "when",
@@ -556,8 +558,9 @@ const dictionary: BaseDictionary = {
     officialSourceLabel: "Offizielle Quelle",
     steps: [
       {
-        title: "Auf den offiziellen Verkauf warten",
-        description: "Online-Kauf erwartet ab 1. März 2027, laut flämischer Regierung.",
+        title: "Auf den autorisierten Verkauf warten",
+        description:
+          "Online-Kauf erwartet ab 1. März 2027 über die offizielle Website oder einen zugelassenen Partner, laut flämischer Regierung.",
       },
       { title: "Kennzeichen registrieren", description: "Digitales System — kein Aufkleber." },
       { title: "Laufzeit wählen", description: "Tag, 10 Tage, Monat, 2 Monate oder Jahr." },
@@ -567,7 +570,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Kann ich jetzt vorbestellen?",
         answer:
-          "Nein. Nach aktuellen Plänen startet der Online-Verkauf am 1. März 2027. Newsletter abonnieren, um den offiziellen Kanal zu erhalten, sobald er bekannt ist.",
+          "Nein. Nach aktuellen Plänen startet der Online-Verkauf am 1. März 2027. Melden Sie sich für Updates an, um benachrichtigt zu werden, sobald autorisierter Verkauf verfügbar wird.",
       },
       {
         question: "Wann wird die Vignette Pflicht?",
@@ -584,7 +587,10 @@ const dictionary: BaseDictionary = {
       {
         id: "controller",
         title: "Verantwortlicher",
-        paragraphs: ["BelgiumVignette.be — Kontakt: info@tolls.be."],
+        paragraphs: [
+          "BelgiumVignette.be ist eine unabhängige Informationswebsite zur geplanten belgischen Straßenvignette. Wir sind nicht mit der belgischen Regierung, Flandern, Wallonien oder Brüssel verbunden und verkaufen keine Vignetten.",
+          "Die Website wird im Zusammenhang mit Tolls.be betrieben (unabhängige Informationen zu Maut in Belgien). Kontakt: info@tolls.be.",
+        ],
       },
       {
         id: "newsletter",
@@ -655,19 +661,21 @@ const dictionary: BaseDictionary = {
     success: "Danke! Sie sind angemeldet.",
     error: "Etwas ist schiefgelaufen. Bitte erneut versuchen.",
     privacyLink: "Datenschutzerklärung gelesen.",
+    independenceNote:
+      "BelgiumVignette.be ist ein unabhängiger Informationsdienst und nicht mit der belgischen Regierung verbunden. Wir verkaufen derzeit keine belgische Straßenvignette.",
     sticky: {
-      teaser: "Vignette noch nicht erhältlich — Kauf-Link sichern",
+      teaser: "Vignette noch nicht erhältlich — Benachrichtigung zum Verkaufsstart",
       cta: "Anmelden →",
       closeLabel: "Schließen",
     },
     intents: {
       home: {
         title:
-          "Erhalten Sie den offiziellen Kauf-Link, sobald die belgische Vignette verfügbar ist",
+          "Erhalten Sie den Kauf-Link, sobald die belgische Vignette zum Verkauf steht",
         description:
-          "Der Verkauf ist ab dem 1. März 2027 geplant. Hinterlassen Sie Ihre E-Mail-Adresse und erhalten Sie eine Benachrichtigung, sobald der offizielle Kauf möglich ist.",
+          "Der Verkauf ist ab dem 1. März 2027 geplant. Hinterlassen Sie Ihre E-Mail-Adresse und erhalten Sie eine Benachrichtigung, sobald autorisierter Verkauf verfügbar wird.",
         benefits: [
-          "Offizieller Kauf-Link, sobald er verfügbar ist",
+          "Link zu einem autorisierten Kaufkanal, sobald bekannt",
           "Updates bei Änderungen von Preisen oder Regeln",
           "Keine unnötigen E-Mails",
         ],
@@ -680,15 +688,15 @@ const dictionary: BaseDictionary = {
         benefitsIntro: "Erhalten Sie eine E-Mail, sobald:",
         benefits: [
           "die endgültigen Preise bestätigt sind;",
-          "der offizielle Verkauf startet;",
-          "der offizielle Kauf-Link verfügbar ist.",
+          "autorisierter Verkauf startet;",
+          "ein Link zu einem anerkannten Kaufkanal verfügbar ist.",
         ],
         submit: "Auf dem Laufenden halten",
       },
       buy: {
         title: "Benachrichtigen Sie mich, sobald die belgische Vignette zu kaufen ist",
         description:
-          "Der offizielle Verkauf hat noch nicht begonnen. Nach der aktuellen Planung können Sie die belgische Vignette ab dem 1. März 2027 kaufen. Hinterlassen Sie Ihre E-Mail-Adresse und erhalten Sie eine Benachrichtigung, sobald der offizielle Kauf möglich ist.",
+          "Autorisierter Verkauf hat noch nicht begonnen. Nach der aktuellen Planung können Sie die belgische Vignette ab dem 1. März 2027 über die offizielle Website oder einen zugelassenen Partner kaufen. Hinterlassen Sie Ihre E-Mail-Adresse und erhalten Sie eine Benachrichtigung, sobald autorisierter Verkauf verfügbar wird.",
         benefits: [],
         submit: "Kauf-Link an mich senden",
       },
@@ -696,32 +704,32 @@ const dictionary: BaseDictionary = {
         title:
           "Benachrichtigen Sie mich, wenn ausländische Autos ihre Vignette registrieren können",
         description:
-          "Nach den Plänen benötigen auch ausländische Fahrer eine belgische Vignette. Erhalten Sie eine Benachrichtigung, sobald Registrierung und Kauf offiziell möglich sind.",
+          "Nach den Plänen benötigen auch ausländische Fahrer eine belgische Vignette. Erhalten Sie eine Benachrichtigung, sobald Registrierung und Kauf über einen anerkannten Kanal möglich sind.",
         benefits: [
-          "Start des offiziellen Verkaufs",
+          "Start des autorisierten Verkaufs",
           "Regeln für ausländische Kennzeichen",
-          "Offizieller Kauf-Link",
+          "Link zu einem anerkannten Kaufkanal",
         ],
         submit: "Auf dem Laufenden halten",
       },
       news: {
         title: "Wichtige Updates zur belgischen Vignette erhalten",
         description:
-          "Kurze, relevante Meldungen, wenn es offizielle Neuigkeiten zu Preisen, Regeln oder dem Verkaufsstart gibt.",
+          "Kurze, relevante Meldungen, wenn es Neuigkeiten zu Preisen, Regeln oder dem Verkaufsstart gibt.",
         benefits: [
-          "Wichtige offizielle Updates",
+          "Wichtige Updates zur Vignette",
           "Kein täglicher Spam",
-          "Kauf-Link, sobald verfügbar",
+          "Kauf-Link, sobald ein anerkannter Kanal verfügbar ist",
         ],
         submit: "Updates erhalten",
       },
       default: {
         title:
-          "Erhalten Sie den offiziellen Kauf-Link, sobald die belgische Vignette verfügbar ist",
+          "Erhalten Sie den Kauf-Link, sobald die belgische Vignette zum Verkauf steht",
         description:
-          "Der Verkauf soll am 1. März 2027 starten. Wir senden Ihnen eine Benachrichtigung, sobald Sie offiziell kaufen können.",
+          "Der Verkauf soll am 1. März 2027 starten. Wir senden Ihnen eine Benachrichtigung, sobald autorisierter Verkauf verfügbar wird.",
         benefits: [
-          "Offizieller Kauf-Link",
+          "Link zu einem autorisierten Kaufkanal",
           "Updates zu Preisen und Regeln",
           "Keine unnötigen E-Mails",
         ],
