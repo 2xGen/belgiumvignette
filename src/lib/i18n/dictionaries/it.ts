@@ -1,4 +1,18 @@
 import type { BaseDictionary } from "../types";
+import { itTolls } from "../tolls/it";
+import { buildRateMatrix } from "../rate-matrix";
+
+const itRateMatrix = buildRateMatrix({
+  vehicleHeader: "Veicolo",
+  dayHeader: "1 giorno",
+  tenDaysHeader: "10 giorni",
+  monthHeader: "1 mese",
+  twoMonthsHeader: "2 mesi",
+  yearHeader: "1 anno",
+  euro03: "Euro 0–3",
+  euro4: "Euro 4 e superiore",
+  zeroEmission: "Zero emissioni",
+});
 
 const dictionary: BaseDictionary = {
   locale: "it",
@@ -16,19 +30,20 @@ const dictionary: BaseDictionary = {
     exemptions: "Esenzioni",
     fines: "Sanzioni",
     buy: "Come acquistare",
+    tolls: "Pedaggi",
     news: "Notizie e aggiornamenti",
     privacy: "Privacy",
   },
   meta: {
     home: {
-      title: "Vignetta Belgio 2027: ti serve una vignetta per il Belgio?",
+      title: "Vignetta Belgio 2027: prezzi, autostrade e come acquistare",
       description:
-        "Il Belgio prevede di introdurre una vignetta stradale digitale dal 1 maggio 2027. Scopri se ti serve, quanto costa, chi è esente e quando inizieranno le vendite.",
+        "Il Belgio prevede una vignetta stradale digitale da maggio 2027. Consulta i prezzi previsti, chi ne ha bisogno, le esenzioni per le moto e dove acquistarla.",
     },
     prices: {
-      title: "Tariffe vignetta Belgio 2027 — giornaliera, mensile e annuale",
+      title: "Tariffe vignetta Belgio 2027: prezzi per norma Euro e durata",
       description:
-        "Tariffe previste per la vignetta belga: €100/anno, brevi periodi da €9/giorno. Spiegazione semplice della norma Euro sulle emissioni.",
+        "Tabella completa dei prezzi della vignetta stradale belga 2027 per norma Euro e durata — da €8,10/giorno (zero emissioni) a €125/anno (Euro 0–3).",
     },
     foreign: {
       title: "Le auto estere hanno bisogno della vignetta belga nel 2027?",
@@ -50,6 +65,11 @@ const dictionary: BaseDictionary = {
       description:
         "Secondo i piani attuali, la vendita online della vignetta belga è prevista dal 1 marzo 2027. Obbligatoria dal 1 maggio 2027. Fonte ufficiale: Governo fiammingo.",
     },
+    tolls: {
+      title: "Pedaggi in Belgio 2027: autostrade, vignetta e tariffe",
+      description:
+        "Le autostrade in Belgio sono a pagamento? Scoprite i pedaggi, la vignetta prevista da maggio 2027, le tariffe e le regole per le auto straniere.",
+    },
     news: {
       title: "Notizie sulla vignetta belga — fonti attendibili spiegate",
       description:
@@ -65,8 +85,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be è un sito informativo indipendente. Non siamo affiliati al governo belga, alla Fiandre, alla Vallonia o a Bruxelles.",
     lastUpdated: "Ultimo aggiornamento",
-    lastUpdatedDate: "14 agosto 2026",
-    lastUpdatedIso: "2026-08-14",
+    lastUpdatedDate: "28 settembre 2026",
+    lastUpdatedIso: "2026-09-28",
     readMore: "Scopri di più",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — informazioni indipendenti sui pedaggi in Belgio",
@@ -108,40 +128,86 @@ const dictionary: BaseDictionary = {
     },
     quickAnswers: [
       {
-        title: "Chi deve acquistarla?",
+        title: "Chi deve acquistare una vignetta belga?",
         summary:
-          "Autovetture fino a 3,5 tonnellate, inclusi i veicoli stranieri — anche se attraversate solo il paese.",
+          "Autovetture fino a 3,5 tonnellate, inclusi i veicoli stranieri in transito sulle strade coperte.",
         href: "foreign",
+        linkLabel: "Guida per automobilisti stranieri",
       },
       {
-        title: "Chi è esentato?",
+        title: "Chi è esentato dalla vignetta belga?",
         summary:
-          "Moto, camion (tassa al km), trattori, pullman, servizi di emergenza e polizia.",
+          "Moto, camion (tassa al km), trattori, pullman, servizi di emergenza e polizia — secondo i piani attuali.",
         href: "exemptions",
+        linkLabel: "Vedi tutte le esenzioni",
       },
       {
-        title: "Quanto costa?",
+        title: "Qual è il prezzo della vignetta Belgio nel 2027?",
         summary:
-          "Vignetta annuale da €90 (elettrico) a €125 (auto più vecchie). Breve periodo da €9/giorno.",
+          "Il prezzo dipende dalla norma Euro e dalla durata: da €8,10/giorno (zero emissioni) e €9/giorno (Euro 4+), fino a €90–€125 all'anno.",
         href: "prices",
+        linkLabel: "Guida completa ai prezzi",
       },
     ],
-    pricingTitle: "Tariffe previste a colpo d'occhio",
-    pricingSubtitle:
-      "Basato sui piani pubblicati (March 2026). Gli importi definitivi potrebbero ancora cambiare.",
-    annualTableTitle: "Vignetta annuale",
-    shortTermTableTitle: "Breve periodo",
-    annualPricing: [
-      { label: "Euro 4 e superiori", value: "€100 / year", note: "97%+ delle auto fiamminghe" },
-      { label: "Elettrico / idrogeno", value: "€90 / year" },
-      { label: "Auto più vecchie (fino a Euro 3)", value: "€125 / year" },
+    overview: {
+      title: "Vignetta stradale belga: cosa è previsto per il 2027",
+      paragraphs: [
+        "Il Belgio prevede di introdurre una vignetta stradale digitale dal 1 maggio 2027. La vignetta belga si applicherebbe alle autovetture fino a 3,5 tonnellate su autostrade e alcune strade principali regionali.",
+        "Le auto estere sarebbero incluse. Gli automobilisti di Francia, Paesi Bassi, Germania e altri paesi avrebbero bisogno di una vignetta per usare le strade belghe coperte.",
+        "Non sarebbe un adesivo sul parabrezza. La vignetta autostradale belga sarebbe digitale e collegata alla targa, con controlli anche tramite telecamere ANPR.",
+        "Secondo le tariffe pubblicate dal governo fiammingo, il prezzo dipende dalla norma Euro e dalla durata: da €8,10 al giorno per i veicoli a zero emissioni e €9 al giorno per Euro 4+, fino a €90–€125 all'anno. Sono previsti anche 10 giorni, 1 mese e 2 mesi.",
+        "Le moto sarebbero esentate secondo i piani attuali. Gli importi e le regole definitive devono ancora essere confermati prima dell'entrata in vigore.",
+      ],
+    },
+    intentSections: [
+      {
+        id: "autostrade",
+        title: "Serve una vignetta per le autostrade in Belgio?",
+        paragraphs: [
+          "Secondo i piani attuali, una vignetta stradale digitale diventerebbe obbligatoria sulle autostrade belghe e su alcune strade principali regionali dal 1 maggio 2027.",
+          "Oggi la maggior parte delle autostrade belghe resta gratuita per le autovetture. Il progetto di vignetta cambierebbe questa situazione: l'accesso alle autostrade e a parte della rete regionale a velocità più elevata richiederebbe una vignetta collegata alla targa.",
+          "Se usi solo strade locali, una vignetta non sarebbe richiesta secondo le informazioni pubblicate. In pratica, evitare del tutto autostrade e strade principali regionali è spesso difficile per viaggi interurbani o di transito.",
+        ],
+        link: {
+          href: "tolls",
+          label: "Pedaggi e autostrade in Belgio",
+        },
+      },
+      {
+        id: "moto",
+        title: "Le moto hanno bisogno di una vignetta belga?",
+        paragraphs: [
+          "No. Secondo gli annunci governativi, le moto sarebbero esplicitamente esentate dalla vignetta belga.",
+          "L'obbligo riguarderebbe i veicoli a motore con almeno quattro ruote fino a 3,5 tonnellate — comprese auto, alcuni furgoni leggeri e camper. I camion restano sotto la tassa chilometrica Viapass.",
+        ],
+        link: {
+          href: "exemptions",
+          label: "Vedi i dettagli delle esenzioni",
+        },
+      },
+      {
+        id: "acquistare",
+        title: "Dove acquistare la vignetta Belgio?",
+        paragraphs: [
+          "La vendita ufficiale non è ancora iniziata. Secondo i piani attuali, l'acquisto online sarebbe possibile dal 1 marzo 2027 tramite il sito ufficiale o un partner autorizzato.",
+          "Oggi non esiste un portale di vendita ufficiale. I siti che già offrono prenotazione o pagamento non sono il canale ufficiale.",
+        ],
+        link: {
+          href: "buy",
+          label: "Acquistare la vignetta Belgio: date e canali ufficiali",
+        },
+      },
     ],
-    shortTermPricing: [
-      { label: "1 giorno", value: "€9" },
-      { label: "10 giorni", value: "€12" },
-      { label: "1 mese", value: "€19" },
-      { label: "2 mesi", value: "€30" },
+    pricingTitle: "Qual è il prezzo della vignetta Belgio nel 2027?",
+    pricingParagraphs: [
+      "Il prezzo della vignetta stradale belga dipende dalla norma Euro del veicolo e dalla durata di validità. Per le auto Euro 4 o superiore, le tariffe previste partono da €9 per 1 giorno e €100 per 1 anno. I veicoli più vecchi pagano di più, mentre quelli a zero emissioni hanno una tariffa inferiore.",
     ],
+    pricingLinkLabel: "Vedi tutti i prezzi della vignetta belga",
+    pricingLinkSecondaryLabel: "Guida completa ai prezzi",
+    pricingMatrixTitle: "Tariffe previste",
+    rateMatrix: itRateMatrix,
+    pricingNote:
+      "Queste sono le tariffe attualmente pubblicate dal governo fiammingo. L'introduzione resta subordinata all'approvazione definitiva.",
     timelineTitle: "Date chiave (secondo i piani)",
     timeline: [
       {
@@ -171,75 +237,161 @@ const dictionary: BaseDictionary = {
           "No. Secondo i piani, si tratta di una vignetta digitale collegata alla targa. Nessun adesivo sul parabrezza.",
       },
       {
-        question: "Si applica alle auto straniere?",
+        question: "Serve una vignetta per le autostrade in Belgio?",
         answer:
-          "Sì. Le norme UE impongono un trattamento uguale. Automobilisti belgi e stranieri devono entrambi pagare.",
+          "Secondo i piani attuali, sì dal 1 maggio 2027 sulle autostrade belghe e su alcune strade principali regionali. Le strade locali resterebbero fuori dall'obbligo.",
       },
       {
-        question: "I motociclisti pagano?",
+        question: "Le moto hanno bisogno di una vignetta belga?",
         answer:
           "No. Le moto sono esplicitamente esentate secondo gli annunci dei ministri Weyts (Fiandre) e Desquesnes (Vallonia).",
       },
       {
-        question: "Quando posso acquistarla?",
+        question: "Si applica alle auto straniere?",
         answer:
-          "Secondo i piani attuali, la vendita online è prevista dal 1 marzo 2027. La vignetta diventerebbe obbligatoria dal 1 maggio 2027. Le condizioni definitive possono ancora cambiare.",
+          "Sì. Le norme UE impongono un trattamento uguale. Automobilisti belgi e stranieri devono entrambi pagare sulle strade coperte.",
+      },
+      {
+        question: "Dove acquistare la vignetta Belgio?",
+        answer:
+          "La vendita ufficiale non è ancora iniziata. Secondo i piani, l'acquisto online è previsto dal 1 marzo 2027 tramite il canale ufficiale o un partner autorizzato.",
       },
     ],
     sourcesTitle: "Fonti ufficiali",
   },
   prices: {
-    title: "Tariffe e durate",
+    title: "Tariffe vignetta Belgio 2027: prezzi per norma Euro e durata",
     intro:
-      "Panoramica delle tariffe previste per la vignetta in base alla norma Euro sulle emissioni. Basato sugli annunci di March 2026 — i dettagli potrebbero cambiare.",
-    sections: [
+      "Il prezzo previsto della vignetta stradale belga dipende da due fattori: la norma Euro del veicolo e la durata di validità della vignetta. Il governo fiammingo ha pubblicato tariffe per 1 giorno, 10 giorni, 1 mese, 2 mesi e 1 anno.",
+    leadParagraphs: [
+      "Per un'auto Euro 4 o superiore, la vignetta belga secondo le tariffe attuali costa €9 per 1 giorno, €12 per 10 giorni e €100 per un anno. I veicoli a zero emissioni pagano di meno e quelli da Euro 0 a Euro 3 pagano di più.",
+      "La vignetta è prevista dal 1 maggio 2027. L'acquisto dovrebbe essere possibile dal 1 marzo 2027. L'introduzione resta subordinata all'approvazione definitiva.",
+    ],
+    matrixTitle: "Prezzi vignetta stradale belga 2027",
+    rateMatrix: itRateMatrix,
+    matrixNote:
+      "Queste tariffe sono state pubblicate dal governo fiammingo. Il prezzo non dipende quindi solo da quanto a lungo serve la vignetta, ma anche dalla norma Euro del veicolo.",
+    buyLinkParagraph:
+      "[[buy|Scopri dove e quando puoi acquistare la vignetta belga]].",
+    categorySections: [
       {
-        id: "annual",
-        title: "Vignetta annuale",
+        id: "euro-4",
+        title: "Quanto costa una vignetta belga per Euro 4 e superiore?",
         paragraphs: [
-          "Per chi usa regolarmente le strade principali del Belgio. Il prezzo dipende dalla classe di emissione Euro del veicolo.",
+          "Per i veicoli Euro 4 o superiore, secondo le tariffe pubblicate:",
+        ],
+        list: [
+          "1 giorno: €9",
+          "10 giorni: €12",
+          "1 mese: €19",
+          "2 mesi: €30",
+          "1 anno: €100",
+        ],
+        linkParagraph:
+          "Questa è la categoria in cui rientra gran parte del parco attuale. Per un breve transito in Belgio può bastare una vignetta giornaliera o di 10 giorni. Chi usa regolarmente le strade regionali e le autostrade belghe può confrontare la vignetta annuale con le durate più brevi. Maggiori informazioni sulla [[dailyVignette|vignetta giornaliera]] o consulta la [[annualVignette|vignetta annuale]].",
+      },
+      {
+        id: "euro-0-3",
+        title: "Quanto costa una vignetta belga per Euro 0–3?",
+        paragraphs: [
+          "I veicoli più vecchi con Euro 0, Euro 1, Euro 2 o Euro 3 rientrano nella categoria tariffaria più alta.",
+          "I prezzi previsti vanno da €11,25 per un giorno a €125 per un anno.",
+        ],
+        tableTitle: "Prezzo Euro 0–3",
+        table: [
+          { label: "1 giorno", value: "€11,25" },
+          { label: "10 giorni", value: "€15" },
+          { label: "1 mese", value: "€23,75" },
+          { label: "2 mesi", value: "€37,50" },
+          { label: "1 anno", value: "€125" },
         ],
       },
       {
-        id: "short",
-        title: "Opzioni a breve periodo",
+        id: "elettrico",
+        title: "Quanto costa la vignetta per un'auto elettrica?",
         paragraphs: [
-          "Per viaggi occasionali — vacanze, weekend — sono previste vignette di durata più breve.",
-          "Le auto più vecchie e più inquinanti (fino a Euro 3) pagano tariffe leggermente più alte.",
+          "Per un veicolo a zero emissioni si applica la tariffa più bassa. Secondo l'attuale tabella prezzi, la vignetta costa €8,10 per un giorno e €90 per un anno intero.",
         ],
+        tableTitle: "Prezzo zero emissioni",
+        table: [
+          { label: "1 giorno", value: "€8,10" },
+          { label: "10 giorni", value: "€10,80" },
+          { label: "1 mese", value: "€17,10" },
+          { label: "2 mesi", value: "€27" },
+          { label: "1 anno", value: "€90" },
+        ],
+        linkParagraph:
+          "[[electricVignette|Maggiori informazioni sulla vignetta belga per auto elettriche]].",
       },
+    ],
+    durationSection: {
+      id: "durata",
+      title: "Quale durata mi serve?",
+      paragraphs: [
+        "Secondo i piani attuali, puoi scegliere tra cinque periodi di validità:",
+        "La durata migliore dipende da quanto spesso e per quanto tempo usi le strade su cui la vignetta diventerà obbligatoria.",
+        "Consulta le spiegazioni separate sulla [[dailyVignette|vignetta giornaliera]], la [[monthlyVignette|vignetta mensile]] e la [[annualVignette|vignetta annuale]].",
+      ],
+      list: [
+        "1 giorno — per un breve transito o un'escursione giornaliera.",
+        "10 giorni — ad esempio per una vacanza o una visita più lunga.",
+        "1 mese — per più spostamenti nell'arco di alcune settimane.",
+        "2 mesi — per un soggiorno più lungo o un uso temporaneo regolare.",
+        "1 anno — per chi circola regolarmente su strade regionali e autostrade belghe.",
+      ],
+    },
+    whenSection: {
+      id: "quando",
+      title: "Quando si applicano questi prezzi?",
+      paragraphs: [
+        "La vignetta stradale digitale è prevista dal 1 maggio 2027. Secondo le informazioni ufficiali attuali, la vignetta potrebbe essere acquistata online dal 1 marzo 2027.",
+        "L'attuazione pratica è ancora in corso e l'introduzione resta subordinata all'approvazione definitiva.",
+        "Vuoi sapere come funzionerà l'acquisto? Consulta [[buy|Acquistare la vignetta belga]]. Per tutte le regole, i veicoli e le date chiave, vai alla nostra guida completa sulla [[home|vignetta stradale belga 2027]].",
+      ],
+    },
+    backgroundSections: [
       {
         id: "road-tax",
         title: "Interazione con la tassa di circolazione (Fiandre)",
         paragraphs: [
-          "La Fiandre sta riformando contemporaneamente la tassa di circolazione annuale. Circa la metà degli automobilisti fiamminghi potrebbe pagare di più in totale — fino a €100/anno in più.",
+          "Le Fiandre riformano contemporaneamente la tassa di circolazione annuale. Secondo le stime, circa la metà degli automobilisti fiamminghi potrebbe pagare di più in netto — fino a €100 in più all'anno.",
+          "La riduzione della tassa di circolazione secondo i piani non compensa del tutto a tutti il costo della vignetta. Si tratta di informazione di contesto; le tariffe della vignetta sopra indicate valgono indipendentemente da quella riforma.",
         ],
       },
     ],
-    annualTable: [
-      { label: "Euro 4 e superiori", value: "€100", note: "Year" },
-      { label: "Elettrico / idrogeno", value: "€90", note: "Year" },
-      { label: "Fino a Euro 3", value: "€125", note: "Year" },
-    ],
-    shortTermTable: [
-      { label: "1 giorno", value: "€9" },
-      { label: "10 giorni", value: "€12" },
-      { label: "1 mese", value: "€19" },
-      { label: "2 mesi", value: "€30" },
-    ],
-    euroNormTitle: "Le norme Euro spiegate",
+    euroNormTitle: "Norme Euro in sintesi",
     euroNormCategoryHeader: "Norma",
     euroNormDescriptionHeader: "Descrizione",
     euroNormItems: [
-      { norm: "Euro 4+", description: "Auto dal ~2005–2006 in poi. La maggior parte dei veicoli in circolazione." },
-      { norm: "Elettrico / H₂", description: "Zero emissioni. Tariffa prevista più bassa." },
-      { norm: "Euro 3 e inferiori", description: "Veicoli più vecchi e più inquinanti." },
+      {
+        norm: "Euro 4+",
+        description: "Auto dal circa 2005–2006. Maggior parte dei veicoli in circolazione. Tariffa giornaliera €9, annuale €100.",
+      },
+      {
+        norm: "Zero emissioni",
+        description: "Completamente a zero emissioni (elettrico / idrogeno). Tariffa più bassa: da €8,10/giorno, €90/anno.",
+      },
+      {
+        norm: "Euro 3 e inferiori",
+        description: "Veicoli più vecchi e più inquinanti. Tariffa più alta: da €11,25/giorno, €125/anno.",
+      },
     ],
     vignettePagesTitle: "Per tipo di vignetta",
     faqs: [
       {
+        question: "Qual è il prezzo giornaliero previsto più basso?",
+        answer:
+          "Secondo il governo fiammingo, la tariffa giornaliera più bassa è €8,10 per i veicoli a zero emissioni. Per Euro 4 e superiore è €9; per Euro 0–3 è €11,25.",
+      },
+      {
+        question: "I periodi brevi valgono per tutte le classi di emissione?",
+        answer:
+          "Sì. Ogni durata (1 giorno, 10 giorni, 1 mese, 2 mesi, 1 anno) ha una propria tariffa per categoria di norma Euro. Gli importi differiscono per categoria.",
+      },
+      {
         question: "I furgoni commerciali sono deducibili?",
-        answer: "Secondo i piani, il costo della vignetta per i furgoni professionali potrebbe essere interamente deducibile come spesa aziendale.",
+        answer:
+          "Secondo i piani, il costo della vignetta per i furgoni professionali potrebbe essere interamente deducibile come spesa aziendale.",
       },
     ],
   },
@@ -424,6 +576,7 @@ const dictionary: BaseDictionary = {
       },
     ],
   },
+  tolls: itTolls,
   privacy: {
     title: "Informativa sulla privacy",
     intro: "BelgiumVignette.be rispetta la tua privacy. Ecco come gestiamo i tuoi dati.",
@@ -497,21 +650,84 @@ const dictionary: BaseDictionary = {
     noArticles: "Nessun articolo pubblicato ancora. Torna presto.",
   },
   newsletter: {
-    title: "Ricevi per primo una notifica quando la vignetta belga sarà disponibile",
-    description: "",
-    benefitsIntro: "",
-    benefits: [
-      "Inizio vendite ufficiali",
-      "Prezzi definitivi confermati",
-      "Nuove regole pubblicate",
-      "Link di acquisto disponibile",
-    ],
     emailPlaceholder: "Indirizzo email",
-    consentLabel: "Accetto di ricevere aggiornamenti e ho letto l'informativa sulla privacy.",
-    submit: "Avvisami",
+    consentLabel: "Accetto di ricevere aggiornamenti e ho letto",
     success: "Grazie! Sei iscritto.",
     error: "Qualcosa è andato storto. Riprova.",
-    privacyLink: "Informativa sulla privacy",
+    privacyLink: "l'informativa sulla privacy",
+    sticky: {
+      teaser: "Vignetta non ancora in vendita — ricevi il link di acquisto",
+      cta: "Iscriviti →",
+      closeLabel: "Chiudi",
+    },
+    intents: {
+      home: {
+        title:
+          "Ricevi il link di acquisto ufficiale non appena la vignetta belga sarà disponibile",
+        description:
+          "La vendita è prevista a partire dal 1° marzo 2027. Lascia il tuo indirizzo email e ricevi una notifica non appena l'opzione di acquisto ufficiale sarà disponibile.",
+        benefits: [
+          "Link di acquisto ufficiale non appena disponibile",
+          "Aggiornamenti in caso di modifiche a prezzi o regole",
+          "Nessuna email inutile",
+        ],
+        submit: "Inviami il link di acquisto",
+      },
+      prices: {
+        title: "Ricevi una notifica quando saranno noti i prezzi definitivi della vignetta",
+        description:
+          "Le tariffe attuali sono pubblicate, ma l'introduzione deve ancora essere approvata in via definitiva. Seguiamo le informazioni ufficiali per te.",
+        benefitsIntro: "Ricevi una sola email quando:",
+        benefits: [
+          "i prezzi definitivi saranno confermati;",
+          "inizierà la vendita ufficiale;",
+          "il link di acquisto ufficiale sarà disponibile.",
+        ],
+        submit: "Tienimi aggiornato",
+      },
+      buy: {
+        title: "Avvisami non appena la vignetta belga sarà in vendita",
+        description:
+          "La vendita ufficiale non è ancora iniziata. Secondo la pianificazione attuale, potrai acquistare la vignetta belga a partire dal 1° marzo 2027. Lascia il tuo indirizzo email e ricevi una notifica non appena l'opzione di acquisto ufficiale sarà disponibile.",
+        benefits: [],
+        submit: "Inviami il link di acquisto",
+      },
+      foreign: {
+        title:
+          "Avvisami quando le auto estere potranno registrare la vignetta",
+        description:
+          "Secondo i piani, anche i conducenti esteri avranno bisogno di una vignetta belga. Ricevi una notifica non appena registrazione e acquisto saranno ufficialmente possibili.",
+        benefits: [
+          "Inizio della vendita ufficiale",
+          "Regole per le targhe estere",
+          "Link di acquisto ufficiale",
+        ],
+        submit: "Tienimi aggiornato",
+      },
+      news: {
+        title: "Ricevi aggiornamenti importanti sulla vignetta belga",
+        description:
+          "Avvisi brevi e pertinenti quando ci sono notizie ufficiali su prezzi, regole o l'inizio della vendita.",
+        benefits: [
+          "Aggiornamenti ufficiali importanti",
+          "Niente spam quotidiano",
+          "Link di acquisto non appena disponibile",
+        ],
+        submit: "Ricevi aggiornamenti",
+      },
+      default: {
+        title:
+          "Ricevi il link di acquisto ufficiale non appena la vignetta belga sarà disponibile",
+        description:
+          "La vendita inizia, secondo i piani, il 1° marzo 2027. Ti invieremo una sola notifica non appena potrai acquistare ufficialmente.",
+        benefits: [
+          "Link di acquisto ufficiale",
+          "Aggiornamenti su prezzi e regole",
+          "Nessuna email inutile",
+        ],
+        submit: "Inviami il link di acquisto",
+      },
+    },
   },
   cookieBanner: {
     title: "Cookie e privacy",

@@ -6,6 +6,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import AnalyticsLoader from "@/components/Analytics";
+import StickyLeadCapture from "@/components/sections/StickyLeadCapture";
 import "../globals.css";
 
 const publicSans = Public_Sans({
@@ -37,8 +38,9 @@ export default async function LangLayout({
     <html lang={lang} className={publicSans.variable}>
       <body className={`${publicSans.className} flex min-h-full flex-col`}>
         <Header locale={lang as Locale} dict={dict} />
-        <main className="min-w-0 flex-1 overflow-x-hidden">{children}</main>
+        <main className="min-w-0 flex-1 overflow-x-hidden pb-20">{children}</main>
         <Footer locale={lang as Locale} dict={dict} />
+        <StickyLeadCapture locale={lang as Locale} dict={dict} />
         <CookieBanner locale={lang as Locale} dict={dict} />
         <AnalyticsLoader />
       </body>

@@ -1,4 +1,18 @@
 import type { BaseDictionary } from "../types";
+import { roTolls } from "../tolls/ro";
+import { buildRateMatrix } from "../rate-matrix";
+
+const roRateMatrix = buildRateMatrix({
+  vehicleHeader: "Vehicul",
+  dayHeader: "1 zi",
+  tenDaysHeader: "10 zile",
+  monthHeader: "1 lună",
+  twoMonthsHeader: "2 luni",
+  yearHeader: "1 an",
+  euro03: "Euro 0 până la 3",
+  euro4: "Euro 4 și superior",
+  zeroEmission: "Fără emisii",
+});
 
 const dictionary: BaseDictionary = {
   locale: "ro",
@@ -16,19 +30,20 @@ const dictionary: BaseDictionary = {
     exemptions: "Scutiri",
     fines: "Amenzi",
     buy: "Cum se cumpără",
+    tolls: "Taxe",
     news: "Știri și actualizări",
     privacy: "Confidențialitate",
   },
   meta: {
     home: {
-      title: "Vinietă Belgia 2027: aveți nevoie de o vinietă pentru Belgia?",
+      title: "Vinietă Belgia 2027: prețuri, autostrăzi și cum să cumperi",
       description:
-        "Belgia plănuiește introducerea unei viniete rutiere digitale din 1 mai 2027. Aflați dacă aveți nevoie de una, cât costă, cine este scutit și când începe vânzarea.",
+        "Belgia plănuiește o vinietă rutieră digitală din mai 2027. Consultați prețurile planificate, cine are nevoie, scutirile pentru motociclete și unde să cumpărați.",
     },
     prices: {
-      title: "Prețuri vigneta Belgia 2027 — tarife zilnice, lunare și anuale",
+      title: "Prețuri vigneta Belgia 2027: tarife pe Euronormă și durată",
       description:
-        "Prețuri planificate pentru vigneta din Belgia: €100/an, pe termen scurt de la €9/zi. Norma de emisii Euro explicată simplu.",
+        "Tabelă completă de prețuri pentru vigneta rutieră belgiană 2027 pe Euronormă și durată — de la €8,10/zi (fără emisii) până la €125/an (Euro 0–3).",
     },
     foreign: {
       title: "Au mașinile străine nevoie de vigneta Belgia în 2027?",
@@ -50,6 +65,11 @@ const dictionary: BaseDictionary = {
       description:
         "Conform planurilor actuale, vânzarea online a vignetei rutiere belgiene este așteptată de la 1 martie 2027. Obligatorie de la 1 mai 2027. Sursă oficială: guvernul flamand.",
     },
+    tolls: {
+      title: "Taxe în Belgia 2027: autostrăzi, vinietă și tarife",
+      description:
+        "Sunt autostrăzile cu plată în Belgia? Aflați despre taxe, vinieta planificată din mai 2027, tarife și regulile pentru mașinile străine.",
+    },
     news: {
       title: "Știri despre vigneta Belgia — surse de încredere explicate",
       description:
@@ -65,8 +85,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be este un site informativ independent. Nu suntem afiliați guvernului belgian, Flandrei, Valoniei sau Bruxelles-ului.",
     lastUpdated: "Ultima actualizare",
-    lastUpdatedDate: "14 August 2026",
-    lastUpdatedIso: "2026-08-14",
+    lastUpdatedDate: "28 September 2026",
+    lastUpdatedIso: "2026-09-28",
     readMore: "Citește mai mult",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — informații independente despre taxele rutiere din Belgia",
@@ -108,40 +128,86 @@ const dictionary: BaseDictionary = {
     },
     quickAnswers: [
       {
-        title: "Cine are nevoie?",
+        title: "Cine trebuie să cumpere o vinietă belgiană?",
         summary:
-          "Autoturisme de până la 3,5 tone, inclusiv vehicule străine — chiar și dacă doar tranzitați.",
+          "Autoturisme de până la 3,5 tone, inclusiv vehicule străine în tranzit pe drumurile acoperite.",
         href: "foreign",
+        linkLabel: "Ghid pentru șoferii străini",
       },
       {
-        title: "Cine este scutit?",
+        title: "Cine este scutit de vigneta Belgia?",
         summary:
-          "Motociclete, camioane (taxă pe km), tractoare, autocare, servicii de urgență și poliție.",
+          "Motociclete, camioane (taxă pe km), tractoare, autocare, servicii de urgență și poliție — conform planurilor actuale.",
         href: "exemptions",
+        linkLabel: "Vezi toate scutirile",
       },
       {
-        title: "Cât costă?",
+        title: "Care este prețul vignetei Belgia în 2027?",
         summary:
-          "Vignetă anuală de la €90 (electric) la €125 (mașini mai vechi). Pe termen scurt de la €9/zi.",
+          "Prețul depinde de Euronormă și durată: de la €8,10/zi (fără emisii) și €9/zi (Euro 4+), până la €90–€125 pe an.",
         href: "prices",
+        linkLabel: "Ghid complet de prețuri",
       },
     ],
-    pricingTitle: "Tarife planificate pe scurt",
-    pricingSubtitle:
-      "Bazat pe planurile publicate (martie 2026). Sumele finale pot încă suferi modificări.",
-    annualTableTitle: "Vignetă anuală",
-    shortTermTableTitle: "Pe termen scurt",
-    annualPricing: [
-      { label: "Euro 4 și superior", value: "€100 / year", note: "97%+ din autoturismele flamande" },
-      { label: "Electric / hidrogen", value: "€90 / year" },
-      { label: "Mașini mai vechi (până la Euro 3)", value: "€125 / year" },
+    overview: {
+      title: "Vinieta rutieră belgiană: ce este planificat pentru 2027",
+      paragraphs: [
+        "Belgia plănuiește introducerea unei viniete rutiere digitale din 1 mai 2027. Vinieta belgiană s-ar aplica autoturismelor de până la 3,5 tone pe autostrăzi și anumite drumuri regionale principale.",
+        "Mașinile străine ar fi incluse. Șoferii din Franța, Țările de Jos, Germania și alte țări ar avea nevoie de o vinietă pentru a folosi drumurile belgiene acoperite.",
+        "Nu ar fi un autocolant pe parbriz. Vinieta de autostradă belgiană ar fi digitală și legată de numărul de înmatriculare, cu verificări inclusiv prin camere ANPR.",
+        "Conform tarifelor publicate de guvernul flamand, prețul depinde de Euronormă și durată: de la €8,10 pe zi pentru vehicule fără emisii și €9 pe zi pentru Euro 4+, până la €90–€125 pe an. Sunt planificate și 10 zile, 1 lună și 2 luni.",
+        "Motocicletele ar fi scutite conform planurilor actuale. Sumele și regulile finale trebuie încă confirmate înainte de intrarea în vigoare.",
+      ],
+    },
+    intentSections: [
+      {
+        id: "autostrazi",
+        title: "Aveți nevoie de vinietă pentru autostrăzile din Belgia?",
+        paragraphs: [
+          "Conform planurilor actuale, o vinietă rutieră digitală ar deveni obligatorie pe autostrăzile belgiene și pe anumite drumuri regionale principale din 1 mai 2027.",
+          "Astăzi majoritatea autostrăzilor belgiene rămân gratuite pentru autoturisme. Proiectul de vinietă ar schimba asta: accesul la autostrăzi și la o parte din rețeaua regională mai rapidă ar necesita o vinietă legată de numărul de înmatriculare.",
+          "Dacă folosiți doar drumuri locale, o vinietă nu ar fi necesară conform informațiilor publicate. În practică, evitarea completă a autostrăzilor și a drumurilor regionale principale este adesea dificilă pentru călătorii interurbane sau de tranzit.",
+        ],
+        link: {
+          href: "tolls",
+          label: "Taxe și autostrăzi în Belgia",
+        },
+      },
+      {
+        id: "motociclete",
+        title: "Au motocicletele nevoie de vigneta Belgia?",
+        paragraphs: [
+          "Nu. Conform anunțurilor guvernamentale, motocicletele ar fi explicit scutite de vigneta belgiană.",
+          "Obligația ar viza vehiculele cu motor cu cel puțin patru roți de până la 3,5 tone — inclusiv mașini, unele dube ușoare și autorulote. Camioanele rămân sub taxa pe kilometru Viapass.",
+        ],
+        link: {
+          href: "exemptions",
+          label: "Vezi detaliile scutirilor",
+        },
+      },
+      {
+        id: "cumpara",
+        title: "Unde se cumpără vigneta Belgia?",
+        paragraphs: [
+          "Vânzarea oficială nu a început încă. Conform planurilor actuale, cumpărarea online ar fi posibilă din 1 martie 2027 prin site-ul oficial sau un partener autorizat.",
+          "Astăzi nu există un portal oficial de vânzare. Site-urile care oferă deja rezervare sau plată nu sunt canalul oficial.",
+        ],
+        link: {
+          href: "buy",
+          label: "Cumpără vigneta Belgia: date și canale oficiale",
+        },
+      },
     ],
-    shortTermPricing: [
-      { label: "1 zi", value: "€9" },
-      { label: "10 zile", value: "€12" },
-      { label: "1 lună", value: "€19" },
-      { label: "2 luni", value: "€30" },
+    pricingTitle: "Care este prețul vignetei Belgia în 2027?",
+    pricingParagraphs: [
+      "Prețul vignetei rutiere belgiene depinde de Euronorma vehiculului și de durata de valabilitate. Pentru mașinile cu Euro 4 sau superior, tarifele planificate încep de la €9 pentru 1 zi și €100 pentru 1 an. Vehiculele mai vechi plătesc mai mult, iar vehiculele fără emisii beneficiază de un tarif mai mic.",
     ],
+    pricingLinkLabel: "Consultați toate prețurile vignetei belgiene",
+    pricingLinkSecondaryLabel: "Ghid complet de prețuri",
+    pricingMatrixTitle: "Tarife planificate",
+    rateMatrix: roRateMatrix,
+    pricingNote:
+      "Acestea sunt tarifele publicate în prezent de guvernul flamand. Introducerea rămâne condiționată de aprobarea finală.",
     timelineTitle: "Date cheie (conform planurilor)",
     timeline: [
       {
@@ -171,75 +237,161 @@ const dictionary: BaseDictionary = {
           "Nu. Conform planurilor, este o vignetă digitală legată de numărul de înmatriculare. Fără autocolant pe parbriz.",
       },
       {
-        question: "Se aplică și mașinilor străine?",
+        question: "Aveți nevoie de vinietă pentru autostrăzile din Belgia?",
         answer:
-          "Da. Regulile UE impun tratament egal. Șoferii belgieni și străini trebuie să plătească amândoi.",
+          "Conform planurilor actuale, da din 1 mai 2027 pe autostrăzile belgiene și pe anumite drumuri regionale principale. Drumurile locale ar rămâne în afara obligației.",
       },
       {
-        question: "Plătesc motocicliștii?",
+        question: "Au motocicletele nevoie de vigneta Belgia?",
         answer:
           "Nu. Motocicletele sunt explicit scutite conform anunțurilor miniștrilor Weyts (Flandra) și Desquesnes (Valonia).",
       },
       {
-        question: "Când pot cumpăra?",
+        question: "Se aplică și mașinilor străine?",
         answer:
-          "Conform planurilor actuale, vânzarea online este așteptată de la 1 martie 2027. Vigneta ar deveni obligatorie de la 1 mai 2027. Condițiile finale se pot schimba.",
+          "Da. Regulile UE impun tratament egal. Șoferii belgieni și străini trebuie să plătească pe drumurile acoperite.",
+      },
+      {
+        question: "Unde se cumpără vigneta Belgia?",
+        answer:
+          "Vânzarea oficială nu a început încă. Conform planurilor, cumpărarea online este așteptată din 1 martie 2027 prin canalul oficial sau un partener autorizat.",
       },
     ],
     sourcesTitle: "Surse oficiale",
   },
   prices: {
-    title: "Prețuri și durate",
+    title: "Prețuri vigneta Belgia 2027: tarife pe Euronormă și durată",
     intro:
-      "Prezentare generală a prețurilor planificate pentru vignetă, în funcție de norma de emisii Euro. Bazat pe anunțurile din martie 2026 — detaliile pot suferi modificări.",
-    sections: [
+      "Prețul planificat al vignetei rutiere belgiene depinde de doi factori: Euronorma vehiculului și durata de valabilitate a vignetei. Guvernul flamand a publicat tarife pentru 1 zi, 10 zile, 1 lună, 2 luni și 1 an.",
+    leadParagraphs: [
+      "Pentru o mașină cu Euro 4 sau superior, vigneta belgiană costă conform tarifelor actuale €9 pentru 1 zi, €12 pentru 10 zile și €100 pentru un an. Vehiculele fără emisii plătesc mai puțin, iar vehiculele cu Euro 0 până la Euro 3 plătesc mai mult.",
+      "Vigneta este planificată din 1 mai 2027. Achiziția ar deveni posibilă din 1 martie 2027. Introducerea rămâne condiționată de aprobarea finală.",
+    ],
+    matrixTitle: "Prețuri vigneta rutieră belgiană 2027",
+    rateMatrix: roRateMatrix,
+    matrixNote:
+      "Aceste tarife sunt publicate de guvernul flamand. Prețul nu este determinat doar de cât timp aveți nevoie de vigneta, ci și de Euronorma vehiculului.",
+    buyLinkParagraph:
+      "[[buy|Aflați unde și când puteți cumpăra vigneta belgiană]].",
+    categorySections: [
       {
-        id: "annual",
-        title: "Vignetă anuală",
+        id: "euro-4",
+        title: "Cât costă o vignetă belgiană pentru Euro 4 și superior?",
         paragraphs: [
-          "Pentru utilizatorii obișnuiți ai drumurilor principale din Belgia. Prețul depinde de clasa de emisii Euro a vehiculului dvs.",
+          "Pentru vehiculele cu Euro 4 sau superior se aplică, conform tarifelor publicate:",
+        ],
+        list: [
+          "1 zi: €9",
+          "10 zile: €12",
+          "1 lună: €19",
+          "2 luni: €30",
+          "1 an: €100",
+        ],
+        linkParagraph:
+          "Aceasta este categoria în care se încadrează o mare parte din parcul auto actual. Pentru un tranzit scurt prin Belgia, o vignetă pe zi sau pe 10 zile poate fi suficientă. Cine folosește regulat drumurile regionale și autostrăzile belgiene poate compara vigneta anuală cu duratele mai scurte. Citiți mai multe despre [[dailyVignette|vigneta zilnică]] sau consultați [[annualVignette|vigneta anuală]].",
+      },
+      {
+        id: "euro-0-3",
+        title: "Cât costă o vignetă belgiană pentru Euro 0 până la Euro 3?",
+        paragraphs: [
+          "Vehiculele mai vechi cu Euro 0, Euro 1, Euro 2 sau Euro 3 se încadrează în categoria de tarif cea mai scumpă.",
+          "Prețurile planificate variază de la €11,25 pentru o zi până la €125 pentru un an.",
+        ],
+        tableTitle: "Preț Euro 0–3",
+        table: [
+          { label: "1 zi", value: "€11,25" },
+          { label: "10 zile", value: "€15" },
+          { label: "1 lună", value: "€23,75" },
+          { label: "2 luni", value: "€37,50" },
+          { label: "1 an", value: "€125" },
         ],
       },
       {
-        id: "short",
-        title: "Opțiuni pe termen scurt",
+        id: "electric",
+        title: "Cât costă vigneta pentru o mașină electrică?",
         paragraphs: [
-          "Pentru călătorii ocazionale — vacanțe, weekenduri — sunt planificate vignete pe durate mai scurte.",
-          "Mașinile mai vechi și mai poluante (până la Euro 3) plătesc tarife ușor mai mari.",
+          "Pentru un vehicul fără emisii se aplică tariful cel mai mic. Conform tabelului de prețuri actual, vigneta costă €8,10 pentru o zi și €90 pentru un an întreg.",
         ],
+        tableTitle: "Preț fără emisii",
+        table: [
+          { label: "1 zi", value: "€8,10" },
+          { label: "10 zile", value: "€10,80" },
+          { label: "1 lună", value: "€17,10" },
+          { label: "2 luni", value: "€27" },
+          { label: "1 an", value: "€90" },
+        ],
+        linkParagraph:
+          "[[electricVignette|Citiți mai multe despre vigneta belgiană pentru mașini electrice]].",
       },
+    ],
+    durationSection: {
+      id: "durata",
+      title: "Ce durată am nevoie?",
+      paragraphs: [
+        "Conform planurilor actuale, puteți alege dintre cinci perioade de valabilitate:",
+        "Cea mai potrivită durată depinde de cât de des și cât de mult folosiți drumurile pe care vigneta va deveni obligatorie.",
+        "Consultați explicațiile separate despre [[dailyVignette|vigneta zilnică]], [[monthlyVignette|vigneta lunară]] și [[annualVignette|vigneta anuală]].",
+      ],
+      list: [
+        "1 zi — pentru un tranzit scurt sau o excursie de o zi.",
+        "10 zile — de exemplu pentru o vacanță sau o vizită mai lungă.",
+        "1 lună — pentru mai multe călătorii pe parcursul câtorva săptămâni.",
+        "2 luni — pentru un sejur mai lung sau o utilizare temporară regulată.",
+        "1 an — pentru șoferii care circulă regulat pe drumurile regionale și autostrăzile belgiene.",
+      ],
+    },
+    whenSection: {
+      id: "cand",
+      title: "Când se aplică aceste prețuri?",
+      paragraphs: [
+        "Vigneta rutieră digitală este planificată din 1 mai 2027. Conform informațiilor oficiale actuale, vigneta ar putea fi cumpărată online din 1 martie 2027.",
+        "Implementarea practică este încă în curs, iar introducerea rămâne condiționată de aprobarea finală.",
+        "Doriți să aflați cum va funcționa achiziția? Consultați [[buy|Cumpără vigneta Belgia]]. Pentru toate regulile, vehiculele și datele importante mergeți la ghidul nostru complet despre [[home|vigneta rutieră belgiană 2027]].",
+      ],
+    },
+    backgroundSections: [
       {
         id: "road-tax",
         title: "Interacțiunea cu taxa rutieră (Flandra)",
         paragraphs: [
-          "Flandra reformează simultan taxa rutieră anuală. Aproximativ jumătate din șoferii flamanzi ar putea plăti în total mai mult — până la €100/an în plus.",
+          "Flandra reformează simultan taxa rutieră anuală. Conform estimărilor, aproximativ jumătate dintre șoferii flamanzi ar putea plăti în total mai mult — până la €100 în plus pe an.",
+          "Reducerea taxei rutiere nu compensează pe toată lumea pe deplin pentru costul vignetei, conform planurilor. Acestea sunt informații de context; tarifele vignetei de mai sus se aplică independent de acea reformă.",
         ],
       },
     ],
-    annualTable: [
-      { label: "Euro 4 și superior", value: "€100", note: "An" },
-      { label: "Electric / hidrogen", value: "€90", note: "An" },
-      { label: "Până la Euro 3", value: "€125", note: "An" },
-    ],
-    shortTermTable: [
-      { label: "1 zi", value: "€9" },
-      { label: "10 zile", value: "€12" },
-      { label: "1 lună", value: "€19" },
-      { label: "2 luni", value: "€30" },
-    ],
-    euroNormTitle: "Normele Euro explicate",
+    euroNormTitle: "Normele Euro pe scurt",
     euroNormCategoryHeader: "Normă",
     euroNormDescriptionHeader: "Descriere",
     euroNormItems: [
-      { norm: "Euro 4+", description: "Mașini din ~2005–2006 înainte. Majoritatea vehiculelor de pe drum." },
-      { norm: "Electric / H₂", description: "Zero emisii. Cel mai mic tarif planificat." },
-      { norm: "Euro 3 și inferior", description: "Vehicule mai vechi și mai poluante." },
+      {
+        norm: "Euro 4+",
+        description: "Mașini din circa 2005–2006. Majoritatea vehiculelor de pe drum. Tarif zilnic €9, anual €100.",
+      },
+      {
+        norm: "Fără emisii",
+        description: "Complet fără emisii (electric / hidrogen). Cel mai mic tarif: de la €8,10/zi, €90/an.",
+      },
+      {
+        norm: "Euro 3 și inferior",
+        description: "Vehicule mai vechi și mai poluante. Cel mai mare tarif: de la €11,25/zi, €125/an.",
+      },
     ],
     vignettePagesTitle: "Pe tip de vigneta",
     faqs: [
       {
+        question: "Care este cel mai mic preț zilnic planificat?",
+        answer:
+          "Conform guvernului flamand, cel mai mic tarif zilnic este €8,10 pentru vehiculele fără emisii. Pentru Euro 4 și superior este €9; pentru Euro 0 până la 3 este €11,25.",
+      },
+      {
+        question: "Se aplică perioadele scurte pentru toate clasele de emisii?",
+        answer:
+          "Da. Fiecare durată (1 zi, 10 zile, 1 lună, 2 luni, 1 an) are propriul tarif pe categorie Euronormă. Sumele diferă pe categorie.",
+      },
+      {
         question: "Sunt dube comerciale deductibile?",
-        answer: "Conform planurilor, costul vignetei pentru dube profesionale poate fi integral deductibil ca cheltuială de afaceri.",
+        answer:
+          "Conform planurilor, costul vignetei pentru dube profesionale poate fi integral deductibil ca cheltuială de afaceri.",
       },
     ],
   },
@@ -424,6 +576,7 @@ const dictionary: BaseDictionary = {
       },
     ],
   },
+  tolls: roTolls,
   privacy: {
     title: "Politica de confidențialitate",
     intro: "BelgiumVignette.be respectă confidențialitatea dvs. Iată cum gestionăm datele dvs.",
@@ -497,21 +650,84 @@ const dictionary: BaseDictionary = {
     noArticles: "Niciun articol publicat încă. Reveniți în curând.",
   },
   newsletter: {
-    title: "Fiți primii care află când vinietă belgiană devine disponibilă",
-    description: "",
-    benefitsIntro: "",
-    benefits: [
-      "Începe vânzarea oficială",
-      "Prețuri finale confirmate",
-      "Reguli noi publicate",
-      "Link de achiziție disponibil",
-    ],
     emailPlaceholder: "Adresă de e-mail",
-    consentLabel: "Sunt de acord să primesc actualizări și am citit politica de confidențialitate.",
-    submit: "Anunțați-mă",
+    consentLabel: "Sunt de acord să primesc actualizări și am citit",
     success: "Mulțumim! Sunteți abonat.",
     error: "Ceva nu a funcționat. Vă rugăm să încercați din nou.",
-    privacyLink: "Politica de confidențialitate",
+    privacyLink: "politica de confidențialitate.",
+    sticky: {
+      teaser: "Vinieta nu este încă de vânzare — primiți linkul de cumpărare",
+      cta: "Înscrieți-vă →",
+      closeLabel: "Închide",
+    },
+    intents: {
+      home: {
+        title:
+          "Primiți linkul oficial de cumpărare imediat ce vinieta belgiană este disponibilă",
+        description:
+          "Vânzarea este planificată de la 1 martie 2027. Lăsați adresa de e-mail și vă anunțăm când opțiunea oficială de cumpărare este disponibilă.",
+        benefits: [
+          "Link oficial de cumpărare imediat ce este disponibil",
+          "Actualizări când se schimbă prețurile sau regulile",
+          "Fără e-mailuri inutile",
+        ],
+        submit: "Trimiteți-mi linkul de cumpărare",
+      },
+      prices: {
+        title: "Primiți o notificare când prețurile finale ale vinietei sunt confirmate",
+        description:
+          "Tarifele actuale au fost publicate, dar introducerea trebuie încă aprobată definitiv. Urmărim informațiile oficiale pentru dvs.",
+        benefitsIntro: "Primiți un e-mail când:",
+        benefits: [
+          "prețurile finale sunt confirmate;",
+          "începe vânzarea oficială;",
+          "linkul oficial de cumpărare este disponibil.",
+        ],
+        submit: "Țineți-mă la curent",
+      },
+      buy: {
+        title: "Anunțați-mă când vinieta belgiană este pusă în vânzare",
+        description:
+          "Vânzarea oficială nu a început încă. Conform planului actual, puteți cumpăra vinieta belgiană de la 1 martie 2027. Lăsați adresa de e-mail și vă anunțăm când opțiunea oficială de cumpărare este disponibilă.",
+        benefits: [],
+        submit: "Trimiteți-mi linkul de cumpărare",
+      },
+      foreign: {
+        title:
+          "Anunțați-mă când mașinile străine își pot înregistra vinieta",
+        description:
+          "Șoferii străini vor avea, conform planurilor, nevoie și ei de o vinietă belgiană. Primiți o notificare când înregistrarea și cumpărarea sunt oficial posibile.",
+        benefits: [
+          "Începutul vânzării oficiale",
+          "Reguli pentru numere de înmatriculare străine",
+          "Link oficial de cumpărare",
+        ],
+        submit: "Țineți-mă la curent",
+      },
+      news: {
+        title: "Primiți actualizări importante despre vinieta belgiană",
+        description:
+          "Alerte scurte și relevante când există știri oficiale despre prețuri, reguli sau începutul vânzării.",
+        benefits: [
+          "Actualizări oficiale importante",
+          "Fără spam zilnic",
+          "Link de cumpărare imediat ce este disponibil",
+        ],
+        submit: "Primiți actualizări",
+      },
+      default: {
+        title:
+          "Primiți linkul oficial de cumpărare imediat ce vinieta belgiană este disponibilă",
+        description:
+          "Vânzarea este planificată să înceapă pe 1 martie 2027. Vă trimitem o singură notificare când puteți cumpăra oficial.",
+        benefits: [
+          "Link oficial de cumpărare",
+          "Actualizări despre prețuri și reguli",
+          "Fără e-mailuri inutile",
+        ],
+        submit: "Trimiteți-mi linkul de cumpărare",
+      },
+    },
   },
   cookieBanner: {
     title: "Cookie-uri și confidențialitate",

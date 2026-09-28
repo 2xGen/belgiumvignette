@@ -14,33 +14,31 @@ export default function QuickAnswers({
 }) {
   return (
     <section className="py-12">
-      <dl className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-3">
         {items.map((item, index) => (
-          <div key={item.title} className="panel-muted p-6">
-            <dt className="flex items-start justify-between gap-3">
-              <span className="font-[family-name:var(--font-display)] text-lg font-bold tracking-tight text-ink">
+          <article key={item.title} className="panel-muted p-6">
+            <div className="flex items-start justify-between gap-3">
+              <h2 className="font-[family-name:var(--font-display)] text-lg font-bold tracking-tight text-ink">
                 {item.title}
-              </span>
-              <span className="font-[family-name:var(--font-display)] text-sm font-bold text-accent-deep">
+              </h2>
+              <span className="shrink-0 font-[family-name:var(--font-display)] text-sm font-bold text-accent-deep">
                 {String(index + 1).padStart(2, "0")}
               </span>
-            </dt>
-            <dd className="mt-3 text-sm leading-relaxed text-text-muted">
-              {item.summary}
-            </dd>
-            {item.href && (
-              <dd className="mt-4">
+            </div>
+            <p className="mt-3 text-sm leading-relaxed text-text-muted">{item.summary}</p>
+            {item.href ? (
+              <p className="mt-4">
                 <Link
                   href={getLocalizedPath(locale, item.href)}
                   className="text-sm font-bold text-ink no-underline hover:text-accent-deep hover:underline"
                 >
-                  {readMore} →
+                  {item.linkLabel ?? readMore} →
                 </Link>
-              </dd>
-            )}
-          </div>
+              </p>
+            ) : null}
+          </article>
         ))}
-      </dl>
+      </div>
     </section>
   );
 }

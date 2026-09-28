@@ -19,10 +19,11 @@ function getSupabase() {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { email, locale, consent } = body as {
+    const { email, locale, consent, intent } = body as {
       email?: string;
       locale?: string;
       consent?: boolean;
+      intent?: string;
     };
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -36,6 +37,10 @@ export async function POST(request: Request) {
     const validLocale = locale && isValidLocale(locale) ? locale : "nl";
     const normalizedEmail = email.toLowerCase().trim();
     const now = new Date().toISOString();
+    const sourceIntent =
+      typeof intent === "string" && /^[a-z0-9_-]{1,32}$/i.test(intent)
+        ? intent
+        : "default";
 
     const supabase = getSupabase();
 
@@ -43,7 +48,7 @@ export async function POST(request: Request) {
       {
         email: normalizedEmail,
         locale: validLocale,
-        source: "belgiumvignette.be",
+        source: `belgiumvignette.be/${sourceIntent}`,
         consent_given_at: now,
         consent_version: CONSENT_POLICY_VERSION,
         unsubscribed_at: null,

@@ -20,10 +20,6 @@ const article: Article = {
     name: "RTL Today",
     url: "https://today.rtl.lu/news/world/belgium-to-introduce-annual-motorway-vignette-from-2027-619124130",
   },
-  image: {
-    url: "https://static-prod.rtl.lu/dims4/default/e0770fe/2147483647/strip/true/crop/6000x4000+0+0/resize/1224x816!/quality/90/?url=https%3A%2F%2Frtl-luxembourg-new-production-web.s3.eu-central-1.amazonaws.com%2Fbrightspot%2F0f%2F2d%2Fc9d913a4483a8b3053836178ee55%2Fafp-20260523-174814419-v1-highres-belgiancoastweather.jpg",
-    credit: "NICOLAS MAETERLINCK / Belga via AFP",
-  },
   content: {
     nl: {
       title: "België voert jaarlijks tolvignet in vanaf 2027",
@@ -88,7 +84,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Verkeer op een Belgische autosnelweg",
     },
     fr: {
       title: "La Belgique introduira une vignette autoroutière annuelle à partir de 2027",
@@ -153,7 +148,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Circulation sur une autoroute belge",
     },
     en: {
       title: "Belgium to introduce annual motorway vignette from 2027",
@@ -218,7 +212,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Traffic on a Belgian motorway",
     },
     de: {
       title: "Belgien führt ab 2027 eine jährliche Autobahnvignette ein",
@@ -283,7 +276,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Verkehr auf einer belgischen Autobahn",
     },
     es: {
       title: "Bélgica introducirá una viñeta anual de autopista a partir de 2027",
@@ -348,7 +340,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Tráfico en una autopista belga",
     },
     pl: {
       title: "Belgia wprowadzi roczną winietę autostradową od 2027 roku",
@@ -413,7 +404,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Ruch na belgijskiej autostradzie",
     },
     cs: {
       title: "Belgie zavede roční dálniční známku od roku 2027",
@@ -478,7 +468,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Provoz na belgické dálnici",
     },
     it: {
       title: "Il Belgio introdurrà una vignetta autostradale annuale dal 2027",
@@ -543,7 +532,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Traffico su un'autostrada belga",
     },
     sv: {
       title: "Belgien inför årlig motorvägsvignett från 2027",
@@ -608,7 +596,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Trafik på en belgisk motorväg",
     },
     da: {
       title: "Belgien indfører årlig motorvejsvignet fra 2027",
@@ -673,7 +660,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Trafik på en belgisk motorvej",
     },
     ro: {
       title: "Belgia va introduce o vignetă anuală de autostradă din 2027",
@@ -738,7 +724,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Trafic pe o autostradă belgiană",
     },
   },
 };

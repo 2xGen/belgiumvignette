@@ -20,10 +20,6 @@ const article: Article = {
     name: "AutoNext",
     url: "https://www.autonext.co/news/belgium-road-vignette-2027-cost",
   },
-  image: {
-    url: "https://res.cloudinary.com/dzmtsqtky/image/upload/v1783690674/ncvljulgtk9q75asluka.webp",
-    credit: "AutoNext",
-  },
   content: {
     nl: {
       title: "België: wegenvignet vanaf 2027 — ook Belgen moeten betalen",
@@ -84,7 +80,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Verkeer op een Belgische autosnelweg",
     },
     fr: {
       title: "Belgique : vignette routière dès 2027 — les Belges devront aussi payer",
@@ -145,7 +140,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Circulation sur une autoroute belge",
     },
     en: {
       title: "Belgium road vignette from 2027 — Belgians will pay too",
@@ -206,7 +200,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Traffic on a Belgian motorway",
     },
     de: {
       title: "Belgien: Straßenvignette ab 2027 — Einheimische zahlen mit",
@@ -267,7 +260,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Verkehr auf einer belgischen Autobahn",
     },
     es: {
       title: "Bélgica: viñeta de carretera desde 2027 — los belgas también pagarán",
@@ -328,7 +320,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Tráfico en una autopista belga",
     },
     pl: {
       title: "Belgia: winieta drogowa od 2027 — Belgowie też będą płacić",
@@ -389,7 +380,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Ruch na belgijskiej autostradzie",
     },
     cs: {
       title: "Belgie: silniční známka od 2027 — Belgičané také zaplatí",
@@ -450,7 +440,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Provoz na belgické dálnici",
     },
     it: {
       title: "Belgio: vignetta stradale dal 2027 — anche i belgi pagheranno",
@@ -511,7 +500,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Traffico su un'autostrada belga",
     },
     sv: {
       title: "Belgien: vägvignett från 2027 — belgare betalar också",
@@ -572,7 +560,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Trafik på en belgisk motorväg",
     },
     da: {
       title: "Belgien: vejvignet fra 2027 — belgiere betaler også",
@@ -633,7 +620,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Trafik på en belgisk motorvej",
     },
     ro: {
       title: "Belgia: vinietă rutieră din 2027 — belgienii vor plăti și ei",
@@ -694,7 +680,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Trafic pe o autostradă belgiană",
     },
   },
 };

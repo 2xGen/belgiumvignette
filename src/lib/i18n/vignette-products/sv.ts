@@ -5,9 +5,9 @@ const pages: VignetteProductPages = {
     title: "Dagvignett Belgien 2027",
     intro:
       "Dagvignetten är avsedd för korta resor på belgiska huvudvägar — till exempel en dagsutflykt, genomfart eller helg. Priserna nedan baseras på publicerade planer (mars 2026) och kan fortfarande ändras före införandet den 1 maj 2027.",
-    metaTitle: "Dagvignett Belgien 2027 — €9 per dag (konceptpris)",
+    metaTitle: "Dagvignett Belgien 2027 — från €8,10 per dag (konceptpris)",
     metaDescription:
-      "Planerad dagvignett för Belgien från €9 per dag. För korta resor på motorvägar och regionala huvudvägar. Konceptpriser enligt planer mars 2026 — slutliga priser kan fortfarande ändras.",
+      "Planerad dagvignett för Belgien från €8,10 per dag. För korta resor på motorvägar och regionala huvudvägar. Konceptpriser enligt planer mars 2026 — slutliga priser kan fortfarande ändras.",
     navLabel: "Dagvignett",
     sections: [
       {

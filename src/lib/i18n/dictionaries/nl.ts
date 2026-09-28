@@ -1,4 +1,18 @@
 import type { BaseDictionary } from "../types";
+import { nlTolls } from "../tolls/nl";
+import { buildRateMatrix } from "../rate-matrix";
+
+const nlRateMatrix = buildRateMatrix({
+  vehicleHeader: "Voertuig",
+  dayHeader: "1 dag",
+  tenDaysHeader: "10 dagen",
+  monthHeader: "1 maand",
+  twoMonthsHeader: "2 maanden",
+  yearHeader: "1 jaar",
+  euro03: "Euro 0 t/m 3",
+  euro4: "Euro 4 en hoger",
+  zeroEmission: "Emissievrij",
+});
 
 const dictionary: BaseDictionary = {
   locale: "nl",
@@ -16,19 +30,20 @@ const dictionary: BaseDictionary = {
     exemptions: "Vrijstellingen",
     fines: "Boetes",
     buy: "Kopen",
+    tolls: "Tol",
     news: "Nieuws & updates",
     privacy: "Privacy",
   },
   meta: {
     home: {
-      title: "Belgisch vignet 2027: hebt u een vignet nodig voor België?",
+      title: "Belgisch vignet 2027: prijzen, snelwegen & kopen",
       description:
-        "België plant vanaf 1 mei 2027 een digitaal wegenvignet. Ontdek of u een vignet nodig heeft, wat het kost, wie vrijgesteld is en wanneer de verkoop start.",
+        "België plant een digitaal wegenvignet vanaf mei 2027. Bekijk de geplande prijzen, wie een vignet nodig heeft, vrijstellingen voor motoren en waar u kunt kopen.",
     },
     prices: {
-      title: "Belgisch vignet prijzen 2027 — dag, maand & jaartarief",
+      title: "Belgisch vignet prijzen 2027: tarieven per Euronorm en looptijd",
       description:
-        "Overzicht van geplande vignetprijzen voor België: €100/jaar, korte periodes vanaf €9/dag. Uitleg per Euro-norm en emissieklasse.",
+        "Volledige prijstabel van het Belgische wegenvignet 2027 per Euronorm en looptijd — van €8,10/dag (emissievrij) tot €125/jaar (Euro 0–3).",
     },
     foreign: {
       title: "Hebben buitenlandse auto's een Belgisch vignet nodig in 2027?",
@@ -50,6 +65,11 @@ const dictionary: BaseDictionary = {
       description:
         "Volgens de huidige plannen start de online verkoop van het Belgische wegenvignet op 1 maart 2027. Verplicht vanaf 1 mei 2027. Officiële bron: Vlaamse overheid.",
     },
+    tolls: {
+      title: "Tol in België 2027: snelwegen, vignet en tarieven",
+      description:
+        "Zijn Belgische snelwegen tolplichtig? Ontdek tol, het geplande vignet vanaf mei 2027, tarieven en regels voor buitenlandse auto's.",
+    },
     news: {
       title: "Belgisch vignet nieuws & updates — betrouwbare bronnen uitgelegd",
       description:
@@ -65,8 +85,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be is een onafhankelijke informatiesite. Wij zijn niet verbonden met de Belgische overheid, Vlaanderen, Wallonië of Brussel.",
     lastUpdated: "Laatst bijgewerkt",
-    lastUpdatedDate: "14 augustus 2026",
-    lastUpdatedIso: "2026-08-14",
+    lastUpdatedDate: "28 september 2026",
+    lastUpdatedIso: "2026-09-28",
     readMore: "Lees meer",
     relatedSite: "https://tolls.be/nl",
     relatedSiteLabel: "Tolls.be — onafhankelijke tol-informatie voor België",
@@ -108,40 +128,86 @@ const dictionary: BaseDictionary = {
     },
     quickAnswers: [
       {
-        title: "Wie moet betalen?",
+        title: "Wie moet een vignet in België kopen?",
         summary:
-          "Personenauto's tot 3,5 ton, inclusief buitenlandse voertuigen. Ook als u alleen door België rijdt.",
+          "Personenauto's tot 3,5 ton, inclusief buitenlandse voertuigen op de gedekte wegen — ook bij doorreis.",
         href: "foreign",
+        linkLabel: "Gids voor buitenlandse bestuurders",
       },
       {
-        title: "Wie is vrijgesteld?",
+        title: "Wie is vrijgesteld van het Belgische vignet?",
         summary:
-          "Motoren, vrachtwagens (kilometerheffing), tractoren, touringcars, hulpdiensten en politie.",
+          "Motoren, vrachtwagens (kilometerheffing), tractoren, touringcars, hulpdiensten en politie — volgens de huidige plannen.",
         href: "exemptions",
+        linkLabel: "Alle vrijstellingen bekijken",
       },
       {
-        title: "Wat kost het?",
+        title: "Wat is de prijs van het Belgische vignet in 2027?",
         summary:
-          "Jaarvignet vanaf €90 (elektrisch) tot €125 (oudere auto's). Korte periodes vanaf €9 per dag.",
+          "De prijs hangt af van Euronorm en looptijd: vanaf €8,10/dag (emissievrij) en €9/dag (Euro 4+), tot €90–€125 per jaar.",
         href: "prices",
+        linkLabel: "Volledige prijsgids",
       },
     ],
-    pricingTitle: "Geplande tarieven in één oogopslag",
-    pricingSubtitle:
-      "Prijzen gebaseerd op gepubliceerde plannen (maart 2026). Definitieve bedragen kunnen nog wijzigen.",
-    annualTableTitle: "Jaarvignet",
-    shortTermTableTitle: "Korte periodes",
-    annualPricing: [
-      { label: "Euro 4 en hoger", value: "€100 / jaar", note: "97%+ van Vlaamse auto's" },
-      { label: "Elektrisch / waterstof", value: "€90 / jaar" },
-      { label: "Oudere auto's (tot Euro 3)", value: "€125 / jaar" },
+    overview: {
+      title: "Wegenvignet in België: wat is gepland voor 2027",
+      paragraphs: [
+        "België plant vanaf 1 mei 2027 een digitaal wegenvignet. Het Belgische vignet zou gelden voor personenauto's tot 3,5 ton op snelwegen en bepaalde regionale hoofdwegen.",
+        "Ook buitenlandse auto's vallen eronder. Bestuurders uit Nederland, Frankrijk, Duitsland en andere landen zouden een vignet nodig hebben om op de gedekte Belgische wegen te rijden.",
+        "Het wordt geen sticker op de voorruit. Het Belgische snelwegvignet zou digitaal zijn en gekoppeld aan de nummerplaat, met controles via onder meer ANPR-camera's.",
+        "Volgens de door de Vlaamse overheid gepubliceerde tarieven hangt de prijs af van Euronorm en looptijd: vanaf €8,10 per dag voor emissievrije voertuigen en €9 per dag voor Euro 4+, tot €90–€125 per jaar. Ook 10 dagen, 1 maand en 2 maanden zijn gepland.",
+        "Motoren zouden volgens de huidige plannen vrijgesteld zijn. Definitieve bedragen en regels moeten nog worden bevestigd vóór de inwerkingtreding.",
+      ],
+    },
+    intentSections: [
+      {
+        id: "snelwegen",
+        title: "Hebt u een vignet nodig voor snelwegen in België?",
+        paragraphs: [
+          "Volgens de huidige plannen wordt een digitaal wegenvignet vanaf 1 mei 2027 verplicht op Belgische snelwegen en bepaalde regionale hoofdwegen.",
+          "Vandaag zijn de meeste Belgische snelwegen gratis voor personenauto's. Het vignetvoorstel zou dat veranderen: toegang tot snelwegen en een deel van het snellere regionale netwerk zou een kentekengerelateerd vignet vereisen.",
+          "Als u alleen lokale wegen gebruikt, zou volgens de gepubliceerde informatie geen vignet nodig zijn. In de praktijk is het vaak moeilijk om snelwegen en regionale hoofdwegen volledig te vermijden bij interstedelijke of doorreistritten.",
+        ],
+        link: {
+          href: "tolls",
+          label: "Tol en snelwegen in België",
+        },
+      },
+      {
+        id: "motoren",
+        title: "Hebben motoren een Belgisch vignet nodig?",
+        paragraphs: [
+          "Nee. Volgens de aankondigingen van de overheden zouden motoren expliciet vrijgesteld zijn van het Belgische vignet.",
+          "De verplichting zou gelden voor motorvoertuigen met minstens vier wielen tot 3,5 ton — onder meer auto's, sommige lichte bestelwagens en campers. Vrachtwagens blijven onder de kilometerheffing van Viapass.",
+        ],
+        link: {
+          href: "exemptions",
+          label: "Details over vrijstellingen bekijken",
+        },
+      },
+      {
+        id: "kopen",
+        title: "Waar kunt u het Belgische vignet kopen?",
+        paragraphs: [
+          "De officiële verkoop is nog niet gestart. Volgens de huidige plannen zou online aankoop vanaf 1 maart 2027 mogelijk zijn via de officiële website of een erkende partner.",
+          "Er is vandaag geen officieel verkoopportaal. Sites die nu al reserveren of betalen aanbieden, zijn niet het officiële kanaal.",
+        ],
+        link: {
+          href: "buy",
+          label: "Belgisch vignet kopen: data en officiële kanalen",
+        },
+      },
     ],
-    shortTermPricing: [
-      { label: "1 dag", value: "€9" },
-      { label: "10 dagen", value: "€12" },
-      { label: "1 maand", value: "€19" },
-      { label: "2 maanden", value: "€30" },
+    pricingTitle: "Wat is de prijs van het Belgische vignet in 2027?",
+    pricingParagraphs: [
+      "De prijs van het Belgische wegenvignet hangt af van de Euronorm van uw voertuig en de geldigheidsduur. Voor auto's met Euro 4 of hoger beginnen de geplande tarieven bij €9 voor 1 dag en €100 voor 1 jaar. Oudere voertuigen betalen meer, terwijl emissievrije voertuigen een lager tarief krijgen.",
     ],
+    pricingLinkLabel: "Bekijk alle prijzen van het Belgische vignet",
+    pricingLinkSecondaryLabel: "Volledige prijsgids",
+    pricingMatrixTitle: "Geplande tarieven",
+    rateMatrix: nlRateMatrix,
+    pricingNote:
+      "Dit zijn de momenteel door de Vlaamse overheid gepubliceerde tarieven. De invoering is nog onder voorbehoud van definitieve goedkeuring.",
     timelineTitle: "Belangrijke data (volgens plannen)",
     timeline: [
       {
@@ -171,83 +237,161 @@ const dictionary: BaseDictionary = {
           "Nee. Volgens de plannen is het een digitaal vignet dat aan uw kentekenplaat gekoppeld wordt. Er komt geen sticker op uw voorruit.",
       },
       {
-        question: "Geldt dit ook voor Nederlanders?",
+        question: "Hebt u een vignet nodig voor snelwegen in België?",
         answer:
-          "Ja. EU-regels vereisen dat buitenlandse en Belgische bestuurders gelijk behandeld worden. Ook als u alleen door België rijdt, zult u volgens de plannen een vignet nodig hebben.",
+          "Volgens de huidige plannen wel vanaf 1 mei 2027 op Belgische snelwegen en bepaalde regionale hoofdwegen. Lokale wegen zouden buiten de verplichting vallen.",
       },
       {
-        question: "Moeten motorrijders betalen?",
+        question: "Hebben motoren een Belgisch vignet nodig?",
         answer:
           "Nee. Motoren zijn volgens de aankondiging van ministers Weyts (Vlaanderen) en Desquesnes (Wallonië) expliciet vrijgesteld.",
       },
       {
-        question: "Wanneer kan ik een vignet kopen?",
+        question: "Geldt dit ook voor Nederlanders?",
         answer:
-          "Volgens de huidige plannen wordt de online verkoop op 1 maart 2027 verwacht. Het wegenvignet zou vanaf 1 mei 2027 verplicht worden. Definitieve voorwaarden kunnen nog wijzigen.",
+          "Ja. EU-regels vereisen gelijke behandeling. Ook bij doorreis zou u volgens de plannen een vignet nodig hebben op de gedekte wegen.",
+      },
+      {
+        question: "Waar kunt u het Belgische vignet kopen?",
+        answer:
+          "De officiële verkoop is nog niet gestart. Volgens de plannen is online aankoop voorzien vanaf 1 maart 2027 via het officiële kanaal of een erkende partner.",
       },
     ],
     sourcesTitle: "Officiële bronnen & achtergrond",
   },
   prices: {
-    title: "Prijzen & looptijden",
+    title: "Belgisch vignet prijzen 2027: tarieven per Euronorm en looptijd",
     intro:
-      "Hieronder vindt u een overzicht van de geplande vignetprijzen per emissienorm. De tarieven zijn gebaseerd op aankondigingen uit maart 2026 en kunnen nog worden aangepast.",
-    sections: [
+      "De geplande prijs van het Belgische wegenvignet hangt af van twee factoren: de Euronorm van uw voertuig en de geldigheidsduur van het vignet. De Vlaamse overheid heeft tarieven gepubliceerd voor 1 dag, 10 dagen, 1 maand, 2 maanden en 1 jaar.",
+    leadParagraphs: [
+      "Voor een auto met Euro 4 of hoger kost het Belgische vignet volgens de huidige tarieven €9 voor 1 dag, €12 voor 10 dagen en €100 voor een jaar. Emissievrije voertuigen betalen minder en voertuigen met Euro 0 tot en met Euro 3 betalen meer.",
+      "De vignette is gepland vanaf 1 mei 2027. Aankoop zou vanaf 1 maart 2027 mogelijk worden. De invoering is nog onder voorbehoud van definitieve goedkeuring.",
+    ],
+    matrixTitle: "Prijzen Belgisch wegenvignet 2027",
+    rateMatrix: nlRateMatrix,
+    matrixNote:
+      "Deze tarieven zijn gepubliceerd door de Vlaamse overheid. De prijs wordt dus niet alleen bepaald door hoe lang u het vignet nodig hebt, maar ook door de Euronorm van uw voertuig.",
+    buyLinkParagraph:
+      "[[buy|Bekijk waar en wanneer u het Belgische vignet kunt kopen]].",
+    categorySections: [
       {
-        id: "annual",
-        title: "Jaarvignet",
+        id: "euro-4",
+        title: "Wat kost een Belgisch vignet voor Euro 4 en hoger?",
         paragraphs: [
-          "Het jaarvignet is bedoeld voor regelmatige gebruikers van Belgische hoofdwegen. De prijs hangt af van de Euro-emissienorm van uw voertuig.",
-          "In Vlaanderen rijdt meer dan 97% van de personenauto's minstens Euro 4 — voor hen is €100 per jaar gepland.",
+          "Voor voertuigen met Euro 4 of hoger gelden volgens de gepubliceerde tarieven:",
+        ],
+        list: [
+          "1 dag: €9",
+          "10 dagen: €12",
+          "1 maand: €19",
+          "2 maanden: €30",
+          "1 jaar: €100",
+        ],
+        linkParagraph:
+          "Dit is de categorie waarin een groot deel van het huidige wagenpark valt. Voor een korte doorreis door België kan een dag- of 10-dagenvignet daardoor voldoende zijn. Wie regelmatig gebruikmaakt van Belgische gewest- en snelwegen kan het jaarvignet vergelijken met de kortere looptijden. Lees meer over het [[dailyVignette|dagvignet]] of bekijk het [[annualVignette|jaarvignet]].",
+      },
+      {
+        id: "euro-0-3",
+        title: "Wat kost een Belgisch vignet voor Euro 0 tot en met Euro 3?",
+        paragraphs: [
+          "Oudere voertuigen met Euro 0, Euro 1, Euro 2 of Euro 3 vallen in de duurste tariefcategorie.",
+          "De geplande prijzen lopen van €11,25 voor één dag tot €125 voor een jaar.",
+        ],
+        tableTitle: "Prijs Euro 0–3",
+        table: [
+          { label: "1 dag", value: "€11,25" },
+          { label: "10 dagen", value: "€15" },
+          { label: "1 maand", value: "€23,75" },
+          { label: "2 maanden", value: "€37,50" },
+          { label: "1 jaar", value: "€125" },
         ],
       },
       {
-        id: "short",
-        title: "Korte periodes",
+        id: "elektrisch",
+        title: "Wat kost het vignet voor een elektrische auto?",
         paragraphs: [
-          "Voor occasionele ritten — bijvoorbeeld vakantieverkeer of een weekendje Antwerpen — zijn kortere vignetten gepland.",
-          "Oudere, meer vervuilende auto's (tot Euro 3) betalen volgens de plannen iets hogere bedragen.",
+          "Voor een emissievrij voertuig geldt het laagste tarief. Volgens de huidige prijstabel kost het vignet €8,10 voor één dag en €90 voor een volledig jaar.",
         ],
+        tableTitle: "Prijs emissievrij",
+        table: [
+          { label: "1 dag", value: "€8,10" },
+          { label: "10 dagen", value: "€10,80" },
+          { label: "1 maand", value: "€17,10" },
+          { label: "2 maanden", value: "€27" },
+          { label: "1 jaar", value: "€90" },
+        ],
+        linkParagraph:
+          "[[electricVignette|Lees meer over het Belgische vignet voor elektrische auto's]].",
       },
+    ],
+    durationSection: {
+      id: "looptijd",
+      title: "Welke looptijd heb ik nodig?",
+      paragraphs: [
+        "U kunt volgens de huidige plannen kiezen uit vijf geldigheidsperiodes:",
+        "De beste looptijd hangt af van hoe vaak en hoe lang u gebruikmaakt van de wegen waarop het vignet verplicht wordt.",
+        "Bekijk de afzonderlijke uitleg over het [[dailyVignette|dagvignet]], [[monthlyVignette|maandvignet]] en [[annualVignette|jaarvignet]].",
+      ],
+      list: [
+        "1 dag — voor een korte doorreis of dagtrip.",
+        "10 dagen — bijvoorbeeld voor een vakantie of langer bezoek.",
+        "1 maand — voor meerdere ritten gedurende enkele weken.",
+        "2 maanden — voor een langer verblijf of regelmatig tijdelijk gebruik.",
+        "1 jaar — voor bestuurders die regelmatig op Belgische gewest- en snelwegen rijden.",
+      ],
+    },
+    whenSection: {
+      id: "wanneer",
+      title: "Wanneer gelden deze prijzen?",
+      paragraphs: [
+        "Het digitale wegenvignet is gepland vanaf 1 mei 2027. Volgens de huidige officiële informatie zou het vignet vanaf 1 maart 2027 online gekocht kunnen worden.",
+        "De praktische uitwerking loopt nog en de invoering is nog onder voorbehoud van definitieve goedkeuring.",
+        "Wilt u weten hoe de aankoop straks werkt? Bekijk dan [[buy|Belgisch vignet kopen]]. Voor alle regels, voertuigen en belangrijke data gaat u naar onze complete gids over het [[home|Belgische wegenvignet 2027]].",
+      ],
+    },
+    backgroundSections: [
       {
         id: "road-tax",
         title: "Interactie met verkeersbelasting (Vlaanderen)",
         paragraphs: [
           "Vlaanderen hervormt tegelijk de jaarlijkse verkeersbelasting. Volgens schattingen kan ongeveer de helft van de Vlaamse automobilisten netto meer betalen — tot €100 extra per jaar.",
-          "De verlaging van de verkeersbelasting compenseert volgens de plannen niet iedereen volledig voor de vignetkosten.",
+          "De verlaging van de verkeersbelasting compenseert volgens de plannen niet iedereen volledig voor de vignetkosten. Dit is achtergrondinformatie; de vignettarieven hierboven gelden onafhankelijk van die hervorming.",
         ],
       },
-    ],
-    annualTable: [
-      { label: "Euro 4 en hoger", value: "€100", note: "Jaar" },
-      { label: "Elektrisch / waterstof", value: "€90", note: "Jaar" },
-      { label: "Tot Euro 3 (ouder)", value: "€125", note: "Jaar" },
-    ],
-    shortTermTable: [
-      { label: "1 dag", value: "€9" },
-      { label: "10 dagen", value: "€12" },
-      { label: "1 maand", value: "€19" },
-      { label: "2 maanden", value: "€30" },
     ],
     euroNormTitle: "Euro-normen in het kort",
     euroNormCategoryHeader: "Norm",
     euroNormDescriptionHeader: "Omschrijving",
     euroNormItems: [
-      { norm: "Euro 4+", description: "Auto's vanaf circa 2005–2006. Meeste voertuigen op de weg." },
-      { norm: "Elektrisch / H₂", description: "Volledig emissievrij. Laagste tarief gepland." },
-      { norm: "Euro 3 en lager", description: "Oudere, meer vervuilende voertuigen. Hoogste tarief." },
+      {
+        norm: "Euro 4+",
+        description: "Auto's vanaf circa 2005–2006. Meeste voertuigen op de weg. Dagtarief €9, jaar €100.",
+      },
+      {
+        norm: "Emissievrij",
+        description: "Volledig emissievrij (elektrisch / waterstof). Laagste tarief: vanaf €8,10/dag, €90/jaar.",
+      },
+      {
+        norm: "Euro 3 en lager",
+        description: "Oudere, meer vervuilende voertuigen. Hoogste tarief: vanaf €11,25/dag, €125/jaar.",
+      },
     ],
     vignettePagesTitle: "Per vignettype",
     faqs: [
       {
-        question: "Zijn bedrijfsvans aftrekbaar?",
+        question: "Wat is de laagste geplande dagprijs?",
         answer:
-          "Volgens de plannen kan de vignetkost voor professionele bestelwagens volledig als beroepskost worden afgetrokken.",
+          "Volgens de Vlaamse overheid is het laagste dagtarief €8,10 voor emissievrije voertuigen. Voor Euro 4 en hoger is dat €9; voor Euro 0 tot en met 3 is dat €11,25.",
       },
       {
         question: "Gelden de korte periodes voor alle emissieklassen?",
         answer:
-          "De bedragen hierboven gelden voor Euro 4 en hoger. Oudere auto's betalen volgens de plannen een iets hoger tarief.",
+          "Ja. Elke looptijd (1 dag, 10 dagen, 1 maand, 2 maanden, 1 jaar) heeft een eigen tarief per Euronorm-categorie. De bedragen verschillen per categorie.",
+      },
+      {
+        question: "Zijn bedrijfsvans aftrekbaar?",
+        answer:
+          "Volgens de plannen kan de vignetkost voor professionele bestelwagens volledig als beroepskost worden afgetrokken.",
       },
     ],
   },
@@ -453,6 +597,7 @@ const dictionary: BaseDictionary = {
       },
     ],
   },
+  tolls: nlTolls,
   privacy: {
     title: "Privacybeleid",
     intro:
@@ -532,21 +677,84 @@ const dictionary: BaseDictionary = {
     noArticles: "Nog geen artikelen gepubliceerd. Kom binnenkort terug.",
   },
   newsletter: {
-    title: "Ontvang als eerste een melding wanneer het Belgische vignet beschikbaar is",
-    description: "",
-    benefitsIntro: "",
-    benefits: [
-      "Officiële verkoop start",
-      "Definitieve prijzen bekend",
-      "Nieuwe regels gepubliceerd",
-      "Aankooplink beschikbaar",
-    ],
     emailPlaceholder: "E-mailadres",
-    consentLabel: "Ik ga akkoord met updates en heb het privacybeleid gelezen.",
-    submit: "Houd mij op de hoogte",
+    consentLabel: "Ik ga akkoord met updates en heb het",
     success: "Bedankt! U bent ingeschreven.",
     error: "Er ging iets mis. Probeer het opnieuw.",
-    privacyLink: "Privacybeleid",
+    privacyLink: "privacybeleid gelezen",
+    sticky: {
+      teaser: "Vignet nog niet te koop — ontvang de aankooplink",
+      cta: "Aanmelden →",
+      closeLabel: "Sluiten",
+    },
+    intents: {
+      home: {
+        title:
+          "Ontvang de officiële aankooplink zodra het Belgische vignet beschikbaar is",
+        description:
+          "De verkoop is gepland vanaf 1 maart 2027. Laat uw e-mailadres achter en ontvang een melding zodra de officiële aankoopmogelijkheid beschikbaar is.",
+        benefits: [
+          "Officiële aankooplink zodra deze beschikbaar is",
+          "Updates bij wijzigingen in prijzen of regels",
+          "Geen onnodige e-mails",
+        ],
+        submit: "Stuur mij de aankooplink",
+      },
+      prices: {
+        title: "Ontvang een melding zodra de definitieve vignetprijzen bekend zijn",
+        description:
+          "De huidige tarieven zijn gepubliceerd, maar de invoering moet nog definitief worden goedgekeurd. Wij houden de officiële informatie voor u bij.",
+        benefitsIntro: "Ontvang één e-mail zodra:",
+        benefits: [
+          "de definitieve prijzen zijn bevestigd;",
+          "de officiële verkoop start;",
+          "de officiële aankooplink beschikbaar is.",
+        ],
+        submit: "Houd mij op de hoogte",
+      },
+      buy: {
+        title: "Laat het mij weten zodra het Belgische vignet te koop is",
+        description:
+          "De officiële verkoop is nog niet gestart. Volgens de huidige planning kunt u het Belgische vignet vanaf 1 maart 2027 kopen. Laat uw e-mailadres achter en ontvang een melding zodra de officiële aankoopmogelijkheid beschikbaar is.",
+        benefits: [],
+        submit: "Stuur mij de aankooplink",
+      },
+      foreign: {
+        title:
+          "Laat mij weten wanneer buitenlandse auto's hun vignet kunnen registreren",
+        description:
+          "Buitenlandse bestuurders hebben volgens de plannen ook een Belgisch vignet nodig. Ontvang een melding zodra registratie en aankoop officieel mogelijk zijn.",
+        benefits: [
+          "Start van de officiële verkoop",
+          "Regels voor buitenlandse kentekens",
+          "Officiële aankooplink",
+        ],
+        submit: "Houd mij op de hoogte",
+      },
+      news: {
+        title: "Ontvang belangrijke updates over het Belgische vignet",
+        description:
+          "Korte, relevante meldingen wanneer er officieel nieuws is over prijzen, regels of de start van de verkoop.",
+        benefits: [
+          "Belangrijke officiële updates",
+          "Geen dagelijkse spam",
+          "Aankooplink zodra beschikbaar",
+        ],
+        submit: "Ontvang updates",
+      },
+      default: {
+        title:
+          "Ontvang de officiële aankooplink zodra het Belgische vignet beschikbaar is",
+        description:
+          "De verkoop start volgens de planning op 1 maart 2027. Wij sturen u één melding zodra u officieel kunt kopen.",
+        benefits: [
+          "Officiële aankooplink",
+          "Updates over prijzen en regels",
+          "Geen onnodige e-mails",
+        ],
+        submit: "Stuur mij de aankooplink",
+      },
+    },
   },
   cookieBanner: {
     title: "Cookies & privacy",

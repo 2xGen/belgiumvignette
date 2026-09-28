@@ -20,10 +20,6 @@ const article: Article = {
     name: "Belga",
     url: "https://belgashare.be/en/newsrooms/70/press-releases/34629/",
   },
-  image: {
-    url: "https://picturepackcdn-h33aaywmsq-ew.a.run.app/belgapicturepack:180858178:full?v=6a4e5884&m=hkjnkmme",
-    credit: "Belga",
-  },
   content: {
     nl: {
       title:
@@ -85,8 +81,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Persconferentie met Vlaams minister Ben Weyts en Waals minister François Desquesnes over het Belgische tolvignet",
     },
     fr: {
       title:
@@ -148,8 +142,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Conférence de presse avec les ministres Ben Weyts et François Desquesnes sur la vignette autoroutière belge",
     },
     en: {
       title:
@@ -211,8 +203,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Press conference with Flemish minister Ben Weyts and Walloon minister François Desquesnes on the Belgian toll vignette",
     },
     de: {
       title:
@@ -274,8 +264,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Pressekonferenz mit dem flämischen Minister Ben Weyts und dem wallonischen Minister François Desquesnes zur belgischen Mautvignette",
     },
     es: {
       title:
@@ -337,8 +325,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Rueda de prensa con los ministros Ben Weyts y François Desquesnes sobre la viñeta de peaje belga",
     },
     pl: {
       title:
@@ -400,8 +386,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Konferencja prasowa z udziałem ministrów Bena Weytsa i François Desquesnesa na temat belgijskiej winiety drogowej",
     },
     cs: {
       title:
@@ -463,8 +447,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Tisková konference s ministry Benem Weytsem a François Desquesnesem o belgické dálniční známce",
     },
     it: {
       title:
@@ -526,8 +508,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Conferenza stampa con i ministri Ben Weyts e François Desquesnes sulla vignetta autostradale belga",
     },
     sv: {
       title:
@@ -589,8 +569,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Presskonferens med ministrarna Ben Weyts och François Desquesnes om den belgiska vägavgiftsvignetten",
     },
     da: {
       title:
@@ -652,8 +630,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Pressekonference med ministrene Ben Weyts og François Desquesnes om den belgiske vejafgiftsvignet",
     },
     ro: {
       title:
@@ -715,8 +691,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Conferință de presă cu miniștrii Ben Weyts și François Desquesnes despre vigneta de taxă rutieră belgiană",
     },
   },
 };

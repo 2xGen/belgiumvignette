@@ -7,7 +7,7 @@ const pages: VignetteProductPages = {
       "La viñeta diaria está prevista para trayectos cortos en las carreteras principales belgas — por ejemplo una excursión de un día, un tránsito o un fin de semana. Las tarifas que figuran a continuación se basan en planes publicados (marzo de 2026) y pueden cambiar antes de su entrada en vigor el 1 de mayo de 2027.",
     metaTitle: "Viñeta diaria Bélgica 2027 — precio €9 por día (concepto)",
     metaDescription:
-      "Viñeta diaria prevista para Bélgica desde €9 por día. Para trayectos cortos en autopistas y carreteras regionales. Precios conceptuales según planes de marzo de 2026 — las tarifas definitivas pueden cambiar.",
+      "Viñeta diaria prevista para Bélgica: desde €8,10/día (cero emisiones) o €9/día (Euro 4+). Para trayectos cortos en autopistas y carreteras regionales. Precios conceptuales según planes de marzo de 2026 — las tarifas definitivas pueden cambiar.",
     navLabel: "Viñeta diaria",
     sections: [
       {

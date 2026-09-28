@@ -1,4 +1,18 @@
 import type { BaseDictionary } from "../types";
+import { csTolls } from "../tolls/cs";
+import { buildRateMatrix } from "../rate-matrix";
+
+const csRateMatrix = buildRateMatrix({
+  vehicleHeader: "Vozidlo",
+  dayHeader: "1 den",
+  tenDaysHeader: "10 dní",
+  monthHeader: "1 měsíc",
+  twoMonthsHeader: "2 měsíce",
+  yearHeader: "1 rok",
+  euro03: "Euro 0 až 3",
+  euro4: "Euro 4 a vyšší",
+  zeroEmission: "Bez emisí",
+});
 
 const dictionary: BaseDictionary = {
   locale: "cs",
@@ -16,19 +30,20 @@ const dictionary: BaseDictionary = {
     exemptions: "Osvobození",
     fines: "Pokuty",
     buy: "Jak koupit",
+    tolls: "Mýtné",
     news: "Novinky",
     privacy: "Ochrana soukromí",
   },
   meta: {
     home: {
-      title: "Belgická dálniční známka 2027: potřebujete známku pro Belgii?",
+      title: "Belgická dálniční známka 2027: ceny, dálnice a jak koupit",
       description:
-        "Belgie plánuje zavedení digitální silniční známky od 1. května 2027. Zjistěte, zda ji potřebujete, kolik stojí, kdo je osvobozen a kdy začne prodej.",
+        "Belgie plánuje digitální silniční známku od května 2027. Podívejte se na plánované ceny, kdo ji potřebuje, osvobození motocyklů a kde koupit.",
     },
     prices: {
-      title: "Ceny belgické dálniční známky 2027 — denní, měsíční a roční sazby",
+      title: "Ceny belgické dálniční známky 2027: sazby podle normy Euro a doby platnosti",
       description:
-        "Plánované ceny dálniční známky v Belgii: €100/rok, krátkodobé od €9/den. Euro emisní norma jednoduše vysvětlena.",
+        "Úplná cenová tabulka belgické silniční známky 2027 podle normy Euro a doby platnosti — od €8,10/den (bez emisí) do €125/rok (Euro 0–3).",
     },
     foreign: {
       title: "Potřebují zahraniční auta v roce 2027 belgickou dálniční známku?",
@@ -50,6 +65,11 @@ const dictionary: BaseDictionary = {
       description:
         "Podle současných plánů má online prodej belgické dálniční známky začít 1. března 2027. Povinná od 1. května 2027. Oficiální zdroj: vlámská vláda.",
     },
+    tolls: {
+      title: "Mýtné v Belgii 2027: dálnice, známka a sazby",
+      description:
+        "Jsou dálnice v Belgii placené? Zjistěte mýtné, plánovanou známku od května 2027, sazby a pravidla pro zahraniční auta.",
+    },
     news: {
       title: "Novinky o belgické dálniční známce — vysvětlení důvěryhodných zdrojů",
       description:
@@ -65,8 +85,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be je nezávislý informační web. Nejsme spojeni s belgickou vládou, Flandremi, Valonskem ani Bruselem.",
     lastUpdated: "Naposledy aktualizováno",
-    lastUpdatedDate: "14 August 2026",
-    lastUpdatedIso: "2026-08-14",
+    lastUpdatedDate: "28 September 2026",
+    lastUpdatedIso: "2026-09-28",
     readMore: "Číst více",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — nezávislé informace o mýtném v Belgii",
@@ -108,40 +128,86 @@ const dictionary: BaseDictionary = {
     },
     quickAnswers: [
       {
-        title: "Kdo ji potřebuje?",
+        title: "Kdo musí koupit belgickou dálniční známku?",
         summary:
-          "Osobní automobily do 3,5 tuny, včetně zahraničních vozidel — i když jen projíždíte.",
+          "Osobní automobily do 3,5 tuny, včetně zahraničních vozidel v tranzitu na zahrnutých silnicích.",
         href: "foreign",
+        linkLabel: "Průvodce pro zahraniční řidiče",
       },
       {
-        title: "Kdo je osvobozen?",
+        title: "Kdo je osvobozen od belgické dálniční známky?",
         summary:
-          "Motocykly, nákladní vozy (kilometrové mýtné), traktory, autobusy, záchranné služby a policie.",
+          "Motocykly, nákladní vozy (kilometrové mýtné), traktory, autobusy, záchranné služby a policie — podle současných plánů.",
         href: "exemptions",
+        linkLabel: "Zobrazit všechna osvobození",
       },
       {
-        title: "Kolik to stojí?",
+        title: "Jaká je cena belgické dálniční známky v roce 2027?",
         summary:
-          "Roční známka od €90 (elektromobily) do €125 (starší auta). Krátkodobé od €9/den.",
+          "Cena závisí na normě Euro a době platnosti: od €8,10/den (bez emisí) a €9/den (Euro 4+), až do €90–€125 ročně.",
         href: "prices",
+        linkLabel: "Kompletní průvodce cenami",
       },
     ],
-    pricingTitle: "Plánované sazby na první pohled",
-    pricingSubtitle:
-      "Na základě zveřejněných plánů (březen 2026). Konečné částky se mohou ještě změnit.",
-    annualTableTitle: "Roční známka",
-    shortTermTableTitle: "Krátkodobé",
-    annualPricing: [
-      { label: "Euro 4 a vyšší", value: "€100 / year", note: "97 %+ flámských aut" },
-      { label: "Elektro / vodík", value: "€90 / year" },
-      { label: "Starší auta (do Euro 3)", value: "€125 / year" },
+    overview: {
+      title: "Belgická silniční známka: co je plánováno na 2027",
+      paragraphs: [
+        "Belgie plánuje zavedení digitální silniční známky od 1. května 2027. Belgická známka by se vztahovala na osobní automobily do 3,5 tuny na dálnicích a některých regionálních hlavních silnicích.",
+        "Zahraniční auta by byla zahrnuta. Řidiči z Francie, Nizozemska, Německa a dalších zemí by potřebovali známku pro použití zahrnutých belgických silnic.",
+        "Nebyla by to nálepka na čelní sklo. Belgická dálniční známka by byla digitální a vázaná na registrační značku, s kontrolami včetně kamer ANPR.",
+        "Podle sazeb zveřejněných vlámskou vládou závisí cena na normě Euro a době platnosti: od €8,10 denně pro vozidla bez emisí a €9 denně pro Euro 4+, až do €90–€125 ročně. Plánovány jsou také 10 dní, 1 měsíc a 2 měsíce.",
+        "Motocykly by byly osvobozeny podle současných plánů. Konečné částky a pravidla ještě musí být potvrzeny před vstupem systému v platnost.",
+      ],
+    },
+    intentSections: [
+      {
+        id: "dalnice",
+        title: "Potřebujete známku na dálnice v Belgii?",
+        paragraphs: [
+          "Podle současných plánů by se digitální silniční známka stala povinnou na belgických dálnicích a některých regionálních hlavních silnicích od 1. května 2027.",
+          "Dnes zůstává většina belgických dálnic pro osobní auta zdarma. Projekt známky by to změnil: přístup na dálnice a část rychlejší regionální sítě by vyžadoval známku vázanou na registrační značku.",
+          "Pokud používáte pouze místní silnice, známka by podle zveřejněných informací nebyla vyžadována. V praxi je úplné vyhýbání se dálnicím a regionálním hlavním silnicím při meziměstských nebo tranzitních cestách často obtížné.",
+        ],
+        link: {
+          href: "tolls",
+          label: "Mýtné a dálnice v Belgii",
+        },
+      },
+      {
+        id: "motocykly",
+        title: "Potřebují motocykly belgickou dálniční známku?",
+        paragraphs: [
+          "Ne. Podle vládních oznámení by motocykly byly výslovně osvobozeny od belgické známky.",
+          "Povinnost by se týkala motorových vozidel s nejméně čtyřmi koly do 3,5 tuny — včetně aut, některých lehkých dodávek a obytných vozů. Nákladní vozy zůstávají pod kilometrovým mýtným Viapass.",
+        ],
+        link: {
+          href: "exemptions",
+          label: "Zobrazit podrobnosti o osvobození",
+        },
+      },
+      {
+        id: "koupit",
+        title: "Kde koupit belgickou dálniční známku?",
+        paragraphs: [
+          "Oficiální prodej ještě nezačal. Podle současných plánů by byl online nákup možný od 1. března 2027 přes oficiální web nebo autorizovaného partnera.",
+          "Dnes neexistuje oficiální prodejní portál. Stránky, které již nabízejí rezervaci nebo platbu, nejsou oficiálním kanálem.",
+        ],
+        link: {
+          href: "buy",
+          label: "Koupit belgickou známku: data a oficiální kanály",
+        },
+      },
     ],
-    shortTermPricing: [
-      { label: "1 den", value: "€9" },
-      { label: "10 dní", value: "€12" },
-      { label: "1 měsíc", value: "€19" },
-      { label: "2 měsíce", value: "€30" },
+    pricingTitle: "Jaká je cena belgické dálniční známky v roce 2027?",
+    pricingParagraphs: [
+      "Cena belgické silniční známky závisí na normě Euro vozidla a době platnosti. Pro auta Euro 4 nebo vyšší začínají plánované sazby na €9 za 1 den a €100 za 1 rok. Starší vozidla platí více, zatímco vozidla bez emisí mají nižší sazbu.",
     ],
+    pricingLinkLabel: "Zobrazit všechny ceny belgické známky",
+    pricingLinkSecondaryLabel: "Kompletní průvodce cenami",
+    pricingMatrixTitle: "Plánované sazby",
+    rateMatrix: csRateMatrix,
+    pricingNote:
+      "Toto jsou aktuálně zveřejněné sazby vlámské vlády. Zavedení stále podléhá konečnému schválení.",
     timelineTitle: "Klíčová data (podle plánů)",
     timeline: [
       {
@@ -171,75 +237,161 @@ const dictionary: BaseDictionary = {
           "Ne. Podle plánů jde o digitální známku vázanou na vaši registrační značku. Žádná nálepka na čelním skle.",
       },
       {
-        question: "Platí to i pro zahraniční auta?",
+        question: "Potřebujete známku na dálnice v Belgii?",
         answer:
-          "Ano. Pravidla EU vyžadují rovné zacházení. Belgičtí i zahraniční řidiči musí platit.",
+          "Podle současných plánů ano od 1. května 2027 na belgických dálnicích a některých regionálních hlavních silnicích. Místní silnice by zůstaly mimo povinnost.",
       },
       {
-        question: "Platí motocyklisté?",
+        question: "Potřebují motocykly belgickou dálniční známku?",
         answer:
           "Ne. Motocykly jsou podle oznámení ministrů Weyts (Flandry) a Desquesnes (Valonsko) výslovně osvobozeny.",
       },
       {
-        question: "Kdy ji mohu koupit?",
+        question: "Platí to i pro zahraniční auta?",
         answer:
-          "Podle současných plánů je online prodej očekáván od 1. března 2027. Známka by byla povinná od 1. května 2027. Konečné podmínky se ještě mohou změnit.",
+          "Ano. Pravidla EU vyžadují rovné zacházení. Belgičtí i zahraniční řidiči musí platit na zahrnutých silnicích.",
+      },
+      {
+        question: "Kde koupit belgickou dálniční známku?",
+        answer:
+          "Oficiální prodej ještě nezačal. Podle plánů je online nákup očekáván od 1. března 2027 přes oficiální kanál nebo autorizovaného partnera.",
       },
     ],
     sourcesTitle: "Oficiální zdroje",
   },
   prices: {
-    title: "Ceny a doby platnosti",
+    title: "Ceny belgické dálniční známky 2027: sazby podle normy Euro a doby platnosti",
     intro:
-      "Přehled plánovaných cen dálniční známky podle emisní normy Euro. Na základě oznámení z března 2026 — podrobnosti se mohou změnit.",
-    sections: [
+      "Plánovaná cena belgické silniční známky závisí na dvou faktorech: normě Euro vozidla a době platnosti známky. Vlámská vláda zveřejnila sazby pro 1 den, 10 dní, 1 měsíc, 2 měsíce a 1 rok.",
+    leadParagraphs: [
+      "Pro auto Euro 4 nebo vyšší stojí belgická známka podle současných sazeb €9 za 1 den, €12 za 10 dní a €100 za rok. Vozidla bez emisí platí méně a vozidla Euro 0 až Euro 3 platí více.",
+      "Známka je plánována od 1. května 2027. Nákup by měl být možný od 1. března 2027. Zavedení stále podléhá konečnému schválení.",
+    ],
+    matrixTitle: "Ceny belgické silniční známky 2027",
+    rateMatrix: csRateMatrix,
+    matrixNote:
+      "Tyto sazby zveřejnila vlámská vláda. Cena tedy nezávisí jen na tom, jak dlouho známku potřebujete, ale také na normě Euro vašeho vozidla.",
+    buyLinkParagraph:
+      "[[buy|Podívejte se, kde a kdy můžete koupit belgickou známku]].",
+    categorySections: [
       {
-        id: "annual",
-        title: "Roční známka",
+        id: "euro-4",
+        title: "Kolik stojí belgická známka pro Euro 4 a vyšší?",
         paragraphs: [
-          "Pro pravidelné uživatele belgických hlavních silnic. Cena závisí na emisní třídě Euro vašeho vozidla.",
+          "Pro vozidla Euro 4 nebo vyšší platí podle zveřejněných sazeb:",
+        ],
+        list: [
+          "1 den: €9",
+          "10 dní: €12",
+          "1 měsíc: €19",
+          "2 měsíce: €30",
+          "1 rok: €100",
+        ],
+        linkParagraph:
+          "Do této kategorie spadá velká část současného vozového parku. Pro krátký průjezd Belgií může stačit denní nebo 10denní známka. Kdo pravidelně používá belgické krajské a dálniční silnice, může porovnat roční známku s kratšími dobami platnosti. Více o [[dailyVignette|denní známce]] nebo se podívejte na [[annualVignette|roční známku]].",
+      },
+      {
+        id: "euro-0-3",
+        title: "Kolik stojí belgická známka pro Euro 0 až Euro 3?",
+        paragraphs: [
+          "Starší vozidla s Euro 0, Euro 1, Euro 2 nebo Euro 3 spadají do nejdražší sazební kategorie.",
+          "Plánované ceny jdou od €11,25 za jeden den do €125 za rok.",
+        ],
+        tableTitle: "Cena Euro 0–3",
+        table: [
+          { label: "1 den", value: "€11,25" },
+          { label: "10 dní", value: "€15" },
+          { label: "1 měsíc", value: "€23,75" },
+          { label: "2 měsíce", value: "€37,50" },
+          { label: "1 rok", value: "€125" },
         ],
       },
       {
-        id: "short",
-        title: "Krátkodobé možnosti",
+        id: "elektro",
+        title: "Kolik stojí známka pro elektromobil?",
         paragraphs: [
-          "Pro příležitostné cesty — dovolené, víkendy — jsou plánovány kratší známky.",
-          "Starší, více znečišťující auta (do Euro 3) platí mírně vyšší sazby.",
+          "Pro vozidlo bez emisí platí nejnižší sazba. Podle současné cenové tabulky stojí známka €8,10 za jeden den a €90 za celý rok.",
         ],
+        tableTitle: "Cena bez emisí",
+        table: [
+          { label: "1 den", value: "€8,10" },
+          { label: "10 dní", value: "€10,80" },
+          { label: "1 měsíc", value: "€17,10" },
+          { label: "2 měsíce", value: "€27" },
+          { label: "1 rok", value: "€90" },
+        ],
+        linkParagraph:
+          "[[electricVignette|Více o belgické známce pro elektromobily]].",
       },
+    ],
+    durationSection: {
+      id: "doba",
+      title: "Jakou dobu platnosti potřebuji?",
+      paragraphs: [
+        "Podle současných plánů můžete volit z pěti období platnosti:",
+        "Nejlepší doba závisí na tom, jak často a jak dlouho používáte silnice, na nichž bude známka povinná.",
+        "Podívejte se na samostatné vysvětlení [[dailyVignette|denní známky]], [[monthlyVignette|měsíční známky]] a [[annualVignette|roční známky]].",
+      ],
+      list: [
+        "1 den — pro krátký průjezd nebo jednodenní výlet.",
+        "10 dní — například na dovolenou nebo delší návštěvu.",
+        "1 měsíc — pro více jízd během několika týdnů.",
+        "2 měsíce — pro delší pobyt nebo pravidelné dočasné používání.",
+        "1 rok — pro řidiče, kteří pravidelně jezdí po belgických krajských a dálničních silnicích.",
+      ],
+    },
+    whenSection: {
+      id: "kdy",
+      title: "Kdy platí tyto ceny?",
+      paragraphs: [
+        "Digitální silniční známka je plánována od 1. května 2027. Podle současných oficiálních informací by bylo možné známku koupit online od 1. března 2027.",
+        "Praktické provedení stále probíhá a zavedení podléhá konečnému schválení.",
+        "Chcete vědět, jak bude nákup fungovat? Podívejte se na [[buy|Koupit belgickou známku]]. Pro všechna pravidla, vozidla a klíčová data přejděte na našeho kompletního průvodce [[home|belgickou silniční známkou 2027]].",
+      ],
+    },
+    backgroundSections: [
       {
         id: "road-tax",
         title: "Vztah k silniční dani (Flandry)",
         paragraphs: [
-          "Flandry současně reformují roční silniční daň. Přibližně polovina flámských motoristů může celkově platit více — až €100/rok navíc.",
+          "Flandry zároveň reformují roční silniční daň. Podle odhadů může asi polovina flámských motoristů neto platit více — až €100 navíc ročně.",
+          "Snížení silniční daně podle plánů nekompenzuje každému plně náklady na známku. Toto je kontextová informace; výše uvedené sazby známky platí nezávisle na této reformě.",
         ],
       },
     ],
-    annualTable: [
-      { label: "Euro 4 a vyšší", value: "€100", note: "Rok" },
-      { label: "Elektro / vodík", value: "€90", note: "Rok" },
-      { label: "Do Euro 3", value: "€125", note: "Rok" },
-    ],
-    shortTermTable: [
-      { label: "1 den", value: "€9" },
-      { label: "10 dní", value: "€12" },
-      { label: "1 měsíc", value: "€19" },
-      { label: "2 měsíce", value: "€30" },
-    ],
-    euroNormTitle: "Emisní normy Euro vysvětleny",
+    euroNormTitle: "Normy Euro ve zkratce",
     euroNormCategoryHeader: "Norma",
     euroNormDescriptionHeader: "Popis",
     euroNormItems: [
-      { norm: "Euro 4+", description: "Auta od cca 2005–2006. Většina vozidel na silnicích." },
-      { norm: "Elektro / H₂", description: "Nulové emise. Nejnižší plánovaná sazba." },
-      { norm: "Euro 3 a nižší", description: "Starší, více znečišťující vozidla." },
+      {
+        norm: "Euro 4+",
+        description: "Auta od cca 2005–2006. Většina vozidel na silnicích. Denní sazba €9, roční €100.",
+      },
+      {
+        norm: "Bez emisí",
+        description: "Úplně bez emisí (elektro / vodík). Nejnižší sazba: od €8,10/den, €90/rok.",
+      },
+      {
+        norm: "Euro 3 a nižší",
+        description: "Starší, více znečišťující vozidla. Nejvyšší sazba: od €11,25/den, €125/rok.",
+      },
     ],
     vignettePagesTitle: "Podle typu známky",
     faqs: [
       {
+        question: "Jaká je nejnižší plánovaná denní cena?",
+        answer:
+          "Podle vlámské vlády je nejnižší denní sazba €8,10 pro vozidla bez emisí. Pro Euro 4 a vyšší je to €9; pro Euro 0 až 3 je to €11,25.",
+      },
+      {
+        question: "Platí krátká období pro všechny emisní třídy?",
+        answer:
+          "Ano. Každá doba platnosti (1 den, 10 dní, 1 měsíc, 2 měsíce, 1 rok) má vlastní sazbu podle kategorie normy Euro. Částky se liší podle kategorie.",
+      },
+      {
         question: "Lze si u dodávek odečíst náklady?",
-        answer: "Podle plánů lze náklady na známku u profesionálních dodávek plně odečíst jako firemní výdaj.",
+        answer:
+          "Podle plánů lze náklady na známku u profesionálních dodávek plně odečíst jako firemní výdaj.",
       },
     ],
   },
@@ -424,6 +576,7 @@ const dictionary: BaseDictionary = {
       },
     ],
   },
+  tolls: csTolls,
   privacy: {
     title: "Zásady ochrany soukromí",
     intro: "BelgiumVignette.be respektuje vaše soukromí. Zde je, jak nakládáme s vašimi údaji.",
@@ -497,21 +650,84 @@ const dictionary: BaseDictionary = {
     noArticles: "Zatím nejsou publikovány žádné články. Zkuste to brzy znovu.",
   },
   newsletter: {
-    title: "Buďte mezi prvními, kdo se dozví o dostupnosti belgické známky",
-    description: "",
-    benefitsIntro: "",
-    benefits: [
-      "Začátek oficiálního prodeje",
-      "Potvrzeny konečné ceny",
-      "Zveřejněna nová pravidla",
-      "Dostupný odkaz na nákup",
-    ],
     emailPlaceholder: "E-mailová adresa",
-    consentLabel: "Souhlasím se zasíláním aktualizací a přečetl(a) jsem zásady ochrany soukromí.",
-    submit: "Upozornit mě",
+    consentLabel: "Souhlasím se zasíláním aktualizací a přečetl(a) jsem",
     success: "Děkujeme! Jste přihlášeni k odběru.",
     error: "Něco se pokazilo. Zkuste to prosím znovu.",
-    privacyLink: "Zásady ochrany soukromí",
+    privacyLink: "zásady ochrany soukromí",
+    sticky: {
+      teaser: "Známka ještě není v prodeji — získejte odkaz na nákup",
+      cta: "Přihlásit se →",
+      closeLabel: "Zavřít",
+    },
+    intents: {
+      home: {
+        title:
+          "Získejte oficiální odkaz na nákup, jakmile bude belgická známka dostupná",
+        description:
+          "Prodej je plánován od 1. března 2027. Zanechte e-mailovou adresu a dostanete upozornění, jakmile bude oficiální nákup možný.",
+        benefits: [
+          "Oficiální odkaz na nákup, jakmile bude dostupný",
+          "Aktualizace při změnách cen nebo pravidel",
+          "Žádné zbytečné e-maily",
+        ],
+        submit: "Pošlete mi odkaz na nákup",
+      },
+      prices: {
+        title: "Dostávejte upozornění, jakmile budou známé konečné ceny známky",
+        description:
+          "Aktuální sazby jsou zveřejněny, ale zavedení ještě musí být definitivně schváleno. Sledujeme oficiální informace za vás.",
+        benefitsIntro: "Dostanete jeden e-mail, jakmile:",
+        benefits: [
+          "budou potvrzeny konečné ceny;",
+          "začne oficiální prodej;",
+          "bude dostupný oficiální odkaz na nákup.",
+        ],
+        submit: "Informujte mě",
+      },
+      buy: {
+        title: "Dejte mi vědět, jakmile bude belgická známka v prodeji",
+        description:
+          "Oficiální prodej ještě nezačal. Podle současného plánu můžete belgickou známku koupit od 1. března 2027. Zanechte e-mailovou adresu a dostanete upozornění, jakmile bude oficiální nákup možný.",
+        benefits: [],
+        submit: "Pošlete mi odkaz na nákup",
+      },
+      foreign: {
+        title:
+          "Dejte mi vědět, kdy budou moci zahraniční auta registrovat známku",
+        description:
+          "Podle plánů budou zahraniční řidiči také potřebovat belgickou známku. Dostanete upozornění, jakmile bude registrace a nákup oficiálně možné.",
+        benefits: [
+          "Začátek oficiálního prodeje",
+          "Pravidla pro zahraniční registrační značky",
+          "Oficiální odkaz na nákup",
+        ],
+        submit: "Informujte mě",
+      },
+      news: {
+        title: "Dostávejte důležité aktualizace o belgické známce",
+        description:
+          "Krátká, relevantní upozornění, když se objeví oficiální zprávy o cenách, pravidlech nebo začátku prodeje.",
+        benefits: [
+          "Důležité oficiální aktualizace",
+          "Žádný denní spam",
+          "Odkaz na nákup, jakmile bude dostupný",
+        ],
+        submit: "Dostávat aktualizace",
+      },
+      default: {
+        title:
+          "Získejte oficiální odkaz na nákup, jakmile bude belgická známka dostupná",
+        description:
+          "Prodej podle plánu začíná 1. března 2027. Pošleme vám jedno upozornění, jakmile budete moci oficiálně koupit.",
+        benefits: [
+          "Oficiální odkaz na nákup",
+          "Aktualizace o cenách a pravidlech",
+          "Žádné zbytečné e-maily",
+        ],
+        submit: "Pošlete mi odkaz na nákup",
+      },
+    },
   },
   cookieBanner: {
     title: "Cookies a soukromí",

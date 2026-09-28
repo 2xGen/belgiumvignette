@@ -4,8 +4,8 @@ import type { Dictionary } from "@/lib/i18n/types";
 import type { Article, ArticleContentSection } from "@/lib/content/articles/types";
 import { getArticleContent } from "@/lib/content/articles";
 import { getLocalizedPath } from "@/lib/routes";
-import { ArticleImage } from "@/components/ui/ArticleImage";
 import { RelatedArticles } from "@/components/sections/RelatedArticles";
+import Newsletter from "@/components/sections/Newsletter";
 
 function formatDate(date: string, locale: Locale): string {
   return new Intl.DateTimeFormat(locale, {
@@ -72,21 +72,6 @@ export function ArticlePageContent({
       </p>
 
       <p className="mt-3 text-xs text-text-muted">{dict.news.translationDisclaimer}</p>
-
-      {article.image && (
-        <figure className="mt-6">
-          <ArticleImage
-            src={article.image.url}
-            alt={content.imageAlt ?? content.title}
-            className="h-auto w-full border border-border-light"
-          />
-          {article.image.credit && (
-            <figcaption className="mt-2 text-xs text-text-muted">
-              © {article.image.credit}
-            </figcaption>
-          )}
-        </figure>
-      )}
 
       <nav
         className="notice-box mt-8 text-sm"
@@ -157,6 +142,16 @@ export function ArticlePageContent({
         </p>
         <p className="mt-3 text-xs text-text-muted">{dict.news.articleAttributionCopyright}</p>
       </aside>
+
+      <div className="mt-12">
+        <Newsletter
+          locale={locale}
+          dict={dict}
+          intent="news"
+          variant="inline"
+          id="newsletter-article"
+        />
+      </div>
 
       <RelatedArticles article={article} locale={locale} dict={dict} />
 

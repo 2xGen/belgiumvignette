@@ -5,9 +5,9 @@ const pages: VignetteProductPages = {
     title: "Vignetă zilnică Belgia 2027",
     intro:
       "Vigneta zilnică este destinată călătoriilor scurte pe drumurile principale din Belgia — de exemplu o excursie de o zi, tranzit sau un weekend. Tarifele de mai jos se bazează pe planurile publicate (martie 2026) și pot fi modificate înainte de introducerea din 1 mai 2027.",
-    metaTitle: "Vignetă zilnică Belgia 2027 — €9 pe zi (preț concept)",
+    metaTitle: "Vignetă zilnică Belgia 2027 — de la €8,10 pe zi (preț concept)",
     metaDescription:
-      "Vignetă zilnică planificată pentru Belgia de la €9 pe zi. Pentru călătorii scurte pe autostrăzi și drumuri regionale principale. Prețuri concept conform planurilor din martie 2026 — tarifele finale pot fi modificate.",
+      "Vignetă zilnică planificată pentru Belgia de la €8,10 pe zi. Pentru călătorii scurte pe autostrăzi și drumuri regionale principale. Prețuri concept conform planurilor din martie 2026 — tarifele finale pot fi modificate.",
     navLabel: "Vignetă zilnică",
     sections: [
       {

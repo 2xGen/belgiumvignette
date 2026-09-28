@@ -4,10 +4,10 @@ const pages: VignetteProductPages = {
   dailyVignette: {
     title: "Tagesvignette Belgien 2027",
     intro:
-      "Die Tagesvignette ist für kurze Fahrten auf belgischen Hauptstraßen vorgesehen — zum Beispiel ein Tagesausflug, eine Durchfahrt oder ein Wochenende. Die untenstehenden Tarife basieren auf veröffentlichten Plänen (März 2026) und können sich vor der Einführung am 1. Mai 2027 noch ändern.",
-    metaTitle: "Tagesvignette Belgien 2027 — Preis €9 pro Tag (Konzept)",
+      "Die Tagesvignette ist für kurze Fahrten auf belgischen Hauptstraßen vorgesehen — zum Beispiel ein Tagesausflug, eine Durchfahrt oder ein Wochenende. Geplante Tagestarife beginnen bei 8,10 € für emissionsfreie Fahrzeuge und 9 € für Euro 4+. Beträge können sich vor der Einführung am 1. Mai 2027 noch ändern.",
+    metaTitle: "Tagesvignette Belgien 2027 — ab 8,10 €/Tag (emissionsfrei) / 9 € Euro 4+",
     metaDescription:
-      "Geplante Tagesvignette für Belgien ab €9 pro Tag. Für kurze Fahrten auf Autobahnen und Regionalstraßen. Konzeptpreise gemäß Plänen März 2026 — endgültige Tarife können sich noch ändern.",
+      "Geplante Tagesvignette für Belgien: ab 8,10 €/Tag für emissionsfreie Fahrzeuge und 9 €/Tag für Euro 4+. Für kurze Fahrten auf Autobahnen und Regionalstraßen. Von Flandern veröffentlichte Tarife — endgültige Beträge können sich noch ändern.",
     navLabel: "Tagesvignette",
     sections: [
       {

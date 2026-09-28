@@ -20,10 +20,6 @@ const article: Article = {
     name: "HLN",
     url: "https://www.hln.be/nieuws/wordt-het-geld-gebruikt-voor-betere-wegen-in-belgie-ben-weyts-beantwoordt-uw-prangende-vragen-over-het-nu-al-omstreden-wegenvignet~a77e690f/",
   },
-  image: {
-    url: "https://images.hln.be/NGJlMjZiY2I4ODc1NzUwNzUzNjgvZGlvLzI3NTg0OTI0Ni9maWxsLzEzNTAvOTAw/illustratiebeeld-inzet-minister-van-financien-ben-weyts-bij-vtm-nieuws",
-    credit: "Photo News, Inzet: VTM NIEUWS",
-  },
   content: {
     nl: {
       title:
@@ -123,7 +119,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Minister Ben Weyts bij VTM Nieuws",
     },
     en: {
       title:
@@ -223,7 +218,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Minister Ben Weyts on VTM Nieuws",
     },
     fr: {
       title:
@@ -323,7 +317,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Le ministre Ben Weyts sur VTM Nieuws",
     },
     de: {
       title:
@@ -423,7 +416,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Minister Ben Weyts bei VTM Nieuws",
     },
     es: {
       title:
@@ -523,7 +515,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "El ministro Ben Weyts en VTM Nieuws",
     },
     pl: {
       title:
@@ -623,7 +614,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Minister Ben Weyts w VTM Nieuws",
     },
     cs: {
       title:
@@ -723,7 +713,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Ministr Ben Weyts v pořadu VTM Nieuws",
     },
     it: {
       title:
@@ -823,7 +812,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Il ministro Ben Weyts su VTM Nieuws",
     },
     sv: {
       title:
@@ -923,7 +911,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Minister Ben Weyts i VTM Nieuws",
     },
     da: {
       title:
@@ -1023,7 +1010,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Minister Ben Weyts i VTM Nieuws",
     },
     ro: {
       title:
@@ -1123,7 +1109,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Ministrul Ben Weyts la VTM Nieuws",
     },
   },
 };

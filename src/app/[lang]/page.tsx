@@ -14,7 +14,8 @@ import {
 import { hreflangCodes } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
 import QuickAnswers from "@/components/sections/QuickAnswers";
-import { PricingTable } from "@/components/ui/PricingTable";
+import { HomeIntentSections, HomeOverview } from "@/components/sections/HomeSeoSections";
+import { RateMatrixTable } from "@/components/ui/RateMatrixTable";
 import Timeline from "@/components/sections/Timeline";
 import FAQ from "@/components/sections/FAQ";
 import Newsletter from "@/components/sections/Newsletter";
@@ -128,46 +129,59 @@ export default async function HomePage({
               </div>
             </div>
 
-            <Newsletter locale={lang} dict={dict} variant="hero" />
+            <Newsletter locale={lang} dict={dict} variant="hero" intent="home" />
           </div>
         </div>
       </section>
 
       <div className="page-wrap py-10 sm:py-14">
+        <HomeOverview
+          title={dict.home.overview.title}
+          paragraphs={dict.home.overview.paragraphs}
+        />
+
         <QuickAnswers
           items={dict.home.quickAnswers}
           locale={lang}
           readMore={dict.common.readMore}
         />
 
+        <HomeIntentSections sections={dict.home.intentSections} locale={lang} />
+
         <section className="py-12">
-          <div className="mb-8 max-w-2xl">
+          <div className="mb-8 max-w-4xl">
             <h2 className="section-heading">{dict.home.pricingTitle}</h2>
-            <p className="text-text-muted">{dict.home.pricingSubtitle}</p>
+            {dict.home.pricingParagraphs.map((paragraph) => (
+              <p key={paragraph.slice(0, 48)} className="mt-3 text-text-muted">
+                {paragraph}
+              </p>
+            ))}
+            <p className="mt-4">
+              <Link
+                href={getLocalizedPath(lang, "prices")}
+                className="text-sm font-bold text-ink no-underline hover:text-accent-deep hover:underline"
+              >
+                {dict.home.pricingLinkLabel} →
+              </Link>
+            </p>
           </div>
-          <div className="grid gap-5 lg:grid-cols-2">
-            <div className="panel-muted p-6">
-              <h3 className="mb-4 font-[family-name:var(--font-display)] text-lg font-bold text-ink">
-                {dict.home.annualTableTitle}
-              </h3>
-              <PricingTable
-                rows={dict.home.annualPricing}
-                caption={dict.home.annualTableTitle}
-                categoryHeader={dict.common.tableCategory}
-                valueHeader={dict.common.tablePrice}
-              />
-            </div>
-            <div className="panel-muted p-6">
-              <h3 className="mb-4 font-[family-name:var(--font-display)] text-lg font-bold text-ink">
-                {dict.home.shortTermTableTitle}
-              </h3>
-              <PricingTable
-                rows={dict.home.shortTermPricing}
-                caption={dict.home.shortTermTableTitle}
-                categoryHeader={dict.common.tableCategory}
-                valueHeader={dict.common.tablePrice}
-              />
-            </div>
+          <div className="panel-muted p-5 sm:p-6">
+            <h3 className="mb-4 font-[family-name:var(--font-display)] text-lg font-bold text-ink">
+              {dict.home.pricingMatrixTitle}
+            </h3>
+            <RateMatrixTable
+              matrix={dict.home.rateMatrix}
+              caption={dict.home.pricingMatrixTitle}
+            />
+            <p className="mt-4 text-sm text-text-muted">{dict.home.pricingNote}</p>
+            <p className="mt-4">
+              <Link
+                href={getLocalizedPath(lang, "prices")}
+                className="text-sm font-bold text-ink no-underline hover:text-accent-deep hover:underline"
+              >
+                {dict.home.pricingLinkSecondaryLabel} →
+              </Link>
+            </p>
           </div>
         </section>
 

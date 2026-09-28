@@ -17,7 +17,6 @@ export interface ArticleLocaleContent {
   excerpt: string;
   summarySections: ArticleContentSection[];
   ourTakeSections: ArticleContentSection[];
-  imageAlt?: string;
 }
 
 export interface Article {
@@ -27,9 +26,5 @@ export interface Article {
   slugs: Record<Locale, string>;
   publishedAt: string;
   source: ArticleSource;
-  image?: {
-    url: string;
-    credit?: string;
-  };
   content: Record<Locale, ArticleLocaleContent>;
 }

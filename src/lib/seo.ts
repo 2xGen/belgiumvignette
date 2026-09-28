@@ -82,7 +82,6 @@ export function buildArticleMetadata({
   description,
   path,
   publishedAt,
-  imageUrl,
 }: {
   locale: Locale;
   article: Article;
@@ -90,7 +89,6 @@ export function buildArticleMetadata({
   description: string;
   path: string;
   publishedAt: string;
-  imageUrl?: string;
 }): import("next").Metadata {
   const canonical = buildCanonical(path);
   const languages = buildArticleHreflangLanguages(article);
@@ -115,7 +113,6 @@ export function buildArticleMetadata({
       alternateLocale: alternateLocales,
       type: "article",
       publishedTime: publishedAt,
-      ...(imageUrl ? { images: [{ url: imageUrl }] } : {}),
     },
     twitter: {
       card: "summary_large_image",

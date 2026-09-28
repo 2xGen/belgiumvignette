@@ -4,10 +4,10 @@ const pages: VignetteProductPages = {
   dailyVignette: {
     title: "Vignette journalière Belgique 2027",
     intro:
-      "La vignette journalière est prévue pour les courts trajets sur les routes principales belges — par exemple une excursion d'une journée, un transit ou un week-end. Les tarifs ci-dessous sont basés sur des plans publiés (mars 2026) et peuvent encore changer avant l'entrée en vigueur le 1er mai 2027.",
-    metaTitle: "Vignette journalière Belgique 2027 — prix €9 par jour (concept)",
+      "La vignette journalière est prévue pour les courts trajets sur les routes principales belges — par exemple une excursion d'une journée, un transit ou un week-end. Les tarifs journaliers prévus commencent à 8,10 € pour les véhicules zéro émission et 9 € pour Euro 4+. Les montants peuvent encore changer avant l'entrée en vigueur le 1er mai 2027.",
+    metaTitle: "Vignette journalière Belgique 2027 — dès 8,10 €/jour (zéro émission) / 9 € Euro 4+",
     metaDescription:
-      "Vignette journalière prévue pour la Belgique à partir de €9 par jour. Pour les courts trajets sur autoroutes et routes régionales. Tarifs conceptuels selon les plans de mars 2026 — les prix définitifs peuvent encore changer.",
+      "Vignette journalière prévue pour la Belgique : dès 8,10 €/jour pour les véhicules zéro émission et 9 €/jour pour Euro 4+. Pour les courts trajets sur autoroutes et routes régionales. Tarifs publiés par la Flandre — les montants définitifs peuvent encore changer.",
     navLabel: "Vignette journalière",
     sections: [
       {

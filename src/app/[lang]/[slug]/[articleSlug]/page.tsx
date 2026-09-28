@@ -63,7 +63,6 @@ export async function generateMetadata({
     description: content.metaDescription,
     path,
     publishedAt: article.publishedAt,
-    imageUrl: article.image?.url,
   });
 }
 

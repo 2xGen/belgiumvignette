@@ -1,4 +1,18 @@
 import type { BaseDictionary } from "../types";
+import { plTolls } from "../tolls/pl";
+import { buildRateMatrix } from "../rate-matrix";
+
+const plRateMatrix = buildRateMatrix({
+  vehicleHeader: "Pojazd",
+  dayHeader: "1 dzień",
+  tenDaysHeader: "10 dni",
+  monthHeader: "1 miesiąc",
+  twoMonthsHeader: "2 miesiące",
+  yearHeader: "1 rok",
+  euro03: "Euro 0 do 3",
+  euro4: "Euro 4 i wyżej",
+  zeroEmission: "Bezemisyjne",
+});
 
 const dictionary: BaseDictionary = {
   locale: "pl",
@@ -16,19 +30,20 @@ const dictionary: BaseDictionary = {
     exemptions: "Zwolnienia",
     fines: "Mandaty",
     buy: "Jak kupić",
+    tolls: "Opłaty",
     news: "Aktualności",
     privacy: "Prywatność",
   },
   meta: {
     home: {
-      title: "Winieta belgijska 2027: czy potrzebujesz winiety do Belgii?",
+      title: "Winieta belgijska 2027: ceny, autostrady i jak kupić",
       description:
-        "Belgia planuje wprowadzenie cyfrowej winiety drogowej od 1 maja 2027 r. Sprawdź, czy jej potrzebujesz, ile kosztuje, kto jest zwolniony i kiedy rozpocznie się sprzedaż.",
+        "Belgia planuje cyfrową winietę drogową od maja 2027 r. Sprawdź planowane ceny, kto jej potrzebuje, zwolnienia dla motocykli i gdzie kupić.",
     },
     prices: {
-      title: "Ceny winiety belgijskiej 2027 — dzienne, miesięczne i roczne stawki",
+      title: "Ceny belgijskiej winiety 2027: stawki według normy Euro i okresu ważności",
       description:
-        "Planowane ceny winiety w Belgii: €100/rok, krótkoterminowe od €9/dzień. Norma emisji Euro wyjaśniona w prosty sposób.",
+        "Pełna tabela cen belgijskiej winiety drogowej 2027 według normy Euro i okresu ważności — od €8,10/dzień (bezemisyjne) do €125/rok (Euro 0–3).",
     },
     foreign: {
       title: "Czy samochody zagraniczne potrzebują belgijskiej winiety w 2027 roku?",
@@ -50,6 +65,11 @@ const dictionary: BaseDictionary = {
       description:
         "Według obecnych planów sprzedaż online belgijskiej winiety drogowej ma ruszyć 1 marca 2027 r. Obowiązkowa od 1 maja 2027 r. Oficjalne źródło: rząd flamandzki.",
     },
+    tolls: {
+      title: "Opłaty drogowe w Belgii 2027: autostrady, winieta i stawki",
+      description:
+        "Czy autostrady w Belgii są płatne? Sprawdź opłaty, planowaną winietę od maja 2027, stawki i zasady dla samochodów zagranicznych.",
+    },
     news: {
       title: "Aktualności o winiecie belgijskiej — wyjaśnienie wiarygodnych źródeł",
       description:
@@ -65,8 +85,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be to niezależna strona informacyjna. Nie jesteśmy powiązani z rządem belgijskim, Flandrią, Walonią ani Brukselą.",
     lastUpdated: "Ostatnia aktualizacja",
-    lastUpdatedDate: "14 August 2026",
-    lastUpdatedIso: "2026-08-14",
+    lastUpdatedDate: "28 September 2026",
+    lastUpdatedIso: "2026-09-28",
     readMore: "Czytaj więcej",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — niezależne informacje o opłatach drogowych w Belgii",
@@ -108,40 +128,86 @@ const dictionary: BaseDictionary = {
     },
     quickAnswers: [
       {
-        title: "Kto musi ją mieć?",
+        title: "Kto musi kupić belgijską winietę?",
         summary:
-          "Samochody osobowe do 3,5 tony, w tym pojazdy zagraniczne — nawet jeśli tylko przejeżdżasz tranzytem.",
+          "Samochody osobowe do 3,5 tony, w tym pojazdy zagraniczne w tranzycie na objętych drogach.",
         href: "foreign",
+        linkLabel: "Przewodnik dla kierowców zagranicznych",
       },
       {
-        title: "Kto jest zwolniony?",
+        title: "Kto jest zwolniony z belgijskiej winiety?",
         summary:
-          "Motocykle, ciężarówki (opłata za kilometr), traktory, autokary, służby ratunkowe i policja.",
+          "Motocykle, ciężarówki (opłata za kilometr), traktory, autokary, służby ratunkowe i policja — według obecnych planów.",
         href: "exemptions",
+        linkLabel: "Zobacz wszystkie zwolnienia",
       },
       {
-        title: "Ile to kosztuje?",
+        title: "Jaka jest cena belgijskiej winiety w 2027 roku?",
         summary:
-          "Winieta roczna od €90 (elektryczne) do €125 (starsze samochody). Krótkoterminowa od €9/dzień.",
+          "Cena zależy od normy Euro i okresu ważności: od €8,10/dzień (bezemisyjne) i €9/dzień (Euro 4+), do €90–€125 rocznie.",
         href: "prices",
+        linkLabel: "Pełny przewodnik po cenach",
       },
     ],
-    pricingTitle: "Planowane stawki w skrócie",
-    pricingSubtitle:
-      "Na podstawie opublikowanych planów (marzec 2026 r.). Ostateczne kwoty mogą jeszcze ulec zmianie.",
-    annualTableTitle: "Winieta roczna",
-    shortTermTableTitle: "Krótkoterminowa",
-    annualPricing: [
-      { label: "Euro 4 i wyżej", value: "€100 / year", note: "97%+ flamandzkich samochodów" },
-      { label: "Elektryczne / wodór", value: "€90 / year" },
-      { label: "Starsze samochody (do Euro 3)", value: "€125 / year" },
+    overview: {
+      title: "Belgijska winieta drogowa: co jest planowane na 2027",
+      paragraphs: [
+        "Belgia planuje wprowadzenie cyfrowej winiety drogowej od 1 maja 2027 r. Belgijska winieta miałaby obowiązywać samochody osobowe do 3,5 tony na autostradach i niektórych regionalnych drogach głównych.",
+        "Samochody zagraniczne byłyby objęte. Kierowcy z Francji, Holandii, Niemiec i innych krajów potrzebowaliby winiety, aby korzystać z objętych belgijskich dróg.",
+        "Nie byłaby to naklejka na szybę. Belgijska winieta autostradowa byłaby cyfrowa i powiązana z tablicą rejestracyjną, z kontrolami m.in. przez kamery ANPR.",
+        "Według stawek opublikowanych przez rząd flamandzki cena zależy od normy Euro i okresu ważności: od €8,10 dziennie dla pojazdów bezemisyjnych i €9 dziennie dla Euro 4+, do €90–€125 rocznie. Planowane są też 10 dni, 1 miesiąc i 2 miesiące.",
+        "Motocykle byłyby zwolnione według obecnych planów. Ostateczne kwoty i przepisy muszą jeszcze zostać potwierdzone przed wejściem systemu w życie.",
+      ],
+    },
+    intentSections: [
+      {
+        id: "autostrady",
+        title: "Czy potrzebujesz winiety na autostrady w Belgii?",
+        paragraphs: [
+          "Według obecnych planów cyfrowa winieta drogowa stałaby się obowiązkowa na belgijskich autostradach i niektórych regionalnych drogach głównych od 1 maja 2027 r.",
+          "Dziś większość belgijskich autostrad pozostaje bezpłatna dla samochodów osobowych. Projekt winiety miałby to zmienić: dostęp do autostrad i części szybszej sieci regionalnej wymagałby winiety powiązanej z tablicą rejestracyjną.",
+          "Jeśli korzystasz tylko z dróg lokalnych, winieta nie byłaby wymagana według opublikowanych informacji. W praktyce całkowite unikanie autostrad i regionalnych dróg głównych jest często trudne przy podróżach międzymiastowych lub tranzytowych.",
+        ],
+        link: {
+          href: "tolls",
+          label: "Opłaty i autostrady w Belgii",
+        },
+      },
+      {
+        id: "motocykle",
+        title: "Czy motocykle potrzebują belgijskiej winiety?",
+        paragraphs: [
+          "Nie. Według ogłoszeń rządowych motocykle byłyby wyraźnie zwolnione z belgijskiej winiety.",
+          "Obowiązek dotyczyłby pojazdów silnikowych z co najmniej czterema kołami do 3,5 tony — w tym samochodów, niektórych lekkich vanów i kamperów. Ciężarówki pozostają pod opłatą kilometrową Viapass.",
+        ],
+        link: {
+          href: "exemptions",
+          label: "Zobacz szczegóły zwolnień",
+        },
+      },
+      {
+        id: "kupic",
+        title: "Gdzie kupić belgijską winietę?",
+        paragraphs: [
+          "Oficjalna sprzedaż jeszcze się nie rozpoczęła. Według obecnych planów zakup online byłby możliwy od 1 marca 2027 r. przez oficjalną stronę lub autoryzowanego partnera.",
+          "Dziś nie ma oficjalnego portalu sprzedaży. Strony, które już oferują rezerwację lub płatność, nie są oficjalnym kanałem.",
+        ],
+        link: {
+          href: "buy",
+          label: "Kup belgijską winietę: daty i oficjalne kanały",
+        },
+      },
     ],
-    shortTermPricing: [
-      { label: "1 dzień", value: "€9" },
-      { label: "10 dni", value: "€12" },
-      { label: "1 miesiąc", value: "€19" },
-      { label: "2 miesiące", value: "€30" },
+    pricingTitle: "Jaka jest cena belgijskiej winiety w 2027 roku?",
+    pricingParagraphs: [
+      "Cena belgijskiej winiety drogowej zależy od normy Euro pojazdu i okresu ważności. Dla samochodów Euro 4 lub wyżej planowane stawki zaczynają się od €9 za 1 dzień i €100 za 1 rok. Starsze pojazdy płacą więcej, a pojazdy bezemisyjne mają niższą stawkę.",
     ],
+    pricingLinkLabel: "Zobacz wszystkie ceny belgijskiej winiety",
+    pricingLinkSecondaryLabel: "Pełny przewodnik po cenach",
+    pricingMatrixTitle: "Planowane stawki",
+    rateMatrix: plRateMatrix,
+    pricingNote:
+      "To obecnie opublikowane stawki rządu flamandzkiego. Wprowadzenie nadal podlega ostatecznemu zatwierdzeniu.",
     timelineTitle: "Kluczowe daty (według planów)",
     timeline: [
       {
@@ -171,75 +237,161 @@ const dictionary: BaseDictionary = {
           "Nie. Według planów jest to cyfrowa winieta powiązana z tablicą rejestracyjną. Bez naklejki na szybie.",
       },
       {
-        question: "Czy dotyczy to samochodów zagranicznych?",
+        question: "Czy potrzebujesz winiety na autostrady w Belgii?",
         answer:
-          "Tak. Przepisy UE wymagają równego traktowania. Kierowcy belgijscy i zagraniczni muszą płacić.",
+          "Według obecnych planów tak od 1 maja 2027 r. na belgijskich autostradach i niektórych regionalnych drogach głównych. Drogi lokalne pozostałyby poza obowiązkiem.",
       },
       {
-        question: "Czy motocykliści płacą?",
+        question: "Czy motocykle potrzebują belgijskiej winiety?",
         answer:
           "Nie. Motocykle są wyraźnie zwolnione według ogłoszeń ministrów Weytsa (Flandria) i Desquesnesa (Walonia).",
       },
       {
-        question: "Kiedy mogę kupić?",
+        question: "Czy dotyczy to samochodów zagranicznych?",
         answer:
-          "Według obecnych planów sprzedaż online jest oczekiwana od 1 marca 2027 r. Winieta miałaby stać się obowiązkowa od 1 maja 2027 r. Ostateczne warunki mogą się jeszcze zmienić.",
+          "Tak. Przepisy UE wymagają równego traktowania. Kierowcy belgijscy i zagraniczni muszą płacić na objętych drogach.",
+      },
+      {
+        question: "Gdzie kupić belgijską winietę?",
+        answer:
+          "Oficjalna sprzedaż jeszcze się nie rozpoczęła. Według planów zakup online jest oczekiwany od 1 marca 2027 r. przez oficjalny kanał lub autoryzowanego partnera.",
       },
     ],
     sourcesTitle: "Oficjalne źródła",
   },
   prices: {
-    title: "Ceny i okresy ważności",
+    title: "Ceny belgijskiej winiety 2027: stawki według normy Euro i okresu ważności",
     intro:
-      "Przegląd planowanych cen winiety według normy emisji Euro. Na podstawie ogłoszeń z marca 2026 r. — szczegóły mogą ulec zmianie.",
-    sections: [
+      "Planowana cena belgijskiej winiety drogowej zależy od dwóch czynników: normy Euro pojazdu i okresu ważności winiety. Rząd flamandzki opublikował stawki dla 1 dnia, 10 dni, 1 miesiąca, 2 miesięcy i 1 roku.",
+    leadParagraphs: [
+      "Dla samochodu Euro 4 lub wyżej belgijska winieta według obecnych stawek kosztuje €9 za 1 dzień, €12 za 10 dni i €100 za rok. Pojazdy bezemisyjne płacą mniej, a pojazdy Euro 0 do Euro 3 więcej.",
+      "Winieta jest planowana od 1 maja 2027 r. Zakup miałby być możliwy od 1 marca 2027 r. Wprowadzenie nadal podlega ostatecznemu zatwierdzeniu.",
+    ],
+    matrixTitle: "Ceny belgijskiej winiety drogowej 2027",
+    rateMatrix: plRateMatrix,
+    matrixNote:
+      "Te stawki zostały opublikowane przez rząd flamandzki. Cena zależy więc nie tylko od tego, jak długo potrzebujesz winiety, ale także od normy Euro pojazdu.",
+    buyLinkParagraph:
+      "[[buy|Sprawdź, gdzie i kiedy możesz kupić belgijską winietę]].",
+    categorySections: [
       {
-        id: "annual",
-        title: "Winieta roczna",
+        id: "euro-4",
+        title: "Ile kosztuje belgijska winieta dla Euro 4 i wyżej?",
         paragraphs: [
-          "Dla regularnych użytkowników belgijskich dróg głównych. Cena zależy od klasy emisji Euro Twojego pojazdu.",
+          "Dla pojazdów Euro 4 lub wyżej według opublikowanych stawek obowiązują:",
+        ],
+        list: [
+          "1 dzień: €9",
+          "10 dni: €12",
+          "1 miesiąc: €19",
+          "2 miesiące: €30",
+          "1 rok: €100",
+        ],
+        linkParagraph:
+          "To kategoria, do której należy duża część obecnej floty. Przy krótkim przejeździe przez Belgię wystarczy winieta dzienna lub 10-dniowa. Kto regularnie korzysta z belgijskich dróg regionalnych i autostrad, może porównać winietę roczną z krótszymi okresami. Więcej o [[dailyVignette|winiecie dziennej]] lub zobacz [[annualVignette|winietę roczną]].",
+      },
+      {
+        id: "euro-0-3",
+        title: "Ile kosztuje belgijska winieta dla Euro 0 do Euro 3?",
+        paragraphs: [
+          "Starsze pojazdy z Euro 0, Euro 1, Euro 2 lub Euro 3 należą do najdroższej kategorii taryfowej.",
+          "Planowane ceny wynoszą od €11,25 za jeden dzień do €125 za rok.",
+        ],
+        tableTitle: "Cena Euro 0–3",
+        table: [
+          { label: "1 dzień", value: "€11,25" },
+          { label: "10 dni", value: "€15" },
+          { label: "1 miesiąc", value: "€23,75" },
+          { label: "2 miesiące", value: "€37,50" },
+          { label: "1 rok", value: "€125" },
         ],
       },
       {
-        id: "short",
-        title: "Opcje krótkoterminowe",
+        id: "elektryczne",
+        title: "Ile kosztuje winieta dla samochodu elektrycznego?",
         paragraphs: [
-          "Dla okazjonalnych podróży — wakacje, weekendy — planowane są krótsze winiety.",
-          "Starsze, bardziej zanieczyszczające samochody (do Euro 3) płacą nieco wyższe stawki.",
+          "Dla pojazdu bezemisyjnego obowiązuje najniższa stawka. Według obecnej tabeli cen winieta kosztuje €8,10 za jeden dzień i €90 za pełny rok.",
         ],
+        tableTitle: "Cena bezemisyjna",
+        table: [
+          { label: "1 dzień", value: "€8,10" },
+          { label: "10 dni", value: "€10,80" },
+          { label: "1 miesiąc", value: "€17,10" },
+          { label: "2 miesiące", value: "€27" },
+          { label: "1 rok", value: "€90" },
+        ],
+        linkParagraph:
+          "[[electricVignette|Więcej o belgijskiej winiecie dla samochodów elektrycznych]].",
       },
+    ],
+    durationSection: {
+      id: "okres",
+      title: "Jaki okres ważności jest mi potrzebny?",
+      paragraphs: [
+        "Według obecnych planów możesz wybrać spośród pięciu okresów ważności:",
+        "Najlepszy okres zależy od tego, jak często i jak długo korzystasz z dróg, na których winieta będzie obowiązkowa.",
+        "Zobacz osobne wyjaśnienia dotyczące [[dailyVignette|winiety dziennej]], [[monthlyVignette|winiety miesięcznej]] i [[annualVignette|winiety rocznej]].",
+      ],
+      list: [
+        "1 dzień — na krótki przejazd lub jednodniową wycieczkę.",
+        "10 dni — np. na wakacje lub dłuższy pobyt.",
+        "1 miesiąc — na kilka przejazdów w ciągu kilku tygodni.",
+        "2 miesiące — na dłuższy pobyt lub regularne tymczasowe użytkowanie.",
+        "1 rok — dla kierowców, którzy regularnie jeżdżą belgijskimi drogami regionalnymi i autostradami.",
+      ],
+    },
+    whenSection: {
+      id: "kiedy",
+      title: "Kiedy obowiązują te ceny?",
+      paragraphs: [
+        "Cyfrowa winieta drogowa jest planowana od 1 maja 2027 r. Według obecnych oficjalnych informacji winietę będzie można kupić online od 1 marca 2027 r.",
+        "Praktyczne wdrożenie nadal trwa, a wprowadzenie podlega ostatecznemu zatwierdzeniu.",
+        "Chcesz wiedzieć, jak będzie działał zakup? Zobacz [[buy|Kup belgijską winietę]]. Wszystkie przepisy, pojazdy i kluczowe daty znajdziesz w naszym kompletnym przewodniku po [[home|belgijskiej winiecie drogowej 2027]].",
+      ],
+    },
+    backgroundSections: [
       {
         id: "road-tax",
         title: "Powiązanie z podatkiem drogowym (Flandria)",
         paragraphs: [
-          "Flandria jednocześnie reformuje roczny podatek drogowy. Około połowa flamandzkich kierowców może płacić łącznie więcej — do €100/rok dodatkowo.",
+          "Flandria jednocześnie reformuje roczny podatek drogowy. Według szacunków około połowa flamandzkich kierowców może netto płacić więcej — do €100 ekstra rocznie.",
+          "Obniżka podatku drogowego według planów nie rekompensuje w pełni wszystkim kosztów winiety. To informacja kontekstowa; powyższe stawki winiety obowiązują niezależnie od tej reformy.",
         ],
       },
     ],
-    annualTable: [
-      { label: "Euro 4 i wyżej", value: "€100", note: "Rok" },
-      { label: "Elektryczne / wodór", value: "€90", note: "Rok" },
-      { label: "Do Euro 3", value: "€125", note: "Rok" },
-    ],
-    shortTermTable: [
-      { label: "1 dzień", value: "€9" },
-      { label: "10 dni", value: "€12" },
-      { label: "1 miesiąc", value: "€19" },
-      { label: "2 miesiące", value: "€30" },
-    ],
-    euroNormTitle: "Normy Euro wyjaśnione",
+    euroNormTitle: "Normy Euro w skrócie",
     euroNormCategoryHeader: "Norma",
     euroNormDescriptionHeader: "Opis",
     euroNormItems: [
-      { norm: "Euro 4+", description: "Samochody od ok. 2005–2006 r. Większość pojazdów na drogach." },
-      { norm: "Elektryczne / H₂", description: "Zero emisji. Najniższa planowana stawka." },
-      { norm: "Euro 3 i niżej", description: "Starsze, bardziej zanieczyszczające pojazdy." },
+      {
+        norm: "Euro 4+",
+        description: "Samochody od ok. 2005–2006. Większość pojazdów na drogach. Stawka dzienna €9, roczna €100.",
+      },
+      {
+        norm: "Bezemisyjne",
+        description: "Całkowicie bezemisyjne (elektryczne / wodór). Najniższa stawka: od €8,10/dzień, €90/rok.",
+      },
+      {
+        norm: "Euro 3 i niżej",
+        description: "Starsze, bardziej zanieczyszczające pojazdy. Najwyższa stawka: od €11,25/dzień, €125/rok.",
+      },
     ],
-    vignettePagesTitle: "Wedlug typu winiety",
+    vignettePagesTitle: "Według typu winiety",
     faqs: [
       {
+        question: "Jaka jest najniższa planowana cena dzienna?",
+        answer:
+          "Według rządu flamandzkiego najniższa stawka dzienna to €8,10 dla pojazdów bezemisyjnych. Dla Euro 4 i wyżej to €9; dla Euro 0 do 3 to €11,25.",
+      },
+      {
+        question: "Czy krótkie okresy dotyczą wszystkich klas emisji?",
+        answer:
+          "Tak. Każdy okres ważności (1 dzień, 10 dni, 1 miesiąc, 2 miesiące, 1 rok) ma własną stawkę w każdej kategorii normy Euro. Kwoty różnią się w zależności od kategorii.",
+      },
+      {
         question: "Czy furgonetki firmowe są odliczalne?",
-        answer: "Według planów koszt winiety dla furgonetek użytkowanych zawodowo może być w pełni odliczany jako koszt firmowy.",
+        answer:
+          "Według planów koszt winiety dla furgonetek użytkowanych zawodowo może być w pełni odliczany jako koszt firmowy.",
       },
     ],
   },
@@ -424,6 +576,7 @@ const dictionary: BaseDictionary = {
       },
     ],
   },
+  tolls: plTolls,
   privacy: {
     title: "Polityka prywatności",
     intro: "BelgiumVignette.be szanuje Twoją prywatność. Oto jak obsługujemy Twoje dane.",
@@ -497,21 +650,84 @@ const dictionary: BaseDictionary = {
     noArticles: "Brak opublikowanych artykułów. Sprawdź ponownie wkrótce.",
   },
   newsletter: {
-    title: "Otrzymaj powiadomienie jako pierwszy, gdy belgijska winieta będzie dostępna",
-    description: "",
-    benefitsIntro: "",
-    benefits: [
-      "Rozpoczęcie oficjalnej sprzedaży",
-      "Potwierdzone ostateczne ceny",
-      "Opublikowane nowe zasady",
-      "Dostępny link do zakupu",
-    ],
     emailPlaceholder: "Adres e-mail",
-    consentLabel: "Wyrażam zgodę na otrzymywanie aktualizacji i zapoznałem/am się z polityką prywatności.",
-    submit: "Powiadom mnie",
+    consentLabel: "Wyrażam zgodę na otrzymywanie aktualizacji i zapoznałem/am się z",
     success: "Dziękujemy! Jesteś zapisany/a.",
     error: "Coś poszło nie tak. Spróbuj ponownie.",
-    privacyLink: "Polityka prywatności",
+    privacyLink: "polityką prywatności",
+    sticky: {
+      teaser: "Winieta jeszcze niedostępna — otrzymaj link do zakupu",
+      cta: "Zapisz się →",
+      closeLabel: "Zamknij",
+    },
+    intents: {
+      home: {
+        title:
+          "Otrzymaj oficjalny link do zakupu, gdy belgijska winieta będzie dostępna",
+        description:
+          "Sprzedaż jest planowana od 1 marca 2027 r. Podaj swój adres e-mail i otrzymaj powiadomienie, gdy oficjalna możliwość zakupu będzie dostępna.",
+        benefits: [
+          "Oficjalny link do zakupu, gdy będzie dostępny",
+          "Aktualizacje przy zmianach cen lub zasad",
+          "Bez zbędnych e-maili",
+        ],
+        submit: "Wyślij mi link do zakupu",
+      },
+      prices: {
+        title: "Otrzymaj powiadomienie, gdy ostateczne ceny winiety będą znane",
+        description:
+          "Obecne stawki są opublikowane, ale wprowadzenie musi jeszcze zostać ostatecznie zatwierdzone. Śledzimy oficjalne informacje za Ciebie.",
+        benefitsIntro: "Otrzymaj jedną wiadomość e-mail, gdy:",
+        benefits: [
+          "ostateczne ceny zostaną potwierdzone;",
+          "rozpocznie się oficjalna sprzedaż;",
+          "oficjalny link do zakupu będzie dostępny.",
+        ],
+        submit: "Informuj mnie na bieżąco",
+      },
+      buy: {
+        title: "Powiadom mnie, gdy belgijska winieta będzie w sprzedaży",
+        description:
+          "Oficjalna sprzedaż jeszcze się nie rozpoczęła. Według obecnych planów belgijską winietę będzie można kupić od 1 marca 2027 r. Podaj swój adres e-mail i otrzymaj powiadomienie, gdy oficjalna możliwość zakupu będzie dostępna.",
+        benefits: [],
+        submit: "Wyślij mi link do zakupu",
+      },
+      foreign: {
+        title:
+          "Powiadom mnie, gdy zagraniczne auta będą mogły zarejestrować winietę",
+        description:
+          "Według planów zagraniczni kierowcy również będą potrzebować belgijskiej winiety. Otrzymaj powiadomienie, gdy rejestracja i zakup będą oficjalnie możliwe.",
+        benefits: [
+          "Start oficjalnej sprzedaży",
+          "Zasady dla zagranicznych tablic rejestracyjnych",
+          "Oficjalny link do zakupu",
+        ],
+        submit: "Informuj mnie na bieżąco",
+      },
+      news: {
+        title: "Otrzymuj ważne aktualizacje o belgijskiej winiecie",
+        description:
+          "Krótkie, istotne powiadomienia, gdy pojawią się oficjalne informacje o cenach, zasadach lub starcie sprzedaży.",
+        benefits: [
+          "Ważne oficjalne aktualizacje",
+          "Bez codziennego spamu",
+          "Link do zakupu, gdy będzie dostępny",
+        ],
+        submit: "Otrzymuj aktualizacje",
+      },
+      default: {
+        title:
+          "Otrzymaj oficjalny link do zakupu, gdy belgijska winieta będzie dostępna",
+        description:
+          "Sprzedaż według planu zaczyna się 1 marca 2027 r. Wyślemy Ci jedno powiadomienie, gdy będzie można oficjalnie kupić.",
+        benefits: [
+          "Oficjalny link do zakupu",
+          "Aktualizacje o cenach i zasadach",
+          "Bez zbędnych e-maili",
+        ],
+        submit: "Wyślij mi link do zakupu",
+      },
+    },
   },
   cookieBanner: {
     title: "Pliki cookie i prywatność",

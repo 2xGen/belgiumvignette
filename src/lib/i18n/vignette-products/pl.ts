@@ -7,7 +7,7 @@ const pages: VignetteProductPages = {
       "Dzienna winieta jest przeznaczona na krótkie przejazdy po belgijskich drogach głównych — np. wycieczkę jednodniową, tranzyt lub weekend. Poniższe stawki opierają się na opublikowanych planach (marzec 2026) i mogą ulec zmianie przed wprowadzeniem 1 maja 2027 r.",
     metaTitle: "Dzienna winieta Belgia 2027 — cena €9 za dzień (koncepcja)",
     metaDescription:
-      "Planowana dzienna winieta dla Belgii od €9 za dzień. Na krótkie przejazdy autostradami i drogami regionalnymi. Ceny koncepcyjne według planów z marca 2026 — ostateczne stawki mogą się jeszcze zmienić.",
+      "Planowana dzienna winieta dla Belgii: od €8,10/dzień (bezemisyjne) lub €9/dzień (Euro 4+). Na krótkie przejazdy autostradami i drogami regionalnymi. Ceny koncepcyjne według planów z marca 2026 — ostateczne stawki mogą się jeszcze zmienić.",
     navLabel: "Dzienna winieta",
     sections: [
       {

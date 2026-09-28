@@ -7,7 +7,7 @@ const pages: VignetteProductPages = {
       "La vignetta giornaliera è pensata per brevi tragitti sulle strade principali belghe — ad esempio una gita di un giorno, un transito o un weekend. Le tariffe indicate si basano sui piani pubblicati (marzo 2026) e possono ancora cambiare prima dell'introduzione il 1° maggio 2027.",
     metaTitle: "Vignetta giornaliera Belgio 2027 — prezzo €9 al giorno (concept)",
     metaDescription:
-      "Vignetta giornaliera prevista per il Belgio a partire da €9 al giorno. Per brevi tragitti su autostrade e strade regionali. Prezzi concept secondo i piani di marzo 2026 — le tariffe definitive potrebbero ancora cambiare.",
+      "Vignetta giornaliera prevista per il Belgio: da €8,10/giorno (zero emissioni) o €9/giorno (Euro 4+). Per brevi tragitti su autostrade e strade regionali. Prezzi concept secondo i piani di marzo 2026 — le tariffe definitive potrebbero ancora cambiare.",
     navLabel: "Vignetta giornaliera",
     sections: [
       {

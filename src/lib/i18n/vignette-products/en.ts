@@ -4,10 +4,10 @@ const pages: VignetteProductPages = {
   dailyVignette: {
     title: "Daily Vignette Belgium 2027",
     intro:
-      "The daily vignette is intended for short trips on Belgian main roads — for example a day trip, transit journey, or weekend visit. The rates below are based on published plans (March 2026) and may still change before introduction on 1 May 2027.",
-    metaTitle: "Daily Vignette Belgium 2027 — €9 per day (concept price)",
+      "The daily vignette is intended for short trips on Belgian main roads — for example a day trip, transit journey, or weekend visit. Planned daily rates start at €8.10 for zero-emission vehicles and €9 for Euro 4+. Amounts may still change before introduction on 1 May 2027.",
+    metaTitle: "Daily Vignette Belgium 2027 — from €8.10/day (zero emission) / €9 Euro 4+",
     metaDescription:
-      "Planned daily vignette for Belgium from €9 per day. For short trips on motorways and regional roads. Concept prices according to March 2026 plans — final rates may still change.",
+      "Planned daily vignette for Belgium: from €8.10/day for zero-emission vehicles and €9/day for Euro 4+. For short trips on motorways and regional roads. Rates published by Flanders — final amounts may still change.",
     navLabel: "Daily vignette",
     sections: [
       {

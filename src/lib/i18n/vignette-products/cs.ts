@@ -7,7 +7,7 @@ const pages: VignetteProductPages = {
       "Denní známka je určena pro krátké jízdy po belgických hlavních silnicích — například jednodenní výlet, tranzit nebo víkend. Níže uvedené sazby vycházejí z publikovaných plánů (březen 2026) a mohou se ještě změnit před zavedením 1. května 2027.",
     metaTitle: "Denní dálniční známka Belgie 2027 — cena €9 za den (koncept)",
     metaDescription:
-      "Plánovaná denní známka pro Belgii od €9 za den. Pro krátké jízdy po dálnicích a krajských silnicích. Konceptuální ceny podle plánů z března 2026 — konečné sazby se mohou ještě změnit.",
+      "Plánovaná denní známka pro Belgii: od €8,10/den (bez emisí) nebo €9/den (Euro 4+). Pro krátké jízdy po dálnicích a krajských silnicích. Konceptuální ceny podle plánů z března 2026 — konečné sazby se mohou ještě změnit.",
     navLabel: "Denní známka",
     sections: [
       {

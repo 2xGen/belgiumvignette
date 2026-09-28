@@ -1,4 +1,18 @@
 import type { BaseDictionary } from "../types";
+import { deTolls } from "../tolls/de";
+import { buildRateMatrix } from "../rate-matrix";
+
+const deRateMatrix = buildRateMatrix({
+  vehicleHeader: "Fahrzeug",
+  dayHeader: "1 Tag",
+  tenDaysHeader: "10 Tage",
+  monthHeader: "1 Monat",
+  twoMonthsHeader: "2 Monate",
+  yearHeader: "1 Jahr",
+  euro03: "Euro 0 bis 3",
+  euro4: "Euro 4 und höher",
+  zeroEmission: "Emissionsfrei",
+});
 
 const dictionary: BaseDictionary = {
   locale: "de",
@@ -16,19 +30,20 @@ const dictionary: BaseDictionary = {
     exemptions: "Befreiungen",
     fines: "Bußgelder",
     buy: "Kaufen",
+    tolls: "Maut",
     news: "Nachrichten & Updates",
     privacy: "Datenschutz",
   },
   meta: {
     home: {
-      title: "Vignette Belgien 2027: Brauchen Sie eine Vignette für Belgien?",
+      title: "Vignette Belgien 2027: Preise, Autobahnen & Kauf",
       description:
-        "Belgien plant die Einführung einer digitalen Straßenvignette ab dem 1. Mai 2027. Finden Sie heraus, ob Sie eine brauchen, was sie kostet, wer befreit ist und wann der Verkauf startet.",
+        "Belgien plant eine digitale Straßenvignette ab Mai 2027. Geplante Preise, wer sie braucht, Motorrad-Befreiungen und wo Sie kaufen können.",
     },
     prices: {
-      title: "Vignette Belgien Preise 2027 — Tag, Monat & Jahresgebühr",
+      title: "Vignette Belgien Preise 2027: Tarife nach Euro-Norm und Laufzeit",
       description:
-        "Geplante Vignettenpreise für Belgien: 100 €/Jahr, Kurzzeiträume ab 9 €/Tag. Euro-Norm einfach erklärt.",
+        "Vollständige Preistabelle der belgischen Straßenvignette 2027 nach Euro-Norm und Laufzeit — von 8,10 €/Tag (emissionsfrei) bis 125 €/Jahr (Euro 0–3).",
     },
     foreign: {
       title: "Brauchen ausländische Autos 2027 eine Vignette für Belgien?",
@@ -50,6 +65,11 @@ const dictionary: BaseDictionary = {
       description:
         "Nach aktuellen Plänen startet der Online-Verkauf der belgischen Straßenvignette am 1. März 2027. Pflicht ab 1. Mai 2027. Offizielle Quelle: Flämische Regierung.",
     },
+    tolls: {
+      title: "Maut in Belgien 2027: Autobahnen, Vignette und Tarife",
+      description:
+        "Sind belgische Autobahnen mautpflichtig? Erfahren Sie mehr zu Maut, der geplanten Vignette ab Mai 2027, Tarifen und Regeln für ausländische Autos.",
+    },
     news: {
       title: "Belgische Vignette — Nachrichten & Updates, vertrauenswürdige Quellen erklärt",
       description:
@@ -65,8 +85,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be ist eine unabhängige Informationsseite. Wir sind nicht mit der belgischen Regierung, Flandern, der Wallonie oder Brüssel verbunden.",
     lastUpdated: "Zuletzt aktualisiert",
-    lastUpdatedDate: "14. August 2026",
-    lastUpdatedIso: "2026-08-14",
+    lastUpdatedDate: "28. September 2026",
+    lastUpdatedIso: "2026-09-28",
     readMore: "Mehr erfahren",
     relatedSite: "https://tolls.be/de",
     relatedSiteLabel: "Tolls.be — unabhängige Maut-Informationen für Belgien",
@@ -108,40 +128,86 @@ const dictionary: BaseDictionary = {
     },
     quickAnswers: [
       {
-        title: "Wer muss zahlen?",
+        title: "Wer muss eine Vignette in Belgien kaufen?",
         summary:
-          "Pkw bis 3,5 Tonnen, einschließlich ausländischer Fahrzeuge — auch bei Durchreise.",
+          "Pkw bis 3,5 Tonnen, einschließlich ausländischer Fahrzeuge auf den betroffenen Straßen — auch bei Durchreise.",
         href: "foreign",
+        linkLabel: "Leitfaden für ausländische Fahrer",
       },
       {
-        title: "Wer ist befreit?",
+        title: "Wer ist von der belgischen Vignette befreit?",
         summary:
-          "Motorräder, LKW (Kilometerabgabe), Traktoren, Reisebusse, Rettungsdienste und Polizei.",
+          "Motorräder, LKW (Kilometerabgabe), Traktoren, Reisebusse, Rettungsdienste und Polizei — laut aktuellen Plänen.",
         href: "exemptions",
+        linkLabel: "Alle Befreiungen ansehen",
       },
       {
-        title: "Was kostet es?",
+        title: "Was kostet die Vignette Belgien 2027?",
         summary:
-          "Jahresvignette ab 90 € (Elektro) bis 125 € (ältere Autos). Kurzzeiträume ab 9 €/Tag.",
+          "Der Preis hängt von Euro-Norm und Laufzeit ab: ab 8,10 €/Tag (emissionsfrei) und 9 €/Tag (Euro 4+), bis 90–125 € pro Jahr.",
         href: "prices",
+        linkLabel: "Vollständiger Preisüberblick",
       },
     ],
-    pricingTitle: "Geplante Tarife auf einen Blick",
-    pricingSubtitle:
-      "Basierend auf veröffentlichten Plänen (März 2026). Endgültige Beträge können sich ändern.",
-    annualTableTitle: "Jahresvignette",
-    shortTermTableTitle: "Kurzzeiträume",
-    annualPricing: [
-      { label: "Euro 4 und höher", value: "100 € / Jahr", note: "97 %+ der flämischen Autos" },
-      { label: "Elektro / Wasserstoff", value: "90 € / Jahr" },
-      { label: "Ältere Autos (bis Euro 3)", value: "125 € / Jahr" },
+    overview: {
+      title: "Straßenvignette in Belgien: was für 2027 geplant ist",
+      paragraphs: [
+        "Belgien plant ab dem 1. Mai 2027 eine digitale Straßenvignette. Die belgische Vignette würde für Pkw bis 3,5 Tonnen auf Autobahnen und bestimmten regionalen Hauptstraßen gelten.",
+        "Auch ausländische Autos wären betroffen. Fahrer aus Frankreich, den Niederlanden, Deutschland und anderen Ländern bräuchten eine Vignette für die betroffenen belgischen Straßen.",
+        "Es wäre kein Aufkleber an der Windschutzscheibe. Die belgische Autobahnvignette wäre digital und an das Kennzeichen gebunden, mit Kontrollen unter anderem durch ANPR-Kameras.",
+        "Nach den von der flämischen Regierung veröffentlichten Tarifen hängt der Preis von Euro-Norm und Laufzeit ab: ab 8,10 € pro Tag für emissionsfreie Fahrzeuge und 9 € pro Tag für Euro 4+, bis 90–125 € pro Jahr. Auch 10 Tage, 1 Monat und 2 Monate sind geplant.",
+        "Motorräder wären laut aktuellen Plänen befreit. Endgültige Beträge und Regeln müssen vor dem Inkrafttreten noch bestätigt werden.",
+      ],
+    },
+    intentSections: [
+      {
+        id: "autobahnen",
+        title: "Braucht man eine Vignette für Autobahnen in Belgien?",
+        paragraphs: [
+          "Nach aktuellen Plänen würde eine digitale Straßenvignette ab dem 1. Mai 2027 auf belgischen Autobahnen und bestimmten regionalen Hauptstraßen Pflicht.",
+          "Heute sind die meisten belgischen Autobahnen für Pkw kostenlos. Das Vignettenprojekt würde das ändern: Zugang zu Autobahnen und einem Teil des schnelleren regionalen Netzes würde eine kennzeichengebundene Vignette erfordern.",
+          "Wenn Sie nur lokale Straßen nutzen, wäre laut veröffentlichten Informationen keine Vignette nötig. In der Praxis ist es oft schwer, Autobahnen und regionale Hauptstraßen bei Überland- oder Transitfahrten vollständig zu vermeiden.",
+        ],
+        link: {
+          href: "tolls",
+          label: "Maut und Autobahnen in Belgien",
+        },
+      },
+      {
+        id: "motorrader",
+        title: "Brauchen Motorräder eine belgische Vignette?",
+        paragraphs: [
+          "Nein. Laut Ankündigungen der Behörden wären Motorräder ausdrücklich von der belgischen Vignette befreit.",
+          "Die Pflicht würde Kraftfahrzeuge mit mindestens vier Rädern bis 3,5 Tonnen betreffen — insbesondere Pkw, manche leichte Transporter und Wohnmobile. Lkw bleiben unter der Viapass-Kilometerabgabe.",
+        ],
+        link: {
+          href: "exemptions",
+          label: "Details zu den Befreiungen",
+        },
+      },
+      {
+        id: "kaufen",
+        title: "Wo kann man die Vignette Belgien kaufen?",
+        paragraphs: [
+          "Der offizielle Verkauf hat noch nicht begonnen. Nach aktuellen Plänen wäre der Online-Kauf ab dem 1. März 2027 über die offizielle Website oder einen zugelassenen Partner möglich.",
+          "Es gibt heute kein offizielles Verkaufsportal. Seiten, die bereits Reservierung oder Zahlung anbieten, sind nicht der offizielle Kanal.",
+        ],
+        link: {
+          href: "buy",
+          label: "Vignette Belgien kaufen: Termine und offizielle Kanäle",
+        },
+      },
     ],
-    shortTermPricing: [
-      { label: "1 Tag", value: "9 €" },
-      { label: "10 Tage", value: "12 €" },
-      { label: "1 Monat", value: "19 €" },
-      { label: "2 Monate", value: "30 €" },
+    pricingTitle: "Was kostet die Vignette Belgien 2027?",
+    pricingParagraphs: [
+      "Der Preis der belgischen Straßenvignette hängt von der Euro-Norm Ihres Fahrzeugs und der Gültigkeitsdauer ab. Für Autos mit Euro 4 oder höher beginnen die geplanten Tarife bei 9 € für 1 Tag und 100 € für 1 Jahr. Ältere Fahrzeuge zahlen mehr, emissionsfreie Fahrzeuge erhalten einen niedrigeren Tarif.",
     ],
+    pricingLinkLabel: "Alle Preise der belgischen Vignette ansehen",
+    pricingLinkSecondaryLabel: "Vollständiger Preisüberblick",
+    pricingMatrixTitle: "Geplante Tarife",
+    rateMatrix: deRateMatrix,
+    pricingNote:
+      "Dies sind die derzeit von der flämischen Regierung veröffentlichten Tarife. Die Einführung steht noch unter dem Vorbehalt der endgültigen Genehmigung.",
     timelineTitle: "Wichtige Termine (laut Plänen)",
     timeline: [
       {
@@ -171,74 +237,161 @@ const dictionary: BaseDictionary = {
           "Nein. Laut Plänen ist es eine digitale Vignette, die an Ihr Kennzeichen gebunden wird.",
       },
       {
-        question: "Gilt das für ausländische Autos?",
+        question: "Braucht man eine Vignette für Autobahnen in Belgien?",
         answer:
-          "Ja. EU-Regeln verlangen Gleichbehandlung. Belgische und ausländische Fahrer müssen zahlen.",
+          "Nach aktuellen Plänen ja ab dem 1. Mai 2027 auf belgischen Autobahnen und bestimmten regionalen Hauptstraßen. Lokale Straßen würden außerhalb der Pflicht bleiben.",
       },
       {
-        question: "Müssen Motorradfahrer zahlen?",
+        question: "Brauchen Motorräder eine belgische Vignette?",
         answer:
           "Nein. Motorräder sind laut Ministers Weyts und Desquesnes ausdrücklich befreit.",
       },
       {
-        question: "Wann kann ich kaufen?",
+        question: "Gilt das für ausländische Autos?",
         answer:
-          "Nach aktuellen Plänen wird der Online-Verkauf ab dem 1. März 2027 erwartet. Die Vignette würde ab dem 1. Mai 2027 Pflicht. Endgültige Bedingungen können sich noch ändern.",
+          "Ja. EU-Regeln verlangen Gleichbehandlung. Belgische und ausländische Fahrer müssen auf den betroffenen Straßen zahlen.",
+      },
+      {
+        question: "Wo kann man die Vignette Belgien kaufen?",
+        answer:
+          "Der offizielle Verkauf hat noch nicht begonnen. Nach den Plänen ist der Online-Kauf ab dem 1. März 2027 über den offiziellen Kanal oder einen zugelassenen Partner vorgesehen.",
       },
     ],
     sourcesTitle: "Offizielle Quellen",
   },
   prices: {
-    title: "Preise & Laufzeiten",
+    title: "Vignette Belgien Preise 2027: Tarife nach Euro-Norm und Laufzeit",
     intro:
-      "Übersicht der geplanten Vignettenpreise nach Euro-Abgasnorm. Basierend auf Ankündigungen März 2026.",
-    sections: [
+      "Der geplante Preis der belgischen Straßenvignette hängt von zwei Faktoren ab: der Euro-Norm Ihres Fahrzeugs und der Gültigkeitsdauer der Vignette. Die flämische Regierung hat Tarife für 1 Tag, 10 Tage, 1 Monat, 2 Monate und 1 Jahr veröffentlicht.",
+    leadParagraphs: [
+      "Für ein Auto mit Euro 4 oder höher kostet die belgische Vignette laut aktuellen Tarifen 9 € für 1 Tag, 12 € für 10 Tage und 100 € für ein Jahr. Emissionsfreie Fahrzeuge zahlen weniger, Fahrzeuge mit Euro 0 bis Euro 3 zahlen mehr.",
+      "Die Vignette ist ab dem 1. Mai 2027 geplant. Der Kauf soll ab dem 1. März 2027 möglich werden. Die Einführung steht noch unter dem Vorbehalt der endgültigen Genehmigung.",
+    ],
+    matrixTitle: "Preise belgische Straßenvignette 2027",
+    rateMatrix: deRateMatrix,
+    matrixNote:
+      "Diese Tarife wurden von der flämischen Regierung veröffentlicht. Der Preis hängt also nicht nur davon ab, wie lange Sie die Vignette brauchen, sondern auch von der Euro-Norm Ihres Fahrzeugs.",
+    buyLinkParagraph:
+      "[[buy|Sehen Sie, wo und wann Sie die belgische Vignette kaufen können]].",
+    categorySections: [
       {
-        id: "annual",
-        title: "Jahresvignette",
+        id: "euro-4",
+        title: "Was kostet eine belgische Vignette für Euro 4 und höher?",
         paragraphs: [
-          "Für regelmäßige Nutzer belgischer Hauptstraßen. Preis abhängig von der Euro-Norm.",
+          "Für Fahrzeuge mit Euro 4 oder höher gelten laut veröffentlichten Tarifen:",
+        ],
+        list: [
+          "1 Tag: 9 €",
+          "10 Tage: 12 €",
+          "1 Monat: 19 €",
+          "2 Monate: 30 €",
+          "1 Jahr: 100 €",
+        ],
+        linkParagraph:
+          "Das ist die Kategorie, in die ein großer Teil des heutigen Fuhrparks fällt. Für eine kurze Durchreise durch Belgien kann daher eine Tages- oder 10-Tage-Vignette ausreichen. Wer regelmäßig belgische Regional- und Autobahnstrecken nutzt, kann die Jahresvignette mit kürzeren Laufzeiten vergleichen. Mehr zur [[dailyVignette|Tagesvignette]] oder zur [[annualVignette|Jahresvignette]].",
+      },
+      {
+        id: "euro-0-3",
+        title: "Was kostet eine belgische Vignette für Euro 0 bis Euro 3?",
+        paragraphs: [
+          "Ältere Fahrzeuge mit Euro 0, Euro 1, Euro 2 oder Euro 3 fallen in die teuerste Tarifkategorie.",
+          "Die geplanten Preise reichen von 11,25 € für einen Tag bis 125 € für ein Jahr.",
+        ],
+        tableTitle: "Preis Euro 0–3",
+        table: [
+          { label: "1 Tag", value: "11,25 €" },
+          { label: "10 Tage", value: "15 €" },
+          { label: "1 Monat", value: "23,75 €" },
+          { label: "2 Monate", value: "37,50 €" },
+          { label: "1 Jahr", value: "125 €" },
         ],
       },
       {
-        id: "short",
-        title: "Kurzzeiträume",
+        id: "elektro",
+        title: "Was kostet die Vignette für ein Elektroauto?",
         paragraphs: [
-          "Für Gelegenheitsfahrten — Urlaub, Wochenende — sind kürzere Vignetten geplant.",
+          "Für emissionsfreie Fahrzeuge gilt der niedrigste Tarif. Laut aktueller Preistabelle kostet die Vignette 8,10 € für einen Tag und 90 € für ein volles Jahr.",
         ],
+        tableTitle: "Preis emissionsfrei",
+        table: [
+          { label: "1 Tag", value: "8,10 €" },
+          { label: "10 Tage", value: "10,80 €" },
+          { label: "1 Monat", value: "17,10 €" },
+          { label: "2 Monate", value: "27 €" },
+          { label: "1 Jahr", value: "90 €" },
+        ],
+        linkParagraph:
+          "[[electricVignette|Mehr zur belgischen Vignette für Elektroautos]].",
       },
+    ],
+    durationSection: {
+      id: "laufzeit",
+      title: "Welche Laufzeit brauche ich?",
+      paragraphs: [
+        "Laut aktuellen Plänen können Sie aus fünf Gültigkeitszeiträumen wählen:",
+        "Die beste Laufzeit hängt davon ab, wie oft und wie lange Sie die Straßen nutzen, auf denen die Vignette Pflicht wird.",
+        "Siehe die separate Erklärung zur [[dailyVignette|Tagesvignette]], [[monthlyVignette|Monatsvignette]] und [[annualVignette|Jahresvignette]].",
+      ],
+      list: [
+        "1 Tag — für eine kurze Durchreise oder einen Tagesausflug.",
+        "10 Tage — beispielsweise für Urlaub oder einen längeren Besuch.",
+        "1 Monat — für mehrere Fahrten über einige Wochen.",
+        "2 Monate — für einen längeren Aufenthalt oder regelmäßigen vorübergehenden Gebrauch.",
+        "1 Jahr — für Fahrer, die regelmäßig auf belgischen Regional- und Autobahnstrecken unterwegs sind.",
+      ],
+    },
+    whenSection: {
+      id: "wann",
+      title: "Wann gelten diese Preise?",
+      paragraphs: [
+        "Die digitale Straßenvignette ist ab dem 1. Mai 2027 geplant. Laut aktueller offizieller Information könnte die Vignette ab dem 1. März 2027 online gekauft werden.",
+        "Die praktische Umsetzung läuft noch und die Einführung steht unter dem Vorbehalt der endgültigen Genehmigung.",
+        "Möchten Sie wissen, wie der Kauf funktionieren wird? Siehe [[buy|Vignette Belgien kaufen]]. Für alle Regeln, Fahrzeuge und wichtige Termine finden Sie unseren kompletten Leitfaden zur [[home|belgischen Straßenvignette 2027]].",
+      ],
+    },
+    backgroundSections: [
       {
         id: "road-tax",
-        title: "Verkehrssteuer (Flandern)",
+        title: "Wechselwirkung mit der Verkehrssteuer (Flandern)",
         paragraphs: [
-          "Flandern reformiert gleichzeitig die Kfz-Steuer. Etwa die Hälfte der flämischen Autofahrer könnte netto mehr zahlen.",
+          "Flandern reformiert gleichzeitig die jährliche Kfz-Steuer. Schätzungen zufolge könnte etwa die Hälfte der flämischen Autofahrer netto mehr zahlen — bis zu 100 € extra pro Jahr.",
+          "Die Senkung der Verkehrssteuer gleicht laut den Plänen nicht für jeden die Vignettenkosten vollständig aus. Dies ist Hintergrundinformation; die Vignettenpreise oben gelten unabhängig von dieser Reform.",
         ],
       },
-    ],
-    annualTable: [
-      { label: "Euro 4 und höher", value: "100 €", note: "Jahr" },
-      { label: "Elektro / Wasserstoff", value: "90 €", note: "Jahr" },
-      { label: "Bis Euro 3", value: "125 €", note: "Jahr" },
-    ],
-    shortTermTable: [
-      { label: "1 Tag", value: "9 €" },
-      { label: "10 Tage", value: "12 €" },
-      { label: "1 Monat", value: "19 €" },
-      { label: "2 Monate", value: "30 €" },
     ],
     euroNormTitle: "Euro-Normen kurz erklärt",
     euroNormCategoryHeader: "Norm",
     euroNormDescriptionHeader: "Beschreibung",
     euroNormItems: [
-      { norm: "Euro 4+", description: "Fahrzeuge ab ca. 2005–2006. Die Mehrheit auf der Straße." },
-      { norm: "Elektro / H₂", description: "Emissionsfrei. Niedrigster geplanter Tarif." },
-      { norm: "Euro 3 und niedriger", description: "Ältere, stärker verschmutzende Fahrzeuge." },
+      {
+        norm: "Euro 4+",
+        description: "Fahrzeuge ab ca. 2005–2006. Die Mehrheit auf der Straße. Tagestarif 9 €, Jahr 100 €.",
+      },
+      {
+        norm: "Emissionsfrei",
+        description: "Vollständig emissionsfrei (Elektro / Wasserstoff). Niedrigster Tarif: ab 8,10 €/Tag, 90 €/Jahr.",
+      },
+      {
+        norm: "Euro 3 und niedriger",
+        description: "Ältere, stärker verschmutzende Fahrzeuge. Höchster Tarif: ab 11,25 €/Tag, 125 €/Jahr.",
+      },
     ],
     vignettePagesTitle: "Nach Vignettenart",
     faqs: [
       {
+        question: "Was ist der niedrigste geplante Tagespreis?",
+        answer:
+          "Laut flämischer Regierung beträgt der niedrigste Tagestarif 8,10 € für emissionsfreie Fahrzeuge. Für Euro 4 und höher sind es 9 €; für Euro 0 bis 3 sind es 11,25 €.",
+      },
+      {
+        question: "Gelten die kurzen Zeiträume für alle Emissionsklassen?",
+        answer:
+          "Ja. Jede Laufzeit (1 Tag, 10 Tage, 1 Monat, 2 Monate, 1 Jahr) hat einen eigenen Tarif pro Euro-Norm-Kategorie. Die Beträge unterscheiden sich je Kategorie.",
+      },
+      {
         question: "Sind Transporter absetzbar?",
-        answer: "Laut Plänen könnte die Vignettenkosten für gewerbliche Transporter voll absetzbar sein.",
+        answer:
+          "Laut Plänen könnten die Vignettenkosten für gewerbliche Transporter voll als Betriebsausgabe absetzbar sein.",
       },
     ],
   },
@@ -423,6 +576,7 @@ const dictionary: BaseDictionary = {
       },
     ],
   },
+  tolls: deTolls,
   privacy: {
     title: "Datenschutzerklärung",
     intro: "BelgiumVignette.be respektiert Ihre Privatsphäre.",
@@ -496,21 +650,84 @@ const dictionary: BaseDictionary = {
     noArticles: "Noch keine Artikel veröffentlicht. Schauen Sie bald wieder vorbei.",
   },
   newsletter: {
-    title: "Als Erste/r informiert werden, wenn die belgische Vignette verfügbar ist",
-    description: "",
-    benefitsIntro: "",
-    benefits: [
-      "Offizieller Verkaufsstart",
-      "Endgültige Preise bestätigt",
-      "Neue Regeln veröffentlicht",
-      "Kauf-Link verfügbar",
-    ],
     emailPlaceholder: "E-Mail-Adresse",
-    consentLabel: "Ich stimme Updates zu und habe die Datenschutzerklärung gelesen.",
-    submit: "Benachrichtigen",
+    consentLabel: "Ich stimme dem Erhalt von Updates zu und habe die",
     success: "Danke! Sie sind angemeldet.",
     error: "Etwas ist schiefgelaufen. Bitte erneut versuchen.",
-    privacyLink: "Datenschutz",
+    privacyLink: "Datenschutzerklärung gelesen.",
+    sticky: {
+      teaser: "Vignette noch nicht erhältlich — Kauf-Link sichern",
+      cta: "Anmelden →",
+      closeLabel: "Schließen",
+    },
+    intents: {
+      home: {
+        title:
+          "Erhalten Sie den offiziellen Kauf-Link, sobald die belgische Vignette verfügbar ist",
+        description:
+          "Der Verkauf ist ab dem 1. März 2027 geplant. Hinterlassen Sie Ihre E-Mail-Adresse und erhalten Sie eine Benachrichtigung, sobald der offizielle Kauf möglich ist.",
+        benefits: [
+          "Offizieller Kauf-Link, sobald er verfügbar ist",
+          "Updates bei Änderungen von Preisen oder Regeln",
+          "Keine unnötigen E-Mails",
+        ],
+        submit: "Kauf-Link an mich senden",
+      },
+      prices: {
+        title: "Benachrichtigung, sobald die endgültigen Vignettenpreise bestätigt sind",
+        description:
+          "Die aktuellen Tarife wurden veröffentlicht, die Einführung muss jedoch noch endgültig genehmigt werden. Wir verfolgen die offiziellen Informationen für Sie.",
+        benefitsIntro: "Erhalten Sie eine E-Mail, sobald:",
+        benefits: [
+          "die endgültigen Preise bestätigt sind;",
+          "der offizielle Verkauf startet;",
+          "der offizielle Kauf-Link verfügbar ist.",
+        ],
+        submit: "Auf dem Laufenden halten",
+      },
+      buy: {
+        title: "Benachrichtigen Sie mich, sobald die belgische Vignette zu kaufen ist",
+        description:
+          "Der offizielle Verkauf hat noch nicht begonnen. Nach der aktuellen Planung können Sie die belgische Vignette ab dem 1. März 2027 kaufen. Hinterlassen Sie Ihre E-Mail-Adresse und erhalten Sie eine Benachrichtigung, sobald der offizielle Kauf möglich ist.",
+        benefits: [],
+        submit: "Kauf-Link an mich senden",
+      },
+      foreign: {
+        title:
+          "Benachrichtigen Sie mich, wenn ausländische Autos ihre Vignette registrieren können",
+        description:
+          "Nach den Plänen benötigen auch ausländische Fahrer eine belgische Vignette. Erhalten Sie eine Benachrichtigung, sobald Registrierung und Kauf offiziell möglich sind.",
+        benefits: [
+          "Start des offiziellen Verkaufs",
+          "Regeln für ausländische Kennzeichen",
+          "Offizieller Kauf-Link",
+        ],
+        submit: "Auf dem Laufenden halten",
+      },
+      news: {
+        title: "Wichtige Updates zur belgischen Vignette erhalten",
+        description:
+          "Kurze, relevante Meldungen, wenn es offizielle Neuigkeiten zu Preisen, Regeln oder dem Verkaufsstart gibt.",
+        benefits: [
+          "Wichtige offizielle Updates",
+          "Kein täglicher Spam",
+          "Kauf-Link, sobald verfügbar",
+        ],
+        submit: "Updates erhalten",
+      },
+      default: {
+        title:
+          "Erhalten Sie den offiziellen Kauf-Link, sobald die belgische Vignette verfügbar ist",
+        description:
+          "Der Verkauf soll am 1. März 2027 starten. Wir senden Ihnen eine Benachrichtigung, sobald Sie offiziell kaufen können.",
+        benefits: [
+          "Offizieller Kauf-Link",
+          "Updates zu Preisen und Regeln",
+          "Keine unnötigen E-Mails",
+        ],
+        submit: "Kauf-Link an mich senden",
+      },
+    },
   },
   cookieBanner: {
     title: "Cookies & Datenschutz",

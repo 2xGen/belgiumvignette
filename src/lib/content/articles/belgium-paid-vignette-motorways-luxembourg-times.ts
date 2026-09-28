@@ -20,10 +20,6 @@ const article: Article = {
     name: "Luxembourg Times",
     url: "https://www.luxtimes.lu/luxembourg/belgium-to-introduce-paid-vignette-for-its-motorways/158563816.html",
   },
-  image: {
-    url: "https://img.virgule.lu/public/luxembourg/gvqpoa-shutterstock-2561775067.jpg/alternates/SIXTEEN_NINE_960/shutterstock_2561775067.jpg",
-    credit: "Shutterstock / Luxembourg Times",
-  },
   content: {
     nl: {
       title: "België voert betaald wegenvignet in op autosnelwegen vanaf 2027",
@@ -88,7 +84,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Verkeer op een Belgische autosnelweg",
     },
     fr: {
       title: "La Belgique introduira une vignette payante sur ses autoroutes dès 2027",
@@ -153,7 +148,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Circulation sur une autoroute belge",
     },
     en: {
       title: "Belgium to introduce paid motorway vignette from 2027",
@@ -218,7 +212,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Traffic on a Belgian motorway",
     },
     de: {
       title: "Belgien führt kostenpflichtige Autobahnvignette ab 2027 ein",
@@ -283,7 +276,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Verkehr auf einer belgischen Autobahn",
     },
     es: {
       title: "Bélgica introducirá una viñeta de pago en sus autopistas a partir de 2027",
@@ -348,7 +340,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Tráfico en una autopista belga",
     },
     pl: {
       title: "Belgia wprowadzi płatną winietę na autostradach od 2027 roku",
@@ -413,7 +404,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Ruch na belgijskiej autostradzie",
     },
     cs: {
       title: "Belgie zavede placenou dálniční známku od roku 2027",
@@ -478,7 +468,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Provoz na belgické dálnici",
     },
     it: {
       title: "Il Belgio introdurrà una vignetta a pagamento sulle autostrade dal 2027",
@@ -543,7 +532,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Traffico su un'autostrada belga",
     },
     sv: {
       title: "Belgien inför betald motorvägsvignett från 2027",
@@ -608,7 +596,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Trafik på en belgisk motorväg",
     },
     da: {
       title: "Belgien indfører betalt motorvejsvignette fra 2027",
@@ -673,7 +660,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Trafik på en belgisk motorvej",
     },
     ro: {
       title: "Belgia va introduce vinietă plătită pe autostrăzi din 2027",
@@ -738,7 +724,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt: "Trafic pe o autostradă belgiană",
     },
   },
 };

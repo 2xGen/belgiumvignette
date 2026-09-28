@@ -20,10 +20,6 @@ const article: Article = {
     name: "RTL Today",
     url: "https://today.rtl.lu/news/luxembourg/backes-voices-displeasure-at-belgiums-motorway-vignette-plans-473903599",
   },
-  image: {
-    url: "https://static-prod.rtl.lu/dims4/default/a4b1813/2147483647/strip/true/crop/1920x1080+0+0/resize/1224x689!/quality/90/?url=https%3A%2F%2Frtl-luxembourg-new-production-web.s3.eu-central-1.amazonaws.com%2Fbrightspot%2Fc1%2F9b%2F68e6b8054cc09723eb6e48a03f1e%2Fbelsch-autobunn.jpg",
-    credit: "Ajdin Kamber / Shutterstock",
-  },
   content: {
     nl: {
       title:
@@ -89,8 +85,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Blauw EU-grensbord ‘Belgique’ langs een autosnelweg richting België",
     },
     fr: {
       title:
@@ -156,8 +150,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Panneau frontalier européen bleu « Belgique » le long d’une autoroute",
     },
     en: {
       title:
@@ -223,8 +215,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Blue EU border sign reading ‘Belgique’ along a motorway approaching Belgium",
     },
     de: {
       title:
@@ -290,8 +280,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Blaues EU-Grenzschild „Belgique“ an einer Autobahn Richtung Belgien",
     },
     es: {
       title:
@@ -357,8 +345,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Señal fronteriza azul de la UE con «Belgique» junto a una autopista",
     },
     pl: {
       title:
@@ -424,8 +410,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Niebieski unijny znak graniczny „Belgique” przy autostradzie do Belgii",
     },
     cs: {
       title:
@@ -491,8 +475,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Modrá unijní hraniční cedule „Belgique“ u dálnice směrem do Belgie",
     },
     it: {
       title:
@@ -558,8 +540,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Cartello di confine UE blu con «Belgique» lungo un’autostrada verso il Belgio",
     },
     sv: {
       title:
@@ -625,8 +605,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Blå EU-gränsskylt med «Belgique» längs en motorväg mot Belgien",
     },
     da: {
       title:
@@ -692,8 +670,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Blåt EU-grænseskilt med «Belgique» langs en motorvej mod Belgien",
     },
     ro: {
       title:
@@ -759,8 +735,6 @@ const article: Article = {
           ],
         },
       ],
-      imageAlt:
-        "Indicator de frontieră UE albastru cu «Belgique» pe o autostradă spre Belgia",
     },
   },
 };

@@ -19,6 +19,7 @@ export const pageKeys = [
   "exemptions",
   "fines",
   "buy",
+  "tolls",
   "news",
   "privacy",
 ] as const;
@@ -28,6 +29,7 @@ export type PageKey = (typeof pageKeys)[number];
 export const mainNavPageKeys = pageKeys.filter(
   (key) =>
     key !== "home" &&
+    key !== "privacy" &&
     !(vignetteProductPageKeys as readonly string[]).includes(key),
 );
 
@@ -148,6 +150,19 @@ export const routes: Record<Exclude<PageKey, "home">, Record<Locale, string>> = 
     sv: "kop",
     da: "saadan-koeber-du",
     ro: "cum-cumpari",
+  },
+  tolls: {
+    nl: "tol-belgie",
+    fr: "peages-belgique",
+    en: "belgium-tolls",
+    de: "maut-belgien",
+    es: "peajes-belgica",
+    pl: "oplaty-drogowe-belgia",
+    cs: "mytne-belgie",
+    it: "pedaggi-belgio",
+    sv: "vagtullar-belgien",
+    da: "vejafgifter-belgien",
+    ro: "taxe-autostrada-belgia",
   },
   news: {
     nl: "nieuws",

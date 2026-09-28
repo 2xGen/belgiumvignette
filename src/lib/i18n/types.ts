@@ -16,6 +16,26 @@ export interface TableRow {
   note?: string;
 }
 
+export interface RateMatrixRow {
+  label: string;
+  day: string;
+  tenDays: string;
+  month: string;
+  twoMonths: string;
+  year: string;
+}
+
+export interface RateMatrix {
+  title?: string;
+  vehicleHeader: string;
+  dayHeader: string;
+  tenDaysHeader: string;
+  monthHeader: string;
+  twoMonthsHeader: string;
+  yearHeader: string;
+  rows: RateMatrixRow[];
+}
+
 export interface TimelineItem {
   date: string;
   title: string;
@@ -28,6 +48,22 @@ export interface SourceLink {
   description?: string;
 }
 
+export interface NewsletterIntentCopy {
+  title: string;
+  description: string;
+  benefitsIntro?: string;
+  benefits: string[];
+  submit: string;
+}
+
+export type NewsletterIntentKey =
+  | "home"
+  | "prices"
+  | "buy"
+  | "foreign"
+  | "news"
+  | "default";
+
 export interface PageMeta {
   title: string;
   description: string;
@@ -37,6 +73,17 @@ export interface QuickAnswer {
   title: string;
   summary: string;
   href?: PageKey;
+  linkLabel?: string;
+}
+
+export interface HomeIntentSection {
+  id: string;
+  title: string;
+  paragraphs: string[];
+  link?: {
+    href: PageKey;
+    label: string;
+  };
 }
 
 export interface ContentSection {
@@ -45,6 +92,38 @@ export interface ContentSection {
   paragraphs: string[];
   list?: string[];
 }
+
+export interface TollsSummaryItem {
+  label: string;
+  value: string;
+}
+
+/** Paragraphs may include [[pageKey|label]] markers for internal links. */
+export type TollsBlock =
+  | {
+      type: "section";
+      id: string;
+      title: string;
+      paragraphs: string[];
+      list?: string[];
+    }
+  | {
+      type: "summary";
+      title: string;
+      items: TollsSummaryItem[];
+    }
+  | {
+      type: "pricing";
+      id: string;
+      title: string;
+      paragraphs: string[];
+      durationHeader: string;
+      priceHeader: string;
+      tables: { title: string; rows: TableRow[] }[];
+      /** Full sentence with [[pageKey|label]] markers. */
+      linkParagraph: string;
+      notice: string;
+    };
 
 export interface Dictionary {
   locale: Locale;
@@ -92,12 +171,18 @@ export interface Dictionary {
       options: { label: string; href: PageKey; anchor?: string }[];
     };
     quickAnswers: QuickAnswer[];
+    overview: {
+      title: string;
+      paragraphs: string[];
+    };
+    intentSections: HomeIntentSection[];
     pricingTitle: string;
-    pricingSubtitle: string;
-    annualTableTitle: string;
-    shortTermTableTitle: string;
-    annualPricing: TableRow[];
-    shortTermPricing: TableRow[];
+    pricingParagraphs: string[];
+    pricingLinkLabel: string;
+    pricingLinkSecondaryLabel: string;
+    pricingMatrixTitle: string;
+    rateMatrix: RateMatrix;
+    pricingNote: string;
     timelineTitle: string;
     timeline: TimelineItem[];
     faqTitle: string;
@@ -107,9 +192,25 @@ export interface Dictionary {
   prices: {
     title: string;
     intro: string;
-    sections: ContentSection[];
-    annualTable: TableRow[];
-    shortTermTable: TableRow[];
+    leadParagraphs: string[];
+    matrixTitle: string;
+    rateMatrix: RateMatrix;
+    matrixNote: string;
+    /** Paragraph with [[pageKey|label]] markers. */
+    buyLinkParagraph: string;
+    categorySections: {
+      id: string;
+      title: string;
+      paragraphs: string[];
+      list?: string[];
+      tableTitle?: string;
+      table?: TableRow[];
+      /** Paragraph with [[pageKey|label]] markers. */
+      linkParagraph?: string;
+    }[];
+    durationSection: ContentSection;
+    whenSection: ContentSection;
+    backgroundSections: ContentSection[];
     euroNormTitle: string;
     euroNormCategoryHeader: string;
     euroNormDescriptionHeader: string;
@@ -154,6 +255,19 @@ export interface Dictionary {
     faqs: FaqItem[];
     officialSourceLabel: string;
   };
+  tolls: {
+    title: string;
+    intro: string;
+    blocks: TollsBlock[];
+    faqTitle: string;
+    faqs: FaqItem[];
+    closing: {
+      title: string;
+      paragraphs: string[];
+      checklist: string[];
+      links: { href: PageKey; label: string }[];
+    };
+  };
   privacy: {
     title: string;
     intro: string;
@@ -184,16 +298,24 @@ export interface Dictionary {
     noArticles: string;
   };
   newsletter: {
-    title: string;
-    description: string;
-    benefitsIntro: string;
-    benefits: string[];
     emailPlaceholder: string;
     consentLabel: string;
-    submit: string;
     success: string;
     error: string;
     privacyLink: string;
+    sticky: {
+      teaser: string;
+      cta: string;
+      closeLabel: string;
+    };
+    intents: {
+      home: NewsletterIntentCopy;
+      prices: NewsletterIntentCopy;
+      buy: NewsletterIntentCopy;
+      foreign: NewsletterIntentCopy;
+      news: NewsletterIntentCopy;
+      default: NewsletterIntentCopy;
+    };
   };
   cookieBanner: {
     title: string;

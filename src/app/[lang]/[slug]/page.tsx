@@ -16,7 +16,6 @@ import {
 } from "@/lib/json-ld";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
-import Newsletter from "@/components/sections/Newsletter";
 import {
   PageHero,
   renderSubpageContent,
@@ -72,6 +71,8 @@ function getFaqsForPage(dict: Awaited<ReturnType<typeof getDictionary>>, pageKey
       return dict.fines.faqs;
     case "buy":
       return dict.buy.faqs;
+    case "tolls":
+      return dict.tolls.faqs;
     case "dailyVignette":
       return dict.dailyVignette.faqs;
     case "monthlyVignette":
@@ -140,16 +141,12 @@ export default async function Subpage({
           badge={content.badge}
           dict={dict}
           showSiteNotice={pageKey !== "news"}
+          wide={pageKey === "tolls"}
         />
         {renderSubpageContent(pageKey, dict, {
           articles: pageKey === "news" ? getAllArticles() : undefined,
           locale: lang,
         })}
-        {pageKey === "buy" && (
-          <div className="mt-12">
-            <Newsletter locale={lang} dict={dict} />
-          </div>
-        )}
       </div>
     </>
   );

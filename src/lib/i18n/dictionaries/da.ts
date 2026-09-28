@@ -1,4 +1,18 @@
 import type { BaseDictionary } from "../types";
+import { daTolls } from "../tolls/da";
+import { buildRateMatrix } from "../rate-matrix";
+
+const daRateMatrix = buildRateMatrix({
+  vehicleHeader: "Køretøj",
+  dayHeader: "1 dag",
+  tenDaysHeader: "10 dage",
+  monthHeader: "1 måned",
+  twoMonthsHeader: "2 måneder",
+  yearHeader: "1 år",
+  euro03: "Euro 0 til 3",
+  euro4: "Euro 4 og højere",
+  zeroEmission: "Emissionsfri",
+});
 
 const dictionary: BaseDictionary = {
   locale: "da",
@@ -16,19 +30,20 @@ const dictionary: BaseDictionary = {
     exemptions: "Fritagelser",
     fines: "Bøder",
     buy: "Sådan køber du",
+    tolls: "Vejafgifter",
     news: "Nyheder og opdateringer",
     privacy: "Privatliv",
   },
   meta: {
     home: {
-      title: "Belgisk vignet 2027: har du brug for et vignet til Belgien?",
+      title: "Belgisk vignet 2027: priser, motorveje og hvordan man køber",
       description:
-        "Belgien planlægger at indføre et digitalt vejvignet fra 1. maj 2027. Find ud af, om du har brug for et, hvad det koster, hvem der er fritaget og hvornår salget starter.",
+        "Belgien planlægger et digitalt vejvignet fra maj 2027. Se planlagte priser, hvem der har brug for det, fritagelser for motorcykler og hvor du køber.",
     },
     prices: {
-      title: "Belgisk vignet priser 2027 — dag, måned & årlige takster",
+      title: "Belgiske vignetpriser 2027: takster pr. Euronorm og varighed",
       description:
-        "Planlagte vignetpriser for Belgien: €100/år, kortvarige fra €9/dag. Euro-emissionsnorm forklaret enkelt.",
+        "Fuld prisoversigt for Belgiens vejvignette 2027 pr. Euronorm og varighed — fra €8,10/dag (emissionsfri) til €125/år (Euro 0–3).",
     },
     foreign: {
       title: "Har udenlandske biler brug for et belgisk vignet i 2027?",
@@ -50,6 +65,11 @@ const dictionary: BaseDictionary = {
       description:
         "Ifølge de aktuelle planer forventes onlinesalget af den belgiske vejvignette at starte 1. marts 2027. Obligatorisk fra 1. maj 2027. Officiel kilde: den flamske regering.",
     },
+    tolls: {
+      title: "Vejafgifter i Belgien 2027: motorveje, vignet og priser",
+      description:
+        "Er motorvejene betalingsbelagte i Belgien? Se vejafgifter, det planlagte vignet fra maj 2027, takster og regler for udenlandske biler.",
+    },
     news: {
       title: "Nyheder om belgisk vignet — pålidelige kilder forklaret",
       description:
@@ -65,8 +85,8 @@ const dictionary: BaseDictionary = {
     disclaimer:
       "BelgiumVignette.be er et uafhængigt informationssite. Vi er ikke tilknyttet den belgiske regering, Flandern, Vallonien eller Bruxelles.",
     lastUpdated: "Sidst opdateret",
-    lastUpdatedDate: "14 August 2026",
-    lastUpdatedIso: "2026-08-14",
+    lastUpdatedDate: "28 September 2026",
+    lastUpdatedIso: "2026-09-28",
     readMore: "Læs mere",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — uafhængig information om belgiske vejafgifter",
@@ -108,40 +128,86 @@ const dictionary: BaseDictionary = {
     },
     quickAnswers: [
       {
-        title: "Hvem skal have det?",
+        title: "Hvem skal købe et belgisk vignet?",
         summary:
-          "Personbiler op til 3,5 ton, inklusive udenlandske køretøjer — også hvis du kun kører igennem.",
+          "Personbiler op til 3,5 ton, inklusive udenlandske køretøjer i transit på dækkede veje.",
         href: "foreign",
+        linkLabel: "Guide til udenlandske bilister",
       },
       {
-        title: "Hvem er fritaget?",
+        title: "Hvem er fritaget for det belgiske vignet?",
         summary:
-          "Motorcykler, lastbiler (km-afgift), traktorer, turistbusser, redningstjenester og politi.",
+          "Motorcykler, lastbiler (km-afgift), traktorer, turistbusser, redningstjenester og politi — ifølge de nuværende planer.",
         href: "exemptions",
+        linkLabel: "Se alle fritagelser",
       },
       {
-        title: "Hvad koster det?",
+        title: "Hvad er prisen på det belgiske vignet i 2027?",
         summary:
-          "Årligt vignet fra €90 (elbil) til €125 (ældre biler). Kortvarigt fra €9/dag.",
+          "Prisen afhænger af Euronorm og varighed: fra €8,10/dag (emissionsfri) og €9/dag (Euro 4+), til €90–€125 om året.",
         href: "prices",
+        linkLabel: "Fuld prisguide",
       },
     ],
-    pricingTitle: "Planlagte takster på et øjeblik",
-    pricingSubtitle:
-      "Baseret på offentliggjorte planer (March 2026). De endelige beløb kan stadig ændres.",
-    annualTableTitle: "Årligt vignet",
-    shortTermTableTitle: "Kortvarigt",
-    annualPricing: [
-      { label: "Euro 4 og højere", value: "€100 / year", note: "97 %+ af flamske biler" },
-      { label: "El / brint", value: "€90 / year" },
-      { label: "Ældre biler (op til Euro 3)", value: "€125 / year" },
+    overview: {
+      title: "Belgisk vejvignette: hvad er planlagt for 2027",
+      paragraphs: [
+        "Belgien planlægger at indføre et digitalt vejvignet fra 1. maj 2027. Det belgiske vignet ville gælde for personbiler op til 3,5 ton på motorveje og visse regionale hovedveje.",
+        "Udenlandske biler ville være omfattet. Bilister fra Frankrig, Nederlandene, Tyskland og andre lande ville have brug for et vignet for at bruge de dækkede belgiske veje.",
+        "Det ville ikke være et klistermærke i forruden. Det belgiske motorvejsvignet ville være digitalt og knyttet til nummerpladen, med kontrol blandt andet via ANPR-kameraer.",
+        "Ifølge de af den flamske regering offentliggjorte takster afhænger prisen af Euronorm og varighed: fra €8,10 pr. dag for emissionsfri køretøjer og €9 pr. dag for Euro 4+, til €90–€125 om året. Også 10 dage, 1 måned og 2 måneder er planlagt.",
+        "Motorcykler ville være fritaget ifølge de nuværende planer. Endelige beløb og regler skal stadig bekræftes, før systemet træder i kraft.",
+      ],
+    },
+    intentSections: [
+      {
+        id: "motorveje",
+        title: "Har du brug for et vignet til motorveje i Belgien?",
+        paragraphs: [
+          "Ifølge de nuværende planer ville et digitalt vejvignet blive obligatorisk på belgiske motorveje og visse regionale hovedveje fra 1. maj 2027.",
+          "I dag er de fleste belgiske motorveje stadig gratis for personbiler. Vignetprojektet ville ændre det: adgang til motorveje og en del af det hurtigere regionale net ville kræve et nummerpladetilknyttet vignet.",
+          "Hvis du kun bruger lokale veje, ville et vignet ikke være påkrævet ifølge offentliggjort information. I praksis er det ofte svært helt at undgå motorveje og regionale hovedveje på intercity- eller transitrejser.",
+        ],
+        link: {
+          href: "tolls",
+          label: "Vejafgifter og motorveje i Belgien",
+        },
+      },
+      {
+        id: "motorcykler",
+        title: "Har motorcykler brug for et belgisk vignet?",
+        paragraphs: [
+          "Nej. Ifølge myndighedsmeddelelser ville motorcykler være udtrykkeligt fritaget for det belgiske vignet.",
+          "Forpligtelsen ville gælde motorkøretøjer med mindst fire hjul op til 3,5 ton — herunder biler, nogle lette varevogne og autocampere. Lastbiler forbliver under Viapass kilometerafgift.",
+        ],
+        link: {
+          href: "exemptions",
+          label: "Se fritagelsesdetaljer",
+        },
+      },
+      {
+        id: "kobe",
+        title: "Hvor kan man købe det belgiske vignet?",
+        paragraphs: [
+          "Det officielle salg er endnu ikke startet. Ifølge de nuværende planer ville onlinekøb være muligt fra 1. marts 2027 via den officielle hjemmeside eller en autoriseret partner.",
+          "Der findes i dag ingen officiel salgsportal. Sider, der allerede tilbyder booking eller betaling, er ikke den officielle kanal.",
+        ],
+        link: {
+          href: "buy",
+          label: "Køb belgisk vignet: datoer og officielle kanaler",
+        },
+      },
     ],
-    shortTermPricing: [
-      { label: "1 dag", value: "€9" },
-      { label: "10 dage", value: "€12" },
-      { label: "1 måned", value: "€19" },
-      { label: "2 måneder", value: "€30" },
+    pricingTitle: "Hvad er prisen på det belgiske vignet i 2027?",
+    pricingParagraphs: [
+      "Prisen på Belgiens vejvignette afhænger af køretøjets Euronorm og vignetens gyldighedsperiode. For biler med Euro 4 eller højere starter de planlagte takster ved €9 for 1 dag og €100 for 1 år. Ældre køretøjer betaler mere, mens emissionsfri køretøjer får en lavere takst.",
     ],
+    pricingLinkLabel: "Se alle priser for det belgiske vignet",
+    pricingLinkSecondaryLabel: "Fuld prisguide",
+    pricingMatrixTitle: "Planlagte takster",
+    rateMatrix: daRateMatrix,
+    pricingNote:
+      "Dette er de takster, der i øjeblikket er offentliggjort af den flamske regering. Indførelsen er stadig under forbehold af endelig godkendelse.",
     timelineTitle: "Vigtige datoer (ifølge planerne)",
     timeline: [
       {
@@ -171,75 +237,161 @@ const dictionary: BaseDictionary = {
           "Nej. Ifølge planerne er det et digitalt vignet knyttet til din nummerplade. Intet klistermærke i forruden.",
       },
       {
-        question: "Gælder det for udenlandske biler?",
+        question: "Har du brug for et vignet til motorveje i Belgien?",
         answer:
-          "Ja. EU-regler kræver lige behandling. Belgiske og udenlandske bilister skal begge betale.",
+          "Ifølge de nuværende planer ja fra 1. maj 2027 på belgiske motorveje og visse regionale hovedveje. Lokale veje ville ligge uden for forpligtelsen.",
       },
       {
-        question: "Skal motorcyklister betale?",
+        question: "Har motorcykler brug for et belgisk vignet?",
         answer:
           "Nej. Motorcykler er udtrykkeligt fritaget ifølge meddelelser fra ministrene Weyts (Flandern) og Desquesnes (Vallonien).",
       },
       {
-        question: "Hvornår kan jeg købe?",
+        question: "Gælder det for udenlandske biler?",
         answer:
-          "Ifølge de aktuelle planer forventes onlinesalg fra 1. marts 2027. Vignetten ville blive obligatorisk fra 1. maj 2027. De endelige vilkår kan stadig ændre sig.",
+          "Ja. EU-regler kræver lige behandling. Belgiske og udenlandske bilister skal begge betale på dækkede veje.",
+      },
+      {
+        question: "Hvor kan man købe det belgiske vignet?",
+        answer:
+          "Det officielle salg er endnu ikke startet. Ifølge planerne forventes onlinekøb fra 1. marts 2027 via den officielle kanal eller en autoriseret partner.",
       },
     ],
     sourcesTitle: "Officielle kilder",
   },
   prices: {
-    title: "Priser & varigheder",
+    title: "Belgiske vignetpriser 2027: takster pr. Euronorm og varighed",
     intro:
-      "Oversigt over planlagte vignetpriser efter Euro-emissionsnorm. Baseret på meddelelser fra March 2026 — detaljer kan ændres.",
-    sections: [
+      "Den planlagte pris på Belgiens vejvignette afhænger af to faktorer: køretøjets Euronorm og vignetens gyldighedsperiode. Den flamske regering har offentliggjort takster for 1 dag, 10 dage, 1 måned, 2 måneder og 1 år.",
+    leadParagraphs: [
+      "For en bil med Euro 4 eller højere koster det belgiske vignet ifølge de nuværende takster €9 for 1 dag, €12 for 10 dage og €100 for et år. Emissionsfri køretøjer betaler mindre, og køretøjer med Euro 0 til og med Euro 3 betaler mere.",
+      "Vignetten er planlagt fra 1. maj 2027. Køb skulle blive muligt fra 1. marts 2027. Indførelsen er stadig under forbehold af endelig godkendelse.",
+    ],
+    matrixTitle: "Priser belgisk vejvignette 2027",
+    rateMatrix: daRateMatrix,
+    matrixNote:
+      "Disse takster er offentliggjort af den flamske regering. Prisen bestemmes altså ikke kun af, hvor længe du har brug for vignetten, men også af køretøjets Euronorm.",
+    buyLinkParagraph:
+      "[[buy|Se hvor og hvornår du kan købe det belgiske vignet]].",
+    categorySections: [
       {
-        id: "annual",
-        title: "Årligt vignet",
+        id: "euro-4",
+        title: "Hvad koster et belgisk vignet for Euro 4 og højere?",
         paragraphs: [
-          "Til regelmæssige brugere af Belgiens hovedveje. Prisen afhænger af bilens Euro-emissionsklasse.",
+          "For køretøjer med Euro 4 eller højere gælder ifølge de offentliggjorte takster:",
+        ],
+        list: [
+          "1 dag: €9",
+          "10 dage: €12",
+          "1 måned: €19",
+          "2 måneder: €30",
+          "1 år: €100",
+        ],
+        linkParagraph:
+          "Dette er kategorien, som en stor del af den nuværende bilpark falder ind under. Til en kort gennemkørsel gennem Belgien kan et dags- eller 10-dagesvignet derfor være tilstrækkeligt. Den, der regelmæssigt bruger belgiske regions- og motorveje, kan sammenligne årsvignetten med de kortere varigheder. Læs mere om [[dailyVignette|dagsvignetten]] eller se [[annualVignette|årsvignetten]].",
+      },
+      {
+        id: "euro-0-3",
+        title: "Hvad koster et belgisk vignet for Euro 0 til og med Euro 3?",
+        paragraphs: [
+          "Ældre køretøjer med Euro 0, Euro 1, Euro 2 eller Euro 3 falder ind under den dyreste takstkategori.",
+          "De planlagte priser går fra €11,25 for én dag til €125 for et år.",
+        ],
+        tableTitle: "Pris Euro 0–3",
+        table: [
+          { label: "1 dag", value: "€11,25" },
+          { label: "10 dage", value: "€15" },
+          { label: "1 måned", value: "€23,75" },
+          { label: "2 måneder", value: "€37,50" },
+          { label: "1 år", value: "€125" },
         ],
       },
       {
-        id: "short",
-        title: "Kortvarige muligheder",
+        id: "elektrisk",
+        title: "Hvad koster vignetten for en elbil?",
         paragraphs: [
-          "Til lejlighedsvise ture — ferier, weekender — er kortere vignetter planlagt.",
-          "Ældre, mere forurenende biler (op til Euro 3) betaler lidt højere takster.",
+          "For et emissionsfrit køretøj gælder den laveste takst. Ifølge den aktuelle prisoversigt koster vignetten €8,10 for én dag og €90 for et helt år.",
         ],
+        tableTitle: "Pris emissionsfri",
+        table: [
+          { label: "1 dag", value: "€8,10" },
+          { label: "10 dage", value: "€10,80" },
+          { label: "1 måned", value: "€17,10" },
+          { label: "2 måneder", value: "€27" },
+          { label: "1 år", value: "€90" },
+        ],
+        linkParagraph:
+          "[[electricVignette|Læs mere om det belgiske vignet til elbiler]].",
       },
+    ],
+    durationSection: {
+      id: "varighed",
+      title: "Hvilken varighed har jeg brug for?",
+      paragraphs: [
+        "Ifølge de nuværende planer kan du vælge mellem fem gyldighedsperioder:",
+        "Den bedste varighed afhænger af, hvor ofte og hvor længe du bruger de veje, hvor vignetten bliver obligatorisk.",
+        "Se den separate forklaring om [[dailyVignette|dagsvignet]], [[monthlyVignette|månedsvignet]] og [[annualVignette|årsvignet]].",
+      ],
+      list: [
+        "1 dag — til en kort gennemkørsel eller dagstur.",
+        "10 dage — for eksempel til ferie eller et længere besøg.",
+        "1 måned — til flere ture over nogle uger.",
+        "2 måneder — til et længere ophold eller regelmæssig midlertidig brug.",
+        "1 år — til bilister, der regelmæssigt kører på belgiske regions- og motorveje.",
+      ],
+    },
+    whenSection: {
+      id: "naar",
+      title: "Hvornår gælder disse priser?",
+      paragraphs: [
+        "Det digitale vejvignet er planlagt fra 1. maj 2027. Ifølge den aktuelle officielle information skulle vignetten kunne købes online fra 1. marts 2027.",
+        "Den praktiske udmøntning er stadig i gang, og indførelsen er under forbehold af endelig godkendelse.",
+        "Vil du vide, hvordan købet fungerer? Se så [[buy|Køb belgisk vignet]]. For alle regler, køretøjer og vigtige datoer går du til vores komplette guide om [[home|Belgiens vejvignette 2027]].",
+      ],
+    },
+    backgroundSections: [
       {
         id: "road-tax",
         title: "Samspil med vejafgift (Flandern)",
         paragraphs: [
-          "Flandern reformerer samtidig den årlige vejafgift. Omtrent halvdelen af flamske bilister kan betale mere samlet — op til €100/år ekstra.",
+          "Flandern reformerer samtidig den årlige vejafgift. Ifølge skøn kan cirka halvdelen af de flamske bilister betale mere samlet — op til €100 ekstra om året.",
+          "Nedsættelsen af vejafgiften kompenserer ifølge planerne ikke alle fuldt ud for vignetudgifterne. Dette er baggrundsinformation; vignetttaksterne ovenfor gælder uafhængigt af den reform.",
         ],
       },
     ],
-    annualTable: [
-      { label: "Euro 4 og højere", value: "€100", note: "Year" },
-      { label: "El / brint", value: "€90", note: "Year" },
-      { label: "Op til Euro 3", value: "€125", note: "Year" },
-    ],
-    shortTermTable: [
-      { label: "1 dag", value: "€9" },
-      { label: "10 dage", value: "€12" },
-      { label: "1 måned", value: "€19" },
-      { label: "2 måneder", value: "€30" },
-    ],
-    euroNormTitle: "Euro-normer forklaret",
+    euroNormTitle: "Euro-normer i korthed",
     euroNormCategoryHeader: "Norm",
     euroNormDescriptionHeader: "Beskrivelse",
     euroNormItems: [
-      { norm: "Euro 4+", description: "Biler fra ca. 2005–2006 og frem. De fleste køretøjer på vejene." },
-      { norm: "El / H₂", description: "Nulemission. Laveste planlagte takst." },
-      { norm: "Euro 3 og derunder", description: "Ældre, mere forurenende køretøjer." },
+      {
+        norm: "Euro 4+",
+        description: "Biler fra ca. 2005–2006. De fleste køretøjer på vejene. Dagstakst €9, år €100.",
+      },
+      {
+        norm: "Emissionsfri",
+        description: "Helt emissionsfri (el / brint). Laveste takst: fra €8,10/dag, €90/år.",
+      },
+      {
+        norm: "Euro 3 og derunder",
+        description: "Ældre, mere forurenende køretøjer. Højeste takst: fra €11,25/dag, €125/år.",
+      },
     ],
     vignettePagesTitle: "Efter vignettype",
     faqs: [
       {
+        question: "Hvad er den laveste planlagte dagspris?",
+        answer:
+          "Ifølge den flamske regering er den laveste dagstakst €8,10 for emissionsfri køretøjer. For Euro 4 og højere er den €9; for Euro 0 til og med 3 er den €11,25.",
+      },
+      {
+        question: "Gælder de korte perioder for alle emissionsklasser?",
+        answer:
+          "Ja. Hver varighed (1 dag, 10 dage, 1 måned, 2 måneder, 1 år) har sin egen takst pr. Euronorm-kategori. Beløbene adskiller sig pr. kategori.",
+      },
+      {
         question: "Kan erhvervsvarebiler fradrages?",
-        answer: "Ifølge planerne kan vignetudgiften for erhvervsvarebiler være fuldt fradragsberettiget som driftsomkostning.",
+        answer:
+          "Ifølge planerne kan vignetudgiften for erhvervsvarebiler være fuldt fradragsberettiget som driftsomkostning.",
       },
     ],
   },
@@ -425,6 +577,7 @@ const dictionary: BaseDictionary = {
       },
     ],
   },
+  tolls: daTolls,
   privacy: {
     title: "Privatlivspolitik",
     intro: "BelgiumVignette.be respekterer dit privatliv. Sådan håndterer vi dine data.",
@@ -498,21 +651,84 @@ const dictionary: BaseDictionary = {
     noArticles: "Ingen artikler publiceret endnu. Tjek tilbage snart.",
   },
   newsletter: {
-    title: "Få besked først, når det belgiske vignet bliver tilgængeligt",
-    description: "",
-    benefitsIntro: "",
-    benefits: [
-      "Officielt salg starter",
-      "Endelige priser bekræftet",
-      "Nye regler offentliggjort",
-      "Købslink tilgængeligt",
-    ],
     emailPlaceholder: "E-mailadresse",
-    consentLabel: "Jeg accepterer at modtage opdateringer og har læst privatlivspolitikken.",
-    submit: "Giv mig besked",
+    consentLabel: "Jeg accepterer at modtage opdateringer og har læst",
     success: "Tak! Du er tilmeldt.",
     error: "Noget gik galt. Prøv igen.",
-    privacyLink: "Privatlivspolitik",
+    privacyLink: "privatlivspolitikken.",
+    sticky: {
+      teaser: "Vignetten er endnu ikke til salg — få købslinket",
+      cta: "Tilmeld dig →",
+      closeLabel: "Luk",
+    },
+    intents: {
+      home: {
+        title:
+          "Få det officielle købslink, så snart det belgiske vignet er tilgængeligt",
+        description:
+          "Salget er planlagt fra 1. marts 2027. Efterlad din e-mail, så giver vi dig besked, når den officielle købsmulighed er tilgængelig.",
+        benefits: [
+          "Officielt købslink, så snart det er tilgængeligt",
+          "Opdateringer, når priser eller regler ændres",
+          "Ingen unødvendige e-mails",
+        ],
+        submit: "Send mig købslinket",
+      },
+      prices: {
+        title: "Få besked, når de endelige vignetpriser er bekræftet",
+        description:
+          "De aktuelle takster er offentliggjort, men indførelsen skal stadig godkendes endeligt. Vi følger den officielle information for dig.",
+        benefitsIntro: "Få én e-mail, når:",
+        benefits: [
+          "de endelige priser er bekræftet;",
+          "det officielle salg starter;",
+          "det officielle købslink er tilgængeligt.",
+        ],
+        submit: "Hold mig opdateret",
+      },
+      buy: {
+        title: "Giv mig besked, når det belgiske vignet kommer til salg",
+        description:
+          "Det officielle salg er endnu ikke startet. Ifølge den aktuelle plan kan du købe det belgiske vignet fra 1. marts 2027. Efterlad din e-mail, så giver vi dig besked, når den officielle købsmulighed er tilgængelig.",
+        benefits: [],
+        submit: "Send mig købslinket",
+      },
+      foreign: {
+        title:
+          "Giv mig besked, når udenlandske biler kan registrere deres vignet",
+        description:
+          "Udenlandske bilister forventes også at skulle have et belgisk vignet. Få besked, når registrering og køb officielt er muligt.",
+        benefits: [
+          "Start af officielt salg",
+          "Regler for udenlandske nummerplader",
+          "Officielt købslink",
+        ],
+        submit: "Hold mig opdateret",
+      },
+      news: {
+        title: "Få vigtige opdateringer om det belgiske vignet",
+        description:
+          "Korte, relevante beskeder, når der er officielle nyheder om priser, regler eller salgsstarten.",
+        benefits: [
+          "Vigtige officielle opdateringer",
+          "Ingen daglig spam",
+          "Købslink, så snart det er tilgængeligt",
+        ],
+        submit: "Få opdateringer",
+      },
+      default: {
+        title:
+          "Få det officielle købslink, så snart det belgiske vignet er tilgængeligt",
+        description:
+          "Salget er planlagt til at starte den 1. marts 2027. Vi sender dig én besked, når du officielt kan købe.",
+        benefits: [
+          "Officielt købslink",
+          "Opdateringer om priser og regler",
+          "Ingen unødvendige e-mails",
+        ],
+        submit: "Send mig købslinket",
+      },
+    },
   },
   cookieBanner: {
     title: "Cookies & privatliv",
