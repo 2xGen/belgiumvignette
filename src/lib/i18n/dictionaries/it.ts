@@ -90,6 +90,9 @@ const dictionary: BaseDictionary = {
     readMore: "Scopri di più",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — informazioni indipendenti sui pedaggi in Belgio",
+    ownedManagedBy: "Di proprietà e gestito da",
+    operatorName: "2xGen",
+    operatorUrl: "https://2xgen.com/about",
     backToHome: "Torna alla home",
     plannedNotice:
       "I piani presentati a March 2026 potrebbero ancora cambiare. Seguiamo le fonti ufficiali e aggiorniamo questa pagina non appena ci sono novità.",

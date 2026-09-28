@@ -90,6 +90,9 @@ const dictionary: BaseDictionary = {
     readMore: "Czytaj więcej",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — niezależne informacje o opłatach drogowych w Belgii",
+    ownedManagedBy: "Własność i zarządzanie:",
+    operatorName: "2xGen",
+    operatorUrl: "https://2xgen.com/about",
     backToHome: "Powrót do strony głównej",
     plannedNotice:
       "Plany przedstawione w marcu 2026 r. mogą jeszcze ulec zmianie. Śledzimy oficjalne źródła i aktualizujemy tę stronę, gdy pojawią się nowe informacje.",

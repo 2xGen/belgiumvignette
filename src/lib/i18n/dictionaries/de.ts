@@ -90,6 +90,9 @@ const dictionary: BaseDictionary = {
     readMore: "Mehr erfahren",
     relatedSite: "https://tolls.be/de",
     relatedSiteLabel: "Tolls.be — unabhängige Maut-Informationen für Belgien",
+    ownedManagedBy: "Im Besitz von und betrieben durch",
+    operatorName: "2xGen",
+    operatorUrl: "https://2xgen.com/about",
     backToHome: "Zurück zur Startseite",
     plannedNotice:
       "Die im März 2026 vorgestellten Pläne können sich noch ändern. Wir verfolgen offizielle Quellen und aktualisieren diese Seite bei Neuigkeiten.",

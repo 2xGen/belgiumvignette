@@ -90,6 +90,9 @@ const dictionary: BaseDictionary = {
     readMore: "Leer más",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — información independiente sobre peajes en Bélgica",
+    ownedManagedBy: "Propiedad y gestión de",
+    operatorName: "2xGen",
+    operatorUrl: "https://2xgen.com/about",
     backToHome: "Volver al inicio",
     plannedNotice:
       "Los planes presentados en marzo de 2026 pueden cambiar. Seguimos las fuentes oficiales y actualizamos esta página cuando hay novedades.",

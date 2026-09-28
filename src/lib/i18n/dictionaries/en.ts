@@ -90,6 +90,9 @@ const dictionary: BaseDictionary = {
     readMore: "Read more",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — independent Belgium toll information",
+    ownedManagedBy: "Owned and managed by",
+    operatorName: "2xGen",
+    operatorUrl: "https://2xgen.com/about",
     backToHome: "Back to home",
     plannedNotice:
       "Plans presented in March 2026 may still change. We track official sources and update this page when news breaks.",

@@ -90,6 +90,9 @@ const dictionary: BaseDictionary = {
     readMore: "Läs mer",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — oberoende information om belgiska vägavgifter",
+    ownedManagedBy: "Ägs och drivs av",
+    operatorName: "2xGen",
+    operatorUrl: "https://2xgen.com/about",
     backToHome: "Tillbaka till startsidan",
     plannedNotice:
       "Planer som presenterades i mars 2026 kan fortfarande ändras. Vi följer officiella källor och uppdaterar denna sida när nyheter kommer.",

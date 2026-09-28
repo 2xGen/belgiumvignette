@@ -143,6 +143,9 @@ export interface Dictionary {
     readMore: string;
     relatedSite: string;
     relatedSiteLabel: string;
+    ownedManagedBy: string;
+    operatorName: string;
+    operatorUrl: string;
     backToHome: string;
     plannedNotice: string;
     independentSite: string;

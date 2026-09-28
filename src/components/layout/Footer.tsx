@@ -77,9 +77,21 @@ export default function Footer({
       </div>
 
       <div className="border-t border-white/10">
-        <div className="site-wrap flex flex-wrap items-center justify-between gap-2 py-4 text-xs text-white/45">
+        <div className="site-wrap flex flex-wrap items-center justify-between gap-x-4 gap-y-2 py-4 text-xs text-white/45">
           <span>
             © {new Date().getFullYear()} {dict.site.domain}
+            <span className="mx-2 text-white/25" aria-hidden>
+              ·
+            </span>
+            {dict.common.ownedManagedBy}{" "}
+            <a
+              href={dict.common.operatorUrl}
+              className="text-white/45 no-underline underline-offset-2 hover:text-white/70 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {dict.common.operatorName}
+            </a>
           </span>
           <span>
             {dict.common.lastUpdated}: {dict.common.lastUpdatedDate}
