@@ -1,4 +1,5 @@
 import type { BaseDictionary } from "../types";
+import { getAcquisitionContent } from "../acquisition";
 import { roTolls } from "../tolls/ro";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -33,6 +34,7 @@ const dictionary: BaseDictionary = {
     tolls: "Taxe",
     news: "Știri și actualizări",
     privacy: "Confidențialitate",
+    acquisition: "Achiziție",
   },
   meta: {
     home: {
@@ -79,6 +81,11 @@ const dictionary: BaseDictionary = {
       title: "Politica de confidențialitate — BelgiumVignette.be",
       description:
         "Cum gestionează BelgiumVignette.be cookie-urile, analitica, datele din newsletter și drepturile dvs. GDPR.",
+    },
+    acquisition: {
+      title: "BelgiumVignette.be de vânzare | Site și portofoliu de domenii",
+      description:
+        "BelgiumVignette.be este disponibil pentru achiziție, inclusiv site multilingv, rankinguri Google și un portofoliu de domenii vinietă belgiană.",
     },
   },
   common: {
@@ -629,6 +636,7 @@ const dictionary: BaseDictionary = {
     ],
     lastUpdated: "4 August 2026",
   },
+  acquisition: getAcquisitionContent("ro"),
   news: {
     title: "Știri și actualizări",
     intro:

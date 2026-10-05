@@ -1,4 +1,5 @@
 import type { BaseDictionary } from "../types";
+import { getAcquisitionContent } from "../acquisition";
 import { nlTolls } from "../tolls/nl";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -33,6 +34,7 @@ const dictionary: BaseDictionary = {
     tolls: "Tol",
     news: "Nieuws & updates",
     privacy: "Privacy",
+    acquisition: "Overname",
   },
   meta: {
     home: {
@@ -79,6 +81,11 @@ const dictionary: BaseDictionary = {
       title: "Privacybeleid — BelgiumVignette.be",
       description:
         "Hoe BelgiumVignette.be omgaat met cookies, analytics, nieuwsbriefgegevens en uw privacy volgens de AVG.",
+    },
+    acquisition: {
+      title: "BelgiumVignette.be te koop | Website & domeinportefeuille",
+      description:
+        "BelgiumVignette.be is beschikbaar voor overname, inclusief meertalige website, Google-rankings en een portefeuille Belgische vignetdomeinen.",
     },
   },
   common: {
@@ -653,6 +660,7 @@ const dictionary: BaseDictionary = {
     ],
     lastUpdated: "4 augustus 2026",
   },
+  acquisition: getAcquisitionContent("nl"),
   news: {
     title: "Nieuws & updates",
     intro:

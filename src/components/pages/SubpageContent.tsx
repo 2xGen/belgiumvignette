@@ -566,6 +566,138 @@ export function PrivacyPageContent({ dict }: { dict: Dictionary }) {
   );
 }
 
+export function AcquisitionPageContent({ dict }: { dict: Dictionary }) {
+  const content = dict.acquisition;
+  return (
+    <div className="max-w-3xl space-y-10">
+      {content.overviewParagraphs.map((paragraph) => (
+        <p key={paragraph} className="text-base leading-relaxed text-text">
+          {paragraph}
+        </p>
+      ))}
+
+      <section>
+        <h2 className="section-heading">{content.visibilityTitle}</h2>
+        {content.visibilityParagraphs.map((paragraph) => (
+          <p
+            key={paragraph}
+            className="mt-3 text-base leading-relaxed text-text-muted"
+          >
+            {paragraph}
+          </p>
+        ))}
+        <div className="table-wrap mt-6">
+          <table className="content-table acquisition-rankings-table">
+            <thead>
+              <tr>
+                <th scope="col">{content.queryHeader}</th>
+                <th scope="col">{content.positionHeader}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {content.rankings.map((row) => (
+                <tr key={row.query}>
+                  <td>
+                    <code className="text-sm">{row.query}</code>
+                  </td>
+                  <td>{row.position}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {content.visibilityClosing.map((paragraph) => (
+          <p
+            key={paragraph}
+            className="mt-4 text-base leading-relaxed text-text-muted"
+          >
+            {paragraph}
+          </p>
+        ))}
+      </section>
+
+      <section>
+        <h2 className="section-heading">{content.domainsTitle}</h2>
+        <p className="mt-3 text-base leading-relaxed text-text-muted">
+          {content.domainsIntro}
+        </p>
+        <ul className="mt-4 list-disc space-y-1.5 pl-5 text-base text-text">
+          {content.domains.map((domain) => (
+            <li key={domain}>
+              <strong>{domain}</strong>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-4 text-base leading-relaxed text-text-muted">
+          {content.domainsClosing}
+        </p>
+      </section>
+
+      <section>
+        <h2 className="section-heading">{content.tollsTitle}</h2>
+        {content.tollsParagraphs.map((paragraph) => (
+          <p
+            key={paragraph}
+            className="mt-3 text-base leading-relaxed text-text-muted"
+          >
+            {paragraph}
+          </p>
+        ))}
+      </section>
+
+      <section>
+        <h2 className="section-heading">{content.includedTitle}</h2>
+        <p className="mt-3 text-base leading-relaxed text-text-muted">
+          {content.includedIntro}
+        </p>
+        <ul className="mt-4 list-disc space-y-1.5 pl-5 text-base text-text">
+          {content.includedItems.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p className="mt-4 text-base leading-relaxed text-text-muted">
+          {content.includedClosing}
+        </p>
+      </section>
+
+      <section>
+        <h2 className="section-heading">{content.enquiriesTitle}</h2>
+        {content.enquiriesParagraphs.map((paragraph) => (
+          <p
+            key={paragraph}
+            className="mt-3 text-base leading-relaxed text-text-muted"
+          >
+            {paragraph}
+          </p>
+        ))}
+        <p className="mt-5 text-base text-text">
+          {content.contactCta}{" "}
+          <a
+            href={`mailto:${content.contactEmail}`}
+            className="font-semibold text-link"
+          >
+            {content.contactEmail}
+          </a>
+        </p>
+      </section>
+
+      <section className="border-t border-border-light pt-8">
+        <h2 className="section-heading">{content.forSaleTitle}</h2>
+        {content.forSaleParagraphs.map((paragraph) => (
+          <p
+            key={paragraph}
+            className="mt-3 text-base leading-relaxed text-text-muted"
+          >
+            {paragraph}
+          </p>
+        ))}
+      </section>
+
+      <p className="notice-box text-sm">{content.disclaimer}</p>
+    </div>
+  );
+}
+
 export function VignetteProductPageContent({
   dict,
   pageKey,
@@ -678,6 +810,8 @@ export function renderSubpageContent(
       return <TollsPageContent dict={dict} />;
     case "privacy":
       return <PrivacyPageContent dict={dict} />;
+    case "acquisition":
+      return <AcquisitionPageContent dict={dict} />;
     case "news":
       return (
         <NewsPageContent
@@ -718,6 +852,12 @@ export function getSubpageContent(pageKey: PageKey, dict: Dictionary) {
       return { title: dict.tolls.title, intro: dict.tolls.intro, badge: undefined };
     case "privacy":
       return { title: dict.privacy.title, intro: dict.privacy.intro, badge: undefined };
+    case "acquisition":
+      return {
+        title: dict.acquisition.title,
+        intro: dict.acquisition.intro,
+        badge: undefined,
+      };
     case "news":
       return { title: dict.news.title, intro: dict.news.intro, badge: undefined };
     default:

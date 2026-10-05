@@ -1,4 +1,5 @@
 import type { BaseDictionary } from "../types";
+import { getAcquisitionContent } from "../acquisition";
 import { enTolls } from "../tolls/en";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -33,6 +34,7 @@ const dictionary: BaseDictionary = {
     tolls: "Tolls",
     news: "News & updates",
     privacy: "Privacy",
+    acquisition: "Acquisition",
   },
   meta: {
     home: {
@@ -79,6 +81,11 @@ const dictionary: BaseDictionary = {
       title: "Privacy policy — BelgiumVignette.be",
       description:
         "How BelgiumVignette.be handles cookies, analytics, newsletter data and your GDPR rights.",
+    },
+    acquisition: {
+      title: "BelgiumVignette.be for Sale | Website & Domain Portfolio",
+      description:
+        "BelgiumVignette.be is available for acquisition, including an established multilingual website, Google rankings and a portfolio of Belgian vignette domains.",
     },
   },
   common: {
@@ -629,6 +636,7 @@ const dictionary: BaseDictionary = {
     ],
     lastUpdated: "4 August 2026",
   },
+  acquisition: getAcquisitionContent("en"),
   news: {
     title: "News & updates",
     intro:

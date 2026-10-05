@@ -1,4 +1,5 @@
 import type { BaseDictionary } from "../types";
+import { getAcquisitionContent } from "../acquisition";
 import { deTolls } from "../tolls/de";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -33,6 +34,7 @@ const dictionary: BaseDictionary = {
     tolls: "Maut",
     news: "Nachrichten & Updates",
     privacy: "Datenschutz",
+    acquisition: "Übernahme",
   },
   meta: {
     home: {
@@ -79,6 +81,11 @@ const dictionary: BaseDictionary = {
       title: "Datenschutzerklärung — BelgiumVignette.be",
       description:
         "Wie BelgiumVignette.be Cookies, Analytics, Newsletter-Daten und Ihre DSGVO-Rechte behandelt.",
+    },
+    acquisition: {
+      title: "BelgiumVignette.be zu verkaufen | Website & Domain-Portfolio",
+      description:
+        "BelgiumVignette.be ist zur Übernahme verfügbar, inklusive mehrsprachiger Website, Google-Rankings und einem Portfolio belgischer Vignetten-Domains.",
     },
   },
   common: {
@@ -629,6 +636,7 @@ const dictionary: BaseDictionary = {
     ],
     lastUpdated: "4. August 2026",
   },
+  acquisition: getAcquisitionContent("de"),
   news: {
     title: "Nachrichten & Updates",
     intro:

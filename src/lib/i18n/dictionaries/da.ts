@@ -1,4 +1,5 @@
 import type { BaseDictionary } from "../types";
+import { getAcquisitionContent } from "../acquisition";
 import { daTolls } from "../tolls/da";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -33,6 +34,7 @@ const dictionary: BaseDictionary = {
     tolls: "Vejafgifter",
     news: "Nyheder og opdateringer",
     privacy: "Privatliv",
+    acquisition: "Erhvervelse",
   },
   meta: {
     home: {
@@ -79,6 +81,11 @@ const dictionary: BaseDictionary = {
       title: "Privatlivspolitik — BelgiumVignette.be",
       description:
         "Hvordan BelgiumVignette.be håndterer cookies, analyse, nyhedsbrevsdata og dine GDPR-rettigheder.",
+    },
+    acquisition: {
+      title: "BelgiumVignette.be til salg | Website & domæneportefølje",
+      description:
+        "BelgiumVignette.be er tilgængelig til erhvervelse, inkl. flersproget website, Google-rankinger og en portefølje af belgiske vignetdomæner.",
     },
   },
   common: {
@@ -630,6 +637,7 @@ const dictionary: BaseDictionary = {
     ],
     lastUpdated: "4 August 2026",
   },
+  acquisition: getAcquisitionContent("da"),
   news: {
     title: "Nyheder og opdateringer",
     intro:

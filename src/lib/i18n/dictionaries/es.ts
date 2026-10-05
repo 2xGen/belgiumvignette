@@ -1,4 +1,5 @@
 import type { BaseDictionary } from "../types";
+import { getAcquisitionContent } from "../acquisition";
 import { esTolls } from "../tolls/es";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -33,6 +34,7 @@ const dictionary: BaseDictionary = {
     tolls: "Peajes",
     news: "Noticias y actualizaciones",
     privacy: "Privacidad",
+    acquisition: "Adquisición",
   },
   meta: {
     home: {
@@ -79,6 +81,11 @@ const dictionary: BaseDictionary = {
       title: "Política de privacidad — BelgiumVignette.be",
       description:
         "Cómo BelgiumVignette.be gestiona cookies, analítica, datos del boletín y sus derechos RGPD.",
+    },
+    acquisition: {
+      title: "BelgiumVignette.be en venta | Sitio y cartera de dominios",
+      description:
+        "BelgiumVignette.be está disponible para adquisición, con sitio multilingüe, rankings de Google y cartera de dominios de viñeta belga.",
     },
   },
   common: {
@@ -629,6 +636,7 @@ const dictionary: BaseDictionary = {
     ],
     lastUpdated: "4 August 2026",
   },
+  acquisition: getAcquisitionContent("es"),
   news: {
     title: "Noticias y actualizaciones",
     intro:

@@ -93,6 +93,40 @@ export interface ContentSection {
   list?: string[];
 }
 
+export interface AcquisitionRankingRow {
+  query: string;
+  position: string;
+}
+
+export interface AcquisitionContent {
+  title: string;
+  intro: string;
+  overviewParagraphs: string[];
+  visibilityTitle: string;
+  visibilityParagraphs: string[];
+  queryHeader: string;
+  positionHeader: string;
+  rankings: AcquisitionRankingRow[];
+  visibilityClosing: string[];
+  domainsTitle: string;
+  domainsIntro: string;
+  domains: string[];
+  domainsClosing: string;
+  tollsTitle: string;
+  tollsParagraphs: string[];
+  includedTitle: string;
+  includedIntro: string;
+  includedItems: string[];
+  includedClosing: string;
+  enquiriesTitle: string;
+  enquiriesParagraphs: string[];
+  contactEmail: string;
+  contactCta: string;
+  forSaleTitle: string;
+  forSaleParagraphs: string[];
+  disclaimer: string;
+}
+
 export interface TollsSummaryItem {
   label: string;
   value: string;
@@ -278,6 +312,7 @@ export interface Dictionary {
     sections: ContentSection[];
     lastUpdated: string;
   };
+  acquisition: AcquisitionContent;
   news: {
     title: string;
     intro: string;

@@ -22,6 +22,7 @@ export const pageKeys = [
   "tolls",
   "news",
   "privacy",
+  "acquisition",
 ] as const;
 
 export type PageKey = (typeof pageKeys)[number];
@@ -30,6 +31,7 @@ export const mainNavPageKeys = pageKeys.filter(
   (key) =>
     key !== "home" &&
     key !== "privacy" &&
+    key !== "acquisition" &&
     !(vignetteProductPageKeys as readonly string[]).includes(key),
 );
 
@@ -189,6 +191,19 @@ export const routes: Record<Exclude<PageKey, "home">, Record<Locale, string>> = 
     sv: "integritet",
     da: "privatliv",
     ro: "confidentialitate",
+  },
+  acquisition: {
+    nl: "acquisition",
+    fr: "acquisition",
+    en: "acquisition",
+    de: "acquisition",
+    es: "acquisition",
+    pl: "acquisition",
+    cs: "acquisition",
+    it: "acquisition",
+    sv: "acquisition",
+    da: "acquisition",
+    ro: "acquisition",
   },
 };
 

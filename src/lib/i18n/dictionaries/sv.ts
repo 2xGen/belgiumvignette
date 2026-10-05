@@ -1,4 +1,5 @@
 import type { BaseDictionary } from "../types";
+import { getAcquisitionContent } from "../acquisition";
 import { svTolls } from "../tolls/sv";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -33,6 +34,7 @@ const dictionary: BaseDictionary = {
     tolls: "Vägtullar",
     news: "Nyheter och uppdateringar",
     privacy: "Integritet",
+    acquisition: "Förvärv",
   },
   meta: {
     home: {
@@ -79,6 +81,11 @@ const dictionary: BaseDictionary = {
       title: "Integritetspolicy — BelgiumVignette.be",
       description:
         "Hur BelgiumVignette.be hanterar cookies, analysverktyg, nyhetsbrevsdata och dina GDPR-rättigheter.",
+    },
+    acquisition: {
+      title: "BelgiumVignette.be till salu | Webbplats & domänportfölj",
+      description:
+        "BelgiumVignette.be är tillgänglig för förvärv, inklusive flerspråkig webbplats, Google-rankingar och en portfölj belgiska vinjettdomäner.",
     },
   },
   common: {
@@ -629,6 +636,7 @@ const dictionary: BaseDictionary = {
     ],
     lastUpdated: "4 August 2026",
   },
+  acquisition: getAcquisitionContent("sv"),
   news: {
     title: "Nyheter och uppdateringar",
     intro:

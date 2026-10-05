@@ -140,7 +140,7 @@ export default async function Subpage({
           intro={content.intro}
           badge={content.badge}
           dict={dict}
-          showSiteNotice={pageKey !== "news"}
+          showSiteNotice={pageKey !== "news" && pageKey !== "acquisition"}
           wide={pageKey === "tolls"}
         />
         {renderSubpageContent(pageKey, dict, {

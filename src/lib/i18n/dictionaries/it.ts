@@ -1,4 +1,5 @@
 import type { BaseDictionary } from "../types";
+import { getAcquisitionContent } from "../acquisition";
 import { itTolls } from "../tolls/it";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -33,6 +34,7 @@ const dictionary: BaseDictionary = {
     tolls: "Pedaggi",
     news: "Notizie e aggiornamenti",
     privacy: "Privacy",
+    acquisition: "Acquisizione",
   },
   meta: {
     home: {
@@ -79,6 +81,11 @@ const dictionary: BaseDictionary = {
       title: "Informativa sulla privacy — BelgiumVignette.be",
       description:
         "Come BelgiumVignette.be gestisce cookie, analitiche, dati della newsletter e i tuoi diritti GDPR.",
+    },
+    acquisition: {
+      title: "BelgiumVignette.be in vendita | Sito e portfolio domini",
+      description:
+        "BelgiumVignette.be è disponibile per l'acquisizione, con sito multilingue, ranking Google e portfolio di domini vignetta belga.",
     },
   },
   common: {
@@ -629,6 +636,7 @@ const dictionary: BaseDictionary = {
     ],
     lastUpdated: "4 agosto 2026",
   },
+  acquisition: getAcquisitionContent("it"),
   news: {
     title: "Notizie e aggiornamenti",
     intro:

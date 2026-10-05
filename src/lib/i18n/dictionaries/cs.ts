@@ -1,4 +1,5 @@
 import type { BaseDictionary } from "../types";
+import { getAcquisitionContent } from "../acquisition";
 import { csTolls } from "../tolls/cs";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -33,6 +34,7 @@ const dictionary: BaseDictionary = {
     tolls: "Mýtné",
     news: "Novinky",
     privacy: "Ochrana soukromí",
+    acquisition: "Akvizice",
   },
   meta: {
     home: {
@@ -79,6 +81,11 @@ const dictionary: BaseDictionary = {
       title: "Zásady ochrany soukromí — BelgiumVignette.be",
       description:
         "Jak BelgiumVignette.be zachází s cookies, analytikou, údaji z newsletteru a vašimi právy podle GDPR.",
+    },
+    acquisition: {
+      title: "BelgiumVignette.be na prodej | Web a portfolio domén",
+      description:
+        "BelgiumVignette.be je k dispozici k akvizici včetně vícejazyčného webu, Google rankingů a portfolia belgických vinětových domén.",
     },
   },
   common: {
@@ -629,6 +636,7 @@ const dictionary: BaseDictionary = {
     ],
     lastUpdated: "4 August 2026",
   },
+  acquisition: getAcquisitionContent("cs"),
   news: {
     title: "Novinky",
     intro:

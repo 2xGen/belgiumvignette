@@ -229,6 +229,18 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.acquisition-rankings-table th:last-child,
+.acquisition-rankings-table td:last-child {
+  text-align: right;
+  width: 8rem;
+}
+
+.acquisition-rankings-table td:last-child {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink);
+}
+
 .notice-box {
   border: 1px solid var(--notice-border);
   border-left: 4px solid var(--accent);
