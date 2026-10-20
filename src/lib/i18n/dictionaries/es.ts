@@ -1,5 +1,6 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
+import { getRouteCheckerContent } from "../route-checker";
 import { esTolls } from "../tolls/es";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -35,6 +36,7 @@ const dictionary: BaseDictionary = {
     news: "Noticias y actualizaciones",
     privacy: "Privacidad",
     acquisition: "Adquisición",
+    routeChecker: "Calculadora de ruta",
   },
   meta: {
     home: {
@@ -86,6 +88,11 @@ const dictionary: BaseDictionary = {
       title: "BelgiumVignette.be en venta | Sitio y cartera de dominios",
       description:
         "BelgiumVignette.be está disponible para adquisición, con sitio multilingüe, rankings de Google y cartera de dominios de viñeta belga.",
+    },
+    routeChecker: {
+      title: "Calculadora de ruta de viñetas | Corredores vía Bélgica",
+      description:
+        "Compruebe corredores de autopista típicos hacia, desde o a través de Bélgica y vea dónde puede aplicar una viñeta, viñeta prevista o peajes por trayecto.",
     },
   },
   common: {
@@ -637,6 +644,7 @@ const dictionary: BaseDictionary = {
     lastUpdated: "4 August 2026",
   },
   acquisition: getAcquisitionContent("es"),
+  routeChecker: getRouteCheckerContent("es"),
   news: {
     title: "Noticias y actualizaciones",
     intro:

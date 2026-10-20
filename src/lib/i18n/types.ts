@@ -1,5 +1,6 @@
 import type { Locale } from "./config";
 import type { PageKey } from "@/lib/routes";
+import type { RouteCheckerContent } from "./route-checker";
 import type {
   VignetteProductPage,
   VignetteProductPageKey,
@@ -313,6 +314,7 @@ export interface Dictionary {
     lastUpdated: string;
   };
   acquisition: AcquisitionContent;
+  routeChecker: RouteCheckerContent;
   news: {
     title: string;
     intro: string;

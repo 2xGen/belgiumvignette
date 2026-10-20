@@ -1,5 +1,6 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
+import { getRouteCheckerContent } from "../route-checker";
 import { deTolls } from "../tolls/de";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -35,6 +36,7 @@ const dictionary: BaseDictionary = {
     news: "Nachrichten & Updates",
     privacy: "Datenschutz",
     acquisition: "Übernahme",
+    routeChecker: "Routenplaner",
   },
   meta: {
     home: {
@@ -86,6 +88,11 @@ const dictionary: BaseDictionary = {
       title: "BelgiumVignette.be zu verkaufen | Website & Domain-Portfolio",
       description:
         "BelgiumVignette.be ist zur Übernahme verfügbar, inklusive mehrsprachiger Website, Google-Rankings und einem Portfolio belgischer Vignetten-Domains.",
+    },
+    routeChecker: {
+      title: "Vignetten-Routenplaner | Korridore über Belgien",
+      description:
+        "Prüfen Sie typische Autobahnkorridore nach, aus oder durch Belgien und sehen Sie, wo eine Vignette, geplante Vignette oder streckenbezogene Maut gelten kann.",
     },
   },
   common: {
@@ -637,6 +644,7 @@ const dictionary: BaseDictionary = {
     lastUpdated: "4. August 2026",
   },
   acquisition: getAcquisitionContent("de"),
+  routeChecker: getRouteCheckerContent("de"),
   news: {
     title: "Nachrichten & Updates",
     intro:

@@ -1,5 +1,6 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
+import { getRouteCheckerContent } from "../route-checker";
 import { svTolls } from "../tolls/sv";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -35,6 +36,7 @@ const dictionary: BaseDictionary = {
     news: "Nyheter och uppdateringar",
     privacy: "Integritet",
     acquisition: "Förvärv",
+    routeChecker: "Ruttplanerare",
   },
   meta: {
     home: {
@@ -86,6 +88,11 @@ const dictionary: BaseDictionary = {
       title: "BelgiumVignette.be till salu | Webbplats & domänportfölj",
       description:
         "BelgiumVignette.be är tillgänglig för förvärv, inklusive flerspråkig webbplats, Google-rankingar och en portfölj belgiska vinjettdomäner.",
+    },
+    routeChecker: {
+      title: "Vinjett-ruttplanerare | Korridorer via Belgien",
+      description:
+        "Kontrollera typiska motorvägskorridorer till, från eller genom Belgien och se var vinjett, planerad vinjett eller sträckavgifter kan gälla.",
     },
   },
   common: {
@@ -637,6 +644,7 @@ const dictionary: BaseDictionary = {
     lastUpdated: "4 August 2026",
   },
   acquisition: getAcquisitionContent("sv"),
+  routeChecker: getRouteCheckerContent("sv"),
   news: {
     title: "Nyheter och uppdateringar",
     intro:

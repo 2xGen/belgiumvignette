@@ -1,5 +1,6 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
+import { getRouteCheckerContent } from "../route-checker";
 import { enTolls } from "../tolls/en";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -35,6 +36,7 @@ const dictionary: BaseDictionary = {
     news: "News & updates",
     privacy: "Privacy",
     acquisition: "Acquisition",
+    routeChecker: "Route checker",
   },
   meta: {
     home: {
@@ -86,6 +88,11 @@ const dictionary: BaseDictionary = {
       title: "BelgiumVignette.be for Sale | Website & Domain Portfolio",
       description:
         "BelgiumVignette.be is available for acquisition, including an established multilingual website, Google rankings and a portfolio of Belgian vignette domains.",
+    },
+    routeChecker: {
+      title: "European vignette route checker | Belgium corridors",
+      description:
+        "Check typical motorway corridors to, from or through Belgium and see where a vignette, planned vignette or route-specific tolls may apply.",
     },
   },
   common: {
@@ -637,6 +644,7 @@ const dictionary: BaseDictionary = {
     lastUpdated: "4 August 2026",
   },
   acquisition: getAcquisitionContent("en"),
+  routeChecker: getRouteCheckerContent("en"),
   news: {
     title: "News & updates",
     intro:

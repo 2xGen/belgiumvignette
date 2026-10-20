@@ -1,5 +1,6 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
+import { getRouteCheckerContent } from "../route-checker";
 import { nlTolls } from "../tolls/nl";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -35,6 +36,7 @@ const dictionary: BaseDictionary = {
     news: "Nieuws & updates",
     privacy: "Privacy",
     acquisition: "Overname",
+    routeChecker: "Routeplanner",
   },
   meta: {
     home: {
@@ -86,6 +88,11 @@ const dictionary: BaseDictionary = {
       title: "BelgiumVignette.be te koop | Website & domeinportefeuille",
       description:
         "BelgiumVignette.be is beschikbaar voor overname, inclusief meertalige website, Google-rankings en een portefeuille Belgische vignetdomeinen.",
+    },
+    routeChecker: {
+      title: "Europese vignet-routeplanner | Corridors via België",
+      description:
+        "Controleer typische snelwegcorridors van, naar of via België en zie waar een vignet, gepland vignet of trajecttol kan gelden.",
     },
   },
   common: {
@@ -661,6 +668,7 @@ const dictionary: BaseDictionary = {
     lastUpdated: "4 augustus 2026",
   },
   acquisition: getAcquisitionContent("nl"),
+  routeChecker: getRouteCheckerContent("nl"),
   news: {
     title: "Nieuws & updates",
     intro:

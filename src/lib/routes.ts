@@ -23,6 +23,7 @@ export const pageKeys = [
   "news",
   "privacy",
   "acquisition",
+  "routeChecker",
 ] as const;
 
 export type PageKey = (typeof pageKeys)[number];
@@ -204,6 +205,19 @@ export const routes: Record<Exclude<PageKey, "home">, Record<Locale, string>> = 
     sv: "acquisition",
     da: "acquisition",
     ro: "acquisition",
+  },
+  routeChecker: {
+    nl: "vignet-routeplanner",
+    fr: "calculateur-itineraire-vignette",
+    en: "vignette-route-checker",
+    de: "vignetten-routenplaner",
+    es: "calculadora-ruta-vineta",
+    pl: "planer-tras-winiet",
+    cs: "planer-tras-znamek",
+    it: "calcolatore-percorso-vignette",
+    sv: "vinjett-ruttplanerare",
+    da: "vignet-ruteplanlaegger",
+    ro: "calculator-traseu-viniete",
   },
 };
 

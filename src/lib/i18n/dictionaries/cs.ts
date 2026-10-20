@@ -1,5 +1,6 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
+import { getRouteCheckerContent } from "../route-checker";
 import { csTolls } from "../tolls/cs";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -35,6 +36,7 @@ const dictionary: BaseDictionary = {
     news: "Novinky",
     privacy: "Ochrana soukromí",
     acquisition: "Akvizice",
+    routeChecker: "Plánovač tras",
   },
   meta: {
     home: {
@@ -86,6 +88,11 @@ const dictionary: BaseDictionary = {
       title: "BelgiumVignette.be na prodej | Web a portfolio domén",
       description:
         "BelgiumVignette.be je k dispozici k akvizici včetně vícejazyčného webu, Google rankingů a portfolia belgických vinětových domén.",
+    },
+    routeChecker: {
+      title: "Plánovač tras dálničních známek | Koridory přes Belgii",
+      description:
+        "Zkontrolujte typické dálniční koridory do, z nebo přes Belgii a zjistěte, kde platí známka, plánovaná známka nebo úsekové mýtné.",
     },
   },
   common: {
@@ -637,6 +644,7 @@ const dictionary: BaseDictionary = {
     lastUpdated: "4 August 2026",
   },
   acquisition: getAcquisitionContent("cs"),
+  routeChecker: getRouteCheckerContent("cs"),
   news: {
     title: "Novinky",
     intro:

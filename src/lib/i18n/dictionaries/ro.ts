@@ -1,5 +1,6 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
+import { getRouteCheckerContent } from "../route-checker";
 import { roTolls } from "../tolls/ro";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -35,6 +36,7 @@ const dictionary: BaseDictionary = {
     news: "Știri și actualizări",
     privacy: "Confidențialitate",
     acquisition: "Achiziție",
+    routeChecker: "Calculator traseu",
   },
   meta: {
     home: {
@@ -86,6 +88,11 @@ const dictionary: BaseDictionary = {
       title: "BelgiumVignette.be de vânzare | Site și portofoliu de domenii",
       description:
         "BelgiumVignette.be este disponibil pentru achiziție, inclusiv site multilingv, rankinguri Google și un portofoliu de domenii vinietă belgiană.",
+    },
+    routeChecker: {
+      title: "Calculator traseu viniete | Coridoare via Belgia",
+      description:
+        "Verificați coridoare tipice de autostradă spre, din sau prin Belgia și vedeți unde se aplică vinietă, vinietă planificată sau taxe pe tronson.",
     },
   },
   common: {
@@ -637,6 +644,7 @@ const dictionary: BaseDictionary = {
     lastUpdated: "4 August 2026",
   },
   acquisition: getAcquisitionContent("ro"),
+  routeChecker: getRouteCheckerContent("ro"),
   news: {
     title: "Știri și actualizări",
     intro:

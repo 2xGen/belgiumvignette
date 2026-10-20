@@ -7,12 +7,14 @@ import {
 } from "@/lib/routes";
 import FAQ from "@/components/sections/FAQ";
 import Newsletter from "@/components/sections/Newsletter";
+import RouteCheckerTool from "@/components/tools/RouteCheckerTool";
 import { PricingTable, ComparisonTable } from "@/components/ui/PricingTable";
 import { RateMatrixTable } from "@/components/ui/RateMatrixTable";
 import { LinkedProse } from "@/components/ui/LinkedProse";
 import { NewsIndexContent } from "@/components/pages/NewsContent";
 import type { Article } from "@/lib/content/articles/types";
 import type { Locale } from "@/lib/i18n/config";
+import { vignetteTableCountries } from "@/lib/route-checker/data";
 
 export function PageHero({
   title,
@@ -566,6 +568,60 @@ export function PrivacyPageContent({ dict }: { dict: Dictionary }) {
   );
 }
 
+export function RouteCheckerPageContent({ dict }: { dict: Dictionary }) {
+  const content = dict.routeChecker;
+  const tableCountries = vignetteTableCountries;
+
+  return (
+    <div className="max-w-3xl space-y-12">
+      <RouteCheckerTool locale={dict.locale} copy={content} />
+
+      <section>
+        <h2 className="section-heading">{content.countriesTitle}</h2>
+        <p className="mt-3 text-base leading-relaxed text-text-muted">
+          {content.countriesIntro}
+        </p>
+        <div className="table-wrap mt-6">
+          <table className="content-table">
+            <thead>
+              <tr>
+                <th scope="col">{content.countryHeader}</th>
+                <th scope="col">{content.systemHeader}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tableCountries.map((country) => (
+                <tr key={country.code}>
+                  <td>{content.countryNames[country.code]}</td>
+                  <td>{content.vignetteTableStatus[country.code]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-4 text-sm leading-relaxed text-text-muted">
+          {content.countriesClosing}
+        </p>
+        <p className="mt-3 text-sm leading-relaxed text-text-muted">
+          {content.vignetteTableNote}
+        </p>
+      </section>
+
+      <section>
+        <h2 className="section-heading">{content.howItWorksTitle}</h2>
+        {content.howItWorksParagraphs.map((paragraph) => (
+          <p
+            key={paragraph}
+            className="mt-3 text-base leading-relaxed text-text-muted"
+          >
+            {paragraph}
+          </p>
+        ))}
+      </section>
+    </div>
+  );
+}
+
 export function AcquisitionPageContent({ dict }: { dict: Dictionary }) {
   const content = dict.acquisition;
   return (
@@ -812,6 +868,8 @@ export function renderSubpageContent(
       return <PrivacyPageContent dict={dict} />;
     case "acquisition":
       return <AcquisitionPageContent dict={dict} />;
+    case "routeChecker":
+      return <RouteCheckerPageContent dict={dict} />;
     case "news":
       return (
         <NewsPageContent
@@ -856,6 +914,12 @@ export function getSubpageContent(pageKey: PageKey, dict: Dictionary) {
       return {
         title: dict.acquisition.title,
         intro: dict.acquisition.intro,
+        badge: undefined,
+      };
+    case "routeChecker":
+      return {
+        title: dict.routeChecker.title,
+        intro: dict.routeChecker.intro,
         badge: undefined,
       };
     case "news":

@@ -1,5 +1,6 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
+import { getRouteCheckerContent } from "../route-checker";
 import { frTolls } from "../tolls/fr";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -35,6 +36,7 @@ const dictionary: BaseDictionary = {
     news: "Actualités & mises à jour",
     privacy: "Confidentialité",
     acquisition: "Acquisition",
+    routeChecker: "Itinéraire vignette",
   },
   meta: {
     home: {
@@ -86,6 +88,11 @@ const dictionary: BaseDictionary = {
       title: "BelgiumVignette.be à vendre | Site & portefeuille de domaines",
       description:
         "BelgiumVignette.be est disponible à l'acquisition, avec un site multilingue établi, des classements Google et un portefeuille de domaines vignette belge.",
+    },
+    routeChecker: {
+      title: "Calculateur d'itinéraire vignette | Corridors via la Belgique",
+      description:
+        "Vérifiez les corridors autoroutiers typiques vers, depuis ou via la Belgique et voyez où une vignette, une vignette prévue ou des péages par trajet s'appliquent.",
     },
   },
   common: {
@@ -646,6 +653,7 @@ const dictionary: BaseDictionary = {
     lastUpdated: "4 août 2026",
   },
   acquisition: getAcquisitionContent("fr"),
+  routeChecker: getRouteCheckerContent("fr"),
   news: {
     title: "Actualités & mises à jour",
     intro:

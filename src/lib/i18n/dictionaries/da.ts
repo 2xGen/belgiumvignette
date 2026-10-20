@@ -1,5 +1,6 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
+import { getRouteCheckerContent } from "../route-checker";
 import { daTolls } from "../tolls/da";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -35,6 +36,7 @@ const dictionary: BaseDictionary = {
     news: "Nyheder og opdateringer",
     privacy: "Privatliv",
     acquisition: "Erhvervelse",
+    routeChecker: "Ruteplanlægger",
   },
   meta: {
     home: {
@@ -86,6 +88,11 @@ const dictionary: BaseDictionary = {
       title: "BelgiumVignette.be til salg | Website & domæneportefølje",
       description:
         "BelgiumVignette.be er tilgængelig til erhvervelse, inkl. flersproget website, Google-rankinger og en portefølje af belgiske vignetdomæner.",
+    },
+    routeChecker: {
+      title: "Vignet-ruteplanlægger | Korridorer via Belgien",
+      description:
+        "Tjek typiske motorvejskorridorer til, fra eller gennem Belgien, og se hvor vignet, planlagt vignet eller strækningstakster kan gælde.",
     },
   },
   common: {
@@ -638,6 +645,7 @@ const dictionary: BaseDictionary = {
     lastUpdated: "4 August 2026",
   },
   acquisition: getAcquisitionContent("da"),
+  routeChecker: getRouteCheckerContent("da"),
   news: {
     title: "Nyheder og opdateringer",
     intro:

@@ -1,5 +1,6 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
+import { getRouteCheckerContent } from "../route-checker";
 import { plTolls } from "../tolls/pl";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -35,6 +36,7 @@ const dictionary: BaseDictionary = {
     news: "Aktualności",
     privacy: "Prywatność",
     acquisition: "Przejęcie",
+    routeChecker: "Planer tras",
   },
   meta: {
     home: {
@@ -86,6 +88,11 @@ const dictionary: BaseDictionary = {
       title: "BelgiumVignette.be na sprzedaż | Strona i portfolio domen",
       description:
         "BelgiumVignette.be jest dostępne do przejęcia wraz z wielojęzyczną stroną, rankingami Google i portfolio domen belgijskiej winiety.",
+    },
+    routeChecker: {
+      title: "Planer tras winiet | Korytarze przez Belgię",
+      description:
+        "Sprawdź typowe korytarze autostradowe do, z lub przez Belgię i zobacz, gdzie obowiązuje winieta, planowana winieta lub opłaty za odcinek.",
     },
   },
   common: {
@@ -637,6 +644,7 @@ const dictionary: BaseDictionary = {
     lastUpdated: "4 August 2026",
   },
   acquisition: getAcquisitionContent("pl"),
+  routeChecker: getRouteCheckerContent("pl"),
   news: {
     title: "Aktualności",
     intro:
