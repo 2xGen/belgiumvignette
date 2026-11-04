@@ -8,14 +8,16 @@ export function RateMatrixTable({
   caption?: string;
 }) {
   return (
-    <div className="table-wrap">
-      <table className="content-table rate-matrix-table">
+    <div className="table-wrap rate-matrix-wrap">
+      <table className="content-table rate-matrix-table min-w-[40rem]">
         {(caption || matrix.title) && (
           <caption className="sr-only">{caption ?? matrix.title}</caption>
         )}
         <thead>
           <tr>
-            <th scope="col">{matrix.vehicleHeader}</th>
+            <th scope="col" className="!whitespace-normal">
+              {matrix.vehicleHeader}
+            </th>
             <th scope="col">{matrix.dayHeader}</th>
             <th scope="col">{matrix.tenDaysHeader}</th>
             <th scope="col">{matrix.monthHeader}</th>
@@ -26,7 +28,9 @@ export function RateMatrixTable({
         <tbody>
           {matrix.rows.map((row) => (
             <tr key={row.label}>
-              <th scope="row">{row.label}</th>
+              <th scope="row" className="!whitespace-normal">
+                {row.label}
+              </th>
               <td>{row.day}</td>
               <td>{row.tenDays}</td>
               <td>{row.month}</td>

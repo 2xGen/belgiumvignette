@@ -173,7 +173,24 @@ body {
   color: var(--ink);
 }
 
+.rate-matrix-wrap {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background:
+    linear-gradient(90deg, var(--bg-surface) 85%, transparent),
+    linear-gradient(90deg, transparent, var(--bg-surface) 15%) 100% 0,
+    radial-gradient(farthest-side at 0 50%, rgba(11, 18, 32, 0.12), transparent),
+    radial-gradient(farthest-side at 100% 50%, rgba(11, 18, 32, 0.12), transparent)
+      100% 0;
+  background-color: var(--bg-surface);
+  background-repeat: no-repeat;
+  background-size: 2rem 100%, 2rem 100%, 0.7rem 100%, 0.7rem 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
 .rate-matrix-table {
+  width: max(100%, 40rem);
+  min-width: 40rem;
   table-layout: fixed;
 }
 
@@ -203,6 +220,7 @@ body {
 .rate-matrix-table thead th:not(:first-child) {
   width: 14.4%;
   text-align: right;
+  padding-left: 0.75rem;
 }
 
 .rate-matrix-table td {
@@ -211,6 +229,7 @@ body {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--ink);
+  padding-left: 0.75rem;
 }
 
 .rate-matrix-table td:first-child,
@@ -227,6 +246,27 @@ body {
   max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+@media (max-width: 640px) {
+  .rate-matrix-table {
+    font-size: 14px;
+  }
+
+  .rate-matrix-table th,
+  .rate-matrix-table td {
+    padding: 0.65rem 0.45rem 0.65rem 0.7rem;
+  }
+
+  .rate-matrix-table thead th:first-child,
+  .rate-matrix-table th[scope="row"] {
+    font-size: 13px;
+  }
+
+  .rate-matrix-table td {
+    font-size: 0.98rem;
+  }
 }
 
 .acquisition-rankings-table th:last-child,
