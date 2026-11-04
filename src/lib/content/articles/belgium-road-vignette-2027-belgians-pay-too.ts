@@ -24,15 +24,15 @@ const article: Article = {
     nl: {
       title: "België: wegenvignet vanaf 2027 — ook Belgen moeten betalen",
       metaDescription:
-        "Verplicht wegenvignet vanaf 1 mei 2027 op autosnelwegen en regionale wegen. Jaarlijks €90–€125, korte vignetten €10–€20. Belgen betalen bovenop de wegenbelasting.",
+        "Verplicht wegenvignet vanaf 1 mei 2027 op Belgische gewest- en snelwegen. Jaarlijks €90–€125, korte vignetten €10–€20. Belgen betalen bovenop de wegenbelasting.",
       excerpt:
-        "België plant een verplicht wegenvignet vanaf 1 mei 2027 op autosnelwegen én regionale wegen. Ook Belgische bestuurders moeten betalen — bovenop de jaarlijkse wegenbelasting.",
+        "België plant een verplicht wegenvignet vanaf 1 mei 2027 op Belgische gewest- en snelwegen. Ook Belgische bestuurders moeten betalen — bovenop de jaarlijkse wegenbelasting.",
       summarySections: [
         {
           id: "what-is-planned",
           heading: "Wat is gepland?",
           paragraphs: [
-            "België wil vanaf 1 mei 2027 een verplicht wegenvignet invoeren op autosnelwegen en regionale wegen. Personenauto's en bestelwagens hebben een geldig vignet nodig. Het maakt deel uit van een bredere hervorming van de voertuigbelasting.",
+            "België wil vanaf 1 mei 2027 een verplicht wegenvignet invoeren op Belgische gewest- en snelwegen. Personenauto's en bestelwagens hebben een geldig vignet nodig. Het maakt deel uit van een bredere hervorming van de voertuigbelasting.",
           ],
         },
         {

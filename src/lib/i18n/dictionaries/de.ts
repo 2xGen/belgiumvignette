@@ -1,6 +1,7 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
 import { getRouteCheckerContent } from "../route-checker";
+import { getPrivacyContent } from "../privacy";
 import { deTolls } from "../tolls/de";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -65,9 +66,9 @@ const dictionary: BaseDictionary = {
         "Geplante Bußgelder bis 210 €, ANPR-Kontrollen und Toleranz bis 1. Juli 2027.",
     },
     buy: {
-      title: "Vignette Belgien kaufen — Verkauf erwartet ab 1. März 2027",
+      title: "Vignette Belgien kaufen — Verkauf erwartet ab 2. April 2027",
       description:
-        "Nach aktuellen Plänen startet der Online-Verkauf der belgischen Straßenvignette am 1. März 2027. Pflicht ab 1. Mai 2027. Offizielle Quelle: Flämische Regierung.",
+        "Nach aktuellen Plänen startet der Online-Verkauf der belgischen Straßenvignette am 2. April 2027. Pflicht ab 1. Mai 2027. Offizielle Quelle: Flämische Regierung.",
     },
     tolls: {
       title: "Maut in Belgien 2027: Autobahnen, Vignette und Tarife",
@@ -82,7 +83,7 @@ const dictionary: BaseDictionary = {
     privacy: {
       title: "Datenschutzerklärung — BelgiumVignette.be",
       description:
-        "Wie BelgiumVignette.be Cookies, Analytics, Newsletter-Daten und Ihre DSGVO-Rechte behandelt.",
+        "Datenschutzerklärung von BelgiumVignette.be: einmalige E-Mail-Benachrichtigung, Cookies, Hosting, DSGVO-Rechte und Kontaktdaten.",
     },
     acquisition: {
       title: "BelgiumVignette.be zu verkaufen | Website & Domain-Portfolio",
@@ -97,10 +98,10 @@ const dictionary: BaseDictionary = {
   },
   common: {
     disclaimer:
-      "BelgiumVignette.be ist eine unabhängige Informationsseite. Wir sind nicht mit der belgischen Regierung, Flandern, der Wallonie oder Brüssel verbunden.",
+      "BelgiumVignette.be ist eine unabhängige Informationswebsite und nicht mit der belgischen Regierung, Flandern, der Wallonie oder Brüssel verbunden. Diese Website dient ausschließlich der Information. Die genannten Daten, Tarife und Bedingungen können sich ändern. Prüfen Sie für die aktuellsten und offiziellen Informationen stets die Websites der zuständigen belgischen Behörden.",
     lastUpdated: "Zuletzt aktualisiert",
-    lastUpdatedDate: "28. September 2026",
-    lastUpdatedIso: "2026-09-28",
+    lastUpdatedDate: "4. November 2026",
+    lastUpdatedIso: "2026-11-04",
     readMore: "Mehr erfahren",
     relatedSite: "https://tolls.be/de",
     relatedSiteLabel: "Tolls.be — unabhängige Maut-Informationen für Belgien",
@@ -110,6 +111,17 @@ const dictionary: BaseDictionary = {
     backToHome: "Zurück zur Startseite",
     plannedNotice:
       "Die im März 2026 vorgestellten Pläne können sich noch ändern. Wir verfolgen offizielle Quellen und aktualisieren diese Seite bei Neuigkeiten.",
+    officialNotice: {
+      title: "Wichtig: Prüfen Sie stets die offiziellen Informationen",
+      provisionalNote:
+        "Achtung: Die belgische Straßenvignette ist noch nicht eingeführt. Das geplante Startdatum ist der 1. Mai 2027. Alle Informationen stehen unter dem Vorbehalt der endgültigen parlamentarischen Genehmigung. Prüfen Sie vor Ihrer Reise stets die aktuellen Informationen auf Vlaanderen.be.",
+      paragraphs: [
+        "BelgiumVignette.be ist eine unabhängige Informationswebsite und nicht mit der belgischen Regierung verbunden. Die belgische Straßenvignette befindet sich noch in Vorbereitung. Die genannten Daten, Tarife und Bedingungen können sich ändern.",
+        "Wir bemühen uns um korrekte und aktuelle Informationen, können jedoch nicht garantieren, dass alle Angaben jederzeit vollständig oder aktuell sind. Prüfen Sie vor Ihrer Reise oder einem Kauf stets die neuesten Informationen auf den offiziellen Websites der zuständigen belgischen Behörden.",
+      ],
+      sourceLabel: "Offizielle Informationen: Vlaanderen.be — Straßenvignette ab 1. Mai 2027",
+      sourceUrl: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+    },
     independentSite: "Info belgische Straßenvignette",
     contactLabel: "Kontakt",
     cookieSettings: "Cookie-Einstellungen",
@@ -169,7 +181,7 @@ const dictionary: BaseDictionary = {
     overview: {
       title: "Straßenvignette in Belgien: was für 2027 geplant ist",
       paragraphs: [
-        "Belgien plant ab dem 1. Mai 2027 eine digitale Straßenvignette. Die belgische Vignette würde für Pkw bis 3,5 Tonnen auf Autobahnen und bestimmten regionalen Hauptstraßen gelten.",
+        "Belgien plant ab dem 1. Mai 2027 eine digitale Straßenvignette. Die belgische Vignette würde für Pkw bis 3,5 Tonnen auf belgischen Regional- und Autobahnen gelten.",
         "Auch ausländische Autos wären betroffen. Fahrer aus Frankreich, den Niederlanden, Deutschland und anderen Ländern bräuchten eine Vignette für die betroffenen belgischen Straßen.",
         "Es wäre kein Aufkleber an der Windschutzscheibe. Die belgische Autobahnvignette wäre digital und an das Kennzeichen gebunden, mit Kontrollen unter anderem durch ANPR-Kameras.",
         "Nach den von der flämischen Regierung veröffentlichten Tarifen hängt der Preis von Euro-Norm und Laufzeit ab: ab 8,10 € pro Tag für emissionsfreie Fahrzeuge und 9 € pro Tag für Euro 4+, bis 90–125 € pro Jahr. Auch 10 Tage, 1 Monat und 2 Monate sind geplant.",
@@ -181,9 +193,9 @@ const dictionary: BaseDictionary = {
         id: "autobahnen",
         title: "Braucht man eine Vignette für Autobahnen in Belgien?",
         paragraphs: [
-          "Nach aktuellen Plänen würde eine digitale Straßenvignette ab dem 1. Mai 2027 auf belgischen Autobahnen und bestimmten regionalen Hauptstraßen Pflicht.",
-          "Heute sind die meisten belgischen Autobahnen für Pkw kostenlos. Das Vignettenprojekt würde das ändern: Zugang zu Autobahnen und einem Teil des schnelleren regionalen Netzes würde eine kennzeichengebundene Vignette erfordern.",
-          "Wenn Sie nur lokale Straßen nutzen, wäre laut veröffentlichten Informationen keine Vignette nötig. In der Praxis ist es oft schwer, Autobahnen und regionale Hauptstraßen bei Überland- oder Transitfahrten vollständig zu vermeiden.",
+          "Nach aktuellen Plänen würde eine digitale Straßenvignette ab dem 1. Mai 2027 auf belgischen Regional- und Autobahnen Pflicht.",
+          "Heute sind die meisten belgischen Autobahnen für Pkw kostenlos. Das Vignettenprojekt würde das ändern: Zugang zu belgischen Regional- und Autobahnen würde eine kennzeichengebundene Vignette erfordern.",
+          "Wenn Sie nur lokale Straßen nutzen, wäre laut veröffentlichten Informationen keine Vignette nötig. In der Praxis ist es oft schwer, Regional- und Autobahnen bei Überland- oder Transitfahrten vollständig zu vermeiden.",
         ],
         link: {
           href: "tolls",
@@ -206,7 +218,7 @@ const dictionary: BaseDictionary = {
         id: "kaufen",
         title: "Wo kann man die Vignette Belgien kaufen?",
         paragraphs: [
-          "Der offizielle Verkauf hat noch nicht begonnen. Nach aktuellen Plänen wäre der Online-Kauf ab dem 1. März 2027 über die offizielle Website oder einen zugelassenen Partner möglich.",
+          "Der offizielle Verkauf hat noch nicht begonnen. Nach aktuellen Plänen wäre der Online-Kauf ab dem 2. April 2027 über die offizielle Website oder einen zugelassenen Partner möglich.",
           "Es gibt heute kein offizielles Verkaufsportal. Seiten, die bereits Reservierung oder Zahlung anbieten, sind nicht der offizielle Kanal.",
         ],
         link: {
@@ -256,7 +268,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Braucht man eine Vignette für Autobahnen in Belgien?",
         answer:
-          "Nach aktuellen Plänen ja ab dem 1. Mai 2027 auf belgischen Autobahnen und bestimmten regionalen Hauptstraßen. Lokale Straßen würden außerhalb der Pflicht bleiben.",
+          "Nach aktuellen Plänen ja ab dem 1. Mai 2027 auf belgischen Regional- und Autobahnen. Lokale Straßen würden außerhalb der Pflicht bleiben.",
       },
       {
         question: "Brauchen Motorräder eine belgische Vignette?",
@@ -271,7 +283,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Wo kann man die Vignette Belgien kaufen?",
         answer:
-          "Der offizielle Verkauf hat noch nicht begonnen. Nach den Plänen ist der Online-Kauf ab dem 1. März 2027 über den offiziellen Kanal oder einen zugelassenen Partner vorgesehen.",
+          "Der offizielle Verkauf hat noch nicht begonnen. Nach den Plänen ist der Online-Kauf ab dem 2. April 2027 über den offiziellen Kanal oder einen zugelassenen Partner vorgesehen.",
       },
     ],
     sourcesTitle: "Offizielle Quellen",
@@ -282,7 +294,7 @@ const dictionary: BaseDictionary = {
       "Der geplante Preis der belgischen Straßenvignette hängt von zwei Faktoren ab: der Euro-Norm Ihres Fahrzeugs und der Gültigkeitsdauer der Vignette. Die flämische Regierung hat Tarife für 1 Tag, 10 Tage, 1 Monat, 2 Monate und 1 Jahr veröffentlicht.",
     leadParagraphs: [
       "Für ein Auto mit Euro 4 oder höher kostet die belgische Vignette laut aktuellen Tarifen 9 € für 1 Tag, 12 € für 10 Tage und 100 € für ein Jahr. Emissionsfreie Fahrzeuge zahlen weniger, Fahrzeuge mit Euro 0 bis Euro 3 zahlen mehr.",
-      "Die Vignette ist ab dem 1. Mai 2027 geplant. Der Kauf soll ab dem 1. März 2027 möglich werden. Die Einführung steht noch unter dem Vorbehalt der endgültigen Genehmigung.",
+      "Die Vignette ist ab dem 1. Mai 2027 geplant. Der Kauf soll ab dem 2. April 2027 möglich werden. Die Einführung steht noch unter dem Vorbehalt der endgültigen Genehmigung.",
     ],
     matrixTitle: "Preise belgische Straßenvignette 2027",
     rateMatrix: deRateMatrix,
@@ -361,7 +373,7 @@ const dictionary: BaseDictionary = {
       id: "wann",
       title: "Wann gelten diese Preise?",
       paragraphs: [
-        "Die digitale Straßenvignette ist ab dem 1. Mai 2027 geplant. Laut aktueller offizieller Information könnte die Vignette ab dem 1. März 2027 online gekauft werden.",
+        "Die digitale Straßenvignette ist ab dem 1. Mai 2027 geplant. Laut aktueller offizieller Information könnte die Vignette ab dem 2. April 2027 online gekauft werden.",
         "Die praktische Umsetzung läuft noch und die Einführung steht unter dem Vorbehalt der endgültigen Genehmigung.",
         "Möchten Sie wissen, wie der Kauf funktionieren wird? Siehe [[buy|Vignette Belgien kaufen]]. Für alle Regeln, Fahrzeuge und wichtige Termine finden Sie unseren kompletten Leitfaden zur [[home|belgischen Straßenvignette 2027]].",
       ],
@@ -465,7 +477,7 @@ const dictionary: BaseDictionary = {
         tips: [
           "Ja — in Frankreich zugelassene Personenkraftwagen werden ab dem 1. Mai 2027 voraussichtlich eine Vignette für Belgien auf erfassten belgischen Straßen benötigen.",
           "Besonders relevant für Fahrten aus Nordfrankreich nach Belgien und Transitrouten Frankreich → Niederlande/Deutschland.",
-          "Erfasste Straßen umfassen Autobahnen und geplante regionale Hauptstraßen — nicht nur Langstreckentransit.",
+          "Erfasste Straßen umfassen belgische Regional- und Autobahnen — nicht nur Langstreckentransit.",
         ],
       },
     ],
@@ -532,7 +544,7 @@ const dictionary: BaseDictionary = {
       {
         id: "anpr",
         title: "ANPR-Kontrollen",
-        paragraphs: ["Kameras auf Autobahnen und Hauptstraßen prüfen die Vignettengültigkeit."],
+        paragraphs: ["Kameras auf belgischen Regional- und Autobahnen prüfen die Vignettengültigkeit."],
       },
     ],
     fineTable: [
@@ -550,7 +562,7 @@ const dictionary: BaseDictionary = {
   buy: {
     title: "Wann kann ich eine belgische Vignette kaufen?",
     intro:
-      "Nach aktuellen Plänen wird der Online-Verkauf ab dem 1. März 2027 erwartet. Die Straßenvignette würde ab dem 1. Mai 2027 Pflicht. Endgültige Bedingungen und das offizielle Verkaufsportal können sich noch ändern.",
+      "Nach aktuellen Plänen wird der Online-Verkauf ab dem 2. April 2027 erwartet. Die Straßenvignette würde ab dem 1. Mai 2027 Pflicht. Endgültige Bedingungen und das offizielle Verkaufsportal können sich noch ändern.",
     independenceNotice:
       "BelgiumVignette.be ist eine unabhängige Informationswebsite und weder eine offizielle Website der belgischen Regierung noch ein anerkannter Verkäufer der Straßenvignette.",
     sections: [
@@ -558,7 +570,7 @@ const dictionary: BaseDictionary = {
         id: "when",
         title: "Wann startet der Verkauf?",
         paragraphs: [
-          "Die flämische Regierung gibt an, dass Sie die Vignette ab dem 1. März 2027 online kaufen können — über die offizielle Website oder einen zugelassenen Partner.",
+          "Die flämische Regierung gibt an, dass Sie die Vignette ab dem 2. April 2027 online kaufen können — über die offizielle Website oder einen zugelassenen Partner.",
           "Es gibt heute kein Verkaufsportal; Sie können noch nicht reservieren oder zahlen. Seiten, die das bereits anbieten, sind nicht der offizielle Kanal.",
         ],
       },
@@ -571,13 +583,13 @@ const dictionary: BaseDictionary = {
         ],
       },
     ],
-    statusBadge: "Verkauf erwartet ab 1. März 2027",
+    statusBadge: "Verkauf erwartet ab 2. April 2027",
     officialSourceLabel: "Offizielle Quelle",
     steps: [
       {
         title: "Auf den autorisierten Verkauf warten",
         description:
-          "Online-Kauf erwartet ab 1. März 2027 über die offizielle Website oder einen zugelassenen Partner, laut flämischer Regierung.",
+          "Online-Kauf erwartet ab 2. April 2027 über die offizielle Website oder einen zugelassenen Partner, laut flämischer Regierung.",
       },
       { title: "Kennzeichen registrieren", description: "Digitales System — kein Aufkleber." },
       { title: "Laufzeit wählen", description: "Tag, 10 Tage, Monat, 2 Monate oder Jahr." },
@@ -587,62 +599,17 @@ const dictionary: BaseDictionary = {
       {
         question: "Kann ich jetzt vorbestellen?",
         answer:
-          "Nein. Nach aktuellen Plänen startet der Online-Verkauf am 1. März 2027. Melden Sie sich für Updates an, um benachrichtigt zu werden, sobald autorisierter Verkauf verfügbar wird.",
+          "Nein. Nach aktuellen Plänen startet der Online-Verkauf am 2. April 2027. Melden Sie sich für Updates an, um benachrichtigt zu werden, sobald autorisierter Verkauf verfügbar wird.",
       },
       {
         question: "Wann wird die Vignette Pflicht?",
         answer:
-          "Nach den Plänen ab dem 1. Mai 2027 auf belgischen Autobahnen und Regionalstraßen. Eine Übergangsfrist ist vom 1. Mai bis 1. Juli 2027 geplant.",
+          "Nach den Plänen ab dem 1. Mai 2027 auf belgischen Regional- und Autobahnen. Eine Übergangsfrist ist vom 1. Mai bis 1. Juli 2027 geplant.",
       },
     ],
   },
   tolls: deTolls,
-  privacy: {
-    title: "Datenschutzerklärung",
-    intro: "BelgiumVignette.be respektiert Ihre Privatsphäre.",
-    sections: [
-      {
-        id: "controller",
-        title: "Verantwortlicher",
-        paragraphs: [
-          "BelgiumVignette.be ist eine unabhängige Informationswebsite zur geplanten belgischen Straßenvignette. Wir sind nicht mit der belgischen Regierung, Flandern, Wallonien oder Brüssel verbunden und verkaufen keine Vignetten.",
-          "Die Website wird im Zusammenhang mit Tolls.be betrieben (unabhängige Informationen zu Maut in Belgien). Kontakt: info@tolls.be.",
-        ],
-      },
-      {
-        id: "newsletter",
-        title: "Newsletter",
-        paragraphs: [
-          "E-Mail, Sprache und Einwilligungszeitpunkt in Supabase (EU-Hosting) gespeichert.",
-        ],
-      },
-      {
-        id: "cookies",
-        title: "Cookies, Analytics & Einwilligung",
-        paragraphs: [
-          "Essenziell: Speicherung Ihrer Cookie-Einstellung in localStorage. Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) und/oder Einwilligung.",
-          "Analytics (optional): Vercel Analytics erfasst anonyme Seitenaufrufe. Wird nur nach Einwilligung geladen. Rechtsgrundlage: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Widerruf über Cookie-Einstellungen in der Fußzeile.",
-          "Google Search Console & Bing Webmaster Tools: Verifizierungs-Meta-Tags ohne Tracking-Cookies.",
-          "Speicherdauer: bis Sie den Speicher löschen oder wir die Richtlinie aktualisieren (Version 2026-08-04).",
-        ],
-      },
-      {
-        id: "news-editorial",
-        title: "Nachrichten, Zusammenfassungen & redaktionelle Inhalte",
-        paragraphs: [
-          "Unser Nachrichtenbereich veröffentlicht unabhängige Zusammenfassungen öffentlich zugänglicher Berichterstattung über die belgische Vignette. Diese Seiten sind keine Reproduktionen der Originalartikel.",
-          "Zusammenfassungen und Übersetzungen können mit KI-Unterstützung erstellt werden und können im Wortlaut von der Quelle abweichen. Wir verlinken stets auf den Originalverlag. Unser redaktioneller Kommentar („Unsere Einschätzung“) ist unabhängig verfasst und repräsentiert weder den Originalverlag noch die belgischen Behörden.",
-          "Bilder in Nachrichtenartikeln können aus dem verlinkten Originalartikel oder von Presseagenturen stammen, mit Credits wo zutreffend. Solche Medien bleiben Eigentum der jeweiligen Rechteinhaber. Wir zeigen sie in gutem Glauben als Referenz neben einem Link zur Quelle. Wenn Sie der Meinung sind, dass Ihre Inhalte falsch verwendet werden, kontaktieren Sie info@tolls.be.",
-        ],
-      },
-      {
-        id: "rights",
-        title: "Ihre Rechte (DSGVO)",
-        paragraphs: ["Auskunft, Berichtigung, Löschung, Widerspruch — info@tolls.be."],
-      },
-    ],
-    lastUpdated: "4. August 2026",
-  },
+  privacy: getPrivacyContent("de"),
   acquisition: getAcquisitionContent("de"),
   routeChecker: getRouteCheckerContent("de"),
   news: {
@@ -659,9 +626,9 @@ const dictionary: BaseDictionary = {
     publishedOn: "Veröffentlicht",
     sourceLabel: "Quelle",
     sourceDisclaimer:
-      "Wir fassen vertrauenswürdige Quellen zusammen und verlinken auf den Originalartikel. Unsere Einschätzung ist unabhängiger redaktioneller Kommentar, keine amtliche Regierungsinformation.",
+      "BelgiumVignette.be ist eine unabhängige Informationswebsite und nicht mit der belgischen Regierung, Flandern, der Wallonie oder Brüssel verbunden. Diese Website dient ausschließlich der Information. Die genannten Daten, Tarife und Bedingungen können sich ändern. Prüfen Sie für die aktuellsten und offiziellen Informationen stets die Websites der zuständigen belgischen Behörden.",
     translationDisclaimer:
-      "Die Zusammenfassung und Übersetzung auf dieser Seite wurden mithilfe von KI auf Grundlage des Originalartikels erstellt. Beziehen Sie sich für die maßgebliche Formulierung immer auf die Quelle unten.",
+      "BelgiumVignette.be ist eine unabhängige Informationswebsite und nicht mit der belgischen Regierung, Flandern, der Wallonie oder Brüssel verbunden. Diese Website dient ausschließlich der Information. Die genannten Daten, Tarife und Bedingungen können sich ändern. Prüfen Sie für die aktuellsten und offiziellen Informationen stets die Websites der zuständigen belgischen Behörden.",
     articleAttributionTitle: "Unabhängige Zusammenfassung — nicht der Originalartikel",
     articleAttributionIndependence:
       "BelgiumVignette.be ist eine unabhängige Informationsseite. Wir sind nicht mit dem Originalverlag verbunden, von ihm befürwortet oder handeln in dessen Namen. Diese Seite fasst öffentlich zugängliche Berichterstattung zusammen und fügt unseren eigenen redaktionellen Kommentar hinzu. Es handelt sich nicht um eine Reproduktion des Originalartikels.",
@@ -676,10 +643,10 @@ const dictionary: BaseDictionary = {
   },
   newsletter: {
     emailPlaceholder: "E-Mail-Adresse",
-    consentLabel: "Ich stimme dem Erhalt von Updates zu und habe die",
+    consentLabel: "Ich erteile BelgiumVignette.be die Erlaubnis, mir eine E-Mail zu senden, sobald der offizielle oder autorisierte Verkauf der belgischen Straßenvignette verfügbar wird. Nach dem Versand werden meine Daten aus den aktiven Systemen gelöscht. Ich kann meine Einwilligung jederzeit widerrufen.",
     success: "Danke! Sie sind angemeldet.",
     error: "Etwas ist schiefgelaufen. Bitte erneut versuchen.",
-    privacyLink: "Datenschutzerklärung gelesen.",
+    privacyLink: "",
     independenceNote:
       "BelgiumVignette.be ist ein unabhängiger Informationsdienst und nicht mit der belgischen Regierung verbunden. Wir verkaufen derzeit keine belgische Straßenvignette.",
     sticky: {
@@ -775,7 +742,7 @@ const dictionary: BaseDictionary = {
     {
       title: "Flämische Regierung — Straßenvignette ab 1. Mai 2027",
       url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
-      description: "Offizielle Seite zu Pflicht, Tarifen und Kauf ab 1. März 2027",
+      description: "Offizielle Seite zu Pflicht, Tarifen und Kauf ab 2. April 2027",
     },
     {
       title: "Viapass — Kilometerabgabe für Lkw",

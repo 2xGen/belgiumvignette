@@ -42,7 +42,7 @@ export const svTolls: Dictionary["tolls"] = {
         },
         {
           label: "Köp",
-          value: "Online, med försäljning som väntas öppna från 1 mars 2027.",
+          value: "Online, med försäljning som väntas öppna från 2 april 2027.",
         },
       ],
     },
@@ -195,7 +195,7 @@ export const svTolls: Dictionary["tolls"] = {
       title: "Var köper man vinjetten för belgiska motorvägar?",
       paragraphs: [
         "Vinjetten är ännu inte till försäljning.",
-        "Enligt för närvarande publicerad officiell information bör köp bli möjligt från 1 mars 2027, före det planerade ikraftträdandet den 1 maj.",
+        "Enligt för närvarande publicerad officiell information bör köp bli möjligt från 2 april 2027, före det planerade ikraftträdandet den 1 maj.",
         "Vinjetten ska kunna köpas online via den officiella webbplatsen eller en erkänd partnerorganisation.",
         "Undvik att köpa en påstådd belgisk vignett 2027 från en overifierad webbplats innan den officiella försäljningen öppnar.",
         "Vi följer öppningen av försäljningen och publicerar länken när den finns. Se [[buy|var man köper den belgiska vignetten]] för senaste information.",
@@ -249,7 +249,7 @@ export const svTolls: Dictionary["tolls"] = {
     {
       question: "Var köper man motorvägsvinjetten för Belgien?",
       answer:
-        "Försäljningen är ännu inte öppen. Den väntas starta 1 mars 2027 via den officiella webbplatsen och erkända partnerorganisationer. Se vår sida Så köper du för uppdateringar om öppningen.",
+        "Försäljningen är ännu inte öppen. Den väntas starta 2 april 2027 via den officiella webbplatsen och erkända partnerorganisationer. Se vår sida Så köper du för uppdateringar om öppningen.",
     },
     {
       question: "Måste motorcyklar betala på belgiska motorvägar?",

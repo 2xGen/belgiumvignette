@@ -44,7 +44,7 @@ export const csTolls: Dictionary["tolls"] = {
         {
           label: "Nákup",
           value:
-            "Online, s otevřením prodeje očekávaným od 1. března 2027.",
+            "Online, s otevřením prodeje očekávaným od 2. dubna 2027.",
         },
       ],
     },
@@ -197,7 +197,7 @@ export const csTolls: Dictionary["tolls"] = {
       title: "Kde koupit známku na belgické dálnice?",
       paragraphs: [
         "Známka ještě není v prodeji.",
-        "Podle aktuálně zveřejněných oficiálních informací by měl být nákup možný od 1. března 2027, před plánovaným startem 1. května.",
+        "Podle aktuálně zveřejněných oficiálních informací by měl být nákup možný od 2. dubna 2027, před plánovaným startem 1. května.",
         "Měla by být dostupná online přes oficiální web nebo uznanou partnerskou organizaci.",
         "Nekupujte údajnou známku Belgie 2027 na neověřeném webu před oficiálním otevřením prodeje.",
         "Sledujeme otevření prodeje a odkaz zveřejníme, až bude k dispozici. Nejnovější informace najdete na [[buy|kde koupit dálniční známku Belgie]].",
@@ -251,7 +251,7 @@ export const csTolls: Dictionary["tolls"] = {
     {
       question: "Kde koupit dálniční známku Belgie?",
       answer:
-        "Prodej ještě není otevřen. Očekává se start 1. března 2027 přes oficiální web a uznané partnerské organizace. Aktualizace sledujte na naší stránce Jak koupit.",
+        "Prodej ještě není otevřen. Očekává se start 2. dubna 2027 přes oficiální web a uznané partnerské organizace. Aktualizace sledujte na naší stránce Jak koupit.",
     },
     {
       question: "Musí motocykly platit na belgických dálnicích?",

@@ -1,6 +1,7 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
 import { getRouteCheckerContent } from "../route-checker";
+import { getPrivacyContent } from "../privacy";
 import { nlTolls } from "../tolls/nl";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -65,9 +66,9 @@ const dictionary: BaseDictionary = {
         "Geplande boetes tot €210, ANPR-controles en tolerantie tot 1 juli 2027. Alles over handhaving van het Belgische vignet.",
     },
     buy: {
-      title: "Belgisch vignet kopen — verkoop verwacht 1 maart 2027",
+      title: "Belgisch vignet kopen — verkoop verwacht 2 april 2027",
       description:
-        "Volgens de huidige plannen start de online verkoop van het Belgische wegenvignet op 1 maart 2027. Verplicht vanaf 1 mei 2027. Officiële bron: Vlaamse overheid.",
+        "Volgens de huidige plannen start de online verkoop van het Belgische wegenvignet op 2 april 2027. Verplicht vanaf 1 mei 2027. Officiële bron: Vlaamse overheid.",
     },
     tolls: {
       title: "Tol in België 2027: snelwegen, vignet en tarieven",
@@ -82,7 +83,7 @@ const dictionary: BaseDictionary = {
     privacy: {
       title: "Privacybeleid — BelgiumVignette.be",
       description:
-        "Hoe BelgiumVignette.be omgaat met cookies, analytics, nieuwsbriefgegevens en uw privacy volgens de AVG.",
+        "Privacybeleid van BelgiumVignette.be: eenmalige e-mailmelding, cookies, hosting, AVG-rechten en contactgegevens.",
     },
     acquisition: {
       title: "BelgiumVignette.be te koop | Website & domeinportefeuille",
@@ -97,10 +98,10 @@ const dictionary: BaseDictionary = {
   },
   common: {
     disclaimer:
-      "BelgiumVignette.be is een onafhankelijke informatiesite. Wij zijn niet verbonden met de Belgische overheid, Vlaanderen, Wallonië of Brussel.",
+      "BelgiumVignette.be is een onafhankelijke informatiesite en is niet verbonden met de Belgische overheid, Vlaanderen, Wallonië of Brussel. Deze website dient uitsluitend ter informatie. De vermelde data, tarieven en voorwaarden kunnen wijzigen. Controleer voor de meest actuele en officiële informatie altijd de websites van de bevoegde Belgische overheden.",
     lastUpdated: "Laatst bijgewerkt",
-    lastUpdatedDate: "28 september 2026",
-    lastUpdatedIso: "2026-09-28",
+    lastUpdatedDate: "4 november 2026",
+    lastUpdatedIso: "2026-11-04",
     readMore: "Lees meer",
     relatedSite: "https://tolls.be/nl",
     relatedSiteLabel: "Tolls.be — onafhankelijke tol-informatie voor België",
@@ -110,6 +111,17 @@ const dictionary: BaseDictionary = {
     backToHome: "Terug naar home",
     plannedNotice:
       "De plannen zijn gepresenteerd in maart 2026 en kunnen nog wijzigen. Wij volgen officiële bronnen en passen deze pagina aan zodra er nieuws is.",
+    officialNotice: {
+      title: "Belangrijk: controleer altijd de officiële informatie",
+      provisionalNote:
+        "Let op: Het Belgische wegenvignet is nog niet ingevoerd. De geplande startdatum is 1 mei 2027. Alle informatie is onder voorbehoud van definitieve parlementaire goedkeuring. Controleer voor uw reis altijd de actuele informatie op Vlaanderen.be.",
+      paragraphs: [
+        "BelgiumVignette.be is een onafhankelijke informatiesite en is niet verbonden aan de Belgische overheid. Het Belgische wegenvignet is nog in voorbereiding. De genoemde data, tarieven en voorwaarden kunnen wijzigen.",
+        "Wij streven naar correcte en actuele informatie, maar kunnen niet garanderen dat alle informatie op ieder moment volledig of actueel is. Controleer vóór uw reis of aankoop altijd de meest recente informatie via de officiële websites van de bevoegde Belgische overheden.",
+      ],
+      sourceLabel: "Officiële informatie: Vlaanderen.be — Wegenvignet vanaf 1 mei 2027",
+      sourceUrl: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+    },
     independentSite: "Onafhankelijke informatie over het Belgische wegenvignet",
     contactLabel: "Contact",
     cookieSettings: "Cookievoorkeuren",
@@ -169,7 +181,7 @@ const dictionary: BaseDictionary = {
     overview: {
       title: "Wegenvignet in België: wat is gepland voor 2027",
       paragraphs: [
-        "België plant vanaf 1 mei 2027 een digitaal wegenvignet. Het Belgische vignet zou gelden voor personenauto's tot 3,5 ton op snelwegen en bepaalde regionale hoofdwegen.",
+        "België plant vanaf 1 mei 2027 een digitaal wegenvignet. Het Belgische vignet zou gelden voor personenauto's tot 3,5 ton op Belgische gewest- en snelwegen.",
         "Ook buitenlandse auto's vallen eronder. Bestuurders uit Nederland, Frankrijk, Duitsland en andere landen zouden een vignet nodig hebben om op de gedekte Belgische wegen te rijden.",
         "Het wordt geen sticker op de voorruit. Het Belgische snelwegvignet zou digitaal zijn en gekoppeld aan de nummerplaat, met controles via onder meer ANPR-camera's.",
         "Volgens de door de Vlaamse overheid gepubliceerde tarieven hangt de prijs af van Euronorm en looptijd: vanaf €8,10 per dag voor emissievrije voertuigen en €9 per dag voor Euro 4+, tot €90–€125 per jaar. Ook 10 dagen, 1 maand en 2 maanden zijn gepland.",
@@ -181,9 +193,9 @@ const dictionary: BaseDictionary = {
         id: "snelwegen",
         title: "Hebt u een vignet nodig voor snelwegen in België?",
         paragraphs: [
-          "Volgens de huidige plannen wordt een digitaal wegenvignet vanaf 1 mei 2027 verplicht op Belgische snelwegen en bepaalde regionale hoofdwegen.",
-          "Vandaag zijn de meeste Belgische snelwegen gratis voor personenauto's. Het vignetvoorstel zou dat veranderen: toegang tot snelwegen en een deel van het snellere regionale netwerk zou een kentekengerelateerd vignet vereisen.",
-          "Als u alleen lokale wegen gebruikt, zou volgens de gepubliceerde informatie geen vignet nodig zijn. In de praktijk is het vaak moeilijk om snelwegen en regionale hoofdwegen volledig te vermijden bij interstedelijke of doorreistritten.",
+          "Volgens de huidige plannen wordt een digitaal wegenvignet vanaf 1 mei 2027 verplicht op Belgische gewest- en snelwegen.",
+          "Vandaag zijn de meeste Belgische snelwegen gratis voor personenauto's. Het vignetvoorstel zou dat veranderen: toegang tot Belgische gewest- en snelwegen zou een kentekengerelateerd vignet vereisen.",
+          "Als u alleen lokale wegen gebruikt, zou volgens de gepubliceerde informatie geen vignet nodig zijn. In de praktijk is het vaak moeilijk om Belgische gewest- en snelwegen volledig te vermijden bij interstedelijke of doorreistritten.",
         ],
         link: {
           href: "tolls",
@@ -206,7 +218,7 @@ const dictionary: BaseDictionary = {
         id: "kopen",
         title: "Waar kunt u het Belgische vignet kopen?",
         paragraphs: [
-          "De officiële verkoop is nog niet gestart. Volgens de huidige plannen zou online aankoop vanaf 1 maart 2027 mogelijk zijn via de officiële website of een erkende partner.",
+          "De officiële verkoop is nog niet gestart. Volgens de huidige plannen zou online aankoop vanaf 2 april 2027 mogelijk zijn via de officiële website of een erkende partner.",
           "Er is vandaag geen officieel verkoopportaal. Sites die nu al reserveren of betalen aanbieden, zijn niet het officiële kanaal.",
         ],
         link: {
@@ -256,7 +268,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Hebt u een vignet nodig voor snelwegen in België?",
         answer:
-          "Volgens de huidige plannen wel vanaf 1 mei 2027 op Belgische snelwegen en bepaalde regionale hoofdwegen. Lokale wegen zouden buiten de verplichting vallen.",
+          "Volgens de huidige plannen wel vanaf 1 mei 2027 op Belgische gewest- en snelwegen. Lokale wegen zouden buiten de verplichting vallen.",
       },
       {
         question: "Hebben motoren een Belgisch vignet nodig?",
@@ -271,7 +283,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Waar kunt u het Belgische vignet kopen?",
         answer:
-          "De officiële verkoop is nog niet gestart. Volgens de plannen is online aankoop voorzien vanaf 1 maart 2027 via het officiële kanaal of een erkende partner.",
+          "De officiële verkoop is nog niet gestart. Volgens de plannen is online aankoop voorzien vanaf 2 april 2027 via het officiële kanaal of een erkende partner.",
       },
     ],
     sourcesTitle: "Officiële bronnen & achtergrond",
@@ -282,7 +294,7 @@ const dictionary: BaseDictionary = {
       "De geplande prijs van het Belgische wegenvignet hangt af van twee factoren: de Euronorm van uw voertuig en de geldigheidsduur van het vignet. De Vlaamse overheid heeft tarieven gepubliceerd voor 1 dag, 10 dagen, 1 maand, 2 maanden en 1 jaar.",
     leadParagraphs: [
       "Voor een auto met Euro 4 of hoger kost het Belgische vignet volgens de huidige tarieven €9 voor 1 dag, €12 voor 10 dagen en €100 voor een jaar. Emissievrije voertuigen betalen minder en voertuigen met Euro 0 tot en met Euro 3 betalen meer.",
-      "De vignette is gepland vanaf 1 mei 2027. Aankoop zou vanaf 1 maart 2027 mogelijk worden. De invoering is nog onder voorbehoud van definitieve goedkeuring.",
+      "De vignette is gepland vanaf 1 mei 2027. Aankoop zou vanaf 2 april 2027 mogelijk worden. De invoering is nog onder voorbehoud van definitieve goedkeuring.",
     ],
     matrixTitle: "Prijzen Belgisch wegenvignet 2027",
     rateMatrix: nlRateMatrix,
@@ -361,7 +373,7 @@ const dictionary: BaseDictionary = {
       id: "wanneer",
       title: "Wanneer gelden deze prijzen?",
       paragraphs: [
-        "Het digitale wegenvignet is gepland vanaf 1 mei 2027. Volgens de huidige officiële informatie zou het vignet vanaf 1 maart 2027 online gekocht kunnen worden.",
+        "Het digitale wegenvignet is gepland vanaf 1 mei 2027. Volgens de huidige officiële informatie zou het vignet vanaf 2 april 2027 online gekocht kunnen worden.",
         "De praktische uitwerking loopt nog en de invoering is nog onder voorbehoud van definitieve goedkeuring.",
         "Wilt u weten hoe de aankoop straks werkt? Bekijk dan [[buy|Belgisch vignet kopen]]. Voor alle regels, voertuigen en belangrijke data gaat u naar onze complete gids over het [[home|Belgische wegenvignet 2027]].",
       ],
@@ -465,7 +477,7 @@ const dictionary: BaseDictionary = {
         tips: [
           "Ja — personenauto's met een Frans kenteken zullen naar verwachting vanaf 1 mei 2027 een Belgisch vignet nodig hebben op gedekte Belgische wegen.",
           "Dit is vooral relevant voor ritten Noord-Frankrijk → België en transitroutes Frankrijk → Nederland/Duitsland.",
-          "Gedekte wegen omvatten snelwegen en geplande regionale hoofdwegen — niet alleen lang doorgaand verkeer.",
+          "Gedekte wegen omvatten Belgische gewest- en snelwegen — niet alleen lang doorgaand verkeer.",
         ],
       },
     ],
@@ -473,7 +485,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Heb ik een vignet nodig als ik alleen door België rijd?",
         answer:
-          "Ja — volgens de huidige plannen is vanaf 1 mei 2027 een vignet verplicht op gedekte Belgische hoofdwegen, ongeacht uw bestemming. Definitieve regels kunnen nog wijzigen vóór de invoering.",
+          "Ja — volgens de huidige plannen is vanaf 1 mei 2027 een vignet verplicht op Belgische gewest- en snelwegen, ongeacht uw bestemming. Definitieve regels kunnen nog wijzigen vóór de invoering.",
       },
       {
         question: "Betalen buitenlandse auto's hetzelfde als Belgische auto's?",
@@ -542,7 +554,7 @@ const dictionary: BaseDictionary = {
         id: "anpr",
         title: "ANPR-controles",
         paragraphs: [
-          "Camera's langs snelwegen en regionale hoofdwegen scannen kentekens en controleren of een geldig vignet geregistreerd staat.",
+          "Camera's langs Belgische gewest- en snelwegen scannen kentekens en controleren of een geldig vignet geregistreerd staat.",
         ],
       },
     ],
@@ -562,7 +574,7 @@ const dictionary: BaseDictionary = {
   buy: {
     title: "Wanneer kan ik een Belgisch vignet kopen?",
     intro:
-      "Volgens de huidige plannen wordt de online verkoop op 1 maart 2027 verwacht. Het wegenvignet zou vanaf 1 mei 2027 verplicht worden. Definitieve voorwaarden en het officiële verkoopportaal kunnen nog wijzigen.",
+      "Volgens de huidige plannen wordt de online verkoop op 2 april 2027 verwacht. Het wegenvignet zou vanaf 1 mei 2027 verplicht worden. Definitieve voorwaarden en het officiële verkoopportaal kunnen nog wijzigen.",
     independenceNotice:
       "BelgiumVignette.be is een onafhankelijke informatiesite en is geen officiële website van de Belgische overheid, noch een erkende verkoper van het wegenvignet.",
     sections: [
@@ -570,7 +582,7 @@ const dictionary: BaseDictionary = {
         id: "when",
         title: "Wanneer opent de verkoop?",
         paragraphs: [
-          "De Vlaamse overheid geeft aan dat u het wegenvignet vanaf 1 maart 2027 online kunt kopen, via de officiële website of een erkende partner.",
+          "De Vlaamse overheid geeft aan dat u het wegenvignet vanaf 2 april 2027 online kunt kopen, via de officiële website of een erkende partner.",
           "Er is vandaag nog geen verkoopportaal en u kunt nog niet reserveren of betalen. Sites die dat nu al aanbieden, zijn niet het officiële kanaal.",
         ],
       },
@@ -583,12 +595,12 @@ const dictionary: BaseDictionary = {
         ],
       },
     ],
-    statusBadge: "Verkoop verwacht 1 maart 2027",
+    statusBadge: "Verkoop verwacht 2 april 2027",
     officialSourceLabel: "Officiële bron",
     steps: [
       {
         title: "Wacht op de geautoriseerde verkoop",
-        description: "Online aankoop verwacht vanaf 1 maart 2027 via de officiële website of een erkende partner, volgens de Vlaamse overheid.",
+        description: "Online aankoop verwacht vanaf 2 april 2027 via de officiële website of een erkende partner, volgens de Vlaamse overheid.",
       },
       {
         title: "Registreer uw kenteken",
@@ -607,66 +619,17 @@ const dictionary: BaseDictionary = {
       {
         question: "Kan ik nu al reserveren?",
         answer:
-          "Nee. Volgens de huidige plannen start de online verkoop op 1 maart 2027. Schrijf u in voor updates om een melding te ontvangen wanneer geautoriseerde verkoop beschikbaar wordt.",
+          "Nee. Volgens de huidige plannen start de online verkoop op 2 april 2027. Schrijf u in voor updates om een melding te ontvangen wanneer geautoriseerde verkoop beschikbaar wordt.",
       },
       {
         question: "Wanneer is het vignet verplicht?",
         answer:
-          "Volgens de plannen vanaf 1 mei 2027 op Belgische snelwegen en gewestwegen. Tussen 1 mei en 1 juli 2027 is een tolerantieperiode gepland.",
+          "Volgens de plannen vanaf 1 mei 2027 op Belgische gewest- en snelwegen. Tussen 1 mei en 1 juli 2027 is een tolerantieperiode gepland.",
       },
     ],
   },
   tolls: nlTolls,
-  privacy: {
-    title: "Privacybeleid",
-    intro:
-      "BelgiumVignette.be respecteert uw privacy. Dit beleid legt uit welke gegevens wij verzamelen en waarom.",
-    sections: [
-      {
-        id: "controller",
-        title: "Verantwoordelijke",
-        paragraphs: [
-          "BelgiumVignette.be is een onafhankelijke informatiesite over het geplande Belgische wegenvignet. Wij zijn niet gelieerd aan de Belgische overheid, Vlaanderen, Wallonië of Brussel, en verkopen geen vignetten.",
-          "De site wordt beheerd in samenhang met Tolls.be (onafhankelijke informatie over tol in België). Contact: info@tolls.be.",
-        ],
-      },
-      {
-        id: "newsletter",
-        title: "Nieuwsbrief",
-        paragraphs: [
-          "Als u zich inschrijft, slaan wij uw e-mailadres, taalvoorkeur en tijdstip van toestemming op in Supabase (EU-hosting). Wij gebruiken dit uitsluitend om u te informeren over het Belgische vignet.",
-          "U kunt zich op elk moment uitschrijven via info@tolls.be.",
-        ],
-      },
-      {
-        id: "cookies",
-        title: "Cookies, analytics & toestemming",
-        paragraphs: [
-          "Essentiële opslag: wij bewaren uw cookievoorkeur in localStorage op uw apparaat. Dit is nodig om uw keuze te onthouden. Rechtsgrond: gerechtvaardigd belang (Art. 6 lid 1 onder f AVG) en/or uw toestemming waar vereist.",
-          "Analytics (optioneel): Vercel Analytics verzamelt anonieme paginaweergaven (geen cookies geplaatst door ons voor analytics). Vercel kan technische gegevens zoals pagina-URL, referrer en apparaattype verwerken. Analytics wordt uitsluitend geladen nadat u via de cookiebanner toestemming geeft. Rechtsgrond: toestemming (Art. 6 lid 1 onder a AVG). U kunt toestemming intrekken via Cookievoorkeuren in de footer.",
-          "Google Search Console & Bing Webmaster Tools: wij kunnen een verificatiemeta-tag op de site plaatsen om eigendom te bewijzen bij zoekmachines. Deze tags stellen geen trackingcookies in en verzamelen geen bezoekersdata.",
-          "Bewaartermijn cookievoorkeur: tot u deze wist of wijziging van het beleid (versie 2026-08-04) u opnieuw om toestemming vraagt.",
-        ],
-      },
-      {
-        id: "news-editorial",
-        title: "Nieuws, samenvattingen & redactionele inhoud",
-        paragraphs: [
-          "Onze nieuwsrubriek publiceert onafhankelijke samenvattingen van openbaar beschikbare berichtgeving over het Belgische vignet. Deze pagina's zijn geen reproductie van de originele artikelen.",
-          "Samenvattingen en vertalingen kunnen met behulp van AI worden gemaakt en kunnen in formulering afwijken van de bron. Wij linken altijd naar de oorspronkelijke uitgever. Ons redactioneel commentaar ('Onze visie') is onafhankelijk geschreven en vertegenwoordigt niet de oorspronkelijke uitgever of de Belgische overheid.",
-          "Afbeeldingen op nieuwsartikelen kunnen afkomstig zijn van het gelinkte originele artikel of persbureaus, met credits waar van toepassing. Dergelijk materiaal blijft eigendom van de respectievelijke rechthebbenden. Wij tonen het te goeder trouw ter referentie, naast een link naar de bron. Als u meent dat uw content onjuist wordt gebruikt, neem contact op via info@tolls.be.",
-        ],
-      },
-      {
-        id: "rights",
-        title: "Uw rechten (AVG)",
-        paragraphs: [
-          "U heeft recht op inzage, correctie, verwijdering en bezwaar. Neem contact op via info@tolls.be.",
-        ],
-      },
-    ],
-    lastUpdated: "4 augustus 2026",
-  },
+  privacy: getPrivacyContent("nl"),
   acquisition: getAcquisitionContent("nl"),
   routeChecker: getRouteCheckerContent("nl"),
   news: {
@@ -683,9 +646,9 @@ const dictionary: BaseDictionary = {
     publishedOn: "Gepubliceerd",
     sourceLabel: "Bron",
     sourceDisclaimer:
-      "We vatten betrouwbare bronnen samen en linken naar het originele artikel. Onze visie is onafhankelijk redactioneel commentaar, geen officiële overheidsinformatie.",
+      "BelgiumVignette.be is een onafhankelijke informatiesite en is niet verbonden met de Belgische overheid, Vlaanderen, Wallonië of Brussel. Deze website dient uitsluitend ter informatie. De vermelde data, tarieven en voorwaarden kunnen wijzigen. Controleer voor de meest actuele en officiële informatie altijd de websites van de bevoegde Belgische overheden.",
     translationDisclaimer:
-      "De samenvatting en vertaling op deze pagina zijn met behulp van AI gemaakt op basis van het oorspronkelijke artikel. Raadpleeg altijd de bron hieronder voor de officiële formulering.",
+      "BelgiumVignette.be is een onafhankelijke informatiesite en is niet verbonden met de Belgische overheid, Vlaanderen, Wallonië of Brussel. Deze website dient uitsluitend ter informatie. De vermelde data, tarieven en voorwaarden kunnen wijzigen. Controleer voor de meest actuele en officiële informatie altijd de websites van de bevoegde Belgische overheden.",
     articleAttributionTitle: "Onafhankelijke samenvatting — niet het originele artikel",
     articleAttributionIndependence:
       "BelgiumVignette.be is een onafhankelijke informatiesite. Wij zijn niet verbonden met, goedgekeurd door of optredend namens de oorspronkelijke uitgever. Deze pagina vat openbaar beschikbare berichtgeving samen en voegt ons eigen redactioneel commentaar toe. Het is geen reproductie van het originele artikel.",
@@ -701,7 +664,7 @@ const dictionary: BaseDictionary = {
   newsletter: {
     emailPlaceholder: "E-mailadres",
     consentLabel:
-      "Ik geef BelgiumVignette.be toestemming om mij per e-mail te informeren over de beschikbaarheid van het Belgische wegenvignet. Ik kan mij op elk moment uitschrijven.",
+      "Ik geef BelgiumVignette.be toestemming om mij één e-mail te sturen zodra de officiële of geautoriseerde verkoop van het Belgische wegenvignet beschikbaar wordt. Na verzending worden mijn gegevens verwijderd uit de actieve systemen. Ik kan mijn toestemming op ieder moment intrekken.",
     success: "Bedankt! U bent ingeschreven.",
     error: "Er ging iets mis. Probeer het opnieuw.",
     privacyLink: "",
@@ -802,7 +765,7 @@ const dictionary: BaseDictionary = {
     {
       title: "Vlaamse overheid — Wegenvignet vanaf 1 mei 2027",
       url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
-      description: "Officiële pagina over verplichting, tarieven en aankoop vanaf 1 maart 2027",
+      description: "Officiële pagina over verplichting, tarieven en aankoop vanaf 2 april 2027",
     },
     {
       title: "Viapass — kilometerheffing voor vrachtwagens",

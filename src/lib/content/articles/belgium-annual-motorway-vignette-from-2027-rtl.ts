@@ -32,7 +32,7 @@ const article: Article = {
           id: "mandatory-vignette",
           heading: "Verplicht jaarlijks tolvignet vanaf mei 2027",
           paragraphs: [
-            "De Belgische autoriteiten zijn overeengekomen een verplicht vignet in te voeren voor voertuigen tot 3,5 ton op autosnelwegen en bepaalde regionale wegen. De jaarlijkse kost bedraagt €90–€125 en geldt vanaf 1 mei 2027.",
+            "De Belgische autoriteiten zijn overeengekomen een verplicht vignet in te voeren voor voertuigen tot 3,5 ton op Belgische gewest- en snelwegen. De jaarlijkse kost bedraagt €90–€125 en geldt vanaf 1 mei 2027.",
             "Voor niet-Belgische automobilisten die regelmatig door het land rijden, betekent dit een nieuwe vaste jaarlijkse kost bovenop bestaande brandstof- en reiskosten.",
           ],
         },

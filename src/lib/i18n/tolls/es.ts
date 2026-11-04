@@ -44,7 +44,7 @@ export const esTolls: Dictionary["tolls"] = {
         {
           label: "Compra",
           value:
-            "En línea, con apertura de ventas prevista a partir del 1 de marzo de 2027.",
+            "En línea, con apertura de ventas prevista a partir del 2 de abril de 2027.",
         },
       ],
     },
@@ -197,7 +197,7 @@ export const esTolls: Dictionary["tolls"] = {
       title: "¿Dónde comprar la viñeta para las autopistas belgas?",
       paragraphs: [
         "La viñeta aún no está a la venta.",
-        "Según la información oficial publicada actualmente, la compra debería ser posible a partir del 1 de marzo de 2027, antes de la entrada en vigor prevista el 1 de mayo.",
+        "Según la información oficial publicada actualmente, la compra debería ser posible a partir del 2 de abril de 2027, antes de la entrada en vigor prevista el 1 de mayo.",
         "Debería estar disponible en línea a través del sitio oficial o de una organización partner reconocida.",
         "Evite comprar una pretendida viñeta Bélgica 2027 en un sitio no verificado antes de la apertura oficial de las ventas.",
         "Seguimos la apertura de las ventas y publicaremos el enlace cuando esté disponible. Consulte [[buy|dónde comprar la viñeta Bélgica]] para la información más reciente.",
@@ -251,7 +251,7 @@ export const esTolls: Dictionary["tolls"] = {
     {
       question: "¿Dónde comprar la viñeta de autopista Bélgica?",
       answer:
-        "Las ventas aún no están abiertas. Se espera que empiecen el 1 de marzo de 2027 a través del sitio oficial y de organizaciones partner reconocidas. Consulte nuestra página Cómo comprar para seguir la apertura de las ventas.",
+        "Las ventas aún no están abiertas. Se espera que empiecen el 2 de abril de 2027 a través del sitio oficial y de organizaciones partner reconocidas. Consulte nuestra página Cómo comprar para seguir la apertura de las ventas.",
     },
     {
       question: "¿Las motos deben pagar en las autopistas belgas?",

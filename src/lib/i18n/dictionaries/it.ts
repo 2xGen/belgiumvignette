@@ -1,6 +1,7 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
 import { getRouteCheckerContent } from "../route-checker";
+import { getPrivacyContent } from "../privacy";
 import { itTolls } from "../tolls/it";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -65,9 +66,9 @@ const dictionary: BaseDictionary = {
         "Sanzioni previste fino a €210, controlli ANPR e tolleranza fino al 1 July 2027.",
     },
     buy: {
-      title: "Acquistare la vignetta belga — vendita prevista dal 1 marzo 2027",
+      title: "Acquistare la vignetta belga — vendita prevista dal 2 aprile 2027",
       description:
-        "Secondo i piani attuali, la vendita online della vignetta belga è prevista dal 1 marzo 2027. Obbligatoria dal 1 maggio 2027. Fonte ufficiale: Governo fiammingo.",
+        "Secondo i piani attuali, la vendita online della vignetta belga è prevista dal 2 aprile 2027. Obbligatoria dal 1 maggio 2027. Fonte ufficiale: Governo fiammingo.",
     },
     tolls: {
       title: "Pedaggi in Belgio 2027: autostrade, vignetta e tariffe",
@@ -82,7 +83,7 @@ const dictionary: BaseDictionary = {
     privacy: {
       title: "Informativa sulla privacy — BelgiumVignette.be",
       description:
-        "Come BelgiumVignette.be gestisce cookie, analitiche, dati della newsletter e i tuoi diritti GDPR.",
+        "Informativa sulla privacy di BelgiumVignette.be: notifica e-mail una tantum, cookie, hosting, diritti GDPR e contatti.",
     },
     acquisition: {
       title: "BelgiumVignette.be in vendita | Sito e portfolio domini",
@@ -97,10 +98,10 @@ const dictionary: BaseDictionary = {
   },
   common: {
     disclaimer:
-      "BelgiumVignette.be è un sito informativo indipendente. Non siamo affiliati al governo belga, alla Fiandre, alla Vallonia o a Bruxelles.",
+      "BelgiumVignette.be è un sito informativo indipendente e non è collegato al governo belga, alle Fiandre, alla Vallonia o a Bruxelles. Questo sito ha esclusivamente scopo informativo. Le date, le tariffe e le condizioni indicate possono cambiare. Per le informazioni più aggiornate e ufficiali, consultate sempre i siti delle autorità belghe competenti.",
     lastUpdated: "Ultimo aggiornamento",
-    lastUpdatedDate: "28 settembre 2026",
-    lastUpdatedIso: "2026-09-28",
+    lastUpdatedDate: "4 novembre 2026",
+    lastUpdatedIso: "2026-11-04",
     readMore: "Scopri di più",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — informazioni indipendenti sui pedaggi in Belgio",
@@ -110,6 +111,17 @@ const dictionary: BaseDictionary = {
     backToHome: "Torna alla home",
     plannedNotice:
       "I piani presentati a March 2026 potrebbero ancora cambiare. Seguiamo le fonti ufficiali e aggiorniamo questa pagina non appena ci sono novità.",
+    officialNotice: {
+      title: "Importante: verificate sempre le informazioni ufficiali",
+      provisionalNote:
+        "Attenzione: La vignetta stradale belga non è ancora stata introdotta. La data di inizio prevista è il 1 maggio 2027. Tutte le informazioni restano subordinate all'approvazione parlamentare definitiva. Prima del viaggio verificate sempre le informazioni aggiornate su Vlaanderen.be.",
+      paragraphs: [
+        "BelgiumVignette.be è un sito informativo indipendente e non è collegato al governo belga. La vignetta stradale belga è ancora in preparazione. Le date, le tariffe e le condizioni indicate possono cambiare.",
+        "Ci impegniamo a fornire informazioni corrette e aggiornate, ma non possiamo garantire che tutte le informazioni siano sempre complete o aggiornate. Prima di viaggiare o acquistare, verificate sempre le informazioni più recenti sui siti ufficiali delle autorità belghe competenti.",
+      ],
+      sourceLabel: "Informazioni ufficiali: Vlaanderen.be — Vignetta stradale dal 1 maggio 2027",
+      sourceUrl: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+    },
     independentSite: "Informazioni indipendenti sulla vignetta stradale belga",
     contactLabel: "Contatto",
     cookieSettings: "Impostazioni cookie",
@@ -169,7 +181,7 @@ const dictionary: BaseDictionary = {
     overview: {
       title: "Vignetta stradale belga: cosa è previsto per il 2027",
       paragraphs: [
-        "Il Belgio prevede di introdurre una vignetta stradale digitale dal 1 maggio 2027. La vignetta belga si applicherebbe alle autovetture fino a 3,5 tonnellate su autostrade e alcune strade principali regionali.",
+        "Il Belgio prevede di introdurre una vignetta stradale digitale dal 1 maggio 2027. La vignetta belga si applicherebbe alle autovetture fino a 3,5 tonnellate su strade regionali e autostrade belghe.",
         "Le auto estere sarebbero incluse. Gli automobilisti di Francia, Paesi Bassi, Germania e altri paesi avrebbero bisogno di una vignetta per usare le strade belghe coperte.",
         "Non sarebbe un adesivo sul parabrezza. La vignetta autostradale belga sarebbe digitale e collegata alla targa, con controlli anche tramite telecamere ANPR.",
         "Secondo le tariffe pubblicate dal governo fiammingo, il prezzo dipende dalla norma Euro e dalla durata: da €8,10 al giorno per i veicoli a zero emissioni e €9 al giorno per Euro 4+, fino a €90–€125 all'anno. Sono previsti anche 10 giorni, 1 mese e 2 mesi.",
@@ -181,9 +193,9 @@ const dictionary: BaseDictionary = {
         id: "autostrade",
         title: "Serve una vignetta per le autostrade in Belgio?",
         paragraphs: [
-          "Secondo i piani attuali, una vignetta stradale digitale diventerebbe obbligatoria sulle autostrade belghe e su alcune strade principali regionali dal 1 maggio 2027.",
-          "Oggi la maggior parte delle autostrade belghe resta gratuita per le autovetture. Il progetto di vignetta cambierebbe questa situazione: l'accesso alle autostrade e a parte della rete regionale a velocità più elevata richiederebbe una vignetta collegata alla targa.",
-          "Se usi solo strade locali, una vignetta non sarebbe richiesta secondo le informazioni pubblicate. In pratica, evitare del tutto autostrade e strade principali regionali è spesso difficile per viaggi interurbani o di transito.",
+          "Secondo i piani attuali, una vignetta stradale digitale diventerebbe obbligatoria sulle strade regionali e autostrade belghe dal 1 maggio 2027.",
+          "Oggi la maggior parte delle autostrade belghe resta gratuita per le autovetture. Il progetto di vignetta cambierebbe questa situazione: l'accesso alle strade regionali e alle autostrade belghe richiederebbe una vignetta collegata alla targa.",
+          "Se usi solo strade locali, una vignetta non sarebbe richiesta secondo le informazioni pubblicate. In pratica, evitare del tutto strade regionali e autostrade è spesso difficile per viaggi interurbani o di transito.",
         ],
         link: {
           href: "tolls",
@@ -206,7 +218,7 @@ const dictionary: BaseDictionary = {
         id: "acquistare",
         title: "Dove acquistare la vignetta Belgio?",
         paragraphs: [
-          "La vendita ufficiale non è ancora iniziata. Secondo i piani attuali, l'acquisto online sarebbe possibile dal 1 marzo 2027 tramite il sito ufficiale o un partner autorizzato.",
+          "La vendita ufficiale non è ancora iniziata. Secondo i piani attuali, l'acquisto online sarebbe possibile dal 2 aprile 2027 tramite il sito ufficiale o un partner autorizzato.",
           "Oggi non esiste un portale di vendita ufficiale. I siti che già offrono prenotazione o pagamento non sono il canale ufficiale.",
         ],
         link: {
@@ -256,7 +268,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Serve una vignetta per le autostrade in Belgio?",
         answer:
-          "Secondo i piani attuali, sì dal 1 maggio 2027 sulle autostrade belghe e su alcune strade principali regionali. Le strade locali resterebbero fuori dall'obbligo.",
+          "Secondo i piani attuali, sì dal 1 maggio 2027 sulle strade regionali e autostrade belghe. Le strade locali resterebbero fuori dall'obbligo.",
       },
       {
         question: "Le moto hanno bisogno di una vignetta belga?",
@@ -271,7 +283,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Dove acquistare la vignetta Belgio?",
         answer:
-          "La vendita ufficiale non è ancora iniziata. Secondo i piani, l'acquisto online è previsto dal 1 marzo 2027 tramite il canale ufficiale o un partner autorizzato.",
+          "La vendita ufficiale non è ancora iniziata. Secondo i piani, l'acquisto online è previsto dal 2 aprile 2027 tramite il canale ufficiale o un partner autorizzato.",
       },
     ],
     sourcesTitle: "Fonti ufficiali",
@@ -282,7 +294,7 @@ const dictionary: BaseDictionary = {
       "Il prezzo previsto della vignetta stradale belga dipende da due fattori: la norma Euro del veicolo e la durata di validità della vignetta. Il governo fiammingo ha pubblicato tariffe per 1 giorno, 10 giorni, 1 mese, 2 mesi e 1 anno.",
     leadParagraphs: [
       "Per un'auto Euro 4 o superiore, la vignetta belga secondo le tariffe attuali costa €9 per 1 giorno, €12 per 10 giorni e €100 per un anno. I veicoli a zero emissioni pagano di meno e quelli da Euro 0 a Euro 3 pagano di più.",
-      "La vignetta è prevista dal 1 maggio 2027. L'acquisto dovrebbe essere possibile dal 1 marzo 2027. L'introduzione resta subordinata all'approvazione definitiva.",
+      "La vignetta è prevista dal 1 maggio 2027. L'acquisto dovrebbe essere possibile dal 2 aprile 2027. L'introduzione resta subordinata all'approvazione definitiva.",
     ],
     matrixTitle: "Prezzi vignetta stradale belga 2027",
     rateMatrix: itRateMatrix,
@@ -361,7 +373,7 @@ const dictionary: BaseDictionary = {
       id: "quando",
       title: "Quando si applicano questi prezzi?",
       paragraphs: [
-        "La vignetta stradale digitale è prevista dal 1 maggio 2027. Secondo le informazioni ufficiali attuali, la vignetta potrebbe essere acquistata online dal 1 marzo 2027.",
+        "La vignetta stradale digitale è prevista dal 1 maggio 2027. Secondo le informazioni ufficiali attuali, la vignetta potrebbe essere acquistata online dal 2 aprile 2027.",
         "L'attuazione pratica è ancora in corso e l'introduzione resta subordinata all'approvazione definitiva.",
         "Vuoi sapere come funzionerà l'acquisto? Consulta [[buy|Acquistare la vignetta belga]]. Per tutte le regole, i veicoli e le date chiave, vai alla nostra guida completa sulla [[home|vignetta stradale belga 2027]].",
       ],
@@ -465,7 +477,7 @@ const dictionary: BaseDictionary = {
         tips: [
           "Sì — le autovetture immatricolate in Francia dovrebbero aver bisogno della vignetta belga dal 1° maggio 2027 sulle strade belghe coperte.",
           "È particolarmente rilevante per i viaggi dal nord della Francia al Belgio e per le rotte di transito Francia → Paesi Bassi/Germania.",
-          "Le strade coperte includono autostrade e strade principali regionali previste — non solo transito a lunga distanza.",
+          "Le strade coperte includono strade regionali e autostrade belghe — non solo transito a lunga distanza.",
         ],
       },
     ],
@@ -550,7 +562,7 @@ const dictionary: BaseDictionary = {
   buy: {
     title: "Quando posso comprare una vignetta belga?",
     intro:
-      "Secondo i piani attuali, la vendita online è prevista dal 1 marzo 2027. La vignetta stradale diventerebbe obbligatoria dal 1 maggio 2027. Le condizioni definitive e il portale ufficiale di vendita possono ancora cambiare.",
+      "Secondo i piani attuali, la vendita online è prevista dal 2 aprile 2027. La vignetta stradale diventerebbe obbligatoria dal 1 maggio 2027. Le condizioni definitive e il portale ufficiale di vendita possono ancora cambiare.",
     independenceNotice:
       "BelgiumVignette.be è un sito informativo indipendente e non è un sito ufficiale del governo belga né un venditore riconosciuto della vignetta stradale.",
     sections: [
@@ -558,7 +570,7 @@ const dictionary: BaseDictionary = {
         id: "when",
         title: "Quando partono le vendite?",
         paragraphs: [
-          "Il Governo fiammingo indica che potrai acquistare la vignetta online dal 1 marzo 2027, sul sito ufficiale o tramite un partner autorizzato.",
+          "Il Governo fiammingo indica che potrai acquistare la vignetta online dal 2 aprile 2027, sul sito ufficiale o tramite un partner autorizzato.",
           "Oggi non esiste un portale di vendita: non puoi ancora prenotare o pagare. I siti che lo offrono già non sono il canale ufficiale.",
         ],
       },
@@ -571,13 +583,13 @@ const dictionary: BaseDictionary = {
         ],
       },
     ],
-    statusBadge: "Vendita prevista dal 1 marzo 2027",
+    statusBadge: "Vendita prevista dal 2 aprile 2027",
     officialSourceLabel: "Fonte ufficiale",
     steps: [
       {
         title: "Attendi la vendita autorizzata",
         description:
-          "Acquisto online previsto dal 1 marzo 2027 tramite il sito ufficiale o un partner autorizzato, secondo il Governo fiammingo.",
+          "Acquisto online previsto dal 2 aprile 2027 tramite il sito ufficiale o un partner autorizzato, secondo il Governo fiammingo.",
       },
       { title: "Registrare la targa", description: "Sistema digitale — nessun adesivo sul parabrezza." },
       { title: "Scegliere la durata", description: "Giorno, 10 giorni, mese, 2 mesi o annuale." },
@@ -587,7 +599,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Posso preordinare ora?",
         answer:
-          "No. Secondo i piani attuali, la vendita online inizia il 1 marzo 2027. Iscriviti per ricevere una notifica quando la vendita autorizzata sarà disponibile.",
+          "No. Secondo i piani attuali, la vendita online inizia il 2 aprile 2027. Iscriviti per ricevere una notifica quando la vendita autorizzata sarà disponibile.",
       },
       {
         question: "Quando la vignetta diventa obbligatoria?",
@@ -597,52 +609,7 @@ const dictionary: BaseDictionary = {
     ],
   },
   tolls: itTolls,
-  privacy: {
-    title: "Informativa sulla privacy",
-    intro: "BelgiumVignette.be rispetta la tua privacy. Ecco come gestiamo i tuoi dati.",
-    sections: [
-      {
-        id: "controller",
-        title: "Titolare del trattamento",
-        paragraphs: [
-          "BelgiumVignette.be è un sito informativo indipendente sulla vignetta stradale belga prevista. Non siamo affiliati al governo belga, alle Fiandre, alla Vallonia o a Bruxelles, e non vendiamo vignette.",
-          "Il sito è gestito in relazione con Tolls.be (informazioni indipendenti sui pedaggi in Belgio). Contatto: info@tolls.be.",
-        ],
-      },
-      {
-        id: "newsletter",
-        title: "Newsletter",
-        paragraphs: [
-          "Email, lingua e timestamp del consenso archiviati in Supabase (hosting UE). Utilizzati solo per aggiornamenti sulla vignetta.",
-        ],
-      },
-      {
-        id: "cookies",
-        title: "Cookie, analitiche e consenso",
-        paragraphs: [
-          "Memorizzazione essenziale: salviamo la tua preferenza sui cookie in localStorage. Base giuridica: legittimo interesse (art. 6(1)(f) GDPR) e/o consenso ove richiesto.",
-          "Analitiche (opzionale): Vercel Analytics raccoglie visualizzazioni di pagina anonime. Caricato solo dopo il consenso del banner. Base giuridica: consenso (art. 6(1)(a) GDPR). Revoca tramite Impostazioni cookie nel footer.",
-          "Google Search Console e Bing Webmaster Tools: solo meta tag di verifica della proprietà — nessun cookie di tracciamento.",
-          "Conservazione: fino a quando non cancelli la memorizzazione o aggiorniamo questa informativa (versione 2026-08-04).",
-        ],
-      },
-      {
-        id: "news-editorial",
-        title: "Notizie, riepiloghi e contenuti editoriali",
-        paragraphs: [
-          "La nostra sezione notizie pubblica riepiloghi indipendenti di reportage di pubblico dominio sulla vignetta belga. Queste pagine non sono riproduzioni degli articoli originali.",
-          "I riepiloghi e le traduzioni possono essere prodotti con l'assistenza dell'IA e possono differire nella formulazione dalla fonte. Colleghiamo sempre l'editore originale. Il nostro commento editoriale («La nostra opinione») è scritto in modo indipendente e non rappresenta l'editore originale né le autorità belghe.",
-          "Le immagini negli articoli possono provenire dall'articolo originale collegato o da agenzie di stampa, con crediti ove applicabile. Tali contenuti restano di proprietà dei rispettivi titolari dei diritti. Li mostriamo in buona fede come riferimento insieme a un link alla fonte. Se ritieni che i tuoi contenuti siano usati in modo errato, contatta info@tolls.be.",
-        ],
-      },
-      {
-        id: "rights",
-        title: "I tuoi diritti (GDPR)",
-        paragraphs: ["Accesso, rettifica, cancellazione, opposizione — info@tolls.be."],
-      },
-    ],
-    lastUpdated: "4 agosto 2026",
-  },
+  privacy: getPrivacyContent("it"),
   acquisition: getAcquisitionContent("it"),
   routeChecker: getRouteCheckerContent("it"),
   news: {
@@ -659,9 +626,9 @@ const dictionary: BaseDictionary = {
     publishedOn: "Pubblicato",
     sourceLabel: "Fonte",
     sourceDisclaimer:
-      "Riassumiamo fonti attendibili e inoltriamo all'articolo originale. La nostra opinione è un commento editoriale indipendente, non informazioni ufficiali del governo.",
+      "BelgiumVignette.be è un sito informativo indipendente e non è collegato al governo belga, alle Fiandre, alla Vallonia o a Bruxelles. Questo sito ha esclusivamente scopo informativo. Le date, le tariffe e le condizioni indicate possono cambiare. Per le informazioni più aggiornate e ufficiali, consultate sempre i siti delle autorità belghe competenti.",
     translationDisclaimer:
-      "Il riepilogo e la traduzione in questa pagina sono stati prodotti con l'assistenza dell'IA dall'articolo originale. Consultare sempre la fonte qui sotto per la formulazione ufficiale.",
+      "BelgiumVignette.be è un sito informativo indipendente e non è collegato al governo belga, alle Fiandre, alla Vallonia o a Bruxelles. Questo sito ha esclusivamente scopo informativo. Le date, le tariffe e le condizioni indicate possono cambiare. Per le informazioni più aggiornate e ufficiali, consultate sempre i siti delle autorità belghe competenti.",
     articleAttributionTitle: "Riepilogo indipendente — non l'articolo originale",
     articleAttributionIndependence:
       "BelgiumVignette.be è un sito informativo indipendente. Non siamo affiliati, approvati o rappresentiamo l'editore originale. Questa pagina riassume reportage di pubblico dominio e aggiunge il nostro commento editoriale. Non è una riproduzione dell'articolo originale.",
@@ -677,7 +644,7 @@ const dictionary: BaseDictionary = {
   newsletter: {
     emailPlaceholder: "Indirizzo email",
     consentLabel:
-      "Autorizzo BelgiumVignette.be a inviarmi un'email sulla disponibilità della vignetta stradale belga. Posso annullare l'iscrizione in qualsiasi momento.",
+      "Autorizzo BelgiumVignette.be a inviarmi una sola e-mail non appena la vendita ufficiale o autorizzata della vignetta stradale belga sarà disponibile. Dopo l'invio, i miei dati saranno cancellati dai sistemi attivi. Posso revocare il consenso in qualsiasi momento.",
     success: "Grazie! Sei iscritto.",
     error: "Qualcosa è andato storto. Riprova.",
     privacyLink: "",
@@ -779,7 +746,7 @@ const dictionary: BaseDictionary = {
     {
       title: "Governo fiammingo — Vignetta stradale dal 1 maggio 2027",
       url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
-      description: "Pagina ufficiale su obbligo, tariffe e acquisto dal 1 marzo 2027",
+      description: "Pagina ufficiale su obbligo, tariffe e acquisto dal 2 aprile 2027",
     },
     {
       title: "Viapass — tassa chilometrica per i camion",

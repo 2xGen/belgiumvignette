@@ -1,6 +1,7 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
 import { getRouteCheckerContent } from "../route-checker";
+import { getPrivacyContent } from "../privacy";
 import { svTolls } from "../tolls/sv";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -65,9 +66,9 @@ const dictionary: BaseDictionary = {
         "Planerade böter upp till €210, ANPR-kontroller och tolerans till 1 juli 2027.",
     },
     buy: {
-      title: "Köp belgisk vignett — försäljning förväntas 1 mars 2027",
+      title: "Köp belgisk vignett — försäljning förväntas 2 april 2027",
       description:
-        "Enligt nuvarande planer väntas onlineförsäljningen av den belgiska vägvinjetten starta 1 mars 2027. Obligatorisk från 1 maj 2027. Officiell källa: flamländska regeringen.",
+        "Enligt nuvarande planer väntas onlineförsäljningen av den belgiska vägvinjetten starta 2 april 2027. Obligatorisk från 1 maj 2027. Officiell källa: flamländska regeringen.",
     },
     tolls: {
       title: "Vägtullar i Belgien 2027: motorvägar, vignett och priser",
@@ -82,7 +83,7 @@ const dictionary: BaseDictionary = {
     privacy: {
       title: "Integritetspolicy — BelgiumVignette.be",
       description:
-        "Hur BelgiumVignette.be hanterar cookies, analysverktyg, nyhetsbrevsdata och dina GDPR-rättigheter.",
+        "Integritetspolicy för BelgiumVignette.be: engångs-e-postavisering, cookies, hosting, GDPR-rättigheter och kontakt.",
     },
     acquisition: {
       title: "BelgiumVignette.be till salu | Webbplats & domänportfölj",
@@ -97,10 +98,10 @@ const dictionary: BaseDictionary = {
   },
   common: {
     disclaimer:
-      "BelgiumVignette.be är en oberoende informationssajt. Vi är inte kopplade till den belgiska staten, Flandern, Vallonien eller Bryssel.",
+      "BelgiumVignette.be är en oberoende informationswebbplats och är inte kopplad till den belgiska staten, Flandern, Vallonien eller Bryssel. Webbplatsen är endast avsedd för information. Angivna datum, avgifter och villkor kan ändras. Kontrollera alltid den mest aktuella och officiella informationen på de behöriga belgiska myndigheternas webbplatser.",
     lastUpdated: "Senast uppdaterad",
-    lastUpdatedDate: "28 September 2026",
-    lastUpdatedIso: "2026-09-28",
+    lastUpdatedDate: "4 november 2026",
+    lastUpdatedIso: "2026-11-04",
     readMore: "Läs mer",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — oberoende information om belgiska vägavgifter",
@@ -110,6 +111,17 @@ const dictionary: BaseDictionary = {
     backToHome: "Tillbaka till startsidan",
     plannedNotice:
       "Planer som presenterades i mars 2026 kan fortfarande ändras. Vi följer officiella källor och uppdaterar denna sida när nyheter kommer.",
+    officialNotice: {
+      title: "Viktigt: kontrollera alltid den officiella informationen",
+      provisionalNote:
+        "Observera: Den belgiska vägvinjetten har ännu inte införts. Det planerade startdatumet är 1 maj 2027. All information är under förbehåll av slutligt parlamentariskt godkännande. Kontrollera alltid aktuell information på Vlaanderen.be före din resa.",
+      paragraphs: [
+        "BelgiumVignette.be är en oberoende informationswebbplats och är inte knuten till den belgiska regeringen. Den belgiska vägvignetten är fortfarande under förberedelse. Angivna datum, taxor och villkor kan ändras.",
+        "Vi strävar efter korrekt och aktuell information, men kan inte garantera att all information alltid är fullständig eller aktuell. Kontrollera före resa eller köp alltid den senaste informationen på de officiella webbplatserna hos behöriga belgiska myndigheter.",
+      ],
+      sourceLabel: "Officiell information: Vlaanderen.be — Vägvinjett från 1 maj 2027",
+      sourceUrl: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+    },
     independentSite: "Oberoende information om den belgiska vägvignetten",
     contactLabel: "Kontakt",
     cookieSettings: "Cookieinställningar",
@@ -169,7 +181,7 @@ const dictionary: BaseDictionary = {
     overview: {
       title: "Belgisk vägvignett: vad som planeras för 2027",
       paragraphs: [
-        "Belgien planerar att införa en digital vägvignett från 1 maj 2027. Den belgiska vignetten skulle gälla personbilar upp till 3,5 ton på motorvägar och vissa regionala huvudvägar.",
+        "Belgien planerar att införa en digital vägvignett från 1 maj 2027. Den belgiska vignetten skulle gälla personbilar upp till 3,5 ton på belgiska regionalvägar och motorvägar.",
         "Utländska bilar skulle omfattas. Förare från Frankrike, Nederländerna, Tyskland och andra länder skulle behöva en vignett för att använda de täckta belgiska vägarna.",
         "Det skulle inte vara ett klistermärke i vindrutan. Den belgiska motorvägsvignetten skulle vara digital och kopplad till registreringsskylten, med kontroller bland annat via ANPR-kameror.",
         "Enligt de av den flamländska regeringen publicerade tarifferna beror priset på Euronorm och giltighetstid: från €8,10 per dag för utsläppsfria fordon och €9 per dag för Euro 4+, till €90–€125 per år. Även 10 dagar, 1 månad och 2 månader är planerade.",
@@ -181,7 +193,7 @@ const dictionary: BaseDictionary = {
         id: "motorvagar",
         title: "Behöver du en vignett för motorvägar i Belgien?",
         paragraphs: [
-          "Enligt nuvarande planer skulle en digital vägvignett bli obligatorisk på belgiska motorvägar och vissa regionala huvudvägar från 1 maj 2027.",
+          "Enligt nuvarande planer skulle en digital vägvignett bli obligatorisk på belgiska regionalvägar och motorvägar från 1 maj 2027.",
           "Idag är de flesta belgiska motorvägar fortfarande gratis för personbilar. Vignettprojektet skulle ändra det: tillträde till motorvägar och en del av det snabbare regionala nätet skulle kräva en skyltbunden vignett.",
           "Om du bara använder lokala vägar skulle en vignett inte krävas enligt publicerad information. I praktiken är det ofta svårt att helt undvika motorvägar och regionala huvudvägar vid intercity- eller transitresor.",
         ],
@@ -206,7 +218,7 @@ const dictionary: BaseDictionary = {
         id: "kopa",
         title: "Var kan man köpa den belgiska vignetten?",
         paragraphs: [
-          "Den officiella försäljningen har ännu inte startat. Enligt nuvarande planer skulle onlineköp vara möjligt från 1 mars 2027 via den officiella webbplatsen eller en auktoriserad partner.",
+          "Den officiella försäljningen har ännu inte startat. Enligt nuvarande planer skulle onlineköp vara möjligt från 2 april 2027 via den officiella webbplatsen eller en auktoriserad partner.",
           "Det finns idag ingen officiell försäljningsportal. Webbplatser som redan erbjuder bokning eller betalning är inte den officiella kanalen.",
         ],
         link: {
@@ -256,7 +268,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Behöver du en vignett för motorvägar i Belgien?",
         answer:
-          "Enligt nuvarande planer ja från 1 maj 2027 på belgiska motorvägar och vissa regionala huvudvägar. Lokala vägar skulle ligga utanför skyldigheten.",
+          "Enligt nuvarande planer ja från 1 maj 2027 på belgiska regionalvägar och motorvägar. Lokala vägar skulle ligga utanför skyldigheten.",
       },
       {
         question: "Behöver motorcyklar en belgisk vignett?",
@@ -271,7 +283,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Var kan man köpa den belgiska vignetten?",
         answer:
-          "Den officiella försäljningen har ännu inte startat. Enligt planerna väntas onlineköp från 1 mars 2027 via den officiella kanalen eller en auktoriserad partner.",
+          "Den officiella försäljningen har ännu inte startat. Enligt planerna väntas onlineköp från 2 april 2027 via den officiella kanalen eller en auktoriserad partner.",
       },
     ],
     sourcesTitle: "Officiella källor",
@@ -282,7 +294,7 @@ const dictionary: BaseDictionary = {
       "Det planerade priset för Belgiens vägvignett beror på två faktorer: fordonets Euronorm och vignettens giltighetstid. Den flamländska regeringen har publicerat tariffer för 1 dag, 10 dagar, 1 månad, 2 månader och 1 år.",
     leadParagraphs: [
       "För en bil med Euro 4 eller högre kostar den belgiska vignetten enligt nuvarande tariffer €9 för 1 dag, €12 för 10 dagar och €100 för ett år. Utsläppsfria fordon betalar mindre och fordon med Euro 0 till och med Euro 3 betalar mer.",
-      "Vignetten är planerad från 1 maj 2027. Köp skulle bli möjligt från 1 mars 2027. Införandet är fortfarande beroende av slutligt godkännande.",
+      "Vignetten är planerad från 1 maj 2027. Köp skulle bli möjligt från 2 april 2027. Införandet är fortfarande beroende av slutligt godkännande.",
     ],
     matrixTitle: "Priser belgisk vägvignett 2027",
     rateMatrix: svRateMatrix,
@@ -361,7 +373,7 @@ const dictionary: BaseDictionary = {
       id: "nar",
       title: "När gäller dessa priser?",
       paragraphs: [
-        "Den digitala vägvignetten är planerad från 1 maj 2027. Enligt aktuell officiell information skulle vignetten kunna köpas online från 1 mars 2027.",
+        "Den digitala vägvignetten är planerad från 1 maj 2027. Enligt aktuell officiell information skulle vignetten kunna köpas online från 2 april 2027.",
         "Det praktiska genomförandet pågår fortfarande och införandet är beroende av slutligt godkännande.",
         "Vill du veta hur köpet fungerar? Se då [[buy|Köp belgisk vignett]]. För alla regler, fordon och viktiga datum går du till vår kompletta guide om [[home|Belgiens vägvignett 2027]].",
       ],
@@ -550,7 +562,7 @@ const dictionary: BaseDictionary = {
   buy: {
     title: "När kan jag köpa en belgisk vignett?",
     intro:
-      "Enligt nuvarande planer väntas onlineförsäljningen från 1 mars 2027. Vägvinjetten skulle bli obligatorisk från 1 maj 2027. De slutliga villkoren och den officiella försäljningsportalen kan fortfarande ändras.",
+      "Enligt nuvarande planer väntas onlineförsäljningen från 2 april 2027. Vägvinjetten skulle bli obligatorisk från 1 maj 2027. De slutliga villkoren och den officiella försäljningsportalen kan fortfarande ändras.",
     independenceNotice:
       "BelgiumVignette.be är en oberoende informationssajt och är varken en officiell webbplats för den belgiska staten eller en auktoriserad säljare av vägvinjetten.",
     sections: [
@@ -558,7 +570,7 @@ const dictionary: BaseDictionary = {
         id: "when",
         title: "När öppnar försäljningen?",
         paragraphs: [
-          "Den flamländska regeringen anger att du kan köpa vinjetten online från 1 mars 2027 — via den officiella webbplatsen eller en auktoriserad partner.",
+          "Den flamländska regeringen anger att du kan köpa vinjetten online från 2 april 2027 — via den officiella webbplatsen eller en auktoriserad partner.",
           "Det finns inget försäljningsportal idag: du kan inte boka eller betala ännu. Sajter som redan erbjuder det är inte den officiella kanalen.",
         ],
       },
@@ -571,13 +583,13 @@ const dictionary: BaseDictionary = {
         ],
       },
     ],
-    statusBadge: "Försäljning förväntas 1 mars 2027",
+    statusBadge: "Försäljning förväntas 2 april 2027",
     officialSourceLabel: "Officiell källa",
     steps: [
       {
         title: "Vänta på auktoriserad försäljning",
         description:
-          "Onlineköp förväntas från 1 mars 2027 via den officiella webbplatsen eller en auktoriserad partner, enligt den flamländska regeringen.",
+          "Onlineköp förväntas från 2 april 2027 via den officiella webbplatsen eller en auktoriserad partner, enligt den flamländska regeringen.",
       },
       { title: "Registrera din registreringsskylt", description: "Digitalt system — inget vindruteklistermärke." },
       { title: "Välj giltighetstid", description: "Dag, 10 dagar, månad, 2 månader eller årsvignett." },
@@ -587,7 +599,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Kan jag förbeställa nu?",
         answer:
-          "Nej. Enligt nuvarande planer startar onlineförsäljningen 1 mars 2027. Anmäl dig för uppdateringar så får du ett meddelande när auktoriserad försäljning blir tillgänglig.",
+          "Nej. Enligt nuvarande planer startar onlineförsäljningen 2 april 2027. Anmäl dig för uppdateringar så får du ett meddelande när auktoriserad försäljning blir tillgänglig.",
       },
       {
         question: "När blir vinjetten obligatorisk?",
@@ -597,52 +609,7 @@ const dictionary: BaseDictionary = {
     ],
   },
   tolls: svTolls,
-  privacy: {
-    title: "Integritetspolicy",
-    intro: "BelgiumVignette.be respekterar din integritet. Så här hanterar vi dina uppgifter.",
-    sections: [
-      {
-        id: "controller",
-        title: "Personuppgiftsansvarig",
-        paragraphs: [
-          "BelgiumVignette.be är en oberoende informationssajt om den planerade belgiska vägvinjetten. Vi är inte knutna till den belgiska staten, Flandern, Vallonien eller Bryssel, och säljer inga vinjetter.",
-          "Sajten drivs i samband med Tolls.be (oberoende information om vägavgifter i Belgien). Kontakt: info@tolls.be.",
-        ],
-      },
-      {
-        id: "newsletter",
-        title: "Nyhetsbrev",
-        paragraphs: [
-          "E-post, språk och tidpunkt för samtycke lagras i Supabase (EU-hosting). Används endast för vignettuppdateringar.",
-        ],
-      },
-      {
-        id: "cookies",
-        title: "Cookies, analysverktyg och samtycke",
-        paragraphs: [
-          "Nödvändig lagring: vi sparar ditt cookieval i localStorage. Rättslig grund: berättigat intresse (art. 6.1 f GDPR) och/eller samtycke där det krävs.",
-          "Analys (valfritt): Vercel Analytics samlar in anonyma sidvisningar. Laddas endast efter samtycke via cookiebannern. Rättslig grund: samtycke (art. 6.1 a GDPR). Återkalla via Cookieinställningar i sidfoten.",
-          "Google Search Console och Bing Webmaster Tools: endast verifieringsmetataggar — inga spårningscookies.",
-          "Lagringstid: tills du rensar lagringen eller vi uppdaterar denna policy (version 2026-08-04).",
-        ],
-      },
-      {
-        id: "news-editorial",
-        title: "Nyheter, sammanfattningar & redaktionellt innehåll",
-        paragraphs: [
-          "Vår nyhetssektion publicerar oberoende sammanfattningar av allmänt tillgänglig rapportering om den belgiska vignetten. Dessa sidor är inte reproduktioner av originalartiklarna.",
-          "Sammanfattningar och översättningar kan produceras med AI-stöd och kan skilja sig i formulering från källan. Vi länkar alltid till den ursprungliga utgivaren. Vår redaktionella kommentar («Vår syn») skrivs oberoende och representerar inte den ursprungliga utgivaren eller belgiska myndigheter.",
-          "Bilder i nyhetsartiklar kan hämtas från den länkade originalartikeln eller pressbyråer, med credits där tillämpligt. Sådant material förblir egendom hos respektive rättighetsinnehavare. Vi visar det i god tro som referens tillsammans med en länk till källan. Om du anser att ditt innehåll används felaktigt, kontakta info@tolls.be.",
-        ],
-      },
-      {
-        id: "rights",
-        title: "Dina rättigheter (GDPR)",
-        paragraphs: ["Tillgång, rättelse, radering, invändning — info@tolls.be."],
-      },
-    ],
-    lastUpdated: "4 August 2026",
-  },
+  privacy: getPrivacyContent("sv"),
   acquisition: getAcquisitionContent("sv"),
   routeChecker: getRouteCheckerContent("sv"),
   news: {
@@ -659,9 +626,9 @@ const dictionary: BaseDictionary = {
     publishedOn: "Publicerad",
     sourceLabel: "Källa",
     sourceDisclaimer:
-      "Vi sammanfattar pålitliga källor och länkar till originalartikeln. Vår syn är oberoende redaktionell kommentar, inte officiell regeringsinformation.",
+      "BelgiumVignette.be är en oberoende informationswebbplats och är inte kopplad till den belgiska staten, Flandern, Vallonien eller Bryssel. Webbplatsen är endast avsedd för information. Angivna datum, avgifter och villkor kan ändras. Kontrollera alltid den mest aktuella och officiella informationen på de behöriga belgiska myndigheternas webbplatser.",
     translationDisclaimer:
-      "Sammanfattningen och översättningen på denna sida har skapats med AI-stöd baserat på originalartikeln. Se alltid källan nedan för den officiella formuleringen.",
+      "BelgiumVignette.be är en oberoende informationswebbplats och är inte kopplad till den belgiska staten, Flandern, Vallonien eller Bryssel. Webbplatsen är endast avsedd för information. Angivna datum, avgifter och villkor kan ändras. Kontrollera alltid den mest aktuella och officiella informationen på de behöriga belgiska myndigheternas webbplatser.",
     articleAttributionTitle: "Oberoende sammanfattning — inte originalartikeln",
     articleAttributionIndependence:
       "BelgiumVignette.be är en oberoende informationssajt. Vi är inte knutna till, godkända av eller agerar för den ursprungliga utgivaren. Denna sida sammanfattar allmänt tillgänglig rapportering och lägger till vår egen redaktionella kommentar. Det är inte en reproduktion av originalartikeln.",
@@ -677,7 +644,7 @@ const dictionary: BaseDictionary = {
   newsletter: {
     emailPlaceholder: "E-postadress",
     consentLabel:
-      "Jag ger BelgiumVignette.be tillstånd att skicka e-post till mig om tillgängligheten av den belgiska vägvignetten. Jag kan avsluta prenumerationen när som helst.",
+      "Jag ger BelgiumVignette.be tillstånd att skicka mig ett e-postmeddelande när den officiella eller auktoriserade försäljningen av den belgiska vägvinjetten blir tillgänglig. Efter utskick raderas mina uppgifter från de aktiva systemen. Jag kan när som helst återkalla mitt samtycke.",
     success: "Tack! Du är prenumererad.",
     error: "Något gick fel. Försök igen.",
     privacyLink: "",
@@ -779,7 +746,7 @@ const dictionary: BaseDictionary = {
     {
       title: "Flamländska regeringen — Vägvinjett från 1 maj 2027",
       url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
-      description: "Officiell sida om skyldighet, priser och köp från 1 mars 2027",
+      description: "Officiell sida om skyldighet, priser och köp från 2 april 2027",
     },
     {
       title: "Viapass — kilometeravgift för lastbilar",

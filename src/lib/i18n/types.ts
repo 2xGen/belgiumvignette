@@ -183,6 +183,13 @@ export interface Dictionary {
     operatorUrl: string;
     backToHome: string;
     plannedNotice: string;
+    officialNotice: {
+      title: string;
+      provisionalNote: string;
+      paragraphs: string[];
+      sourceLabel: string;
+      sourceUrl: string;
+    };
     independentSite: string;
     contactLabel: string;
     cookieSettings: string;
@@ -310,6 +317,7 @@ export interface Dictionary {
   privacy: {
     title: string;
     intro: string;
+    lead: string[];
     sections: ContentSection[];
     lastUpdated: string;
   };

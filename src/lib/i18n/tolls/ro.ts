@@ -42,7 +42,7 @@ export const roTolls: Dictionary["tolls"] = {
         },
         {
           label: "Cumpărare",
-          value: "Online, cu deschiderea vânzărilor așteptată de la 1 martie 2027.",
+          value: "Online, cu deschiderea vânzărilor așteptată de la 2 aprilie 2027.",
         },
       ],
     },
@@ -195,7 +195,7 @@ export const roTolls: Dictionary["tolls"] = {
       title: "Unde se cumpără vinieta pentru autostrăzile belgiene?",
       paragraphs: [
         "Vinieta nu este încă la vânzare.",
-        "Conform informațiilor oficiale publicate în prezent, cumpărarea ar trebui să fie posibilă de la 1 martie 2027, înainte de intrarea în vigoare planificată la 1 mai.",
+        "Conform informațiilor oficiale publicate în prezent, cumpărarea ar trebui să fie posibilă de la 2 aprilie 2027, înainte de intrarea în vigoare planificată la 1 mai.",
         "Vinieta va putea fi cumpărată online prin site-ul oficial sau de la o organizație parteneră recunoscută.",
         "Evitați să cumpărați o pretinsă vinietă belgiană 2027 de pe un site neverificat înainte de deschiderea oficială a vânzărilor.",
         "Urmărim deschiderea vânzărilor și vom publica linkul când va fi disponibil. Consultați [[buy|unde se cumpără vigneta Belgia]] pentru cele mai recente informații.",
@@ -249,7 +249,7 @@ export const roTolls: Dictionary["tolls"] = {
     {
       question: "Unde se cumpără vinieta de autostradă Belgia?",
       answer:
-        "Vânzările nu sunt încă deschise. Ar trebui să înceapă la 1 martie 2027 prin site-ul oficial și organizații partenere recunoscute. Consultați pagina noastră Cum se cumpără pentru actualizări despre deschiderea vânzărilor.",
+        "Vânzările nu sunt încă deschise. Ar trebui să înceapă la 2 aprilie 2027 prin site-ul oficial și organizații partenere recunoscute. Consultați pagina noastră Cum se cumpără pentru actualizări despre deschiderea vânzărilor.",
     },
     {
       question: "Trebuie motocicletele să plătească pe autostrăzile din Belgia?",

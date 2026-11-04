@@ -7,7 +7,7 @@ const pages: VignetteProductPages = {
       "Het dagvignet is bedoeld voor korte ritten op Belgische hoofdwegen — bijvoorbeeld een dagtrip, doorreis of weekend. Onderstaande tarieven zijn gebaseerd op gepubliceerde plannen (maart 2026) en kunnen nog wijzigen vóór invoering op 1 mei 2027.",
     metaTitle: "Dagvignet België 2027 — vanaf €8,10 (emissievrij) / €9 (Euro 4+)",
     metaDescription:
-      "Gepland dagvignet voor België: vanaf €8,10 voor emissievrije voertuigen en €9 voor Euro 4+. Voor korte ritten op snelwegen en gewestwegen. Tarieven volgens Vlaamse overheid — nog onder voorbehoud.",
+      "Gepland dagvignet voor België: vanaf €8,10 voor emissievrije voertuigen en €9 voor Euro 4+. Voor korte ritten op Belgische gewest- en snelwegen. Tarieven volgens Vlaamse overheid — nog onder voorbehoud.",
     navLabel: "Dagvignet",
     sections: [
       {
@@ -68,7 +68,7 @@ const pages: VignetteProductPages = {
       "Het maandvignet is gepland voor bestuurders die enkele weken op Belgische hoofdwegen rijden — bijvoorbeeld tijdelijke werkzaamheden, vakantie of een langere verblijfperiode. Tarieven zijn conceptprijzen volgens plannen maart 2026.",
     metaTitle: "Maandvignet België 2027 — vanaf €19 per maand (concept)",
     metaDescription:
-      "Gepland maandvignet België vanaf €19 per maand, 2 maanden €30. Conceptprijzen voor snelwegen en gewestwegen vanaf 1 mei 2027.",
+      "Gepland maandvignet België vanaf €19 per maand, 2 maanden €30. Conceptprijzen voor Belgische gewest- en snelwegen vanaf 1 mei 2027.",
     navLabel: "Maandvignet",
     sections: [
       {

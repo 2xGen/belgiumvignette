@@ -23,7 +23,7 @@ export default function Footer({
           <p className="mt-2 text-xs font-semibold uppercase tracking-[0.14em] text-white/50">
             {dict.common.independentSite}
           </p>
-          <p className="mt-5 max-w-sm leading-relaxed text-white/65">
+          <p className="mt-5 max-w-md leading-relaxed text-white/65">
             {dict.common.disclaimer}
           </p>
         </div>

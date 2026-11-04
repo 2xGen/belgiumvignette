@@ -1,6 +1,7 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
 import { getRouteCheckerContent } from "../route-checker";
+import { getPrivacyContent } from "../privacy";
 import { csTolls } from "../tolls/cs";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -65,9 +66,9 @@ const dictionary: BaseDictionary = {
         "Plánované pokuty až €210, kontroly ANPR a tolerance do 1. července 2027.",
     },
     buy: {
-      title: "Koupit belgickou dálniční známku — prodej očekáván od 1. března 2027",
+      title: "Koupit belgickou dálniční známku — prodej očekáván od 2. dubna 2027",
       description:
-        "Podle současných plánů má online prodej belgické dálniční známky začít 1. března 2027. Povinná od 1. května 2027. Oficiální zdroj: vlámská vláda.",
+        "Podle současných plánů má online prodej belgické dálniční známky začít 2. dubna 2027. Povinná od 1. května 2027. Oficiální zdroj: vlámská vláda.",
     },
     tolls: {
       title: "Mýtné v Belgii 2027: dálnice, známka a sazby",
@@ -82,7 +83,7 @@ const dictionary: BaseDictionary = {
     privacy: {
       title: "Zásady ochrany soukromí — BelgiumVignette.be",
       description:
-        "Jak BelgiumVignette.be zachází s cookies, analytikou, údaji z newsletteru a vašimi právy podle GDPR.",
+        "Zásady ochrany soukromí BelgiumVignette.be: jednorázové e-mailové oznámení, cookies, hosting, práva GDPR a kontakt.",
     },
     acquisition: {
       title: "BelgiumVignette.be na prodej | Web a portfolio domén",
@@ -97,10 +98,10 @@ const dictionary: BaseDictionary = {
   },
   common: {
     disclaimer:
-      "BelgiumVignette.be je nezávislý informační web. Nejsme spojeni s belgickou vládou, Flandremi, Valonskem ani Bruselem.",
+      "BelgiumVignette.be je nezávislý informační web a není spojen s belgickou vládou, Flandry, Valonskem ani Bruselem. Tento web slouží výhradně k informování. Uvedená data, sazby a podmínky se mohou změnit. Nejaktuálnější a oficiální informace vždy ověřujte na webech příslušných belgických orgánů.",
     lastUpdated: "Naposledy aktualizováno",
-    lastUpdatedDate: "28 September 2026",
-    lastUpdatedIso: "2026-09-28",
+    lastUpdatedDate: "4. listopadu 2026",
+    lastUpdatedIso: "2026-11-04",
     readMore: "Číst více",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — nezávislé informace o mýtném v Belgii",
@@ -110,6 +111,17 @@ const dictionary: BaseDictionary = {
     backToHome: "Zpět na úvod",
     plannedNotice:
       "Plány představené v březnu 2026 se mohou ještě změnit. Sledujeme oficiální zdroje a tuto stránku aktualizujeme, jakmile se objeví novinky.",
+    officialNotice: {
+      title: "Důležité: vždy ověřte oficiální informace",
+      provisionalNote:
+        "Pozor: Belgická silniční známka ještě nebyla zavedena. Plánované datum zahájení je 1. května 2027. Všechny informace podléhají konečnému parlamentnímu schválení. Před cestou vždy zkontrolujte aktuální informace na Vlaanderen.be.",
+      paragraphs: [
+        "BelgiumVignette.be je nezávislý informační web a není spojen s belgickou vládou. Belgická silniční známka je stále v přípravě. Uvedená data, sazby a podmínky se mohou změnit.",
+        "Snažíme se poskytovat správné a aktuální informace, ale nemůžeme zaručit, že všechny informace jsou vždy úplné nebo aktuální. Před cestou nebo nákupem vždy zkontrolujte nejnovější informace na oficiálních webech příslušných belgických úřadů.",
+      ],
+      sourceLabel: "Oficiální informace: Vlaanderen.be — Silniční známka od 1. května 2027",
+      sourceUrl: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+    },
     independentSite: "Nezávislé informace o belgické silniční známce",
     contactLabel: "Kontakt",
     cookieSettings: "Nastavení cookies",
@@ -169,7 +181,7 @@ const dictionary: BaseDictionary = {
     overview: {
       title: "Belgická silniční známka: co je plánováno na 2027",
       paragraphs: [
-        "Belgie plánuje zavedení digitální silniční známky od 1. května 2027. Belgická známka by se vztahovala na osobní automobily do 3,5 tuny na dálnicích a některých regionálních hlavních silnicích.",
+        "Belgie plánuje zavedení digitální silniční známky od 1. května 2027. Belgická známka by se vztahovala na osobní automobily do 3,5 tuny na belgických regionálních silnicích a dálnicích.",
         "Zahraniční auta by byla zahrnuta. Řidiči z Francie, Nizozemska, Německa a dalších zemí by potřebovali známku pro použití zahrnutých belgických silnic.",
         "Nebyla by to nálepka na čelní sklo. Belgická dálniční známka by byla digitální a vázaná na registrační značku, s kontrolami včetně kamer ANPR.",
         "Podle sazeb zveřejněných vlámskou vládou závisí cena na normě Euro a době platnosti: od €8,10 denně pro vozidla bez emisí a €9 denně pro Euro 4+, až do €90–€125 ročně. Plánovány jsou také 10 dní, 1 měsíc a 2 měsíce.",
@@ -181,9 +193,9 @@ const dictionary: BaseDictionary = {
         id: "dalnice",
         title: "Potřebujete známku na dálnice v Belgii?",
         paragraphs: [
-          "Podle současných plánů by se digitální silniční známka stala povinnou na belgických dálnicích a některých regionálních hlavních silnicích od 1. května 2027.",
-          "Dnes zůstává většina belgických dálnic pro osobní auta zdarma. Projekt známky by to změnil: přístup na dálnice a část rychlejší regionální sítě by vyžadoval známku vázanou na registrační značku.",
-          "Pokud používáte pouze místní silnice, známka by podle zveřejněných informací nebyla vyžadována. V praxi je úplné vyhýbání se dálnicím a regionálním hlavním silnicím při meziměstských nebo tranzitních cestách často obtížné.",
+          "Podle současných plánů by se digitální silniční známka stala povinnou na belgických regionálních silnicích a dálnicích od 1. května 2027.",
+          "Dnes zůstává většina belgických dálnic pro osobní auta zdarma. Projekt známky by to změnil: přístup na belgické regionální silnice a dálnice by vyžadoval známku vázanou na registrační značku.",
+          "Pokud používáte pouze místní silnice, známka by podle zveřejněných informací nebyla vyžadována. V praxi je úplné vyhýbání se regionálním silnicím a dálnicím při meziměstských nebo tranzitních cestách často obtížné.",
         ],
         link: {
           href: "tolls",
@@ -206,7 +218,7 @@ const dictionary: BaseDictionary = {
         id: "koupit",
         title: "Kde koupit belgickou dálniční známku?",
         paragraphs: [
-          "Oficiální prodej ještě nezačal. Podle současných plánů by byl online nákup možný od 1. března 2027 přes oficiální web nebo autorizovaného partnera.",
+          "Oficiální prodej ještě nezačal. Podle současných plánů by byl online nákup možný od 2. dubna 2027 přes oficiální web nebo autorizovaného partnera.",
           "Dnes neexistuje oficiální prodejní portál. Stránky, které již nabízejí rezervaci nebo platbu, nejsou oficiálním kanálem.",
         ],
         link: {
@@ -256,7 +268,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Potřebujete známku na dálnice v Belgii?",
         answer:
-          "Podle současných plánů ano od 1. května 2027 na belgických dálnicích a některých regionálních hlavních silnicích. Místní silnice by zůstaly mimo povinnost.",
+          "Podle současných plánů ano od 1. května 2027 na belgických regionálních silnicích a dálnicích. Místní silnice by zůstaly mimo povinnost.",
       },
       {
         question: "Potřebují motocykly belgickou dálniční známku?",
@@ -271,7 +283,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Kde koupit belgickou dálniční známku?",
         answer:
-          "Oficiální prodej ještě nezačal. Podle plánů je online nákup očekáván od 1. března 2027 přes oficiální kanál nebo autorizovaného partnera.",
+          "Oficiální prodej ještě nezačal. Podle plánů je online nákup očekáván od 2. dubna 2027 přes oficiální kanál nebo autorizovaného partnera.",
       },
     ],
     sourcesTitle: "Oficiální zdroje",
@@ -282,7 +294,7 @@ const dictionary: BaseDictionary = {
       "Plánovaná cena belgické silniční známky závisí na dvou faktorech: normě Euro vozidla a době platnosti známky. Vlámská vláda zveřejnila sazby pro 1 den, 10 dní, 1 měsíc, 2 měsíce a 1 rok.",
     leadParagraphs: [
       "Pro auto Euro 4 nebo vyšší stojí belgická známka podle současných sazeb €9 za 1 den, €12 za 10 dní a €100 za rok. Vozidla bez emisí platí méně a vozidla Euro 0 až Euro 3 platí více.",
-      "Známka je plánována od 1. května 2027. Nákup by měl být možný od 1. března 2027. Zavedení stále podléhá konečnému schválení.",
+      "Známka je plánována od 1. května 2027. Nákup by měl být možný od 2. dubna 2027. Zavedení stále podléhá konečnému schválení.",
     ],
     matrixTitle: "Ceny belgické silniční známky 2027",
     rateMatrix: csRateMatrix,
@@ -361,7 +373,7 @@ const dictionary: BaseDictionary = {
       id: "kdy",
       title: "Kdy platí tyto ceny?",
       paragraphs: [
-        "Digitální silniční známka je plánována od 1. května 2027. Podle současných oficiálních informací by bylo možné známku koupit online od 1. března 2027.",
+        "Digitální silniční známka je plánována od 1. května 2027. Podle současných oficiálních informací by bylo možné známku koupit online od 2. dubna 2027.",
         "Praktické provedení stále probíhá a zavedení podléhá konečnému schválení.",
         "Chcete vědět, jak bude nákup fungovat? Podívejte se na [[buy|Koupit belgickou známku]]. Pro všechna pravidla, vozidla a klíčová data přejděte na našeho kompletního průvodce [[home|belgickou silniční známkou 2027]].",
       ],
@@ -465,7 +477,7 @@ const dictionary: BaseDictionary = {
         tips: [
           "Ano — osobní auta s francouzskou registrací by od 1. května 2027 měla potřebovat belgickou dálniční známku na zahrnutých belgických silnicích.",
           "To je zvláště relevantní pro cesty ze severní Francie do Belgie a tranzitní trasy Francie → Nizozemsko/Německo.",
-          "Zahrnuté silnice zahrnují dálnice a plánované regionální hlavní silnice — nejen dlouhý tranzit.",
+          "Zahrnuté silnice zahrnují belgické regionální silnice a dálnice — nejen dlouhý tranzit.",
         ],
       },
     ],
@@ -532,7 +544,7 @@ const dictionary: BaseDictionary = {
       {
         id: "anpr",
         title: "Kontroly ANPR",
-        paragraphs: ["Kamery na dálnicích a regionálních hlavních silnicích ověřují platnost známky."],
+        paragraphs: ["Kamery na belgických regionálních silnicích a dálnicích ověřují platnost známky."],
       },
     ],
     fineTable: [
@@ -550,7 +562,7 @@ const dictionary: BaseDictionary = {
   buy: {
     title: "Kdy mohu koupit belgickou dálniční známku?",
     intro:
-      "Podle současných plánů je online prodej očekáván od 1. března 2027. Dálniční známka by byla povinná od 1. května 2027. Konečné podmínky a oficiální prodejní portál se ještě mohou změnit.",
+      "Podle současných plánů je online prodej očekáván od 2. dubna 2027. Dálniční známka by byla povinná od 1. května 2027. Konečné podmínky a oficiální prodejní portál se ještě mohou změnit.",
     independenceNotice:
       "BelgiumVignette.be je nezávislý informační web a není oficiální stránkou belgické vlády ani uznávaným prodejcem silniční známky.",
     sections: [
@@ -558,7 +570,7 @@ const dictionary: BaseDictionary = {
         id: "when",
         title: "Kdy začíná prodej?",
         paragraphs: [
-          "Vlámská vláda uvádí, že známku budete moci koupit online od 1. března 2027 — na oficiálním webu nebo u autorizovaného partnera.",
+          "Vlámská vláda uvádí, že známku budete moci koupit online od 2. dubna 2027 — na oficiálním webu nebo u autorizovaného partnera.",
           "Dnes neexistuje prodejní portál: zatím nelze rezervovat ani platit. Stránky, které to již nabízejí, nejsou oficiálním kanálem.",
         ],
       },
@@ -571,13 +583,13 @@ const dictionary: BaseDictionary = {
         ],
       },
     ],
-    statusBadge: "Prodej očekáván od 1. března 2027",
+    statusBadge: "Prodej očekáván od 2. dubna 2027",
     officialSourceLabel: "Oficiální zdroj",
     steps: [
       {
         title: "Počkejte na autorizovaný prodej",
         description:
-          "Online nákup očekáván od 1. března 2027 přes oficiální web nebo autorizovaného partnera, podle vlámské vlády.",
+          "Online nákup očekáván od 2. dubna 2027 přes oficiální web nebo autorizovaného partnera, podle vlámské vlády.",
       },
       { title: "Zaregistrujte svou značku", description: "Digitální systém — bez nálepky na čelním skle." },
       { title: "Vyberte dobu platnosti", description: "Den, 10 dní, měsíc, 2 měsíce nebo roční." },
@@ -587,62 +599,17 @@ const dictionary: BaseDictionary = {
       {
         question: "Mohu si ji předobjednat?",
         answer:
-          "Ne. Podle současných plánů začíná online prodej 1. března 2027. Přihlaste se k odběru, abyste dostali upozornění, až bude autorizovaný prodej dostupný.",
+          "Ne. Podle současných plánů začíná online prodej 2. dubna 2027. Přihlaste se k odběru, abyste dostali upozornění, až bude autorizovaný prodej dostupný.",
       },
       {
         question: "Kdy je známka povinná?",
         answer:
-          "Podle plánů od 1. května 2027 na belgických dálnicích a regionálních silnicích. Období tolerance je plánováno od 1. května do 1. července 2027.",
+          "Podle plánů od 1. května 2027 na belgických regionálních silnicích a dálnicích. Období tolerance je plánováno od 1. května do 1. července 2027.",
       },
     ],
   },
   tolls: csTolls,
-  privacy: {
-    title: "Zásady ochrany soukromí",
-    intro: "BelgiumVignette.be respektuje vaše soukromí. Zde je, jak nakládáme s vašimi údaji.",
-    sections: [
-      {
-        id: "controller",
-        title: "Správce údajů",
-        paragraphs: [
-          "BelgiumVignette.be je nezávislý informační web o plánované belgické silniční známce. Nejsme spojeni s belgickou vládou, Flandry, Valonskem ani Brusellem a neprodáváme známky.",
-          "Web je provozován ve spojení s Tolls.be (nezávislé informace o mýtném v Belgii). Kontakt: info@tolls.be.",
-        ],
-      },
-      {
-        id: "newsletter",
-        title: "Newsletter",
-        paragraphs: [
-          "E-mail, jazyk a čas souhlasu uloženy v Supabase (hosting v EU). Používáno pouze pro aktualizace o dálniční známce.",
-        ],
-      },
-      {
-        id: "cookies",
-        title: "Cookies, analytika a souhlas",
-        paragraphs: [
-          "Nezbytné úložiště: ukládáme vaši volbu cookies v localStorage. Právní základ: oprávněný zájem (čl. 6 odst. 1 písm. f) GDPR) a/nebo souhlas, kde je vyžadován.",
-          "Analytika (volitelné): Vercel Analytics shromažďuje anonymní zobrazení stránek. Načítá se až po souhlasu v banneru. Právní základ: souhlas (čl. 6 odst. 1 písm. a) GDPR). Odvolání přes Nastavení cookies v patičce.",
-          "Google Search Console a Bing Webmaster Tools: pouze meta tagy pro ověření vlastnictví — žádné sledovací cookies.",
-          "Uchovávání: dokud nevymažete úložiště nebo neaktualizujeme tyto zásady (verze 2026-08-04).",
-        ],
-      },
-      {
-        id: "news-editorial",
-        title: "Zprávy, shrnutí a redakční obsah",
-        paragraphs: [
-          "Naše sekce novinek publikuje nezávislá shrnutí veřejně dostupných zpráv o belgické známce. Tyto stránky nejsou reprodukcí původních článků.",
-          "Shrnutí a překlady mohou být vytvořeny s pomocí AI a mohou se ve formulaci lišit od zdroje. Vždy odkazujeme na původního vydavatele. Náš redakční komentář („Náš pohled“) je psán nezávisle a nereprezentuje původního vydavatele ani belgické úřady.",
-          "Obrázky v novinkových článcích mohou pocházet z propojeného původního článku nebo tiskových agentur, s uvedením autorství kde je to relevantní. Takový obsah zůstává majetkem příslušných držitelů práv. Zobrazujeme jej v dobré víře jako referenci spolu s odkazem na zdroj. Pokud se domníváte, že váš obsah je použit nesprávně, kontaktujte info@tolls.be.",
-        ],
-      },
-      {
-        id: "rights",
-        title: "Vaše práva (GDPR)",
-        paragraphs: ["Přístup, oprava, výmaz, námitka — info@tolls.be."],
-      },
-    ],
-    lastUpdated: "4 August 2026",
-  },
+  privacy: getPrivacyContent("cs"),
   acquisition: getAcquisitionContent("cs"),
   routeChecker: getRouteCheckerContent("cs"),
   news: {
@@ -659,9 +626,9 @@ const dictionary: BaseDictionary = {
     publishedOn: "Publikováno",
     sourceLabel: "Zdroj",
     sourceDisclaimer:
-      "Shrnujeme důvěryhodné zdroje a odkazujeme na původní článek. Náš pohled je nezávislý redakční komentář, nikoli oficiální vládní informace.",
+      "BelgiumVignette.be je nezávislý informační web a není spojen s belgickou vládou, Flandry, Valonskem ani Bruselem. Tento web slouží výhradně k informování. Uvedená data, sazby a podmínky se mohou změnit. Nejaktuálnější a oficiální informace vždy ověřujte na webech příslušných belgických orgánů.",
     translationDisclaimer:
-      "Shrnutí a překlad na této stránce byly vytvořeny s pomocí AI na základě původního článku. Pro závazné znění vždy odkazujte na zdroj níže.",
+      "BelgiumVignette.be je nezávislý informační web a není spojen s belgickou vládou, Flandry, Valonskem ani Bruselem. Tento web slouží výhradně k informování. Uvedená data, sazby a podmínky se mohou změnit. Nejaktuálnější a oficiální informace vždy ověřujte na webech příslušných belgických orgánů.",
     articleAttributionTitle: "Nezávislé shrnutí — nikoli původní článek",
     articleAttributionIndependence:
       "BelgiumVignette.be je nezávislý informační web. Nejsme spojeni s původním vydavatelem, nejsme jím schváleni ani v jeho jménu nejednáme. Tato stránka shrnuje veřejně dostupné zpravodajství a přidává náš vlastní redakční komentář. Nejde o reprodukci původního článku.",
@@ -677,7 +644,7 @@ const dictionary: BaseDictionary = {
   newsletter: {
     emailPlaceholder: "E-mailová adresa",
     consentLabel:
-      "Opravňuji BelgiumVignette.be, aby mi e-mailem posílala informace o dostupnosti belgické silniční známky. Odběr mohu kdykoli zrušit.",
+      "Uděluji BelgiumVignette.be souhlas, aby mi poslala jeden e-mail, jakmile bude oficiální nebo autorizovaný prodej belgické silniční známky dostupný. Po odeslání budou mé údaje smazány z aktivních systémů. Souhlas mohu kdykoli odvolat.",
     success: "Děkujeme! Jste přihlášeni k odběru.",
     error: "Něco se pokazilo. Zkuste to prosím znovu.",
     privacyLink: "",
@@ -779,7 +746,7 @@ const dictionary: BaseDictionary = {
     {
       title: "Vlámská vláda — Dálniční známka od 1. května 2027",
       url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
-      description: "Oficiální stránka o povinnosti, tarifech a nákupu od 1. března 2027",
+      description: "Oficiální stránka o povinnosti, tarifech a nákupu od 2. dubna 2027",
     },
     {
       title: "Viapass — kilometrové mýtné pro nákladní vozy",

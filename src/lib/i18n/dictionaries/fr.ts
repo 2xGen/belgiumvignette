@@ -1,6 +1,7 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
 import { getRouteCheckerContent } from "../route-checker";
+import { getPrivacyContent } from "../privacy";
 import { frTolls } from "../tolls/fr";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -65,9 +66,9 @@ const dictionary: BaseDictionary = {
         "Amendes prévues jusqu'à 210 €, contrôles ANPR et tolérance jusqu'au 1er juillet 2027.",
     },
     buy: {
-      title: "Acheter la vignette belge — vente prévue le 1er mars 2027",
+      title: "Acheter la vignette belge — vente prévue le 2 avril 2027",
       description:
-        "Selon les plans actuels, la vente en ligne de la vignette routière belge est prévue à partir du 1er mars 2027. Obligatoire dès le 1er mai 2027. Source officielle : autorités flamandes.",
+        "Selon les plans actuels, la vente en ligne de la vignette routière belge est prévue à partir du 2 avril 2027. Obligatoire dès le 1er mai 2027. Source officielle : autorités flamandes.",
     },
     tolls: {
       title: "Péages en Belgique 2027 : autoroutes, vignette et tarifs",
@@ -82,7 +83,7 @@ const dictionary: BaseDictionary = {
     privacy: {
       title: "Politique de confidentialité — BelgiumVignette.be",
       description:
-        "Comment BelgiumVignette.be gère les cookies, l'analytique, la newsletter et vos données personnelles (RGPD).",
+        "Politique de confidentialité de BelgiumVignette.be : notification e-mail unique, cookies, hébergement, droits RGPD et contact.",
     },
     acquisition: {
       title: "BelgiumVignette.be à vendre | Site & portefeuille de domaines",
@@ -97,10 +98,10 @@ const dictionary: BaseDictionary = {
   },
   common: {
     disclaimer:
-      "BelgiumVignette.be est un site d'information indépendant. Nous ne sommes pas affiliés au gouvernement belge, à la Flandre, à la Wallonie ou à Bruxelles.",
+      "BelgiumVignette.be est un site d'information indépendant et n'est pas lié au gouvernement belge, à la Flandre, à la Wallonie ou à Bruxelles. Ce site a un but purement informatif. Les dates, tarifs et conditions mentionnés peuvent changer. Pour les informations les plus récentes et officielles, consultez toujours les sites des autorités belges compétentes.",
     lastUpdated: "Dernière mise à jour",
-    lastUpdatedDate: "28 septembre 2026",
-    lastUpdatedIso: "2026-09-28",
+    lastUpdatedDate: "4 novembre 2026",
+    lastUpdatedIso: "2026-11-04",
     readMore: "En savoir plus",
     relatedSite: "https://tolls.be/fr",
     relatedSiteLabel: "Tolls.be — informations indépendantes sur les péages en Belgique",
@@ -110,6 +111,17 @@ const dictionary: BaseDictionary = {
     backToHome: "Retour à l'accueil",
     plannedNotice:
       "Les plans présentés en mars 2026 peuvent encore évoluer. Nous suivons les sources officielles et mettons à jour cette page dès que de nouvelles informations sont disponibles.",
+    officialNotice: {
+      title: "Important : vérifiez toujours les informations officielles",
+      provisionalNote:
+        "Attention : La vignette routière belge n'est pas encore en vigueur. La date de début prévue est le 1er mai 2027. Toutes les informations restent sous réserve d'une approbation parlementaire définitive. Vérifiez toujours les informations à jour sur Vlaanderen.be avant votre voyage.",
+      paragraphs: [
+        "BelgiumVignette.be est un site d'information indépendant et n'est pas lié au gouvernement belge. La vignette routière belge est encore en préparation. Les dates, tarifs et conditions mentionnés peuvent changer.",
+        "Nous nous efforçons de fournir des informations correctes et à jour, mais nous ne pouvons pas garantir que toutes les informations sont complètes ou actuelles à tout moment. Avant votre voyage ou un achat, vérifiez toujours les informations les plus récentes sur les sites officiels des autorités belges compétentes.",
+      ],
+      sourceLabel: "Informations officielles : Vlaanderen.be — Vignette routière dès le 1er mai 2027",
+      sourceUrl: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+    },
     independentSite: "Guide indépendant sur la vignette belge",
     contactLabel: "Contact",
     cookieSettings: "Préférences cookies",
@@ -169,7 +181,7 @@ const dictionary: BaseDictionary = {
     overview: {
       title: "Vignette routière en Belgique : ce qui est prévu pour 2027",
       paragraphs: [
-        "La Belgique prévoit d'introduire une vignette routière numérique à partir du 1er mai 2027. La vignette belge concernerait les voitures particulières jusqu'à 3,5 tonnes circulant sur les autoroutes et certaines routes régionales principales.",
+        "La Belgique prévoit d'introduire une vignette routière numérique à partir du 1er mai 2027. La vignette belge concernerait les voitures particulières jusqu'à 3,5 tonnes circulant sur les voiries régionales et autoroutes belges.",
         "Le système concernerait aussi les voitures étrangères. Les automobilistes français, néerlandais, allemands et les autres conducteurs étrangers devraient donc acheter une vignette pour circuler sur les routes concernées en Belgique.",
         "Il ne s'agirait pas d'un autocollant à placer sur le pare-brise. La vignette autoroutière belge serait numérique et liée à la plaque d'immatriculation, avec des contrôles notamment effectués par caméras ANPR.",
         "Selon les tarifs publiés par les autorités flamandes, le prix dépend de la norme Euro et de la durée : dès 8,10 € par jour pour les véhicules zéro émission et 9 € par jour pour Euro 4+, jusqu'à 90–125 € par an. Des options de 10 jours, 1 mois et 2 mois sont également prévues.",
@@ -181,9 +193,9 @@ const dictionary: BaseDictionary = {
         id: "autoroutes",
         title: "Faut-il une vignette pour les autoroutes en Belgique ?",
         paragraphs: [
-          "Selon les plans actuels, une vignette routière numérique deviendrait obligatoire sur les autoroutes belges et certaines routes régionales principales à partir du 1er mai 2027.",
+          "Selon les plans actuels, une vignette routière numérique deviendrait obligatoire sur les voiries régionales et autoroutes belges à partir du 1er mai 2027.",
           "Aujourd'hui, la plupart des autoroutes belges restent gratuites pour les voitures particulières. Le projet de vignette changerait cette situation : l'accès aux autoroutes et à une partie du réseau régional à vitesse élevée serait soumis à une vignette liée à la plaque d'immatriculation.",
-          "Si vous circulez uniquement sur des routes locales, une vignette ne serait pas nécessaire selon les informations publiées. En pratique, éviter entièrement les autoroutes et routes régionales principales est souvent difficile pour un trajet interurbain ou un transit.",
+          "Si vous circulez uniquement sur des routes locales, une vignette ne serait pas nécessaire selon les informations publiées. En pratique, éviter entièrement les voiries régionales et autoroutes belges est souvent difficile pour un trajet interurbain ou un transit.",
         ],
         link: {
           href: "tolls",
@@ -206,7 +218,7 @@ const dictionary: BaseDictionary = {
         id: "acheter",
         title: "Où acheter la vignette Belgique ?",
         paragraphs: [
-          "La vente officielle n'a pas encore commencé. Selon les plans actuels, l'achat en ligne serait possible à partir du 1er mars 2027, via le site officiel ou un partenaire agréé.",
+          "La vente officielle n'a pas encore commencé. Selon les plans actuels, l'achat en ligne serait possible à partir du 2 avril 2027, via le site officiel ou un partenaire agréé.",
           "Il n'existe aujourd'hui aucun portail de vente officiel. Les sites qui proposent déjà une réservation ou un paiement ne sont pas le canal officiel.",
         ],
         link: {
@@ -256,7 +268,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Faut-il une vignette pour les autoroutes en Belgique ?",
         answer:
-          "Selon les plans actuels, oui à partir du 1er mai 2027 sur les autoroutes belges et certaines routes régionales principales. Les routes locales resteraient hors obligation.",
+          "Selon les plans actuels, oui à partir du 1er mai 2027 sur les voiries régionales et autoroutes belges. Les routes locales resteraient hors obligation.",
       },
       {
         question: "Les motos ont-elles besoin d'une vignette en Belgique ?",
@@ -271,7 +283,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Où acheter la vignette Belgique ?",
         answer:
-          "La vente officielle n'a pas encore commencé. Selon les plans, l'achat en ligne est prévu à partir du 1er mars 2027 via le canal officiel ou un partenaire agréé.",
+          "La vente officielle n'a pas encore commencé. Selon les plans, l'achat en ligne est prévu à partir du 2 avril 2027 via le canal officiel ou un partenaire agréé.",
       },
     ],
     sourcesTitle: "Sources officielles",
@@ -282,7 +294,7 @@ const dictionary: BaseDictionary = {
       "Le prix prévu de la vignette routière belge dépend de deux facteurs : la norme Euro de votre véhicule et la durée de validité de la vignette. Les autorités flamandes ont publié des tarifs pour 1 jour, 10 jours, 1 mois, 2 mois et 1 an.",
     leadParagraphs: [
       "Pour une voiture Euro 4 ou plus, la vignette belge coûte selon les tarifs actuels 9 € pour 1 jour, 12 € pour 10 jours et 100 € pour un an. Les véhicules zéro émission paient moins et les véhicules Euro 0 à Euro 3 paient davantage.",
-      "La vignette est prévue dès le 1er mai 2027. L'achat devrait être possible à partir du 1er mars 2027. L'introduction reste soumise à une approbation définitive.",
+      "La vignette est prévue dès le 1er mai 2027. L'achat devrait être possible à partir du 2 avril 2027. L'introduction reste soumise à une approbation définitive.",
     ],
     matrixTitle: "Tarifs vignette routière belge 2027",
     rateMatrix: frRateMatrix,
@@ -305,7 +317,7 @@ const dictionary: BaseDictionary = {
           "1 an : 100 €",
         ],
         linkParagraph:
-          "C'est la catégorie dans laquelle se situe une grande partie du parc actuel. Pour un court transit en Belgique, une vignette d'un jour ou de 10 jours peut donc suffire. Qui utilise régulièrement les routes régionales et autoroutes belges peut comparer la vignette annuelle aux durées plus courtes. En savoir plus sur la [[dailyVignette|vignette journalière]] ou consulter la [[annualVignette|vignette annuelle]].",
+          "C'est la catégorie dans laquelle se situe une grande partie du parc actuel. Pour un court transit en Belgique, une vignette d'un jour ou de 10 jours peut donc suffire. Qui utilise régulièrement les voiries régionales et autoroutes belges peut comparer la vignette annuelle aux durées plus courtes. En savoir plus sur la [[dailyVignette|vignette journalière]] ou consulter la [[annualVignette|vignette annuelle]].",
       },
       {
         id: "euro-0-3",
@@ -354,14 +366,14 @@ const dictionary: BaseDictionary = {
         "10 jours — par exemple pour des vacances ou une visite plus longue.",
         "1 mois — pour plusieurs trajets sur quelques semaines.",
         "2 mois — pour un séjour plus long ou un usage temporaire régulier.",
-        "1 an — pour les conducteurs qui circulent régulièrement sur les routes régionales et autoroutes belges.",
+        "1 an — pour les conducteurs qui circulent régulièrement sur les voiries régionales et autoroutes belges.",
       ],
     },
     whenSection: {
       id: "quand",
       title: "Quand ces tarifs s'appliquent-ils ?",
       paragraphs: [
-        "La vignette routière numérique est prévue dès le 1er mai 2027. Selon les informations officielles actuelles, elle pourrait être achetée en ligne dès le 1er mars 2027.",
+        "La vignette routière numérique est prévue dès le 1er mai 2027. Selon les informations officielles actuelles, elle pourrait être achetée en ligne dès le 2 avril 2027.",
         "La mise en œuvre pratique se poursuit et l'introduction reste soumise à une approbation définitive.",
         "Vous voulez savoir comment l'achat fonctionnera ? Consultez [[buy|Acheter la vignette belge]]. Pour toutes les règles, véhicules et dates importantes, voir notre guide complet sur la [[home|vignette routière belge 2027]].",
       ],
@@ -559,7 +571,7 @@ const dictionary: BaseDictionary = {
   buy: {
     title: "Quand puis-je acheter une vignette belge ?",
     intro:
-      "Selon les plans actuels, la vente en ligne est prévue à partir du 1er mars 2027. La vignette routière deviendrait obligatoire dès le 1er mai 2027. Les conditions définitives et le portail de vente officiel peuvent encore changer.",
+      "Selon les plans actuels, la vente en ligne est prévue à partir du 2 avril 2027. La vignette routière deviendrait obligatoire dès le 1er mai 2027. Les conditions définitives et le portail de vente officiel peuvent encore changer.",
     independenceNotice:
       "BelgiumVignette.be est un site d'information indépendant et n'est ni un site officiel du gouvernement belge, ni un vendeur agréé de la vignette routière.",
     sections: [
@@ -567,7 +579,7 @@ const dictionary: BaseDictionary = {
         id: "when",
         title: "Quand la vente ouvre-t-elle ?",
         paragraphs: [
-          "Les autorités flamandes indiquent que vous pourrez acheter la vignette en ligne à partir du 1er mars 2027, via le site officiel ou un partenaire agréé.",
+          "Les autorités flamandes indiquent que vous pourrez acheter la vignette en ligne à partir du 2 avril 2027, via le site officiel ou un partenaire agréé.",
           "Il n'existe pas encore de portail de vente : vous ne pouvez ni réserver ni payer aujourd'hui. Les sites qui le proposent déjà ne sont pas le canal officiel.",
         ],
       },
@@ -580,13 +592,13 @@ const dictionary: BaseDictionary = {
         ],
       },
     ],
-    statusBadge: "Vente prévue le 1er mars 2027",
+    statusBadge: "Vente prévue le 2 avril 2027",
     officialSourceLabel: "Source officielle",
     steps: [
       {
         title: "Attendre la vente autorisée",
         description:
-          "Achat en ligne prévu à partir du 1er mars 2027 via le site officiel ou un partenaire agréé, selon les autorités flamandes.",
+          "Achat en ligne prévu à partir du 2 avril 2027 via le site officiel ou un partenaire agréé, selon les autorités flamandes.",
       },
       { title: "Enregistrer votre plaque", description: "Système numérique — pas de sticker." },
       { title: "Choisir la durée", description: "Jour, 10 jours, mois, 2 mois ou annuel." },
@@ -596,62 +608,17 @@ const dictionary: BaseDictionary = {
       {
         question: "Puis-je réserver maintenant ?",
         answer:
-          "Non. Selon les plans actuels, la vente en ligne commence le 1er mars 2027. Inscrivez-vous pour être prévenu lorsque la vente autorisée sera disponible.",
+          "Non. Selon les plans actuels, la vente en ligne commence le 2 avril 2027. Inscrivez-vous pour être prévenu lorsque la vente autorisée sera disponible.",
       },
       {
         question: "Quand la vignette devient-elle obligatoire ?",
         answer:
-          "Selon les plans, dès le 1er mai 2027 sur les autoroutes et routes régionales belges. Une période de tolérance est prévue du 1er mai au 1er juillet 2027.",
+          "Selon les plans, dès le 1er mai 2027 sur les voiries régionales et autoroutes belges. Une période de tolérance est prévue du 1er mai au 1er juillet 2027.",
       },
     ],
   },
   tolls: frTolls,
-  privacy: {
-    title: "Politique de confidentialité",
-    intro: "BelgiumVignette.be respecte votre vie privée. Voici comment nous traitons vos données.",
-    sections: [
-      {
-        id: "controller",
-        title: "Responsable",
-        paragraphs: [
-          "BelgiumVignette.be est un site d'information indépendant sur la vignette routière belge prévue. Nous ne sommes pas affiliés au gouvernement belge, à la Flandre, à la Wallonie ou à Bruxelles, et nous ne vendons pas de vignettes.",
-          "Le site est géré en lien avec Tolls.be (information indépendante sur les péages en Belgique). Contact : info@tolls.be.",
-        ],
-      },
-      {
-        id: "newsletter",
-        title: "Newsletter",
-        paragraphs: [
-          "E-mail, langue et horodatage du consentement stockés dans Supabase (hébergement UE). Utilisation limitée aux mises à jour sur la vignette.",
-        ],
-      },
-      {
-        id: "cookies",
-        title: "Cookies, analytique & consentement",
-        paragraphs: [
-          "Stockage essentiel : nous enregistrons votre choix de cookies dans le localStorage. Base légale : intérêt légitime (Art. 6(1)(f) RGPD) et/ou consentement le cas échéant.",
-          "Analytique (optionnel) : Vercel Analytics collecte des pages vues anonymes. Chargé uniquement après consentement via la bannière. Base légale : consentement (Art. 6(1)(a) RGPD). Retrait via Préférences cookies dans le pied de page.",
-          "Google Search Console & Bing Webmaster Tools : balises meta de vérification de propriété, sans cookies de suivi.",
-          "Durée de conservation du choix : jusqu'à suppression ou mise à jour de la politique (version 2026-08-04).",
-        ],
-      },
-      {
-        id: "news-editorial",
-        title: "Actualités, résumés & contenu éditorial",
-        paragraphs: [
-          "Notre rubrique actualités publie des résumés indépendants de reportages accessibles au public sur la vignette belge. Ces pages ne sont pas des reproductions des articles originaux.",
-          "Les résumés et traductions peuvent être produits avec l'aide de l'IA et peuvent différer dans la formulation de la source. Nous lions toujours vers l'éditeur original. Notre commentaire éditorial (« Notre point de vue ») est rédigé indépendamment et ne représente pas l'éditeur original ni les autorités belges.",
-          "Les images sur les articles d'actualité peuvent provenir de l'article original lié ou d'agences de presse, avec crédits le cas échéant. Ces contenus restent la propriété de leurs titulaires de droits respectifs. Nous les affichons de bonne foi à titre de référence, avec un lien vers la source. Si vous estimez que votre contenu est utilisé de manière incorrecte, contactez info@tolls.be.",
-        ],
-      },
-      {
-        id: "rights",
-        title: "Vos droits (RGPD)",
-        paragraphs: ["Accès, rectification, suppression, opposition — info@tolls.be."],
-      },
-    ],
-    lastUpdated: "4 août 2026",
-  },
+  privacy: getPrivacyContent("fr"),
   acquisition: getAcquisitionContent("fr"),
   routeChecker: getRouteCheckerContent("fr"),
   news: {
@@ -668,9 +635,9 @@ const dictionary: BaseDictionary = {
     publishedOn: "Publié",
     sourceLabel: "Source",
     sourceDisclaimer:
-      "Nous résumons des sources fiables et renvoyons vers l'article original. Notre point de vue est un commentaire éditorial indépendant, pas une information officielle du gouvernement.",
+      "BelgiumVignette.be est un site d'information indépendant et n'est pas lié au gouvernement belge, à la Flandre, à la Wallonie ou à Bruxelles. Ce site a un but purement informatif. Les dates, tarifs et conditions mentionnés peuvent changer. Pour les informations les plus récentes et officielles, consultez toujours les sites des autorités belges compétentes.",
     translationDisclaimer:
-      "Le résumé et la traduction de cette page ont été produits avec l'aide de l'IA à partir de l'article original. Consultez toujours la source ci-dessous pour la formulation officielle.",
+      "BelgiumVignette.be est un site d'information indépendant et n'est pas lié au gouvernement belge, à la Flandre, à la Wallonie ou à Bruxelles. Ce site a un but purement informatif. Les dates, tarifs et conditions mentionnés peuvent changer. Pour les informations les plus récentes et officielles, consultez toujours les sites des autorités belges compétentes.",
     articleAttributionTitle: "Résumé indépendant — pas l'article original",
     articleAttributionIndependence:
       "BelgiumVignette.be est un site d'information indépendant. Nous ne sommes pas affiliés à, approuvés par ou agissons au nom de l'éditeur original. Cette page résume un reportage accessible au public et ajoute notre propre commentaire éditorial. Il ne s'agit pas d'une reproduction de l'article original.",
@@ -686,7 +653,7 @@ const dictionary: BaseDictionary = {
   newsletter: {
     emailPlaceholder: "Adresse e-mail",
     consentLabel:
-      "J'autorise BelgiumVignette.be à m'informer par e-mail de la disponibilité de la vignette routière belge. Je peux me désinscrire à tout moment.",
+      "J'autorise BelgiumVignette.be à m'envoyer un seul e-mail dès que la vente officielle ou autorisée de la vignette routière belge sera disponible. Après l'envoi, mes données seront supprimées des systèmes actifs. Je peux retirer mon consentement à tout moment.",
     success: "Merci ! Vous êtes inscrit.",
     error: "Une erreur est survenue. Réessayez.",
     privacyLink: "",
@@ -785,7 +752,7 @@ const dictionary: BaseDictionary = {
     {
       title: "Autorités flamandes — Vignette routière à partir du 1er mai 2027",
       url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
-      description: "Page officielle sur l'obligation, les tarifs et l'achat à partir du 1er mars 2027",
+      description: "Page officielle sur l'obligation, les tarifs et l'achat à partir du 2 avril 2027",
     },
     {
       title: "Viapass — taxe kilométrique poids lourds",

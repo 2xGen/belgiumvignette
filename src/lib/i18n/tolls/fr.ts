@@ -45,7 +45,7 @@ export const frTolls: Dictionary["tolls"] = {
         {
           label: "Achat",
           value:
-            "En ligne, avec une ouverture des ventes prévue à partir du 1er mars 2027.",
+            "En ligne, avec une ouverture des ventes prévue à partir du 2 avril 2027.",
         },
       ],
     },
@@ -198,7 +198,7 @@ export const frTolls: Dictionary["tolls"] = {
       title: "Où acheter la vignette pour les autoroutes belges ?",
       paragraphs: [
         "La vignette n'est pas encore en vente.",
-        "Selon les informations officielles actuellement publiées, l'achat devrait devenir possible à partir du 1er mars 2027, avant l'entrée en vigueur prévue le 1er mai.",
+        "Selon les informations officielles actuellement publiées, l'achat devrait devenir possible à partir du 2 avril 2027, avant l'entrée en vigueur prévue le 1er mai.",
         "La vignette pourra être achetée en ligne via le site officiel ou auprès d'une organisation partenaire reconnue.",
         "Évitez d'acheter une prétendue vignette belge 2027 sur un site non vérifié avant l'ouverture officielle des ventes.",
         "Nous suivons l'ouverture des ventes et publierons le lien lorsqu'il sera disponible. Consultez [[buy|où acheter la vignette Belgique]] pour les dernières informations.",
@@ -252,7 +252,7 @@ export const frTolls: Dictionary["tolls"] = {
     {
       question: "Où acheter la vignette autoroute Belgique ?",
       answer:
-        "Les ventes ne sont pas encore ouvertes. Elles devraient débuter le 1er mars 2027 via le site officiel et des organisations partenaires reconnues. Consultez notre page Acheter la vignette Belgique pour suivre l'ouverture des ventes.",
+        "Les ventes ne sont pas encore ouvertes. Elles devraient débuter le 2 avril 2027 via le site officiel et des organisations partenaires reconnues. Consultez notre page Acheter la vignette Belgique pour suivre l'ouverture des ventes.",
     },
     {
       question: "Les motos doivent-elles payer les autoroutes en Belgique ?",

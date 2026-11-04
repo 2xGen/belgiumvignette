@@ -12,7 +12,7 @@ export const nlTolls: Dictionary["tolls"] = {
       paragraphs: [
         "Voor personenauto's werkt België momenteel niet met een algemeen snelwegvignet zoals Oostenrijk of Zwitserland.",
         "Die situatie zou in 2027 moeten veranderen.",
-        "België plant vanaf 1 mei 2027 een digitaal wegenvignet in voor betrokken voertuigen op snelwegen en regionale wegen. Het systeem zou gelden voor Belgische én in het buitenland ingeschreven voertuigen.",
+        "België plant vanaf 1 mei 2027 een digitaal wegenvignet in voor betrokken voertuigen op Belgische gewest- en snelwegen. Het systeem zou gelden voor Belgische én in het buitenland ingeschreven voertuigen.",
         "Plant u na die datum naar België te rijden, raadpleeg dan onze volledige gids over het [[home|Belgisch vignet 2027]].",
       ],
     },
@@ -45,7 +45,7 @@ export const nlTolls: Dictionary["tolls"] = {
         {
           label: "Aankoop",
           value:
-            "Online, met opening van de verkoop voorzien vanaf 1 maart 2027.",
+            "Online, met opening van de verkoop voorzien vanaf 2 april 2027.",
         },
       ],
     },
@@ -66,7 +66,7 @@ export const nlTolls: Dictionary["tolls"] = {
       id: "routes-concernees",
       title: "Welke wegen worden in 2027 tolplichtig in België?",
       paragraphs: [
-        "Het vignet is voorzien voor gebruik van Belgische snelwegen en betrokken regionale wegen.",
+        "Het vignet is voorzien voor gebruik van Belgische gewest- en snelwegen.",
         "Bestuurders die alleen op lokale wegen rijden, zouden geen vignet nodig moeten hebben.",
         "Dat betekent dat wie België via de snelweg doorkruist — bijvoorbeeld naar Frankrijk, Nederland, Duitsland of Luxemburg — rekening moet houden met de nieuwe verplichting vanaf de inwerkingtreding.",
         "Praktische modaliteiten en het exacte wegennet kunnen nog worden verfijnd vóór de definitieve lancering.",
@@ -124,7 +124,7 @@ export const nlTolls: Dictionary["tolls"] = {
       id: "traverser",
       title: "Moet u betalen om met de auto door België te rijden?",
       paragraphs: [
-        "Vanaf 1 mei 2027, als het systeem zoals gepland in werking treedt, moeten bestuurders die de betrokken snelwegen of regionale wegen gebruiken over een geldig vignet beschikken.",
+        "Vanaf 1 mei 2027, als het systeem zoals gepland in werking treedt, moeten bestuurders die Belgische gewest- en snelwegen gebruiken over een geldig vignet beschikken.",
         "Dat geldt ook voor bestuurders die België alleen doorkruisen om een ander land te bereiken.",
         "Een auto met Frans, Nederlands of Duits kenteken is bijvoorbeeld niet automatisch vrijgesteld omdat de bestuurder niet in België woont.",
         "Het vignet is voorzien voor betrokken voertuigen die het wegennet gebruiken, ongeacht het land van inschrijving.",
@@ -146,7 +146,7 @@ export const nlTolls: Dictionary["tolls"] = {
       id: "voitures-etrangeres",
       title: "Moeten buitenlandse auto's betalen?",
       paragraphs: [
-        "Ja. Het project voorziet expliciet dat het vignet ook geldt voor buitenlandse gebruikers van de betrokken snelwegen en regionale wegen.",
+        "Ja. Het project voorziet expliciet dat het vignet ook geldt voor buitenlandse gebruikers van Belgische gewest- en snelwegen.",
         "Dat betreft onder meer voertuigen uit:",
       ],
       list: [
@@ -173,7 +173,7 @@ export const nlTolls: Dictionary["tolls"] = {
       id: "camping-cars",
       title: "Campers en bestelwagens: is een vignet nodig?",
       paragraphs: [
-        "Campers en sommige bestelwagens tot 3,5 ton vallen onder het voorziene systeem wanneer zij de betrokken snelwegen en regionale wegen gebruiken.",
+        "Campers en sommige bestelwagens tot 3,5 ton vallen onder het voorziene systeem wanneer zij Belgische gewest- en snelwegen gebruiken.",
         "Belangrijke criteria zijn onder meer de voertuigcategorie en de technisch toelaatbare maximummassa.",
         "Voertuigen van meer dan 3,5 ton kunnen onder een ander systeem van wegentol vallen.",
       ],
@@ -198,7 +198,7 @@ export const nlTolls: Dictionary["tolls"] = {
       title: "Waar kunt u het vignet voor Belgische snelwegen kopen?",
       paragraphs: [
         "Het vignet is nog niet te koop.",
-        "Volgens de momenteel gepubliceerde officiële informatie zou aankoop mogelijk moeten worden vanaf 1 maart 2027, vóór de voorziene inwerkingtreding op 1 mei.",
+        "Volgens de momenteel gepubliceerde officiële informatie zou aankoop mogelijk moeten worden vanaf 2 april 2027, vóór de voorziene inwerkingtreding op 1 mei.",
         "Het vignet kan online worden gekocht via de officiële website of bij een erkende partnerorganisatie.",
         "Koop geen zogenaamd Belgisch vignet 2027 op een niet-geverifieerde site vóór de officiële opening van de verkoop.",
         "Wij volgen de opening van de verkoop en publiceren de link zodra die beschikbaar is. Raadpleeg [[buy|waar het Belgisch vignet kopen]] voor de laatste informatie.",
@@ -232,12 +232,12 @@ export const nlTolls: Dictionary["tolls"] = {
     {
       question: "Zijn er tolwegen in België?",
       answer:
-        "Voor personenauto's bestaat er momenteel geen algemeen wegenvignet vergelijkbaar met systemen in sommige andere Europese landen. Een digitaal vignet is echter voorzien vanaf 1 mei 2027 voor gebruik van de betrokken snelwegen en regionale wegen.",
+        "Voor personenauto's bestaat er momenteel geen algemeen wegenvignet vergelijkbaar met systemen in sommige andere Europese landen. Een digitaal vignet is echter voorzien vanaf 1 mei 2027 voor gebruik van Belgische gewest- en snelwegen.",
     },
     {
       question: "Worden Belgische snelwegen in 2027 tolplichtig?",
       answer:
-        "Gebruik van de betrokken snelwegen en regionale wegen vereist een vignet voor voertuigen onder het nieuwe systeem als dat zoals gepland op 1 mei 2027 in werking treedt.",
+        "Gebruik van Belgische gewest- en snelwegen vereist een vignet voor voertuigen onder het nieuwe systeem als dat zoals gepland op 1 mei 2027 in werking treedt.",
     },
     {
       question: "Hoeveel kost de snelweg in België?",
@@ -247,12 +247,12 @@ export const nlTolls: Dictionary["tolls"] = {
     {
       question: "Hebt u een vignet nodig om naar België te gaan?",
       answer:
-        "Dat hangt af van de datum en de wegen die u gebruikt. Het vignet is voorzien vanaf 1 mei 2027 voor betrokken voertuigen op snelwegen en regionale wegen. Als u alleen op lokale wegen rijdt, zou een vignet niet nodig moeten zijn.",
+        "Dat hangt af van de datum en de wegen die u gebruikt. Het vignet is voorzien vanaf 1 mei 2027 voor betrokken voertuigen op Belgische gewest- en snelwegen. Als u alleen op lokale wegen rijdt, zou een vignet niet nodig moeten zijn.",
     },
     {
       question: "Waar kunt u het Belgische snelwegvignet kopen?",
       answer:
-        "De verkoop is nog niet geopend. Die zou op 1 maart 2027 moeten starten via de officiële website en erkende partnerorganisaties. Raadpleeg onze pagina Belgisch vignet kopen om de opening van de verkoop te volgen.",
+        "De verkoop is nog niet geopend. Die zou op 2 april 2027 moeten starten via de officiële website en erkende partnerorganisaties. Raadpleeg onze pagina Belgisch vignet kopen om de opening van de verkoop te volgen.",
     },
     {
       question: "Moeten motoren betalen op Belgische snelwegen?",

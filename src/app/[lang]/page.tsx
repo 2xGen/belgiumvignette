@@ -21,6 +21,7 @@ import FAQ from "@/components/sections/FAQ";
 import Newsletter from "@/components/sections/Newsletter";
 import Sources from "@/components/sections/Sources";
 import LatestNews from "@/components/sections/LatestNews";
+import OfficialNotice from "@/components/OfficialNotice";
 
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -135,6 +136,8 @@ export default async function HomePage({
       </section>
 
       <div className="page-wrap py-10 sm:py-14">
+        <OfficialNotice dict={dict} className="mb-10" />
+
         <HomeOverview
           title={dict.home.overview.title}
           paragraphs={dict.home.overview.paragraphs}

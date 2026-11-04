@@ -44,7 +44,7 @@ export const itTolls: Dictionary["tolls"] = {
         {
           label: "Acquisto",
           value:
-            "Online, con apertura delle vendite prevista dal 1 marzo 2027.",
+            "Online, con apertura delle vendite prevista dal 2 aprile 2027.",
         },
       ],
     },
@@ -197,7 +197,7 @@ export const itTolls: Dictionary["tolls"] = {
       title: "Dove acquistare la vignetta per le autostrade belghe?",
       paragraphs: [
         "La vignetta non è ancora in vendita.",
-        "Secondo le informazioni ufficiali attualmente pubblicate, l'acquisto dovrebbe diventare possibile dal 1 marzo 2027, prima dell'entrata in vigore prevista il 1 maggio.",
+        "Secondo le informazioni ufficiali attualmente pubblicate, l'acquisto dovrebbe diventare possibile dal 2 aprile 2027, prima dell'entrata in vigore prevista il 1 maggio.",
         "Dovrebbe essere disponibile online tramite il sito ufficiale o un'organizzazione partner riconosciuta.",
         "Evitate di acquistare una presunta vignetta Belgio 2027 su un sito non verificato prima dell'apertura ufficiale delle vendite.",
         "Seguiamo l'apertura delle vendite e pubblicheremo il link quando sarà disponibile. Consultate [[buy|dove acquistare la vignetta Belgio]] per le ultime informazioni.",
@@ -251,7 +251,7 @@ export const itTolls: Dictionary["tolls"] = {
     {
       question: "Dove acquistare la vignetta autostradale Belgio?",
       answer:
-        "Le vendite non sono ancora aperte. Dovrebbero iniziare il 1 marzo 2027 tramite il sito ufficiale e organizzazioni partner riconosciute. Consultate la nostra pagina Come acquistare per seguire l'apertura delle vendite.",
+        "Le vendite non sono ancora aperte. Dovrebbero iniziare il 2 aprile 2027 tramite il sito ufficiale e organizzazioni partner riconosciute. Consultate la nostra pagina Come acquistare per seguire l'apertura delle vendite.",
     },
     {
       question: "Le moto devono pagare sulle autostrade belghe?",

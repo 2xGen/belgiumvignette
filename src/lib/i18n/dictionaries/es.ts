@@ -1,6 +1,7 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
 import { getRouteCheckerContent } from "../route-checker";
+import { getPrivacyContent } from "../privacy";
 import { esTolls } from "../tolls/es";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -65,9 +66,9 @@ const dictionary: BaseDictionary = {
         "Multas previstas de hasta €210, controles ANPR y tolerancia hasta el 1 de julio de 2027.",
     },
     buy: {
-      title: "Comprar la viñeta de Bélgica — venta prevista el 1 de marzo de 2027",
+      title: "Comprar la viñeta de Bélgica — venta prevista el 2 de abril de 2027",
       description:
-        "Según los planes actuales, la venta en línea de la viñeta belga está prevista a partir del 1 de marzo de 2027. Obligatoria desde el 1 de mayo de 2027. Fuente oficial: Gobierno flamenco.",
+        "Según los planes actuales, la venta en línea de la viñeta belga está prevista a partir del 2 de abril de 2027. Obligatoria desde el 1 de mayo de 2027. Fuente oficial: Gobierno flamenco.",
     },
     tolls: {
       title: "Peajes en Bélgica 2027: autopistas, viñeta y tarifas",
@@ -82,7 +83,7 @@ const dictionary: BaseDictionary = {
     privacy: {
       title: "Política de privacidad — BelgiumVignette.be",
       description:
-        "Cómo BelgiumVignette.be gestiona cookies, analítica, datos del boletín y sus derechos RGPD.",
+        "Política de privacidad de BelgiumVignette.be: notificación única por correo, cookies, alojamiento, derechos RGPD y contacto.",
     },
     acquisition: {
       title: "BelgiumVignette.be en venta | Sitio y cartera de dominios",
@@ -97,10 +98,10 @@ const dictionary: BaseDictionary = {
   },
   common: {
     disclaimer:
-      "BelgiumVignette.be es un sitio de información independiente. No estamos afiliados al gobierno belga, Flandes, Valonia ni Bruselas.",
+      "BelgiumVignette.be es un sitio de información independiente y no está vinculado al gobierno belga, Flandes, Valonia ni Bruselas. Este sitio web tiene únicamente fines informativos. Las fechas, tarifas y condiciones mencionadas pueden cambiar. Para la información más actual y oficial, consulte siempre los sitios web de las autoridades belgas competentes.",
     lastUpdated: "Última actualización",
-    lastUpdatedDate: "28 September 2026",
-    lastUpdatedIso: "2026-09-28",
+    lastUpdatedDate: "4 de noviembre de 2026",
+    lastUpdatedIso: "2026-11-04",
     readMore: "Leer más",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — información independiente sobre peajes en Bélgica",
@@ -110,6 +111,17 @@ const dictionary: BaseDictionary = {
     backToHome: "Volver al inicio",
     plannedNotice:
       "Los planes presentados en marzo de 2026 pueden cambiar. Seguimos las fuentes oficiales y actualizamos esta página cuando hay novedades.",
+    officialNotice: {
+      title: "Importante: compruebe siempre la información oficial",
+      provisionalNote:
+        "Atención: La viñeta vial belga aún no se ha introducido. La fecha de inicio prevista es el 1 de mayo de 2027. Toda la información está sujeta a la aprobación parlamentaria definitiva. Consulte siempre la información actualizada en Vlaanderen.be antes de viajar.",
+      paragraphs: [
+        "BelgiumVignette.be es un sitio de información independiente y no está vinculado al gobierno belga. La viñeta vial belga aún está en preparación. Las fechas, tarifas y condiciones mencionadas pueden cambiar.",
+        "Nos esforzamos por ofrecer información correcta y actualizada, pero no podemos garantizar que toda la información esté completa o al día en todo momento. Antes de viajar o comprar, compruebe siempre la información más reciente en los sitios web oficiales de las autoridades belgas competentes.",
+      ],
+      sourceLabel: "Información oficial: Vlaanderen.be — Viñeta vial desde el 1 de mayo de 2027",
+      sourceUrl: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+    },
     independentSite: "Información independiente sobre la viñeta vial belga",
     contactLabel: "Contacto",
     cookieSettings: "Configuración de cookies",
@@ -169,7 +181,7 @@ const dictionary: BaseDictionary = {
     overview: {
       title: "Viñeta vial de Bélgica: qué está previsto para 2027",
       paragraphs: [
-        "Bélgica planea introducir una viñeta vial digital a partir del 1 de mayo de 2027. La viñeta belga se aplicaría a turismos de hasta 3,5 toneladas en autopistas y ciertas carreteras principales regionales.",
+        "Bélgica planea introducir una viñeta vial digital a partir del 1 de mayo de 2027. La viñeta belga se aplicaría a turismos de hasta 3,5 toneladas en carreteras regionales y autopistas belgas.",
         "Los coches extranjeros estarían incluidos. Conductores de Francia, Países Bajos, Alemania y otros países necesitarían una viñeta para usar las carreteras belgas cubiertas.",
         "No sería un adhesivo en el parabrisas. La viñeta de autopista belga sería digital y vinculada a la matrícula, con controles que incluyen cámaras ANPR.",
         "Según las tarifas publicadas por el gobierno flamenco, el precio depende de la norma Euro y la duración: desde €8,10 al día para vehículos cero emisiones y €9 al día para Euro 4+, hasta €90–€125 al año. También están previstos 10 días, 1 mes y 2 meses.",
@@ -181,7 +193,7 @@ const dictionary: BaseDictionary = {
         id: "autopistas",
         title: "¿Necesita una viñeta para las autopistas en Bélgica?",
         paragraphs: [
-          "Según los planes actuales, una viñeta vial digital sería obligatoria en las autopistas belgas y ciertas carreteras principales regionales a partir del 1 de mayo de 2027.",
+          "Según los planes actuales, una viñeta vial digital sería obligatoria en las carreteras regionales y autopistas belgas a partir del 1 de mayo de 2027.",
           "Hoy la mayoría de las autopistas belgas siguen siendo gratuitas para turismos. El proyecto de viñeta cambiaría eso: el acceso a las autopistas y a parte de la red regional de mayor velocidad requeriría una viñeta vinculada a la matrícula.",
           "Si solo usa carreteras locales, no se requeriría viñeta según la información publicada. En la práctica, evitar por completo las autopistas y las carreteras principales regionales suele ser difícil en viajes interurbanos o de tránsito.",
         ],
@@ -206,7 +218,7 @@ const dictionary: BaseDictionary = {
         id: "comprar",
         title: "¿Dónde comprar la viñeta de Bélgica?",
         paragraphs: [
-          "La venta oficial aún no ha comenzado. Según los planes actuales, la compra en línea sería posible a partir del 1 de marzo de 2027 a través del sitio web oficial o de un socio autorizado.",
+          "La venta oficial aún no ha comenzado. Según los planes actuales, la compra en línea sería posible a partir del 2 de abril de 2027 a través del sitio web oficial o de un socio autorizado.",
           "Hoy no hay un portal de venta oficial. Los sitios que ya ofrecen reserva o pago no son el canal oficial.",
         ],
         link: {
@@ -256,7 +268,7 @@ const dictionary: BaseDictionary = {
       {
         question: "¿Necesita una viñeta para las autopistas en Bélgica?",
         answer:
-          "Según los planes actuales, sí a partir del 1 de mayo de 2027 en las autopistas belgas y ciertas carreteras principales regionales. Las carreteras locales quedarían fuera de la obligación.",
+          "Según los planes actuales, sí a partir del 1 de mayo de 2027 en las carreteras regionales y autopistas belgas. Las carreteras locales quedarían fuera de la obligación.",
       },
       {
         question: "¿Las motos necesitan una viñeta de Bélgica?",
@@ -271,7 +283,7 @@ const dictionary: BaseDictionary = {
       {
         question: "¿Dónde comprar la viñeta de Bélgica?",
         answer:
-          "La venta oficial aún no ha comenzado. Según los planes, la compra en línea está prevista a partir del 1 de marzo de 2027 a través del canal oficial o de un socio autorizado.",
+          "La venta oficial aún no ha comenzado. Según los planes, la compra en línea está prevista a partir del 2 de abril de 2027 a través del canal oficial o de un socio autorizado.",
       },
     ],
     sourcesTitle: "Fuentes oficiales",
@@ -282,7 +294,7 @@ const dictionary: BaseDictionary = {
       "El precio previsto de la viñeta vial belga depende de dos factores: la norma Euro de su vehículo y la duración de validez de la viñeta. El gobierno flamenco ha publicado tarifas para 1 día, 10 días, 1 mes, 2 meses y 1 año.",
     leadParagraphs: [
       "Para un coche Euro 4 o superior, la viñeta belga cuesta según las tarifas actuales €9 por 1 día, €12 por 10 días y €100 por un año. Los vehículos cero emisiones pagan menos y los de Euro 0 a Euro 3 pagan más.",
-      "La viñeta está prevista a partir del 1 de mayo de 2027. La compra sería posible desde el 1 de marzo de 2027. La introducción sigue sujeta a aprobación definitiva.",
+      "La viñeta está prevista a partir del 1 de mayo de 2027. La compra sería posible desde el 2 de abril de 2027. La introducción sigue sujeta a aprobación definitiva.",
     ],
     matrixTitle: "Precios de la viñeta vial belga 2027",
     rateMatrix: esRateMatrix,
@@ -361,7 +373,7 @@ const dictionary: BaseDictionary = {
       id: "cuando",
       title: "¿Cuándo se aplican estos precios?",
       paragraphs: [
-        "La viñeta vial digital está prevista a partir del 1 de mayo de 2027. Según la información oficial actual, la viñeta podría comprarse en línea desde el 1 de marzo de 2027.",
+        "La viñeta vial digital está prevista a partir del 1 de mayo de 2027. Según la información oficial actual, la viñeta podría comprarse en línea desde el 2 de abril de 2027.",
         "La puesta en práctica sigue en curso y la introducción está sujeta a aprobación definitiva.",
         "¿Quiere saber cómo funcionará la compra? Consulte [[buy|Comprar viñeta belga]]. Para todas las normas, vehículos y fechas clave, vea nuestra guía completa sobre la [[home|viñeta vial belga 2027]].",
       ],
@@ -550,7 +562,7 @@ const dictionary: BaseDictionary = {
   buy: {
     title: "¿Cuándo puedo comprar una viñeta belga?",
     intro:
-      "Según los planes actuales, la venta en línea está prevista a partir del 1 de marzo de 2027. La viñeta sería obligatoria desde el 1 de mayo de 2027. Las condiciones definitivas y el portal oficial de venta pueden cambiar.",
+      "Según los planes actuales, la venta en línea está prevista a partir del 2 de abril de 2027. La viñeta sería obligatoria desde el 1 de mayo de 2027. Las condiciones definitivas y el portal oficial de venta pueden cambiar.",
     independenceNotice:
       "BelgiumVignette.be es un sitio de información independiente y no es un sitio web oficial del gobierno belga ni un vendedor reconocido de la viñeta vial.",
     sections: [
@@ -558,7 +570,7 @@ const dictionary: BaseDictionary = {
         id: "when",
         title: "¿Cuándo se abre la venta?",
         paragraphs: [
-          "El Gobierno flamenco indica que podrá comprar la viñeta en línea a partir del 1 de marzo de 2027, en el sitio oficial o a través de un socio autorizado.",
+          "El Gobierno flamenco indica que podrá comprar la viñeta en línea a partir del 2 de abril de 2027, en el sitio oficial o a través de un socio autorizado.",
           "Hoy no hay portal de venta: no puede reservar ni pagar todavía. Los sitios que ya lo ofrecen no son el canal oficial.",
         ],
       },
@@ -571,13 +583,13 @@ const dictionary: BaseDictionary = {
         ],
       },
     ],
-    statusBadge: "Venta prevista el 1 de marzo de 2027",
+    statusBadge: "Venta prevista el 2 de abril de 2027",
     officialSourceLabel: "Fuente oficial",
     steps: [
       {
         title: "Espere la venta autorizada",
         description:
-          "Compra en línea prevista a partir del 1 de marzo de 2027 a través del sitio oficial o de un socio autorizado, según el Gobierno flamenco.",
+          "Compra en línea prevista a partir del 2 de abril de 2027 a través del sitio oficial o de un socio autorizado, según el Gobierno flamenco.",
       },
       { title: "Registre su matrícula", description: "Sistema digital — sin adhesivo en el parabrisas." },
       { title: "Elija la duración", description: "Día, 10 días, mes, 2 meses o anual." },
@@ -587,7 +599,7 @@ const dictionary: BaseDictionary = {
       {
         question: "¿Puedo reservar ahora?",
         answer:
-          "No. Según los planes actuales, la venta en línea empieza el 1 de marzo de 2027. Suscríbase para recibir un aviso cuando la venta autorizada esté disponible.",
+          "No. Según los planes actuales, la venta en línea empieza el 2 de abril de 2027. Suscríbase para recibir un aviso cuando la venta autorizada esté disponible.",
       },
       {
         question: "¿Cuándo es obligatoria la viñeta?",
@@ -597,52 +609,7 @@ const dictionary: BaseDictionary = {
     ],
   },
   tolls: esTolls,
-  privacy: {
-    title: "Política de privacidad",
-    intro: "BelgiumVignette.be respeta su privacidad. Así gestionamos sus datos.",
-    sections: [
-      {
-        id: "controller",
-        title: "Responsable del tratamiento",
-        paragraphs: [
-          "BelgiumVignette.be es un sitio de información independiente sobre la viñeta vial belga prevista. No estamos afiliados al gobierno belga, Flandes, Valonia o Bruselas, y no vendemos viñetas.",
-          "El sitio se gestiona en relación con Tolls.be (información independiente sobre peajes en Bélgica). Contacto: info@tolls.be.",
-        ],
-      },
-      {
-        id: "newsletter",
-        title: "Boletín",
-        paragraphs: [
-          "Correo electrónico, idioma y fecha de consentimiento almacenados en Supabase (alojamiento en la UE). Solo para novedades sobre la viñeta.",
-        ],
-      },
-      {
-        id: "cookies",
-        title: "Cookies, analítica y consentimiento",
-        paragraphs: [
-          "Almacenamiento esencial: guardamos su preferencia de cookies en localStorage. Base legal: interés legítimo (art. 6(1)(f) RGPD) y/o consentimiento cuando sea necesario.",
-          "Analítica (opcional): Vercel Analytics recopila visitas de página anónimas. Solo se carga tras el consentimiento del banner. Base legal: consentimiento (art. 6(1)(a) RGPD). Retirar mediante Configuración de cookies en el pie de página.",
-          "Google Search Console y Bing Webmaster Tools: solo etiquetas meta de verificación de propiedad — sin cookies de seguimiento.",
-          "Conservación: hasta que borre el almacenamiento o actualicemos esta política (versión 2026-08-04).",
-        ],
-      },
-      {
-        id: "news-editorial",
-        title: "Noticias, resúmenes y contenido editorial",
-        paragraphs: [
-          "Nuestra sección de noticias publica resúmenes independientes de información de dominio público sobre la viñeta belga. Estas páginas no son reproducciones de los artículos originales.",
-          "Los resúmenes y traducciones pueden elaborarse con ayuda de IA y pueden diferir en redacción de la fuente. Siempre enlazamos al editor original. Nuestro comentario editorial («Nuestra opinión») se redacta de forma independiente y no representa al editor original ni a las autoridades belgas.",
-          "Las imágenes en artículos de noticias pueden proceder del artículo original enlazado o de agencias de prensa, con créditos cuando corresponda. Dichos contenidos siguen siendo propiedad de sus titulares de derechos. Los mostramos de buena fe como referencia, junto con un enlace a la fuente. Si cree que su contenido se utiliza incorrectamente, contacte info@tolls.be.",
-        ],
-      },
-      {
-        id: "rights",
-        title: "Sus derechos (RGPD)",
-        paragraphs: ["Acceso, rectificación, supresión, oposición — info@tolls.be."],
-      },
-    ],
-    lastUpdated: "4 August 2026",
-  },
+  privacy: getPrivacyContent("es"),
   acquisition: getAcquisitionContent("es"),
   routeChecker: getRouteCheckerContent("es"),
   news: {
@@ -659,9 +626,9 @@ const dictionary: BaseDictionary = {
     publishedOn: "Publicado",
     sourceLabel: "Fuente",
     sourceDisclaimer:
-      "Resumimos fuentes fiables y enlazamos al artículo original. Nuestra opinión es un comentario editorial independiente, no información oficial del gobierno.",
+      "BelgiumVignette.be es un sitio de información independiente y no está vinculado al gobierno belga, Flandes, Valonia ni Bruselas. Este sitio web tiene únicamente fines informativos. Las fechas, tarifas y condiciones mencionadas pueden cambiar. Para la información más actual y oficial, consulte siempre los sitios web de las autoridades belgas competentes.",
     translationDisclaimer:
-      "El resumen y la traducción de esta página se han elaborado con ayuda de IA a partir del artículo original. Consulte siempre la fuente a continuación para la redacción oficial.",
+      "BelgiumVignette.be es un sitio de información independiente y no está vinculado al gobierno belga, Flandes, Valonia ni Bruselas. Este sitio web tiene únicamente fines informativos. Las fechas, tarifas y condiciones mencionadas pueden cambiar. Para la información más actual y oficial, consulte siempre los sitios web de las autoridades belgas competentes.",
     articleAttributionTitle: "Resumen independiente — no es el artículo original",
     articleAttributionIndependence:
       "BelgiumVignette.be es un sitio de información independiente. No estamos afiliados a, respaldados por ni actuamos en nombre del editor original. Esta página resume información de dominio público y añade nuestro propio comentario editorial. No es una reproducción del artículo original.",
@@ -677,7 +644,7 @@ const dictionary: BaseDictionary = {
   newsletter: {
     emailPlaceholder: "Dirección de correo electrónico",
     consentLabel:
-      "Autorizo a BelgiumVignette.be a enviarme un correo electrónico sobre la disponibilidad de la viñeta vial belga. Puedo darme de baja en cualquier momento.",
+      "Autorizo a BelgiumVignette.be a enviarme un único correo electrónico cuando la venta oficial o autorizada de la viñeta vial belga esté disponible. Tras el envío, mis datos se eliminarán de los sistemas activos. Puedo retirar mi consentimiento en cualquier momento.",
     success: "¡Gracias! Está suscrito.",
     error: "Algo ha fallado. Inténtelo de nuevo.",
     privacyLink: "",
@@ -779,7 +746,7 @@ const dictionary: BaseDictionary = {
     {
       title: "Gobierno flamenco — Viñeta vial a partir del 1 de mayo de 2027",
       url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
-      description: "Página oficial sobre la obligación, tarifas y compra a partir del 1 de marzo de 2027",
+      description: "Página oficial sobre la obligación, tarifas y compra a partir del 2 de abril de 2027",
     },
     {
       title: "Viapass — peaje por kilómetro para camiones",

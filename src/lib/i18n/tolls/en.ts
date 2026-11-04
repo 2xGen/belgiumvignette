@@ -12,7 +12,7 @@ export const enTolls: Dictionary["tolls"] = {
       paragraphs: [
         "For passenger cars, Belgium currently does not use a general motorway vignette system like Austria or Switzerland.",
         "That is expected to change in 2027.",
-        "Belgium plans to introduce a digital road vignette from 1 May 2027 for vehicles using motorways and regional roads covered by the scheme. It would apply to Belgian vehicles and foreign-registered vehicles alike.",
+        "Belgium plans to introduce a digital road vignette from 1 May 2027 for vehicles using Belgian regional roads and motorways covered by the scheme. It would apply to Belgian vehicles and foreign-registered vehicles alike.",
         "If you plan to drive in Belgium after that date, see our full guide to the [[home|Belgium vignette 2027]].",
       ],
     },
@@ -42,7 +42,7 @@ export const enTolls: Dictionary["tolls"] = {
         },
         {
           label: "Purchase",
-          value: "Online, with sales expected to open from 1 March 2027.",
+          value: "Online, with sales expected to open from 2 April 2027.",
         },
       ],
     },
@@ -63,7 +63,7 @@ export const enTolls: Dictionary["tolls"] = {
       id: "covered-roads",
       title: "Which roads will be paid in Belgium in 2027?",
       paragraphs: [
-        "The vignette is planned for use of Belgian motorways and covered regional roads.",
+        "The vignette is planned for use of Belgian regional roads and motorways.",
         "Drivers who stay only on local roads should not need a vignette.",
         "Anyone crossing Belgium on motorways — for example towards France, the Netherlands, Germany or Luxembourg — will need to account for the new obligation once it takes effect.",
         "Practical details and the exact road network may still be clarified before launch.",
@@ -121,7 +121,7 @@ export const enTolls: Dictionary["tolls"] = {
       id: "transit",
       title: "Do you need to pay to drive through Belgium?",
       paragraphs: [
-        "From 1 May 2027, if the system launches as planned, drivers using covered motorways or regional roads will need a valid vignette.",
+        "From 1 May 2027, if the system launches as planned, drivers using Belgian regional roads and motorways will need a valid vignette.",
         "That also applies to drivers who are only transiting Belgium to reach another country.",
         "A car registered in France, the Netherlands or Germany is not automatically exempt because the driver does not live in Belgium.",
         "The vignette is planned for covered vehicles using the road network, regardless of registration country.",
@@ -143,7 +143,7 @@ export const enTolls: Dictionary["tolls"] = {
       id: "foreign-cars",
       title: "Will foreign cars have to pay?",
       paragraphs: [
-        "Yes. The plans explicitly apply the vignette to foreign users of covered motorways and regional roads.",
+        "Yes. The plans explicitly apply the vignette to foreign users of Belgian regional roads and motorways.",
         "That includes vehicles from:",
       ],
       list: [
@@ -170,7 +170,7 @@ export const enTolls: Dictionary["tolls"] = {
       id: "campervans",
       title: "Campervans and vans: do they need a vignette?",
       paragraphs: [
-        "Campervans and some vans up to 3.5 tonnes fall under the planned system when they use covered motorways and regional roads.",
+        "Campervans and some vans up to 3.5 tonnes fall under the planned system when they use Belgian regional roads and motorways.",
         "The key criteria are vehicle category and maximum technically permissible mass.",
         "Vehicles over 3.5 tonnes may fall under a different road-charging system.",
       ],
@@ -195,7 +195,7 @@ export const enTolls: Dictionary["tolls"] = {
       title: "Where to buy a vignette for Belgian motorways?",
       paragraphs: [
         "The vignette is not on sale yet.",
-        "According to currently published official information, purchase should become possible from 1 March 2027, ahead of the planned start on 1 May.",
+        "According to currently published official information, purchase should become possible from 2 April 2027, ahead of the planned start on 1 May.",
         "It should be available online via the official site or a recognised partner organisation.",
         "Avoid buying a supposed Belgium vignette 2027 from an unverified site before official sales open.",
         "We track the sales opening and will publish the link when available. See [[buy|where to buy the Belgium vignette]] for the latest information.",
@@ -229,12 +229,12 @@ export const enTolls: Dictionary["tolls"] = {
     {
       question: "Are there tolls in Belgium?",
       answer:
-        "For passenger cars, there is currently no general road vignette comparable to systems in some other European countries. A digital vignette is planned from 1 May 2027 for use of covered motorways and regional roads.",
+        "For passenger cars, there is currently no general road vignette comparable to systems in some other European countries. A digital vignette is planned from 1 May 2027 for use of Belgian regional roads and motorways.",
     },
     {
       question: "Will Belgian motorways be paid in 2027?",
       answer:
-        "Use of covered motorways and regional roads will require a vignette for vehicles under the new system if it takes effect as planned on 1 May 2027.",
+        "Use of Belgian regional roads and motorways will require a vignette for vehicles under the new system if it takes effect as planned on 1 May 2027.",
     },
     {
       question: "How much will Belgian motorways cost?",
@@ -244,12 +244,12 @@ export const enTolls: Dictionary["tolls"] = {
     {
       question: "Do I need a vignette to go to Belgium?",
       answer:
-        "It depends on the date and the roads you use. The vignette is planned from 1 May 2027 for covered vehicles on motorways and regional roads. If you only use local roads, a vignette should not be needed.",
+        "It depends on the date and the roads you use. The vignette is planned from 1 May 2027 for covered vehicles on Belgian regional roads and motorways. If you only use local roads, a vignette should not be needed.",
     },
     {
       question: "Where to buy a Belgium motorway vignette?",
       answer:
-        "Sales are not open yet. They are expected to start on 1 March 2027 via the official site and recognised partner organisations. See our How to buy page for updates.",
+        "Sales are not open yet. They are expected to start on 2 April 2027 via the official site and recognised partner organisations. See our How to buy page for updates.",
     },
     {
       question: "Do motorcycles have to pay on Belgian motorways?",

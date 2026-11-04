@@ -1,6 +1,7 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
 import { getRouteCheckerContent } from "../route-checker";
+import { getPrivacyContent } from "../privacy";
 import { roTolls } from "../tolls/ro";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -65,9 +66,9 @@ const dictionary: BaseDictionary = {
         "Amenzi planificate de până la €210, verificări ANPR și toleranță până la 1 iulie 2027.",
     },
     buy: {
-      title: "Cumpără vigneta Belgia — vânzare așteptată de la 1 martie 2027",
+      title: "Cumpără vigneta Belgia — vânzare așteptată de la 2 aprilie 2027",
       description:
-        "Conform planurilor actuale, vânzarea online a vignetei rutiere belgiene este așteptată de la 1 martie 2027. Obligatorie de la 1 mai 2027. Sursă oficială: guvernul flamand.",
+        "Conform planurilor actuale, vânzarea online a vignetei rutiere belgiene este așteptată de la 2 aprilie 2027. Obligatorie de la 1 mai 2027. Sursă oficială: guvernul flamand.",
     },
     tolls: {
       title: "Taxe în Belgia 2027: autostrăzi, vinietă și tarife",
@@ -82,7 +83,7 @@ const dictionary: BaseDictionary = {
     privacy: {
       title: "Politica de confidențialitate — BelgiumVignette.be",
       description:
-        "Cum gestionează BelgiumVignette.be cookie-urile, analitica, datele din newsletter și drepturile dvs. GDPR.",
+        "Politica de confidențialitate BelgiumVignette.be: notificare e-mail unică, cookie-uri, hosting, drepturi GDPR și contact.",
     },
     acquisition: {
       title: "BelgiumVignette.be de vânzare | Site și portofoliu de domenii",
@@ -97,10 +98,10 @@ const dictionary: BaseDictionary = {
   },
   common: {
     disclaimer:
-      "BelgiumVignette.be este un site informativ independent. Nu suntem afiliați guvernului belgian, Flandrei, Valoniei sau Bruxelles-ului.",
+      "BelgiumVignette.be este un site informativ independent și nu este afiliat guvernului belgian, Flandrei, Valoniei sau Bruxelles-ului. Acest site are exclusiv scop informativ. Datele, tarifele și condițiile menționate pot fi modificate. Pentru cele mai actuale și oficiale informații, verificați întotdeauna site-urile autorităților belgiene competente.",
     lastUpdated: "Ultima actualizare",
-    lastUpdatedDate: "28 September 2026",
-    lastUpdatedIso: "2026-09-28",
+    lastUpdatedDate: "4 noiembrie 2026",
+    lastUpdatedIso: "2026-11-04",
     readMore: "Citește mai mult",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — informații independente despre taxele rutiere din Belgia",
@@ -110,6 +111,17 @@ const dictionary: BaseDictionary = {
     backToHome: "Înapoi la pagina principală",
     plannedNotice:
       "Planurile prezentate în martie 2026 pot încă suferi modificări. Urmărim sursele oficiale și actualizăm această pagină când apar noutăți.",
+    officialNotice: {
+      title: "Important: verificați întotdeauna informațiile oficiale",
+      provisionalNote:
+        "Atenție: Vinieta rutieră belgiană nu a fost încă introdusă. Data planificată de start este 1 mai 2027. Toate informațiile rămân sub rezerva aprobării parlamentare definitive. Verificați întotdeauna informațiile actuale pe Vlaanderen.be înainte de călătorie.",
+      paragraphs: [
+        "BelgiumVignette.be este un site de informare independent și nu este legat de guvernul belgian. Vinieta rutieră belgiană este încă în pregătire. Datele, tarifele și condițiile menționate se pot modifica.",
+        "Ne străduim să oferim informații corecte și actuale, dar nu putem garanta că toate informațiile sunt complete sau actuale în orice moment. Înainte de călătorie sau cumpărare, verificați întotdeauna cele mai recente informații pe site-urile oficiale ale autorităților belgiene competente.",
+      ],
+      sourceLabel: "Informații oficiale: Vlaanderen.be — Vinietă rutieră de la 1 mai 2027",
+      sourceUrl: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+    },
     independentSite: "Informații independente despre vinieta rutieră belgiană",
     contactLabel: "Contact",
     cookieSettings: "Setări cookie",
@@ -169,7 +181,7 @@ const dictionary: BaseDictionary = {
     overview: {
       title: "Vinieta rutieră belgiană: ce este planificat pentru 2027",
       paragraphs: [
-        "Belgia plănuiește introducerea unei viniete rutiere digitale din 1 mai 2027. Vinieta belgiană s-ar aplica autoturismelor de până la 3,5 tone pe autostrăzi și anumite drumuri regionale principale.",
+        "Belgia plănuiește introducerea unei viniete rutiere digitale din 1 mai 2027. Vinieta belgiană s-ar aplica autoturismelor de până la 3,5 tone pe drumurile regionale și autostrăzile belgiene.",
         "Mașinile străine ar fi incluse. Șoferii din Franța, Țările de Jos, Germania și alte țări ar avea nevoie de o vinietă pentru a folosi drumurile belgiene acoperite.",
         "Nu ar fi un autocolant pe parbriz. Vinieta de autostradă belgiană ar fi digitală și legată de numărul de înmatriculare, cu verificări inclusiv prin camere ANPR.",
         "Conform tarifelor publicate de guvernul flamand, prețul depinde de Euronormă și durată: de la €8,10 pe zi pentru vehicule fără emisii și €9 pe zi pentru Euro 4+, până la €90–€125 pe an. Sunt planificate și 10 zile, 1 lună și 2 luni.",
@@ -181,7 +193,7 @@ const dictionary: BaseDictionary = {
         id: "autostrazi",
         title: "Aveți nevoie de vinietă pentru autostrăzile din Belgia?",
         paragraphs: [
-          "Conform planurilor actuale, o vinietă rutieră digitală ar deveni obligatorie pe autostrăzile belgiene și pe anumite drumuri regionale principale din 1 mai 2027.",
+          "Conform planurilor actuale, o vinietă rutieră digitală ar deveni obligatorie pe drumurile regionale și autostrăzile belgiene din 1 mai 2027.",
           "Astăzi majoritatea autostrăzilor belgiene rămân gratuite pentru autoturisme. Proiectul de vinietă ar schimba asta: accesul la autostrăzi și la o parte din rețeaua regională mai rapidă ar necesita o vinietă legată de numărul de înmatriculare.",
           "Dacă folosiți doar drumuri locale, o vinietă nu ar fi necesară conform informațiilor publicate. În practică, evitarea completă a autostrăzilor și a drumurilor regionale principale este adesea dificilă pentru călătorii interurbane sau de tranzit.",
         ],
@@ -206,7 +218,7 @@ const dictionary: BaseDictionary = {
         id: "cumpara",
         title: "Unde se cumpără vigneta Belgia?",
         paragraphs: [
-          "Vânzarea oficială nu a început încă. Conform planurilor actuale, cumpărarea online ar fi posibilă din 1 martie 2027 prin site-ul oficial sau un partener autorizat.",
+          "Vânzarea oficială nu a început încă. Conform planurilor actuale, cumpărarea online ar fi posibilă din 2 aprilie 2027 prin site-ul oficial sau un partener autorizat.",
           "Astăzi nu există un portal oficial de vânzare. Site-urile care oferă deja rezervare sau plată nu sunt canalul oficial.",
         ],
         link: {
@@ -256,7 +268,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Aveți nevoie de vinietă pentru autostrăzile din Belgia?",
         answer:
-          "Conform planurilor actuale, da din 1 mai 2027 pe autostrăzile belgiene și pe anumite drumuri regionale principale. Drumurile locale ar rămâne în afara obligației.",
+          "Conform planurilor actuale, da din 1 mai 2027 pe drumurile regionale și autostrăzile belgiene. Drumurile locale ar rămâne în afara obligației.",
       },
       {
         question: "Au motocicletele nevoie de vigneta Belgia?",
@@ -271,7 +283,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Unde se cumpără vigneta Belgia?",
         answer:
-          "Vânzarea oficială nu a început încă. Conform planurilor, cumpărarea online este așteptată din 1 martie 2027 prin canalul oficial sau un partener autorizat.",
+          "Vânzarea oficială nu a început încă. Conform planurilor, cumpărarea online este așteptată din 2 aprilie 2027 prin canalul oficial sau un partener autorizat.",
       },
     ],
     sourcesTitle: "Surse oficiale",
@@ -282,7 +294,7 @@ const dictionary: BaseDictionary = {
       "Prețul planificat al vignetei rutiere belgiene depinde de doi factori: Euronorma vehiculului și durata de valabilitate a vignetei. Guvernul flamand a publicat tarife pentru 1 zi, 10 zile, 1 lună, 2 luni și 1 an.",
     leadParagraphs: [
       "Pentru o mașină cu Euro 4 sau superior, vigneta belgiană costă conform tarifelor actuale €9 pentru 1 zi, €12 pentru 10 zile și €100 pentru un an. Vehiculele fără emisii plătesc mai puțin, iar vehiculele cu Euro 0 până la Euro 3 plătesc mai mult.",
-      "Vigneta este planificată din 1 mai 2027. Achiziția ar deveni posibilă din 1 martie 2027. Introducerea rămâne condiționată de aprobarea finală.",
+      "Vigneta este planificată din 1 mai 2027. Achiziția ar deveni posibilă din 2 aprilie 2027. Introducerea rămâne condiționată de aprobarea finală.",
     ],
     matrixTitle: "Prețuri vigneta rutieră belgiană 2027",
     rateMatrix: roRateMatrix,
@@ -361,7 +373,7 @@ const dictionary: BaseDictionary = {
       id: "cand",
       title: "Când se aplică aceste prețuri?",
       paragraphs: [
-        "Vigneta rutieră digitală este planificată din 1 mai 2027. Conform informațiilor oficiale actuale, vigneta ar putea fi cumpărată online din 1 martie 2027.",
+        "Vigneta rutieră digitală este planificată din 1 mai 2027. Conform informațiilor oficiale actuale, vigneta ar putea fi cumpărată online din 2 aprilie 2027.",
         "Implementarea practică este încă în curs, iar introducerea rămâne condiționată de aprobarea finală.",
         "Doriți să aflați cum va funcționa achiziția? Consultați [[buy|Cumpără vigneta Belgia]]. Pentru toate regulile, vehiculele și datele importante mergeți la ghidul nostru complet despre [[home|vigneta rutieră belgiană 2027]].",
       ],
@@ -550,7 +562,7 @@ const dictionary: BaseDictionary = {
   buy: {
     title: "Când pot cumpăra o vignetă belgiană?",
     intro:
-      "Conform planurilor actuale, vânzarea online este așteptată de la 1 martie 2027. Vigneta rutieră ar deveni obligatorie de la 1 mai 2027. Condițiile finale și portalul oficial de vânzare se pot schimba.",
+      "Conform planurilor actuale, vânzarea online este așteptată de la 2 aprilie 2027. Vigneta rutieră ar deveni obligatorie de la 1 mai 2027. Condițiile finale și portalul oficial de vânzare se pot schimba.",
     independenceNotice:
       "BelgiumVignette.be este un site de informații independent și nu este nici un site oficial al guvernului belgian, nici un vânzător autorizat al vinietei rutiere.",
     sections: [
@@ -558,7 +570,7 @@ const dictionary: BaseDictionary = {
         id: "when",
         title: "Când începe vânzarea?",
         paragraphs: [
-          "Guvernul flamand indică faptul că veți putea cumpăra vigneta online de la 1 martie 2027, pe site-ul oficial sau printr-un partener autorizat.",
+          "Guvernul flamand indică faptul că veți putea cumpăra vigneta online de la 2 aprilie 2027, pe site-ul oficial sau printr-un partener autorizat.",
           "Astăzi nu există un portal de vânzare: nu puteți rezerva sau plăti încă. Site-urile care oferă deja acest lucru nu sunt canalul oficial.",
         ],
       },
@@ -571,13 +583,13 @@ const dictionary: BaseDictionary = {
         ],
       },
     ],
-    statusBadge: "Vânzare așteptată de la 1 martie 2027",
+    statusBadge: "Vânzare așteptată de la 2 aprilie 2027",
     officialSourceLabel: "Sursă oficială",
     steps: [
       {
         title: "Așteptați vânzarea autorizată",
         description:
-          "Achiziție online așteptată de la 1 martie 2027 pe site-ul oficial sau printr-un partener autorizat, conform guvernului flamand.",
+          "Achiziție online așteptată de la 2 aprilie 2027 pe site-ul oficial sau printr-un partener autorizat, conform guvernului flamand.",
       },
       { title: "Înregistrați numărul de înmatriculare", description: "Sistem digital — fără autocolant pe parbriz." },
       { title: "Alegeți durata", description: "Zi, 10 zile, lună, 2 luni sau anual." },
@@ -587,7 +599,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Pot precomanda acum?",
         answer:
-          "Nu. Conform planurilor actuale, vânzarea online începe la 1 martie 2027. Înscrieți-vă pentru actualizări ca să primiți o notificare când vânzarea autorizată devine disponibilă.",
+          "Nu. Conform planurilor actuale, vânzarea online începe la 2 aprilie 2027. Înscrieți-vă pentru actualizări ca să primiți o notificare când vânzarea autorizată devine disponibilă.",
       },
       {
         question: "Când devine vigneta obligatorie?",
@@ -597,52 +609,7 @@ const dictionary: BaseDictionary = {
     ],
   },
   tolls: roTolls,
-  privacy: {
-    title: "Politica de confidențialitate",
-    intro: "BelgiumVignette.be respectă confidențialitatea dvs. Iată cum gestionăm datele dvs.",
-    sections: [
-      {
-        id: "controller",
-        title: "Operator de date",
-        paragraphs: [
-          "BelgiumVignette.be este un site de informații independent despre vigneta rutieră belgiană planificată. Nu suntem afiliați cu guvernul belgian, Flandra, Valonia sau Bruxelles și nu vindem viniete.",
-          "Site-ul este administrat în legătură cu Tolls.be (informații independente despre taxele de drum din Belgia). Contact: info@tolls.be.",
-        ],
-      },
-      {
-        id: "newsletter",
-        title: "Newsletter",
-        paragraphs: [
-          "E-mailul, limba și data consimțământului sunt stocate în Supabase (găzduire UE). Folosite doar pentru actualizări despre vignetă.",
-        ],
-      },
-      {
-        id: "cookies",
-        title: "Cookie-uri, analitică și consimțământ",
-        paragraphs: [
-          "Stocare esențială: salvăm preferința dvs. privind cookie-urile în localStorage. Temei legal: interes legitim (Art. 6(1)(f) GDPR) și/sau consimțământ acolo unde este necesar.",
-          "Analitică (opțional): Vercel Analytics colectează vizualizări anonime de pagină. Se încarcă doar după consimțământul din banner. Temei legal: consimțământ (Art. 6(1)(a) GDPR). Retragere prin Setări cookie din subsol.",
-          "Google Search Console și Bing Webmaster Tools: doar etichete meta de verificare a proprietății — fără cookie-uri de urmărire.",
-          "Păstrare: până când ștergeți stocarea sau actualizăm această politică (versiunea 2026-08-04).",
-        ],
-      },
-      {
-        id: "news-editorial",
-        title: "Știri, rezumate & conținut editorial",
-        paragraphs: [
-          "Secțiunea noastră de știri publică rezumate independente ale reportajelor disponibile public despre vigneta belgiană. Aceste pagini nu sunt reproduceri ale articolelor originale.",
-          "Rezumatele și traducerile pot fi realizate cu ajutorul IA și pot diferi în formulare față de sursă. Linkăm întotdeauna către editorul original. Comentariul nostru editorial («Perspectiva noastră») este scris independent și nu reprezintă editorul original sau autoritățile belgiene.",
-          "Imaginile din articolele de știri pot proveni din articolul original linkat sau de la agenții de presă, cu credite acolo unde este cazul. Astfel de materiale rămân proprietatea deținătorilor respectivi de drepturi. Le afișăm cu bună-credință ca referință, alături de un link către sursă. Dacă considerați că conținutul dvs. este folosit incorect, contactați info@tolls.be.",
-        ],
-      },
-      {
-        id: "rights",
-        title: "Drepturile dvs. (GDPR)",
-        paragraphs: ["Acces, rectificare, ștergere, opoziție — info@tolls.be."],
-      },
-    ],
-    lastUpdated: "4 August 2026",
-  },
+  privacy: getPrivacyContent("ro"),
   acquisition: getAcquisitionContent("ro"),
   routeChecker: getRouteCheckerContent("ro"),
   news: {
@@ -659,9 +626,9 @@ const dictionary: BaseDictionary = {
     publishedOn: "Publicat",
     sourceLabel: "Sursă",
     sourceDisclaimer:
-      "Rezumăm surse de încredere și linkăm articolul original. Perspectiva noastră este un comentariu editorial independent, nu informații oficiale guvernamentale.",
+      "BelgiumVignette.be este un site informativ independent și nu este afiliat guvernului belgian, Flandrei, Valoniei sau Bruxelles-ului. Acest site are exclusiv scop informativ. Datele, tarifele și condițiile menționate pot fi modificate. Pentru cele mai actuale și oficiale informații, verificați întotdeauna site-urile autorităților belgiene competente.",
     translationDisclaimer:
-      "Rezumatul și traducerea de pe această pagină au fost realizate cu ajutorul IA pe baza articolului original. Consultați întotdeauna sursa de mai jos pentru formularea oficială.",
+      "BelgiumVignette.be este un site informativ independent și nu este afiliat guvernului belgian, Flandrei, Valoniei sau Bruxelles-ului. Acest site are exclusiv scop informativ. Datele, tarifele și condițiile menționate pot fi modificate. Pentru cele mai actuale și oficiale informații, verificați întotdeauna site-urile autorităților belgiene competente.",
     articleAttributionTitle: "Rezumat independent — nu articolul original",
     articleAttributionIndependence:
       "BelgiumVignette.be este un site de informații independent. Nu suntem afiliați cu, aprobați de sau acționăm în numele editorului original. Această pagină rezumă reportaje disponibile public și adaugă propriul nostru comentariu editorial. Nu este o reproducere a articolului original.",
@@ -677,7 +644,7 @@ const dictionary: BaseDictionary = {
   newsletter: {
     emailPlaceholder: "Adresă de e-mail",
     consentLabel:
-      "Autorizez BelgiumVignette.be să îmi trimită e-mailuri despre disponibilitatea vinietei rutiere belgiene. Mă pot dezabona oricând.",
+      "Autorizez BelgiumVignette.be să îmi trimită un singur e-mail când vânzarea oficială sau autorizată a vinietei rutiere belgiene va fi disponibilă. După trimitere, datele mele vor fi șterse din sistemele active. Îmi pot retrage consimțământul oricând.",
     success: "Mulțumim! Sunteți abonat.",
     error: "Ceva nu a funcționat. Vă rugăm să încercați din nou.",
     privacyLink: "",
@@ -779,7 +746,7 @@ const dictionary: BaseDictionary = {
     {
       title: "Guvernul flamand — Vignetă rutieră de la 1 mai 2027",
       url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
-      description: "Pagină oficială despre obligație, tarife și cumpărare de la 1 martie 2027",
+      description: "Pagină oficială despre obligație, tarife și cumpărare de la 2 aprilie 2027",
     },
     {
       title: "Viapass — taxă pe kilometru pentru camioane",

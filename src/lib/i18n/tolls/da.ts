@@ -42,7 +42,7 @@ export const daTolls: Dictionary["tolls"] = {
         },
         {
           label: "Køb",
-          value: "Online, med salg forventet at åbne fra 1. marts 2027.",
+          value: "Online, med salg forventet at åbne fra 2. april 2027.",
         },
       ],
     },
@@ -195,7 +195,7 @@ export const daTolls: Dictionary["tolls"] = {
       title: "Hvor køber man vignetten til belgiske motorveje?",
       paragraphs: [
         "Vignetten er endnu ikke til salg.",
-        "Ifølge aktuelt offentliggjorte officielle oplysninger bør køb blive muligt fra 1. marts 2027, før den planlagte ikrafttræden den 1. maj.",
+        "Ifølge aktuelt offentliggjorte officielle oplysninger bør køb blive muligt fra 2. april 2027, før den planlagte ikrafttræden den 1. maj.",
         "Vignetten skal kunne købes online via den officielle hjemmeside eller en anerkendt partnerorganisation.",
         "Undgå at købe et påstået belgisk vignet 2027 fra en ikke-verificeret side, før det officielle salg åbner.",
         "Vi følger åbningen af salget og publicerer linket, når det er tilgængeligt. Se [[buy|hvor man køber det belgiske vignet]] for seneste information.",
@@ -249,7 +249,7 @@ export const daTolls: Dictionary["tolls"] = {
     {
       question: "Hvor køber man motorvejsvignetten til Belgien?",
       answer:
-        "Salget er endnu ikke åbent. Det forventes at starte 1. marts 2027 via den officielle hjemmeside og anerkendte partnerorganisationer. Se vores side Sådan køber du for opdateringer om åbningen.",
+        "Salget er endnu ikke åbent. Det forventes at starte 2. april 2027 via den officielle hjemmeside og anerkendte partnerorganisationer. Se vores side Sådan køber du for opdateringer om åbningen.",
     },
     {
       question: "Skal motorcykler betale på belgiske motorveje?",

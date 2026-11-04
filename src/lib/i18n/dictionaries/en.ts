@@ -1,6 +1,7 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
 import { getRouteCheckerContent } from "../route-checker";
+import { getPrivacyContent } from "../privacy";
 import { enTolls } from "../tolls/en";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -65,9 +66,9 @@ const dictionary: BaseDictionary = {
         "Planned fines up to €210, ANPR checks and tolerance until 1 July 2027.",
     },
     buy: {
-      title: "Buy Belgium vignette — sales expected 1 March 2027",
+      title: "Buy Belgium vignette — sales expected 2 April 2027",
       description:
-        "According to current plans, online sales of the Belgium road vignette are expected from 1 March 2027. Mandatory from 1 May 2027. Official source: Flemish government.",
+        "According to current plans, online sales of the Belgium road vignette are expected from 2 April 2027. Mandatory from 1 May 2027. Official source: Flemish government.",
     },
     tolls: {
       title: "Tolls in Belgium 2027: motorways, vignette and prices",
@@ -82,7 +83,7 @@ const dictionary: BaseDictionary = {
     privacy: {
       title: "Privacy policy — BelgiumVignette.be",
       description:
-        "How BelgiumVignette.be handles cookies, analytics, newsletter data and your GDPR rights.",
+        "Privacy policy of BelgiumVignette.be: one-time email notification, cookies, hosting, GDPR rights and contact details.",
     },
     acquisition: {
       title: "BelgiumVignette.be for Sale | Website & Domain Portfolio",
@@ -97,10 +98,10 @@ const dictionary: BaseDictionary = {
   },
   common: {
     disclaimer:
-      "BelgiumVignette.be is an independent information site. We are not affiliated with the Belgian government, Flanders, Wallonia or Brussels.",
+      "BelgiumVignette.be is an independent information site and is not affiliated with the Belgian government, Flanders, Wallonia or Brussels. This website is for information purposes only. The dates, rates and conditions mentioned may change. For the most current and official information, always check the websites of the competent Belgian authorities.",
     lastUpdated: "Last updated",
-    lastUpdatedDate: "28 September 2026",
-    lastUpdatedIso: "2026-09-28",
+    lastUpdatedDate: "4 November 2026",
+    lastUpdatedIso: "2026-11-04",
     readMore: "Read more",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — independent Belgium toll information",
@@ -110,6 +111,17 @@ const dictionary: BaseDictionary = {
     backToHome: "Back to home",
     plannedNotice:
       "Plans presented in March 2026 may still change. We track official sources and update this page when news breaks.",
+    officialNotice: {
+      title: "Important: always check the official information",
+      provisionalNote:
+        "Please note: The Belgian road vignette has not yet been introduced. The planned start date is 1 May 2027. All information remains subject to final parliamentary approval. Always check the latest information on Vlaanderen.be before travelling.",
+      paragraphs: [
+        "BelgiumVignette.be is an independent information site and is not affiliated with the Belgian government. The Belgian road vignette is still being prepared. The dates, rates and conditions mentioned may change.",
+        "We aim to provide accurate and up-to-date information, but we cannot guarantee that all information is complete or current at all times. Before travelling or purchasing, always check the latest information on the official websites of the competent Belgian authorities.",
+      ],
+      sourceLabel: "Official information: Vlaanderen.be — Road vignette from 1 May 2027",
+      sourceUrl: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+    },
     independentSite: "Independent information on the Belgian road vignette",
     contactLabel: "Contact",
     cookieSettings: "Cookie settings",
@@ -169,7 +181,7 @@ const dictionary: BaseDictionary = {
     overview: {
       title: "Belgium road vignette: what is planned for 2027",
       paragraphs: [
-        "Belgium plans to introduce a digital road vignette from 1 May 2027. The Belgium vignette would apply to passenger cars up to 3.5 tonnes on motorways and certain main regional roads.",
+        "Belgium plans to introduce a digital road vignette from 1 May 2027. The Belgium vignette would apply to passenger cars up to 3.5 tonnes on Belgian regional roads and motorways.",
         "Foreign cars would be included. Drivers from France, the Netherlands, Germany and other countries would need a vignette to use the covered Belgian roads.",
         "It would not be a windshield sticker. The Belgian motorway vignette would be digital and linked to the number plate, with checks including ANPR cameras.",
         "According to rates published by the Flemish government, the price depends on Euro standard and duration: from €8.10 per day for zero-emission vehicles and €9 per day for Euro 4+, up to €90–€125 per year. Options of 10 days, 1 month and 2 months are also planned.",
@@ -181,9 +193,9 @@ const dictionary: BaseDictionary = {
         id: "motorways",
         title: "Do you need a vignette for motorways in Belgium?",
         paragraphs: [
-          "According to current plans, a digital road vignette would become mandatory on Belgian motorways and certain main regional roads from 1 May 2027.",
-          "Today most Belgian motorways remain free for passenger cars. The vignette project would change that: access to motorways and part of the higher-speed regional network would require a plate-linked vignette.",
-          "If you only use local roads, a vignette would not be required under published information. In practice, fully avoiding motorways and main regional roads is often difficult for intercity or transit trips.",
+          "According to current plans, a digital road vignette would become mandatory on Belgian regional roads and motorways from 1 May 2027.",
+          "Today most Belgian motorways remain free for passenger cars. The vignette project would change that: access to Belgian regional roads and motorways would require a plate-linked vignette.",
+          "If you only use local roads, a vignette would not be required under published information. In practice, fully avoiding regional roads and motorways is often difficult for intercity or transit trips.",
         ],
         link: {
           href: "tolls",
@@ -206,7 +218,7 @@ const dictionary: BaseDictionary = {
         id: "buy",
         title: "Where to buy the Belgium vignette?",
         paragraphs: [
-          "Official sales have not started yet. According to current plans, online purchase would be possible from 1 March 2027 via the official website or an authorised partner.",
+          "Official sales have not started yet. According to current plans, online purchase would be possible from 2 April 2027 via the official website or an authorised partner.",
           "There is no official sales portal today. Sites that already offer booking or payment are not the official channel.",
         ],
         link: {
@@ -256,7 +268,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Do you need a vignette for motorways in Belgium?",
         answer:
-          "According to current plans, yes from 1 May 2027 on Belgian motorways and certain main regional roads. Local roads would remain outside the obligation.",
+          "According to current plans, yes from 1 May 2027 on Belgian regional roads and motorways. Local roads would remain outside the obligation.",
       },
       {
         question: "Do motorcycles need a Belgium vignette?",
@@ -271,7 +283,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Where to buy the Belgium vignette?",
         answer:
-          "Official sales have not started. According to plans, online purchase is expected from 1 March 2027 via the official channel or an authorised partner.",
+          "Official sales have not started. According to plans, online purchase is expected from 2 April 2027 via the official channel or an authorised partner.",
       },
     ],
     sourcesTitle: "Official sources",
@@ -282,7 +294,7 @@ const dictionary: BaseDictionary = {
       "The planned price of the Belgium road vignette depends on two factors: your vehicle's Euro standard and the vignette validity period. The Flemish government has published rates for 1 day, 10 days, 1 month, 2 months and 1 year.",
     leadParagraphs: [
       "For a car with Euro 4 or higher, the Belgium vignette costs €9 for 1 day, €12 for 10 days and €100 for a year according to current rates. Zero-emission vehicles pay less, and vehicles with Euro 0 through Euro 3 pay more.",
-      "The vignette is planned from 1 May 2027. Purchase would become possible from 1 March 2027. Introduction is still subject to final approval.",
+      "The vignette is planned from 1 May 2027. Purchase would become possible from 2 April 2027. Introduction is still subject to final approval.",
     ],
     matrixTitle: "Belgium road vignette prices 2027",
     rateMatrix: enRateMatrix,
@@ -361,7 +373,7 @@ const dictionary: BaseDictionary = {
       id: "when",
       title: "When do these prices apply?",
       paragraphs: [
-        "The digital road vignette is planned from 1 May 2027. According to current official information, the vignette could be bought online from 1 March 2027.",
+        "The digital road vignette is planned from 1 May 2027. According to current official information, the vignette could be bought online from 2 April 2027.",
         "Practical details are still being worked out and introduction remains subject to final approval.",
         "Want to know how purchase will work? See [[buy|Buy Belgium vignette]]. For all rules, vehicles and key dates, go to our complete guide on the [[home|Belgium road vignette 2027]].",
       ],
@@ -465,7 +477,7 @@ const dictionary: BaseDictionary = {
         tips: [
           "Yes — French-registered passenger cars are expected to need a Belgium vignette when using covered Belgian roads from 1 May 2027.",
           "This is especially relevant for Northern France → Belgium trips and France → Netherlands/Germany transit routes.",
-          "Covered roads include motorways and planned regional main roads — not only long-distance transit.",
+          "Covered roads include Belgian regional roads and motorways — not only long-distance transit.",
         ],
       },
     ],
@@ -532,7 +544,7 @@ const dictionary: BaseDictionary = {
       {
         id: "anpr",
         title: "ANPR checks",
-        paragraphs: ["Cameras on motorways and regional main roads verify vignette validity."],
+        paragraphs: ["Cameras on Belgian regional roads and motorways verify vignette validity."],
       },
     ],
     fineTable: [
@@ -550,7 +562,7 @@ const dictionary: BaseDictionary = {
   buy: {
     title: "When can I buy a Belgium vignette?",
     intro:
-      "According to current plans, online sales are expected from 1 March 2027. The road vignette would become mandatory from 1 May 2027. Final conditions and the official sales portal may still change.",
+      "According to current plans, online sales are expected from 2 April 2027. The road vignette would become mandatory from 1 May 2027. Final conditions and the official sales portal may still change.",
     independenceNotice:
       "BelgiumVignette.be is an independent information website and is not an official Belgian government website or recognised vignette seller.",
     sections: [
@@ -558,7 +570,7 @@ const dictionary: BaseDictionary = {
         id: "when",
         title: "When do sales open?",
         paragraphs: [
-          "The Flemish government states that you will be able to buy the vignette online from 1 March 2027, via the official website or an authorised partner.",
+          "The Flemish government states that you will be able to buy the vignette online from 2 April 2027, via the official website or an authorised partner.",
           "There is no sales portal today, and you cannot reserve or pay yet. Sites that already offer that are not the official channel.",
         ],
       },
@@ -571,13 +583,13 @@ const dictionary: BaseDictionary = {
         ],
       },
     ],
-    statusBadge: "Sales expected 1 March 2027",
+    statusBadge: "Sales expected 2 April 2027",
     officialSourceLabel: "Official source",
     steps: [
       {
         title: "Wait for authorised sales",
         description:
-          "Online purchase expected from 1 March 2027 via the official website or an authorised partner, according to the Flemish government.",
+          "Online purchase expected from 2 April 2027 via the official website or an authorised partner, according to the Flemish government.",
       },
       { title: "Register your plate", description: "Digital system — no windshield sticker." },
       { title: "Choose duration", description: "Day, 10 days, month, 2 months or annual." },
@@ -587,62 +599,17 @@ const dictionary: BaseDictionary = {
       {
         question: "Can I pre-order now?",
         answer:
-          "No. According to current plans, online sales start on 1 March 2027. Subscribe for updates to be notified when authorised sales become available.",
+          "No. According to current plans, online sales start on 2 April 2027. Subscribe for updates to be notified when authorised sales become available.",
       },
       {
         question: "When does the vignette become mandatory?",
         answer:
-          "According to the plans, from 1 May 2027 on Belgian motorways and regional roads. A tolerance period is planned from 1 May to 1 July 2027.",
+          "According to the plans, from 1 May 2027 on Belgian regional roads and motorways. A tolerance period is planned from 1 May to 1 July 2027.",
       },
     ],
   },
   tolls: enTolls,
-  privacy: {
-    title: "Privacy policy",
-    intro: "BelgiumVignette.be respects your privacy. Here's how we handle your data.",
-    sections: [
-      {
-        id: "controller",
-        title: "Data controller",
-        paragraphs: [
-          "BelgiumVignette.be is an independent information website about the planned Belgian road vignette. We are not affiliated with the Belgian government, Flanders, Wallonia or Brussels, and we do not sell vignettes.",
-          "The site is operated in connection with Tolls.be (independent information about tolls in Belgium). Contact: info@tolls.be.",
-        ],
-      },
-      {
-        id: "newsletter",
-        title: "Newsletter",
-        paragraphs: [
-          "Email, locale and consent timestamp stored in Supabase (EU hosting). Used only for vignette updates.",
-        ],
-      },
-      {
-        id: "cookies",
-        title: "Cookies, analytics & consent",
-        paragraphs: [
-          "Essential storage: we save your cookie preference in localStorage. Legal basis: legitimate interest (Art. 6(1)(f) GDPR) and/or consent where required.",
-          "Analytics (optional): Vercel Analytics collects anonymous page views. Loaded only after banner consent. Legal basis: consent (Art. 6(1)(a) GDPR). Withdraw via Cookie settings in the footer.",
-          "Google Search Console & Bing Webmaster Tools: ownership verification meta tags only — no tracking cookies.",
-          "Retention: until you clear storage or we update this policy (version 2026-08-04).",
-        ],
-      },
-      {
-        id: "news-editorial",
-        title: "News summaries & editorial content",
-        paragraphs: [
-          "Our news section publishes independent summaries of publicly available reporting about the Belgium vignette. These pages are not reproductions of the original articles.",
-          "Summaries and translations may be produced with AI assistance and can differ in wording from the source. We always link to the original publisher. Our editorial commentary ('Our view') is written independently and does not represent the original publisher or Belgian authorities.",
-          "Images on news articles may be sourced from the linked original article or press agencies, with credits shown where applicable. Such media remains the property of the respective rights holders. We display it in good faith for reference alongside a link to the source. If you believe your content is used incorrectly, contact info@tolls.be.",
-        ],
-      },
-      {
-        id: "rights",
-        title: "Your rights (GDPR)",
-        paragraphs: ["Access, rectification, deletion, objection — info@tolls.be."],
-      },
-    ],
-    lastUpdated: "4 August 2026",
-  },
+  privacy: getPrivacyContent("en"),
   acquisition: getAcquisitionContent("en"),
   routeChecker: getRouteCheckerContent("en"),
   news: {
@@ -659,9 +626,9 @@ const dictionary: BaseDictionary = {
     publishedOn: "Published",
     sourceLabel: "Source",
     sourceDisclaimer:
-      "We summarise trusted sources and link to the original article. Our view is independent editorial commentary, not official government information.",
+      "BelgiumVignette.be is an independent information site and is not affiliated with the Belgian government, Flanders, Wallonia or Brussels. This website is for information purposes only. The dates, rates and conditions mentioned may change. For the most current and official information, always check the websites of the competent Belgian authorities.",
     translationDisclaimer:
-      "The summary and translation on this page were produced with AI assistance from the original article. Always refer to the source below for the authoritative wording.",
+      "BelgiumVignette.be is an independent information site and is not affiliated with the Belgian government, Flanders, Wallonia or Brussels. This website is for information purposes only. The dates, rates and conditions mentioned may change. For the most current and official information, always check the websites of the competent Belgian authorities.",
     articleAttributionTitle: "Independent summary — not the original article",
     articleAttributionIndependence:
       "BelgiumVignette.be is an independent information site. We are not affiliated with, endorsed by, or acting on behalf of the original publisher. This page summarises publicly available reporting and adds our own editorial commentary. It is not a reproduction of the original article.",
@@ -677,7 +644,7 @@ const dictionary: BaseDictionary = {
   newsletter: {
     emailPlaceholder: "Email address",
     consentLabel:
-      "I authorise BelgiumVignette.be to email me about the availability of the Belgian road vignette. I can unsubscribe at any time.",
+      "I give BelgiumVignette.be permission to send me one email when official or authorised sales of the Belgian road vignette become available. After sending, my data will be deleted from the active systems. I can withdraw my consent at any time.",
     success: "Thank you! You're subscribed.",
     error: "Something went wrong. Please try again.",
     privacyLink: "",
@@ -776,7 +743,7 @@ const dictionary: BaseDictionary = {
     {
       title: "Flemish government — Road vignette from 1 May 2027",
       url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
-      description: "Official page on the obligation, rates and purchase from 1 March 2027",
+      description: "Official page on the obligation, rates and purchase from 2 April 2027",
     },
     {
       title: "Viapass — kilometre charge for trucks",

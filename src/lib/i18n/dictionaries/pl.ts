@@ -1,6 +1,7 @@
 import type { BaseDictionary } from "../types";
 import { getAcquisitionContent } from "../acquisition";
 import { getRouteCheckerContent } from "../route-checker";
+import { getPrivacyContent } from "../privacy";
 import { plTolls } from "../tolls/pl";
 import { buildRateMatrix } from "../rate-matrix";
 
@@ -65,9 +66,9 @@ const dictionary: BaseDictionary = {
         "Planowane mandaty do €210, kontrole ANPR i okres tolerancji do 1 lipca 2027 r.",
     },
     buy: {
-      title: "Kup winietę belgijską — sprzedaż oczekiwana od 1 marca 2027",
+      title: "Kup winietę belgijską — sprzedaż oczekiwana od 2 kwietnia 2027",
       description:
-        "Według obecnych planów sprzedaż online belgijskiej winiety drogowej ma ruszyć 1 marca 2027 r. Obowiązkowa od 1 maja 2027 r. Oficjalne źródło: rząd flamandzki.",
+        "Według obecnych planów sprzedaż online belgijskiej winiety drogowej ma ruszyć 2 kwietnia 2027 r. Obowiązkowa od 1 maja 2027 r. Oficjalne źródło: rząd flamandzki.",
     },
     tolls: {
       title: "Opłaty drogowe w Belgii 2027: autostrady, winieta i stawki",
@@ -82,7 +83,7 @@ const dictionary: BaseDictionary = {
     privacy: {
       title: "Polityka prywatności — BelgiumVignette.be",
       description:
-        "Jak BelgiumVignette.be obsługuje pliki cookie, analitykę, dane newslettera i Twoje prawa RODO.",
+        "Polityka prywatności BelgiumVignette.be: jednorazowe powiadomienie e-mail, pliki cookie, hosting, prawa RODO i kontakt.",
     },
     acquisition: {
       title: "BelgiumVignette.be na sprzedaż | Strona i portfolio domen",
@@ -97,10 +98,10 @@ const dictionary: BaseDictionary = {
   },
   common: {
     disclaimer:
-      "BelgiumVignette.be to niezależna strona informacyjna. Nie jesteśmy powiązani z rządem belgijskim, Flandrią, Walonią ani Brukselą.",
+      "BelgiumVignette.be to niezależna strona informacyjna i nie jest powiązana z rządem belgijskim, Flandrią, Walonią ani Brukselą. Ta strona służy wyłącznie celom informacyjnym. Podane daty, stawki i warunki mogą ulec zmianie. Najaktualniejsze i oficjalne informacje zawsze sprawdzaj na stronach właściwych belgijskich organów.",
     lastUpdated: "Ostatnia aktualizacja",
-    lastUpdatedDate: "28 September 2026",
-    lastUpdatedIso: "2026-09-28",
+    lastUpdatedDate: "4 listopada 2026",
+    lastUpdatedIso: "2026-11-04",
     readMore: "Czytaj więcej",
     relatedSite: "https://tolls.be/en",
     relatedSiteLabel: "Tolls.be — niezależne informacje o opłatach drogowych w Belgii",
@@ -110,6 +111,17 @@ const dictionary: BaseDictionary = {
     backToHome: "Powrót do strony głównej",
     plannedNotice:
       "Plany przedstawione w marcu 2026 r. mogą jeszcze ulec zmianie. Śledzimy oficjalne źródła i aktualizujemy tę stronę, gdy pojawią się nowe informacje.",
+    officialNotice: {
+      title: "Ważne: zawsze sprawdzaj oficjalne informacje",
+      provisionalNote:
+        "Uwaga: Belgijska winieta drogowa nie została jeszcze wprowadzona. Planowana data rozpoczęcia to 1 maja 2027 r. Wszystkie informacje podlegają ostatecznemu zatwierdzeniu parlamentarnemu. Przed podróżą zawsze sprawdzaj aktualne informacje na Vlaanderen.be.",
+      paragraphs: [
+        "BelgiumVignette.be jest niezależną stroną informacyjną i nie jest powiązana z rządem Belgii. Belgijska winieta drogowa jest jeszcze w przygotowaniu. Podane daty, stawki i warunki mogą ulec zmianie.",
+        "Dokładamy starań, aby informacje były poprawne i aktualne, ale nie możemy zagwarantować, że wszystkie informacje są w każdej chwili kompletne lub aktualne. Przed podróżą lub zakupem zawsze sprawdź najnowsze informacje na oficjalnych stronach właściwych belgijskich władz.",
+      ],
+      sourceLabel: "Oficjalne informacje: Vlaanderen.be — Winieta drogowa od 1 maja 2027",
+      sourceUrl: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
+    },
     independentSite: "Niezależne informacje o belgijskiej winiecie drogowej",
     contactLabel: "Kontakt",
     cookieSettings: "Ustawienia plików cookie",
@@ -169,7 +181,7 @@ const dictionary: BaseDictionary = {
     overview: {
       title: "Belgijska winieta drogowa: co jest planowane na 2027",
       paragraphs: [
-        "Belgia planuje wprowadzenie cyfrowej winiety drogowej od 1 maja 2027 r. Belgijska winieta miałaby obowiązywać samochody osobowe do 3,5 tony na autostradach i niektórych regionalnych drogach głównych.",
+        "Belgia planuje wprowadzenie cyfrowej winiety drogowej od 1 maja 2027 r. Belgijska winieta miałaby obowiązywać samochody osobowe do 3,5 tony na belgijskich drogach regionalnych i autostradach.",
         "Samochody zagraniczne byłyby objęte. Kierowcy z Francji, Holandii, Niemiec i innych krajów potrzebowaliby winiety, aby korzystać z objętych belgijskich dróg.",
         "Nie byłaby to naklejka na szybę. Belgijska winieta autostradowa byłaby cyfrowa i powiązana z tablicą rejestracyjną, z kontrolami m.in. przez kamery ANPR.",
         "Według stawek opublikowanych przez rząd flamandzki cena zależy od normy Euro i okresu ważności: od €8,10 dziennie dla pojazdów bezemisyjnych i €9 dziennie dla Euro 4+, do €90–€125 rocznie. Planowane są też 10 dni, 1 miesiąc i 2 miesiące.",
@@ -181,8 +193,8 @@ const dictionary: BaseDictionary = {
         id: "autostrady",
         title: "Czy potrzebujesz winiety na autostrady w Belgii?",
         paragraphs: [
-          "Według obecnych planów cyfrowa winieta drogowa stałaby się obowiązkowa na belgijskich autostradach i niektórych regionalnych drogach głównych od 1 maja 2027 r.",
-          "Dziś większość belgijskich autostrad pozostaje bezpłatna dla samochodów osobowych. Projekt winiety miałby to zmienić: dostęp do autostrad i części szybszej sieci regionalnej wymagałby winiety powiązanej z tablicą rejestracyjną.",
+          "Według obecnych planów cyfrowa winieta drogowa stałaby się obowiązkowa na belgijskich drogach regionalnych i autostradach od 1 maja 2027 r.",
+          "Dziś większość belgijskich autostrad pozostaje bezpłatna dla samochodów osobowych. Projekt winiety miałby to zmienić: dostęp do belgijskich dróg regionalnych i autostrad wymagałby winiety powiązanej z tablicą rejestracyjną.",
           "Jeśli korzystasz tylko z dróg lokalnych, winieta nie byłaby wymagana według opublikowanych informacji. W praktyce całkowite unikanie autostrad i regionalnych dróg głównych jest często trudne przy podróżach międzymiastowych lub tranzytowych.",
         ],
         link: {
@@ -206,7 +218,7 @@ const dictionary: BaseDictionary = {
         id: "kupic",
         title: "Gdzie kupić belgijską winietę?",
         paragraphs: [
-          "Oficjalna sprzedaż jeszcze się nie rozpoczęła. Według obecnych planów zakup online byłby możliwy od 1 marca 2027 r. przez oficjalną stronę lub autoryzowanego partnera.",
+          "Oficjalna sprzedaż jeszcze się nie rozpoczęła. Według obecnych planów zakup online byłby możliwy od 2 kwietnia 2027 r. przez oficjalną stronę lub autoryzowanego partnera.",
           "Dziś nie ma oficjalnego portalu sprzedaży. Strony, które już oferują rezerwację lub płatność, nie są oficjalnym kanałem.",
         ],
         link: {
@@ -256,7 +268,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Czy potrzebujesz winiety na autostrady w Belgii?",
         answer:
-          "Według obecnych planów tak od 1 maja 2027 r. na belgijskich autostradach i niektórych regionalnych drogach głównych. Drogi lokalne pozostałyby poza obowiązkiem.",
+          "Według obecnych planów tak od 1 maja 2027 r. na belgijskich drogach regionalnych i autostradach. Drogi lokalne pozostałyby poza obowiązkiem.",
       },
       {
         question: "Czy motocykle potrzebują belgijskiej winiety?",
@@ -271,7 +283,7 @@ const dictionary: BaseDictionary = {
       {
         question: "Gdzie kupić belgijską winietę?",
         answer:
-          "Oficjalna sprzedaż jeszcze się nie rozpoczęła. Według planów zakup online jest oczekiwany od 1 marca 2027 r. przez oficjalny kanał lub autoryzowanego partnera.",
+          "Oficjalna sprzedaż jeszcze się nie rozpoczęła. Według planów zakup online jest oczekiwany od 2 kwietnia 2027 r. przez oficjalny kanał lub autoryzowanego partnera.",
       },
     ],
     sourcesTitle: "Oficjalne źródła",
@@ -282,7 +294,7 @@ const dictionary: BaseDictionary = {
       "Planowana cena belgijskiej winiety drogowej zależy od dwóch czynników: normy Euro pojazdu i okresu ważności winiety. Rząd flamandzki opublikował stawki dla 1 dnia, 10 dni, 1 miesiąca, 2 miesięcy i 1 roku.",
     leadParagraphs: [
       "Dla samochodu Euro 4 lub wyżej belgijska winieta według obecnych stawek kosztuje €9 za 1 dzień, €12 za 10 dni i €100 za rok. Pojazdy bezemisyjne płacą mniej, a pojazdy Euro 0 do Euro 3 więcej.",
-      "Winieta jest planowana od 1 maja 2027 r. Zakup miałby być możliwy od 1 marca 2027 r. Wprowadzenie nadal podlega ostatecznemu zatwierdzeniu.",
+      "Winieta jest planowana od 1 maja 2027 r. Zakup miałby być możliwy od 2 kwietnia 2027 r. Wprowadzenie nadal podlega ostatecznemu zatwierdzeniu.",
     ],
     matrixTitle: "Ceny belgijskiej winiety drogowej 2027",
     rateMatrix: plRateMatrix,
@@ -361,7 +373,7 @@ const dictionary: BaseDictionary = {
       id: "kiedy",
       title: "Kiedy obowiązują te ceny?",
       paragraphs: [
-        "Cyfrowa winieta drogowa jest planowana od 1 maja 2027 r. Według obecnych oficjalnych informacji winietę będzie można kupić online od 1 marca 2027 r.",
+        "Cyfrowa winieta drogowa jest planowana od 1 maja 2027 r. Według obecnych oficjalnych informacji winietę będzie można kupić online od 2 kwietnia 2027 r.",
         "Praktyczne wdrożenie nadal trwa, a wprowadzenie podlega ostatecznemu zatwierdzeniu.",
         "Chcesz wiedzieć, jak będzie działał zakup? Zobacz [[buy|Kup belgijską winietę]]. Wszystkie przepisy, pojazdy i kluczowe daty znajdziesz w naszym kompletnym przewodniku po [[home|belgijskiej winiecie drogowej 2027]].",
       ],
@@ -465,7 +477,7 @@ const dictionary: BaseDictionary = {
         tips: [
           "Tak — samochody osobowe z francuską rejestracją powinny od 1 maja 2027 r. wymagać belgijskiej winiety na objętych belgijskich drogach.",
           "Jest to szczególnie istotne dla podróży z północnej Francji do Belgii oraz tras tranzytowych Francja → Holandia/Niemcy.",
-          "Objęte drogi obejmują autostrady i planowane regionalne drogi główne — nie tylko tranzyt długodystansowy.",
+          "Objęte drogi obejmują belgijskie drogi regionalne i autostrady — nie tylko tranzyt długodystansowy.",
         ],
       },
     ],
@@ -532,7 +544,7 @@ const dictionary: BaseDictionary = {
       {
         id: "anpr",
         title: "Kontrole ANPR",
-        paragraphs: ["Kamery na autostradach i regionalnych drogach głównych weryfikują ważność winiety."],
+        paragraphs: ["Kamery na belgijskich drogach regionalnych i autostradach weryfikują ważność winiety."],
       },
     ],
     fineTable: [
@@ -550,7 +562,7 @@ const dictionary: BaseDictionary = {
   buy: {
     title: "Kiedy mogę kupić belgijską winietę?",
     intro:
-      "Według obecnych planów sprzedaż online jest oczekiwana od 1 marca 2027 r. Winieta drogowa miałaby stać się obowiązkowa od 1 maja 2027 r. Ostateczne warunki i oficjalny portal sprzedaży mogą się jeszcze zmienić.",
+      "Według obecnych planów sprzedaż online jest oczekiwana od 2 kwietnia 2027 r. Winieta drogowa miałaby stać się obowiązkowa od 1 maja 2027 r. Ostateczne warunki i oficjalny portal sprzedaży mogą się jeszcze zmienić.",
     independenceNotice:
       "BelgiumVignette.be to niezależna strona informacyjna i nie jest oficjalną stroną rządu belgijskiego ani uznanym sprzedawcą winiety drogowej.",
     sections: [
@@ -558,7 +570,7 @@ const dictionary: BaseDictionary = {
         id: "when",
         title: "Kiedy startuje sprzedaż?",
         paragraphs: [
-          "Rząd flamandzki podaje, że winietę będzie można kupić online od 1 marca 2027 r. — na oficjalnej stronie lub u autoryzowanego partnera.",
+          "Rząd flamandzki podaje, że winietę będzie można kupić online od 2 kwietnia 2027 r. — na oficjalnej stronie lub u autoryzowanego partnera.",
           "Dziś nie ma portalu sprzedaży: nie można jeszcze rezerwować ani płacić. Strony, które już to oferują, nie są oficjalnym kanałem.",
         ],
       },
@@ -571,13 +583,13 @@ const dictionary: BaseDictionary = {
         ],
       },
     ],
-    statusBadge: "Sprzedaż oczekiwana od 1 marca 2027",
+    statusBadge: "Sprzedaż oczekiwana od 2 kwietnia 2027",
     officialSourceLabel: "Oficjalne źródło",
     steps: [
       {
         title: "Poczekaj na autoryzowaną sprzedaż",
         description:
-          "Zakup online oczekiwany od 1 marca 2027 r. przez oficjalną stronę lub autoryzowanego partnera, według rządu flamandzkiego.",
+          "Zakup online oczekiwany od 2 kwietnia 2027 r. przez oficjalną stronę lub autoryzowanego partnera, według rządu flamandzkiego.",
       },
       { title: "Zarejestruj tablicę", description: "System cyfrowy — bez naklejki na szybę." },
       { title: "Wybierz okres ważności", description: "Dzień, 10 dni, miesiąc, 2 miesiące lub rok." },
@@ -587,62 +599,17 @@ const dictionary: BaseDictionary = {
       {
         question: "Czy mogę zamówić z wyprzedzeniem?",
         answer:
-          "Nie. Według obecnych planów sprzedaż online zaczyna się 1 marca 2027 r. Zapisz się, aby otrzymać powiadomienie, gdy autoryzowana sprzedaż będzie dostępna.",
+          "Nie. Według obecnych planów sprzedaż online zaczyna się 2 kwietnia 2027 r. Zapisz się, aby otrzymać powiadomienie, gdy autoryzowana sprzedaż będzie dostępna.",
       },
       {
         question: "Kiedy winieta staje się obowiązkowa?",
         answer:
-          "Według planów od 1 maja 2027 r. na belgijskich autostradach i drogach regionalnych. Okres tolerancji jest planowany od 1 maja do 1 lipca 2027 r.",
+          "Według planów od 1 maja 2027 r. na belgijskich drogach regionalnych i autostradach. Okres tolerancji jest planowany od 1 maja do 1 lipca 2027 r.",
       },
     ],
   },
   tolls: plTolls,
-  privacy: {
-    title: "Polityka prywatności",
-    intro: "BelgiumVignette.be szanuje Twoją prywatność. Oto jak obsługujemy Twoje dane.",
-    sections: [
-      {
-        id: "controller",
-        title: "Administrator danych",
-        paragraphs: [
-          "BelgiumVignette.be to niezależna strona informacyjna o planowanej belgijskiej winiecie drogowej. Nie jesteśmy powiązani z rządem belgijskim, Flandrią, Walonią ani Brukselą i nie sprzedajemy winiet.",
-          "Strona jest prowadzona w powiązaniu z Tolls.be (niezależne informacje o opłatach drogowych w Belgii). Kontakt: info@tolls.be.",
-        ],
-      },
-      {
-        id: "newsletter",
-        title: "Newsletter",
-        paragraphs: [
-          "E-mail, język i znacznik czasu zgody przechowywane w Supabase (hosting w UE). Używane wyłącznie do aktualizacji o winiecie.",
-        ],
-      },
-      {
-        id: "cookies",
-        title: "Pliki cookie, analityka i zgoda",
-        paragraphs: [
-          "Niezbędne przechowywanie: zapisujemy Twoje preferencje dotyczące plików cookie w localStorage. Podstawa prawna: prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO) i/lub zgoda, gdy jest wymagana.",
-          "Analityka (opcjonalna): Vercel Analytics zbiera anonimowe wyświetlenia stron. Ładowana dopiero po zgodzie z banera. Podstawa prawna: zgoda (art. 6 ust. 1 lit. a RODO). Wycofaj przez Ustawienia plików cookie w stopce.",
-          "Google Search Console i Bing Webmaster Tools: wyłącznie meta tagi weryfikacji własności — bez śledzących plików cookie.",
-          "Przechowywanie: do czasu wyczyszczenia pamięci lub aktualizacji tej polityki (wersja 2026-08-04).",
-        ],
-      },
-      {
-        id: "news-editorial",
-        title: "Wiadomości, streszczenia i treści redakcyjne",
-        paragraphs: [
-          "Nasza sekcja wiadomości publikuje niezależne streszczenia publicznie dostępnych doniesień o belgijskiej winiecie. Te strony nie są reprodukcją oryginalnych artykułów.",
-          "Streszczenia i tłumaczenia mogą być tworzone z pomocą AI i mogą różnić się sformułowaniem od źródła. Zawsze linkujemy do oryginalnego wydawcy. Nasz komentarz redakcyjny („Nasza opinia”) jest pisany niezależnie i nie reprezentuje oryginalnego wydawcy ani władz belgijskich.",
-          "Obrazy w artykułach mogą pochodzić z linkowanego oryginalnego artykułu lub agencji prasowych, z podpisami tam gdzie to możliwe. Pozostają własnością odpowiednich podmiotów praw. Wyświetlamy je w dobrej wierze jako odniesienie wraz z linkiem do źródła. Jeśli uważasz, że Twoje treści są używane nieprawidłowo, napisz na info@tolls.be.",
-        ],
-      },
-      {
-        id: "rights",
-        title: "Twoje prawa (RODO)",
-        paragraphs: ["Dostęp, sprostowanie, usunięcie, sprzeciw — info@tolls.be."],
-      },
-    ],
-    lastUpdated: "4 August 2026",
-  },
+  privacy: getPrivacyContent("pl"),
   acquisition: getAcquisitionContent("pl"),
   routeChecker: getRouteCheckerContent("pl"),
   news: {
@@ -659,9 +626,9 @@ const dictionary: BaseDictionary = {
     publishedOn: "Opublikowano",
     sourceLabel: "Źródło",
     sourceDisclaimer:
-      "Podsumowujemy wiarygodne źródła i linkujemy do oryginalnego artykułu. Nasza opinia to niezależny komentarz redakcyjny, a nie oficjalne informacje rządowe.",
+      "BelgiumVignette.be to niezależna strona informacyjna i nie jest powiązana z rządem belgijskim, Flandrią, Walonią ani Brukselą. Ta strona służy wyłącznie celom informacyjnym. Podane daty, stawki i warunki mogą ulec zmianie. Najaktualniejsze i oficjalne informacje zawsze sprawdzaj na stronach właściwych belgijskich organów.",
     translationDisclaimer:
-      "Podsumowanie i tłumaczenie na tej stronie zostały przygotowane z pomocą AI na podstawie oryginalnego artykułu. Zawsze sprawdzaj źródło poniżej pod kątem oficjalnego brzmienia.",
+      "BelgiumVignette.be to niezależna strona informacyjna i nie jest powiązana z rządem belgijskim, Flandrią, Walonią ani Brukselą. Ta strona służy wyłącznie celom informacyjnym. Podane daty, stawki i warunki mogą ulec zmianie. Najaktualniejsze i oficjalne informacje zawsze sprawdzaj na stronach właściwych belgijskich organów.",
     articleAttributionTitle: "Niezależne podsumowanie — nie oryginalny artykuł",
     articleAttributionIndependence:
       "BelgiumVignette.be to niezależna strona informacyjna. Nie jesteśmy powiązani z oryginalnym wydawcą, nie jesteśmy przez niego zatwierdzeni ani nie działamy w jego imieniu. Ta strona podsumowuje publicznie dostępne doniesienia i dodaje nasz własny komentarz redakcyjny. Nie jest to reprodukcja oryginalnego artykułu.",
@@ -677,7 +644,7 @@ const dictionary: BaseDictionary = {
   newsletter: {
     emailPlaceholder: "Adres e-mail",
     consentLabel:
-      "Upoważniam BelgiumVignette.be do wysyłania mi e-maili o dostępności belgijskiej winiety drogowej. Mogę zrezygnować w dowolnym momencie.",
+      "Upoważniam BelgiumVignette.be do wysłania mi jednego e-maila, gdy oficjalna lub autoryzowana sprzedaż belgijskiej winiety drogowej będzie dostępna. Po wysłaniu moje dane zostaną usunięte z aktywnych systemów. Mogę wycofać zgodę w dowolnym momencie.",
     success: "Dziękujemy! Jesteś zapisany/a.",
     error: "Coś poszło nie tak. Spróbuj ponownie.",
     privacyLink: "",
@@ -779,7 +746,7 @@ const dictionary: BaseDictionary = {
     {
       title: "Rząd flamandzki — Winieta drogowa od 1 maja 2027 r.",
       url: "https://www.vlaanderen.be/belastingen-en-begroting/vlaamse-belastingen/wegenvignet-vanaf-1-mei-2027",
-      description: "Oficjalna strona o obowiązku, stawkach i zakupie od 1 marca 2027 r.",
+      description: "Oficjalna strona o obowiązku, stawkach i zakupie od 2 kwietnia 2027 r.",
     },
     {
       title: "Viapass — opłata kilometrowa dla ciężarówek",

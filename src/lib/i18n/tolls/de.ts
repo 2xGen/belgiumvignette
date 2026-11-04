@@ -45,7 +45,7 @@ export const deTolls: Dictionary["tolls"] = {
         {
           label: "Kauf",
           value:
-            "Online, mit Verkaufsstart voraussichtlich ab dem 1. März 2027.",
+            "Online, mit Verkaufsstart voraussichtlich ab dem 2. April 2027.",
         },
       ],
     },
@@ -198,7 +198,7 @@ export const deTolls: Dictionary["tolls"] = {
       title: "Wo kann man die Vignette für belgische Autobahnen kaufen?",
       paragraphs: [
         "Die Vignette ist noch nicht im Verkauf.",
-        "Nach derzeit veröffentlichten offiziellen Informationen sollte der Kauf ab dem 1. März 2027 möglich werden — vor dem geplanten Inkrafttreten am 1. Mai.",
+        "Nach derzeit veröffentlichten offiziellen Informationen sollte der Kauf ab dem 2. April 2027 möglich werden — vor dem geplanten Inkrafttreten am 1. Mai.",
         "Die Vignette kann online über die offizielle Website oder bei einer anerkannten Partnerorganisation gekauft werden.",
         "Kaufen Sie vor der offiziellen Verkaufseröffnung keine angebliche Vignette Belgien 2027 auf einer nicht geprüften Website.",
         "Wir verfolgen die Verkaufseröffnung und veröffentlichen den Link, sobald er verfügbar ist. Siehe [[buy|wo die Vignette Belgien kaufen]] für die neuesten Informationen.",
@@ -252,7 +252,7 @@ export const deTolls: Dictionary["tolls"] = {
     {
       question: "Wo kann man die Autobahnvignette Belgien kaufen?",
       answer:
-        "Der Verkauf ist noch nicht geöffnet. Er soll am 1. März 2027 über die offizielle Website und anerkannte Partnerorganisationen starten. Siehe unsere Seite Vignette Belgien kaufen, um den Verkaufsstart zu verfolgen.",
+        "Der Verkauf ist noch nicht geöffnet. Er soll am 2. April 2027 über die offizielle Website und anerkannte Partnerorganisationen starten. Siehe unsere Seite Vignette Belgien kaufen, um den Verkaufsstart zu verfolgen.",
     },
     {
       question: "Müssen Motorräder auf belgischen Autobahnen zahlen?",

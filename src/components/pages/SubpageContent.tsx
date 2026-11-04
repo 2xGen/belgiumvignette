@@ -12,6 +12,7 @@ import { PricingTable, ComparisonTable } from "@/components/ui/PricingTable";
 import { RateMatrixTable } from "@/components/ui/RateMatrixTable";
 import { LinkedProse } from "@/components/ui/LinkedProse";
 import { NewsIndexContent } from "@/components/pages/NewsContent";
+import OfficialNotice from "@/components/OfficialNotice";
 import type { Article } from "@/lib/content/articles/types";
 import type { Locale } from "@/lib/i18n/config";
 import { vignetteTableCountries } from "@/lib/route-checker/data";
@@ -56,7 +57,23 @@ export function PageHero({
           </p>
         </>
       )}
+      <OfficialNotice dict={dict} className="mt-6" />
     </header>
+  );
+}
+
+function RichText({ text }: { text: string }) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return (
+    <>
+      {parts.map((part, index) =>
+        part.startsWith("**") && part.endsWith("**") ? (
+          <strong key={`${part}-${index}`}>{part.slice(2, -2)}</strong>
+        ) : (
+          <span key={`${part}-${index}`}>{part}</span>
+        ),
+      )}
+    </>
   );
 }
 
@@ -69,16 +86,22 @@ export function ContentSections({
     <div className="prose-content space-y-8">
       {sections.map((section) => (
         <section key={section.id} id={section.id}>
-          <h2 className="mb-3 font-[family-name:var(--font-display)] text-xl font-bold tracking-tight text-ink">
-            {section.title}
-          </h2>
+          {section.title ? (
+            <h2 className="mb-3 font-[family-name:var(--font-display)] text-xl font-bold tracking-tight text-ink">
+              {section.title}
+            </h2>
+          ) : null}
           {section.paragraphs.map((p) => (
-            <p key={p.slice(0, 40)}>{p}</p>
+            <p key={p.slice(0, 40)}>
+              <RichText text={p} />
+            </p>
           ))}
           {section.list && (
             <ul className="mt-3 list-disc space-y-1 pl-5">
               {section.list.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item}>
+                  <RichText text={item} />
+                </li>
               ))}
             </ul>
           )}
@@ -563,6 +586,15 @@ export function PrivacyPageContent({ dict }: { dict: Dictionary }) {
       <p className="mb-6 text-sm text-text-muted">
         {dict.common.lastUpdated}: {content.lastUpdated}
       </p>
+      {content.lead.length > 0 && (
+        <div className="prose-content mb-8 space-y-4">
+          {content.lead.map((paragraph) => (
+            <p key={paragraph.slice(0, 40)}>
+              <RichText text={paragraph} />
+            </p>
+          ))}
+        </div>
+      )}
       <ContentSections sections={content.sections} />
     </>
   );

@@ -44,7 +44,7 @@ export const plTolls: Dictionary["tolls"] = {
         {
           label: "Zakup",
           value:
-            "Online, ze sprzedażą planowaną od 1 marca 2027 r.",
+            "Online, ze sprzedażą planowaną od 2 kwietnia 2027 r.",
         },
       ],
     },
@@ -197,7 +197,7 @@ export const plTolls: Dictionary["tolls"] = {
       title: "Gdzie kupić winietę na belgijskie autostrady?",
       paragraphs: [
         "Winieta nie jest jeszcze w sprzedaży.",
-        "Według obecnie opublikowanych informacji oficjalnych zakup powinien być możliwy od 1 marca 2027 r., przed planowanym startem 1 maja.",
+        "Według obecnie opublikowanych informacji oficjalnych zakup powinien być możliwy od 2 kwietnia 2027 r., przed planowanym startem 1 maja.",
         "Powinna być dostępna online przez oficjalną stronę lub uznaną organizację partnerską.",
         "Unikaj kupowania rzekomej winiety Belgia 2027 na niezweryfikowanej stronie przed oficjalnym otwarciem sprzedaży.",
         "Śledzimy otwarcie sprzedaży i opublikujemy link, gdy będzie dostępny. Zobacz [[buy|gdzie kupić winietę Belgia]] po najnowsze informacje.",
@@ -251,7 +251,7 @@ export const plTolls: Dictionary["tolls"] = {
     {
       question: "Gdzie kupić winietę autostradową Belgia?",
       answer:
-        "Sprzedaż jeszcze nie jest otwarta. Ma się rozpocząć 1 marca 2027 r. przez oficjalną stronę i uznane organizacje partnerskie. Zobacz naszą stronę Jak kupić, aby śledzić otwarcie sprzedaży.",
+        "Sprzedaż jeszcze nie jest otwarta. Ma się rozpocząć 2 kwietnia 2027 r. przez oficjalną stronę i uznane organizacje partnerskie. Zobacz naszą stronę Jak kupić, aby śledzić otwarcie sprzedaży.",
     },
     {
       question: "Czy motocykle muszą płacić na belgijskich autostradach?",
