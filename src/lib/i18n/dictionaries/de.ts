@@ -235,15 +235,15 @@ const dictionary: BaseDictionary = {
       },
       {
         date: "1. Mai 2027",
-        title: "Vignette Pflicht",
+        title: "Geplante Einführung",
         description:
-          "Digitale Vignettenpflicht auf Autobahnen und regionalen Hauptstraßen.",
+          "Beabsichtigter Starttermin der digitalen Straßenvignette, vorbehaltlich der endgültigen Genehmigung.",
       },
       {
         date: "1. Juli 2027",
-        title: "Bußgelder wirksam",
+        title: "Geplante Durchsetzung",
         description:
-          "Übergangsfrist endet. Kontrollen via ANPR-Kameras und mobile Einheiten.",
+          "Beabsichtigtes Ende der Übergangsfrist und Beginn der Bußgelder, vorbehaltlich der endgültigen Genehmigung.",
       },
     ],
     faqTitle: "Häufige Fragen",
@@ -690,69 +690,68 @@ const dictionary: BaseDictionary = {
     intents: {
       home: {
         title:
-          "Erhalten Sie den Kauf-Link, sobald die belgische Vignette zum Verkauf steht",
+          "Benachrichtigung, sobald der offizielle Verkauf der belgischen Vignette startet",
         description:
-          "Der Verkauf ist ab dem 1. März 2027 geplant. Hinterlassen Sie Ihre E-Mail-Adresse und erhalten Sie eine Benachrichtigung, sobald autorisierter Verkauf verfügbar wird.",
+          "Melden Sie sich für einen kostenlosen E-Mail-Hinweis von BelgiumVignette.be an, einer unabhängigen Informationsseite. Wir sind keine Behörde und verkaufen selbst keine Vignetten. Sie erhalten eine einzige Benachrichtigung, sobald autorisierter Verkauf verfügbar wird.",
         benefits: [
-          "Link zu einem autorisierten Kaufkanal, sobald bekannt",
-          "Updates bei Änderungen von Preisen oder Regeln",
+          "Eine Benachrichtigung bei Start des autorisierten Verkaufs",
+          "Link zu einem anerkannten Kaufkanal",
           "Keine unnötigen E-Mails",
         ],
-        submit: "Kauf-Link an mich senden",
+        submit: "Auf dem Laufenden halten",
       },
       prices: {
-        title: "Benachrichtigung, sobald die endgültigen Vignettenpreise bestätigt sind",
+        title: "Benachrichtigung, sobald der offizielle Verkauf der belgischen Vignette startet",
         description:
-          "Die aktuellen Tarife wurden veröffentlicht, die Einführung muss jedoch noch endgültig genehmigt werden. Wir verfolgen die offiziellen Informationen für Sie.",
-        benefitsIntro: "Erhalten Sie eine E-Mail, sobald:",
+          "Melden Sie sich für einen kostenlosen E-Mail-Hinweis von BelgiumVignette.be an, einer unabhängigen Informationsseite. Wir sind keine Behörde und verkaufen selbst keine Vignetten. Sie erhalten eine einzige Benachrichtigung, sobald autorisierter Verkauf verfügbar wird.",
         benefits: [
-          "die endgültigen Preise bestätigt sind;",
-          "autorisierter Verkauf startet;",
-          "ein Link zu einem anerkannten Kaufkanal verfügbar ist.",
+          "Eine Benachrichtigung bei Start des autorisierten Verkaufs",
+          "Link zu einem anerkannten Kaufkanal",
+          "Keine unnötigen E-Mails",
         ],
         submit: "Auf dem Laufenden halten",
       },
       buy: {
         title: "Benachrichtigen Sie mich, sobald die belgische Vignette zu kaufen ist",
         description:
-          "Autorisierter Verkauf hat noch nicht begonnen. Nach der aktuellen Planung können Sie die belgische Vignette ab dem 1. März 2027 über die offizielle Website oder einen zugelassenen Partner kaufen. Hinterlassen Sie Ihre E-Mail-Adresse und erhalten Sie eine Benachrichtigung, sobald autorisierter Verkauf verfügbar wird.",
+          "Melden Sie sich für einen kostenlosen E-Mail-Hinweis von BelgiumVignette.be an, einer unabhängigen Informationsseite. Wir sind keine Behörde und verkaufen selbst keine Vignetten. Sie erhalten eine einzige Benachrichtigung, sobald autorisierter Verkauf verfügbar wird.",
         benefits: [],
-        submit: "Kauf-Link an mich senden",
+        submit: "Auf dem Laufenden halten",
       },
       foreign: {
         title:
           "Benachrichtigen Sie mich, wenn ausländische Autos ihre Vignette registrieren können",
         description:
-          "Nach den Plänen benötigen auch ausländische Fahrer eine belgische Vignette. Erhalten Sie eine Benachrichtigung, sobald Registrierung und Kauf über einen anerkannten Kanal möglich sind.",
+          "Melden Sie sich für einen kostenlosen E-Mail-Hinweis von BelgiumVignette.be an, einer unabhängigen Informationsseite. Sie erhalten eine einzige Benachrichtigung, sobald autorisierter Verkauf verfügbar wird.",
         benefits: [
-          "Start des autorisierten Verkaufs",
-          "Regeln für ausländische Kennzeichen",
+          "Eine Benachrichtigung bei Start des autorisierten Verkaufs",
           "Link zu einem anerkannten Kaufkanal",
+          "Keine unnötigen E-Mails",
         ],
         submit: "Auf dem Laufenden halten",
       },
       news: {
-        title: "Wichtige Updates zur belgischen Vignette erhalten",
+        title: "Benachrichtigung, sobald der offizielle Verkauf der belgischen Vignette startet",
         description:
-          "Kurze, relevante Meldungen, wenn es Neuigkeiten zu Preisen, Regeln oder dem Verkaufsstart gibt.",
+          "Melden Sie sich für einen kostenlosen E-Mail-Hinweis von BelgiumVignette.be an, einer unabhängigen Informationsseite. Sie erhalten eine einzige Benachrichtigung, sobald autorisierter Verkauf verfügbar wird.",
         benefits: [
-          "Wichtige Updates zur Vignette",
-          "Kein täglicher Spam",
-          "Kauf-Link, sobald ein anerkannter Kanal verfügbar ist",
+          "Eine Benachrichtigung bei Start des autorisierten Verkaufs",
+          "Link zu einem anerkannten Kaufkanal",
+          "Keine unnötigen E-Mails",
         ],
-        submit: "Updates erhalten",
+        submit: "Auf dem Laufenden halten",
       },
       default: {
         title:
-          "Erhalten Sie den Kauf-Link, sobald die belgische Vignette zum Verkauf steht",
+          "Benachrichtigung, sobald der offizielle Verkauf der belgischen Vignette startet",
         description:
-          "Der Verkauf soll am 1. März 2027 starten. Wir senden Ihnen eine Benachrichtigung, sobald autorisierter Verkauf verfügbar wird.",
+          "Melden Sie sich für einen kostenlosen E-Mail-Hinweis von BelgiumVignette.be an, einer unabhängigen Informationsseite. Wir sind keine Behörde und verkaufen selbst keine Vignetten. Sie erhalten eine einzige Benachrichtigung, sobald autorisierter Verkauf verfügbar wird.",
         benefits: [
-          "Link zu einem autorisierten Kaufkanal",
-          "Updates zu Preisen und Regeln",
+          "Eine Benachrichtigung bei Start des autorisierten Verkaufs",
+          "Link zu einem anerkannten Kaufkanal",
           "Keine unnötigen E-Mails",
         ],
-        submit: "Kauf-Link an mich senden",
+        submit: "Auf dem Laufenden halten",
       },
     },
   },

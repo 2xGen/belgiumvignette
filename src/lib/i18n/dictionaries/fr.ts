@@ -235,15 +235,15 @@ const dictionary: BaseDictionary = {
       },
       {
         date: "1er mai 2027",
-        title: "Vignette obligatoire",
+        title: "Introduction prévue",
         description:
-          "Obligation de vignette numérique sur autoroutes et routes régionales principales.",
+          "Date de début prévue de la vignette routière numérique, sous réserve d'approbation définitive.",
       },
       {
         date: "1er juillet 2027",
-        title: "Amendes appliquées",
+        title: "Contrôles et amendes prévus",
         description:
-          "Fin de la période de tolérance. Contrôles via caméras ANPR et unités mobiles.",
+          "Fin prévue de la période de tolérance et début des amendes, sous réserve d'approbation définitive.",
       },
     ],
     faqTitle: "Questions fréquentes",
@@ -702,67 +702,66 @@ const dictionary: BaseDictionary = {
         title:
           "Recevez une notification dès que la vente officielle de la vignette belge démarre",
         description:
-          "Inscrivez-vous pour une alerte e-mail gratuite de BelgiumVignette.be, un site d'information indépendant. Nous ne sommes pas un organisme public et ne vendons pas de vignettes.",
+          "Inscrivez-vous pour une alerte e-mail gratuite de BelgiumVignette.be, un site d'information indépendant. Nous ne sommes pas un organisme public et ne vendons pas de vignettes. Vous recevrez une seule notification lorsque la vente autorisée sera disponible.",
         benefits: [
-          "Lien vers un canal d'achat autorisé dès qu'il est connu",
-          "Mises à jour en cas de changement de prix ou de règles",
+          "Une seule notification au début de la vente autorisée",
+          "Lien vers un canal d'achat reconnu",
           "Pas d'e-mails inutiles",
         ],
-        submit: "Envoyez-moi le lien d'achat",
+        submit: "Tenez-moi informé",
       },
       prices: {
-        title: "Recevez une notification lorsque les prix définitifs de la vignette seront confirmés",
+        title: "Recevez une notification dès que la vente officielle de la vignette belge démarre",
         description:
-          "Les tarifs actuels ont été publiés, mais l'introduction doit encore être définitivement approuvée. Nous suivons les informations officielles pour vous.",
-        benefitsIntro: "Recevez un e-mail dès que :",
+          "Inscrivez-vous pour une alerte e-mail gratuite de BelgiumVignette.be, un site d'information indépendant. Nous ne sommes pas un organisme public et ne vendons pas de vignettes. Vous recevrez une seule notification lorsque la vente autorisée sera disponible.",
         benefits: [
-          "les prix définitifs sont confirmés ;",
-          "la vente autorisée démarre ;",
-          "un lien vers un canal d'achat reconnu est disponible.",
+          "Une seule notification au début de la vente autorisée",
+          "Lien vers un canal d'achat reconnu",
+          "Pas d'e-mails inutiles",
         ],
         submit: "Tenez-moi informé",
       },
       buy: {
         title: "Prévenez-moi dès que la vignette belge sera en vente",
         description:
-          "La vente autorisée n'a pas encore commencé. Selon le planning actuel, vous pourrez acheter la vignette belge à partir du 1er mars 2027 via le site officiel ou un partenaire agréé. Laissez votre adresse e-mail et recevez une notification lorsque la vente autorisée sera disponible.",
+          "Inscrivez-vous pour une alerte e-mail gratuite de BelgiumVignette.be, un site d'information indépendant. Nous ne sommes pas un organisme public et ne vendons pas de vignettes. Vous recevrez une seule notification lorsque la vente autorisée sera disponible.",
         benefits: [],
-        submit: "Envoyez-moi le lien d'achat",
+        submit: "Tenez-moi informé",
       },
       foreign: {
         title:
           "Prévenez-moi lorsque les voitures étrangères pourront enregistrer leur vignette",
         description:
-          "Selon les plans, les conducteurs étrangers auront également besoin d'une vignette belge. Recevez une notification dès que l'enregistrement et l'achat via un canal reconnu seront possibles.",
+          "Inscrivez-vous pour une alerte e-mail gratuite de BelgiumVignette.be, un site d'information indépendant. Vous recevrez une seule notification lorsque la vente autorisée sera disponible.",
         benefits: [
-          "Début de la vente autorisée",
-          "Règles pour les plaques étrangères",
+          "Une seule notification au début de la vente autorisée",
           "Lien vers un canal d'achat reconnu",
+          "Pas d'e-mails inutiles",
         ],
         submit: "Tenez-moi informé",
       },
       news: {
-        title: "Recevez les mises à jour importantes sur la vignette belge",
+        title: "Recevez une notification dès que la vente officielle de la vignette belge démarre",
         description:
-          "Des alertes courtes et pertinentes dès qu'il y a des nouvelles sur les prix, les règles ou le début des ventes.",
+          "Inscrivez-vous pour une alerte e-mail gratuite de BelgiumVignette.be, un site d'information indépendant. Vous recevrez une seule notification lorsque la vente autorisée sera disponible.",
         benefits: [
-          "Mises à jour importantes sur la vignette",
-          "Pas de spam quotidien",
-          "Lien d'achat dès qu'un canal reconnu est disponible",
+          "Une seule notification au début de la vente autorisée",
+          "Lien vers un canal d'achat reconnu",
+          "Pas d'e-mails inutiles",
         ],
-        submit: "Recevoir les mises à jour",
+        submit: "Tenez-moi informé",
       },
       default: {
         title:
           "Recevez une notification dès que la vente officielle de la vignette belge démarre",
         description:
-          "Inscrivez-vous pour une alerte e-mail gratuite de BelgiumVignette.be, un site d'information indépendant. Nous ne sommes pas un organisme public et ne vendons pas de vignettes.",
+          "Inscrivez-vous pour une alerte e-mail gratuite de BelgiumVignette.be, un site d'information indépendant. Nous ne sommes pas un organisme public et ne vendons pas de vignettes. Vous recevrez une seule notification lorsque la vente autorisée sera disponible.",
         benefits: [
-          "Lien vers un canal d'achat autorisé",
-          "Mises à jour sur les prix et les règles",
+          "Une seule notification au début de la vente autorisée",
+          "Lien vers un canal d'achat reconnu",
           "Pas d'e-mails inutiles",
         ],
-        submit: "Envoyez-moi le lien d'achat",
+        submit: "Tenez-moi informé",
       },
     },
   },

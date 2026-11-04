@@ -110,7 +110,7 @@ const dictionary: BaseDictionary = {
     backToHome: "Torna alla home",
     plannedNotice:
       "I piani presentati a March 2026 potrebbero ancora cambiare. Seguiamo le fonti ufficiali e aggiorniamo questa pagina non appena ci sono novità.",
-    independentSite: "Info vignetta stradale belga",
+    independentSite: "Informazioni indipendenti sulla vignetta stradale belga",
     contactLabel: "Contatto",
     cookieSettings: "Impostazioni cookie",
     tableCategory: "Categoria",
@@ -235,15 +235,15 @@ const dictionary: BaseDictionary = {
       },
       {
         date: "1 May 2027",
-        title: "Vignetta obbligatoria",
+        title: "Introduzione prevista",
         description:
-          "Vignetta digitale richiesta su autostrade e strade principali regionali.",
+          "Inizio previsto della vignetta stradale digitale, subordinato all'approvazione definitiva.",
       },
       {
         date: "1 July 2027",
-        title: "Sanzioni applicate",
+        title: "Applicazione prevista",
         description:
-          "Fine del periodo di tolleranza. Telecamere ANPR e unità mobili iniziano i controlli.",
+          "Fine prevista del periodo di tolleranza e inizio delle sanzioni, subordinati all'approvazione definitiva.",
       },
     ],
     faqTitle: "Domande frequenti",
@@ -676,83 +676,86 @@ const dictionary: BaseDictionary = {
   },
   newsletter: {
     emailPlaceholder: "Indirizzo email",
-    consentLabel: "Accetto di ricevere aggiornamenti e ho letto",
+    consentLabel:
+      "Autorizzo BelgiumVignette.be a inviarmi un'email sulla disponibilità della vignetta stradale belga. Posso annullare l'iscrizione in qualsiasi momento.",
     success: "Grazie! Sei iscritto.",
     error: "Qualcosa è andato storto. Riprova.",
-    privacyLink: "l'informativa sulla privacy",
+    privacyLink: "",
     independenceNote:
       "BelgiumVignette.be è un servizio informativo indipendente e non è affiliato al governo belga. Al momento non vendiamo la vignetta stradale belga.",
     sticky: {
-      teaser: "Vignetta non ancora in vendita — ricevi il link di acquisto",
+      teaser: "Vignetta non ancora in vendita — ricevi una notifica all'inizio della vendita",
       cta: "Iscriviti →",
       closeLabel: "Chiudi",
     },
     intents: {
       home: {
         title:
-          "Ricevi il link di acquisto non appena la vignetta belga sarà in vendita",
+          "Ricevi una notifica non appena inizia la vendita ufficiale della vignetta belga",
         description:
-          "La vendita è prevista a partire dal 1° marzo 2027. Lascia il tuo indirizzo email e ricevi una notifica quando la vendita autorizzata sarà disponibile.",
+          "Iscriviti alla notifica email gratuita di BelgiumVignette.be, un sito informativo indipendente. Non siamo un ente pubblico e non vendiamo vignette. Riceverai una sola notifica quando la vendita autorizzata sarà disponibile.",
         benefits: [
-          "Link a un canale di acquisto autorizzato non appena noto",
-          "Aggiornamenti in caso di modifiche a prezzi o regole",
+          "Una sola notifica quando inizia la vendita autorizzata",
+          "Link a un canale di acquisto riconosciuto",
           "Nessuna email inutile",
         ],
-        submit: "Inviami il link di acquisto",
+        submit: "Tienimi aggiornato",
       },
       prices: {
-        title: "Ricevi una notifica quando saranno noti i prezzi definitivi della vignetta",
+        title:
+          "Ricevi una notifica non appena inizia la vendita ufficiale della vignetta belga",
         description:
-          "Le tariffe attuali sono pubblicate, ma l'introduzione deve ancora essere approvata in via definitiva. Seguiamo le informazioni ufficiali per te.",
-        benefitsIntro: "Ricevi una sola email quando:",
+          "Iscriviti alla notifica email gratuita di BelgiumVignette.be, un sito informativo indipendente. Non siamo un ente pubblico e non vendiamo vignette. Riceverai una sola notifica quando la vendita autorizzata sarà disponibile.",
         benefits: [
-          "i prezzi definitivi saranno confermati;",
-          "inizierà la vendita autorizzata;",
-          "sarà disponibile un link a un canale di acquisto riconosciuto.",
+          "Una sola notifica quando inizia la vendita autorizzata",
+          "Link a un canale di acquisto riconosciuto",
+          "Nessuna email inutile",
         ],
         submit: "Tienimi aggiornato",
       },
       buy: {
-        title: "Avvisami non appena la vignetta belga sarà in vendita",
+        title:
+          "Avvisami non appena la vignetta belga sarà in vendita",
         description:
-          "La vendita autorizzata non è ancora iniziata. Secondo la pianificazione attuale, potrai acquistare la vignetta belga a partire dal 1° marzo 2027 tramite il sito ufficiale o un partner autorizzato. Lascia il tuo indirizzo email e ricevi una notifica quando la vendita autorizzata sarà disponibile.",
+          "Iscriviti alla notifica email gratuita di BelgiumVignette.be, un sito informativo indipendente. Non siamo un ente pubblico e non vendiamo vignette. Riceverai una sola notifica quando la vendita autorizzata sarà disponibile.",
         benefits: [],
-        submit: "Inviami il link di acquisto",
+        submit: "Tienimi aggiornato",
       },
       foreign: {
         title:
           "Avvisami quando le auto estere potranno registrare la vignetta",
         description:
-          "Secondo i piani, anche i conducenti esteri avranno bisogno di una vignetta belga. Ricevi una notifica non appena registrazione e acquisto saranno possibili tramite un canale riconosciuto.",
+          "Iscriviti alla notifica email gratuita di BelgiumVignette.be, un sito informativo indipendente. Riceverai una sola notifica quando la vendita autorizzata sarà disponibile.",
         benefits: [
-          "Inizio della vendita autorizzata",
-          "Regole per le targhe estere",
+          "Una sola notifica quando inizia la vendita autorizzata",
           "Link a un canale di acquisto riconosciuto",
+          "Nessuna email inutile",
         ],
         submit: "Tienimi aggiornato",
       },
       news: {
-        title: "Ricevi aggiornamenti importanti sulla vignetta belga",
+        title:
+          "Ricevi una notifica non appena inizia la vendita ufficiale della vignetta belga",
         description:
-          "Avvisi brevi e pertinenti quando ci sono notizie su prezzi, regole o l'inizio della vendita.",
+          "Iscriviti alla notifica email gratuita di BelgiumVignette.be, un sito informativo indipendente. Riceverai una sola notifica quando la vendita autorizzata sarà disponibile.",
         benefits: [
-          "Aggiornamenti importanti sulla vignetta",
-          "Niente spam quotidiano",
-          "Link di acquisto non appena un canale riconosciuto sarà disponibile",
+          "Una sola notifica quando inizia la vendita autorizzata",
+          "Link a un canale di acquisto riconosciuto",
+          "Nessuna email inutile",
         ],
-        submit: "Ricevi aggiornamenti",
+        submit: "Tienimi aggiornato",
       },
       default: {
         title:
-          "Ricevi il link di acquisto non appena la vignetta belga sarà in vendita",
+          "Ricevi una notifica non appena inizia la vendita ufficiale della vignetta belga",
         description:
-          "La vendita inizia, secondo i piani, il 1° marzo 2027. Ti invieremo una sola notifica quando la vendita autorizzata sarà disponibile.",
+          "Iscriviti alla notifica email gratuita di BelgiumVignette.be, un sito informativo indipendente. Non siamo un ente pubblico e non vendiamo vignette. Riceverai una sola notifica quando la vendita autorizzata sarà disponibile.",
         benefits: [
-          "Link a un canale di acquisto autorizzato",
-          "Aggiornamenti su prezzi e regole",
+          "Una sola notifica quando inizia la vendita autorizzata",
+          "Link a un canale di acquisto riconosciuto",
           "Nessuna email inutile",
         ],
-        submit: "Inviami il link di acquisto",
+        submit: "Tienimi aggiornato",
       },
     },
   },

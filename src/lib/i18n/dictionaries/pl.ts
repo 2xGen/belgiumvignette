@@ -110,7 +110,7 @@ const dictionary: BaseDictionary = {
     backToHome: "Powrót do strony głównej",
     plannedNotice:
       "Plany przedstawione w marcu 2026 r. mogą jeszcze ulec zmianie. Śledzimy oficjalne źródła i aktualizujemy tę stronę, gdy pojawią się nowe informacje.",
-    independentSite: "Info belgijska winieta drogowa",
+    independentSite: "Niezależne informacje o belgijskiej winiecie drogowej",
     contactLabel: "Kontakt",
     cookieSettings: "Ustawienia plików cookie",
     tableCategory: "Kategoria",
@@ -235,15 +235,15 @@ const dictionary: BaseDictionary = {
       },
       {
         date: "1 May 2027",
-        title: "Winieta obowiązkowa",
+        title: "Planowane wprowadzenie",
         description:
-          "Cyfrowa winieta wymagana na autostradach i regionalnych drogach głównych.",
+          "Zamierzony start cyfrowej winiety drogowej, z zastrzeżeniem ostatecznego zatwierdzenia.",
       },
       {
         date: "1 July 2027",
-        title: "Egzekwowanie mandatów",
+        title: "Planowane egzekwowanie",
         description:
-          "Koniec okresu tolerancji. Kamery ANPR i mobilne jednostki rozpoczynają kontrolę.",
+          "Zamierzony koniec okresu tolerancji i początek mandatów, z zastrzeżeniem ostatecznego zatwierdzenia.",
       },
     ],
     faqTitle: "Najczęściej zadawane pytania",
@@ -676,83 +676,86 @@ const dictionary: BaseDictionary = {
   },
   newsletter: {
     emailPlaceholder: "Adres e-mail",
-    consentLabel: "Wyrażam zgodę na otrzymywanie aktualizacji i zapoznałem/am się z",
+    consentLabel:
+      "Upoważniam BelgiumVignette.be do wysyłania mi e-maili o dostępności belgijskiej winiety drogowej. Mogę zrezygnować w dowolnym momencie.",
     success: "Dziękujemy! Jesteś zapisany/a.",
     error: "Coś poszło nie tak. Spróbuj ponownie.",
-    privacyLink: "polityką prywatności",
+    privacyLink: "",
     independenceNote:
       "BelgiumVignette.be to niezależna usługa informacyjna i nie jest powiązana z rządem belgijskim. Obecnie nie sprzedajemy belgijskiej winiety drogowej.",
     sticky: {
-      teaser: "Winieta jeszcze niedostępna — otrzymaj link do zakupu",
+      teaser: "Winieta jeszcze niedostępna — otrzymaj powiadomienie o starcie sprzedaży",
       cta: "Zapisz się →",
       closeLabel: "Zamknij",
     },
     intents: {
       home: {
         title:
-          "Otrzymaj link do zakupu, gdy belgijska winieta będzie w sprzedaży",
+          "Otrzymaj powiadomienie, gdy ruszy oficjalna sprzedaż belgijskiej winiety",
         description:
-          "Sprzedaż jest planowana od 1 marca 2027 r. Podaj swój adres e-mail i otrzymaj jedno powiadomienie, gdy autoryzowana sprzedaż będzie dostępna.",
+          "Zapisz się na bezpłatne powiadomienie e-mail od BelgiumVignette.be, niezależnej strony informacyjnej. Nie jesteśmy instytucją publiczną i sami nie sprzedajemy winiet. Otrzymasz jedno powiadomienie, gdy autoryzowana sprzedaż będzie dostępna.",
         benefits: [
-          "Link do autoryzowanego kanału zakupu, gdy będzie znany",
-          "Aktualizacje przy zmianach cen lub zasad",
+          "Jedno powiadomienie, gdy ruszy autoryzowana sprzedaż",
+          "Link do uznanego kanału zakupu",
           "Bez zbędnych e-maili",
         ],
-        submit: "Wyślij mi link do zakupu",
+        submit: "Informuj mnie na bieżąco",
       },
       prices: {
-        title: "Otrzymaj powiadomienie, gdy ostateczne ceny winiety będą znane",
+        title:
+          "Otrzymaj powiadomienie, gdy ruszy oficjalna sprzedaż belgijskiej winiety",
         description:
-          "Obecne stawki są opublikowane, ale wprowadzenie musi jeszcze zostać ostatecznie zatwierdzone. Śledzimy oficjalne informacje za Ciebie.",
-        benefitsIntro: "Otrzymaj jedną wiadomość e-mail, gdy:",
+          "Zapisz się na bezpłatne powiadomienie e-mail od BelgiumVignette.be, niezależnej strony informacyjnej. Nie jesteśmy instytucją publiczną i sami nie sprzedajemy winiet. Otrzymasz jedno powiadomienie, gdy autoryzowana sprzedaż będzie dostępna.",
         benefits: [
-          "ostateczne ceny zostaną potwierdzone;",
-          "rozpocznie się autoryzowana sprzedaż;",
-          "będzie dostępny link do uznanego kanału zakupu.",
+          "Jedno powiadomienie, gdy ruszy autoryzowana sprzedaż",
+          "Link do uznanego kanału zakupu",
+          "Bez zbędnych e-maili",
         ],
         submit: "Informuj mnie na bieżąco",
       },
       buy: {
-        title: "Powiadom mnie, gdy belgijska winieta będzie w sprzedaży",
+        title:
+          "Powiadom mnie, gdy belgijska winieta będzie w sprzedaży",
         description:
-          "Autoryzowana sprzedaż jeszcze się nie rozpoczęła. Według obecnych planów belgijską winietę będzie można kupić od 1 marca 2027 r. przez oficjalną stronę lub autoryzowanego partnera. Podaj swój adres e-mail i otrzymaj powiadomienie, gdy autoryzowana sprzedaż będzie dostępna.",
+          "Zapisz się na bezpłatne powiadomienie e-mail od BelgiumVignette.be, niezależnej strony informacyjnej. Nie jesteśmy instytucją publiczną i sami nie sprzedajemy winiet. Otrzymasz jedno powiadomienie, gdy autoryzowana sprzedaż będzie dostępna.",
         benefits: [],
-        submit: "Wyślij mi link do zakupu",
+        submit: "Informuj mnie na bieżąco",
       },
       foreign: {
         title:
           "Powiadom mnie, gdy zagraniczne auta będą mogły zarejestrować winietę",
         description:
-          "Według planów zagraniczni kierowcy również będą potrzebować belgijskiej winiety. Otrzymaj powiadomienie, gdy rejestracja i zakup będą możliwe przez uznany kanał.",
+          "Zapisz się na bezpłatne powiadomienie e-mail od BelgiumVignette.be, niezależnej strony informacyjnej. Otrzymasz jedno powiadomienie, gdy autoryzowana sprzedaż będzie dostępna.",
         benefits: [
-          "Start autoryzowanej sprzedaży",
-          "Zasady dla zagranicznych tablic rejestracyjnych",
+          "Jedno powiadomienie, gdy ruszy autoryzowana sprzedaż",
           "Link do uznanego kanału zakupu",
+          "Bez zbędnych e-maili",
         ],
         submit: "Informuj mnie na bieżąco",
       },
       news: {
-        title: "Otrzymuj ważne aktualizacje o belgijskiej winiecie",
+        title:
+          "Otrzymaj powiadomienie, gdy ruszy oficjalna sprzedaż belgijskiej winiety",
         description:
-          "Krótkie, istotne powiadomienia, gdy pojawią się informacje o cenach, zasadach lub starcie sprzedaży.",
+          "Zapisz się na bezpłatne powiadomienie e-mail od BelgiumVignette.be, niezależnej strony informacyjnej. Otrzymasz jedno powiadomienie, gdy autoryzowana sprzedaż będzie dostępna.",
         benefits: [
-          "Ważne aktualizacje o winiecie",
-          "Bez codziennego spamu",
-          "Link do zakupu, gdy uznany kanał będzie dostępny",
+          "Jedno powiadomienie, gdy ruszy autoryzowana sprzedaż",
+          "Link do uznanego kanału zakupu",
+          "Bez zbędnych e-maili",
         ],
-        submit: "Otrzymuj aktualizacje",
+        submit: "Informuj mnie na bieżąco",
       },
       default: {
         title:
-          "Otrzymaj link do zakupu, gdy belgijska winieta będzie w sprzedaży",
+          "Otrzymaj powiadomienie, gdy ruszy oficjalna sprzedaż belgijskiej winiety",
         description:
-          "Sprzedaż według planu zaczyna się 1 marca 2027 r. Wyślemy Ci jedno powiadomienie, gdy autoryzowana sprzedaż będzie dostępna.",
+          "Zapisz się na bezpłatne powiadomienie e-mail od BelgiumVignette.be, niezależnej strony informacyjnej. Nie jesteśmy instytucją publiczną i sami nie sprzedajemy winiet. Otrzymasz jedno powiadomienie, gdy autoryzowana sprzedaż będzie dostępna.",
         benefits: [
-          "Link do autoryzowanego kanału zakupu",
-          "Aktualizacje o cenach i zasadach",
+          "Jedno powiadomienie, gdy ruszy autoryzowana sprzedaż",
+          "Link do uznanego kanału zakupu",
           "Bez zbędnych e-maili",
         ],
-        submit: "Wyślij mi link do zakupu",
+        submit: "Informuj mnie na bieżąco",
       },
     },
   },

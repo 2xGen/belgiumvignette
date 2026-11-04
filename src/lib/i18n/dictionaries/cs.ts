@@ -110,7 +110,7 @@ const dictionary: BaseDictionary = {
     backToHome: "Zpět na úvod",
     plannedNotice:
       "Plány představené v březnu 2026 se mohou ještě změnit. Sledujeme oficiální zdroje a tuto stránku aktualizujeme, jakmile se objeví novinky.",
-    independentSite: "Info belgická silniční známka",
+    independentSite: "Nezávislé informace o belgické silniční známce",
     contactLabel: "Kontakt",
     cookieSettings: "Nastavení cookies",
     tableCategory: "Kategorie",
@@ -235,15 +235,15 @@ const dictionary: BaseDictionary = {
       },
       {
         date: "1 May 2027",
-        title: "Známka povinná",
+        title: "Plánované zavedení",
         description:
-          "Digitální známka vyžadována na dálnicích a regionálních hlavních silnicích.",
+          "Zamýšlený začátek digitální silniční známky, s výhradou konečného schválení.",
       },
       {
         date: "1 July 2027",
-        title: "Začínají pokuty",
+        title: "Plánované vymáhání",
         description:
-          "Tolerance končí. Kamery ANPR a mobilní jednotky zahajují vymáhání.",
+          "Zamýšlený konec tolerančního období a začátek pokut, s výhradou konečného schválení.",
       },
     ],
     faqTitle: "Často kladené otázky",
@@ -676,83 +676,86 @@ const dictionary: BaseDictionary = {
   },
   newsletter: {
     emailPlaceholder: "E-mailová adresa",
-    consentLabel: "Souhlasím se zasíláním aktualizací a přečetl(a) jsem",
+    consentLabel:
+      "Opravňuji BelgiumVignette.be, aby mi e-mailem posílala informace o dostupnosti belgické silniční známky. Odběr mohu kdykoli zrušit.",
     success: "Děkujeme! Jste přihlášeni k odběru.",
     error: "Něco se pokazilo. Zkuste to prosím znovu.",
-    privacyLink: "zásady ochrany soukromí",
+    privacyLink: "",
     independenceNote:
       "BelgiumVignette.be je nezávislá informační služba a není spojena s belgickou vládou. Belgickou silniční známku v současnosti neprodáváme.",
     sticky: {
-      teaser: "Známka ještě není v prodeji — získejte odkaz na nákup",
+      teaser: "Známka ještě není v prodeji — získejte upozornění na začátek prodeje",
       cta: "Přihlásit se →",
       closeLabel: "Zavřít",
     },
     intents: {
       home: {
         title:
-          "Získejte odkaz na nákup, jakmile bude belgická známka v prodeji",
+          "Získejte upozornění, jakmile začne oficiální prodej belgické známky",
         description:
-          "Prodej je plánován od 1. března 2027. Zanechte e-mailovou adresu a dostanete jedno upozornění, jakmile bude autorizovaný prodej dostupný.",
+          "Přihlaste se k odběru bezplatného e-mailového upozornění od BelgiumVignette.be, nezávislého informačního webu. Nejsme veřejný orgán a známky sami neprodáváme. Dostanete jedno upozornění, jakmile bude autorizovaný prodej dostupný.",
         benefits: [
-          "Odkaz na autorizovaný nákupní kanál, jakmile bude znám",
-          "Aktualizace při změnách cen nebo pravidel",
+          "Jedno upozornění, jakmile začne autorizovaný prodej",
+          "Odkaz na uznávaný nákupní kanál",
           "Žádné zbytečné e-maily",
         ],
-        submit: "Pošlete mi odkaz na nákup",
+        submit: "Informujte mě",
       },
       prices: {
-        title: "Dostávejte upozornění, jakmile budou známé konečné ceny známky",
+        title:
+          "Získejte upozornění, jakmile začne oficiální prodej belgické známky",
         description:
-          "Aktuální sazby jsou zveřejněny, ale zavedení ještě musí být definitivně schváleno. Sledujeme oficiální informace za vás.",
-        benefitsIntro: "Dostanete jeden e-mail, jakmile:",
+          "Přihlaste se k odběru bezplatného e-mailového upozornění od BelgiumVignette.be, nezávislého informačního webu. Nejsme veřejný orgán a známky sami neprodáváme. Dostanete jedno upozornění, jakmile bude autorizovaný prodej dostupný.",
         benefits: [
-          "budou potvrzeny konečné ceny;",
-          "začne autorizovaný prodej;",
-          "bude dostupný odkaz na uznávaný nákupní kanál.",
+          "Jedno upozornění, jakmile začne autorizovaný prodej",
+          "Odkaz na uznávaný nákupní kanál",
+          "Žádné zbytečné e-maily",
         ],
         submit: "Informujte mě",
       },
       buy: {
-        title: "Dejte mi vědět, jakmile bude belgická známka v prodeji",
+        title:
+          "Dejte mi vědět, jakmile bude belgická známka v prodeji",
         description:
-          "Autorizovaný prodej ještě nezačal. Podle současného plánu můžete belgickou známku koupit od 1. března 2027 přes oficiální web nebo autorizovaného partnera. Zanechte e-mailovou adresu a dostanete upozornění, jakmile bude autorizovaný prodej dostupný.",
+          "Přihlaste se k odběru bezplatného e-mailového upozornění od BelgiumVignette.be, nezávislého informačního webu. Nejsme veřejný orgán a známky sami neprodáváme. Dostanete jedno upozornění, jakmile bude autorizovaný prodej dostupný.",
         benefits: [],
-        submit: "Pošlete mi odkaz na nákup",
+        submit: "Informujte mě",
       },
       foreign: {
         title:
           "Dejte mi vědět, kdy budou moci zahraniční auta registrovat známku",
         description:
-          "Podle plánů budou zahraniční řidiči také potřebovat belgickou známku. Dostanete upozornění, jakmile bude registrace a nákup možné přes uznávaný kanál.",
+          "Přihlaste se k odběru bezplatného e-mailového upozornění od BelgiumVignette.be, nezávislého informačního webu. Dostanete jedno upozornění, jakmile bude autorizovaný prodej dostupný.",
         benefits: [
-          "Začátek autorizovaného prodeje",
-          "Pravidla pro zahraniční registrační značky",
+          "Jedno upozornění, jakmile začne autorizovaný prodej",
           "Odkaz na uznávaný nákupní kanál",
+          "Žádné zbytečné e-maily",
         ],
         submit: "Informujte mě",
       },
       news: {
-        title: "Dostávejte důležité aktualizace o belgické známce",
+        title:
+          "Získejte upozornění, jakmile začne oficiální prodej belgické známky",
         description:
-          "Krátká, relevantní upozornění, když se objeví zprávy o cenách, pravidlech nebo začátku prodeje.",
+          "Přihlaste se k odběru bezplatného e-mailového upozornění od BelgiumVignette.be, nezávislého informačního webu. Dostanete jedno upozornění, jakmile bude autorizovaný prodej dostupný.",
         benefits: [
-          "Důležité aktualizace o známce",
-          "Žádný denní spam",
-          "Odkaz na nákup, jakmile bude uznávaný kanál dostupný",
+          "Jedno upozornění, jakmile začne autorizovaný prodej",
+          "Odkaz na uznávaný nákupní kanál",
+          "Žádné zbytečné e-maily",
         ],
-        submit: "Dostávat aktualizace",
+        submit: "Informujte mě",
       },
       default: {
         title:
-          "Získejte odkaz na nákup, jakmile bude belgická známka v prodeji",
+          "Získejte upozornění, jakmile začne oficiální prodej belgické známky",
         description:
-          "Prodej podle plánu začíná 1. března 2027. Pošleme vám jedno upozornění, jakmile bude autorizovaný prodej dostupný.",
+          "Přihlaste se k odběru bezplatného e-mailového upozornění od BelgiumVignette.be, nezávislého informačního webu. Nejsme veřejný orgán a známky sami neprodáváme. Dostanete jedno upozornění, jakmile bude autorizovaný prodej dostupný.",
         benefits: [
-          "Odkaz na autorizovaný nákupní kanál",
-          "Aktualizace o cenách a pravidlech",
+          "Jedno upozornění, jakmile začne autorizovaný prodej",
+          "Odkaz na uznávaný nákupní kanál",
           "Žádné zbytečné e-maily",
         ],
-        submit: "Pošlete mi odkaz na nákup",
+        submit: "Informujte mě",
       },
     },
   },

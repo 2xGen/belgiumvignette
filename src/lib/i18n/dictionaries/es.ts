@@ -110,7 +110,7 @@ const dictionary: BaseDictionary = {
     backToHome: "Volver al inicio",
     plannedNotice:
       "Los planes presentados en marzo de 2026 pueden cambiar. Seguimos las fuentes oficiales y actualizamos esta página cuando hay novedades.",
-    independentSite: "Info viñeta vial belga",
+    independentSite: "Información independiente sobre la viñeta vial belga",
     contactLabel: "Contacto",
     cookieSettings: "Configuración de cookies",
     tableCategory: "Categoría",
@@ -235,15 +235,15 @@ const dictionary: BaseDictionary = {
       },
       {
         date: "1 May 2027",
-        title: "Viñeta obligatoria",
+        title: "Introducción prevista",
         description:
-          "Viñeta digital obligatoria en autopistas y carreteras principales regionales.",
+          "Inicio previsto de la viñeta vial digital, sujeto a la aprobación definitiva.",
       },
       {
         date: "1 July 2027",
-        title: "Multas aplicadas",
+        title: "Aplicación prevista",
         description:
-          "Finaliza el período de tolerancia. Las cámaras ANPR y las unidades móviles comienzan el control.",
+          "Fin previsto del período de tolerancia e inicio de las multas, sujeto a la aprobación definitiva.",
       },
     ],
     faqTitle: "Preguntas frecuentes",
@@ -676,83 +676,86 @@ const dictionary: BaseDictionary = {
   },
   newsletter: {
     emailPlaceholder: "Dirección de correo electrónico",
-    consentLabel: "Acepto recibir actualizaciones y he leído la",
+    consentLabel:
+      "Autorizo a BelgiumVignette.be a enviarme un correo electrónico sobre la disponibilidad de la viñeta vial belga. Puedo darme de baja en cualquier momento.",
     success: "¡Gracias! Está suscrito.",
     error: "Algo ha fallado. Inténtelo de nuevo.",
-    privacyLink: "política de privacidad",
+    privacyLink: "",
     independenceNote:
       "BelgiumVignette.be es un servicio de información independiente y no está afiliado al gobierno belga. Actualmente no vendemos la viñeta vial belga.",
     sticky: {
-      teaser: "La viñeta aún no está a la venta — reciba el enlace de compra",
+      teaser: "La viñeta aún no está a la venta — reciba un aviso cuando empiece la venta",
       cta: "Suscribirse →",
       closeLabel: "Cerrar",
     },
     intents: {
       home: {
         title:
-          "Reciba el enlace de compra en cuanto la viñeta belga esté a la venta",
+          "Reciba un aviso en cuanto empiece la venta oficial de la viñeta belga",
         description:
-          "La venta está prevista a partir del 1 de marzo de 2027. Deje su correo electrónico y reciba un aviso cuando la venta autorizada esté disponible.",
+          "Suscríbase a un aviso gratuito por correo de BelgiumVignette.be, un sitio de información independiente. No somos una entidad pública ni vendemos viñetas. Recibirá un solo aviso cuando la venta autorizada esté disponible.",
         benefits: [
-          "Enlace a un canal de compra autorizado en cuanto se conozca",
-          "Actualizaciones si cambian los precios o las normas",
+          "Un solo aviso cuando empiece la venta autorizada",
+          "Enlace a un canal de compra reconocido",
           "Sin correos innecesarios",
         ],
-        submit: "Enviarme el enlace de compra",
+        submit: "Manténganme informado",
       },
       prices: {
-        title: "Reciba un aviso cuando se confirmen los precios definitivos de la viñeta",
+        title:
+          "Reciba un aviso en cuanto empiece la venta oficial de la viñeta belga",
         description:
-          "Las tarifas actuales están publicadas, pero la introducción aún debe aprobarse de forma definitiva. Seguimos la información oficial por usted.",
-        benefitsIntro: "Reciba un solo correo cuando:",
+          "Suscríbase a un aviso gratuito por correo de BelgiumVignette.be, un sitio de información independiente. No somos una entidad pública ni vendemos viñetas. Recibirá un solo aviso cuando la venta autorizada esté disponible.",
         benefits: [
-          "se confirmen los precios definitivos;",
-          "empiece la venta autorizada;",
-          "esté disponible un enlace a un canal de compra reconocido.",
+          "Un solo aviso cuando empiece la venta autorizada",
+          "Enlace a un canal de compra reconocido",
+          "Sin correos innecesarios",
         ],
         submit: "Manténganme informado",
       },
       buy: {
-        title: "Avísenme en cuanto la viñeta belga esté a la venta",
+        title:
+          "Avísenme en cuanto la viñeta belga esté a la venta",
         description:
-          "La venta autorizada aún no ha comenzado. Según la planificación actual, podrá comprar la viñeta belga a partir del 1 de marzo de 2027 a través del sitio oficial o de un socio autorizado. Deje su correo electrónico y reciba un aviso cuando la venta autorizada esté disponible.",
+          "Suscríbase a un aviso gratuito por correo de BelgiumVignette.be, un sitio de información independiente. No somos una entidad pública ni vendemos viñetas. Recibirá un solo aviso cuando la venta autorizada esté disponible.",
         benefits: [],
-        submit: "Enviarme el enlace de compra",
+        submit: "Manténganme informado",
       },
       foreign: {
         title:
           "Avísenme cuando los coches extranjeros puedan registrar su viñeta",
         description:
-          "Según los planes, los conductores extranjeros también necesitarán una viñeta belga. Reciba un aviso en cuanto el registro y la compra sean posibles a través de un canal reconocido.",
+          "Suscríbase a un aviso gratuito por correo de BelgiumVignette.be, un sitio de información independiente. Recibirá un solo aviso cuando la venta autorizada esté disponible.",
         benefits: [
-          "Inicio de la venta autorizada",
-          "Normas para matrículas extranjeras",
+          "Un solo aviso cuando empiece la venta autorizada",
           "Enlace a un canal de compra reconocido",
+          "Sin correos innecesarios",
         ],
         submit: "Manténganme informado",
       },
       news: {
-        title: "Reciba actualizaciones importantes sobre la viñeta belga",
+        title:
+          "Reciba un aviso en cuanto empiece la venta oficial de la viñeta belga",
         description:
-          "Avisos breves y relevantes cuando haya noticias sobre precios, normas o el inicio de la venta.",
+          "Suscríbase a un aviso gratuito por correo de BelgiumVignette.be, un sitio de información independiente. Recibirá un solo aviso cuando la venta autorizada esté disponible.",
         benefits: [
-          "Actualizaciones importantes sobre la viñeta",
-          "Sin spam diario",
-          "Enlace de compra en cuanto haya un canal reconocido disponible",
+          "Un solo aviso cuando empiece la venta autorizada",
+          "Enlace a un canal de compra reconocido",
+          "Sin correos innecesarios",
         ],
-        submit: "Recibir actualizaciones",
+        submit: "Manténganme informado",
       },
       default: {
         title:
-          "Reciba el enlace de compra en cuanto la viñeta belga esté a la venta",
+          "Reciba un aviso en cuanto empiece la venta oficial de la viñeta belga",
         description:
-          "La venta comienza según lo previsto el 1 de marzo de 2027. Le enviaremos un solo aviso cuando la venta autorizada esté disponible.",
+          "Suscríbase a un aviso gratuito por correo de BelgiumVignette.be, un sitio de información independiente. No somos una entidad pública ni vendemos viñetas. Recibirá un solo aviso cuando la venta autorizada esté disponible.",
         benefits: [
-          "Enlace a un canal de compra autorizado",
-          "Actualizaciones sobre precios y normas",
+          "Un solo aviso cuando empiece la venta autorizada",
+          "Enlace a un canal de compra reconocido",
           "Sin correos innecesarios",
         ],
-        submit: "Enviarme el enlace de compra",
+        submit: "Manténganme informado",
       },
     },
   },

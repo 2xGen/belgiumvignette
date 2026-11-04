@@ -110,7 +110,7 @@ const dictionary: BaseDictionary = {
     backToHome: "Tilbage til forsiden",
     plannedNotice:
       "Planer præsenteret i March 2026 kan stadig ændres. Vi følger officielle kilder og opdaterer denne side, når der kommer nyt.",
-    independentSite: "Info belgisk vejvignette",
+    independentSite: "Uafhængig information om den belgiske vejvignette",
     contactLabel: "Kontakt",
     cookieSettings: "Cookieindstillinger",
     tableCategory: "Kategori",
@@ -227,23 +227,23 @@ const dictionary: BaseDictionary = {
       "Dette er de takster, der i øjeblikket er offentliggjort af den flamske regering. Indførelsen er stadig under forbehold af endelig godkendelse.",
     timelineTitle: "Vigtige datoer (ifølge planerne)",
     timeline: [
-      {
-        date: "March 2026",
+{
+        date: "Marts 2026",
         title: "Planer præsenteret",
         description:
           "Den flamske regering præsenterer forslag. Vallonien, Bruxelles og EU-Kommissionens godkendelse afventes stadig.",
       },
       {
-        date: "1 May 2027",
-        title: "Vignet obligatorisk",
+        date: "1. maj 2027",
+        title: "Planlagt indførelse",
         description:
-          "Digitalt vignet kræves på motorveje og regionale hovedveje.",
+          "Tilsigtet startdato for den digitale vejvignette med forbehold for endelig godkendelse.",
       },
       {
-        date: "1 July 2027",
-        title: "Bøder håndhæves",
+        date: "1. juli 2027",
+        title: "Planlagt håndhævelse",
         description:
-          "Toleranceperioden slutter. ANPR-kameraer og mobile enheder begynder kontrol.",
+          "Tilsigtet slutdato for tolerancperioden og start på bøder med forbehold for endelig godkendelse.",
       },
     ],
     faqTitle: "Ofte stillede spørgsmål",
@@ -677,83 +677,86 @@ const dictionary: BaseDictionary = {
   },
   newsletter: {
     emailPlaceholder: "E-mailadresse",
-    consentLabel: "Jeg accepterer at modtage opdateringer og har læst",
+    consentLabel:
+      "Jeg giver BelgiumVignette.be tilladelse til at sende mig e-mails om tilgængeligheden af den belgiske vejvignette. Jeg kan til enhver tid afmelde mig.",
     success: "Tak! Du er tilmeldt.",
     error: "Noget gik galt. Prøv igen.",
-    privacyLink: "privatlivspolitikken.",
+    privacyLink: "",
     independenceNote:
       "BelgiumVignette.be er en uafhængig informationstjeneste og er ikke tilknyttet den belgiske stat. Vi sælger i øjeblikket ikke belgiske vejvignetter.",
     sticky: {
-      teaser: "Vignetten er endnu ikke til salg — få købslinket",
+      teaser: "Vignetten er endnu ikke til salg — få besked, når salget starter",
       cta: "Tilmeld dig →",
       closeLabel: "Luk",
     },
     intents: {
       home: {
         title:
-          "Få købslinket, så snart det belgiske vignet er tilgængeligt",
+          "Få besked, så snart det officielle salg af den belgiske vignette starter",
         description:
-          "Salget er planlagt fra 1. marts 2027. Efterlad din e-mail og få én besked, når autoriseret salg bliver tilgængeligt.",
+          "Tilmeld dig en gratis e-mailnotifikation fra BelgiumVignette.be, et uafhængigt informationssite. Vi er ikke en myndighed og sælger ikke selv vignetter. Du modtager én besked, når autoriseret salg bliver tilgængeligt.",
         benefits: [
-          "Link til en autoriseret købskanal, så snart den er kendt",
-          "Opdateringer, når priser eller regler ændres",
+          "Én besked, når autoriseret salg starter",
+          "Link til en anerkendt købskanal",
           "Ingen unødvendige e-mails",
         ],
-        submit: "Send mig købslinket",
+        submit: "Hold mig opdateret",
       },
       prices: {
-        title: "Få besked, når de endelige vignetpriser er bekræftet",
+        title:
+          "Få besked, så snart det officielle salg af den belgiske vignette starter",
         description:
-          "De aktuelle takster er offentliggjort, men indførelsen skal stadig godkendes endeligt. Vi følger den officielle information for dig.",
-        benefitsIntro: "Få én e-mail, når:",
+          "Tilmeld dig en gratis e-mailnotifikation fra BelgiumVignette.be, et uafhængigt informationssite. Vi er ikke en myndighed og sælger ikke selv vignetter. Du modtager én besked, når autoriseret salg bliver tilgængeligt.",
         benefits: [
-          "de endelige priser er bekræftet;",
-          "autoriseret salg starter;",
-          "et link til en anerkendt købskanal er tilgængeligt.",
+          "Én besked, når autoriseret salg starter",
+          "Link til en anerkendt købskanal",
+          "Ingen unødvendige e-mails",
         ],
         submit: "Hold mig opdateret",
       },
       buy: {
-        title: "Giv mig besked, når det belgiske vignet kommer til salg",
+        title:
+          "Giv mig besked, når den belgiske vignette kan købes",
         description:
-          "Det autoriserede salg er endnu ikke startet. Ifølge den aktuelle plan kan du købe det belgiske vignet fra 1. marts 2027 via den officielle hjemmeside eller en godkendt partner. Efterlad din e-mail og få besked, når autoriseret salg bliver tilgængeligt.",
+          "Tilmeld dig en gratis e-mailnotifikation fra BelgiumVignette.be, et uafhængigt informationssite. Vi er ikke en myndighed og sælger ikke selv vignetter. Du modtager én besked, når autoriseret salg bliver tilgængeligt.",
         benefits: [],
-        submit: "Send mig købslinket",
+        submit: "Hold mig opdateret",
       },
       foreign: {
         title:
-          "Giv mig besked, når udenlandske biler kan registrere deres vignet",
+          "Giv mig besked, når udenlandske biler kan registrere deres vignette",
         description:
-          "Udenlandske bilister forventes også at skulle have et belgisk vignet. Få besked, når registrering og køb via en anerkendt kanal er muligt.",
+          "Tilmeld dig en gratis e-mailnotifikation fra BelgiumVignette.be, et uafhængigt informationssite. Du modtager én besked, når autoriseret salg bliver tilgængeligt.",
         benefits: [
-          "Start af autoriseret salg",
-          "Regler for udenlandske nummerplader",
+          "Én besked, når autoriseret salg starter",
           "Link til en anerkendt købskanal",
+          "Ingen unødvendige e-mails",
         ],
         submit: "Hold mig opdateret",
       },
       news: {
-        title: "Få vigtige opdateringer om det belgiske vignet",
+        title:
+          "Få besked, så snart det officielle salg af den belgiske vignette starter",
         description:
-          "Korte, relevante beskeder, når der er nyheder om priser, regler eller salgsstarten.",
+          "Tilmeld dig en gratis e-mailnotifikation fra BelgiumVignette.be, et uafhængigt informationssite. Du modtager én besked, når autoriseret salg bliver tilgængeligt.",
         benefits: [
-          "Vigtige opdateringer om vignetten",
-          "Ingen daglig spam",
-          "Købslink, så snart en anerkendt kanal er tilgængelig",
+          "Én besked, når autoriseret salg starter",
+          "Link til en anerkendt købskanal",
+          "Ingen unødvendige e-mails",
         ],
-        submit: "Få opdateringer",
+        submit: "Hold mig opdateret",
       },
       default: {
         title:
-          "Få købslinket, så snart det belgiske vignet er tilgængeligt",
+          "Få besked, så snart det officielle salg af den belgiske vignette starter",
         description:
-          "Salget er planlagt til at starte den 1. marts 2027. Vi sender dig én besked, når autoriseret salg bliver tilgængeligt.",
+          "Tilmeld dig en gratis e-mailnotifikation fra BelgiumVignette.be, et uafhængigt informationssite. Vi er ikke en myndighed og sælger ikke selv vignetter. Du modtager én besked, når autoriseret salg bliver tilgængeligt.",
         benefits: [
-          "Link til en autoriseret købskanal",
-          "Opdateringer om priser og regler",
+          "Én besked, når autoriseret salg starter",
+          "Link til en anerkendt købskanal",
           "Ingen unødvendige e-mails",
         ],
-        submit: "Send mig købslinket",
+        submit: "Hold mig opdateret",
       },
     },
   },

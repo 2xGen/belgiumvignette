@@ -235,15 +235,15 @@ const dictionary: BaseDictionary = {
       },
       {
         date: "1 mei 2027",
-        title: "Vignet verplicht",
+        title: "Geplande invoering",
         description:
-          "Digitale vignetplicht voor personenauto's op snelwegen en regionale hoofdwegen.",
+          "Beoogde startdatum van het digitale wegenvignet, onder voorbehoud van definitieve goedkeuring.",
       },
       {
         date: "1 juli 2027",
-        title: "Boetes van kracht",
+        title: "Geplande handhaving",
         description:
-          "Tolerantieperiode eindigt. Handhaving via ANPR-camera's en mobiele controles.",
+          "Beoogde einddatum van de tolerantieperiode en start van boetes, onder voorbehoud van definitieve goedkeuring.",
       },
     ],
     faqTitle: "Veelgestelde vragen",
@@ -717,67 +717,66 @@ const dictionary: BaseDictionary = {
         title:
           "Ontvang een melding zodra de officiële verkoop van het Belgische vignet start",
         description:
-          "Schrijf u in voor een gratis e-mailmelding van BelgiumVignette.be, een onafhankelijke informatiesite. Wij zijn geen overheidsinstantie en verkopen zelf geen vignetten.",
+          "Schrijf u in voor een gratis e-mailmelding van BelgiumVignette.be, een onafhankelijke informatiesite. Wij zijn geen overheidsinstantie en verkopen zelf geen vignetten. U ontvangt één melding wanneer geautoriseerde verkoop beschikbaar wordt.",
         benefits: [
-          "Link naar een geautoriseerd aankoopkanaal zodra bekend",
-          "Updates bij wijzigingen in prijzen of regels",
+          "Eén melding wanneer geautoriseerde verkoop start",
+          "Link naar een erkend aankoopkanaal",
           "Geen onnodige e-mails",
         ],
-        submit: "Stuur mij de aankooplink",
+        submit: "Houd mij op de hoogte",
       },
       prices: {
-        title: "Ontvang een melding zodra de definitieve vignetprijzen bekend zijn",
+        title: "Ontvang een melding zodra de officiële verkoop van het Belgische vignet start",
         description:
-          "De huidige tarieven zijn gepubliceerd, maar de invoering moet nog definitief worden goedgekeurd. Wij houden de officiële informatie voor u bij.",
-        benefitsIntro: "Ontvang één e-mail zodra:",
+          "Schrijf u in voor een gratis e-mailmelding van BelgiumVignette.be, een onafhankelijke informatiesite. Wij zijn geen overheidsinstantie en verkopen zelf geen vignetten. U ontvangt één melding wanneer geautoriseerde verkoop beschikbaar wordt.",
         benefits: [
-          "de definitieve prijzen zijn bevestigd;",
-          "geautoriseerde verkoop start;",
-          "een link naar een erkend aankoopkanaal beschikbaar is.",
+          "Eén melding wanneer geautoriseerde verkoop start",
+          "Link naar een erkend aankoopkanaal",
+          "Geen onnodige e-mails",
         ],
         submit: "Houd mij op de hoogte",
       },
       buy: {
         title: "Laat het mij weten zodra het Belgische vignet te koop is",
         description:
-          "De geautoriseerde verkoop is nog niet gestart. Volgens de huidige planning kunt u het Belgische vignet vanaf 1 maart 2027 kopen via de officiële website of een erkende partner. Laat uw e-mailadres achter en ontvang een melding wanneer geautoriseerde verkoop beschikbaar wordt.",
+          "Schrijf u in voor een gratis e-mailmelding van BelgiumVignette.be, een onafhankelijke informatiesite. Wij zijn geen overheidsinstantie en verkopen zelf geen vignetten. U ontvangt één melding wanneer geautoriseerde verkoop beschikbaar wordt.",
         benefits: [],
-        submit: "Stuur mij de aankooplink",
+        submit: "Houd mij op de hoogte",
       },
       foreign: {
         title:
           "Laat mij weten wanneer buitenlandse auto's hun vignet kunnen registreren",
         description:
-          "Buitenlandse bestuurders hebben volgens de plannen ook een Belgisch vignet nodig. Ontvang een melding zodra registratie en aankoop via een erkend kanaal mogelijk zijn.",
+          "Schrijf u in voor een gratis e-mailmelding van BelgiumVignette.be, een onafhankelijke informatiesite. U ontvangt één melding wanneer geautoriseerde verkoop beschikbaar wordt.",
         benefits: [
-          "Start van de geautoriseerde verkoop",
-          "Regels voor buitenlandse kentekens",
+          "Eén melding wanneer geautoriseerde verkoop start",
           "Link naar een erkend aankoopkanaal",
+          "Geen onnodige e-mails",
         ],
         submit: "Houd mij op de hoogte",
       },
       news: {
-        title: "Ontvang belangrijke updates over het Belgische vignet",
+        title: "Ontvang een melding zodra de officiële verkoop van het Belgische vignet start",
         description:
-          "Korte, relevante meldingen wanneer er nieuws is over prijzen, regels of de start van de verkoop.",
+          "Schrijf u in voor een gratis e-mailmelding van BelgiumVignette.be, een onafhankelijke informatiesite. U ontvangt één melding wanneer geautoriseerde verkoop beschikbaar wordt.",
         benefits: [
-          "Belangrijke updates over het vignet",
-          "Geen dagelijkse spam",
-          "Aankooplink zodra een erkend kanaal beschikbaar is",
+          "Eén melding wanneer geautoriseerde verkoop start",
+          "Link naar een erkend aankoopkanaal",
+          "Geen onnodige e-mails",
         ],
-        submit: "Ontvang updates",
+        submit: "Houd mij op de hoogte",
       },
       default: {
         title:
           "Ontvang een melding zodra de officiële verkoop van het Belgische vignet start",
         description:
-          "Schrijf u in voor een gratis e-mailmelding van BelgiumVignette.be, een onafhankelijke informatiesite. Wij zijn geen overheidsinstantie en verkopen zelf geen vignetten.",
+          "Schrijf u in voor een gratis e-mailmelding van BelgiumVignette.be, een onafhankelijke informatiesite. Wij zijn geen overheidsinstantie en verkopen zelf geen vignetten. U ontvangt één melding wanneer geautoriseerde verkoop beschikbaar wordt.",
         benefits: [
-          "Link naar een geautoriseerd aankoopkanaal",
-          "Updates over prijzen en regels",
+          "Eén melding wanneer geautoriseerde verkoop start",
+          "Link naar een erkend aankoopkanaal",
           "Geen onnodige e-mails",
         ],
-        submit: "Stuur mij de aankooplink",
+        submit: "Houd mij op de hoogte",
       },
     },
   },

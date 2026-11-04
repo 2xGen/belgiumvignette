@@ -110,7 +110,7 @@ const dictionary: BaseDictionary = {
     backToHome: "Tillbaka till startsidan",
     plannedNotice:
       "Planer som presenterades i mars 2026 kan fortfarande ändras. Vi följer officiella källor och uppdaterar denna sida när nyheter kommer.",
-    independentSite: "Info belgisk vägvignett",
+    independentSite: "Oberoende information om den belgiska vägvignetten",
     contactLabel: "Kontakt",
     cookieSettings: "Cookieinställningar",
     tableCategory: "Kategori",
@@ -228,22 +228,22 @@ const dictionary: BaseDictionary = {
     timelineTitle: "Viktiga datum (enligt planerna)",
     timeline: [
       {
-        date: "March 2026",
+        date: "Mars 2026",
         title: "Planer presenterade",
         description:
           "Flamländska regeringen presenterar förslaget. Godkännande från Vallonien, Bryssel och EU-kommissionen återstår.",
       },
       {
-        date: "1 May 2027",
-        title: "Vignett obligatorisk",
+        date: "1 maj 2027",
+        title: "Planerat införande",
         description:
-          "Digital vignett krävs på motorvägar och regionala huvudvägar.",
+          "Planerat startdatum för den digitala vägvignetten, med förbehåll för slutligt godkännande.",
       },
       {
-        date: "1 July 2027",
-        title: "Böter tillämpas",
+        date: "1 juli 2027",
+        title: "Planerad kontroll",
         description:
-          "Toleransperioden upphör. ANPR-kameror och mobila enheter börjar kontrollera.",
+          "Planerat slutdatum för toleransperioden och start för böter, med förbehåll för slutligt godkännande.",
       },
     ],
     faqTitle: "Vanliga frågor",
@@ -676,83 +676,86 @@ const dictionary: BaseDictionary = {
   },
   newsletter: {
     emailPlaceholder: "E-postadress",
-    consentLabel: "Jag godkänner att ta emot uppdateringar och har läst",
+    consentLabel:
+      "Jag ger BelgiumVignette.be tillstånd att skicka e-post till mig om tillgängligheten av den belgiska vägvignetten. Jag kan avsluta prenumerationen när som helst.",
     success: "Tack! Du är prenumererad.",
     error: "Något gick fel. Försök igen.",
-    privacyLink: "integritetspolicyn.",
+    privacyLink: "",
     independenceNote:
       "BelgiumVignette.be är en oberoende informationstjänst och är inte knuten till den belgiska staten. Vi säljer för närvarande ingen belgisk vägvinjett.",
     sticky: {
-      teaser: "Vignetten säljs ännu inte — få köplänken",
+      teaser: "Vignetten säljs ännu inte — få ett meddelande när försäljningen startar",
       cta: "Anmäl dig →",
       closeLabel: "Stäng",
     },
     intents: {
       home: {
         title:
-          "Få köplänken så snart den belgiska vignetten blir tillgänglig",
+          "Få ett meddelande så snart den officiella försäljningen av den belgiska vignetten startar",
         description:
-          "Försäljningen planeras från 1 mars 2027. Lämna din e-postadress och få ett meddelande när auktoriserad försäljning blir tillgänglig.",
+          "Anmäl dig för ett kostnadsfritt e-postmeddelande från BelgiumVignette.be, en oberoende informationssajt. Vi är ingen myndighet och säljer inga vignetter själva. Du får ett enda meddelande när auktoriserad försäljning blir tillgänglig.",
         benefits: [
-          "Länk till en auktoriserad köpkanal så snart den är känd",
-          "Uppdateringar när priser eller regler ändras",
+          "Ett enda meddelande när auktoriserad försäljning startar",
+          "Länk till en godkänd köpkanal",
           "Inga onödiga e-postmeddelanden",
         ],
-        submit: "Skicka köplänken till mig",
+        submit: "Håll mig uppdaterad",
       },
       prices: {
-        title: "Få besked när de slutliga vignetpriserna är bekräftade",
+        title:
+          "Få ett meddelande så snart den officiella försäljningen av den belgiska vignetten startar",
         description:
-          "Nuvarande taxor har publicerats, men införandet måste fortfarande godkännas slutgiltigt. Vi följer den officiella informationen åt dig.",
-        benefitsIntro: "Få ett e-postmeddelande när:",
+          "Anmäl dig för ett kostnadsfritt e-postmeddelande från BelgiumVignette.be, en oberoende informationssajt. Vi är ingen myndighet och säljer inga vignetter själva. Du får ett enda meddelande när auktoriserad försäljning blir tillgänglig.",
         benefits: [
-          "de slutliga priserna är bekräftade;",
-          "auktoriserad försäljning startar;",
-          "en länk till en godkänd köpkanal är tillgänglig.",
+          "Ett enda meddelande när auktoriserad försäljning startar",
+          "Länk till en godkänd köpkanal",
+          "Inga onödiga e-postmeddelanden",
         ],
         submit: "Håll mig uppdaterad",
       },
       buy: {
-        title: "Meddela mig när den belgiska vignetten går till försäljning",
+        title:
+          "Meddela mig när den belgiska vignetten går till försäljning",
         description:
-          "Den auktoriserade försäljningen har ännu inte startat. Enligt nuvarande plan kan du köpa den belgiska vignetten från 1 mars 2027 via den officiella webbplatsen eller en auktoriserad partner. Lämna din e-postadress och få ett meddelande när auktoriserad försäljning blir tillgänglig.",
+          "Anmäl dig för ett kostnadsfritt e-postmeddelande från BelgiumVignette.be, en oberoende informationssajt. Vi är ingen myndighet och säljer inga vignetter själva. Du får ett enda meddelande när auktoriserad försäljning blir tillgänglig.",
         benefits: [],
-        submit: "Skicka köplänken till mig",
+        submit: "Håll mig uppdaterad",
       },
       foreign: {
         title:
           "Meddela mig när utländska bilar kan registrera sin vignett",
         description:
-          "Utländska förare förväntas också behöva en belgisk vignett. Få besked när registrering och köp via en godkänd kanal är möjliga.",
+          "Anmäl dig för ett kostnadsfritt e-postmeddelande från BelgiumVignette.be, en oberoende informationssajt. Du får ett enda meddelande när auktoriserad försäljning blir tillgänglig.",
         benefits: [
-          "Start av auktoriserad försäljning",
-          "Regler för utländska registreringsskyltar",
+          "Ett enda meddelande när auktoriserad försäljning startar",
           "Länk till en godkänd köpkanal",
+          "Inga onödiga e-postmeddelanden",
         ],
         submit: "Håll mig uppdaterad",
       },
       news: {
-        title: "Få viktiga uppdateringar om den belgiska vignetten",
+        title:
+          "Få ett meddelande så snart den officiella försäljningen av den belgiska vignetten startar",
         description:
-          "Korta, relevanta aviseringar när det finns nyheter om priser, regler eller försäljningsstarten.",
+          "Anmäl dig för ett kostnadsfritt e-postmeddelande från BelgiumVignette.be, en oberoende informationssajt. Du får ett enda meddelande när auktoriserad försäljning blir tillgänglig.",
         benefits: [
-          "Viktiga uppdateringar om vignetten",
-          "Ingen daglig spam",
-          "Köplänk så snart en godkänd kanal är tillgänglig",
+          "Ett enda meddelande när auktoriserad försäljning startar",
+          "Länk till en godkänd köpkanal",
+          "Inga onödiga e-postmeddelanden",
         ],
-        submit: "Få uppdateringar",
+        submit: "Håll mig uppdaterad",
       },
       default: {
         title:
-          "Få köplänken så snart den belgiska vignetten blir tillgänglig",
+          "Få ett meddelande så snart den officiella försäljningen av den belgiska vignetten startar",
         description:
-          "Försäljningen planeras att starta den 1 mars 2027. Vi skickar dig ett meddelande när auktoriserad försäljning blir tillgänglig.",
+          "Anmäl dig för ett kostnadsfritt e-postmeddelande från BelgiumVignette.be, en oberoende informationssajt. Vi är ingen myndighet och säljer inga vignetter själva. Du får ett enda meddelande när auktoriserad försäljning blir tillgänglig.",
         benefits: [
-          "Länk till en auktoriserad köpkanal",
-          "Uppdateringar om priser och regler",
+          "Ett enda meddelande när auktoriserad försäljning startar",
+          "Länk till en godkänd köpkanal",
           "Inga onödiga e-postmeddelanden",
         ],
-        submit: "Skicka köplänken till mig",
+        submit: "Håll mig uppdaterad",
       },
     },
   },

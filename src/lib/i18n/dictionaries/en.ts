@@ -235,15 +235,15 @@ const dictionary: BaseDictionary = {
       },
       {
         date: "1 May 2027",
-        title: "Vignette mandatory",
+        title: "Planned introduction",
         description:
-          "Digital vignette required on motorways and regional main roads.",
+          "Intended start date of the digital road vignette, subject to final approval.",
       },
       {
         date: "1 July 2027",
-        title: "Fines enforced",
+        title: "Planned enforcement",
         description:
-          "Tolerance period ends. ANPR cameras and mobile units begin enforcement.",
+          "Intended end of the tolerance period and start of fines, subject to final approval.",
       },
     ],
     faqTitle: "Frequently asked questions",
@@ -693,67 +693,66 @@ const dictionary: BaseDictionary = {
         title:
           "Get notified when official sales of the Belgian vignette start",
         description:
-          "Sign up for a free email alert from BelgiumVignette.be, an independent information site. We are not a government body and do not sell vignettes ourselves.",
+          "Sign up for a free email alert from BelgiumVignette.be, an independent information site. We are not a government body and do not sell vignettes ourselves. You will receive one notification when authorised sales become available.",
         benefits: [
-          "Link to an authorised purchase channel as soon as it is known",
-          "Updates when prices or rules change",
+          "One notification when authorised sales start",
+          "Link to a recognised purchase channel",
           "No unnecessary emails",
         ],
-        submit: "Send me the purchase link",
+        submit: "Keep me updated",
       },
       prices: {
-        title: "Get notified when final vignette prices are confirmed",
+        title: "Get notified when official sales of the Belgian vignette start",
         description:
-          "Current rates have been published, but introduction still needs final approval. We'll track the official information for you.",
-        benefitsIntro: "Get one email when:",
+          "Sign up for a free email alert from BelgiumVignette.be, an independent information site. We are not a government body and do not sell vignettes ourselves. You will receive one notification when authorised sales become available.",
         benefits: [
-          "final prices are confirmed;",
-          "authorised sales start;",
-          "a link to a recognised purchase channel is available.",
+          "One notification when authorised sales start",
+          "Link to a recognised purchase channel",
+          "No unnecessary emails",
         ],
         submit: "Keep me updated",
       },
       buy: {
         title: "Let me know when the Belgian vignette goes on sale",
         description:
-          "Authorised sales have not started yet. Under the current plan, you can buy the Belgian vignette from 1 March 2027 via the official website or an authorised partner. Leave your email and receive a notification when authorised sales become available.",
+          "Sign up for a free email alert from BelgiumVignette.be, an independent information site. We are not a government body and do not sell vignettes ourselves. You will receive one notification when authorised sales become available.",
         benefits: [],
-        submit: "Send me the purchase link",
+        submit: "Keep me updated",
       },
       foreign: {
         title:
           "Let me know when foreign cars can register their vignette",
         description:
-          "Foreign drivers are also expected to need a Belgian vignette. Get notified once registration and purchase via a recognised channel are possible.",
+          "Sign up for a free email alert from BelgiumVignette.be, an independent information site. You will receive one notification when authorised sales become available.",
         benefits: [
-          "Start of authorised sales",
-          "Rules for foreign plates",
+          "One notification when authorised sales start",
           "Link to a recognised purchase channel",
+          "No unnecessary emails",
         ],
         submit: "Keep me updated",
       },
       news: {
-        title: "Get important updates on the Belgian vignette",
+        title: "Get notified when official sales of the Belgian vignette start",
         description:
-          "Short, relevant alerts when there is news on prices, rules, or the start of sales.",
+          "Sign up for a free email alert from BelgiumVignette.be, an independent information site. You will receive one notification when authorised sales become available.",
         benefits: [
-          "Important updates on the vignette",
-          "No daily spam",
-          "Purchase link as soon as a recognised channel is available",
+          "One notification when authorised sales start",
+          "Link to a recognised purchase channel",
+          "No unnecessary emails",
         ],
-        submit: "Get updates",
+        submit: "Keep me updated",
       },
       default: {
         title:
           "Get notified when official sales of the Belgian vignette start",
         description:
-          "Sign up for a free email alert from BelgiumVignette.be, an independent information site. We are not a government body and do not sell vignettes ourselves.",
+          "Sign up for a free email alert from BelgiumVignette.be, an independent information site. We are not a government body and do not sell vignettes ourselves. You will receive one notification when authorised sales become available.",
         benefits: [
-          "Link to an authorised purchase channel",
-          "Updates on prices and rules",
+          "One notification when authorised sales start",
+          "Link to a recognised purchase channel",
           "No unnecessary emails",
         ],
-        submit: "Send me the purchase link",
+        submit: "Keep me updated",
       },
     },
   },
