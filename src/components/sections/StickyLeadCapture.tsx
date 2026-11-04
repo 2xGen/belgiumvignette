@@ -158,15 +158,15 @@ export default function StickyLeadCapture({
                       placeholder={dict.newsletter.emailPlaceholder}
                       autoComplete="email"
                     />
-                    <label className="flex items-start gap-2 text-xs leading-snug text-text-muted">
+                    <label className="grid grid-cols-[auto_minmax(0,1fr)] items-start gap-x-2.5 gap-y-1 text-xs leading-relaxed text-text-muted">
                       <input
                         type="checkbox"
                         required
                         checked={consent}
                         onChange={(e) => setConsent(e.target.checked)}
-                        className="mt-0.5"
+                        className="mt-0.5 size-4 shrink-0"
                       />
-                      <span>
+                      <span className="min-w-0 break-words [overflow-wrap:anywhere]">
                         {dict.newsletter.consentLabel}
                         {dict.newsletter.privacyLink ? (
                           <>
