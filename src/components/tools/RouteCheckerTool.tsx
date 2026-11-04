@@ -132,7 +132,7 @@ export default function RouteCheckerTool({
                       href={country.affiliateUrl}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
-                      className="text-sm font-semibold text-link underline-offset-2 hover:underline"
+                      className="shrink-0 text-sm font-semibold text-link underline-offset-2 hover:underline"
                     >
                       {copy.ctaVintrica}
                     </a>
