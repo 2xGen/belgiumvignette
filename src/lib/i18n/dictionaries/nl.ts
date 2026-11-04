@@ -110,7 +110,7 @@ const dictionary: BaseDictionary = {
     backToHome: "Terug naar home",
     plannedNotice:
       "De plannen zijn gepresenteerd in maart 2026 en kunnen nog wijzigen. Wij volgen officiële bronnen en passen deze pagina aan zodra er nieuws is.",
-    independentSite: "Info Belgisch wegenvignet",
+    independentSite: "Onafhankelijke informatie over het Belgische wegenvignet",
     contactLabel: "Contact",
     cookieSettings: "Cookievoorkeuren",
     tableCategory: "Categorie",
@@ -700,10 +700,11 @@ const dictionary: BaseDictionary = {
   },
   newsletter: {
     emailPlaceholder: "E-mailadres",
-    consentLabel: "Ik ga akkoord met updates en heb het",
+    consentLabel:
+      "Ik geef BelgiumVignette.be toestemming om mij per e-mail te informeren over de beschikbaarheid van het Belgische wegenvignet. Ik kan mij op elk moment uitschrijven.",
     success: "Bedankt! U bent ingeschreven.",
     error: "Er ging iets mis. Probeer het opnieuw.",
-    privacyLink: "privacybeleid gelezen",
+    privacyLink: "",
     independenceNote:
       "BelgiumVignette.be is een onafhankelijke informatiedienst en is niet gelieerd aan de Belgische overheid. Wij verkopen momenteel geen Belgisch wegenvignet.",
     sticky: {
@@ -714,9 +715,9 @@ const dictionary: BaseDictionary = {
     intents: {
       home: {
         title:
-          "Ontvang de aankooplink zodra het Belgische vignet te koop is",
+          "Ontvang een melding zodra de officiële verkoop van het Belgische vignet start",
         description:
-          "De verkoop is gepland vanaf 1 maart 2027. Laat uw e-mailadres achter en ontvang één melding wanneer geautoriseerde verkoop beschikbaar wordt.",
+          "Schrijf u in voor een gratis e-mailmelding van BelgiumVignette.be, een onafhankelijke informatiesite. Wij zijn geen overheidsinstantie en verkopen zelf geen vignetten.",
         benefits: [
           "Link naar een geautoriseerd aankoopkanaal zodra bekend",
           "Updates bij wijzigingen in prijzen of regels",
@@ -768,9 +769,9 @@ const dictionary: BaseDictionary = {
       },
       default: {
         title:
-          "Ontvang de aankooplink zodra het Belgische vignet te koop is",
+          "Ontvang een melding zodra de officiële verkoop van het Belgische vignet start",
         description:
-          "De verkoop start volgens de planning op 1 maart 2027. Wij sturen u één melding wanneer geautoriseerde verkoop beschikbaar wordt.",
+          "Schrijf u in voor een gratis e-mailmelding van BelgiumVignette.be, een onafhankelijke informatiesite. Wij zijn geen overheidsinstantie en verkopen zelf geen vignetten.",
         benefits: [
           "Link naar een geautoriseerd aankoopkanaal",
           "Updates over prijzen en regels",

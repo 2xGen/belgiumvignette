@@ -110,7 +110,7 @@ const dictionary: BaseDictionary = {
     backToHome: "Back to home",
     plannedNotice:
       "Plans presented in March 2026 may still change. We track official sources and update this page when news breaks.",
-    independentSite: "Belgium road vignette info",
+    independentSite: "Independent information on the Belgian road vignette",
     contactLabel: "Contact",
     cookieSettings: "Cookie settings",
     tableCategory: "Category",
@@ -676,10 +676,11 @@ const dictionary: BaseDictionary = {
   },
   newsletter: {
     emailPlaceholder: "Email address",
-    consentLabel: "I agree to receive updates and have read the",
+    consentLabel:
+      "I authorise BelgiumVignette.be to email me about the availability of the Belgian road vignette. I can unsubscribe at any time.",
     success: "Thank you! You're subscribed.",
     error: "Something went wrong. Please try again.",
-    privacyLink: "privacy policy.",
+    privacyLink: "",
     independenceNote:
       "BelgiumVignette.be is an independent information service and is not affiliated with the Belgian government. We do not currently sell the Belgian road vignette.",
     sticky: {
@@ -690,9 +691,9 @@ const dictionary: BaseDictionary = {
     intents: {
       home: {
         title:
-          "Get the purchase link when the Belgian vignette goes on sale",
+          "Get notified when official sales of the Belgian vignette start",
         description:
-          "Sales are planned from 1 March 2027. Leave your email and receive one notification when authorised sales become available.",
+          "Sign up for a free email alert from BelgiumVignette.be, an independent information site. We are not a government body and do not sell vignettes ourselves.",
         benefits: [
           "Link to an authorised purchase channel as soon as it is known",
           "Updates when prices or rules change",
@@ -744,9 +745,9 @@ const dictionary: BaseDictionary = {
       },
       default: {
         title:
-          "Get the purchase link when the Belgian vignette goes on sale",
+          "Get notified when official sales of the Belgian vignette start",
         description:
-          "Sales are planned to start on 1 March 2027. We'll send you one notification when authorised sales become available.",
+          "Sign up for a free email alert from BelgiumVignette.be, an independent information site. We are not a government body and do not sell vignettes ourselves.",
         benefits: [
           "Link to an authorised purchase channel",
           "Updates on prices and rules",

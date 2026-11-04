@@ -167,13 +167,18 @@ export default function StickyLeadCapture({
                         className="mt-0.5"
                       />
                       <span>
-                        {dict.newsletter.consentLabel}{" "}
-                        <Link
-                          href={getLocalizedPath(locale, "privacy")}
-                          className="text-link"
-                        >
-                          {dict.newsletter.privacyLink}
-                        </Link>
+                        {dict.newsletter.consentLabel}
+                        {dict.newsletter.privacyLink ? (
+                          <>
+                            {" "}
+                            <Link
+                              href={getLocalizedPath(locale, "privacy")}
+                              className="text-link"
+                            >
+                              {dict.newsletter.privacyLink}
+                            </Link>
+                          </>
+                        ) : null}
                       </span>
                     </label>
                   </div>

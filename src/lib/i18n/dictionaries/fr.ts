@@ -110,7 +110,7 @@ const dictionary: BaseDictionary = {
     backToHome: "Retour à l'accueil",
     plannedNotice:
       "Les plans présentés en mars 2026 peuvent encore évoluer. Nous suivons les sources officielles et mettons à jour cette page dès que de nouvelles informations sont disponibles.",
-    independentSite: "Info vignette routière belge",
+    independentSite: "Guide indépendant sur la vignette belge",
     contactLabel: "Contact",
     cookieSettings: "Préférences cookies",
     tableCategory: "Catégorie",
@@ -685,10 +685,11 @@ const dictionary: BaseDictionary = {
   },
   newsletter: {
     emailPlaceholder: "Adresse e-mail",
-    consentLabel: "J'accepte de recevoir des mises à jour et j'ai lu la",
+    consentLabel:
+      "J'autorise BelgiumVignette.be à m'informer par e-mail de la disponibilité de la vignette routière belge. Je peux me désinscrire à tout moment.",
     success: "Merci ! Vous êtes inscrit.",
     error: "Une erreur est survenue. Réessayez.",
-    privacyLink: "politique de confidentialité.",
+    privacyLink: "",
     independenceNote:
       "BelgiumVignette.be est un service d'information indépendant et n'est pas affilié au gouvernement belge. Nous ne vendons actuellement pas la vignette routière belge.",
     sticky: {
@@ -699,9 +700,9 @@ const dictionary: BaseDictionary = {
     intents: {
       home: {
         title:
-          "Recevez le lien d'achat lorsque la vignette belge sera en vente",
+          "Recevez une notification dès que la vente officielle de la vignette belge démarre",
         description:
-          "La vente est prévue à partir du 1er mars 2027. Laissez votre adresse e-mail et recevez une seule notification lorsque la vente autorisée sera disponible.",
+          "Inscrivez-vous pour une alerte e-mail gratuite de BelgiumVignette.be, un site d'information indépendant. Nous ne sommes pas un organisme public et ne vendons pas de vignettes.",
         benefits: [
           "Lien vers un canal d'achat autorisé dès qu'il est connu",
           "Mises à jour en cas de changement de prix ou de règles",
@@ -753,9 +754,9 @@ const dictionary: BaseDictionary = {
       },
       default: {
         title:
-          "Recevez le lien d'achat lorsque la vignette belge sera en vente",
+          "Recevez une notification dès que la vente officielle de la vignette belge démarre",
         description:
-          "La vente devrait démarrer le 1er mars 2027. Nous vous enverrons une seule notification lorsque la vente autorisée sera disponible.",
+          "Inscrivez-vous pour une alerte e-mail gratuite de BelgiumVignette.be, un site d'information indépendant. Nous ne sommes pas un organisme public et ne vendons pas de vignettes.",
         benefits: [
           "Lien vers un canal d'achat autorisé",
           "Mises à jour sur les prix et les règles",

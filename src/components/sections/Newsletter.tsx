@@ -96,12 +96,20 @@ export default function Newsletter({
               onChange={(e) => setConsent(e.target.checked)}
               className="mt-0.5"
             />
-            <span>
-              {dict.newsletter.consentLabel}{" "}
-              <Link href={getLocalizedPath(locale, "privacy")} className="text-link">
-                {dict.newsletter.privacyLink}
-              </Link>
-            </span>
+          <span>
+            {dict.newsletter.consentLabel}
+            {dict.newsletter.privacyLink ? (
+              <>
+                {" "}
+                <Link
+                  href={getLocalizedPath(locale, "privacy")}
+                  className="text-link"
+                >
+                  {dict.newsletter.privacyLink}
+                </Link>
+              </>
+            ) : null}
+          </span>
           </label>
           <button
             type="submit"
